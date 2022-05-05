@@ -1,10 +1,8 @@
-\version "2.20.0"
-% \version "2.19.83"
+\version "2.23.8"
 \language "english"
 \pointAndClickOff
 \paper {
-  #(set-paper-size "c4")
-  % #(set-paper-size "letter")
+  #(set-paper-size "letter")
   left-margin = 0.75\in
   right-margin = 0.75\in
   top-margin = 0.5\in

@@ -1,9 +1,8 @@
-\version "2.20.0"
+\version "2.23.8"
 \language "english"
 \pointAndClickOff
 \paper {
-  #(set-paper-size "c4")
-  % #(set-paper-size "letter")
+  #(set-paper-size "letter")
   left-margin = 0.75\in
   right-margin = 0.75\in
   top-margin = 0.5\in
@@ -65,7 +64,6 @@ aOne = \relative c' {
 }
 
 bridgeOne = \relative c' {
-  
   r g'8 d'~ d4 g,8 d'~ |
   d ef, \tuplet 3/2 { f bf d } bf4 d |
   r ef,8 c'~ c df, ef c'~ |
@@ -215,50 +213,18 @@ cThree = \relative c'' {
 
 changes = \chords {
   \repeat unfold 3 {
-    f1:m7 |
-    bf:m7 |
-    ef:7 |
-    af:maj7 |
+    f1:m7 | bf:m7 | ef:7 | af:maj7 |
+    df:maj7 | g:7 | c:maj7 | s |
 
-    df:maj7 |
-    g:7 |
-    c:maj7 |
-    s |
+    c:m7 | f:m7 | bf:7 | ef:maj7 |
+    af:maj7 | a2:m7 d:7 | g1:maj7 | s |
 
-    c:m7 |
-    f:m7 |
-    bf:7 |
-    ef:maj7 |
+    a:m7 | d:7 | g:maj7 | s |
+    fs:m7.5- | b:7 | e:maj7 | c:7.5+ |
 
-    af:maj7 |
-    a2:m7 d:7 |
-    g1:maj7 |
-    s |
-
-    a:m7 |
-    d:7 |
-    g:maj7 |
-    s |
-
-    fs:m7.5- |
-    b:7 |
-    e:maj7 |
-    c:7.5+ |
-
-    f1:m7 |
-    bf:m7 |
-    ef:7 |
-    af:maj7 |
-
-    df:maj7 |
-    df:m7 |
-    c:m7 |
-    b:dim7 |
-
-    bf:m7 |
-    ef:7 |
-    af:maj7 |
-    c:7.5+ |
+    f1:m7 | bf:m7 | ef:7 | af:maj7 |
+    df:maj7 |df:m7 | c:m7 | b:dim7 |
+    bf:m7 | ef:7 | af:maj7 | c:7.5+ |
   }
 }
 
@@ -269,7 +235,6 @@ changes = \chords {
       \clef treble
       \key af \major
       \time 4/4
-
       \mark \markup { \box \bold "1" }
       \aOne
       \bridgeOne

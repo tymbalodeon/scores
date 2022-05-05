@@ -24,9 +24,7 @@ verseMelody = \relative c'' {
   s1 * 12 |
 }
 
-verseChords = \chordmode {
-  df1 | gf | af | gf |
-}
+verseChords = \chordmode { df1 | gf | af | gf | }
 
 chorusA = \chordmode { df1 | bf:m | af | gf | }
 
