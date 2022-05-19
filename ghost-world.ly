@@ -31,7 +31,9 @@ changesChorus = \chordmode {
   fs:m | b |
 }
 
-changesChorusFirstEnding = \chordmode { fs2:m a | }
+changesChorusFirstEnding = \chordmode {
+  fs2:m a |
+}
 
 changes = \chords {
   \changesIntro
@@ -45,13 +47,25 @@ changes = \chords {
   \changesChorus
 }
 
-melodyIntro = { s1 * 2 |}
+melodyIntro = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  fs4 fs fs8 gs4 a8~ | a1 |
+}
 
 melodyVerse = \relative c'' {
   e8 b4 cs8~ cs e4 gs,8~ |
   gs e4 fs8~ fs a4 gs8~ |
   gs e4 b'8~ b4. gs8~ |
-  gs gs4.~ gs4 r4 |
+  gs gs4.~ gs4 gs8 gs~ |
+
+  gs e4 b'8~ b4. cs16 gs~ |
+  gs2. gs8 e'~ |
+  e cs4 ds8~ ds e4 b8~ |
+  b e,4 b'8~ b a4 gs8~ |
+  gs e4 gs8~ gs fs4 e8~ |
+  e2. r4 |
 }
 
 melody = {
