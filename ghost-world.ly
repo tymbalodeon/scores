@@ -38,8 +38,10 @@ changesChorusFirstEnding = \chordmode {
 changes = \chords {
   \changesIntro
   \bar "||"
+  \sectionLabel "Verse"
   \changesVerse
   \bar "||"
+  \sectionLabel "Chorus"
   \changesChorus
   \changesChorusFirstEnding
   \bar "||"
@@ -65,12 +67,24 @@ melodyVerse = \relative c'' {
   e cs4 ds8~ ds e4 b8~ |
   b e,4 b'8~ b a4 gs8~ |
   gs e4 gs8~ gs fs4 e8~ |
-  e2. r4 |
+  e2.
+}
+
+melodyChorus = \relative c' {
+  e16 e8. |
+  b'2 a8 gs4 fs8~ |
+  fs2  cs'2 |
+  b2 b4~ \tuplet 3/2 { b8 a gs~ } |
+  gs fs4. cs'2 |
+  b2 b4~ \tuplet 3/2 { b8 a gs } |
+  fs2 a |
+  fs4~ \tuplet 3/2 { fs8 e fs } e2 |
 }
 
 melody = {
   \melodyIntro
   \melodyVerse
+  \melodyChorus
   s1 * 37
 }
 
