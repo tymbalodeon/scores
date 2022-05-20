@@ -53,7 +53,7 @@ melodyIntro = \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
   \improvisationOn
-  fs4 fs fs8 gs4 a8~ | a1 |
+  fs4 fs8. fs16 r8 gs4 a8~ | a1 |
 }
 
 melodyVerse = \relative c'' {
@@ -63,22 +63,24 @@ melodyVerse = \relative c'' {
   gs gs4.~ gs4 gs8 gs~ |
 
   gs e4 b'8~ b4. cs16 gs~ |
-  gs2. gs8 e'~ |
+  gs2. b8 e~ |
   e cs4 ds8~ ds e4 b8~ |
   b e,4 b'8~ b a4 gs8~ |
   gs e4 gs8~ gs fs4 e8~ |
   e2.
 }
 
-melodyChorus = \relative c' {
-  e16 e8. |
-  b'2 a8 gs4 fs8~ |
-  fs2  cs'2 |
-  b2 b4~ \tuplet 3/2 { b8 a gs~ } |
-  gs fs4. cs'2 |
-  b2 b4~ \tuplet 3/2 { b8 a gs } |
-  fs2 a |
-  fs4~ \tuplet 3/2 { fs8 e fs } e2 |
+melodyChorus = \relative c'' {
+  b16 b8. |
+  r8 e fs e e ds4 cs8~ |
+  cs2  fs8 gs4. |
+  fs2 e8 fs~ \tuplet 3/2 { fs8 e ds~ } |
+  ds cs4. fs8 gs4. |
+  fs2 fs4~ \tuplet 3/2 { fs8 e ds } |
+  cs2 e |
+  b8 cs~ \tuplet 3/2 { cs8 b cs } b2 |
+  r2 r8 fs gs4~ |
+  gs8 fs16 e fs2. |
 }
 
 melody = {
