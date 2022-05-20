@@ -16,6 +16,30 @@
   composer = "Adrianne Lenker (Big Thief)"
 }
 
+verseChords = \chordmode {
+  df1 | gf | af | gf |
+}
+
+chorusA = \chordmode {
+  df1 | bf:m | af | gf |
+}
+
+chorusChords = \chordmode {
+  \repeat unfold 2 { \chorusA }
+  ef:m | af | df | gf |
+  \chorusA
+}
+
+changes = {
+  \repeat unfold 2 {
+    \verseChords
+    }
+  \bar "||"
+  \sectionLabel "Chorus"
+  \chorusChords
+  \bar "||"
+}
+
 introMelody = { s1 * 4 | }
 
 verseMelody = \relative c'' {
@@ -24,26 +48,15 @@ verseMelody = \relative c'' {
   s1 * 12 |
 }
 
-verseChords = \chordmode { df1 | gf | af | gf | }
-
-chorusA = \chordmode { df1 | bf:m | af | gf | }
-
-chorusChords = \chordmode {
-  \repeat unfold 2 { \chorusA }
-  ef:m | af | df | gf |
-  \chorusA
+chorusMelody = \relative c'' {
+  s1 * 4 |
 }
 
 melody = {
   \introMelody
+  \sectionLabel "Verse"
   \verseMelody
-}
-
-changes = {
-  \verseChords
-  \bar "||"
-  \chorusChords
-  \bar "||"
+  \chorusMelody
 }
 
 \score {
