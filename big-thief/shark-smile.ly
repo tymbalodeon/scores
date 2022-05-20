@@ -86,7 +86,7 @@ melody = \relative c'' {
 }
 
 intro = \chordmode {
-  d1 | d | d | d |
+  d1 | s | s | s |
 }
 
 verseA = \chordmode {
@@ -94,7 +94,7 @@ verseA = \chordmode {
 }
 
 instrumentalVerseB = \chordmode {
-  fs1:m | e:11 | d | d |
+  fs1:m | e:11 | d | s |
 }
 
 vocalVerseB = \chordmode {
@@ -139,8 +139,10 @@ chorus = \chordmode {
 changes = \chords {
   \intro
   \instrumentalVerse
+  \sectionLabel "Verse"
   \repeat volta 2 {
     \vocalVerse
+    \sectionLabel "Chorus"
     \chorus
   }
   \instrumentalVerse
