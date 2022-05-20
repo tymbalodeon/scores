@@ -35,18 +35,34 @@ changesChorusFirstEnding = \chordmode {
   fs2:m a |
 }
 
+changesBridgeStart = \chordmode {
+  a2 e
+}
+
+changesBridge = \chordmode {
+  b1 |
+  \changesBridgeStart
+  fs2 a |
+}
+
 changes = \chords {
   \changesIntro
-  \bar "||"
   \sectionLabel "Verse"
-  \changesVerse
-  \bar "||"
-  \sectionLabel "Chorus"
-  \changesChorus
-  \changesChorusFirstEnding
-  \bar "||"
-  \changesVerse
-  \changesChorus
+  \repeat volta 2 {
+    \changesVerse
+    \bar "||"
+    \sectionLabel "Chorus"
+    \changesChorus
+    \alternative {
+      \volta 1 {
+        \changesChorusFirstEnding
+      } \volta 2 {
+        \sectionLabel "Bridge"
+        \changesBridgeStart
+      }
+    }
+  }
+  \changesBridge
 }
 
 melodyIntro = \new Voice \with {
@@ -81,12 +97,22 @@ melodyChorus = \relative c'' {
   b8 cs~ \tuplet 3/2 { cs8 b cs } b2 |
   r2 r8 fs gs4~ |
   gs8 fs16 e fs2. |
+  s1 |
+  \alternative {
+    \volta 1 {
+      s1 |
+    } \volta 2 {
+      s1 |
+    }
+  }
 }
 
 melody = {
   \melodyIntro
-  \melodyVerse
-  \melodyChorus
+  \repeat volta 2 {
+    \melodyVerse
+    \melodyChorus
+  }
   s1 * 37
 }
 
