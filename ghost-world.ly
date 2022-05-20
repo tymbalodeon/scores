@@ -28,21 +28,15 @@ changesVerse = \chordmode {
 changesChorus = \chordmode {
   \repeat unfold 2 { b1 | fs:m | }
   b | fs2:m a | fs:m e | b1 |
-  fs:m | b |
+  fs:m |
 }
 
 changesChorusFirstEnding = \chordmode {
   fs2:m a |
 }
 
-changesBridgeStart = \chordmode {
-  a2 e |
-}
-
 changesBridge = \chordmode {
-  b1 |
-  \changesBridgeStart |
-  b1 |
+  \repeat unfold 2 { a2 e | b1 | }
   fs2:m e |
   \time 2/4
   b2 |
@@ -60,13 +54,14 @@ changes = \chords {
     \changesChorus
     \alternative {
       \volta 1 {
+        b1 |
         \changesChorusFirstEnding
       } \volta 2 {
-        \sectionLabel "Bridge"
-        \changesBridgeStart
+        b1 |
       }
     }
   }
+  \sectionLabel "Bridge"
   \changesBridge
   \bar "||"
 }
@@ -114,11 +109,11 @@ melodyChorus = \relative c'' {
 
   gs8 fs16 e fs2. |
   \ottava #0
-  r2 r4 r8 b, |
   \alternative {
     \volta 1 {
-      s1 |
+      R1 * 2 |
     } \volta 2 {
+      r2 r4 r8 b, |
       fs'8 gs~ gs16 fs e8 fs gs4 fs8~ |
     }
   }
@@ -129,24 +124,25 @@ melodyBridge = \relative c'' {
   fs' gs~ \tuplet 3/2 { gs e fs~ } fs gs4 fs8~ |
   fs4 r8 ds e ds cs b |
   r8 a'4.~ a2
-  \time 2/4
-  << \new Voice {
-    \voiceOne
-    gs4 \tuplet 3/2 { r8 fs e~ }
-    \time 4/4
-    e ds4.
-  }
-     \\
-     \new Voice \with {
-       \consists "Pitch_squash_engraver"
-     } {
-       \voiceTwo
-       \improvisationOn
-       s2 |
-       fs4 fs8. fs16 r8 gs4 a8~ |
-       a1 |
-     }
-   >>
+  <<
+    \new Voice {
+      gs4 \tuplet 3/2 { r8 fs e~ }
+      \time 2/4
+      \voiceOne
+      e ds4.
+    }
+    \\
+    \new Voice \with {
+      \consists "Pitch_squash_engraver"
+    } {
+      \voiceTwo
+      \improvisationOn
+      s2 |
+      \time 4/4
+      fs4 fs8. fs16 r8 gs4 a8~ |
+      a1 |
+    }
+  >>
 }
 
 melody = {
