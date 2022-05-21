@@ -76,7 +76,7 @@ melodyIntro = \new Voice \with {
 }
 
 melodyVerse = \relative c'' {
-  e8 b4 cs8~ cs e4 gs,8~ |
+  e8\segno b4 cs8~ cs e4 gs,8~ |
   gs e4 fs8~ fs a4 gs8~ |
   gs e4 b'8~ b4. gs8~ |
   gs gs4.~ gs4 gs8 gs~ |
@@ -100,7 +100,7 @@ melodyChorus = \relative c'' {
 
   fs2 fs4~ \tuplet 3/2 { fs8 e ds } |
   cs2 e |
-  b8 cs~ \tuplet 3/2 { cs8 b cs } b2 |
+  b8^"To Coda" cs~ \tuplet 3/2 { cs8 b cs } b2 |
   r2 r8
   \override Staff.OttavaBracket.font-series = #'medium
   \set Staff.ottavation = #"8va (repeat only)"
@@ -140,7 +140,7 @@ melodyBridge = \relative c'' {
       s2 |
       \time 4/4
       fs4 fs8. fs16 r8 gs4 a8~ |
-      a1 |
+      a1_"D.S. al Coda" |
     }
   >>
 }
