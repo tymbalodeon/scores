@@ -44,13 +44,19 @@ changesBridge = \chordmode {
   \changesIntro
 }
 
+changesCoda = \chordmode {
+  a2 e | b1 |
+  \repeat unfold 2 { b1 | fs:m | }
+  b | fs2:m a
+  \repeat unfold 3 { a2 e | b1 | }
+  \changesIntro
+}
+
 changes = \chords {
   \changesIntro
-  \sectionLabel "Verse"
   \repeat volta 2 {
     \changesVerse
     \bar "||"
-    \sectionLabel "Chorus"
     \changesChorus
     \alternative {
       \volta 1 {
@@ -61,9 +67,9 @@ changes = \chords {
       }
     }
   }
-  \sectionLabel "Bridge"
   \changesBridge
   \bar "||"
+  \changesCoda
 }
 
 melodyIntro = \new Voice \with {
@@ -76,7 +82,8 @@ melodyIntro = \new Voice \with {
 }
 
 melodyVerse = \relative c'' {
-  e8\segno b4 cs8~ cs e4 gs,8~ |
+  \segnoMark \default
+  e8 b4 cs8~ cs e4 gs,8~ |
   gs e4 fs8~ fs a4 gs8~ |
   gs e4 b'8~ b4. gs8~ |
   gs gs4.~ gs4 gs8 gs~ |
@@ -90,22 +97,26 @@ melodyVerse = \relative c'' {
   e2.
 }
 
-melodyChorus = \relative c'' {
+melodyChorusFirst = \relative c'' {
   b16 b8. |
 
-  r8 e fs e e ds4 cs8~ |
-  cs2  fs8 gs4. |
-  fs2 e8 fs~ \tuplet 3/2 { fs8 e ds~ } |
-  ds cs4. fs8 gs4. |
+  r8 e( fs e) e ds4 cs8~ |
+  cs2 fs8( gs4.) |
+  fs2 e8( fs)~ \tuplet 3/2 { fs8 e ds~ } |
+  ds cs4. fs8( gs4.) |
 
   fs2 fs4~ \tuplet 3/2 { fs8 e ds } |
   cs2 e |
-  b8^"To Coda" cs~ \tuplet 3/2 { cs8 b cs } b2 |
+}
+
+melodyChorusSecond = \relative c'' {
+  \codaMark \default
+  b8( cs)~ \tuplet 3/2 { cs8 b cs } b2 |
   r2 r8
   \override Staff.OttavaBracket.font-series = #'medium
   \set Staff.ottavation = #"8va (repeat only)"
   \ottava #1
-  fs' gs4~ |
+  fs'( gs4)~ |
 
   gs8 fs16 e fs2. |
   \ottava #0
@@ -113,15 +124,15 @@ melodyChorus = \relative c'' {
     \volta 1 {
       R1 * 2 |
     } \volta 2 {
-      r2 r4 r8 b, |
-      fs'8 gs~ gs16 fs e8 fs gs4 fs8~ |
+      r2 r4 r8 \sectionLabel "Bridge" b, |
+      fs'8( gs)~ gs16 fs e8 fs( gs4) fs8~ |
     }
   }
 }
 
 melodyBridge = \relative c'' {
   fs4 r8 ds e ds cs b |
-  fs' gs~ \tuplet 3/2 { gs e fs~ } fs gs4 fs8~ |
+  fs'( gs)~ \tuplet 3/2 { gs e fs~ } fs gs4 fs8~ |
   fs4 r8 ds e ds cs b |
   r8 a'4.~ a2
   <<
@@ -145,13 +156,44 @@ melodyBridge = \relative c'' {
   >>
 }
 
+melodyCoda = \relative c'' {
+  gs'4~ \tuplet 3/2 { gs8 fs e } fs gs4 fs8~ |
+}
+
+melodyChorusFinal = \relative c'' {
+  \codaMark 1
+  \melodyCoda fs2. \melodyChorusFirst |
+  \repeat unfold 2 { \melodyCoda fs2. r4 | }
+  \melodyCoda fs4 r8 ds e ds cs b |
+  <<
+    \new Voice {
+      \voiceOne
+      r8 a'4.~ a2~ |
+      a2 r |
+    }
+    \\
+    \new Voice\with {
+      \consists "Pitch_squash_engraver"
+    } {
+      \voiceTwo
+      \improvisationOn
+      fs4 fs8. fs16 r8 gs4 a8~ |
+      a1 |
+    }
+  >>
+  \bar "|."
+}
+
 melody = {
   \melodyIntro
   \repeat volta 2 {
     \melodyVerse
-    \melodyChorus
+    \sectionLabel "Chorus"
+    \melodyChorusFirst
+    \melodyChorusSecond
   }
   \melodyBridge
+  \melodyChorusFinal
 }
 
 \score {
