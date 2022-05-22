@@ -45,10 +45,21 @@ changesBridge = \chordmode {
 }
 
 changesCoda = \chordmode {
+  \cadenzaOn
+  \stopStaff
+  s1
+  \startStaff
+  \cadenzaOff
   a2 e | b1 |
   \repeat unfold 2 { b1 | fs:m | }
   b | fs2:m a
-  \repeat unfold 3 { a2 e | b1 | }
+  \repeat volta 3 {
+    a2 e |
+    \alternative {
+      \volta 1,2 { b1 | }
+      \volta 3 { b1 | }
+    }
+  }
   \changesIntro
 }
 
@@ -151,7 +162,7 @@ melodyBridge = \relative c'' {
       s2 |
       \time 4/4
       fs4 fs8. fs16 r8 gs4 a8~ |
-      a1_"D.S. al Coda" |
+      a1_\markup { \italic "D.S. al Coda" } |
     }
   >>
 }
@@ -161,10 +172,20 @@ melodyCoda = \relative c'' {
 }
 
 melodyChorusFinal = \relative c'' {
+  \cadenzaOn
+  \stopStaff
+  s1
+  \startStaff
+  \cadenzaOff
   \codaMark 1
   \melodyCoda fs2. \melodyChorusFirst |
-  \repeat unfold 2 { \melodyCoda fs2. r4 | }
-  \melodyCoda fs4 r8 ds e ds cs b |
+  \repeat volta 3 {
+    \melodyCoda
+    \alternative {
+      \volta 1,2 { fs2. r4 | }
+      \volta 3 { fs4 r8 ds e ds cs b | }
+    }
+  }
   <<
     \new Voice {
       \voiceOne
