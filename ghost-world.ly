@@ -51,10 +51,11 @@ changesCoda = \chordmode {
   \startStaff
   \cadenzaOff
   a2 e | b1 |
-  \repeat unfold 2 { b1 | fs:m | }
+  s1 | fs:m |
+  b1 | fs:m |
   b | fs2:m a
   \repeat volta 3 {
-    a2 e |
+    \parenthesize a2 e |
     \alternative {
       \volta 1,2 { b1 | }
       \volta 3 { b1 | }
@@ -125,7 +126,7 @@ melodyChorusSecond = \relative c'' {
   b8( cs)~ \tuplet 3/2 { cs8 b cs } b2 |
   r2 r8
   \override Staff.OttavaBracket.font-series = #'medium
-  \set Staff.ottavation = #"8va (repeat only)"
+  \set Staff.ottavation = #"8va (2nd time only)"
   \ottava #1
   fs'( gs4)~ |
 
@@ -135,7 +136,8 @@ melodyChorusSecond = \relative c'' {
     \volta 1 {
       R1 * 2 |
     } \volta 2 {
-      r2 r4 r8 \sectionLabel "Bridge" b, |
+      r2 r4 r8 b, |
+      \bar "||"
       fs'8( gs)~ gs16 fs e8 fs( gs4) fs8~ |
     }
   }
@@ -212,7 +214,6 @@ melody = {
   \melodyIntro
   \repeat volta 2 {
     \melodyVerse
-    \sectionLabel "Chorus"
     \melodyChorusFirst
     \melodyChorusSecond
   }
