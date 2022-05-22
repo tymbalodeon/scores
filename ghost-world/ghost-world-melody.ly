@@ -1,90 +1,4 @@
-\version "2.23.8"
-\language "english"
-\pointAndClickOff
-
-\paper {
-  #(set-paper-size "letter")
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.5\in
-}
-
-\header {
-  tagline = ##f
-  title = "Ghost World"
-  composer = "Aimee Mann"
-}
-
-changesIntro = \chordmode {
-  fs2:m s8 gs4:m a8 | s1 |
-}
-
-changesVerse = \chordmode {
-  \repeat unfold 3 { e2 b | fs1:m | }
-  cs2:m a | e b | cs:m a | e1 |
-}
-
-changesChorus = \chordmode {
-  \repeat unfold 2 { b1 | fs:m | }
-  b | fs2:m a | fs:m e | b1 |
-  fs:m |
-}
-
-changesChorusFirstEnding = \chordmode {
-  fs2:m a |
-}
-
-changesBridge = \chordmode {
-  \repeat unfold 2 { a2 e | b1 | }
-  fs2:m e |
-  \time 2/4
-  b2 |
-  \time 4/4
-  \changesIntro
-}
-
-changesCoda = \chordmode {
-  \cadenzaOn
-  \stopStaff
-  s1
-  \startStaff
-  \cadenzaOff
-  a2 e | b1 |
-  s1 | fs:m |
-  b1 | fs:m |
-  b | fs2:m a
-  \repeat volta 3 {
-    \parenthesize a2 e |
-    \alternative {
-      \volta 1,2 { b1 | }
-      \volta 3 { b1 | }
-    }
-  }
-  \changesIntro
-}
-
-changes = \chords {
-  \changesIntro
-  \repeat volta 2 {
-    \changesVerse
-    \bar "||"
-    \changesChorus
-    \alternative {
-      \volta 1 {
-        b1 |
-        \changesChorusFirstEnding
-      } \volta 2 {
-        b1 |
-      }
-    }
-  }
-  \changesBridge
-  \bar "||"
-  \changesCoda
-}
-
-melodyIntro = \new Voice \with {
+intro = \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
   \voiceTwo
@@ -93,7 +7,7 @@ melodyIntro = \new Voice \with {
   a1 |
 }
 
-melodyVerse = \relative c'' {
+verse = \relative c'' {
   \segnoMark \default
   e8 b4 cs8~ cs e4 g,8( |
   gs!) e4 fs8~ fs a4 gs8~ |
@@ -109,9 +23,10 @@ melodyVerse = \relative c'' {
   e2.
 }
 
-melodyChorusFirst = \relative c'' {
+chorusFirst = \relative c'' {
   b16 b8. |
 
+  \bar "||"
   r8 e( fs4) \glissando e8 ds4 cs8~ |
   cs2 fs8( gs4.) \glissando |
   fs2 e8( fs)~ \tuplet 3/2 { fs8 e ds~ } |
@@ -121,7 +36,7 @@ melodyChorusFirst = \relative c'' {
   cs2 e |
 }
 
-melodyChorusSecond = \relative c'' {
+chorusSecond = \relative c'' {
   \codaMark \default
   b8( cs)~ \tuplet 3/2 { cs8 b cs } b2 |
   r2 r8
@@ -143,7 +58,7 @@ melodyChorusSecond = \relative c'' {
   }
 }
 
-melodyBridge = \relative c'' {
+bridge = \relative c'' {
   fs4 r8 ds e ds cs b |
   fs'( gs)~ \tuplet 3/2 { gs e fs~ } fs fs( gs) fs8~ |
   fs4 r8 ds e ds cs b |
@@ -169,11 +84,11 @@ melodyBridge = \relative c'' {
   >>
 }
 
-melodyCoda = \relative c'' {
+coda = \relative c'' {
   fs8( gs)~ \tuplet 3/2 { gs8 fs e } fs( gs4) fs8~ |
 }
 
-melodyChorusFinal = \relative c'' {
+chorusFinal = \relative c'' {
   \cadenzaOn
   \stopStaff
   s1
@@ -183,9 +98,9 @@ melodyChorusFinal = \relative c'' {
   \once \override Staff.KeySignature.break-visibility = #end-of-line-invisible
   \once \override Staff.Clef.break-visibility = #end-of-line-invisible
   \codaMark 1
-  \melodyCoda fs2. \melodyChorusFirst |
+  \coda fs2. \chorusFirst |
   \repeat volta 3 {
-    \melodyCoda
+    \coda
     \alternative {
       \volta 1,2 { fs2. r4 | }
       \volta 3 { fs4 r8 ds e ds cs b | }
@@ -198,7 +113,7 @@ melodyChorusFinal = \relative c'' {
       e2 r |
     }
     \\
-    \new Voice\with {
+    \new Voice \with {
       \consists "Pitch_squash_engraver"
     } {
       \voiceTwo
@@ -211,24 +126,12 @@ melodyChorusFinal = \relative c'' {
 }
 
 melody = {
-  \melodyIntro
+  \intro
   \repeat volta 2 {
-    \melodyVerse
-    \melodyChorusFirst
-    \melodyChorusSecond
+    \verse
+    \chorusFirst
+    \chorusSecond
   }
-  \melodyBridge
-  \melodyChorusFinal
-}
-
-\score {
-  <<
-    \changes
-    \new Staff {
-      \clef treble
-      \key e \major
-      \time 4/4
-      \melody
-    }
-  >>
+  \bridge
+  \chorusFinal
 }
