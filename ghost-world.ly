@@ -94,8 +94,8 @@ melodyIntro = \new Voice \with {
 
 melodyVerse = \relative c'' {
   \segnoMark \default
-  e8 b4 cs8~ cs e4 gs,8~ |
-  gs e4 fs8~ fs a4 gs8~ |
+  e8 b4 cs8~ cs e4 g,8( |
+  gs!) e4 fs8~ fs a4 gs8~ |
   gs e4 b'8~ b4. gs8~ |
   gs gs4.~ gs4 gs8 gs~ |
 
@@ -104,19 +104,19 @@ melodyVerse = \relative c'' {
   e cs4 ds8~ ds e4 b8~ |
   b e,4 b'8~ b a4 gs8~ |
 
-  gs e4 gs8~ gs fs4 e8~ |
+  gs e4 g8( gs) fs4 e8~ |
   e2.
 }
 
 melodyChorusFirst = \relative c'' {
-  b16 b8. |
+  b16 b8.~ |
 
-  r8 e( fs e) e ds4 cs8~ |
-  cs2 fs8( gs4.) |
+  b8 e( fs4) \glissando e8 ds4 cs8~ |
+  cs2 fs8( gs4.) \glissando |
   fs2 e8( fs)~ \tuplet 3/2 { fs8 e ds~ } |
-  ds cs4. fs8( gs4.) |
+  ds cs4. fs8( gs4.) \glissando |
 
-  fs2 fs4~ \tuplet 3/2 { fs8 e ds } |
+  fs2 e8( fs)~ \tuplet 3/2 { fs8 e ds } |
   cs2 e |
 }
 
@@ -143,15 +143,15 @@ melodyChorusSecond = \relative c'' {
 
 melodyBridge = \relative c'' {
   fs4 r8 ds e ds cs b |
-  fs'( gs)~ \tuplet 3/2 { gs e fs~ } fs gs4 fs8~ |
+  fs'( gs)~ \tuplet 3/2 { gs e fs~ } fs fs( gs) fs8~ |
   fs4 r8 ds e ds cs b |
-  r8 a'4.~ a2
+  r8 e4.~ e2
   <<
     \new Voice {
-      gs4 \tuplet 3/2 { r8 fs e~ }
+      ds4 \tuplet 3/2 { r8 cs b~ }
       \time 2/4
       \voiceOne
-      e ds4.
+      b a4.
     }
     \\
     \new Voice \with {
@@ -168,7 +168,7 @@ melodyBridge = \relative c'' {
 }
 
 melodyCoda = \relative c'' {
-  gs'4~ \tuplet 3/2 { gs8 fs e } fs gs4 fs8~ |
+  fs8( gs)~ \tuplet 3/2 { gs8 fs e } fs( gs4) fs8~ |
 }
 
 melodyChorusFinal = \relative c'' {
@@ -192,8 +192,8 @@ melodyChorusFinal = \relative c'' {
   <<
     \new Voice {
       \voiceOne
-      r8 a'4.~ a2~ |
-      a2 r |
+      r8 e4.~ e2~ |
+      e2 r |
     }
     \\
     \new Voice\with {
