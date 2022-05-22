@@ -1,16 +1,7 @@
 \version "2.23.8"
-\language "english"
-\pointAndClickOff
-\paper {
-  #(set-paper-size "letter")
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.5\in
-}
+\include "settings.ly"
 
 \header {
-  tagline = ##f
   title = "Day and Age"
   composer = "Julian Lage"
 }
@@ -44,33 +35,18 @@ melody = \relative c' {
 
   \bar "|."
 }
+
 changes = \chords {
-  d2 d/cs |
-  g1:maj7/b |
-  a:sus |
-  d |
-
-  d2 d/cs |
-  g1:maj7/b |
-  a:sus |
-  g |
-
-  d |
-  g:6 |
-  a:sus |
-  g |
-
-  d2 d/cs |
-  g:maj7/b a:sus |
-  d1 |
-  s |
+  d2 d/cs | g1:maj7/b | a:sus | d |
+  d2 d/cs | g1:maj7/b | a:sus | g |
+  d | g:6 | a:sus | g |
+  d2 d/cs | g:maj7/b a:sus | d1 | s |
 }
 
 \score {
   <<
     \changes
-    \new Staff {
-      \clef treble
+    {
       \key d \major
       \time 2/2
       \melody
