@@ -110,9 +110,9 @@ melodyVerse = \relative c'' {
 }
 
 melodyChorusFirst = \relative c'' {
-  b16 b8.~ |
+  b16 b8. |
 
-  b8 e( fs4) \glissando e8 ds4 cs8~ |
+  r8 e( fs4) \glissando e8 ds4 cs8~ |
   cs2 fs8( gs4.) \glissando |
   fs2 e8( fs)~ \tuplet 3/2 { fs8 e ds~ } |
   ds cs4. fs8( gs4.) \glissando |
