@@ -1,5 +1,19 @@
+verseA = \chordmode {
+  df2 gf
+}
+
+verseB = \chordmode {
+  af2 gf
+}
+
 verse = \chordmode {
-  df1 | gf | af | gf |
+  \verseA
+  \verseB
+}
+
+interlude = \repeat volta 2 {
+  \sectionLabel "Interlude"
+  \verse
 }
 
 singleVerse = \repeat volta 4 {
@@ -7,16 +21,25 @@ singleVerse = \repeat volta 4 {
 }
 
 doubleVerse = \repeat volta 8 {
-  \verse
+  \sectionLabel "Verse"
+  \verseA
+  \alternative {
+    \volta 1,2,3,4,5,6,7 {
+      \verseB
+    } \volta 8 {
+      \verseB
+    }
+  }
 }
 
 chorusA = \chordmode {
-  df1 | bf:m | af | gf |
+  df2 bf:m | af gf |
 }
 
 chorus = \chordmode {
+  \sectionLabel "Chorus"
   \repeat volta 2 { \chorusA }
-  ef:m | af | df | gf |
+  ef:m af | df gf |
   \repeat volta 2 { \chorusA }
   gf |
 }
@@ -32,24 +55,8 @@ changes = \chords {
   \singleVerse
   \sectionLabel "Verse"
   \singleVerse
-  \sectionLabel "Interlude"
-  \repeat volta 2 {
-    \verse
-  }
-  \sectionLabel "Verse"
+  \interlude
   \doubleVerse
-  \sectionLabel "Chorus"
   \chorus
-  % \sectionLabel "Verse"
-  % \doubleVerse
   \bar "||"
-  \sectionLabel "Solo"
-  \solo
-  % \sectionLabel "Verse"
-  % \singleVerse
-  % \repeat volta 2 {
-  %   \verse
-  % }
-  % \chorus
-  % \solo
 }
