@@ -12,7 +12,7 @@ verse = \relative c'' {
   e8 b4 cs8~ cs e4 g,8( |
   gs!) e4 fs8~ fs a4 gs8~ |
   gs e4 b'8~ b4. gs8~ |
-  gs gs4.~ gs4 gs8 gs~ |
+  gs gs4. r4 gs8 gs~ |
 
   gs e4 b'8~ b4. cs16 gs~ |
   gs2. b8 e~ |
@@ -26,7 +26,6 @@ verse = \relative c'' {
 chorusFirst = \relative c'' {
   b16 b8. |
 
-  \bar "||"
   r8 e( fs4) \glissando e8 ds4 cs8~ |
   cs2 fs8( gs4.) \glissando |
   fs2 e8( fs)~ \tuplet 3/2 { fs8 e ds~ } |

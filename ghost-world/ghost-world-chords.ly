@@ -10,6 +10,7 @@ verse = \chordmode {
 }
 
 chorus = \chordmode {
+  \bar "||"
   \repeat unfold 2 {
     b1 | fs:m |
   }

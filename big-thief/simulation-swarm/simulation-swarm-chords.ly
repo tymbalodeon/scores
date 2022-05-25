@@ -12,7 +12,6 @@ verse = \chordmode {
 }
 
 interlude = \repeat volta 2 {
-  \sectionLabel "Interlude"
   \verse
 }
 
@@ -21,7 +20,6 @@ singleVerse = \repeat volta 4 {
 }
 
 doubleVerse = \repeat volta 8 {
-  \sectionLabel "Verse"
   \verseA
   \alternative {
     \volta 1,2,3,4,5,6,7 {
@@ -38,10 +36,10 @@ chorusA = \chordmode {
 
 chorus = \chordmode {
   \sectionLabel "Chorus"
-  \repeat volta 2 { \chorusA }
+  \repeat unfold 2 { \chorusA }
   ef:m af | df gf |
-  \repeat volta 2 { \chorusA }
-  gf |
+  \repeat unfold 2 { \chorusA }
+  gf1 |
 }
 
 solo = \chordmode {
@@ -51,12 +49,13 @@ solo = \chordmode {
 }
 
 changes = \chords {
-  \sectionLabel "Intro"
   \singleVerse
-  \sectionLabel "Verse"
+  \segnoMark \default
   \singleVerse
   \interlude
   \doubleVerse
-  \chorus
   \bar "||"
+  \chorus
+  \codaMark \default
+  \solo
 }
