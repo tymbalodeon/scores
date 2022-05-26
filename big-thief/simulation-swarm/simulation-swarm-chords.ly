@@ -38,8 +38,12 @@ chorus = \chordmode {
   \sectionLabel "Chorus"
   \repeat unfold 2 { \chorusA }
   ef:m af | df gf |
-  \repeat unfold 2 { \chorusA }
-  gf1 |
+  \chorusA
+  df2 bf:m |
+  \time 2/4
+  af |
+  \time 4/4
+  gf1 * 2 |
 }
 
 solo = \chordmode {
