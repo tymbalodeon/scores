@@ -5,13 +5,13 @@ introShort = \chordmode {
 }
 
 introLong = \chordmode {
-  \repeat volta 6 {
-    d1.:m |
+  \repeat volta 3 {
+    d1.:m | s |
   }
 }
 
 verseA = \chordmode {
-  d1.:m |
+  \parenthesize d1.:m |
   \repeat unfold 2 {
     s |
   }
