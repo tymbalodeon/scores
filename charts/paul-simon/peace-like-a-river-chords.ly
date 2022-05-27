@@ -1,25 +1,26 @@
 introShort = \chordmode {
-  d1:m | s |
+  \repeat volta 2 {
+    d1.:m |
+  }
 }
 
 introLong = \chordmode {
-  d1:m |
-  \repeat unfold 5 {
-    s |
+  \repeat volta 6 {
+    d1.:m |
   }
 }
 
 verseA = \chordmode {
-  d1:m |
+  d1.:m |
   \repeat unfold 2 {
     s |
   }
-  g1:m | f | s |
+  g1.:m | f | s |
   bf | f | bf | g:m | s |
 }
 
 verseB = \chordmode {
-  d1:m |
+  d1.:m |
   \repeat unfold 3 {
     s |
   }
@@ -34,13 +35,12 @@ verseC = \chordmode {
 }
 
 instrumental = \chordmode {
-  g1:m | s |
+  g1.:m | s |
   d:m | s | s | s |
 }
 
 changes = \chords {
   \introLong
-  \bar "||"
   \verseA
   \verseB
   \bar "||"
