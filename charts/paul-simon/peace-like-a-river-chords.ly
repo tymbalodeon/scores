@@ -21,7 +21,7 @@ verseA = \chordmode {
 
 verseB = \chordmode {
   d1.:m |
-  \repeat unfold 3 {
+  \repeat unfold 4 {
     s |
   }
 }
@@ -43,11 +43,8 @@ changes = \chords {
   \introLong
   \verseA
   \verseB
-  \bar "||"
   \verseA
   \verseC
-  \bar "||"
   \instrumental
-  \bar "||"
   \introShort
 }
