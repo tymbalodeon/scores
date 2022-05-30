@@ -1,7 +1,5 @@
 introShort = \chordmode {
-  \repeat volta 2 {
-    d1.:m |
-  }
+  d1.:m | s |
 }
 
 introLong = \chordmode {
@@ -21,17 +19,33 @@ verseA = \chordmode {
 
 verseB = \chordmode {
   d1.:m |
-  \repeat unfold 4 {
+  \repeat unfold 3 {
     s |
   }
 }
 
+verseSecondEnding = \chordmode {
+  c1./e |
+}
+
 verseC = \chordmode {
-  c/e | f | s |
+  f | s |
   g:m | s | f:maj7 | s |
   c/e | s | d:m | s |
   g:m | s | f:maj7 | s |
   c | s | d:m | s |
+}
+
+verse = \repeat volta 2 {
+  \verseA
+  \alternative {
+    \volta 1 {
+      \verseB
+    } \volta 2 {
+      \verseSecondEnding
+    }
+  }
+  \verseC
 }
 
 instrumental = \chordmode {
@@ -41,10 +55,7 @@ instrumental = \chordmode {
 
 changes = \chords {
   \introLong
-  \verseA
-  \verseB
-  \verseA
-  \verseC
+  \verse
   \instrumental
   \introShort
 }
