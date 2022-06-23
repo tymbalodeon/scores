@@ -2,7 +2,7 @@ riff = \new CueVoice {
   \relative c' {
     \repeat volta 3 {
       d4. d'4 d,8 c'4 d8~ d4 d,8 |
-      d'4 c8~ c4 f,8~ f4. r |
+      d''4 c8~ c4 f,8~ f4. r |
     }
   }
 }
@@ -23,9 +23,9 @@ verse = \relative c'' {
       \volta 1 {
         g a f~ f4. \new CueVoice {
           c'4 d8~ d4 d,8 |
-          d'4 c8~ c4 f,8~ f4. r |
-          d4. d'4 d,8 c'4 d8~ d4 d,8 |
-          d'4 c8~ c4 f,8~ f4. r |
+          d''4 c8~ c4 f,8~ f4. r |
+          d,4. d'4 d,8 c'4 d8~ d4 d,8 |
+          d''4 c8~ c4 f,8~ f4. r |
         }
       } \volta 2 {
         R1. |
@@ -39,12 +39,13 @@ solo =  \relative c'' {
   \new CueVoice {
     r4. d8 bf' d, \repeat unfold 4 { g, d' bf' d, } g, d' |
   }
-  R1. * 5 |
+  R1. * 4 |
 }
 
 melody = {
   \riff
   \verse
+  \bar "||"
   \solo
   \riff
 }

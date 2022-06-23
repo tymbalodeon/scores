@@ -36,13 +36,15 @@ verseC = \chordmode {
   c | s | d:m | s |
 }
 
-verse = \repeat volta 2 {
-  \verseA
-  \alternative {
-    \volta 1 {
-      \verseB
-    } \volta 2 {
-      \verseSecondEnding
+verse = {
+  \repeat volta 2 {
+    \verseA
+    \alternative {
+      \volta 1 {
+        \verseB
+      } \volta 2 {
+        \verseSecondEnding
+      }
     }
   }
   \verseC
@@ -57,5 +59,4 @@ changes = \chords {
   \introLong
   \verse
   \instrumental
-  \introShort
 }
