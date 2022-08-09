@@ -23,7 +23,7 @@ verse = \relative c'' {
   e2.
 }
 
-chorusFirst = \relative c'' {
+firstChorus = \relative c'' {
   b16 b8. |
 
   r8 e( fs4) \glissando e8 ds4 cs8~ |
@@ -35,7 +35,7 @@ chorusFirst = \relative c'' {
   cs2 e |
 }
 
-chorusSecond = \relative c'' {
+secondChorus = \relative c'' {
   \codaMark \default
   b8( cs)~ \tuplet 3/2 { cs8 b cs } b2 |
   r2 r8
@@ -97,7 +97,7 @@ chorusFinal = \relative c'' {
   \once \override Staff.KeySignature.break-visibility = #end-of-line-invisible
   \once \override Staff.Clef.break-visibility = #end-of-line-invisible
   \codaMark 1
-  \coda fs2. \chorusFirst |
+  \coda fs2. \firstChorus |
   \repeat volta 3 {
     \coda
     \alternative {
@@ -128,8 +128,8 @@ melody = {
   \intro
   \repeat volta 2 {
     \verse
-    \chorusFirst
-    \chorusSecond
+    \firstChorus
+    \secondChorus
   }
   \bridge
   \chorusFinal

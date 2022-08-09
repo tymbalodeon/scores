@@ -1,6 +1,6 @@
 \version "2.23.8"
 
-\include "../settings.ly"
+\include "../../../settings.ly"
 \include "ghost-world-chords.ly"
 \include "ghost-world-melody.ly"
 
