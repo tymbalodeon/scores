@@ -1,6 +1,7 @@
-\version "2.23.8"
+\version "2.23.11"
 
-\include "../../../settings.ly"
+\include "../../../settings.ily"
+\include "../../../style.ily"
 \include "long-shot-chords.ly"
 \include "long-shot-melody.ly"
 
@@ -10,6 +11,12 @@
 }
 
 \score {
+  \layout {
+    \context {
+      \Score
+      \consists #(bars-per-line-engraver '(4))
+    }
+  }
   <<
     \changes
     {

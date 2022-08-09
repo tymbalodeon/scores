@@ -88,12 +88,10 @@ coda = \relative c'' {
 }
 
 chorusFinal = \relative c'' {
-  \cadenzaOn
-  \stopStaff
+  \cadenzaOn \stopStaff
   s1
   \bar "#f"
-  \startStaff
-  \cadenzaOff
+  \startStaff \cadenzaOff
   \once \override Staff.KeySignature.break-visibility = #end-of-line-invisible
   \once \override Staff.Clef.break-visibility = #end-of-line-invisible
   \codaMark 1

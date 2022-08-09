@@ -1,13 +1,39 @@
-verse = \chordmode {
+verseA = \chordmode {
   e1 | d | a | fs:m |
-  e | b:m | fs:m | a |
+}
+
+verseBStart = \chordmode {
+  e1 | b:m | fs:m |
+}
+
+verseB = \chordmode {
+  \verseBStart a |
+}
+
+intro = \chordmode {
+  \verseA
+  \verseBStart a2 \parenthesize a:9 |
+}
+
+verse = {
+  \verseA
+  \verseB |
 }
 
 changes = \chords {
-  \verse
+  \intro
+  \segnoMark \default
   \repeat volta 2 {
     \verse
   }
   \verse
+  \codaMark \default
+  \bar "||"
+  \grace s16
   \verse
+  \cadenzaOn \stopStaff
+  \startStaff \cadenzaOff
+  \repeat volta 2 {
+    \verseB
+  }
 }
