@@ -1,6 +1,10 @@
-intro =  {
-  s1 * 7 |
-  r2. r8 e |
+intro = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \repeat percent 8 {
+    \improvisationOn
+    c8 c c c16 c~ c c c8 r16 c c8 |
+  }
 }
 
 verse = {
@@ -12,7 +16,7 @@ verse = {
 
   b2. a8 b~ |
   b4 r r gs'8 e~ |
-  e cs8 r4 r2 |
+  e cs8~ cs4 r2 |
   r2. b8 cs |
 }
 
