@@ -8,4 +8,6 @@ changes = \chords {
   \repeat volta 2 {
     \verse
   }
+  \verse
+  \verse
 }
