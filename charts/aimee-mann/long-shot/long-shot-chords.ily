@@ -31,8 +31,9 @@ changes = \chords {
   \bar "||"
   \grace s16
   \verse
-  \cadenzaOn \stopStaff
-  \startStaff \cadenzaOff
+}
+
+changesCoda = \chords {
   \repeat volta 2 {
     \verseB
   }

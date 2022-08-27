@@ -1,8 +1,8 @@
 makePercent =
 #(define-music-function (note) (ly:music?)
-   "Make a percent repeat the same length as NOTE."
-   (make-music 'PercentEvent
-               'length (ly:music-length note)))
+  "Make a percent repeat the same length as NOTE."
+  (make-music 'PercentEvent
+   'length (ly:music-length note)))
 
 mutedStrum = \override NoteHead.style = #'cross
 
@@ -63,10 +63,10 @@ chorus = \relative c'' {
   b4 r2 fs'16 gs8.~ |
   gs8 e4 cs8~ cs4 r4 |
   <<
-  \new CueVoice {
-    r2.^\markup { \italic \teeny "after D.S. only" }
-    b8 cs |
-  }
+    \new CueVoice {
+      r2.^\markup { \italic \teeny "after D.S. only" }
+      b8 cs |
+    }
   >>
 }
 
@@ -74,7 +74,7 @@ solo = \relative c'' \new CueVoice {
   \hideNotes
   \once \override Glissando.minimum-length = #2.5
   \once \override Glissando.springs-and-rods =
-                          #ly:spanner::set-spacing-rods
+  #ly:spanner::set-spacing-rods
   \grace fs16 \glissando
   \unHideNotes
   gs8 b4 \appoggiatura b16 cs8 gs4 b8 cs |
@@ -93,13 +93,6 @@ DSalCoda = {
   s1_\markup { \italic "D.S. al Coda without repeats" }
 }
 
-coda = \relative c'' {
-  b2.^\markup { \box \normal-text "repeat ad lib. and fade out" } gs8 b~ |
-  b4 r2 fs'16 gs8.~ |
-  gs8 e4 cs8~ cs4 r4 |
-  r2. b8 cs |
-}
-
 melody = {
   \intro
   \repeat volta 2 {
@@ -112,12 +105,16 @@ melody = {
     \DSalCoda
   >>
   \bar "||"
-  \cadenzaOn \stopStaff
-  \startStaff \cadenzaOff
-  \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details #'((Y-offset . 110))
+}
+
+melodyCoda = \relative c'' {
+  \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details #'((Y-offset . 115))
   \repeat volta 2 {
     \once \override Score.RehearsalMark.font-size = #0.5
     \mark \markup { \musicglyph "scripts.coda" }
-    \coda
+    b2.^\markup { \box \normal-text "repeat ad lib. and fade out" } gs8 b~ |
+    b4 r2 fs'16 gs8.~ |
+    gs8 e4 cs8~ cs4 r4 |
+    r2. b8 cs |
   }
 }
