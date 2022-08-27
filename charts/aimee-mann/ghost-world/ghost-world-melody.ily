@@ -83,17 +83,21 @@ bridge = \relative c'' {
   >>
 }
 
+melody = {
+  \intro
+  \repeat volta 2 {
+    \verse
+    \firstChorus
+    \secondChorus
+  }
+  \bridge
+}
+
 coda = \relative c'' {
   fs8( gs)~ \tuplet 3/2 { gs8 fs e } fs( gs4) fs8~ |
 }
 
-chorusFinal = \relative c'' {
-  \cadenzaOn \stopStaff
-  s1
-  \bar "#f"
-  \startStaff \cadenzaOff
-  \once \override Staff.KeySignature.break-visibility = #end-of-line-invisible
-  \once \override Staff.Clef.break-visibility = #end-of-line-invisible
+melodyCoda = \relative c'' {
   \codaMark 1
   \coda fs2. \firstChorus |
   \repeat volta 3 {
@@ -120,15 +124,4 @@ chorusFinal = \relative c'' {
     }
   >>
   \bar "|."
-}
-
-melody = {
-  \intro
-  \repeat volta 2 {
-    \verse
-    \firstChorus
-    \secondChorus
-  }
-  \bridge
-  \chorusFinal
 }

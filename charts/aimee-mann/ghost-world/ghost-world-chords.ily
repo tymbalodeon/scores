@@ -33,24 +33,6 @@ bridge = \chordmode {
   \intro
 }
 
-coda = \chordmode {
-  \cadenzaOn \stopStaff
-  s1
-  \startStaff \cadenzaOff
-  a2 e | b1 |
-  s1 | fs:m |
-  b1 | fs:m |
-  b | fs2:m a
-  \repeat volta 3 {
-    \parenthesize a2 e |
-    \alternative {
-      \volta 1,2 { b1 | }
-      \volta 3 { b1 | }
-    }
-  }
-  \intro
-}
-
 changes = \chords {
   \intro
   \repeat volta 2 {
@@ -69,5 +51,19 @@ changes = \chords {
   \bar "||"
   \bridge
   \bar "||"
-  \coda
+}
+
+changesCoda = \chords {
+  a2 e | b1 |
+  s1 | fs:m |
+  b1 | fs:m |
+  b | fs2:m a
+  \repeat volta 3 {
+    \parenthesize a2 e |
+    \alternative {
+      \volta 1,2 { b1 | }
+      \volta 3 { b1 | }
+    }
+  }
+  \intro
 }

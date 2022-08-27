@@ -18,3 +18,13 @@
     }
   >>
 }
+
+\score {
+  \layout {
+    ragged-last = ##f
+  }
+  <<
+    \changesCoda
+    \melodyCoda
+  >>
+}
