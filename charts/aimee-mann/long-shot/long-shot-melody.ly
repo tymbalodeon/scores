@@ -59,7 +59,7 @@ chorus = \relative c'' {
   fs8. e16~ e8 cs~ cs a r a |
   a8. b16~ b4 r b8 cs |
 
-  b2. a8 b~ |
+  b2. gs8 b~ |
   b4 r2 fs'16 gs8.~ |
   gs8 e4 cs8~ cs4 r4 |
   <<
@@ -94,7 +94,7 @@ DSalCoda = {
 }
 
 coda = \relative c'' {
-  b2.^\markup { \box \normal-text "repeat ad lib. and fade out" } a8 b~ |
+  b2.^\markup { \box \normal-text "repeat ad lib. and fade out" } gs8 b~ |
   b4 r2 fs'16 gs8.~ |
   gs8 e4 cs8~ cs4 r4 |
   r2. b8 cs |
