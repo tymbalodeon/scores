@@ -1,8 +1,9 @@
-\version "2.23.8"
+\version "2.23.11"
 
-\include "../../../settings.ly"
-\include "ghost-world-chords.ly"
-\include "ghost-world-melody.ly"
+\include "../../../settings.ily"
+\include "../../../style.ily"
+\include "ghost-world-chords.ily"
+\include "ghost-world-melody.ily"
 
 \header {
   title = "Ghost World"
@@ -10,6 +11,12 @@
 }
 
 \score {
+  \layout {
+    \context {
+      \Score
+      \consists #(bars-per-line-engraver '(4))
+    }
+  }
   <<
     \changes
     {

@@ -2,8 +2,8 @@
 
 \include "../../../settings.ily"
 \include "../../../style.ily"
-\include "long-shot-chords.ly"
-\include "long-shot-melody.ly"
+\include "long-shot-chords.ily"
+\include "long-shot-melody.ily"
 
 \header {
   title = "Long Shot"
