@@ -45,12 +45,12 @@ verse = \relative c'' {
   a a4 b16 cs~ cs4 b8 cs |
 
   b2. gs8 b~ |
-  b4 r2
+  b4 r r
   \new CueVoice {
     gs'8^\markup { \italic "after D.S. only" } e~ |
     e cs4. r2 |
   }
-  r2. r8 b |
+  r2 r4 r8 b |
 }
 
 chorus = \relative c'' {
@@ -60,11 +60,11 @@ chorus = \relative c'' {
   a8. b16~ b4 r b8 cs |
 
   b2. gs8 b~ |
-  b4 r2 fs'16 gs8.~ |
+  b4 r r fs'16 gs8.~ |
   gs8 e4 cs8~ cs4 r4 |
   <<
     \new CueVoice {
-      r2.^\markup { \italic \teeny "after D.S. only" }
+      r2^\markup { \italic \teeny "after D.S. only" } r4
       b8 cs |
     }
   >>
@@ -113,8 +113,8 @@ melodyCoda = \relative c'' {
     \once \override Score.RehearsalMark.font-size = #0.5
     \mark \markup { \musicglyph "scripts.coda" }
     b2.^\markup { \box \normal-text "repeat ad lib. and fade out" } gs8 b~ |
-    b4 r2 fs'16 gs8.~ |
+    b4 r r fs'16 gs8.~ |
     gs8 e4 cs8~ cs4 r4 |
-    r2. b8 cs |
+    r2 r4 b8 cs |
   }
 }

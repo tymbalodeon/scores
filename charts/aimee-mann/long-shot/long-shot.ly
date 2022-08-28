@@ -32,6 +32,9 @@
   }
   <<
     \changesCoda
-    \melodyCoda
+    {
+      \key e \major
+      \melodyCoda
+    }
   >>
 }
