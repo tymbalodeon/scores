@@ -12,26 +12,35 @@ melody = \relative c'' {
     e4 d d8 e |
     ef4 c8 df~ df4 |
     c af8 bf~ bf4 |
-    \tuplet 3/2 { a fs g~ } g4 |
+    a! fs8 g~ g4 |
+
     r8 cs ds4 cs8 ds |
     cs4 as8 b~ b4 |
     as fs8 gs~ gs4 |
-    \tuplet 3/2 { g e f~ } f4 |
+    g! e8 f!~ f4 |
+
     \repeat unfold 2 {
-        r8 af bf4 af8 bf |
-        \tuplet 3/2 { bf4 g af~ } af4 |
+      r8 af bf4 af8 bf |
+      bf4 g8 af~ af4 |
     }
+
     gs4. b |
     cs e |
     fs gs |
     e cs |
   }
+
   cs4 d e |
   d cs b |
   b a8 a'~ a4~ |
   a2. |
-  R2. * 8 |
-  \bar "|."
+
+  \repeat volta 2 {
+    cs4. b~ |
+    b2. |
+    gs4. fs~ |
+    fs2. |
+  }
 }
 
 changes = \chords {
@@ -42,7 +51,9 @@ changes = \chords {
     d | s2. * 3 |
   }
   a2. | g | gf4.:m f | s2. |
-  e2. | s2. * 3 |
+  \repeat volta 2 {
+    e2. | s2. * 3 |
+  }
 }
 
 \score {
