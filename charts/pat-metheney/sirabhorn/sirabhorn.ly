@@ -47,7 +47,7 @@ changes = \chords {
   \repeat volta 2 {
     c2. | bf:m11 | gf:11+ | e:m11 |
     b | gs:m11 | e:11+ | d:m11 |
-    \repeat unfold 2 { gf:6 | f:m11 | }
+    \repeat unfold 2 { gf | f:m11 | }
     e:maj6/d | s2. * 3 |
   }
   a2. | g:maj11+ | gf4.:m11 f:6 | s2. |
