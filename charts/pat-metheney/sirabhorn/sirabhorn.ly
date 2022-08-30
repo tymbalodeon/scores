@@ -45,14 +45,14 @@ melody = \relative c'' {
 
 changes = \chords {
   \repeat volta 2 {
-    c2. | bf:m | gf | e:m |
-    b | gs:m | e | d:m |
+    c2. | bf:m | gf:11+ | e:m |
+    b | gs:m | e:11+ | d:m |
     \repeat unfold 2 { gf | f:m | }
     d | s2. * 3 |
   }
   a2. | g | gf4.:m f | s2. |
   \repeat volta 2 {
-    e2. | s2. * 3 |
+    e2.:sus4 | s2. * 3 |
   }
 }
 
