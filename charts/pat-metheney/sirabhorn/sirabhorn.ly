@@ -50,7 +50,7 @@ changes = \chords {
     \repeat unfold 2 { gf | f:m11 | }
     e:maj6/d | s2. * 3 |
   }
-  a2. | g:maj11+ | gf4.:m11 f:6 | s2. |
+  a2. | g:maj11+ | fs4.:m11 f:6 | s2. |
   \repeat volta 2 {
     \repeat unfold 2 { e4.:6 e:sus | s2. | }
   }
