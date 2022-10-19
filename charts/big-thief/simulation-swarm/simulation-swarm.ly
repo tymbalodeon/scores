@@ -1,7 +1,8 @@
-\version "2.23.8"
-\include "../../settings.ly"
-\include "simulation-swarm-chords.ly"
-\include "simulation-swarm-melody.ly"
+\version "2.23.11"
+
+\include "settings.ily"
+\include "simulation-swarm-chords.ily"
+\include "simulation-swarm-melody.ily"
 
 \header {
   title = "Simulation Swarm"

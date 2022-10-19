@@ -3,7 +3,7 @@ intro = \chordmode {
 }
 
 verseA = \chordmode {
-  a1 | d | e:11 | a2 a/gs |
+  a1 | d | e:11 | a2 a:/gs |
 }
 
 instrumentalVerseB = \chordmode {

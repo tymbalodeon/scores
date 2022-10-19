@@ -1,7 +1,8 @@
 \version "2.23.11"
-\include "../../../settings.ily"
-\include "shark-smile-chords.ly"
-\include "shark-smile-melody.ly"
+
+\include "settings.ily"
+\include "shark-smile-chords.ily"
+\include "shark-smile-melody.ily"
 
 \header {
   title = "Shark Smile"

@@ -53,7 +53,7 @@ chorus = \relative c'' {
   \time 2/4
   c c16 c~ c16 c df8~ |
   \time 4/4
-  df4 r |
+  df4 r2. |
   R1 * 1_\markup { \italic "D.S. al Coda con ripetizione" } |
 }
 

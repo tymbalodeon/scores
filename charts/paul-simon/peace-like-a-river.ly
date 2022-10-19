@@ -1,8 +1,8 @@
-\version "2.23.8"
+\version "2.23.11"
 
-\include "../../settings.ly"
-\include "peace-like-a-river-chords.ly"
-\include "peace-like-a-river-melody.ly"
+\include "settings.ily"
+\include "peace-like-a-river-chords.ily"
+\include "peace-like-a-river-melody.ily"
 
 \header {
   title = "Peace Like A River"

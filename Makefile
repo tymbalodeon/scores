@@ -1,6 +1,5 @@
-LILYPOND_FILES = $(shell find . -type f -name '*.ly')
 OUTPUT_DIRECTORY ?= $$HOME/Scores
-CREATE_PDFS = $(foreach file, $(LILYPOND_FILES), lilypond -o $(OUTPUT_DIRECTORY) $(file);)
+LILYPOND_FILE_NAMES = $(addsuffix "",$(shell find . -type f -name '*.ly' -print))
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
@@ -10,5 +9,11 @@ help:
 $(OUTPUT_DIRECTORY):
 	@mkdir -p $(OUTPUT_DIRECTORY)
 
-pdfs: $(OUTPUT_DIRECTORY) ## Output pdfs for all LilyPond files in the specified directory. [option: "output_directory=<directory> (default=$HOME/Scores)"]
-	$(CREATE_PDFS)
+%.pdf: %.ly
+	lilypond $<
+
+$(LILYPOND_FILE_NAMES):
+	@echo $@
+	@lilypond -o $(OUTPUT_DIRECTORY) $@
+
+pdfs: $(OUTPUT_DIRECTORY) $(LILYPOND_FILE_NAMES) ## Output pdfs for all LilyPond files in the specified directory. [option: "output_directory=<directory> (default=$HOME/Scores)"]
