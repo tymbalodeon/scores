@@ -9,10 +9,10 @@
 }
 
 
-melody = \relative c' { R1*12 | }
+melody = \relative c' { s1*12 | }
 
 changes = \chords {
-  c1 | c4 f2. |
+  c:sus1 | c4 f2. |
   bf1 | bf4 ef2. |
   c1 | c4 f2. |
   bf1 | bf4 ef2. |
