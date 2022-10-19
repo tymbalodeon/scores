@@ -1,6 +1,6 @@
 \version "2.23.11"
 
-\include "../../../settings.ily"
+\include "settings.ily"
 \include "ghost-world-chords.ily"
 \include "ghost-world-melody.ily"
 

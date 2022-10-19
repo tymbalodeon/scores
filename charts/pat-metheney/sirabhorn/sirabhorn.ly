@@ -1,6 +1,7 @@
 \version "2.23.11"
-\include "../../../settings.ily"
-\include "../../../style.ily"
+
+\include "settings.ily"
+\include "style.ily"
 
 \header {
   title = "Sirabhorn"

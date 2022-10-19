@@ -1,5 +1,6 @@
 \version "2.23.11"
-\include "../../settings.ily"
+
+\include "settings.ily"
 
 \header {
   title = "Day and Age"

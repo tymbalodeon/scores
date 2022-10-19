@@ -1,16 +1,8 @@
-\version "2.23.8"
-\language "english"
-\pointAndClickOff
-\paper {
-  #(set-paper-size "letter")
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.5\in
-}
+\version "2.23.11"
+
+\include "settings.ily"
 
 \header {
-  tagline = ##f
   title = "Long Ago and Far Away"
   composer = "Jerome Kern"
 }
@@ -31,7 +23,6 @@ melodyA = \relative c' {
   a2 g |
 
   \break
-
 }
 
 melody = \relative c' {
