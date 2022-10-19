@@ -1,5 +1,5 @@
-\version "2.23.8"
-\include "../../settings.ly"
+\version "2.23.11"
+\include "../../../settings.ily"
 \include "shark-smile-chords.ly"
 \include "shark-smile-melody.ly"
 
