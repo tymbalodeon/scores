@@ -1,6 +1,6 @@
 OUTPUT_DIRECTORY ?= $$HOME/Scores
 LILYPOND_FILES = $(shell find . -type f -name '*.ly')
-PDF_FILES = $(patsubst %,%.pdf,$(basename $(LILYPOND_FILES)))
+PDF_FILES = $(patsubst %, %.pdf, $(basename $(LILYPOND_FILES)))
 
 .PHONY: help
 help:
@@ -12,7 +12,7 @@ $(OUTPUT_DIRECTORY):
 	@mkdir -p $(OUTPUT_DIRECTORY)
 
 %.pdf: %.ly
-	@lilypond -o $(OUTPUT_DIRECTORY) $^
+	@lilypond -o $(OUTPUT_DIRECTORY) $<
 
 .PHONY: scores
 scores: $(OUTPUT_DIRECTORY) $(PDF_FILES) ## Output pdfs for all LilyPond files in the specified directory. [option: "output_directory=<directory> (default=$HOME/Scores)"]
