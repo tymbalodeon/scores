@@ -16,3 +16,7 @@ $(OUTPUT_DIRECTORY):
 
 .PHONY: scores
 scores: $(OUTPUT_DIRECTORY) $(PDF_FILES) ## Output pdfs for all LilyPond files in the specified directory. [option: "output_directory=<directory> (default=$HOME/Scores)"]
+
+.PHONY: clean
+clean:
+	rm $(OUTPUT_DIRECTORY)/*.pdf
