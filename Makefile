@@ -33,10 +33,12 @@ endif
 .PHONY: edit
 edit: ## Open <name> in editor and pdf viewer, recompiling on file changes.
 ifneq (,$(name))
-	@$(MAKE) $(call FIND_FILE,$(name)).pdf
-	@open $(call FIND_FILE,$(name)).pdf
-	@open $(call FIND_FILE,$(name)).ly
-	@echo **/$(call FIND_FILE,$(name)).ly | entr make $(call FIND_FILE,$(name)).pdf
+	@file_name=$(call FIND_FILE,$(name)) \
+	&& $(MAKE) $$file_name.pdf \
+	&& open $$file_name.pdf \
+	&& open $$file_name.ly \
+	&& echo **/$$file_name.ly | entr make $$file_name.pdf
 else
 	@echo "Please specify the name (without extension) of a file to edit, using: 'name=<name>'."
 endif
+
