@@ -11,11 +11,11 @@ help:
 $(OUTPUT_DIRECTORY):
 	@mkdir -p $(OUTPUT_DIRECTORY)
 
-%.pdf: %.ly
+%.pdf: %.ly $(OUTPUT_DIRECTORY)
 	@lilypond -o $(OUTPUT_DIRECTORY) $<
 
 .PHONY: scores
-scores: $(OUTPUT_DIRECTORY) $(PDF_FILES) ## Output pdfs for all LilyPond files in the specified directory. [option: "output_directory=<directory> (default=$HOME/Scores)"]
+scores: $(PDF_FILES) ## Output pdfs for all LilyPond files in the specified directory. [option: "output_directory=<directory> (default=$HOME/Scores)"]
 
 .PHONY: clean
 clean:
