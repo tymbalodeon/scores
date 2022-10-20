@@ -10,8 +10,8 @@
 
 
 melody = \relative c' {
-  s1*8 |
-  s1.*3
+  s1 * 8 |
+  s1. * 3
 }
 
 changes = \chords {
