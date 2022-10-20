@@ -5,6 +5,7 @@ LILYPOND_COMMAND = lilypond -o $(2) $(1).ly 2>&1 | tee $(1).log
 FIND_FILE = $(shell find . -name $(1))/$(1)
 REMOVE_EXTENSION = $(subst .pdf,,$(1))
 GET_PARENT = $(dir $(1))
+GET_PDFS = $(shell echo **/**.pdf(N))
 ADD_COLOR = $(patsubst %,\033[36m%\033[0m,$(1))
 
 .PHONY: help
@@ -21,10 +22,10 @@ scores: $(OUTPUT_FILES) ## Create pdfs for all LilyPond files.
 
 .PHONY: clean
 clean: ## Remove all pdfs.
-ifneq (,$(shell echo **/**.pdf(N)))
-	@for file in $(shell ls **/**.pdf(N)); do \
+ifneq (,$(call GET_PDFS))
+	@for file in $(call GET_PDFS); do \
 		rm -f $$file; \
-		echo "Removed $(call ADD_COLOR,$(notdir $$file))."; \
+		echo "Removed $(call ADD_COLOR,$$file)."; \
 	done
 else
 	@echo "Nothing to clean."
