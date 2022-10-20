@@ -8,36 +8,77 @@
   composer = "Cate Le Bon"
 }
 
-
 melody = \relative c' {
-  s1 * 8 |
-  s1. * 3
+  \repeat volta 2 {
+    s1 * 2 |
+  }
+  \repeat volta 2 {
+    \time 3/4
+    s2. |
+    \time 4/4
+    s1 |
+  }
+  \time 3/4
+  s2. |
+  \time 4/4
+  s1 |
+  \time 5/4
+  s1 s4 |
+  \time 4/4
+  s1 * 2 |
+  \repeat unfold 2 {
+    \repeat volta 2 {
+      s1 * 2 |
+    }
+  }
 }
 
 changes = \chords {
   \repeat volta 2 {
-    c1:sus | c4 f2. |
-    bf1:sus | bf4 ef2. |
+    c2.:sus f4 |
+    bf2.:sus ef4 |
   }
   \repeat volta 2 {
-    \time 2/2 a1:m | \time 3/2 f2 c1 |
+    \time 3/4
+    a2:m  f4|
+    \time 4/4
+    c1 |
   }
-  bf2 af1 |
-  f1. |
-  \time 2/2
+  \break
+  \time 3/4
+  bf4 af2 |
+  \time 4/4
+  f1 |
+  \time 5/4
   \repeat unfold 2 {
-    a2 f |
+    a4 f
   }
-  a g |
+  a
+  \break
+  \time 4/4
+  g1 |
+  \bar "||"
+  \segnoMark \default
+  g1 |
+  \repeat volta 2 {
+    \mark \markup { \musicglyph "scripts.coda" }
+    g2.:sus c4 |
+    f2.:sus bf4 |
+  }
+  \break
+  \repeat volta 2 {
+    c2.:sus f4 |
+    bf2.:sus ef4 |
+  }
 }
 
 \score {
   <<
+    \numericTimeSignature
     \changes
     {
       \key f \major
-      \time 2/2
-       \melody
+      \melody
     }
   >>
 }
