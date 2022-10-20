@@ -23,8 +23,8 @@ scores: $(OUTPUT_FILES) ## Create pdfs for all LilyPond files.
 clean: ## Remove all pdfs.
 	rm -f **/**.pdf
 
-.PHONY: watch
-watch:
+.PHONY: edit
+edit: ## Open <name> in editor and pdf viewer, recompiling on file changes.
 	open $(call FIND_FILE,$(name)).pdf \
 	&& open $(call FIND_FILE,$(name)).ly \
 	&& echo **/$(call FIND_FILE,$(name)).ly | entr make scores
