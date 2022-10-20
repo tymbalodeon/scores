@@ -21,7 +21,7 @@ scores: $(OUTPUT_FILES) ## Create pdfs for all LilyPond files.
 
 .PHONY: clean
 clean: ## Remove all pdfs.
-	rm -f **/**.pdf
+	@rm -f **/**.pdf
 
 .PHONY: edit
 edit: ## Open <name> in editor and pdf viewer, recompiling on file changes.
