@@ -8,27 +8,35 @@
   composer = "Cate Le Bon"
 }
 
-melody = \relative c' {
+melody = \relative c' \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
   \repeat volta 2 {
-    s1 * 2 |
+    \repeat unfold 2 {
+      c2. c4 |
+    }
   }
   \repeat volta 2 {
     \time 3/4
-    s2. |
+    c2 c4 |
     \time 4/4
-    s1 |
+    c1 |
   }
   \time 3/4
-  s2. |
+  c4 c2 |
   \time 4/4
-  s1 |
+  c1 |
   \time 5/4
-  s1 s4 |
+  c4 c c c c |
   \time 4/4
-  s1 * 2 |
+  c8 c~ c2. |
+  c2 c |
   \repeat unfold 2 {
     \repeat volta 2 {
-      s1 * 2 |
+      \repeat unfold 2 {
+        c2. c4 |
+      }
     }
   }
 }
