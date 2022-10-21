@@ -12,8 +12,13 @@ melody = \relative c' \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
   \improvisationOn
+  \time 4/4
+  c2. c4 |
+  s1 |
+  \repeat unfold 2 {
+    c2. c4 |
+  }
   \repeat volta 2 {
-    \time 4/4
     c2. c4 |
     s1 |
     \repeat unfold 2 {
@@ -36,6 +41,13 @@ melody = \relative c' \new Voice \with {
 
 changes = \chords {
   \time 4/4
+  \mark "Intro"
+  e2.:m  b4:m|
+  e1:m |
+  g2. c4 |
+  g2. b4:m |
+  \break
+  \mark "Verse"
   \repeat volta 2 {
     e2.:m  b4:m|
     e1:m |
