@@ -9,23 +9,26 @@ FIND_OUTPUT_FILE = $(call FIND,$(1).pdf)
 REMOVE_EXTENSION = $(subst .pdf,,$(1))
 GET_PARENT = $(dir $(1))
 GET_PDFS = $(shell echo **/**.pdf(N))
-ADD_COLOR = $(patsubst %,\033[36m%\033[0m,$(1))
+TPUT_COMMAND = $(shell tput -Txterm $(1))
+GET_COLOR = $(call TPUT_COMMAND,setaf $(1))
+GREEN  := $(call GET_COLOR,2)
+YELLOW := $(call GET_COLOR,3)
+MAGENTA  := $(call GET_COLOR,5)
+WHITE  := $(call GET_COLOR,7)
+RESET  := $(call TPUT_COMMAND,sgr0)
 MISSING_NAME_MESSAGE = \
 	"Please specify the name (without extension) of a file to edit, \
 	using: 'name=<name>'."
 NOTHING_TO_CLEAN = "No pdf(s) to clean."
-GREEN  := $(shell tput -Txterm setaf 2)
-YELLOW := $(shell tput -Txterm setaf 3)
-WHITE  := $(shell tput -Txterm setaf 7)
-RESET  := $(shell tput -Txterm sgr0)
+REMOVED_FILE_MESSAGE = "Removed $(MAGENTA)$(1)$(RESET)."
 
 TARGET_MAX_CHAR_NUM = 10
 .PHONY: help
 help:
-	@echo 'Usage:'
-	@echo '  ${YELLOW}make${RESET} ${GREEN}<target>${RESET}'
-	@echo ''
-	@echo 'Targets:'
+	@echo "Usage:"
+	@echo "  ${YELLOW}make${RESET} ${GREEN}<target>${RESET}"
+	@echo
+	@echo "Targets:"
 	@awk '/^[a-zA-Z\-\_0-9]+:/ { \
 		helpMessage = match(lastLine, /^## (.*)/); \
 		if (helpMessage) { \
@@ -36,7 +39,6 @@ help:
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST) | sort
 
-## Create pdf for specific LilyPond input file.
 %.pdf: %.ly
 	@$(call LILYPOND_COMMAND,$(call REMOVE_EXTENSION,$@),$(call GET_PARENT,$@))
 
@@ -66,7 +68,7 @@ ifeq ($(call GET_PDFS),)
 else
 	@for file in $(call GET_PDFS); do \
 		rm -f $$file; \
-		echo "Removed $(call ADD_COLOR,$$file)."; \
+		echo $(call REMOVED_FILE_MESSAGE,$$file); \
 	done
 endif
 else
@@ -75,7 +77,7 @@ ifeq ($(call FIND_OUTPUT_FILE,$(name)),)
 else
 	@file_name=$(call FIND_OUTPUT_FILE,$(name)) \
 	&& rm -f $$file_name \
-	&& echo "Removed $(call ADD_COLOR,$$file_name)."
+	&& echo $(call REMOVED_FILE_MESSAGE,$$file)
 	@echo $(call FIND_OUTPUT_FILE,$(name))
 endif
 endif
