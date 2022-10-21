@@ -7,12 +7,16 @@ REMOVE_EXTENSION = $(subst .pdf,,$(1))
 GET_PARENT = $(dir $(1))
 GET_PDFS = $(shell echo **/**.pdf(N))
 ADD_COLOR = $(patsubst %,\033[36m%\033[0m,$(1))
+MISSING_NAME_MESSAGE = \
+	"Please specify the name (without extension) of a file to edit, \
+	using: 'name=<name>'."
 
 .PHONY: help
 help:
 	@grep -E '^\S+:.*?## .*$$' $(MAKEFILE_LIST) | \
 	sort -d | \
-	awk 'BEGIN {FS = ":.*?## "}; {printf "$(call ADD_COLOR,%-10s) %s\n", $$1, $$2}'
+	awk 'BEGIN {FS = ":.*?## "}; \
+	{printf "$(call ADD_COLOR,%-10s) %s\n", $$1, $$2}'
 
 %.pdf: %.ly ## Create pdf for specific LilyPond input file.
 	@$(call LILYPOND_COMMAND,$(call REMOVE_EXTENSION,$@),$(call GET_PARENT,$@))
@@ -20,7 +24,7 @@ help:
 .PHONY: score
 score: ## Create a pdf for a single LilyPond file.
 ifeq ($(name),)
-	@echo "Please specify the name (without extension) of a file to edit, using: 'name=<name>'."
+	@echo $(MISSING_NAME_MESSAGE)
 else
 ifeq ($(call FIND_INPUT_FILE,$(name)),)
 	@echo '"$(name).ly" not found.'
@@ -46,7 +50,7 @@ endif
 .PHONY: edit
 edit: ## Open <name> in editor and pdf viewer, recompiling on file changes.
 ifeq ($(name),)
-	@echo "Please specify the name (without extension) of a file to edit, using: 'name=<name>'."
+	@echo $(MISSING_NAME_MESSAGE)
 else
 	@file_name=$(shell find . -name $(name))/$(name) \
 	&& $(MAKE) $$file_name.pdf \
