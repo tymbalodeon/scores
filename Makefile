@@ -12,7 +12,7 @@ ADD_COLOR = $(patsubst %,\033[36m%\033[0m,$(1))
 MISSING_NAME_MESSAGE = \
 	"Please specify the name (without extension) of a file to edit, \
 	using: 'name=<name>'."
-NOTHING_TO_CLEAN = Nothing to clean.
+NOTHING_TO_CLEAN = "No pdf(s) to clean."
 
 .PHONY: help
 help:
@@ -71,4 +71,11 @@ else
 	&& open $$file_name.pdf \
 	&& open $$file_name.ly \
 	&& echo **/$$file_name.ly | entr make $$file_name.pdf
+endif
+
+list: ## List any pdf(s) already created.
+ifeq ($(shell echo **/**.pdf(N)),)
+	@echo "No pdfs created yet."
+else
+	@ls -1 **/**.pdf(N)
 endif
