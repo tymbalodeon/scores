@@ -1,10 +1,11 @@
 SHELL = /bin/zsh
-INPUT_FILES = $(shell find . -type f -name "*.ly")
+FIND = $(shell find . -name $(1))
+INPUT_FILES = $(call FIND,"*.ly")
 OUTPUT_FILES = $(subst .ly,.pdf,$(INPUT_FILES))
 LILYPOND_COMMAND = lilypond -o $(2) $(1).ly 2>&1 | tee $(1).log
-FIND_FILE_NAME = $(shell find . -name $(name))/$(name)
-FIND_INPUT_FILE = $(shell find . -name $(1).ly)
-FIND_OUTPUT_FILE = $(shell find . -name $(1).pdf)
+FIND_FILE_NAME = $(call FIND,$(1))/$(1)
+FIND_INPUT_FILE = $(call FIND,$(1).ly)
+FIND_OUTPUT_FILE = $(call FIND,$(1).pdf)
 REMOVE_EXTENSION = $(subst .pdf,,$(1))
 GET_PARENT = $(dir $(1))
 GET_PDFS = $(shell echo **/**.pdf(N))
@@ -13,19 +14,35 @@ MISSING_NAME_MESSAGE = \
 	"Please specify the name (without extension) of a file to edit, \
 	using: 'name=<name>'."
 NOTHING_TO_CLEAN = "No pdf(s) to clean."
+GREEN  := $(shell tput -Txterm setaf 2)
+YELLOW := $(shell tput -Txterm setaf 3)
+WHITE  := $(shell tput -Txterm setaf 7)
+RESET  := $(shell tput -Txterm sgr0)
 
+TARGET_MAX_CHAR_NUM = 10
 .PHONY: help
 help:
-	@grep -E '^\S+:.*?## .*$$' $(MAKEFILE_LIST) | \
-	sort -d | \
-	awk 'BEGIN {FS = ":.*?## "}; \
-	{printf "$(call ADD_COLOR,%-10s) %s\n", $$1, $$2}'
+	@echo 'Usage:'
+	@echo '  ${YELLOW}make${RESET} ${GREEN}<target>${RESET}'
+	@echo ''
+	@echo 'Targets:'
+	@awk '/^[a-zA-Z\-\_0-9]+:/ { \
+		helpMessage = match(lastLine, /^## (.*)/); \
+		if (helpMessage) { \
+			helpCommand = substr($$1, 0, index($$1, ":")-1); \
+			helpMessage = substr(lastLine, RSTART + 3, RLENGTH); \
+			printf "  ${YELLOW}%-$(TARGET_MAX_CHAR_NUM)s${RESET} ${GREEN}%s${RESET}\n", helpCommand, helpMessage; \
+		} \
+	} \
+	{ lastLine = $$0 }' $(MAKEFILE_LIST) | sort
 
-%.pdf: %.ly ## Create pdf for specific LilyPond input file.
+## Create pdf for specific LilyPond input file.
+%.pdf: %.ly
 	@$(call LILYPOND_COMMAND,$(call REMOVE_EXTENSION,$@),$(call GET_PARENT,$@))
 
 .PHONY: score
-score: ## Create a pdf for a single LilyPond file. [option: name=<name>]
+## Create a pdf for a single LilyPond file. [option: name=<name>]
+score:
 ifeq ($(name),)
 	@echo $(MISSING_NAME_MESSAGE)
 else
@@ -37,10 +54,12 @@ endif
 endif
 
 .PHONY: scores
-scores: $(OUTPUT_FILES) ## Create pdfs for all LilyPond files.
+## Create pdfs for all LilyPond files.
+scores: $(OUTPUT_FILES)
 
 .PHONY: clean
-clean: ## Remove pdf(s). [option: name=<name>]
+## Remove pdf(s). [option: name=<name>]
+clean:
 ifeq ($(name),)
 ifeq ($(call GET_PDFS),)
 	@echo $(NOTHING_TO_CLEAN)
@@ -62,7 +81,8 @@ endif
 endif
 
 .PHONY: edit
-edit: ## Open <name> in editor and pdf viewer, recompiling on file changes. [option: name=<name>]
+## Open <name> in editor and pdf viewer, recompiling on file changes. [option: name=<name>]
+edit:
 ifeq ($(name),)
 	@echo $(MISSING_NAME_MESSAGE)
 else
@@ -73,7 +93,8 @@ else
 	&& echo **/$$file_name.ly | entr make $$file_name.pdf
 endif
 
-list: ## List any pdf(s) already created.
+## List any pdf(s) already created.
+list:
 ifeq ($(shell echo **/**.pdf(N)),)
 	@echo "No pdfs created yet."
 else
