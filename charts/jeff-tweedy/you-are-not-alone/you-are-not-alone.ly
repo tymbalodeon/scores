@@ -2,83 +2,43 @@
 
 \include "settings.ily"
 \include "style.ily"
+\include "you-are-not-alone-melody.ily"
+\include "you-are-not-alone-chords.ily"
 
 \header {
   title = "You Are Not Alone"
   composer = "Jeff Tweedy"
 }
 
-melody = \relative c' \new Voice \with {
-  \consists "Pitch_squash_engraver"
-} {
-  \improvisationOn
-  \time 4/4
-  c2. c4 |
-  s1 |
-  \repeat unfold 2 {
-    c2. c4 |
-  }
-  \repeat volta 2 {
-    c2. c4 |
-    s1 |
-    \repeat unfold 2 {
-      c2. c4 |
-    }
-    \repeat unfold 3 {
-      s1 |
-    }
-    c2 c |
-    \repeat unfold 4 {
-      s1 |
-    }
-    c2 c4 c |
-    s1 * 2 |
-    \repeat unfold 2 {
-      c2. c4 |
-    }
-  }
-}
-
-changes = \chords {
+structure = {
   \time 4/4
   \mark "Intro"
-  e2.:m  b4:m|
-  e1:m |
-  g2. c4 |
-  g2. b4:m |
+  s1 * 4 |
   \break
   \mark "Verse"
   \repeat volta 2 {
-    e2.:m  b4:m|
-    e1:m |
-    g2. c4 |
-    g2. b4:m |
+    s1 * 4 |
     \break
-    e1:m |
-    s |
-    a:m |
-    g2 c |
-    g1 |
+    s1 * 5 |
     \break
-    c |
-    g |
-    a:m |
-    e2:m g4 gs:dim |
+    s1 * 4 |
     \break
-    a1:m |
-    c |
-    g2. c4 |
-    g2. b4:m |
+    s1 * 4 |
   }
+}
+
+melody = {
+  \key e \minor
+  <<
+    \melody
+    \structure
+  >>
 }
 
 \score {
   <<
     \numericTimeSignature
     \changes
-    {
-      \key e \minor
-      \melody
-    }
+    \melody
   >>
 }
