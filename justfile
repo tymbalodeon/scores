@@ -1,4 +1,4 @@
-output_files := "**/**.pdf(.N)"
+pdfs := "**/**.pdf(.N)"
 lilypond := """
     without_extension=$file:r;
     checkexec $without_extension.pdf $without_extension*.*ly(.N) ./*.ily -- \
@@ -9,42 +9,42 @@ lilypond := """
 @_help:
     just --list
 
-# Create pdfs for all LilyPond files.
+# Create pdfs for all scores.
 scores:
     #!/usr/bin/env zsh
     for file in **/**.ly(.N); do
         {{lilypond}}
     done
 
-# Create a pdf for a single LilyPond file.
-score FILE:
+# Create a pdf for SCORE.
+score SCORE:
     #!/usr/bin/env zsh
-    for file in **/**{{FILE}}*.ly(.N); do
+    for file in **/**{{SCORE}}*.ly(.N); do
         {{lilypond}}
     done
 
-# Open <name> in editor and pdf viewer, recompiling on file changes.
-edit FILE: (score FILE)
+# Open SCORE in editor and pdf viewer, recompiling on file changes.
+edit SCORE: (score SCORE)
     #!/usr/bin/env zsh
-    for file in **/**{{FILE}}*.ly(.N); do
+    for file in **/**{{SCORE}}*.ly(.N); do
         without_extension=$file:r;
         lilypond_file=$without_extension.ly;
         open $without_extension.pdf;
         open $lilypond_file;
-        echo $lilypond_file | entr just score {{FILE}};
+        echo $lilypond_file | entr just score {{SCORE}};
     done
 
-# List any pdf(s) already created.
+# List all pdfs already created.
 list:
     #!/usr/bin/env zsh
-    for file in {{output_files}}; do
+    for file in {{pdfs}}; do
         echo $file;
     done
 
-# Remove pdf(s).
+# Remove all pdfs.
 clean:
     #!/usr/bin/env zsh
-    for file in {{output_files}}; do
+    for file in {{pdfs}}; do
         rm -f $file;
         echo "Removed $file".;
     done
