@@ -1,7 +1,16 @@
+set dotenv-load
+
+export OUTPUT_DIRECTORY := ```
+    OUTPUT_DIRECTORY=${OUTPUT_DIRECTORY:-$HOME/Scores};
+    mkdir -p $OUTPUT_DIRECTORY;
+    echo $OUTPUT_DIRECTORY;
+```
+
 pdfs := "**/**.pdf(.N)"
 lilypond := """
     without_extension=$file:r;
-    checkexec $without_extension.pdf $without_extension*.*ly(.N) ./*.ily -- \
+    pdf_file=$without_extension.pdf;
+    checkexec $pdf_file $without_extension*.*ly(.N) ./*.ily -- \
     lilypond -o $without_extension $file;
 """
 
@@ -14,6 +23,9 @@ scores:
     #!/usr/bin/env zsh
     for file in **/**.ly(.N); do
         {{lilypond}}
+        parent_directory=$OUTPUT_DIRECTORY/$file:r:h;
+        mkdir -p $parent_directory:h;
+        cp $pdf_file $parent_directory.pdf;
     done
 
 # Create a pdf for SCORE.
