@@ -1,4 +1,9 @@
 output_files := "**/**.pdf(.N)"
+lilypond := """
+    without_extension=$file:r;
+    checkexec $without_extension.pdf $without_extension*.*ly(.N) ./*.ily -- \
+    lilypond -o $without_extension $file;
+"""
 
 # Display available recipes.
 @_help:
@@ -8,18 +13,14 @@ output_files := "**/**.pdf(.N)"
 scores:
     #!/usr/bin/env zsh
     for file in **/**.ly(.N); do
-        without_extension=$file:r;
-        checkexec $without_extension.pdf $without_extension*.*ly(.N) ./*.ily -- \
-        lilypond -o $without_extension $file;
+        {{lilypond}}
     done
 
 # Create a pdf for a single LilyPond file.
 score FILE:
     #!/usr/bin/env zsh
     for file in **/**{{FILE}}*.ly(.N); do
-        without_extension=$file:r;
-        checkexec $without_extension.pdf $without_extension*.*ly(.N) ./*.ily -- \
-        lilypond -o $without_extension $file;
+        {{lilypond}}
     done
 
 # List any pdf(s) already created.
