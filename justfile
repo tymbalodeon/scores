@@ -20,6 +20,23 @@ lilypond := """
 @_help:
     just --list
 
+# Create new score template.
+new TYPE COMPOSER NAME:
+    #!/usr/bin/env zsh
+    score_directory=./{{TYPE}}s/{{COMPOSER}}/{{NAME}};
+    mkdir -p $score_directory;
+    score=$score_directory/{{NAME}};
+    files=(
+        $score.ly
+        $score-chords.ily
+        $score-melody.ily
+        $score-structure.ily
+    );
+    for file in $files; do
+        touch $file;
+    done
+
+
 # Create pdfs for all scores.
 scores:
     #!/usr/bin/env zsh
