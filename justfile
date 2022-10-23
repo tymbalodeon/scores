@@ -23,6 +23,17 @@ score FILE:
         {{lilypond}}
     done
 
+# Open <name> in editor and pdf viewer, recompiling on file changes.
+edit FILE: (score FILE)
+    #!/usr/bin/env zsh
+    for file in **/**{{FILE}}*.ly(.N); do
+        without_extension=$file:r;
+        lilypond_file=$without_extension.ly;
+        open $without_extension.pdf;
+        open $lilypond_file;
+        echo $lilypond_file | entr just score {{FILE}};
+    done
+
 # List any pdf(s) already created.
 list:
     #!/usr/bin/env zsh
