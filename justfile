@@ -23,6 +23,10 @@ lilypond := """
 # Create pdfs for all scores.
 scores:
     #!/usr/bin/env zsh
+    if [[ ! $(command -v checkexec) ]] then
+        printf 'This recipe requires "\e]8;;https://github.com/kurtbuilds/checkexec\e\\checkexec\e]8;;\e\\". Please run "cargo install checkexec" and try again.\n'
+        exit;
+    fi;
     for file in **/**.ly(.N); do
         {{lilypond}}
         if [ -n "${OUTPUT_DIRECTORY}" ]; then
@@ -35,6 +39,10 @@ scores:
 # Create a pdf for SCORE.
 score SCORE:
     #!/usr/bin/env zsh
+    if [[ ! $(command -v checkexec) ]] then
+        printf 'This recipe requires "\e]8;;https://github.com/kurtbuilds/checkexec\e\\checkexec\e]8;;\e\\". Please run "cargo install checkexec" and try again.\n'
+        exit;
+    fi;
     for file in **/**{{SCORE}}*.ly(.N); do
         {{lilypond}}
     done
@@ -42,19 +50,23 @@ score SCORE:
 # Open SCORE in editor and pdf viewer, recompiling on file changes.
 edit SCORE: (score SCORE)
     #!/usr/bin/env zsh
+    if [[ ! $(command -v watchexec) ]] then
+        printf 'This recipe requires "\e]8;;https://skim-app.sourceforge.io/\e\\skim\e]8;;\e\\". Please run "brew install skim" and try again.\n'
+        exit;
+    fi;
     for file in **/**{{SCORE}}*.ly(.N); do
         without_extension=$file:r;
         lilypond_file=$without_extension.ly;
         open $without_extension.pdf;
         open $lilypond_file;
-        echo $lilypond_file | entr just score {{SCORE}};
+        printf $lilypond_file | entr just score {{SCORE}};
     done
 
 # List all pdfs already created.
 list:
     #!/usr/bin/env zsh
     for file in {{pdfs}}; do
-        echo $file;
+        printf $file;
     done
 
 # Remove all pdfs.
@@ -62,5 +74,5 @@ clean:
     #!/usr/bin/env zsh
     for file in {{pdfs}}; do
         rm -f $file;
-        echo "Removed $file".;
+        printf "Removed $file".;
     done
