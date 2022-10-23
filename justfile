@@ -1,4 +1,3 @@
-input_files := "**/**.ly(.N)"
 output_files := "**/**.pdf(.N)"
 
 # Display available recipes.
@@ -7,22 +6,32 @@ output_files := "**/**.pdf(.N)"
 
 # Create pdfs for all LilyPond files.
 scores:
-    #!/bin/zsh
-    for file in {{input_files}}; do
-        checkexec $file:r.pdf $file:r*.*ly(.N) ./*.ily -- \
-        lilypond -o $file:r $file 2>&1 | tee $file:r.log;
+    #!/usr/bin/env zsh
+    for file in **/**.ly(.N); do
+        without_extension=$file:r;
+        checkexec $without_extension.pdf $without_extension*.*ly(.N) ./*.ily -- \
+        lilypond -o $without_extension $file;
+    done
+
+# Create a pdf for a single LilyPond file.
+score FILE:
+    #!/usr/bin/env zsh
+    for file in **/**{{FILE}}*.ly(.N); do
+        without_extension=$file:r;
+        checkexec $without_extension.pdf $without_extension*.*ly(.N) ./*.ily -- \
+        lilypond -o $without_extension $file;
     done
 
 # List any pdf(s) already created.
 list:
-    #!/bin/zsh
+    #!/usr/bin/env zsh
     for file in {{output_files}}; do
         echo $file;
     done
 
 # Remove pdf(s).
 clean:
-    #!/bin/zsh
+    #!/usr/bin/env zsh
     for file in {{output_files}}; do
         rm -f $file;
         echo "Removed $file".;
