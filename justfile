@@ -47,14 +47,14 @@ edit SCORE: (score SCORE)
         lilypond_file=$without_extension.ly;
         open $without_extension.pdf;
         open $lilypond_file;
-        printf $lilypond_file | entr just score {{SCORE}};
+        watchexec -e ly,ily just score {{SCORE}}
     done
 
 # List all pdfs already created.
 list:
     #!/usr/bin/env zsh
     for file in {{pdfs}}; do
-        printf $file;
+        echo $file;
     done
 
 # Remove all pdfs.
@@ -62,5 +62,5 @@ clean:
     #!/usr/bin/env zsh
     for file in {{pdfs}}; do
         rm -f $file;
-        printf "Removed $file".;
+        echo "Removed $file".;
     done
