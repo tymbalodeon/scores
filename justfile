@@ -1,7 +1,7 @@
 output_files := "**/**.pdf(.N)"
 
 # Display available recipes.
-@help:
+@_help:
     just --list
 
 # Create pdfs for all LilyPond files.
