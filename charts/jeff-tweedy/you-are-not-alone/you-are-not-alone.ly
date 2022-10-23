@@ -11,8 +11,7 @@
   composer = "Jeff Tweedy"
 }
 
-melody = {
-  \key e \minor
+melody = \new Staff {
   <<
     \melody
     \structure

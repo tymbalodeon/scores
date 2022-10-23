@@ -1,4 +1,5 @@
 structure = {
+  \key e \minor
   \time 4/4
   \mark "Intro"
   s1 * 4 |
