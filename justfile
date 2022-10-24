@@ -8,11 +8,11 @@ export OUTPUT_DIRECTORY := ```
     echo $OUTPUT_DIRECTORY;
 ```
 
-pdfs := "**/**.pdf(.N)"
+pdfs := "**/**.pdf(N)"
 lilypond := """
     without_extension=$file:r;
     pdf_file=$without_extension.pdf;
-    checkexec $pdf_file $without_extension*.*ly(.N) ./*.ily -- \
+    checkexec $pdf_file $without_extension*.*ly(N) ./*.ily -- \
     lilypond -o $without_extension $file;
 """
 
@@ -39,7 +39,7 @@ new type composer name:
 # Create pdfs for all scores.
 scores:
     #!/usr/bin/env zsh
-    for file in **/**.ly(.N); do
+    for file in **/**.ly(N); do
         {{lilypond}}
         if [ -n "${OUTPUT_DIRECTORY}" ]; then
             parent_directory=$OUTPUT_DIRECTORY/$file:r:h;
@@ -51,18 +51,18 @@ scores:
 # Create a pdf for SCORE.
 score score:
     #!/usr/bin/env zsh
-    for file in **/**{{score}}*.ly(.N); do
+    for file in **/**{{score}}*.ly(N); do
         {{lilypond}}
     done
 
 # Open SCORE in editor and pdf viewer, recompiling on file changes.
 edit score: (score score)
     #!/usr/bin/env zsh
-    if [ ! **/**{{score}}*.ly(.N) ]; then
+    if [ ! **/**{{score}}*.ly(N) ]; then
         echo \"{{score}}\" not found.;
         exit;
     fi;
-    for file in **/**{{score}}*.ly(.N); do
+    for file in **/**{{score}}*.ly(N); do
         without_extension=$file:r;
         lilypond_file=$without_extension.ly;
         open $without_extension.pdf;
