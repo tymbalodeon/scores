@@ -21,11 +21,11 @@ lilypond := """
     just --list
 
 # Create new score template.
-new TYPE COMPOSER NAME:
+new type composer name:
     #!/usr/bin/env zsh
-    score_directory=./{{TYPE}}s/{{COMPOSER}}/{{NAME}};
+    score_directory=./{{type}}s/{{composer}}/{{name}};
     mkdir -p $score_directory;
-    score=$score_directory/{{NAME}};
+    score=$score_directory/{{name}};
     files=(
         $score.ly
         $score-chords.ily
@@ -50,21 +50,25 @@ scores:
     done
 
 # Create a pdf for SCORE.
-score SCORE:
+score score:
     #!/usr/bin/env zsh
-    for file in **/**{{SCORE}}*.ly(.N); do
+    for file in **/**{{score}}*.ly(.N); do
         {{lilypond}}
     done
 
 # Open SCORE in editor and pdf viewer, recompiling on file changes.
-edit SCORE: (score SCORE)
+edit score: (score score)
     #!/usr/bin/env zsh
-    for file in **/**{{SCORE}}*.ly(.N); do
+    if [ ! **/**{{score}}*.ly(.N) ]; then
+        echo \"{{score}}\" not found.;
+        exit;
+    fi;
+    for file in **/**{{score}}*.ly(.N); do
         without_extension=$file:r;
         lilypond_file=$without_extension.ly;
         open $without_extension.pdf;
         open $lilypond_file;
-        watchexec -e ly,ily just score {{SCORE}}
+        watchexec -e ly,ily just score {{score}}
     done
 
 # List all pdfs already created.
