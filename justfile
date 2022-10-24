@@ -16,7 +16,6 @@ lilypond := """
     lilypond -o $without_extension $file;
 """
 
-# Display available recipes.
 @_help:
     just --list
 
