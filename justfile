@@ -8,9 +8,6 @@ export OUTPUT_DIRECTORY := ```
     printf "${OUTPUT_DIRECTORY}"
 ```
 
-pdfs := "**/**.pdf(N)"
-lys := "**/**.ly(N)"
-
 @_help:
     just --list
 
