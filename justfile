@@ -70,10 +70,25 @@ edit score: (score score)
         watchexec -e ly,ily just score {{score}}
     done
 
-# List all pdfs already created.
-list:
+_get_pdfs *scores:
     #!/usr/bin/env zsh
-    for file in {{pdfs}}; do
+    scores=({{scores}})
+    if [ -z "${scores}" ]; then
+        files=({{pdfs}})
+    else
+        files=()
+        for file in ${scores}; do
+            files+=(**/**${file}*.pdf(N))
+        done
+    fi
+    printf "${files}"
+
+
+# List pdf(s).
+list *scores:
+    #!/usr/bin/env zsh
+    files=($(just _get_pdfs {{scores}}))
+    for file in ${files}; do
         echo "${file}"
     done
 
@@ -84,10 +99,11 @@ open score:
         open "${file}"
     done
 
-# Remove all pdfs.
-clean:
+# Remove pdf(s).
+clean *scores:
     #!/usr/bin/env zsh
-    for file in {{pdfs}}; do
+    files=($(just _get_pdfs {{scores}}))
+    for file in ${files}; do
         rm -f "${file}"
         echo "Removed ${file}".
     done
