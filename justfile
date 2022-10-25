@@ -93,9 +93,10 @@ list *scores:
     done
 
 # Open <score> pdf.
-open score:
+open *scores:
     #!/usr/bin/env zsh
-    for file in **/**{{score}}*.pdf(N); do
+    files=($(just _get_pdfs {{scores}}))
+    for file in ${files}; do
         open "${file}"
     done
 
