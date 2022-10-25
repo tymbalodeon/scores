@@ -11,7 +11,6 @@ export OUTPUT_DIRECTORY := ```
 pdfs := "**/**.pdf(N)"
 lilypond := """
     without_extension=\"${file:r}\"
-    echo ${without_extension}
     pdf_file=\"${without_extension}.pdf\"
     checkexec \"${pdf_file}\" ${without_extension}*.*ly(N) ./*.ily -- \
     lilypond -o \"${without_extension}\" \"${file}\"

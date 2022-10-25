@@ -6,8 +6,9 @@
 \include "structure.ily"
 
 \header {
-  title = "Title"
-  composer = "Composer"
+  title = "Precious Jewel"
+  composer = "Roy Acuff"
+  arranger = "Pat Metheney & Charlie Haden"
 }
 
 melody = \new Staff {
