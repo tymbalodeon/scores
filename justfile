@@ -20,7 +20,7 @@ lilypond := """
     just --list
 
 # Create new score template.
-new type composer name:
+create type composer name:
     #!/usr/bin/env zsh
     score_directory=./{{type}}s/{{composer}}/{{name}}
     mkdir -p "${score_directory}"
@@ -40,7 +40,7 @@ new type composer name:
 scores:
     #!/usr/bin/env zsh
     for file in **/**.ly(N); do
-        {{lilypond}}
+        just score "${file:t:r}"
         if [ -n "${OUTPUT_DIRECTORY}" ]; then
             parent_directory="${OUTPUT_DIRECTORY}/${file:r:h}"
             mkdir -p "${parent_directory:h}"
