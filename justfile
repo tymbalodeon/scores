@@ -31,15 +31,15 @@ create type composer name:
         mv "${file}" "${file//-chart/}"
     done
 
-_get_lys *scores:
+_get_files extension *scores:
     #!/usr/bin/env zsh
     scores=({{scores}})
     if [ -z "${scores}" ]; then
-        files=({{lys}})
+        files=(**/**.{{extension}}(N))
     else
         files=()
         for file in ${scores}; do
-            files+=(**/**${file}*.ly(N))
+            files+=(**/**${file}*.{{extension}}(N))
         done
     fi
     printf "${files}"
@@ -47,7 +47,7 @@ _get_lys *scores:
 # Create pdfs for all scores.
 compile *scores:
     #!/usr/bin/env zsh
-    files=($(just _get_lys {{scores}}))
+    files=($(just _get_files "ly" {{scores}}))
     for file in ${files}; do
         without_extension="${file:r}"
         pdf_file="${without_extension}.pdf"
@@ -75,24 +75,10 @@ edit score: (compile score)
         watchexec -e ly,ily just score {{score}}
     done
 
-_get_pdfs *scores:
-    #!/usr/bin/env zsh
-    scores=({{scores}})
-    if [ -z "${scores}" ]; then
-        files=({{pdfs}})
-    else
-        files=()
-        for file in ${scores}; do
-            files+=(**/**${file}*.pdf(N))
-        done
-    fi
-    printf "${files}"
-
-
 # List pdf(s).
 list *scores:
     #!/usr/bin/env zsh
-    files=($(just _get_pdfs {{scores}}))
+    files=($(just _get_files "pdf" {{scores}}))
     for file in ${files}; do
         echo "${file}"
     done
@@ -100,7 +86,7 @@ list *scores:
 # Open pdf(s).
 open *scores:
     #!/usr/bin/env zsh
-    files=($(just _get_pdfs {{scores}}))
+    files=($(just _get_files "pdf" {{scores}}))
     for file in ${files}; do
         open "${file}"
     done
@@ -108,7 +94,7 @@ open *scores:
 # Remove pdf(s).
 clean *scores:
     #!/usr/bin/env zsh
-    files=($(just _get_pdfs {{scores}}))
+    files=($(just _get_files "pdf" {{scores}}))
     for file in ${files}; do
         rm -f "${file}"
         echo "Removed ${file}".
