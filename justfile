@@ -92,7 +92,7 @@ list *scores:
         echo "${file}"
     done
 
-# Open <score> pdf.
+# Open pdf(s).
 open *scores:
     #!/usr/bin/env zsh
     files=($(just _get_pdfs {{scores}}))
