@@ -9,12 +9,7 @@ export OUTPUT_DIRECTORY := ```
 ```
 
 pdfs := "**/**.pdf(N)"
-lilypond := """
-    without_extension=\"${file:r}\"
-    pdf_file=\"${without_extension}.pdf\"
-    checkexec \"${pdf_file}\" ${without_extension}*.*ly(N) ./*.ily -- \
-    lilypond -o \"${without_extension}\" \"${file}\"
-"""
+lys := "**/**.ly(N)"
 
 @_help:
     just --list
@@ -36,11 +31,28 @@ create type composer name:
         mv "${file}" "${file//-chart/}"
     done
 
-# Create pdfs for all scores.
-scores:
+_get_lys *scores:
     #!/usr/bin/env zsh
-    for file in **/**.ly(N); do
-        just score "${file:t:r}"
+    scores=({{scores}})
+    if [ -z "${scores}" ]; then
+        files=({{lys}})
+    else
+        files=()
+        for file in ${scores}; do
+            files+=(**/**${file}*.ly(N))
+        done
+    fi
+    printf "${files}"
+
+# Create pdfs for all scores.
+compile *scores:
+    #!/usr/bin/env zsh
+    files=($(just _get_lys {{scores}}))
+    for file in ${files}; do
+        without_extension="${file:r}"
+        pdf_file="${without_extension}.pdf"
+        checkexec "${pdf_file}" ${without_extension}*.*ly(N) ./*.ily -- \
+        lilypond -o "${without_extension}" "${file}"
         if [ -n "${OUTPUT_DIRECTORY}" ]; then
             parent_directory="${OUTPUT_DIRECTORY}/${file:r:h}"
             mkdir -p "${parent_directory:h}"
@@ -48,15 +60,8 @@ scores:
         fi
     done
 
-# Create a pdf for <score>.
-score score:
-    #!/usr/bin/env zsh
-    for file in **/**{{score}}*.ly(N); do
-        {{lilypond}}
-    done
-
 # Open <score> in editor and pdf viewer, recompiling on file changes.
-edit score: (score score)
+edit score: (compile score)
     #!/usr/bin/env zsh
     if [ ! **/**{{score}}*.ly(N) ]; then
         echo \"{{score}}\" not found.
