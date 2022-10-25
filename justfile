@@ -48,14 +48,14 @@ scores:
         fi
     done
 
-# Create a pdf for SCORE.
+# Create a pdf for <score>.
 score score:
     #!/usr/bin/env zsh
     for file in **/**{{score}}*.ly(N); do
         {{lilypond}}
     done
 
-# Open SCORE in editor and pdf viewer, recompiling on file changes.
+# Open <score> in editor and pdf viewer, recompiling on file changes.
 edit score: (score score)
     #!/usr/bin/env zsh
     if [ ! **/**{{score}}*.ly(N) ]; then
@@ -75,6 +75,13 @@ list:
     #!/usr/bin/env zsh
     for file in {{pdfs}}; do
         echo "${file}"
+    done
+
+# Open <score> pdf.
+open score:
+    #!/usr/bin/env zsh
+    for file in **/**{{score}}*.pdf(N); do
+        open "${file}"
     done
 
 # Remove all pdfs.
