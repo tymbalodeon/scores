@@ -1,14 +1,15 @@
 \version "2.23.11"
 
 \include "settings.ily"
-\include "melody.ily"
-\include "chords.ily"
-\include "structure.ily"
+\include "style.ily"
+\include "precious-jewel-melody.ily"
+\include "precious-jewel-chords.ily"
+\include "precious-jewel-structure.ily"
 
 \header {
   title = "Precious Jewel"
+  subtitle = "as played by Pat Metheney & Charlie Haden"
   composer = "Roy Acuff"
-  arranger = "Pat Metheney & Charlie Haden"
 }
 
 melody = \new Staff {
@@ -16,6 +17,13 @@ melody = \new Staff {
     \melody
     \structure
   >>
+}
+
+\layout {
+  \context {
+    \Score
+    \consists #(bars-per-line-engraver '(4))
+  }
 }
 
 \score {

@@ -1,6 +1,16 @@
 structure = {
+  \key e \major
+  \time 6/8
+  s2. * 4 |
+  \repeat volta 2 {
+    s2. * 14 |
+  }
+  \repeat volta 2 {
+    s2. * 4 |
+  }
+  s2. * 2 |
   \key c \major
-  \time 4/4
-  \mark "Intro"
-  s1 * 4 |
+  \bar "||"
+  s2. * 14 |
+  \bar "|."
 }
