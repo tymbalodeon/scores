@@ -15,4 +15,11 @@ Recommended for development using `justfile` commands, incremental builds, file 
 - [watchexec](https://watchexec.github.io/ "watchexec")
 - [skim](https://skim-app.sourceforge.io/ "skim")
 
+Dependencies can be installed with the included `install-dependencies` script:
+
+1. Run `chmod +x install-dependencies` to make it executable
+2. Run `./install-dependencies`
+
+## justfile
+
 Run `just` to see available commands.
