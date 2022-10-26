@@ -22,6 +22,7 @@ structure = {
   s2. |
 
   \key c \major
+  \mark "Solo"
   \verse
   \repeat volta 5 {
     s2. |
