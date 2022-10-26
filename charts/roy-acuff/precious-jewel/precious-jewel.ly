@@ -22,7 +22,7 @@ melody = \new Staff {
 \layout {
   \context {
     \Score
-    \consists #(bars-per-line-engraver '(4 4 3 4 3 6 4 3 4 3))
+    \consists #(set-bars-per-line '(4 4 3 4 3 6 4 3 4 3))
   }
 }
 

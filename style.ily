@@ -1,5 +1,5 @@
-#(define ((bars-per-line-engraver bar-list) context)
-  (let* ((working-copy bar-list)
+#(define ((set-bars-per-line line-lengths-in-bars) context)
+  (let* ((working-copy line-lengths-in-bars)
          (total (1+ (car working-copy))))
     `((acknowledgers
        (paper-column-interface
@@ -11,7 +11,7 @@
                    (begin
                      (set! (ly:grob-property grob 'line-break-permission) 'force)
                      (if (null? (cdr working-copy))
-                         (set! working-copy bar-list)
+                         (set! working-copy line-lengths-in-bars)
                          (begin
                            (set! working-copy (cdr working-copy))))
                            (set! total (+ total (car working-copy))))))))))))
