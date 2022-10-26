@@ -55,7 +55,7 @@ _get_files extension *scores:
 compile *scores:
     #!/usr/bin/env zsh
     IFS=" " read -r -A files <<<"$(just _get_files "ly" {{scores}})"
-    if [ -z "${files[@]}" ]; then
+    if [ -z "${files[*]}" ]; then
         exit
     fi
     for file in "${files[@]}"; do
@@ -85,6 +85,9 @@ edit score: (compile score)
 list *scores:
     #!/usr/bin/env zsh
     IFS=" " read -r -A files <<<"$(just _get_files "pdf" {{scores}})"
+    if [ -z "${files[*]}" ]; then
+        exit
+    fi
     for file in "${files[@]}"; do
         echo "${file}"
     done
@@ -93,6 +96,9 @@ list *scores:
 open *scores:
     #!/usr/bin/env zsh
     IFS=" " read -r -A files <<<"$(just _get_files "pdf" {{scores}})"
+    if [ -z "${files[*]}" ]; then
+        exit
+    fi
     for file in "${files[@]}"; do
         open "${file}"
     done
@@ -101,6 +107,9 @@ open *scores:
 clean *scores:
     #!/usr/bin/env zsh
     IFS=" " read -r -A files <<<"$(just _get_files "pdf" {{scores}})"
+    if [ -z "${files[*]}" ]; then
+        exit
+    fi
     for file in "${files[@]}"; do
         rm -f "${file}"
         echo "Removed ${file}".

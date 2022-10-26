@@ -14,7 +14,7 @@
   \layout {
     \context {
       \Score
-      \consists #(bars-per-line-engraver '(4))
+      \consists #(set-bars-per-line '(4))
     }
   }
   <<

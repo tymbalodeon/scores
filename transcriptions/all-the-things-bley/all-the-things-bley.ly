@@ -1,39 +1,12 @@
-\version "2.23.8"
-\language "english"
-\pointAndClickOff
-\paper {
-  #(set-paper-size "letter")
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.5\in
-}
+\include "settings.ily"
+\include "style.ily"
 
 \header {
-  tagline = ##f
   title = "All The Things You Are"
   subtitle = "Piano Solo by Paul Bley"
   subsubtitle = "from the Album \"Sonny Meets Hawk \""
   composer = "Jerome Kern"
 }
-
-#(define ((bars-per-line-engraver bar-list) context)
-  (let* ((working-copy bar-list)
-         (total (1+ (car working-copy))))
-    `((acknowledgers
-       (paper-column-interface
-        . ,(lambda (engraver grob source-engraver)
-             (let ((internal-bar (ly:context-property context 'internalBarNumber)))
-               (if (and (pair? working-copy)
-                        (= (remainder internal-bar total) 0)
-                        (eq? #t (ly:grob-property grob 'non-musical)))
-                   (begin
-                     (set! (ly:grob-property grob 'line-break-permission) 'force)
-                     (if (null? (cdr working-copy))
-                         (set! working-copy bar-list)
-                         (begin
-                           (set! working-copy (cdr working-copy))))
-                           (set! total (+ total (car working-copy))))))))))))
 
 aOne = \relative c' {
   R1 |
@@ -252,8 +225,7 @@ changes = \chords {
   \layout {
     \context {
       \Score
-      %\override NonMusicalPaperColumn.line-break-permission = ##f
-      \consists #(bars-per-line-engraver '(4))
+      \consists #(set-bars-per-line '(4))
     }
   }
 }
