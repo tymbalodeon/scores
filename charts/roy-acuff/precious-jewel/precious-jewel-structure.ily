@@ -10,7 +10,7 @@ structure = {
   }
   s2. * 2 |
   \key c \major
-  \bar "||"
-  s2. * 14 |
-  \bar "|."
+  \repeat volta 2 {
+    s2. * 14 |
+  }
 }
