@@ -1,7 +1,13 @@
-melody = \relative c' {
-  s2. * 3 |
+pickup = {
   r4 e8 a b cs |
+}
 
+intro = {
+  s2. * 3 |
+  \pickup
+}
+
+verse = {
   b2. |
   r4 gs8 fs e cs |
   b e4~ e4. |
@@ -18,5 +24,10 @@ melody = \relative c' {
   b gs e fs gs fs |
 
   e2. |
-  r4 e8 a b cs |
+  \pickup
+}
+
+melody = \relative c' {
+  \intro
+  \verse
 }

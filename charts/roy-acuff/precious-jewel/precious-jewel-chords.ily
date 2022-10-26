@@ -27,9 +27,11 @@ verse = \chordmode {
 
 changes = \chords {
   \intro
+
   \verse
   e4. \parenthesize a |
   s4. g |
+
   \transpose e c \verse
   c2. |
   s4. a |

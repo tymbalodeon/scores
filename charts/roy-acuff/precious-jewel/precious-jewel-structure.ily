@@ -6,19 +6,27 @@ verse = {
   \repeat volta 2 {
     s2. * 14 |
   }
-  \repeat volta 5 {
-    s2. |
-  }
-  s2.  |
 }
-
 
 structure = {
   \key e \major
   \time 6/8
+
   \intro
+
+  \segnoMark \default
   \verse
+  \repeat volta 5 {
+    s4. s4 s8^\markup { "Fine" } |
+  }
+  s2. |
+
   \key c \major
   \verse
+  \repeat volta 5 {
+    s2. |
+  }
+  s4. s_\markup { \italic "D.S. al Fine" } |
+
   \bar "||"
 }
