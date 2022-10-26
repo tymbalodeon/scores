@@ -8,6 +8,8 @@ export OUTPUT_DIRECTORY := ```
     printf "${OUTPUT_DIRECTORY}"
 ```
 
+ly_directories := "(^templates/)#**"
+
 @_help:
     just --list
 
@@ -30,13 +32,14 @@ create type composer name:
 
 _get_files extension *scores:
     #!/usr/bin/env zsh
+    setopt extendedglob
     scores=({{scores}})
     if [ -z "${scores}" ]; then
-        files=(**/**.{{extension}}(N))
+        files=({{ly_directories}}.{{extension}})
     else
         files=()
         for file in ${scores}; do
-            files+=(**/**${file}*.{{extension}}(N))
+            files+=({{ly_directories}}${file}*.{{extension}})
         done
     fi
     printf "${files}"
@@ -60,10 +63,6 @@ compile *scores:
 # Open <score> in editor and pdf viewer, recompiling on file changes.
 edit score: (compile score)
     #!/usr/bin/env zsh
-    if [ ! **/**{{score}}*.ly(N) ]; then
-        echo \"{{score}}\" not found.
-        exit
-    fi
     for file in **/**{{score}}*.ly(N); do
         without_extension="${file:r}"
         lilypond_file="${without_extension}.ly"
