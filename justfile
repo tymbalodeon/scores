@@ -44,7 +44,7 @@ _get_files extension *scores:
     fi
     printf "${files}"
 
-# Create pdfs for all scores.
+# Create pdf(s).
 compile *scores:
     #!/usr/bin/env zsh
     files=($(just _get_files "ly" {{scores}}))
