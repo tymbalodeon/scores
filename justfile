@@ -13,6 +13,11 @@ ly_directories := "(^templates/)#**"
 @_help:
     just --list
 
+_prepend_name name filetype file:
+    #!/usr/bin/env zsh
+    sed -i '' -e 's/{{filetype}}.ily/{{name}}-{{filetype}}.ily/g' {{file}}
+
+
 # Create new score template.
 create type composer name:
     #!/usr/bin/env zsh
@@ -27,6 +32,10 @@ create type composer name:
             "${score_directory}/{{name}}-${template_name}"
     done
     for file in **/**{{name}}-chart.ly(N); do
+        filetypes=("melody" "chords" "structure")
+        for filetype in ${filetypes}; do
+            just _prepend_name {{name}} "${filetype}" "${file}"
+        done
         mv "${file}" "${file//-chart/}"
     done
 
