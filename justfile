@@ -1,11 +1,11 @@
 set dotenv-load
 
 export OUTPUT_DIRECTORY := ```
-    OUTPUT_DIRECTORY="${OUTPUT_DIRECTORY:-}";
+    OUTPUT_DIRECTORY="${OUTPUT_DIRECTORY:-}"
     if [ -n "${OUTPUT_DIRECTORY}" ]; then
         mkdir -p "${OUTPUT_DIRECTORY}"
     fi
-    printf "${OUTPUT_DIRECTORY}"
+    printf "%s" "${OUTPUT_DIRECTORY}"
 ```
 
 ly_directories := "(^templates/)#**"
@@ -15,7 +15,7 @@ ly_directories := "(^templates/)#**"
 
 _prepend_name name filetype file:
     #!/usr/bin/env zsh
-    sed -i '' -e 's/{{filetype}}.ily/{{name}}-{{filetype}}.ily/g' {{file}}
+    sed -i "" -e "s/{{filetype}}.ily/{{name}}-{{filetype}}.ily/g" {{file}}
 
 
 # Create new score template.
@@ -23,8 +23,6 @@ create type composer name:
     #!/usr/bin/env zsh
     score_directory=./{{type}}s/{{composer}}/{{name}}
     mkdir -p "${score_directory}"
-    score="${score_directory}/{{name}}"
-    templates="$(ls ./templates/{{type}}s)"
     for template in ./templates/{{type}}s/*; do
         cp "${template}" "${score_directory}"
         template_name="${template:t}"
@@ -33,7 +31,7 @@ create type composer name:
     done
     for file in **/**{{name}}-chart.ly(N); do
         filetypes=("melody" "chords" "structure")
-        for filetype in ${filetypes}; do
+        for filetype in "${filetypes[@]}"; do
             just _prepend_name {{name}} "${filetype}" "${file}"
         done
         mv "${file}" "${file//-chart/}"
@@ -43,24 +41,24 @@ _get_files extension *scores:
     #!/usr/bin/env zsh
     setopt extendedglob
     scores=({{scores}})
-    if [ -z "${scores}" ]; then
+    if [ -z "${scores[*]}" ]; then
         files=({{ly_directories}}.{{extension}})
     else
         files=()
-        for file in ${scores}; do
-            files+=({{ly_directories}}${file}*.{{extension}})
+        for file in "${scores[@]}"; do
+            files+=({{ly_directories}}"${file}"*.{{extension}})
         done
     fi
-    printf "${files}"
+    printf "%s" "${files[*]}"
 
 # Create pdf(s).
 compile *scores:
     #!/usr/bin/env zsh
-    files=($(just _get_files "ly" {{scores}}))
-    for file in ${files}; do
+    IFS=" " read -r -A files <<<"$(just _get_files "ly" {{scores}})"
+    for file in "${files[@]}"; do
         without_extension="${file:r}"
         pdf_file="${without_extension}.pdf"
-        checkexec "${pdf_file}" ${without_extension}*.*ly(N) ./*.ily -- \
+        checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
         lilypond -o "${without_extension}" "${file}"
         if [ -n "${OUTPUT_DIRECTORY}" ]; then
             parent_directory="${OUTPUT_DIRECTORY}/${file:r:h}"
@@ -83,24 +81,24 @@ edit score: (compile score)
 # List pdf(s).
 list *scores:
     #!/usr/bin/env zsh
-    files=($(just _get_files "pdf" {{scores}}))
-    for file in ${files}; do
+    IFS=" " read -r -A files <<<"$(just _get_files "pdf" {{scores}})"
+    for file in "${files[@]}"; do
         echo "${file}"
     done
 
 # Open pdf(s).
 open *scores:
     #!/usr/bin/env zsh
-    files=($(just _get_files "pdf" {{scores}}))
-    for file in ${files}; do
+    IFS=" " read -r -A files <<<"$(just _get_files "pdf" {{scores}})"
+    for file in "${files[@]}"; do
         open "${file}"
     done
 
 # Remove pdf(s).
 clean *scores:
     #!/usr/bin/env zsh
-    files=($(just _get_files "pdf" {{scores}}))
-    for file in ${files}; do
+    IFS=" " read -r -A files <<<"$(just _get_files "pdf" {{scores}})"
+    for file in "${files[@]}"; do
         rm -f "${file}"
         echo "Removed ${file}".
     done
