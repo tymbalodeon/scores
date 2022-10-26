@@ -17,7 +17,6 @@ _prepend_name name filetype file:
     #!/usr/bin/env zsh
     sed -i "" -e "s/{{filetype}}.ily/{{name}}-{{filetype}}.ily/g" {{file}}
 
-
 # Create new score template.
 create type composer name:
     #!/usr/bin/env zsh
