@@ -1,3 +1,9 @@
+intro = \chordmode {
+  e2. |
+  s2. * 2  |
+  s4. a |
+}
+
 verse = \chordmode {
   e2. |
   s4. a |
@@ -16,18 +22,15 @@ verse = \chordmode {
 
   e2.  |
   s4. \parenthesize a |
+
 }
 
 changes = \chords {
-  e2. |
-  s2. * 2  |
-  s4. a |
-
+  \intro
   \verse
-
-  e2. * 4 |
-  e2. |
+  e4. \parenthesize a |
   s4. g |
-
   \transpose e c \verse
+  c2. |
+  s4. a |
 }
