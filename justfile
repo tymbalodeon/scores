@@ -77,7 +77,7 @@ edit score: (compile score)
         lilypond_file="${without_extension}.ly"
         open "${without_extension}.pdf"
         open "${lilypond_file}"
-        watchexec -e ly,ily just score {{score}}
+        watchexec -e ly,ily just compile {{score}}
     done
 
 # List pdf(s).
