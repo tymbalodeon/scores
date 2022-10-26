@@ -42,11 +42,11 @@ _get_files extension *scores:
     setopt extendedglob
     scores=({{scores}})
     if [ -z "${scores[*]}" ]; then
-        files=({{ly_directories}}.{{extension}})
+        files=({{ly_directories}}.{{extension}}(N))
     else
         files=()
         for file in "${scores[@]}"; do
-            files+=({{ly_directories}}"${file}"*.{{extension}})
+            files+=({{ly_directories}}"${file}"*.{{extension}}(N))
         done
     fi
     printf "%s" "${files[*]}"
@@ -55,6 +55,9 @@ _get_files extension *scores:
 compile *scores:
     #!/usr/bin/env zsh
     IFS=" " read -r -A files <<<"$(just _get_files "ly" {{scores}})"
+    if [ -z "${files[@]}" ]; then
+        exit
+    fi
     for file in "${files[@]}"; do
         without_extension="${file:r}"
         pdf_file="${without_extension}.pdf"
