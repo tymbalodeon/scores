@@ -57,13 +57,14 @@ changes = \chords {
   }
 }
 
-\score {
-  \layout {
-    \context {
-      \Score
-      \consists #(set-bars-per-line '(4))
-    }
+\layout {
+  \context {
+    \Score
+    \consists #(set-bars-per-line '(4))
   }
+}
+
+\score {
   <<
     \changes
     {
