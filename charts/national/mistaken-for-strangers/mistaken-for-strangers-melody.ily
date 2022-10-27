@@ -1,6 +1,16 @@
-melody = \relative c' \new Voice \with {
-  \consists "Pitch_squash_engraver"
-} {
-  \improvisationOn
-  s1 * 4 |
+intro = {
+  s1 * 3 |
+  s2 r8 f f f |
+}
+
+verse = {
+  f f4 f8~ f f f f~ |
+  f f f f~ f f f g~ |
+  g f4 f8 r f f f~ |
+  f f4 f8 f e f~ |
+}
+
+melody = \relative c' {
+  \intro
+  \verse
 }

@@ -8,7 +8,7 @@
 
 \header {
   title = "Mistaken For Strangers"
-  composer = "National"
+  composer = "The National"
 }
 
 melody = \new Staff {
