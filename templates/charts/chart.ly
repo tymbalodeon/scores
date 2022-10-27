@@ -1,6 +1,7 @@
 \version "2.23.11"
 
 \include "settings.ily"
+\include "style.ily"
 \include "melody.ily"
 \include "chords.ily"
 \include "structure.ily"
@@ -15,6 +16,13 @@ melody = \new Staff {
     \melody
     \structure
   >>
+}
+
+\layout {
+  \context {
+    \Score
+    \consists #(set-bars-per-line '(4))
+  }
 }
 
 \score {

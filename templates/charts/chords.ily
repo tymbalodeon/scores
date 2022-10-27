@@ -1,3 +1,7 @@
-changes = \chords {
+intro = \chordmode {
   c1  |
+}
+
+changes = \chords {
+  \intro
 }
