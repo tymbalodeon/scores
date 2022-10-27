@@ -1,6 +1,9 @@
 #(define ((set-bars-per-line line-lengths-in-bars) context)
+  (define (get-total line-lengths-in-bars)
+    (let ((first-length (car line-lengths-in-bars)))
+      (1+ first-length)))
   (let* ((current-line-lengths line-lengths-in-bars)
-         (total (1+ (car current-line-lengths))))
+         (total (get-total current-line-lengths)))
     `((acknowledgers
        (paper-column-interface
         . ,(lambda (engraver grob source-engraver)
