@@ -23,10 +23,13 @@ create type composer name:
     score_directory=./{{type}}s/{{composer}}/{{name}}
     mkdir -p "${score_directory}"
     for template in ./templates/{{type}}s/*; do
-        cp "${template}" "${score_directory}"
         template_name="${template:t}"
-        mv "${score_directory}/${template_name}" \
-            "${score_directory}/{{name}}-${template_name}"
+        new_score="${score_directory}/{{name}}-${template_name}"
+        if test -f "${new_score}"; then
+            continue
+        fi
+        cp "${template}" "${score_directory}"
+        mv "${score_directory}/${template_name}" "${new_score}"
     done
     for file in **/**{{name}}-chart.ly(N); do
         filetypes=("melody" "chords" "structure")
