@@ -8,7 +8,7 @@ intro = {
 
 verse = {
   \mark "Verse"
-  \repeat unfold 5 {
+  \repeat unfold 8 {
     \base
   }
 }

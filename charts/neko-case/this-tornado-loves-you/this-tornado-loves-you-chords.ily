@@ -18,10 +18,9 @@ verse = \chordmode {
 
   b:m |
   fs:m |
-  d |
   s |
 
-  g1  |
+  d |
   s |
   b:m |
   s |
@@ -33,6 +32,15 @@ verse = \chordmode {
 
   d |
   s |
+
+  b:m |
+  fs:m |
+  fs:7/as |
+
+  d |
+  s |
+  b:m |
+  g:m |
 }
 
 changes = \chords {
