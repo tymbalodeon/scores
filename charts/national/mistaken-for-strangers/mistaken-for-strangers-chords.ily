@@ -1,6 +1,6 @@
 verse_chords = \chordmode {
   f1:/a |
-  bf |
+  bf:maj |
   f1:/c |
   s |
 }
