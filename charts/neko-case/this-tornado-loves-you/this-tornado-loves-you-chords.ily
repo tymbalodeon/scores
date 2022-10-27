@@ -1,0 +1,3 @@
+changes = \chords {
+  g1  |
+}
