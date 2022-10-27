@@ -1,15 +1,15 @@
 intro = \chordmode {
-  g1  |
+  g1:maj  |
   s |
   b:m |
-  g |
+  g:maj |
 }
 
 verse = \chordmode {
   s1  |
   s |
   b:m |
-  g |
+  g:maj |
 
   s1  |
   bf |
@@ -17,7 +17,7 @@ verse = \chordmode {
   s |
 
   b:m |
-  fs:m |
+  fs:7 |
   s |
 
   d |
@@ -28,13 +28,13 @@ verse = \chordmode {
   d |
   s |
   bf |
-  g |
+  g:maj |
 
   d |
   s |
 
   b:m |
-  fs:m |
+  fs:7 |
   fs:7/as |
 
   d |
