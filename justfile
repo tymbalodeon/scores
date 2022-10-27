@@ -13,31 +13,48 @@ ly_directories := "(^templates/)#**"
 @_help:
     just --list
 
-_prepend_name name filetype file:
+_copy_template_files type composer title:
     #!/usr/bin/env zsh
-    sed -i "" -e "s/{{filetype}}.ily/{{name}}-{{filetype}}.ily/g" {{file}}
-
-# Create new score template.
-create type composer name:
-    #!/usr/bin/env zsh
-    score_directory=./{{type}}s/{{composer}}/{{name}}
+    score_directory=./{{type}}s/{{composer}}/{{title}}
     mkdir -p "${score_directory}"
     for template in ./templates/{{type}}s/*; do
         template_name="${template:t}"
-        new_score="${score_directory}/{{name}}-${template_name}"
+        new_score="${score_directory}/{{title}}-${template_name}"
         if test -f "${new_score}"; then
             continue
         fi
         cp "${template}" "${score_directory}"
         mv "${score_directory}/${template_name}" "${new_score}"
     done
-    for file in **/**{{name}}-chart.ly(N); do
+
+_prepend_title title filetype file:
+    #!/usr/bin/env zsh
+    sed -i "" -e "s/{{filetype}}.ily/{{title}}-{{filetype}}.ily/g" {{file}}
+
+_convert_to_titlecase word:
+    #!/usr/bin/env python
+    print("{{word}}".title())
+
+_add_title_and_composer title composer file:
+    #!/usr/bin/env zsh
+    sed -i "" -e "s/Title/{{title}}/g" {{file}}
+    sed -i "" -e "s/Composer/{{composer}}/g" {{file}}
+
+_add_new_score_values type composer title: (_copy_template_files type composer title)
+    #!/usr/bin/env zsh
+    for file in **/**{{title}}-chart.ly(N); do
         filetypes=("melody" "chords" "structure")
         for filetype in "${filetypes[@]}"; do
-            just _prepend_name {{name}} "${filetype}" "${file}"
+            just _prepend_title {{title}} "${filetype}" "${file}"
         done
+        title="$(just _convert_to_titlecase {{title}})"
+        composer="$(just _convert_to_titlecase {{composer}})"
+        just _add_title_and_composer "${title}" "${composer}" "${file}"
         mv "${file}" "${file//-chart/}"
     done
+
+# Create new score template.
+create type composer title: (_copy_template_files type composer title) (_add_new_score_values type composer title)
 
 _get_files extension *scores:
     #!/usr/bin/env zsh
