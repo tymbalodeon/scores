@@ -28,7 +28,7 @@ post_chorus_chords = \chordmode {
 
 
 changes = \chords {
-  \repeat unfold 2 {
+  \repeat unfold 4 {
     \verse_chords
   }
   \chorus_chords

@@ -10,8 +10,11 @@ intro = {
 
 verse = {
   \mark "Verse"
+  \repeat unfold 2 {
+    \base
+  }
   \repeat volta 2 {
-    s1 * 4 |
+    \base
   }
 }
 
