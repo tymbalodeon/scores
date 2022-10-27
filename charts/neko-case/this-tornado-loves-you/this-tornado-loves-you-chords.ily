@@ -41,6 +41,70 @@ verse = \chordmode {
   s |
   b:m |
   g:m |
+
+  bf |
+  g |
+  b:m |
+  s |
+
+  bf |
+  g |
+  d |
+  s |
+
+  g |
+  s |
+  b:m |
+  s |
+
+  e:m |
+  g |
+
+  g |
+  s |
+  d |
+  s |
+
+  g |
+  s |
+  b:m |
+  s |
+
+  g |
+  s |
+  d |
+  s |
+
+  g |
+  s |
+  b:m |
+  g |
+
+  s1  |
+  bf |
+  d |
+  s |
+
+  d |
+  s |
+  b:m |
+  a |
+
+  g |
+  s |
+  b:m |
+  e:m |
+  s |
+
+  g |
+  s |
+  d |
+  s |
+
+  g:/d |
+  s |
+  d |
+  s |
 }
 
 changes = \chords {
