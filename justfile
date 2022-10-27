@@ -33,7 +33,9 @@ _prepend_title title filetype file:
 
 _convert_to_titlecase word:
     #!/usr/bin/env python
-    print("{{word}}".title())
+    word = "{{word}}"
+    word = word.replace("-", " ").title()
+    print(word)
 
 _add_title_and_composer title composer file:
     #!/usr/bin/env zsh
