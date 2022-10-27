@@ -1,6 +1,6 @@
 intro = {
   s1 * 3 |
-  s2 r8 f f f |
+  r2 r8 f f f |
 }
 
 verse = {
