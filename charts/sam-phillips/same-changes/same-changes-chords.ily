@@ -5,15 +5,26 @@ intro = \chordmode {
   }
 }
 
-verse = \chordmode {
+verse_a = \chordmode {
   bf1 |
   a:m |
   d:m |
   s |
+}
+
+verse = \chordmode {
+  \verse_a
 
   g:m |
   c |
   d:m |
+  s |
+
+  \verse_a
+
+  g:m |
+  s |
+  c |
   s |
 }
 

@@ -9,9 +9,7 @@ intro = {
 
 verse = {
   \mark "Verse"
-  \repeat volta 2 {
-    s1 * 8 |
-  }
+    s1 * 16 |
 }
 
 chorus = {
