@@ -1,9 +1,34 @@
 intro = {
-  s1 * 4 |
+  \new CueVoice \relative c' {
+    d4 d'4 c8 d4 e8~ |
+    e4 d c8 d~ d4 |
+  }
+  \new CueVoice \relative c' {
+    r8 d d4 d4 r8 d |
+    d4 d r8 d d4 |
+  }
 }
 
-verse = {
-  s1 * 16 |
+verse = \relative c'' {
+  r4 bf8 bf8~ bf d4 c8~ |
+  c c4 d8~ d e4. |
+  f2 e4. d8~ |
+  d2 r4 g,8 g~ |
+
+  g f4. r8 a a a |
+  a( g) g4 r8 a4 a8~ |
+  a2 r |
+  r2. r8 bf |
+
+  bf bf4 bf8~ bf d4 c8~ |
+  c4 c8 d~ d e4. |
+  f2 e4. d8~ |
+  d2 r8 g, g g~ |
+
+  g f4 f8 r8 a a a |
+  a( g) g4 r8 a4 a8~ |
+  a2 r |
+  R1 |
 }
 
 chorus = \relative c'' {
@@ -18,7 +43,7 @@ chorus = \relative c'' {
   R1 |
 }
 
-melody = \relative c' {
+melody = \new Voice \relative c' {
   \intro
   \verse
   \chorus
