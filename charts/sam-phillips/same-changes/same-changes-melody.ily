@@ -23,19 +23,19 @@ verse = \relative c'' {
   bf bf4 bf8~ bf d4 c8~ |
   c4 c8 d~ d e4. |
   f2 e4. d8~ |
-  d2 r8 g, g g~ |
+  d2 r8 a a4 |
 
-  g f4 f8 r8 a a a |
-  a( g) g4 r8 a4 a8~ |
-  a2 r |
-  R1 |
+  g f8 f~ f2 |
+  r4. a8~ a a4 g8~ |
+  g2 r |
+  r2 a4 g8 f |
 }
 
 chorus = \relative c'' {
-  s1 |
-  s1 |
-  s1 |
-  s1 |
+  g f~ f4~ f2 |
+  r4. a8~ a4 f8 g |
+  f4. f8~ f2 |
+  r2. r8 a~ |
 
   a4. g8 g4. f8 |
   f4. g8 g4. f8 |
