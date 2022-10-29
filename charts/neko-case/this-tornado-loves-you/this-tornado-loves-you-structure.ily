@@ -8,12 +8,6 @@ twice_base =  {
   }
 }
 
-repeat_base =  {
-  \repeat volta 2 {
-    \base
-  }
-}
-
 intro = {
   \base
 }
@@ -26,9 +20,9 @@ part_one = {
 }
 
 part_two = {
-  \repeat_base
+  \twice_base
   \base
-  \repeat_base
+  \twice_base
 }
 
 part_three = {

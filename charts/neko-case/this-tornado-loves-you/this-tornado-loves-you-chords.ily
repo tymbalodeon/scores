@@ -42,9 +42,24 @@ verse = \chordmode {
   b:m |
   g:m |
 
+  d |
+  s |
+  b:m |
+  g:m |
+
   bf |
   g |
   b:m |
+  s |
+
+  bf |
+  g |
+  d |
+  s |
+
+  bf |
+  g |
+  d |
   s |
 
   bf |

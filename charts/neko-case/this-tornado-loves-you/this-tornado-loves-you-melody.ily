@@ -32,6 +32,28 @@ melody = \relative c'' {
 
   fs fs4 fs8( e8) d4. |
   r2 d8 d4. |
+
   b1 |
   as |
+  r2 r8 fs fs d' |
+
+  d2 r8 e d fs~ |
+  fs fs4 e8~ e d4 d8 |
+  a'8. fs fs8 g8. fs fs8 |
+  a8. fs fs8 e8. d e8 |
+
+  fs16( e) d4 e8 fs16( e) d4. |
+  r2 r8. a' a8 |
+  a8.( fs) fs8~ fs e fs4~ |
+  fs2 r |
+
+  f16( e) d4 d8 f16( e) d4. |
+  fs!16( e) d4 d8 fs16( e) d4. |
+  d8.( b) b8~ b a b4~ |
+  b2 r |
+
+  f'16( e) d4 d8 f16( e) d4. |
+  fs!16( e) d4 d8 fs16( e) d4 d8 |
+  a'8.( fs) fs8~ fs e fs8 g16 fs~ |
+  fs2 r2 |
 }
