@@ -20,9 +20,12 @@ part_one = {
 }
 
 part_two = {
-  \twice_base
-  \base
-  \twice_base
+  \repeat unfold 2 {
+    \twice_base
+  }
+  \repeat volta 2 {
+    \base
+  }
 }
 
 part_three = {
@@ -36,7 +39,7 @@ part_three = {
 outro = {
   \repeat unfold 2 {
     \repeat volta 2 {
-      s1 * 4 |
+      \base
     }
   }
 }

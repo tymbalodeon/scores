@@ -62,11 +62,6 @@ verse = \chordmode {
   d |
   s |
 
-  bf |
-  g |
-  d |
-  s |
-
   g |
   s |
   b:m |

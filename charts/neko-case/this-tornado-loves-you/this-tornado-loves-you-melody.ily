@@ -56,4 +56,11 @@ melody = \relative c'' {
   fs!16( e) d4 d8 fs16( e) d4 d8 |
   a'8.( fs) fs8~ fs e fs8 g16 fs~ |
   fs2 r2 |
+
+  \new CueVoice \relative c' {
+    bf8 d g bf d g r4 |
+    b,,8 d g b d g r4 |
+    fs4. d8 r2 |
+    r4 a d r |
+  }
 }
