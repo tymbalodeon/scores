@@ -30,29 +30,28 @@ part_three = {
 
 instrumental = {
   \repeat volta 2 {
-    s1 * 2 |
+    s1 * 1 |
     \alternative {
       \volta 1 {
-        s1 * 2 |
+        s1 * 3 |
       } \volta 2 {
-        s1 * 2 |
+        s1 |
       }
     }
   }
 }
 
 part_four = {
-  \repeat unfold 4 {
+  \repeat unfold 5 {
     \base
   }
-  s1 * 2 |
 }
 
 part_five = {
   \repeat unfold 4 {
     \base
   }
-  s1 |
+  s1 * 2 |
 }
 
 outro = {
@@ -73,5 +72,6 @@ structure = {
   \part_four
   \part_five
   \outro
+
   \bar "|."
 }

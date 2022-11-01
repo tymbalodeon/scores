@@ -68,6 +68,7 @@ instrumental = \chordmode {
   d |
   s |
 
+  g |
   d |
   s |
 }

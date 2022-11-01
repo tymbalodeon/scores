@@ -28,7 +28,7 @@ text = \lyricmode {
   run out to meet me,
   come in __ to the light. __
 
-  Climb the box __ \skip 1 cars to the en -- gine through the smoke in -- to the sky.
+  Climb the box __ cars to the en -- gine through the smoke in -- to the sky.
   Your rails have al -- ways out -- run mine,
   so I __ pick them up __ and crash them down __
   in a mo -- ment close to now.

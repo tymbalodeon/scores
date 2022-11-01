@@ -18,11 +18,12 @@ part_one_base = \relative c'' {
   fs'8( e) fs e fs4 a |
   a8 e f( e) d4 d8 e |
   fs?16 fs d8 fs2.~ |
+  fs4 r
 }
 
 part_one = \relative c'' {
   \part_one_base
-  fs4 r a,8 a4. |
+   a8 a4. |
 
   fs'1( |
   e) |
@@ -75,12 +76,13 @@ instrumental = {
   <<
     \new CueVoice \relative c' {
       bf8 d g bf d g r4 |
-      b,,?8 d g b d g s4 |
-      fs4. d8 r2 |
+      b,,?8 d g b? d g s4 |
+      fs4. d8~ d4 r |
       r4 a d r |
+      b,?8 d g b? d g s4 |
     }
     {
-      s1 |
+      s1 * 4 |
       s2. d8 e16 fs~ |
     }
   >>
@@ -156,6 +158,7 @@ melody = \relative c'' {
   \instrumental
   \part_four
   \part_one_base
+  r2 |
   \part_five
   \tornado
 
