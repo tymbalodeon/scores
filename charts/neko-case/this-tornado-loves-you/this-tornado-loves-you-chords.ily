@@ -111,8 +111,9 @@ verse = \chordmode {
   bf |
   d |
   s |
+  s |
 
-  d |
+  s |
   s |
   b:m |
   a |
