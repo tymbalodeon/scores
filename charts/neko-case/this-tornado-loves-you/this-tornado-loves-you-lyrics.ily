@@ -1,7 +1,7 @@
 part_one = \lyricmode {
   My love, I am the speed of sound.
   I left them mo -- ther -- less, fa -- ther -- less,
-  their souls they hang in -- side -- out from their mouths.
+  their souls dang -- ling in -- side -- out from their mouths.
   But it's ne -- ver e -- nough.
 }
 
