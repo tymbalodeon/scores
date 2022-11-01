@@ -90,13 +90,13 @@ part_four = {
   fs8. e16 d e8 fs16~ fs8. e16 d e8 fs16~ |
   fs8. e16 d e8 fs16~ fs4 r8 a, |
 
-  fs'4 fs8 d~ d b4 fs'8~ |
-  fs fs4 d8~ d4 b8 b~ |
-  b2 r |
+  fs'4 fs8 d~ d a4 fs'8~ |
+  fs fs4 d8~ d4 a8 a~ |
+  a2 r |
   r2. d8 e16 fs~ |
 
-  fs8. e16 d8 e fs( e) d16 e8 fs16( |
-  e8) e a fs16 fs~ fs4 r8 e |
+  fs8. e16 d8 e fs( e) d16 e8 fs16~ |
+  fs8 e a fs16 fs~ fs4 r8 e |
 
   fs8 e r fs e4 r |
   fs8 e r fs e4 r |
@@ -122,8 +122,8 @@ part_five = {
 
   r4 a b8 a4 a'8~ |
   a fs4. r2 |
-  r4 fs g8( a,) a a~ |
-  a fs'~( fs2. |
+  r4 fs g8( b,) b b~ |
+  b fs'~( fs2. |
 
   e) r4 |
   r2. r8 d |
