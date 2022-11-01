@@ -9,7 +9,8 @@ intro = \relative c'' \new Voice \with {
   \improvisationOff r2 r4
 }
 
-outro = \new CueVoice \relative c' {
+outro = \new CueVoice \relative c {
+  \clef "bass"
   \repeat percent 4 {
     d4. d8~ d4 d' |
   }
