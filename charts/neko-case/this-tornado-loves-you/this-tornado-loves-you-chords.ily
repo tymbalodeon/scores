@@ -52,60 +52,57 @@ part_three = \chordmode {
   g:m |
 
   bf |
-  g |
+  g:maj |
   b:m |
   s |
 
   bf |
-  g |
+  g:maj |
   d |
   s |
 }
 
 instrumental = \chordmode {
   bf |
-  g |
+  g:maj |
   d |
   s |
 
-  g |
+  g:maj |
   d |
   s |
 }
 
-verse = \chordmode {
-  \part_one
-  \part_two
-  \part_three
-  \instrumental
-
-  g |
+part_four = \chordmode {
+  g:maj |
   s |
   b:m |
   s |
 
   e:m |
-  g |
+  g:maj |
 
-  g |
+  g:maj |
   s |
   d |
   s |
 
-  g |
+  g:maj |
   s |
   b:m |
   s |
 
-  g |
+  g:maj |
   s |
   d |
   s |
+}
 
-  g |
+part_five = \chordmode {
+  g:maj |
   s |
   b:m |
-  g |
+  g:maj |
 
   s1  |
   bf |
@@ -118,21 +115,23 @@ verse = \chordmode {
   b:m |
   a |
 
-  g |
+  g:maj |
   s |
   b:m |
   e:m |
   s |
+}
 
+tornado = \chordmode {
   \repeat unfold 2 {
-    g |
+    g:maj |
     s |
     d |
     s |
   }
 
   \repeat unfold 2 {
-    g:/d |
+    g:maj/d |
     s |
     d |
     s |
@@ -141,5 +140,10 @@ verse = \chordmode {
 
 changes = \chords {
   \intro
-  \verse
+  \part_one
+  \part_two
+  \part_three
+  \instrumental
+  \part_four
+  \tornado
 }
