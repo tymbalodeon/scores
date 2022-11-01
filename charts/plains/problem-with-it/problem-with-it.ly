@@ -13,7 +13,7 @@
 
 melody = \new Staff {
   <<
-    \melody
+    % \melody
     \structure
   >>
 }
