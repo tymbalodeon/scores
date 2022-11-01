@@ -137,9 +137,15 @@ tornado = {
   fs8. d d8 fs8. d16~ d4 |
 }
 
-outro = \new CueVoice \relative c {
+outro_one = \new CueVoice \relative c {
   \clef "bass"
   d4. d'8~ d4 d_\markup { \italic "etc..." } |
+}
+
+outro_two = \relative c {
+  \clef "bass"
+  d1~ |
+  d2 r |
 }
 
 melody = \relative c'' {
@@ -162,14 +168,25 @@ melody = \relative c'' {
       \tornado
 
       r8. fs fs8 fs8. a, a8 |
-      a4 fs'2.~ |
-      fs r4 |
     }
     \new Staff \with {
       \magnifyStaff #2/3
       \remove "Time_signature_engraver"
     } {
-      \outro
+      \outro_one
     }
+  >>
+  <<
+    {
+      a4 fs'2.~ |
+      fs2 r |
+    }
+    \new Staff \with {
+      \magnifyStaff #2/3
+      \remove "Time_signature_engraver"
+    } {
+      \outro_two
+    }
+
   >>
 }
