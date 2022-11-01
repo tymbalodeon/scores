@@ -4,22 +4,13 @@ intro = \relative c'' \new Voice \with {
 
   \improvisationOn
   \repeat percent 3 {
-    c4. c8 r2 |
+    c4. c8~ c4 r |
   }
   \improvisationOff r2 r4
 }
 
-outro = \new CueVoice \relative c {
-  \clef "bass"
-  \repeat percent 4 {
-    d4. d8~ d4 d' |
-  }
-}
-
-melody = \relative c'' {
-  \intro g4 |
-
-  fs' fs fs fs |
+part_one = \relative c'' {
+  fs fs fs fs |
   fs8 e d4 r8 d d e |
   fs e d4 r2 |
   fs8 e d4 r4 a |
@@ -31,8 +22,10 @@ melody = \relative c'' {
 
   fs'1( |
   e) |
-  r2 r8 fs, fs d'~ |
+}
 
+part_two = \relative c'' {
+  r2 r8 fs, fs d'~ |
   d4 d8 d~ d e4 fs8~ |
   fs fs4. r8 fs fs fs(~ |
   fs8 d4) d8 d16 b8. b4~ |
@@ -40,18 +33,21 @@ melody = \relative c'' {
 
   d'8 d4 d8~ d fs4 g8( |
   fs4) fs8 g~ g fs4 fs8 |
-  e d r e d r r4 |
-  e8 d r e d r r8 fs~ |
+  e d r e d4 r4 |
+  e8 d r e d4 r8 fs~ |
 
   fs fs4 fs8( e8) d4. |
   r2 d8 d4. |
 
   b1( |
   as) |
+}
+
+part_three = {
   r2 r8 fs fs d' |
 
   d2 r8 e d fs~ |
-  fs fs4 e8~ e d4 d8 |
+  fs fs4 fs8( e) d4 d8 |
   a'8. fs fs8 g8. fs fs8 |
   a8. fs fs8 e8. d e8 |
 
@@ -69,13 +65,64 @@ melody = \relative c'' {
   fs?16( e) d4 d8 fs16( e) d4 d8 |
   a'8.( fs) fs8~ fs e fs8( g16 fs~ |
   fs2) r2 |
+}
 
-  \new CueVoice \relative c' {
-    bf8 d g bf d g r4 |
-    b,,?8 d g b d g r4 |
-    fs4. d8 r2 |
-    r4 a d r |
+instrumental = {
+  <<
+    \new CueVoice \relative c' {
+      bf8 d g bf d g r4 |
+      b,,?8 d g b d g s4 |
+      fs4. d8 r2 |
+      r4 a d r |
+    }
+    {
+      s1 |
+      s2. d8 e16 fs~ |
+    }
+  >>
+}
+
+part_four = {
+  fs8. e16 d e8 fs16~ fs8. e16 d e8 fs16~ |
+  fs8. e16 d e8 fs16~ fs4 r8 a, |
+
+  fs'4 fs8 d~ d b4 fs'8~ |
+  fs fs4 d8~ d4 b8 b~ |
+  b2 r |
+  r2. d8 e16 fs~ |
+
+  fs8. e16 d8 e fs( e) d16 e8 fs16( |
+  e8) e a fs16 fs~ fs4 r8 e |
+
+  fs8 e r fs e4 r |
+  fs8 e r fs e4 r |
+  fs8 e r fs e4 r |
+  fs8 e r fs e4 a16 a8 a16~ |
+
+  a8. fs16~ fs8 fs~ fs e fs4~ |
+  fs2. r4 |
+  R1 |
+  r2. r4 |
+
+  s1 * 4 |
+}
+
+outro = \new CueVoice \relative c {
+  \clef "bass"
+  \repeat percent 4 {
+    d4. d'8~ d4 d |
   }
+}
+
+melody = \relative c'' {
+  \intro g4 |
+  \part_one
+  \part_two
+  \part_three
+  \instrumental
+  \part_four
+  \part_one
+
   s1 * 39 |
   \outro
 }

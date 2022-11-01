@@ -5,7 +5,7 @@ intro = \chordmode {
   g:maj |
 }
 
-verse = \chordmode {
+part_one = \chordmode {
   s1  |
   s |
   b:m |
@@ -19,7 +19,9 @@ verse = \chordmode {
   b:m |
   fs:7 |
   s |
+}
 
+part_two = \chordmode {
   d |
   s |
   b:m |
@@ -36,7 +38,9 @@ verse = \chordmode {
   b:m |
   fs:7 |
   fs:7/as |
+}
 
+part_three = \chordmode {
   d |
   s |
   b:m |
@@ -56,11 +60,23 @@ verse = \chordmode {
   g |
   d |
   s |
+}
 
+instrumental = \chordmode {
   bf |
   g |
   d |
   s |
+
+  d |
+  s |
+}
+
+verse = \chordmode {
+  \part_one
+  \part_two
+  \part_three
+  \instrumental
 
   g |
   s |
