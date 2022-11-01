@@ -3,6 +3,7 @@
 \include "settings.ily"
 \include "style.ily"
 \include "this-tornado-loves-you-melody.ily"
+\include "this-tornado-loves-you-lyrics.ily"
 \include "this-tornado-loves-you-chords.ily"
 \include "this-tornado-loves-you-structure.ily"
 
@@ -11,12 +12,13 @@
   composer = "Neko Case"
 }
 
-melody = \new Staff {
+melody = \new Staff <<
   <<
     \melody
-    \structure
+    \addlyrics \text
   >>
-}
+  \structure
+>>
 
 \layout {
   \context {
