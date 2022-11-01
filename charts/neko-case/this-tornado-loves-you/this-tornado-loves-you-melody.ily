@@ -3,8 +3,16 @@ intro = \relative c'' \new Voice \with {
 } {
 
   \improvisationOn
-  \repeat percent 3 { c4. c8 r2 } |
+  \repeat percent 3 {
+    c4. c8 r2 |
+  }
   \improvisationOff r2 r4
+}
+
+outro = \new CueVoice \relative c' {
+  \repeat percent 4 {
+    d4. d8~ d4 d' |
+  }
 }
 
 melody = \relative c'' {
@@ -67,4 +75,6 @@ melody = \relative c'' {
     fs4. d8 r2 |
     r4 a d r |
   }
+  s1 * 39 |
+  \outro
 }
