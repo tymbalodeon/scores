@@ -122,15 +122,19 @@ verse = \chordmode {
   e:m |
   s |
 
-  g |
-  s |
-  d |
-  s |
+  \repeat unfold 2 {
+    g |
+    s |
+    d |
+    s |
+  }
 
-  g:/d |
-  s |
-  d |
-  s |
+  \repeat unfold 2 {
+    g:/d |
+    s |
+    d |
+    s |
+  }
 }
 
 changes = \chords {

@@ -42,17 +42,22 @@ instrumental = {
 }
 
 part_four = {
-  \repeat unfold 8 {
+  \repeat unfold 4 {
     \base
   }
-  s1 * 3 |
+  s1 * 2 |
+}
+
+part_five = {
+  \repeat unfold 4 {
+    \base
+  }
+  s1 |
 }
 
 outro = {
-  \repeat unfold 2 {
-    \repeat volta 2 {
-      \base
-    }
+  \repeat unfold 4 {
+    \base
   }
 }
 
@@ -66,5 +71,7 @@ structure = {
   \part_three
   \instrumental
   \part_four
+  \part_five
   \outro
+  \bar "|."
 }

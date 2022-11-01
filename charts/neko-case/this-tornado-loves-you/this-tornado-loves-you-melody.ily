@@ -9,7 +9,7 @@ intro = \relative c'' \new Voice \with {
   \improvisationOff r2 r4
 }
 
-part_one = \relative c'' {
+part_one_base = \relative c'' {
   fs fs fs fs |
   fs8 e d4 r8 d d e |
   fs e d4 r2 |
@@ -18,6 +18,10 @@ part_one = \relative c'' {
   fs'8( e) fs e fs4 a |
   a8 e f( e) d4 d8 e |
   fs?16 fs d8 fs2.~ |
+}
+
+part_one = \relative c'' {
+  \part_one_base
   fs4 r a,8 a4. |
 
   fs'1( |
@@ -102,16 +106,40 @@ part_four = {
   a8. fs16~ fs8 fs~ fs e fs4~ |
   fs2. r4 |
   R1 |
-  r2. r4 |
+  r2 r8 a4 a8~ |
 
-  s1 * 4 |
+  a8. fs fs8 g8. fs( e8 |
+  d4) r r8 a'4 a8~ |
+  a8 e4 fs8~ fs2~ |
+  fs2 r4 g, |
+}
+
+part_five = {
+  r2. a'8 a(~ |
+  a fs) r4 r8 fs fs g( |
+  fs) fs fs g( fs) fs fs b,~ |
+  b b4. r2 |
+
+  r4 a b8 a4 a'8~ |
+  a fs4. r2 |
+  r4 fs g8( a,) a a~ |
+  a fs'~( fs2. |
+
+  e) r4 |
+  r2. r8 d |
+}
+
+
+tornado = {
+  \repeat unfold 4 {
+    fs8. d d8 fs8. d d8 |
+  }
+  fs8. d d8 fs8. d16~ d4 |
 }
 
 outro = \new CueVoice \relative c {
   \clef "bass"
-  \repeat percent 4 {
-    d4. d'8~ d4 d |
-  }
+  d4. d'8~ d4 d_\markup { \italic "etc..." } |
 }
 
 melody = \relative c'' {
@@ -121,8 +149,27 @@ melody = \relative c'' {
   \part_three
   \instrumental
   \part_four
-  \part_one
+  \part_one_base
+  \part_five
+  \tornado
 
-  s1 * 39 |
-  \outro
+  r8. d' d8 d8. cs b8 |
+  b4 fs2.~ |
+  fs r8 d |
+
+  <<
+    {
+      \tornado
+
+      r8. fs fs8 fs8. a, a8 |
+      a4 fs'2.~ |
+      fs r4 |
+    }
+    \new Staff \with {
+      \magnifyStaff #2/3
+      \remove "Time_signature_engraver"
+    } {
+      \outro
+    }
+  >>
 }
