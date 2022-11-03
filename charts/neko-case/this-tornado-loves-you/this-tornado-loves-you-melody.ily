@@ -1,12 +1,19 @@
-intro = \relative c'' \new Voice \with {
-  \consists "Pitch_squash_engraver"
-} {
+bass_riff = {
+  g4. g8~ g4 r |
+}
 
-  \improvisationOn
-  \repeat percent 3 {
-    c4. c8~ c4 r |
+intro = \relative c'' {
+  \relative c \new CueVoice {
+    \clef "bass"
+    \repeat unfold 2 {
+      \bass_riff
+    }
+    \transpose g b, {
+      \bass_riff
+    }
+    g4. g8~ g4_\markup { \italic "etc..." }
   }
-  \improvisationOff r2 r4
+  \clef "treble"
 }
 
 part_one_base = \relative c'' {
@@ -23,7 +30,7 @@ part_one_base = \relative c'' {
 
 part_one = \relative c'' {
   \part_one_base
-   a8 a4. |
+  a8 a4. |
 
   fs'1( |
   e) |
@@ -36,8 +43,8 @@ part_two = \relative c'' {
   fs8 d4) d8 d16 b8. b4~ |
   b2 r4 fs |
 
-  d'8 d4 d8~ d fs4 g8( |
-  fs4) fs8 g~ g fs4 fs8 |
+  d'8 d4 d8~ d fs4 g8~( |
+  g fs) fs8 g~ g fs4 fs8 |
   e d r e d4 r4 |
   e8 d r e d4 r8 fs~ |
 
