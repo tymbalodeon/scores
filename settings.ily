@@ -1,6 +1,11 @@
 \language "english"
+
 \pointAndClickOff
-\header { tagline = ##f }
+
+\header {
+  tagline = ##f
+}
+
 \paper {
   #(set-paper-size "letter")
   left-margin = 0.75\in
