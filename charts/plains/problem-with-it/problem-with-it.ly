@@ -2,7 +2,6 @@
 
 \include "settings.ily"
 \include "style.ily"
-\include "problem-with-it-melody.ily"
 \include "problem-with-it-chords.ily"
 \include "problem-with-it-structure.ily"
 
@@ -11,14 +10,13 @@
   composer = "Plains"
 }
 
-melody = \new Staff {
-  <<
-    % \melody
-    \structure
-  >>
+\paper {
+  score-system-spacing.basic-distance = #18
 }
 
 \layout {
+  indent = #0
+  ragged-last = ##f
   \context {
     \Score
     \consists #(set-bars-per-line '(4))
@@ -28,7 +26,33 @@ melody = \new Staff {
 \score {
   <<
     \numericTimeSignature
-    \changes
-    \melody
+    \changes_verse
+    \structure_verse
   >>
+}
+
+\score {
+  <<
+    \numericTimeSignature
+    \changes_chorus
+    \structure_chorus
+  >>
+}
+
+\markup {
+  \fill-line {
+    \line {}
+    \center-column
+    \string-lines {
+      "Verse x2
+      Chorus x4
+      Verse (guitar solo) x1
+      Verse x2
+      Chorus x4 + extra measure Eb
+      Chorus (guitar solo) x4
+      Chorus (no rhythm) x2
+      Chorus (with rhythm) x2"
+    }
+    \line {}
+  }
 }

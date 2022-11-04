@@ -1,4 +1,5 @@
-verse = \chordmode {
+changes_verse = \chords {
+  \mark "Verse"
   g1:m |
   s |
   bf |
@@ -9,17 +10,10 @@ verse = \chordmode {
   s |
 }
 
-chorus = \chordmode {
+changes_chorus = \chords {
+  \mark "Chorus"
   bf1 |
   g:m |
   ef |
   s |
-}
-
-changes = \chords {
-  \mark "Verse"
-  \verse
-
-  \mark "Chorus"
-  \chorus
 }

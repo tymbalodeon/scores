@@ -1,19 +1,16 @@
-verse = {
-  \repeat volta 2 {
-    s1 * 8 |
-  }
-}
-
-chorus = {
-  \repeat volta 4 {
-    s1 * 4 |
-  }
-}
-
-structure = {
+key_and_time = {
   \key bf \major
   \time 4/4
+}
 
-  \verse
-  \chorus
+structure_verse = {
+  \key_and_time
+  s1 * 8 |
+  \bar "||"
+}
+
+structure_chorus = {
+  \key_and_time
+  s1 * 4 |
+  \bar "||"
 }
