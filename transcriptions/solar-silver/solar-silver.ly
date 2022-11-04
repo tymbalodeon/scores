@@ -1,17 +1,6 @@
-\version "2.20.0"
-\language "english"
-\pointAndClickOff
-\paper {
-  #(set-paper-size "c4")
-  % #(set-paper-size "letter")
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.5\in
-}
+\version "2.23.80"
 
 \header {
-  tagline = ##f
   title = "Solar"
   subtitle = "Piano Solo by Horace Silver"
   subsubtitle = "from the Album \"Walkin' \""
@@ -92,7 +81,6 @@ changes = \chords {
       \key c \minor
       \time 4/4
 
-      % \mark \markup { \box \bold "1" }
       \chorusOne
     }
   >>
