@@ -1,4 +1,5 @@
 \version "2.23.80"
+\include "settings.ily"
 
 \header {
   title = "Solar"
