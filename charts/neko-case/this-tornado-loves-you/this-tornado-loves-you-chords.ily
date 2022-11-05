@@ -145,5 +145,6 @@ changes = \chords {
   \part_three
   \instrumental
   \part_four
+  \part_five
   \tornado
 }
