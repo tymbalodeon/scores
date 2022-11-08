@@ -12,7 +12,7 @@
   composer = "Neko Case"
 }
 
-melody = \new Staff <<
+melody = \new Staff = "melody" <<
   <<
     \melody
     \addlyrics \text

@@ -1,4 +1,6 @@
-guitar_strum = \new CueVoice \relative c' {
+% \include "this-tornado-loves-you-backing.ily"
+
+guitar_strum = \relative c' \new CueVoice {
   \repeat percent 4 {
     \repeat unfold 4 {
       <g b d>16
@@ -6,8 +8,12 @@ guitar_strum = \new CueVoice \relative c' {
   }
 }
 
+bass_notes = {
+  g4. g8~ g4
+}
+
 bass_riff = {
-  g4. g8~ g4 r |
+  \bass_notes r |
 }
 
 bass_intro = \relative c {
@@ -19,14 +25,13 @@ bass_intro = \relative c {
     \transpose g b, {
       \bass_riff
     }
-    g4. g8~ g4_\markup { \italic "etc..." }
+    \bass_notes_\markup { \italic "etc..." }
   }
 }
 
 intro = \relative c'' {
   \guitar_strum
   \bass_intro
-  \clef "treble"
 }
 
 part_one_base = \relative c'' {
@@ -43,23 +48,16 @@ part_one_base = \relative c'' {
 
 part_one = \relative c'' {
   \part_one_base
-  a8 a4. |
 
-                                % <<
-                                % \new CueVoice {
-                                % \voiceOne
-                                %   d'1( |
-                                %   cs) |
-                                % }
-                                %    {
-                                %      \new Voice {
-                                %        \voiceTwo
-  fs'1( |
-  e) |
-                                % }
+  a8 a4. |
+  <<
+    \part_one_backing
+    {
+      fs'1( |
+      e) |
+    }
+  >>
 }
-                                % >>
-                                % }
 
 part_two = \relative c'' {
   r2 r8 fs, fs d'~ |
@@ -70,26 +68,24 @@ part_two = \relative c'' {
 
   d'8 d4 d8~ d fs4 g8~( |
   g fs) fs8 g~ g fs4 fs8 |
-  e d r e d4 r4 |
-  e8 d r e d4 r8 fs~ |
+  <<
+    \stop_it_backing
+    {
+      e d r e d4 r4 |
+      e8 d r e d4 r8 fs~ |
+    }
+  >>
 
   fs fs4 fs8( e8) d4. |
   r2 d8 d4. |
 
-                                % <<
-                                % \new CueVoice {
-                                %   \voiceOne
-                                %   d'1( |
-                                %   cs) |
-                                % }
-                                %    {
-                                %      \new Voice {
-                                %        \voiceTwo
-  b1( |
-  as) |
-                                %   }
-                                % }
-                                % >>%}
+  <<
+    \part_one_backing
+    {
+      b1( |
+      as) |
+    }
+  >>
 }
 
 part_three = {
@@ -195,7 +191,9 @@ outro_two = \relative c {
 }
 
 melody = \relative c'' {
-  \intro g4 |
+  \intro
+  \clef "treble"
+  g4 |
   \part_one
   \part_two
   \part_three
