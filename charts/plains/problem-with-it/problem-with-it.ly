@@ -39,20 +39,17 @@
   >>
 }
 
-\markup {
-  \fill-line {
-    \line {}
-    \center-column
-    \string-lines {
-      "Verse x2
-      Chorus x4
-      Verse (guitar solo) x1
-      Verse x2
-      Chorus x4 + extra measure Eb
-      Chorus (guitar solo) x4
-      Chorus (no rhythm) x2
-      Chorus (with rhythm) x2"
-    }
-    \line {}
+\markuplist {
+  \override #'(padding . 5)
+  \table #'(1 0 -1)
+  {
+    \bold Verse \italic "x 2" ""
+    \bold Chorus \italic "x 4" ""
+    \bold Verse \italic "x 1" "guitar solo"
+    \bold Verse \italic "x 2" ""
+    \bold Chorus \italic "x 4" "extra bar of Eb"
+    \bold Chorus \italic "x 4" "guitar solo"
+    \bold Chorus \italic "x 2" "no rhythm"
+    \bold Chorus \italic "x 2" "with rhythm"
   }
 }
