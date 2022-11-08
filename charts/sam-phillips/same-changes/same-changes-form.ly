@@ -52,8 +52,8 @@
   \override #'(padding . 5)
   \table #'(1 -1 -1)
   {
-    \bold Intro \italic "x 2" "no rhythm"
-    \bold Intro \italic "x 2" "with rhythm"
+    \bold Intro \italic "x 4" "no rhythm"
+    \bold Intro \italic "x 4" "with rhythm"
     \bold Verse \italic "x 1" ""
     \bold Chorus \italic "x 2" ""
     \bold Verse \italic "x 1" ""
