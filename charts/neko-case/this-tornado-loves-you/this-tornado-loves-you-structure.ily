@@ -9,6 +9,7 @@ twice_base =  {
 }
 
 intro = {
+  s1 |
   \base
 }
 

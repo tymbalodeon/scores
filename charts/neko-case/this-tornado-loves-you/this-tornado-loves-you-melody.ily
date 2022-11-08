@@ -1,9 +1,17 @@
+guitar_strum = \new CueVoice \relative c' {
+  \repeat percent 4 {
+    \repeat unfold 4 {
+      <g b d>16
+    }
+  }
+}
+
 bass_riff = {
   g4. g8~ g4 r |
 }
 
-intro = \relative c'' {
-  \relative c \new CueVoice {
+bass_intro = \relative c {
+  \new CueVoice {
     \clef "bass"
     \repeat unfold 2 {
       \bass_riff
@@ -13,6 +21,11 @@ intro = \relative c'' {
     }
     g4. g8~ g4_\markup { \italic "etc..." }
   }
+}
+
+intro = \relative c'' {
+  \guitar_strum
+  \bass_intro
   \clef "treble"
 }
 
@@ -32,9 +45,21 @@ part_one = \relative c'' {
   \part_one_base
   a8 a4. |
 
+                                % <<
+                                % \new CueVoice {
+                                % \voiceOne
+                                %   d'1( |
+                                %   cs) |
+                                % }
+                                %    {
+                                %      \new Voice {
+                                %        \voiceTwo
   fs'1( |
   e) |
+                                % }
 }
+                                % >>
+                                % }
 
 part_two = \relative c'' {
   r2 r8 fs, fs d'~ |
@@ -51,8 +76,20 @@ part_two = \relative c'' {
   fs fs4 fs8( e8) d4. |
   r2 d8 d4. |
 
+                                % <<
+                                % \new CueVoice {
+                                %   \voiceOne
+                                %   d'1( |
+                                %   cs) |
+                                % }
+                                %    {
+                                %      \new Voice {
+                                %        \voiceTwo
   b1( |
   as) |
+                                %   }
+                                % }
+                                % >>%}
 }
 
 part_three = {

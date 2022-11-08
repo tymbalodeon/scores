@@ -1,6 +1,7 @@
 intro = \chordmode {
   g1:maj  |
   s |
+  s |
   b:m |
   g:maj |
 }
