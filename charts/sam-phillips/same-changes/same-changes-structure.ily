@@ -43,7 +43,7 @@ structure = {
 
 structure_intro = {
   \key_and_time
-  \mark \markup \box "Intro"
+  \mark \markup \box "Vamp"
   \intro_base
   \bar "||"
 }
