@@ -52,8 +52,7 @@
   \override #'(padding . 5)
   \table #'(1 -1 -1)
   {
-    \bold Vamp \italic "x 4" "no rhythm"
-    \bold Vamp \italic "x 4" "with rhythm"
+    \bold Vamp \italic "x 8" "rhythm joins after 4"
     \bold Verse \italic "x 1" ""
     \bold Chorus \italic "x 2" ""
     \bold Verse \italic "x 1" ""
@@ -61,8 +60,7 @@
     \bold Vamp \italic "x 8" "no bass"
     \bold Chorus \italic "x 2" "instrumental"
     \bold Verse \italic "x 1" ""
-    \bold Chorus \italic "x 2" ""
-    \bold Chorus \italic "x 2" "more guitar, tag last 4"
+    \bold Chorus \italic "x 4" "last 2 with more guitar, tag last 4"
     \bold Vamp \italic "x 2"
   }
 }
