@@ -1,6 +1,10 @@
+intro_base = \chordmode {
+  d1:m |
+}
+
 intro = \chordmode {
   \repeat unfold 2 {
-    d1:m |
+    \intro_base
     s1 |
   }
 }
@@ -43,5 +47,17 @@ chorus = \chordmode {
 changes = \chords {
   \intro
   \verse
+  \chorus
+}
+
+changes_intro = \chords {
+  \intro_base
+}
+
+changes_verse = \chords {
+  \verse
+}
+
+changes_chorus = \chords {
   \chorus
 }
