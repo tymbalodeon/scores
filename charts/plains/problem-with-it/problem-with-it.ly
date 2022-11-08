@@ -11,7 +11,7 @@
 }
 
 \paper {
-  score-system-spacing.basic-distance = #18
+  score-system-spacing.basic-distance = #20
 }
 
 \layout {
@@ -42,7 +42,7 @@
 \markup \fill-line {
   \column
   \override #'(padding . 5)
-  \table #'(1 0 -1)
+  \table #'(1 -1 -1)
   {
     \bold Verse \italic "x 2" ""
     \bold Chorus \italic "x 4" ""
