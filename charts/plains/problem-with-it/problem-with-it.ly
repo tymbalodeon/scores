@@ -39,7 +39,8 @@
   >>
 }
 
-\markuplist {
+\markup \fill-line {
+  \column
   \override #'(padding . 5)
   \table #'(1 0 -1)
   {
