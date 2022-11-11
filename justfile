@@ -79,17 +79,16 @@ compile *scores:
     if [ -z "${files[*]}" ]; then
         exit
     fi
+    pdfs_directory=./pdfs
     for file in "${files[@]}"; do
         without_extension="${file:r}"
-        pdf_file="${without_extension}.pdf"
+        pdf_file="${pdfs_directory}"/"${without_extension:t}".pdf
         checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
-        lilypond -o "${without_extension}" "${file}"
-        if [ -n "${OUTPUT_DIRECTORY}" ]; then
-            parent_directory="${OUTPUT_DIRECTORY}/${file:r:h}"
-            mkdir -p "${parent_directory:h}"
-            cp "${pdf_file}" "${parent_directory}.pdf"
-        fi
+        lilypond -o "${pdfs_directory}" "${file}"
     done
+    if [ -n "${OUTPUT_DIRECTORY}" ]; then
+        cp -r "${pdfs_directory}"/. "${OUTPUT_DIRECTORY}"
+    fi
 
 # Open <score> in editor and pdf viewer, recompiling on file changes.
 edit score: (compile score)
