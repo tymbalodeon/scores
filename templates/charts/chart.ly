@@ -42,15 +42,23 @@ form_layout = \layout {
 
 \book {
   \bookOutputSuffix "form"
+
   \paper {
     score-system-spacing.basic-distance = #18
   }
+
   \score {
     \form_layout
     <<
       \numericTimeSignature
-      \changes_intro
-      \structure_intro
+      \new Staff \with {
+        instrumentName = \markup \box "Verse"
+      } {
+        <<
+          \changes_verse
+          \structure_verse
+        >>
+      }
     >>
   }
 
@@ -58,17 +66,14 @@ form_layout = \layout {
     \form_layout
     <<
       \numericTimeSignature
-      \changes_verse
-      \structure_verse
-    >>
-  }
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_chorus
-      \structure_chorus
+      \new Staff \with {
+        instrumentName = \markup \box "Chorus"
+      } {
+        <<
+          \changes_chorus
+          \structure_chorus
+        >>
+      }
     >>
   }
 

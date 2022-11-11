@@ -17,14 +17,12 @@ chorus = {
 
 structure_verse = {
   \key_and_time
-  \mark \markup \box "Verse"
   \verse
   \bar "||"
 }
 
 structure_verse = {
   \key_and_time
-  \mark \markup \box "Chorus"
   \chorus
   \bar "||"
 }
