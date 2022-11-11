@@ -11,17 +11,53 @@
   composer = "Jeff Tweedy"
 }
 
-melody = \new Staff {
-  <<
-    \melody
-    \structure
-  >>
+\paper {
+  score-system-spacing.basic-distance = #18
+}
+
+\layout {
+  indent = #0
+  ragged-last = ##f
 }
 
 \score {
   <<
     \numericTimeSignature
-    \changes
-    \melody
+    \changes_intro
+    \new Staff {
+      <<
+        \melody_intro
+        \structure_intro
+      >>
+    }
   >>
+}
+
+\score {
+  \layout {
+    \context {
+      \Score
+      \consists #(set-bars-per-line '(4 5 4 4))
+    }
+  }
+  <<
+    \numericTimeSignature
+    \changes_verse
+    \new Staff {
+      <<
+        \melody_verse
+        \structure_verse
+      >>
+    }
+  >>
+}
+
+\markup \fill-line {
+  \column
+  \override #'(padding . 5)
+  \table #'(1 -1 -1)
+  {
+    \bold Intro \italic "x 1" ""
+    \bold Verse \italic "x 2" ""
+  }
 }

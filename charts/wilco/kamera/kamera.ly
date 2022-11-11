@@ -48,11 +48,11 @@
 \score {
   <<
     \numericTimeSignature
-    \changes_outro
+    \changes_end
     \new Staff {
       <<
-        \melody_outro
-        \structure_outro
+        \melody_end
+        \structure_end
       >>
     }
   >>
@@ -67,7 +67,7 @@
     \bold Verse \italic "x 2" ""
     \bold Vamp \italic "x 4" ""
     \bold Verse \italic "x 1" "instrumental until m. 9"
-    \bold Vamp \italic "x 4" "add major 7"
-    \bold Outro \italic "x 1" ""
+    \bold Vamp \italic "x ?" "add major 7"
+    \bold End \italic "x 1" ""
   }
 }

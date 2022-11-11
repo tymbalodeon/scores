@@ -1,17 +1,19 @@
-structure = {
+key_and_time = {
   \key e \minor
   \time 4/4
-  \mark "Intro"
+}
+
+structure_intro = {
+  \mark \markup \box "Intro"
   s1 * 4 |
-  \break
-  \mark "Verse"
-  \repeat volta 2 {
-    s1 * 4 |
-    \break
-    s1 * 5 |
-    \break
-    s1 * 4 |
-    \break
-    s1 * 4 |
-  }
+  \bar "||"
+}
+
+structure_verse = {
+  \mark \markup \box "Verse"
+  s1 * 4 |
+  s1 * 5 |
+  s1 * 4 |
+  s1 * 4 |
+  \bar "||"
 }

@@ -1,9 +1,11 @@
-changes = \chords {
+changes_intro = \chords {
   e2.:m  b4:m|
   e1:m |
   g2. c4 |
   g2. b4:m |
-  \repeat volta 2 {
+}
+
+changes_verse = \chords {
     e2.:m  b4:m|
     e1:m |
     g2. c4 |
@@ -21,5 +23,4 @@ changes = \chords {
     c |
     g2. c4 |
     g2. b4:m |
-  }
 }

@@ -17,7 +17,7 @@ melody_verse = \relative c' \new Voice \with {
   r8 c c4 r8 c4 c8~ |
 }
 
-melody_outro = \relative c' \new Voice \with {
+melody_end = \relative c' \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
   \improvisationOn

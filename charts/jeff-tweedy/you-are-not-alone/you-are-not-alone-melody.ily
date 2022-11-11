@@ -1,4 +1,4 @@
-melody = \relative c' \new Voice \with {
+melody_intro = \relative c' \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
   \improvisationOn
@@ -7,6 +7,12 @@ melody = \relative c' \new Voice \with {
   \repeat unfold 2 {
     c2. c4 |
   }
+}
+
+melody_verse = \relative c' \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
   \repeat volta 2 {
     c2. c4 |
     s1 |

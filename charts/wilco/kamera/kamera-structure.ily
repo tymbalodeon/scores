@@ -17,9 +17,9 @@ structure_verse = {
   \bar "||"
 }
 
-structure_outro = {
+structure_end = {
   \key_and_time
-  \mark \markup \box "Outro"
+  \mark \markup \box "End"
   s1 * 2 |
   \bar "||"
 }

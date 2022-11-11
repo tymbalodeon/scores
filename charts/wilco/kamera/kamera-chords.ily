@@ -29,7 +29,7 @@ changes_verse = \chords {
   s8 g4. s8 a4 d8 |
 }
 
-changes_outro = \chords {
+changes_end = \chords {
   s8 g4. s8 a4 d8 |
   s1 |
 }
