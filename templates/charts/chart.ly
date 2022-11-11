@@ -36,7 +36,6 @@ melody = \new Staff {
 }
 
 form_layout = \layout {
-  indent = #0
   ragged-last = ##f
 }
 

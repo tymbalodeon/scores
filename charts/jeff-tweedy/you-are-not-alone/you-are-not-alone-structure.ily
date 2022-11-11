@@ -8,13 +8,11 @@ base = {
 }
 
 structure_intro = {
-  \mark \markup \box "Intro"
   \base
   \bar "||"
 }
 
 structure_verse = {
-  \mark \markup \box "Verse"
   \repeat unfold 3 {
     \base
   }
@@ -26,7 +24,6 @@ structure_verse = {
 }
 
 structure_end = {
-  \mark \markup \box "End"
   \repeat volta 2 {
     s1 * 3 |
   }
