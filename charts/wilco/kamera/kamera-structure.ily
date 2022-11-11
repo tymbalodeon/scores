@@ -20,9 +20,6 @@ structure_verse = {
 structure_outro = {
   \key_and_time
   \mark \markup \box "Outro"
-  \repeat volta 2 {
-    s1 |
-  }
   s1 * 2 |
   \bar "||"
 }

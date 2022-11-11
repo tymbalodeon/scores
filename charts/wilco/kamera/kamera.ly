@@ -49,7 +49,12 @@
   <<
     \numericTimeSignature
     \changes_outro
-    \structure_outro
+    \new Staff {
+      <<
+        \melody_outro
+        \structure_outro
+      >>
+    }
   >>
 }
 
@@ -62,7 +67,7 @@
     \bold Verse \italic "x 2" ""
     \bold Vamp \italic "x 4" ""
     \bold Verse \italic "x 1" "instrumental until m. 9"
-    \bold Vamp \italic "x 4" ""
+    \bold Vamp \italic "x 4" "add major 7"
     \bold Outro \italic "x 1" ""
   }
 }

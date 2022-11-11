@@ -30,7 +30,6 @@ changes_verse = \chords {
 }
 
 changes_outro = \chords {
-  d1:maj |
   s8 g4. s8 a4 d8 |
   s1 |
 }
