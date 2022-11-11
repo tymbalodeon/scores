@@ -1,6 +1,5 @@
 key_signature = {
   \key ef \major
-
 }
 
 base = {
@@ -12,7 +11,6 @@ base = {
 }
 
 structure_intro = {
-  \mark \markup \box "Intro"
   \repeat unfold 2 {
     \base
   }
@@ -20,14 +18,12 @@ structure_intro = {
 }
 
 structure_verse = {
-  \mark \markup \box "Verse"
   \base
   s1 * 2 |
   \bar "||"
 }
 
 structure_chorus = {
-  \mark \markup \box "Chorus"
   s1 * 5 |
   \time 3/4
   s2. |

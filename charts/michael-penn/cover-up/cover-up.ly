@@ -16,7 +16,6 @@
 }
 
 \layout {
-  indent = #0
   ragged-last = ##f
   \context {
     \Score
@@ -28,7 +27,11 @@
   <<
     \numericTimeSignature
     \changes_intro
-    \structure_intro
+    \new Staff \with {
+      instrumentName = \markup \box "Intro"
+    } {
+      \structure_intro
+    }
   >>
 }
 
@@ -36,7 +39,11 @@
   <<
     \numericTimeSignature
     \changes_verse
-    \structure_verse
+    \new Staff \with {
+      instrumentName = \markup \box "Verse"
+    } {
+      \structure_verse
+    }
   >>
 }
 
@@ -44,7 +51,11 @@
   <<
     \numericTimeSignature
     \changes_chorus
-    \structure_chorus
+    \new Staff \with {
+      instrumentName = \markup \box "Chorus"
+    } {
+      \structure_chorus
+    }
   >>
 }
 
