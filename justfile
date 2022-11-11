@@ -9,6 +9,7 @@ export OUTPUT_DIRECTORY := ```
 ```
 
 ly_directories := "(^templates/)#**"
+pdfs_directory := "./pdfs"
 
 @_help:
     just --list
@@ -82,16 +83,15 @@ compile *scores:
     if [ -z "${files[*]}" ]; then
         exit
     fi
-    pdfs_directory=./pdfs
-    mkdir -p "${pdfs_directory}"
+    mkdir -p {{pdfs_directory}}
     for file in "${files[@]}"; do
         without_extension="${file:r}"
-        pdf_file="${pdfs_directory}"/"${without_extension:t}".pdf
+        pdf_file={{pdfs_directory}}/"${without_extension:t}".pdf
         checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
-        lilypond -o "${pdfs_directory}" "${file}"
+        lilypond -o {{pdfs_directory}} "${file}"
     done
     if [ -n "${OUTPUT_DIRECTORY}" ]; then
-        cp -r "${pdfs_directory}"/. "${OUTPUT_DIRECTORY}"
+        cp -r {{pdfs_directory}}/. "${OUTPUT_DIRECTORY}"
     fi
 
 # Open <score> in editor and pdf viewer, recompiling on file changes.
@@ -100,7 +100,7 @@ edit score: (compile score)
     for file in **/**{{score}}*.ly(N); do
         without_extension="${file:r}"
         lilypond_file="${without_extension}.ly"
-        open "${without_extension}.pdf"
+        open {{pdfs_directory}}/"${without_extension:t}.pdf"
         open "${lilypond_file}"
         watchexec -e ly,ily just compile {{score}}
     done
