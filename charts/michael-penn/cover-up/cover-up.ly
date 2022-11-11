@@ -64,6 +64,6 @@
   \override #'(padding . 5)
   \table #'(1 -1 -1)
   {
-    \bold Intro \italic "x 1" ""
+    \bold Intro \italic "" ""
   }
 }

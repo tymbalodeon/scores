@@ -46,7 +46,7 @@
   {
     \bold Verse \italic "x 2" ""
     \bold Chorus \italic "x 4" ""
-    \bold Verse \italic "x 1" "guitar solo"
+    \bold Verse \italic "" "guitar solo"
     \bold Verse \italic "x 2" ""
     \bold Chorus \italic "x 4" "extra bar of Eb"
     \bold Chorus \italic "x 4" "guitar solo"

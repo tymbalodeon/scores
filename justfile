@@ -89,10 +89,10 @@ compile *scores:
         pdf_file={{pdfs_directory}}/"${without_extension:t}".pdf
         checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
         lilypond -o {{pdfs_directory}} "${file}"
+        if [ -n "${OUTPUT_DIRECTORY}" ]; then
+            cp -r "${pdf_file}" "${OUTPUT_DIRECTORY}"
+        fi
     done
-    if [ -n "${OUTPUT_DIRECTORY}" ]; then
-        cp -r {{pdfs_directory}}/. "${OUTPUT_DIRECTORY}"
-    fi
 
 # Open <score> in editor and pdf viewer, recompiling on file changes.
 edit score: (compile score)

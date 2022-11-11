@@ -66,8 +66,8 @@
     \bold Vamp \italic "x 4" ""
     \bold Verse \italic "x 2" ""
     \bold Vamp \italic "x 4" ""
-    \bold Verse \italic "x 1" "instrumental until m. 9"
+    \bold Verse \italic "" "instrumental until m. 9"
     \bold Vamp \italic "x ?" "add major 7"
-    \bold End \italic "x 1" ""
+    \bold End \italic "" ""
   }
 }

@@ -69,9 +69,9 @@ melody_solo = \new Staff <<
   \table #'(1 -1 -1)
   {
     \bold Verse \italic "x 6" "2 instrumental, then 4 with vocals"
-    \bold Chorus \italic "x 1" "do the repeat once"
+    \bold Chorus \italic "" "do the repeat once"
     \bold Verse \italic "x 6" "2 instrumental, then 4 with vocals"
-    \bold Chorus \italic "x 1" "do the repeat twice, D.S. al Solo"
+    \bold Chorus \italic "" "do the repeat twice, D.S. al Solo"
     \bold Solo \italic "x ?" "instrumental"
     \bold Verse \italic "x 2" "instrumental"
   }
