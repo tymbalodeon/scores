@@ -16,7 +16,6 @@
 }
 
 \layout {
-  indent = #0
   ragged-last = ##f
   \context {
     \Score
@@ -28,7 +27,11 @@
   <<
     \numericTimeSignature
     \changes_vamp
-    \structure_vamp
+    \new Staff \with {
+      instrumentName = \markup \box "Vamp"
+    } {
+      \structure_vamp
+    }
   >>
 }
 
@@ -36,7 +39,9 @@
   <<
     \numericTimeSignature
     \changes_verse
-    \new Staff {
+    \new Staff \with {
+      instrumentName = \markup \box "Verse"
+    } {
       <<
         \melody_verse
         \structure_verse
@@ -49,7 +54,9 @@
   <<
     \numericTimeSignature
     \changes_end
-    \new Staff {
+    \new Staff \with {
+      instrumentName = \markup \box "End"
+    } {
       <<
         \melody_end
         \structure_end

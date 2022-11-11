@@ -5,21 +5,18 @@ key_and_time = {
 
 structure_vamp = {
   \key_and_time
-  \mark \markup \box "Vamp"
   s1 |
   \bar "||"
 }
 
 structure_verse = {
   \key_and_time
-  \mark \markup \box "Verse"
   s1 * 20 |
   \bar "||"
 }
 
 structure_end = {
   \key_and_time
-  \mark \markup \box "End"
   s1 * 2 |
   \bar "|."
 }
