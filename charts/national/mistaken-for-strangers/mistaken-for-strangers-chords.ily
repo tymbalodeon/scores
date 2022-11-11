@@ -34,3 +34,12 @@ changes = \chords {
   \chorus_chords
   \post_chorus_chords
 }
+
+changes_verse = \chords {
+  \verse_chords
+}
+
+changes_chorus = \chords {
+  \chorus_chords
+  \post_chorus_chords
+}

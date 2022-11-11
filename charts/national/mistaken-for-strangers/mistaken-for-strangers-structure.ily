@@ -1,3 +1,7 @@
+key_signature = {
+  \key f \major
+}
+
 base = {
   s1 * 4 |
 }
@@ -25,12 +29,22 @@ chorus = {
 }
 
 structure = {
-  \key f \major
-  \time 4/4
 
   \intro
   \verse
   \chorus
 
   \bar "|."
+}
+
+structure_verse = {
+  \key_signature
+  \base
+  \bar "||"
+}
+
+structure_chorus = {
+  \key_signature
+  s1 * 16 |
+  \bar "||"
 }
