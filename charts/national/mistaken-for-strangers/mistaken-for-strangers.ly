@@ -8,7 +8,7 @@
 
 \header {
   title = "Mistaken For Strangers"
-  composer = "The National"
+  subtitle = "The National"
 }
 
 \paper {
@@ -22,6 +22,8 @@
     \consists #(set-bars-per-line '(4))
   }
 }
+
+\markup \vspace #2
 
 \score {
   <<
@@ -46,6 +48,8 @@
     }
   >>
 }
+
+\markup \vspace #4
 
 \markup \fill-line {
   \column

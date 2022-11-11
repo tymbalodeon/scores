@@ -8,13 +8,11 @@ verse_base = {
 }
 
 structure_verse = {
-  \mark \markup \box "Verse"
   \verse_base
   \bar "||"
 }
 
 structure_chorus = {
-  \mark \markup \box "Chorus"
   \repeat volta 2 {
   \time 3/4
   s2. |
@@ -39,7 +37,6 @@ structure_chorus = {
 }
 
 structure_solo = {
-  \mark \markup \box "Solo"
   \verse_base
   \bar "||"
 }

@@ -8,7 +8,7 @@
 
 \header {
   title = "Mother's Mother's Magazines"
-  composer = "Cate Le Bon"
+  subtitle = "Cate Le Bon"
 }
 
 \paper {
@@ -16,7 +16,6 @@
 }
 
 \layout {
-  indent = #0
   ragged-last = ##f
   \context {
     \Score
@@ -24,26 +23,21 @@
   }
 }
 
-melody_verse = \new Staff <<
-  \melody_verse
-  \structure_verse
->>
 
-melody_chorus = \new Staff <<
-  \melody_chorus
-  \structure_chorus
->>
-
-melody_solo = \new Staff <<
-  \melody_solo
-  \structure_solo
->>
+\markup \vspace #2
 
 \score {
   <<
     \numericTimeSignature
     \changes_verse
-    \melody_verse
+    \new Staff \with {
+      instrumentName = \markup \box "Verse"
+    } {
+      <<
+        \melody_verse
+        \structure_verse
+      >>
+    }
   >>
 }
 
@@ -51,7 +45,14 @@ melody_solo = \new Staff <<
   <<
     \numericTimeSignature
     \changes_chorus
-    \melody_chorus
+    \new Staff \with {
+      instrumentName = \markup \box "Chorus"
+    } {
+      <<
+        \melody_chorus
+        \structure_chorus
+      >>
+    }
   >>
 }
 
@@ -59,9 +60,18 @@ melody_solo = \new Staff <<
   <<
     \numericTimeSignature
     \changes_solo
-    \melody_solo
+    \new Staff \with {
+      instrumentName = \markup \box "Solo"
+    } {
+      <<
+        \melody_solo
+        \structure_solo
+      >>
+    }
   >>
 }
+
+\markup \vspace #4
 
 \markup \fill-line {
   \column
@@ -69,9 +79,9 @@ melody_solo = \new Staff <<
   \table #'(1 -1 -1)
   {
     \bold Verse \italic "x 6" "2 instrumental, then 4 with vocals"
-    \bold Chorus \italic "" "do the repeat once"
+    \bold Chorus \italic "" "1 repeat"
     \bold Verse \italic "x 6" "2 instrumental, then 4 with vocals"
-    \bold Chorus \italic "" "do the repeat twice, D.S. al Solo"
+    \bold Chorus \italic "" "2 repeats, D.S. al Solo"
     \bold Solo \italic "x ?" "instrumental"
     \bold Verse \italic "x 2" "instrumental"
   }
