@@ -8,7 +8,7 @@
 
 \header {
   title = "You Are Not Alone"
-  composer = "Jeff Tweedy"
+  subtitle = "Jeff Tweedy"
 }
 
 \paper {
@@ -18,6 +18,8 @@
 \layout {
   ragged-last = ##f
 }
+
+\markup \vspace #2
 
 \score {
   <<
@@ -69,6 +71,8 @@
     }
   >>
 }
+
+\markup \vspace #4
 
 \markup \fill-line {
   \column
