@@ -16,6 +16,9 @@ ly_directories := "(^templates/)#**"
 _copy_template_files type composer title:
     #!/usr/bin/env zsh
     score_directory=./{{type}}s/{{composer}}/{{title}}
+    if [ -d "${score_directory}" ]; then
+        exit
+    fi
     mkdir -p "${score_directory}"
     for template in ./templates/{{type}}s/*; do
         template_name="${template:t}"
