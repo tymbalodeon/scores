@@ -65,5 +65,12 @@
   \table #'(1 -1 -1)
   {
     \bold Intro \italic "" ""
+    \bold Verse \italic "" "repeat 3x"
+    \bold Chorus \italic "" ""
+    \bold Verse \italic "" "repeat 3x"
+    \bold Chorus \italic "" ""
+    \bold Verse \italic "" "no bass; in 4"
+    \bold Verse \italic "" "with bass; no repeats"
+    \bold Chorus \italic "" "with tag"
   }
 }
