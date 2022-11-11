@@ -18,16 +18,6 @@
 \layout {
   ragged-last = ##f
 }
-\markup \fill-line {
-  \column
-  \override #'(padding . 5)
-  \table #'(1 -1 -1)
-  {
-    \bold Intro \italic "" ""
-    \bold Verse \italic "x 3" "3rd time: guitar solo mm. 1-9; coda to End"
-    \bold End \italic "" ""
-  }
-}
 
 \score {
   <<
@@ -80,3 +70,13 @@
   >>
 }
 
+\markup \fill-line {
+  \column
+  \override #'(padding . 5)
+  \table #'(1 -1 -1)
+  {
+    \bold Intro \italic "" ""
+    \bold Verse \italic "x 3" "3rd time: guitar solo mm. 1-9; coda to End"
+    \bold End \italic "" ""
+  }
+}
