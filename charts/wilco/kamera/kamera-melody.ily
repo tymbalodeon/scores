@@ -14,5 +14,5 @@ melody_verse = \relative c' \new Voice \with {
   c2 c |
   c c |
   s1 |
-  r8 c4. r8 c4 c8~ |
+  r8 c c4 r8 c4 c8~ |
 }
