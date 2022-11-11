@@ -76,12 +76,21 @@ _get_files extension *scores:
     fi
     printf "%s" "${files[*]}"
 
+_get_pdf_files ly_file:
+    #!/usr/bin/env zsh
+    ly_file={{ly_file}}
+    score_title="${ly_file:r:t}"
+    pdf_files=({{pdfs_directory}}/*"${score_title}"*(N))
+    printf "%s" "${pdf_files[*]}"
 
 _run_lilypond_and_copy_to_output ly_file pdf_file:
     #!/usr/bin/env zsh
     lilypond -o {{pdfs_directory}} {{ly_file}}
     if [ -n "${OUTPUT_DIRECTORY}" ]; then
-        cp -r {{pdf_file}} "${OUTPUT_DIRECTORY}"
+        pdf_files=$(just _get_pdf_files {{ly_file}})
+        for file in "${pdf_files[@]}"; do
+            cp -r "${file}" "${OUTPUT_DIRECTORY}"
+        done
     fi
 
 # Create pdf(s).
@@ -104,9 +113,12 @@ edit score: (compile score)
     #!/usr/bin/env zsh
     for file in **/**{{score}}*.ly(N); do
         without_extension="${file:r}"
-        lilypond_file="${without_extension}.ly"
-        open {{pdfs_directory}}/"${without_extension:t}.pdf"
-        open "${lilypond_file}"
+        ly_file="${without_extension}.ly"
+        IFS=" " read -r -A pdf_files <<<"$(just _get_pdf_files "${ly_file}")"
+        for file in "${pdf_files[@]}"; do
+            open "${file}"
+        done
+        open "${ly_file}"
         watchexec -e ly,ily just compile {{score}}
     done
 
