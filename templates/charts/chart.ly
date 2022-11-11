@@ -25,10 +25,60 @@ melody = \new Staff {
   }
 }
 
-\score {
-  <<
-    \numericTimeSignature
-    \changes
-    \melody
-  >>
+\book {
+  \score {
+    <<
+      \numericTimeSignature
+      \changes
+      \melody
+    >>
+  }
+}
+
+form_layout = \layout {
+  indent = #0
+  ragged-last = ##f
+}
+
+\book {
+  \bookOutputSuffix "form"
+  \paper {
+    score-system-spacing.basic-distance = #18
+  }
+  \score {
+    \form_layout
+    <<
+      \numericTimeSignature
+      \changes_intro
+      \structure_intro
+    >>
+  }
+
+  \score {
+    \form_layout
+    <<
+      \numericTimeSignature
+      \changes_verse
+      \structure_verse
+    >>
+  }
+
+  \score {
+    \form_layout
+    <<
+      \numericTimeSignature
+      \changes_chorus
+      \structure_chorus
+    >>
+  }
+
+  \markup \fill-line {
+    \column
+    \override #'(padding . 5)
+    \table #'(1 -1 -1)
+    {
+      \bold Verse \italic "x 1" ""
+      \bold Chorus \italic "x 1" ""
+    }
+  }
 }
