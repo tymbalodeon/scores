@@ -1,28 +1,28 @@
-intro = {
-  s1 * 4 |
+key_and_time = {
+  \key d \major
+  \time 4/4
 }
 
-verse = {
-  \repeat volta 2 {
-    s1 * 19
-    s2. s4_\markup { \italic "Da Capo" }
-  }
+structure_vamp = {
+  \key_and_time
+  \mark \markup \box "Vamp"
+  s1 |
+  \bar "||"
 }
 
-outro = {
+structure_verse = {
+  \key_and_time
+  \mark \markup \box "Verse"
+  s1 * 20 |
+  \bar "||"
+}
+
+structure_outro = {
+  \key_and_time
+  \mark \markup \box "Outro"
   \repeat volta 2 {
     s1 |
   }
   s1 * 2 |
-}
-
-structure = {
-  \key d \major
-  \time 4/4
-
-  \intro
-  \verse
-  \outro
-
-  \bar "|."
+  \bar "||"
 }

@@ -1,11 +1,8 @@
-intro = {
+changes_vamp = \chords {
   d1 |
-  s |
-  s |
-  s |
 }
 
-verse = \chordmode {
+changes_verse = \chords {
   d1 |
   s |
   g |
@@ -32,14 +29,8 @@ verse = \chordmode {
   s8 g4. s8 a4 d8 |
 }
 
-outro = \chordmode {
+changes_outro = \chords {
   d1:maj |
   s8 g4. s8 a4 d8 |
   s1 |
-}
-
-changes = \chords {
-  \intro
-  \verse
-  \outro
 }

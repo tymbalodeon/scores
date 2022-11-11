@@ -11,14 +11,13 @@
   composer = "Wilco"
 }
 
-melody = \new Staff {
-  <<
-    \melody
-    \structure
-  >>
+\paper {
+  score-system-spacing.basic-distance = #18
 }
 
 \layout {
+  indent = #0
+  ragged-last = ##f
   \context {
     \Score
     \consists #(set-bars-per-line '(4))
@@ -28,7 +27,42 @@ melody = \new Staff {
 \score {
   <<
     \numericTimeSignature
-    \changes
-    \melody
+    \changes_vamp
+    \structure_vamp
   >>
+}
+
+\score {
+  <<
+    \numericTimeSignature
+    \changes_verse
+    \new Staff {
+      <<
+        \melody_verse
+        \structure_verse
+      >>
+    }
+  >>
+}
+
+\score {
+  <<
+    \numericTimeSignature
+    \changes_outro
+    \structure_outro
+  >>
+}
+
+\markup \fill-line {
+  \column
+  \override #'(padding . 5)
+  \table #'(1 -1 -1)
+  {
+    \bold Vamp \italic "x 4" ""
+    \bold Verse \italic "x 2" ""
+    \bold Vamp \italic "x 4" ""
+    \bold Verse \italic "x 1" "instrumental until m. 9"
+    \bold Vamp \italic "x 4" ""
+    \bold Outro \italic "x 1" ""
+  }
 }
