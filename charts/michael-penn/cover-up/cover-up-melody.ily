@@ -1,1 +1,1 @@
-melody = \relative c' { }
+melody_intro = \relative c' { }
