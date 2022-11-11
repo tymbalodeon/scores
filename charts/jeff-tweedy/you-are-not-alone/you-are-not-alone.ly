@@ -52,12 +52,32 @@
   >>
 }
 
+\score {
+  \layout {
+    \context {
+      \Score
+      \consists #(set-bars-per-line '(4 5 4 4))
+    }
+  }
+  <<
+    \numericTimeSignature
+    \changes_end
+    \new Staff {
+      <<
+        \melody_end
+        \structure_end
+      >>
+    }
+  >>
+}
+
 \markup \fill-line {
   \column
   \override #'(padding . 5)
   \table #'(1 -1 -1)
   {
     \bold Intro \italic "x 1" ""
-    \bold Verse \italic "x 2" ""
+    \bold Verse \italic "x 3" "3rd time: guitar solo mm. 1-9; coda to End"
+    \bold End \italic "x 1" ""
   }
 }

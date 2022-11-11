@@ -21,5 +21,5 @@ structure_end = {
   \key_and_time
   \mark \markup \box "End"
   s1 * 2 |
-  \bar "||"
+  \bar "|."
 }

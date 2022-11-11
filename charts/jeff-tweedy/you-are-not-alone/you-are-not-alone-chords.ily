@@ -24,3 +24,10 @@ changes_verse = \chords {
     g2. c4 |
     g2. b4:m |
 }
+
+changes_end = \chords {
+  g2. s16 gs8..:dim |
+  a1:m |
+  c |
+  g |
+}
