@@ -80,6 +80,7 @@ compile *scores:
         exit
     fi
     pdfs_directory=./pdfs
+    mkdir -p "${pdfs_directory}"
     for file in "${files[@]}"; do
         without_extension="${file:r}"
         pdf_file="${pdfs_directory}"/"${without_extension:t}".pdf
