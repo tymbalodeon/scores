@@ -76,6 +76,14 @@ _get_files extension *scores:
     fi
     printf "%s" "${files[*]}"
 
+
+_run_lilypond_and_copy_to_output ly_file pdf_file:
+    #!/usr/bin/env zsh
+    lilypond -o {{pdfs_directory}} {{ly_file}}
+    if [ -n "${OUTPUT_DIRECTORY}" ]; then
+        cp -r {{pdf_file}} "${OUTPUT_DIRECTORY}"
+    fi
+
 # Create pdf(s).
 compile *scores:
     #!/usr/bin/env zsh
@@ -88,10 +96,7 @@ compile *scores:
         without_extension="${file:r}"
         pdf_file={{pdfs_directory}}/"${without_extension:t}".pdf
         checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
-        lilypond -o {{pdfs_directory}} "${file}"
-        if [ -n "${OUTPUT_DIRECTORY}" ]; then
-            cp -r "${pdf_file}" "${OUTPUT_DIRECTORY}"
-        fi
+        just _run_lilypond_and_copy_to_output "${file}" "${pdf_file}"
     done
 
 # Open <score> in editor and pdf viewer, recompiling on file changes.
