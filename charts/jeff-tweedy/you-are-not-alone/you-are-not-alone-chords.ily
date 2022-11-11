@@ -26,7 +26,7 @@ changes_verse = \chords {
 }
 
 changes_end = \chords {
-  g2. s16 gs8..:dim |
+  g2. s16 gs8.:dim |
   a1:m |
   c |
   g |

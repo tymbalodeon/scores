@@ -53,12 +53,6 @@
 }
 
 \score {
-  \layout {
-    \context {
-      \Score
-      \consists #(set-bars-per-line '(4 5 4 4))
-    }
-  }
   <<
     \numericTimeSignature
     \changes_end
