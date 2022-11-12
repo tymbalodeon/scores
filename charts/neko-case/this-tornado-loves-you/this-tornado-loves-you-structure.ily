@@ -81,17 +81,48 @@ structure = {
   \bar "|."
 }
 
-structure_one = {
+structure_a = {
+  \repeat volta 2 {
+    s1 * 4 |
+  }
   s1 * 4 |
   \bar "||"
 }
 
-structure_three = {
+structure_b = {
   s1 * 3 |
   \bar "||"
 }
 
-structure_five = {
+structure_c = {
+  s1 * 10 |
+  \bar "||"
+}
+
+structure_d = {
+  \repeat volta 2 {
+    s1 * 4 |
+  }
+
+  s1 * 4 |
+  \repeat volta 2 {
+    s1 * 4 |
+  }
+
   s1 * 6 |
+  \bar "||"
+}
+
+structure_e = {
+  s1 * 4 |
+  \bar "||"
+}
+
+structure_f = {
+  \structure_e
+}
+
+structure_g = {
+  s1 * 9 |
   \bar "||"
 }

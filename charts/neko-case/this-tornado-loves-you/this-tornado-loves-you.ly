@@ -74,11 +74,11 @@ form_layout = \layout {
     \form_layout
     <<
       \numericTimeSignature
-      \changes_one
+      \changes_a
       \new Staff \with {
         instrumentName = \markup \box \bold "A"
       } {
-        \structure_one
+        \structure_a
       }
     >>
   }
@@ -87,11 +87,11 @@ form_layout = \layout {
     \form_layout
     <<
       \numericTimeSignature
-      \changes_two
+      \changes_b
       \new Staff \with {
         instrumentName = \markup \box \bold "B"
       } {
-        \structure_one
+        \structure_b
       }
     >>
   }
@@ -100,11 +100,11 @@ form_layout = \layout {
     \form_layout
     <<
       \numericTimeSignature
-      \changes_three
+      \changes_c
       \new Staff \with {
         instrumentName = \markup \box \bold "C"
       } {
-        \structure_three
+        \structure_c
       }
     >>
   }
@@ -113,11 +113,11 @@ form_layout = \layout {
     \form_layout
     <<
       \numericTimeSignature
-      \changes_four
+      \changes_d
       \new Staff \with {
         instrumentName = \markup \box \bold "D"
       } {
-        \structure_one
+        \structure_d
       }
     >>
   }
@@ -126,11 +126,11 @@ form_layout = \layout {
     \form_layout
     <<
       \numericTimeSignature
-      \changes_five
+      \changes_e
       \new Staff \with {
         instrumentName = \markup \box \bold "E"
       } {
-        \structure_five
+        \structure_e
       }
     >>
   }
@@ -139,11 +139,11 @@ form_layout = \layout {
     \form_layout
     <<
       \numericTimeSignature
-      \changes_six
+      \changes_f
       \new Staff \with {
         instrumentName = \markup \box \bold "F"
       } {
-        \structure_one
+        \structure_f
       }
     >>
   }
@@ -152,63 +152,11 @@ form_layout = \layout {
     \form_layout
     <<
       \numericTimeSignature
-      \changes_seven
+      \changes_g
       \new Staff \with {
         instrumentName = \markup \box \bold "G"
       } {
-        \structure_one
-      }
-    >>
-  }
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_eight
-      \new Staff \with {
-        instrumentName = \markup \box \bold "H"
-      } {
-        \structure_one
-      }
-    >>
-  }
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_nine
-      \new Staff \with {
-        instrumentName = \markup \box \bold "I"
-      } {
-        \structure_five
-      }
-    >>
-  }
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_ten
-      \new Staff \with {
-        instrumentName = \markup \box \bold "J"
-      } {
-        \structure_one
-      }
-    >>
-  }
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_eleven
-      \new Staff \with {
-        instrumentName = \markup \box \bold "K"
-      } {
-        \structure_one
+        \structure_g
       }
     >>
   }
@@ -220,8 +168,17 @@ form_layout = \layout {
     \override #'(padding . 5)
     \table #'(1 -1 -1)
     {
-      \bold Verse \italic "" ""
-      \bold Chorus \italic "" ""
+      \bold A \italic "" "vocals enter on repeat"
+      \bold B \italic "" ""
+      \bold C \italic "" ""
+      \bold B \italic "" "with inversion"
+      \bold D \italic "" "2 repeats second group"
+      \bold E \italic "" ""
+      \bold F \italic "" ""
+      \bold E \italic "" ""
+      \bold A \italic "" "no repeats"
+      \bold G \italic "" ""
+      \bold E \italic "x 4" "3,4 with D pedal"
     }
   }
 }

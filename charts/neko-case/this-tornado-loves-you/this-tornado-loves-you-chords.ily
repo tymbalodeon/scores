@@ -150,34 +150,28 @@ changes = \chords {
   \tornado
 }
 
-changes_one = \chords {
+changes_a = \chords {
   g1:maj |
   s1 |
   b:m |
   g1:maj |
-}
-
-changes_two = \chords {
-  g1:maj |
+  s |
   bf |
   d |
   s |
 }
 
-changes_three = \chords {
+changes_b = \chords {
   b1:m |
   fs:7 |
   \parenthesize fs:7/as
 }
 
-changes_four = \chords {
+changes_c = \chords {
   d1 |
   s |
   b:m |
   s |
-}
-
-changes_five = \chords {
   d1 |
   s |
   bf |
@@ -186,28 +180,26 @@ changes_five = \chords {
   s |
 }
 
-changes_six = \chords {
-  d1 |
-  s |
-  b:m |
-  g:m |
-}
+changes_d = \chords {
+  \repeat volta 3 {
+    d1 |
+    s |
+    b:m |
+    g:m |
+  }
 
-changes_seven = \chords {
   bf1 |
   g:maj |
   b:m |
   s |
-}
 
-changes_eight = \chords {
-  bf1 |
-  g:maj |
-  d |
-  s |
-}
+  \repeat volta 2 {
+    bf1 |
+    g:maj |
+    d |
+    s |
+  }
 
-changes_nine = \chords {
   g1:maj |
   s |
   b:m |
@@ -216,16 +208,28 @@ changes_nine = \chords {
   g:maj |
 }
 
-changes_ten = \chords {
+changes_e = \chords {
   g1:maj |
   s |
   d |
   s |
 }
 
-changes_eleven = \chords {
+changes_f = \chords {
   g1:maj |
   s |
   b:m |
+  s |
+}
+
+changes_g = \chords {
+  d1 |
+  s |
+  b:m |
+  a |
+  g:maj |
+  s |
+  b:m |
+  e:m |
   s |
 }
