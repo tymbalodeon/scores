@@ -38,3 +38,11 @@ changesCoda = \chords {
     \verseB
   }
 }
+
+changes_verse = \chords {
+  \verse
+}
+
+changes_end = \chords {
+  \verseB
+}

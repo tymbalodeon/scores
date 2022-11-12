@@ -4,37 +4,102 @@
 \include "style.ily"
 \include "long-shot-chords.ily"
 \include "long-shot-melody.ily"
+\include "long-shot-structure.ily"
 
 \header {
   title = "Long Shot"
-  composer = "Aimee Mann"
 }
 
-\score {
-  \layout {
-    \context {
-      \Score
-      \consists #(set-bars-per-line '(4))
-    }
+\layout {
+  \context {
+    \Score
+    \consists #(set-bars-per-line '(4))
   }
-  <<
-    \changes
-    {
-      \key e \major
-      \melody
-    }
-  >>
 }
 
-\score {
-  \layout {
-    ragged-last = ##f
+\book {
+  \header {
+    composer = "Aimee Mann"
   }
-  <<
-    \changesCoda
-    {
-      \key e \major
-      \melodyCoda
+
+  \score {
+    <<
+      \changes
+      {
+        \key e \major
+        \melody
+      }
+    >>
+  }
+
+  \score {
+    \layout {
+      ragged-last = ##f
     }
-  >>
+    <<
+      \changesCoda
+      {
+        \key e \major
+        \melodyCoda
+      }
+    >>
+  }
+}
+
+\book {
+  \bookOutputSuffix "form"
+
+  \header {
+    subtitle = "Aimee Mann"
+  }
+
+  \paper {
+    score-system-spacing.basic-distance = #18
+  }
+
+  \markup \vspace #1
+
+  \score {
+    <<
+      \numericTimeSignature
+      \changes_verse
+      \new Staff \with {
+        instrumentName = \markup \box "Chords"
+      } {
+        \structure_verse
+      }
+    >>
+  }
+
+  \score {
+    \layout {
+      ragged-last = ##f
+    }
+    <<
+      \numericTimeSignature
+      \changes_end
+      \new Staff \with {
+        instrumentName = \markup \box "End"
+      } {
+        \structure_end
+      }
+    >>
+  }
+
+  \markup \vspace #4
+
+  \markup \fill-line {
+    \column
+    \override #'(padding . 5)
+    \table #'(1 -1 -1)
+    {
+      \bold Intro "" ""
+      \bold Verse \italic "x 2" ""
+      \bold Chorus "" ""
+      \bold Solo "" ""
+      \bold Verse \italic "" ""
+      \bold Chorus "" ""
+      \bold End \italic "x ?" ""
+    }
+  }
 }
