@@ -21,7 +21,7 @@ structure_verse = {
   \bar "||"
 }
 
-structure_verse = {
+structure_chorus = {
   \key_and_time
   \chorus
   \bar "||"
