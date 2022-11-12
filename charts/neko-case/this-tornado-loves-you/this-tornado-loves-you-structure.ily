@@ -1,3 +1,7 @@
+\key_signature = {
+  \key d \major
+}
+
 base = {
   s1 * 4 |
 }
@@ -75,4 +79,19 @@ structure = {
   \outro
 
   \bar "|."
+}
+
+structure_one = {
+  s1 * 4 |
+  \bar "||"
+}
+
+structure_three = {
+  s1 * 3 |
+  \bar "||"
+}
+
+structure_five = {
+  s1 * 6 |
+  \bar "||"
 }

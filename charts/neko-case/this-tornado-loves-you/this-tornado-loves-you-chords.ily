@@ -149,3 +149,83 @@ changes = \chords {
   \part_five
   \tornado
 }
+
+changes_one = \chords {
+  g1:maj |
+  s1 |
+  b:m |
+  g1:maj |
+}
+
+changes_two = \chords {
+  g1:maj |
+  bf |
+  d |
+  s |
+}
+
+changes_three = \chords {
+  b1:m |
+  fs:7 |
+  \parenthesize fs:7/as
+}
+
+changes_four = \chords {
+  d1 |
+  s |
+  b:m |
+  s |
+}
+
+changes_five = \chords {
+  d1 |
+  s |
+  bf |
+  g:maj |
+  d |
+  s |
+}
+
+changes_six = \chords {
+  d1 |
+  s |
+  b:m |
+  g:m |
+}
+
+changes_seven = \chords {
+  bf1 |
+  g:maj |
+  b:m |
+  s |
+}
+
+changes_eight = \chords {
+  bf1 |
+  g:maj |
+  d |
+  s |
+}
+
+changes_nine = \chords {
+  g1:maj |
+  s |
+  b:m |
+  s |
+  e:m |
+  g:maj |
+}
+
+changes_ten = \chords {
+  g1:maj |
+  s |
+  d |
+  s |
+}
+
+changes_eleven = \chords {
+  g1:maj |
+  s |
+  b:m |
+  s |
+}

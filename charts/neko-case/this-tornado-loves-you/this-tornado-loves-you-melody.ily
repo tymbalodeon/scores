@@ -1,5 +1,3 @@
-% \include "this-tornado-loves-you-backing.ily"
-
 guitar_strum = \relative c' \new CueVoice {
   \repeat percent 4 {
     \repeat unfold 4 {
@@ -50,13 +48,8 @@ part_one = \relative c'' {
   \part_one_base
 
   a8 a4. |
-  <<
-    \part_one_backing
-    {
-      fs'1( |
-      e) |
-    }
-  >>
+  fs'1( |
+  e) |
 }
 
 part_two = \relative c'' {
@@ -68,24 +61,15 @@ part_two = \relative c'' {
 
   d'8 d4 d8~ d fs4 g8~( |
   g fs) fs8 g~ g fs4 fs8 |
-  <<
-    \stop_it_backing
-    {
-      e d r e d4 r4 |
-      e8 d r e d4 r8 fs~ |
-    }
-  >>
+  e d r e d4 r4 |
+  e8 d r e d4 r8 fs~ |
 
   fs fs4 fs8( e8) d4. |
   r2 d8 d4. |
 
-  <<
-    \part_one_backing
-    {
-      b1( |
-      as) |
-    }
-  >>
+  b1( |
+  as) |
+}
 }
 
 part_three = {
