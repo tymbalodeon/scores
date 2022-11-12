@@ -87,7 +87,7 @@ _run_lilypond_and_copy_to_output ly_file pdf_file:
     #!/usr/bin/env zsh
     lilypond -o {{pdfs_directory}} {{ly_file}}
     if [ -n "${OUTPUT_DIRECTORY}" ]; then
-        pdf_files=$(just _get_pdf_files {{ly_file}})
+        IFS=" " read -r -A pdf_files <<<"$(just _get_pdf_files "${ly_file}")"
         for file in "${pdf_files[@]}"; do
             cp -r "${file}" "${OUTPUT_DIRECTORY}"
         done
