@@ -32,7 +32,10 @@
     \new Staff \with {
       instrumentName = \markup \box "Intro"
     } {
-      \structure_intro
+      <<
+        \melody_intro
+        \structure_intro
+      >>
     }
   >>
 }
@@ -44,7 +47,10 @@
     \new Staff \with {
       instrumentName = \markup \box "Verse"
     } {
-      \structure_verse
+      <<
+        \melody_verse
+        \structure_verse
+      >>
     }
   >>
 }
@@ -56,7 +62,10 @@
     \new Staff \with {
       instrumentName = \markup \box "Chorus"
     } {
-      \structure_chorus
+      <<
+        \melody_chorus
+        \structure_chorus
+      >>
     }
   >>
 }

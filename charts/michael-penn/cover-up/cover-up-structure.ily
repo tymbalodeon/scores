@@ -19,6 +19,7 @@ structure_intro = {
 
 structure_verse = {
   \base
+  \parenthesize \time 4/4
   s1 * 2 |
   \bar "||"
 }
