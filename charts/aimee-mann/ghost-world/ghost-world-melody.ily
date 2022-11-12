@@ -1,4 +1,4 @@
-intro = \new Voice \with {
+hits = \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
   \voiceTwo
@@ -84,7 +84,7 @@ bridge = \relative c'' {
 }
 
 melody = {
-  \intro
+  \hits
   \repeat volta 2 {
     \verse
     \firstChorus
@@ -124,4 +124,59 @@ melodyCoda = \relative c'' {
     }
   >>
   \bar "|."
+}
+
+melody_hits = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  fs4 fs8. fs16 r8 gs4 a8~ |
+  a1 |
+}
+
+melody_verse = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  \repeat unfold 3 {
+    e2 b |
+    s1 |
+  }
+  cs2 a |
+  e b|
+  cs a |
+  s1 |
+}
+
+melody_chorus = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  s1 * 5 |
+  fs2 a |
+  fs e
+  s1 * 3 |
+}
+
+melody_bridge = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  \repeat unfold 2 {
+    a2 e |
+    s1 |
+  }
+  fs2 e |
+  s
+}
+
+melody_coda = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  a2 e |
+  s1 * 6 |
+  fs2 a |
+  a2 e 2 |
+  s1 |
 }

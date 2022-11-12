@@ -1,4 +1,4 @@
-intro = \chordmode {
+hits = \chordmode {
   fs2:m s8 gs4:m a8 | s1 |
 }
 
@@ -30,11 +30,11 @@ bridge = \chordmode {
   \time 2/4
   b2 |
   \time 4/4
-  \intro
+  \hits
 }
 
 changes = \chords {
-  \intro
+  \hits
   \repeat volta 2 {
     \verse
     \bar "||"
@@ -53,7 +53,7 @@ changes = \chords {
   \bar "||"
 }
 
-changesCoda = \chords {
+changes_coda = \chords {
   a2 e | b1 |
   s1 | fs:m |
   b1 | fs:m |
@@ -65,5 +65,48 @@ changesCoda = \chords {
       \volta 3 { b1 | }
     }
   }
-  \intro
+  \hits
+}
+
+changes_hits = \chords {
+  \hits
+}
+
+changes_verse = \chords {
+  \verse
+}
+
+changes_chorus = \chords {
+  \chorus
+  \alternative {
+    \volta 1 {
+      b1 |
+      \chorusFirstEnding
+    } \volta 2 {
+      b1 |
+    }
+  }
+}
+
+changes_bridge = \chords {
+  \repeat unfold 2 {
+    a2 e | b1 |
+  }
+  fs2:m e |
+  b2 |
+
+}
+
+form_changes_coda = \chords {
+  a2 e | b1 |
+  s1 | fs:m |
+  b1 | fs:m |
+  b | fs2:m a
+  \repeat volta 3 {
+    \parenthesize a2 e |
+    \alternative {
+      \volta 1,2 { b1 | }
+      \volta 3 { b1 | }
+    }
+  }
 }
