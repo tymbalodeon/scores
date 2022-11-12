@@ -1,6 +1,7 @@
 \version "2.23.80"
 
 \include "settings.ily"
+\include "style.ily"
 \include "simulation-swarm-chords.ily"
 \include "simulation-swarm-melody.ily"
 \include "simulation-swarm-structure.ily"
