@@ -69,7 +69,7 @@ form_layout = \layout {
       \new Staff \with {
         instrumentName = \markup \box "Verse"
       } {
-      \structure_verse
+        \structure_verse
       }
     >>
   }
@@ -82,7 +82,7 @@ form_layout = \layout {
       \new Staff \with {
         instrumentName = \markup \box "Chorus"
       } {
-      \structure_chorus
+        \structure_chorus
       }
     >>
   }
