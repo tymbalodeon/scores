@@ -102,11 +102,7 @@ form_changes_coda = \chords {
   s1 | fs:m |
   b1 | fs:m |
   b | fs2:m a
-  \repeat volta 3 {
-    \parenthesize a2 e |
-    \alternative {
-      \volta 1,2 { b1 | }
-      \volta 3 { b1 | }
-    }
-  }
+  \parenthesize a2 e |
+  b1
+}
 }

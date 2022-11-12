@@ -152,8 +152,8 @@ form_layout = \layout {
       \bold Bridge ""
       \bold Hits "mm. 1-4 no rhythm"
       \bold Verse ""
-      \bold Chorus ""
-      \bold Coda ""
+      \bold Chorus "al Coda"
+      \bold Coda "3 repeats"
       \bold Hits ""
     }
   }
