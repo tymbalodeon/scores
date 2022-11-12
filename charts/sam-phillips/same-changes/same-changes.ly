@@ -8,7 +8,7 @@
 
 \header {
   title = "Same Changes"
-  composer = "Sam Phillips"
+  subtitle = "Sam Phillips"
 }
 
 melody = \new Staff {
@@ -36,21 +36,28 @@ melody = \new Staff {
 }
 
 form_layout = \layout {
-  indent = #0
   ragged-last = ##f
 }
 
 \book {
   \bookOutputSuffix "form"
+
   \paper {
     score-system-spacing.basic-distance = #18
   }
+
+  \markup \vspace #2
+
   \score {
     \form_layout
     <<
       \numericTimeSignature
       \changes_intro
-      \structure_intro
+      \new Staff \with {
+        instrumentName = \markup \box "Vamp"
+      } {
+        \structure_intro
+      }
     >>
   }
 
@@ -59,7 +66,11 @@ form_layout = \layout {
     <<
       \numericTimeSignature
       \changes_verse
+      \new Staff \with {
+        instrumentName = \markup \box "Verse"
+      } {
       \structure_verse
+      }
     >>
   }
 
@@ -68,9 +79,15 @@ form_layout = \layout {
     <<
       \numericTimeSignature
       \changes_chorus
+      \new Staff \with {
+        instrumentName = \markup \box "Chorus"
+      } {
       \structure_chorus
+      }
     >>
   }
+
+  \markup \vspace #4
 
   \markup \fill-line {
     \column

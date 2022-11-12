@@ -19,7 +19,6 @@ intro = {
 }
 
 verse = {
-  \mark \markup \box "Verse"
   s1 * 16 |
 }
 
@@ -43,7 +42,6 @@ structure = {
 
 structure_intro = {
   \key_and_time
-  \mark \markup \box "Vamp"
   \intro_base
   \bar "||"
 }
@@ -56,7 +54,6 @@ structure_verse = {
 
 structure_chorus = {
   \key_and_time
-  \mark \markup \box "Chorus"
   \chorus_base
   \bar "||"
 }
