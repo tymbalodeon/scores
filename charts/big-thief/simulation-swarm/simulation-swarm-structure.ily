@@ -10,11 +10,17 @@ structure_verse = {
 
 structure_chorus = {
   \key_signature
-  s1 * 9 |
+  s1 * 6 |
+  \repeat volta 2 {
+    s1 * 2 |
+  }
+  s1 |
   \time 2/4
   s2 |
   \time 4/4
-  s1 * 2 |
+  s1 |
+  \codaMark \default
+  s1 |
   \bar "||"
 }
 

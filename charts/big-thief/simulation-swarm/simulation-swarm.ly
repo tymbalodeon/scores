@@ -105,10 +105,18 @@ form_layout = \layout {
   \markup \fill-line {
     \column
     \override #'(padding . 5)
-    \table #'(1 -1)
+    \table #'(1 -1 -1)
     {
-      \bold Verse ""
-      \bold Chorus ""
+      \bold Verse \italic "x 4" "instrumental"
+      \bold Verse \italic "x 4" ""
+      \bold Verse \italic "x 2" "interlude"
+      \bold Verse \italic "x 8" ""
+      \bold Chorus \italic "" "no repeats"
+      \bold Verse \italic "x 6" ""
+      \bold Solo \italic "x 4" ""
+      \bold Verse \italic "x 6" ""
+      \bold Chorus \italic "" "2 repeats; al Coda"
+      \bold Solo \italic "x 8" ""
     }
   }
 }
