@@ -105,4 +105,3 @@ form_changes_coda = \chords {
   \parenthesize a2 e |
   b1
 }
-}
