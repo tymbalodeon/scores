@@ -24,7 +24,7 @@
 }
 
 
-\markup \vspace #2
+\markup \vspace #1
 
 \score {
   <<
@@ -71,7 +71,7 @@
   >>
 }
 
-\markup \vspace #4
+\markup \vspace #2
 
 \markup \fill-line {
   \column

@@ -53,7 +53,7 @@ form_layout = \layout {
     score-system-spacing.basic-distance = #18
   }
 
-  \markup \vspace #2
+  \markup \vspace #1
 
   \score {
     \form_layout
@@ -100,7 +100,7 @@ form_layout = \layout {
     >>
   }
 
-  \markup \vspace #4
+  \markup \vspace #2
 
   \markup \fill-line {
     \column

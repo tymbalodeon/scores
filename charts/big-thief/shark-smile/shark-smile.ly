@@ -110,7 +110,7 @@ form_layout = \layout {
     >>
   }
 
-  \markup \vspace #2
+  \markup \vspace #1
 
   \markup \fill-line {
     \column
