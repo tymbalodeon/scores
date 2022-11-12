@@ -12,14 +12,14 @@ melody_chorus = \new Voice \with {
 } {
   \improvisationOn
   \repeat volta 2 {
-    c2 c4 |
-    c1 |
+    a2 f4 |
+    s1 |
   }
-  c4 c2 |
-  c1 |
-  c4 c c c c |
-  c8 c~ c2. |
-  c2 c |
+  bf4 af2 |
+  s1 |
+  a4 f a f a |
+  g8 g~ g2. |
+  g2 g |
 }
 
 melody_solo = \melody_verse
