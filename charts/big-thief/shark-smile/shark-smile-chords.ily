@@ -77,3 +77,31 @@ changes = \chords {
   \finalVerse
   \chorus
 }
+
+changes_intro = \chords {
+  d1 |
+}
+
+changes_verse = \chords {
+  \verseA
+  \instrumentalVerseB
+  fs:m/cs|
+  e:11 |
+  d |
+}
+
+changes_chorus = \chords {
+  a1 | e | b:min | d |
+}
+
+changes_bridge = \chords {
+  d1 |
+  s |
+  e2
+  \repeat unfold 2 {
+    d1 |
+    s2 e |
+  }
+  d1 |
+  s |
+}

@@ -82,3 +82,25 @@ melody = \relative c'' {
   \time 4/4 s1 * 6 |
   \chorusMelody
 }
+
+melody_verse = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  s1 * 3 |
+  a2 a |
+  s1 * 4 |
+}
+
+melody_bridge = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  s1 * 2 |
+  s2 |
+  s1 |
+  \repeat unfold 2 {
+    d2 e |
+    s1 |
+  }
+}
