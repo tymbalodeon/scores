@@ -53,7 +53,7 @@ form_layout = \layout {
     score-system-spacing.basic-distance = #18
   }
 
-  \markup \vspace #1
+  \markup \vspace #2
 
   \score {
     \form_layout

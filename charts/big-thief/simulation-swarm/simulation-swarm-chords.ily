@@ -35,7 +35,6 @@ chorusA = \chordmode {
 }
 
 chorus = \chordmode {
-  \sectionLabel "Chorus"
   \repeat unfold 2 { \chorusA }
   ef:m af | df gf |
   \chorusA
@@ -48,7 +47,7 @@ chorus = \chordmode {
 
 solo = \chordmode {
   \repeat volta 4 {
-    df1 | bf:m | gf | ef |
+    df1 | bf:m | gf | ef:m |
   }
 }
 
@@ -62,4 +61,16 @@ changes = \chords {
   \chorus
   \codaMark \default
   \solo
+}
+
+changes_verse = \chords {
+  \verse |
+}
+
+changes_chorus = \chords {
+  \chorus |
+}
+
+changes_solo = \chords {
+  \solo |
 }

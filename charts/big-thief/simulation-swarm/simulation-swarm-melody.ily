@@ -64,3 +64,30 @@ melody = {
   \preChorusVerse
   \chorus
 }
+
+melody_verse = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  df2 gf |
+  af gf |
+}
+
+melody_chorus = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  \repeat unfold 2 {
+    df2 bf |
+    af gf |
+  }
+  ef af |
+  df gf |
+  df bf |
+  af gf |
+  df bf |
+  s |
+  \repeat unfold 2 {
+    s1 |
+  }
+}
