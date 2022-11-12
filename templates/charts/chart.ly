@@ -8,7 +8,7 @@
 
 \header {
   title = "Title"
-  composer = "Composer"
+  subtitle = "Composer"
 }
 
 melody = \new Staff {
