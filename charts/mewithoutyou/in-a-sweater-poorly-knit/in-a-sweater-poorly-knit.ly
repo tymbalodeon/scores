@@ -12,6 +12,7 @@
 }
 
 \layout {
+  ragged-last = ##f
   \context {
     \Score
     \consists #(set-bars-per-line '(4))
@@ -59,7 +60,11 @@
   \override #'(padding . 5)
   \table #'(1 -1 -1)
   {
-    \bold Verse \italic "" ""
+    \bold Verse \italic "x 4" ""
     \bold Chorus \italic "" ""
+    \bold Verse \italic "x 4" ""
+    \bold Chorus \italic "x 2" ""
+    \bold Verse \italic "x 4" ""
+    \bold Chorus \italic "x 4" ""
   }
 }

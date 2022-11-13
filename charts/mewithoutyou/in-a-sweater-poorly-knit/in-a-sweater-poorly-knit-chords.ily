@@ -6,6 +6,11 @@ verse = \chordmode {
 }
 
 chorus = \chordmode {
+  \repeat unfold 3 {
+    a1 |
+    cs:m |
+  }
+  e |
 }
 
 changes_verse = \chords {

@@ -6,28 +6,17 @@ base = {
   s1 * 4 |
 }
 
-verse = {
-  \base
-}
-
-chorus = {
-  \base
-}
-
 structure_verse = {
   \key_and_time
-  \verse
-  \bar "||"
+  \repeat volta 2 {
+    \base
+  }
 }
 
 structure_chorus = {
   \key_and_time
-  \chorus
+  \repeat unfold 2 {
+    \base
+  }
   \bar "||"
-}
-
-structure = {
-  \key_and_time
-  \verse
-  \chorus
 }
