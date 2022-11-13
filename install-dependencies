@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 dependencies=(
+    "brew"
     "lilypond"
     "just"
     "cargo"
