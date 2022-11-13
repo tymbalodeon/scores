@@ -8,7 +8,6 @@
 
 \header {
   title = "Title"
-  subtitle = "Composer"
 }
 
 melody = \new Staff {
@@ -26,6 +25,10 @@ melody = \new Staff {
 }
 
 \book {
+  \header {
+    composer = "Composer"
+  }
+
   \score {
     <<
       \numericTimeSignature
@@ -42,19 +45,25 @@ form_layout = \layout {
 \book {
   \bookOutputSuffix "form"
 
+  \header {
+    subtitle = "Composer"
+  }
+
   \paper {
     score-system-spacing.basic-distance = #18
   }
+
+  \markup \vspace #1
 
   \score {
     \form_layout
     <<
       \numericTimeSignature
+      \changes_verse
       \new Staff \with {
         instrumentName = \markup \box "Verse"
       } {
         <<
-          \changes_verse
           \structure_verse
         >>
       }
@@ -65,24 +74,26 @@ form_layout = \layout {
     \form_layout
     <<
       \numericTimeSignature
+      \changes_chorus
       \new Staff \with {
         instrumentName = \markup \box "Chorus"
       } {
         <<
-          \changes_chorus
           \structure_chorus
         >>
       }
     >>
   }
 
+  \markup \vspace #2
+
   \markup \fill-line {
     \column
     \override #'(padding . 5)
     \table #'(1 -1 -1)
     {
-      \bold Verse \italic "x 1" ""
-      \bold Chorus \italic "x 1" ""
+      \bold Verse \italic "" ""
+      \bold Chorus \italic "" ""
     }
   }
 }
