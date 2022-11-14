@@ -8,7 +8,7 @@
 
 \header {
   title = "In A Sweater Poorly Knit"
-  subtitle = "Mewithoutyou"
+  subtitle = "mewithoutYou"
 }
 
 \layout {
