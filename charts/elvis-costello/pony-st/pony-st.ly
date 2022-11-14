@@ -33,6 +33,7 @@
       instrumentName = \markup \box "Verse"
     } {
       <<
+        \melody_verse
         \structure_verse
       >>
     }

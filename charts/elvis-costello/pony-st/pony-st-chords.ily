@@ -1,4 +1,4 @@
-verse = \chordmode {
+changes_verse = \chords {
   g1 |
   s |
   s |
@@ -19,19 +19,26 @@ verse = \chordmode {
   s |
 }
 
-chorus = \chordmode {
-  c1  |
-}
-
-changes_verse = \chords {
-  \verse
-}
-
 changes_chorus = \chords {
-  \chorus
-}
+  d1 |
+  s |
 
-changes = \chords {
-  \verse
-  \chorus
+  e:m |
+
+  e:m |
+  s |
+
+  e:m |
+
+  g1 |
+  s |
+  s |
+  c |
+
+  a:m |
+  s |
+  a |
+  s |
+
+  c2 d |
 }
