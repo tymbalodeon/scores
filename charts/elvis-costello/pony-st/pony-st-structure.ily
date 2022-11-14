@@ -26,9 +26,15 @@ structure_chorus = {
   \repeat volta 4 {
     s1 * 2 |
     \alternative {
-      \volta 1,2 { s1 | }
-      \volta 3 { s1 * 2 | }
-      \volta 4 { s1 | }
+      \volta 1,2 {
+        s1 |
+      }
+      \volta 3 {
+        s1 * 2 |
+      }
+      \volta 4 {
+        s1 |
+      }
     }
   }
   s1 * 16 |
