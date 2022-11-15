@@ -129,6 +129,6 @@
     \bold Pre-Chorus \italic "" ""
     \bold Chorus \italic "" ""
     \bold Coda \italic "" ""
-    \bold Vamp \italic "" ""
+    \bold Vamp \italic "x ?" ""
   }
 }
