@@ -30,11 +30,18 @@ melody_verse = \relative c' \new Voice \with {
   e1 |
 }
 
+melody_pre_chorus = \relative c' \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  s1 * 8
+  d2 g |
+}
+
 melody_chorus = \relative c' \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
   \improvisationOn
-  d2 g |
   c2 r8 g4. |
   c2 g |
   s1 * 2 |

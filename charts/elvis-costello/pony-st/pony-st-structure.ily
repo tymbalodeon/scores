@@ -2,6 +2,12 @@ key_and_time = {
   \key c \major
 }
 
+structure_vamp = {
+  \key c \major
+  s1 |
+  \bar "||"
+}
+
 structure_intro = {
   \key_and_time
   \repeat volta 2 {
@@ -40,12 +46,20 @@ structure_verse = {
 
 structure_pre_chorus = {
   \key_and_time
-  s1 * 8 |
+  s1 * 9 |
   \bar "||"
 }
 
 structure_chorus = {
   \key_and_time
-  s1 * 14 |
+  s1 * 11 |
+  \codaMark \default
+  s1 * 2 |
+  \bar "||"
+}
+
+structure_coda = {
+  \key_and_time
+  s1 * 10|
   \bar "||"
 }

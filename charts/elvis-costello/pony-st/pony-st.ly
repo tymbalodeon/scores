@@ -28,6 +28,20 @@
 \score {
   <<
     \numericTimeSignature
+    \changes_vamp
+    \new Staff \with {
+      instrumentName = \markup \box "Vamp"
+    } {
+      <<
+        \structure_vamp
+      >>
+    }
+  >>
+}
+
+\score {
+  <<
+    \numericTimeSignature
     \changes_intro
     \new Staff \with {
       instrumentName = \markup \box "Intro"
@@ -63,6 +77,7 @@
       instrumentName = \markup \box "Pre-Chorus"
     } {
       <<
+        \melody_pre_chorus
         \structure_pre_chorus
       >>
     }
@@ -84,6 +99,20 @@
   >>
 }
 
+\score {
+  <<
+    \numericTimeSignature
+    \changes_coda
+    \new Staff \with {
+      instrumentName = \markup \box "Coda"
+    } {
+      <<
+        \structure_coda
+      >>
+    }
+  >>
+}
+
 \markup \vspace #2
 
 \markup \fill-line {
@@ -91,6 +120,7 @@
   \override #'(padding . 5)
   \table #'(1 -1 -1)
   {
+    \bold Vamp \italic "x 5" ""
     \bold Intro \italic "" ""
     \bold Verse \italic "" ""
     \bold Pre-Chorus \italic "" ""
@@ -98,5 +128,7 @@
     \bold Verse \italic "" "first repeat only"
     \bold Pre-Chorus \italic "" ""
     \bold Chorus \italic "" ""
+    \bold Coda \italic "" ""
+    \bold Vamp \italic "" ""
   }
 }

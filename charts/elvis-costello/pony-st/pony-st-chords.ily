@@ -1,3 +1,7 @@
+changes_vamp = \chords {
+  d1 |
+}
+
 changes_intro = \chords {
   g1 |
   s |
@@ -45,10 +49,11 @@ changes_pre_chorus = \chords {
   s |
   a |
   s |
+
+  d2 g  |
 }
 
 changes_chorus = \chords {
-  d2 g  |
   c2 s8 g4. |
   c2 g |
   s1 |
@@ -64,4 +69,13 @@ changes_chorus = \chords {
   s |
   c4. g8 s2 |
 
+}
+
+changes_coda = \chords {
+  a1 |
+  s |
+  d |
+  \repeat unfold 7 {
+    s |
+  }
 }
