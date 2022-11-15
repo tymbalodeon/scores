@@ -48,6 +48,7 @@
       instrumentName = \markup \box "Chorus"
     } {
       <<
+        \melody_chorus
         \structure_chorus
       >>
     }

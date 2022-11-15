@@ -20,15 +20,17 @@ changes_verse = \chords {
 }
 
 changes_chorus = \chords {
-  d1 |
-  s |
+  d2 s8 a4 d8 |
+  s2 s8 g4 e8:m |
+  s1 |
 
-  e:m |
+  d2 s8 a4 d8 |
+  s2 s8 g4 e8:m |
+  s1 * 2 |
 
-  e:m |
-  s |
-
-  e:m |
+  d2 s8 a4 d8 |
+  s2 s8 g4 e8:m |
+  s1 |
 
   g1 |
   s |
@@ -40,5 +42,20 @@ changes_chorus = \chords {
   a |
   s |
 
-  c2 d |
+  d2 g  |
+  c2 s8 g4. |
+  c2 g |
+  s1 |
+  d |
+
+  c2 s8 g4. |
+  c2 g |
+  s1 |
+  d2 |
+  c2 |
+  s1 |
+  a:m |
+  s |
+  c4. g8 s2 |
+
 }
