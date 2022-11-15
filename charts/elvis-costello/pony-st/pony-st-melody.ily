@@ -1,4 +1,4 @@
-melody_verse = \relative c' \new Voice \with {
+melody_intro = \relative c' \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
   \improvisationOn
@@ -12,7 +12,7 @@ melody_verse = \relative c' \new Voice \with {
   s1 |
 }
 
-melody_chorus = \relative c' \new Voice \with {
+melody_verse = \relative c' \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
   \improvisationOn
@@ -28,8 +28,12 @@ melody_chorus = \relative c' \new Voice \with {
   d2 r8 a4 d8~ |
   d2 r8 g4 e8~ |
   e1 |
+}
 
-  s1 * 8 |
+melody_chorus = \relative c' \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
   d2 g |
   c2 r8 g4. |
   c2 g |

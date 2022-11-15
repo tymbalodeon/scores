@@ -1,4 +1,4 @@
-changes_verse = \chords {
+changes_intro = \chords {
   g1 |
   s |
   s |
@@ -19,13 +19,13 @@ changes_verse = \chords {
   s |
 }
 
-changes_chorus = \chords {
+changes_verse = \chords {
   d2 s8 a4 d8 |
   s2 s8 g4 e8:m |
   s1 |
 
-  d4. a8 s4 d |
-  s2 g4 s |
+  d4. a8 s4 s |
+  s8 d4. g4 s |
   e1:m |
   s |
 
@@ -33,6 +33,9 @@ changes_chorus = \chords {
   s2 s8 g4 e8:m |
   s1 |
 
+}
+
+changes_pre_chorus = \chords {
   g1 |
   s |
   s |
@@ -42,7 +45,9 @@ changes_chorus = \chords {
   s |
   a |
   s |
+}
 
+changes_chorus = \chords {
   d2 g  |
   c2 s8 g4. |
   c2 g |
