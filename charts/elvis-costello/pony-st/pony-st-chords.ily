@@ -62,8 +62,7 @@ changes_chorus = \chords {
   c2 s8 g4. |
   c2 g |
   s1 |
-  d2 |
-  c2 |
+  d2 c |
   s1 |
   a:m |
   s |

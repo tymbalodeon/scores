@@ -1,4 +1,4 @@
-\key_signature = {
+key_signature = {
   \key df \major
 }
 

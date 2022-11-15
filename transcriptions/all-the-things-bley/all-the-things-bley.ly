@@ -1,3 +1,4 @@
+\version "2.23.80"
 \include "settings.ily"
 \include "style.ily"
 
@@ -18,7 +19,7 @@ aOne = \relative c' {
   \tuplet 3/2 { df bf af } ff ef~ ef df r4 |
   a4 \tuplet 3/2 { r8 c d }
 
-  % \tuplet 3/2 { e fs gs } \tuplet 3/2 { a cs ds } |
+                                % \tuplet 3/2 { e fs gs } \tuplet 3/2 { a cs ds } |
   e16 fs8 gs16 a8 cs16 ds
 
   \tuplet 3/2 { e8 cs ds } \tuplet 3/2 { b as gs } \tuplet 3/2 { e ds cs } r4 |
