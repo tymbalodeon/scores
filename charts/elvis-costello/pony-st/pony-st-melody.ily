@@ -20,8 +20,8 @@ melody_chorus = \relative c' \new Voice \with {
   d2 r8 g4 e8~ |
   e1 |
 
-  d2 r8 a4 d8~ |
-  d2 r8 g4 e8~ |
+  d4. a8~ a4 d~ |
+  d8 d4. g4 g |
   e1 |
   s |
 
