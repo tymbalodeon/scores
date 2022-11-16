@@ -31,7 +31,7 @@ changes_verse = \chords {
   d4. a8 s4 s |
   s8 d4. g4 s |
   e1:m |
-  s |
+  \parenthesize e:m |
 
   d2 s8 a4 d8 |
   s2 s8 g4 e8:m |

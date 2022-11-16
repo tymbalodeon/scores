@@ -33,13 +33,13 @@ structure_verse = {
     s1 * 3 |
   }
   s1 * 3 |
-  \repeat volta 2 {
-    s1^\markup {
-      \italic {
-        "1st verse only"
-      }
-    } |
-  }
+  \bar "||"
+  s1_\markup {
+    \italic {
+      "1st verse only"
+    }
+  } |
+  \bar "||"
   s1 * 3 |
   \bar "||"
 }
