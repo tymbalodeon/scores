@@ -122,10 +122,10 @@
   {
     \bold Vamp \italic "x 5" ""
     \bold Intro \italic "" ""
-    \bold Verse \italic "" ""
+    \bold Verse \italic "" "extra meausre of Em"
     \bold Pre-Chorus \italic "" ""
     \bold Chorus \italic "" ""
-    \bold Verse \italic "" "first repeat only"
+    \bold Verse \italic "" "no extra measure"
     \bold Pre-Chorus \italic "" ""
     \bold Chorus \italic "" ""
     \bold Coda \italic "" ""
