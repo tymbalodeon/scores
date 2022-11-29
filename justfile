@@ -16,14 +16,26 @@ pdfs_directory := "./pdfs"
 
 _copy_template_files type composer title:
     #!/usr/bin/env zsh
-    score_directory=./{{type}}s/{{composer}}/{{title}}
+    if [ {{type}} = "piano" ]; then
+        parent_directory="scores"
+        use_template_name=false
+    else
+        parent_directory="charts"
+        use_template_name=ture
+    fi
+    score_directory=./"${parent_directory}"/{{composer}}/{{title}}
     if [ -d "${score_directory}" ]; then
         exit
     fi
     mkdir -p "${score_directory}"
-    for template in ./templates/{{type}}s/*; do
+    for template in ./templates/{{type}}*/*; do
         template_name="${template:t}"
-        new_score="${score_directory}/{{title}}-${template_name}"
+        new_score="${score_directory}/{{title}}"
+        if [ "$use_template_name" = true ]; then
+            new_score="${new_score}-${template_name}"
+        else
+            new_score="${new_score}.${template:e}"
+        fi
         if test -f "${new_score}"; then
             continue
         fi
