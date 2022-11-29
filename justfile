@@ -21,7 +21,7 @@ _copy_template_files type composer title:
         use_template_name=false
     else
         parent_directory="charts"
-        use_template_name=ture
+        use_template_name=true
     fi
     score_directory=./"${parent_directory}"/{{composer}}/{{title}}
     if [ -d "${score_directory}" ]; then
@@ -65,6 +65,8 @@ _add_new_score_values type composer title: (_copy_template_files type composer t
         for filetype in "${filetypes[@]}"; do
             just _prepend_title {{title}} "${filetype}" "${file}"
         done
+    done
+    for file in **/**{{title}}.ly(N); do
         title="$(just _convert_to_titlecase {{title}})"
         composer="$(just _convert_to_titlecase {{composer}})"
         just _add_title_and_composer "${title}" "${composer}" "${file}"
