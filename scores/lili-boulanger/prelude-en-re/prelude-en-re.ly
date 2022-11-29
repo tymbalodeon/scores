@@ -16,6 +16,9 @@ upper = \relative c' {
   \time 4/4
 
   r4 <df ef f>2 <b ef e g>4 |
+  <df ef f a> <ef f bf>2 r4 |
+  r <df ef f>2 <b ef ef g>4 |
+  <ef f a>8 c' <ef, f bf> r r4 <ef f a>8 c' |
 }
 
 lower = \relative c {
