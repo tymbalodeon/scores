@@ -33,7 +33,17 @@ upper = \relative c' {
   <a ef> <f a,> <c' ef,> <f, a,> r <ef a,> <a ef> <ef a,> |
   <bf' f> <f af,> <bf f> <f af,> r <bf ef,> <a f> <f a,> |
   <bf f> <ef, af,> r <ef af,> <bf' f> <f af,> <bf f> <ef, af,> |
-  <f ef cf gf> <ef gf,> <f cf> <ef gf,> r <ef gf,> <f cf> <ef gf,> |
+  <<
+    \new Staff \with {
+      alignAboveContext = "upper"
+      \remove "Time_signature_engraver"
+    } {
+      r8 f af4. gf8 f ef |
+    }
+    {
+      <f ef cf gf> <ef gf,> <f cf> <ef gf,> r <ef gf,> <f cf> <ef gf,> |
+    }
+  >>
 }
 
 lower = \relative c {
@@ -91,9 +101,10 @@ lower = \relative c {
 \score {
   \new PianoStaff \with {
     instrumentName = "Piano"
+  } {
+    <<
+      \new Staff = "upper" \upper
+      \new Staff = "lower" \lower
+    >>
   }
-  <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
-  >>
 }
