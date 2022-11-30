@@ -28,6 +28,12 @@ upper = \relative c' {
   <bf,, f' bf> f'' af4. gf8 <f, a df f> ef' |
   <ef, bf' ef> df' r4 r8 f,4 f8 |
   f' f,4 f8 f'8 f, <ef'  f> f, |
+  <f' gf> <ef gf, f> <f gf> <ef gf, f>4 <ef gf, f>8 <f gf> <ef gf, f> |
+
+  <a ef> <f a,> <c' ef,> <f, a,> r <ef a,> <a ef> <ef a,> |
+  <bf' f> <f af,> <bf f> <f af,> r <bf ef,> <a f> <f a,> |
+  <bf f> <ef, af,> r <ef af,> <bf' f> <f af,> <bf f> <ef, af,> |
+  <f ef cf gf> <ef gf,> <f cf> <ef gf,> r <ef gf,> <f cf> <ef gf,> |
 }
 
 lower = \relative c {
@@ -50,10 +56,29 @@ lower = \relative c {
   }
   <df af' df> <df af' df af'>2 r4 |
   r
+
   \clef "treble"
   <cf''' ef>2 <f, a c>4 |
-  <a c> <ef g>2 <f a>4 |
+  <c a> <ef g>2 <f a>4 |
 
+  <f ef b> <f df b>
+
+  \clef "bass"
+  <df,, df' af'>
+
+  \clef "treble"
+  <f'' ef b>
+
+  <f df af> r
+
+  \clef "bass"
+  <df,, df' af'>2 |
+
+  r4 <df df' af'>2
+
+  \clef "treble"
+  f''4 |
+  f2 ef4 f8 gf |
 }
 
 \layout {
