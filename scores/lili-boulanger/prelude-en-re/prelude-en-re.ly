@@ -10,6 +10,20 @@
 
 key_signature = \key df \major
 
+third = \new Staff \with {
+  alignAboveContext = "upper"
+  \remove "Time_signature_engraver"
+} {
+  r8 f af4. gf8 f ef |
+  ef df r4 r2 |
+}
+
+middle = \relative c'' {
+  <bf' f>8 <f af,> <bf f> <f af,> r <bf ef,> <a f> <f a,> |
+  <bf f>8 <ef, af,> r <ef af,> <bf' f> <f af,> <bf f> <ef, af,> |
+  <f ef cf gf>8 <ef gf,> <f cf> <ef gf,> r <ef gf,> <f cf> <ef gf,> |
+}
+
 upper = \relative c' {
   \clef treble
   \key_signature
@@ -31,19 +45,52 @@ upper = \relative c' {
   <f' gf> <ef gf, f> <f gf> <ef gf, f>4 <ef gf, f>8 <f gf> <ef gf, f> |
 
   <a ef> <f a,> <c' ef,> <f, a,> r <ef a,> <a ef> <ef a,> |
-  <bf' f> <f af,> <bf f> <f af,> r <bf ef,> <a f> <f a,> |
-  <bf f> <ef, af,> r <ef af,> <bf' f> <f af,> <bf f> <ef, af,> |
+
   <<
-    \new Staff \with {
-      alignAboveContext = "upper"
-      \remove "Time_signature_engraver"
-    } {
-      r8 f af4. gf8 f ef |
-    }
-    {
-      <f ef cf gf> <ef gf,> <f cf> <ef gf,> r <ef gf,> <f cf> <ef gf,> |
-    }
+    \third
+    \middle
   >>
+
+
+  \time 3/4
+
+  <g ds cs f,> <b, ds> <g' cs> <ds a> <g cs, b> <ds cs f,> |
+  <a' f ef> <ef gf, f>4 <ef gf, f>8 <a f ef> <cs, gf f> |
+
+  \time 4/4
+  <f f,>8. <cs a>16 <f f,>8. <cs a>16 <f df g, f>8 <df bf> <f df g, f> <df bf> |
+  <f f,>8. <cs a>16 <f f,>8. <cs a>16
+  \tuplet 5/4 { <f df g, f>8 <df bf> <f df g, f> <df bf> <f df g, f> } |
+
+  \time 3/4
+
+  \repeat unfold 2 {
+    <d d,>16. <af bf>32 <d d,>16. <af bf>32 <d d,>16. <af bf>32
+    r16. <af bf>32 <c c,>16. <af bf>32 <df df,>16. <af bf>32 |
+  }
+
+  \time 4/4
+
+  <af'' af,>8 <g g,> <f f,> <ef ef,> <c c,> <b b,> <a a,> <g g,> |
+  <f' f,> <ef ef,> <c c,> <b b,> <a a,> <g g,> <f f,> <ef ef,> |
+  \repeat unfold 2 {
+    <cs cs,> <b b,> <a a,> <g g,>4 <f f,> <ef ef,>8 |
+  }
+
+  \clef "bass"
+  <b g d>2
+
+  \clef "treble"
+  <ef ef'>4 <ef' ef'> |
+  <ef ef'> <ef, ef'> <ef' ef'> <ef ef'> |
+  <ef, ef'> <ef' ef'> <ef, ef'> <ef' ef'> |
+  <ef ef'> <ef, ef'> <ef' ef'> <ef ef'> |
+  <ef, ef'> <ef' ef'> <ef, ef'> <ef' ef'> |
+  <ef, ef'> <a' ef a,>2 <bf f bf,>4 |
+  <ef ef, ef,> <ef ef, ef,> <ef, ef, ef,> <ef, ef, ef,> |
+  R1 |
+
+  \bar "|."
 }
 
 lower = \relative c {
@@ -89,6 +136,36 @@ lower = \relative c {
   \clef "treble"
   f''4 |
   f2 ef4 f8 gf |
+
+  \time 3/4
+
+  g8 f4 g8 a b |
+  c4 b cs8 ds |
+
+  \time 4/4
+  \clef "bass"
+  <a,, df gf>2
+  <<
+    \tuplet 3/2 { bf'4 ef c }
+    <df, g>2
+  >> |
+
+  <a df gf>2
+  <<
+    \tuplet 5/4 { bf'8 c df ef f }
+    <df, g>2
+  >> |
+
+  \clef "treble"
+  <<
+    { g'8 a4 bf c8 }
+    <bf, df>2.
+  >> |
+
+  <<
+    { g'8 a4 bf c8 }
+    <af, df>2.
+  >> |
 }
 
 \layout {
