@@ -172,7 +172,7 @@ lower = \relative c {
   \repeat unfold 2 {
     <<
       { <af df f>4 <g ef bf>2 <a f c>4 }
-      af,,,1
+      \new Voice { af,,,1 }
     >> |
   }
 
