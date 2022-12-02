@@ -166,6 +166,21 @@ lower = \relative c {
     { g'8 a4 bf c8 }
     <af, df>2.
   >> |
+
+  \time 4/4
+  \clef "bass"
+  \repeat unfold 2 {
+    <<
+      { <af df f>4 <g ef bf>2 <a f c>4 }
+      af,,,1
+    >> |
+  }
+
+  \repeat unfold 2 {
+    <b''' g d>4 b2 <c af f ef>4 |
+  }
+
+  <c c,>8 <b b,> <a a,> <g g,>4 <f f,> <ef ef,>8 |
 }
 
 \layout {
