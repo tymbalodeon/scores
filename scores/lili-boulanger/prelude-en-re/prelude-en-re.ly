@@ -10,14 +10,6 @@
 
 key_signature = \key df \major
 
-third = \new Staff \with {
-  alignAboveContext = "upper"
-  \remove "Time_signature_engraver"
-} {
-  r8 f af4. gf8 f ef |
-  ef df r4 r2 |
-}
-
 middle = \relative c'' {
   <bf' f>8 <f af,> <bf f> <f af,> r <bf ef,> <a f> <f a,> |
   <bf f>8 <ef, af,> r <ef af,> <bf' f> <f af,> <bf f> <ef, af,> |
@@ -56,10 +48,13 @@ upper = \relative c' {
   <a ef> <f a,> <c' ef,> <f, a,> r <ef a,> <a ef> <ef a,> |
 
   <<
-    \third
+    \new Voice {
+      \voiceOne
+      r8 f' af4. gf8 f ef |
+      ef df s2. |
+    }
     \middle
   >>
-
 
   \time 3/4
 
