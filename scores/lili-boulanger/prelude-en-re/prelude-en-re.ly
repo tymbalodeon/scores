@@ -58,7 +58,7 @@ upper = \relative c' {
 
   \time 3/4
 
-  <g ds cs f,> <b, ds> <g' cs> <ds a> <g cs, b> <ds cs f,> |
+  <g ds cs f,>8 <b, ds> <g' cs> <ds a> <g cs, b> <ds cs f,> |
   <a' f ef> <ef gf, f>4 <ef gf, f>8 <a f ef> <cs, gf f> |
 
   \time 4/4
