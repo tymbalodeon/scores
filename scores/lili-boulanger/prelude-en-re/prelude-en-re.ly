@@ -10,6 +10,12 @@
 
 key_signature = \key df \major
 
+beam_override = {
+  \set Timing.beamExceptions = #'()
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = 1,1,1,1
+}
+
 middle = \relative c'' {
   <bf' f>8 <f af,> <bf f> <f af,> r <bf ef,> <a f> <f a,> |
   <bf f>8 <ef, af,> r <ef af,> <bf' f> <f af,> <bf f> <ef, af,> |
@@ -58,7 +64,7 @@ upper = \relative c' {
 
   \time 3/4
 
-  <g ds cs f,>8 <b, ds> <g' cs> <ds a> <g cs, b> <ds cs f,> |
+  <g, ds cs f,>8 <b, ds> <g' cs> <ds a> <g cs, b> <ds cs f,> |
   <a' f ef> <ef gf, f>4 <ef gf, f>8 <a f ef> <cs, gf f> |
 
   \time 4/4
@@ -101,6 +107,7 @@ lower = \relative c {
   \clef bass
   \key_signature
   \time 4/4
+  \beam_override
 
   \ottava #-1 <df, df,>1 \ottava #0 |
   <a'' b>4 <af df>2 \ottava #-1 <df,,, df' af'>4~ |
@@ -156,19 +163,19 @@ lower = \relative c {
 
   <a df gf>2
   <<
-    \tuplet 5/4 { bf'8 c df ef f }
-    <df, g>2
+    \new Voice { \voiceOne \tuplet 5/4 { bf'8 c df ef f } }
+    \new Voice { \voiceTwo <df, g>2 }
   >> |
 
   \clef "treble"
   <<
-    { g'8 a4 bf c8 }
-    <bf, df>2.
+    \new Voice { \voiceOne g'8 a4 bf c8 }
+    \new Voice { \voiceTwo <bf, df>2. }
   >> |
 
   <<
-    { g'8 a4 bf c8 }
-    <af, df>2.
+    \new Voice { \voiceOne g'8 a4 bf c8 }
+    \new Voice { \voiceTwo <af, df>2. }
   >> |
 
   \time 4/4
