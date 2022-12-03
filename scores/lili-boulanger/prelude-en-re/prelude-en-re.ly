@@ -48,7 +48,7 @@ upper = \relative c' {
     }
   >>
 
-  <bf,, f' bf> f'' af4. gf8 <f, a df f> ef' |
+  <bf,, f' bf>8 f'' af4. gf8 <f, a df f> ef' |
   <ef, bf' ef> df' r4 r8 f,4 f8 |
   f' f,4 f8 f'8 f, <ef'  f> f, |
   <f' gf> <ef gf, f> <f gf> <ef gf, f>4 <ef gf, f>8 <f gf> <ef gf, f> |
