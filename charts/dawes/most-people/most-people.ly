@@ -60,6 +60,22 @@ form_layout = \layout {
   >>
 }
 
+\score {
+  \form_layout
+  <<
+    \numericTimeSignature
+    \changes_end
+    \new Staff \with {
+      instrumentName = \markup \box "End"
+    } {
+      <<
+        \melody_end
+        \structure_end
+      >>
+    }
+  >>
+}
+
 \markup \vspace #2
 
 \markup \fill-line {
@@ -72,6 +88,6 @@ form_layout = \layout {
     \bold "Chorus" ""
     \bold "Verse" ""
     \bold "Chorus" ""
-    \bold "Bridge" ""
+    \bold "End" ""
   }
 }

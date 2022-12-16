@@ -11,9 +11,12 @@ changes_verse = \chords {
 }
 
 changes_chorus = \chords {
-  \repeat volta 4 {
-    a8. d8 a8 g16 |
-    s1 |
-    d2
-  }
+  a8. d8 a8 g16 |
+  s1 |
+  d2
+}
+
+changes_end = \chords {
+  a1 |
+  g |
 }

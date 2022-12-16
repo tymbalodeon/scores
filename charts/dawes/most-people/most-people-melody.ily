@@ -20,3 +20,11 @@ melody_chorus = \new Voice \with {
   g4 g2.-> |
   d2
 }
+
+melody_end = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  a4 r \parenthesize a r16 fs8. |
+  g4 r \parenthesize g r16 b8.  |
+}
