@@ -2,20 +2,14 @@
 
 \include "settings.ily"
 \include "style.ily"
-\include "most-people-melody.ily"
 \include "most-people-chords.ily"
 \include "most-people-structure.ily"
 
 \header {
   title = "Most People"
+  subtitle = "Dawes"
 }
 
-melody = \new Staff {
-  <<
-    \melody
-    \structure
-  >>
-}
 
 \layout {
   \context {
@@ -23,76 +17,54 @@ melody = \new Staff {
   }
 }
 
-\book {
-  \header {
-    composer = "Dawes"
-  }
-
-  \score {
-    <<
-      \numericTimeSignature
-      \changes
-      \melody
-    >>
-  }
-}
-
 form_layout = \layout {
   ragged-last = ##f
 }
 
-\book {
-  \bookOutputSuffix "form"
+\paper {
+  score-system-spacing.basic-distance = #18
+}
 
-  \header {
-    subtitle = "Dawes"
-  }
+\markup \vspace #1
 
-  \paper {
-    score-system-spacing.basic-distance = #18
-  }
-
-  \markup \vspace #1
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_verse
-      \new Staff \with {
-        instrumentName = \markup \box "Verse"
-      } {
-        <<
-          \structure_verse
-        >>
-      }
-    >>
-  }
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_chorus
-      \new Staff \with {
-        instrumentName = \markup \box "Chorus"
-      } {
-        <<
-          \structure_chorus
-        >>
-      }
-    >>
-  }
-
-  \markup \vspace #2
-
-  \markup \fill-line {
-    \column
-    \override #'(padding . 5)
-    \table #'(1 -1 -1)
-    {
-      \bold Verse \italic "" ""
-      \bold Chorus \italic "" ""
+\score {
+  \form_layout
+  <<
+    \numericTimeSignature
+    \changes_verse
+    \new Staff \with {
+      instrumentName = \markup \box "Verse"
+    } {
+      <<
+        \structure_verse
+      >>
     }
+  >>
+}
+
+\score {
+  \form_layout
+  <<
+    \numericTimeSignature
+    \changes_chorus
+    \new Staff \with {
+      instrumentName = \markup \box "Chorus"
+    } {
+      <<
+        \structure_chorus
+      >>
+    }
+  >>
+}
+
+\markup \vspace #2
+
+\markup \fill-line {
+  \column
+  \override #'(padding . 5)
+  \table #'(1 -1 -1)
+  {
+    \bold Verse \italic "" ""
+    \bold Chorus \italic "" ""
   }
 }

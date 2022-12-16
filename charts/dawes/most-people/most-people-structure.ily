@@ -1,14 +1,16 @@
 key_and_time = {
-  \key c \major
+  \key d \major
   \time 4/4
 }
 
 base = {
-  s1 * 4 |
+  s1 * 2 |
 }
 
 verse = {
-  \base
+  \repeat unfold 4 {
+    \base
+  }
 }
 
 chorus = {
@@ -18,13 +20,11 @@ chorus = {
 structure_verse = {
   \key_and_time
   \verse
-  \bar "||"
 }
 
 structure_chorus = {
   \key_and_time
   \chorus
-  \bar "||"
 }
 
 structure = {

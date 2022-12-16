@@ -1,9 +1,22 @@
 verse = \chordmode {
-  c1  |
+  \repeat volta 2 {
+    \repeat unfold 2 {
+      d1  |
+      fs:m |
+    }
+
+    e:m |
+    b:m |
+    g2 e:/gs |
+    a1
+  }
 }
 
 chorus = \chordmode {
-  c1  |
+  \repeat volta 4 {
+    g1 |
+    d2 a |
+  }
 }
 
 changes_verse = \chords {
