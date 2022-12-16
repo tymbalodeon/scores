@@ -67,8 +67,9 @@ _add_title_and_composer title composer file:
     sed -i "" -e "s/Title/${title}/g" {{file}}
     sed -i "" -e "s/Composer/${composer}/g" {{file}}
 
-_add_new_score_values type composer title: (_copy_template_files type composer title)
+_add_new_score_values type composer title:
     #!/usr/bin/env zsh
+    just _copy_template_files {{type}} {{composer}} {{title}}
     for file in **/**{{title}}-chart.ly(N); do
         just _prepend_titles {{title}} "${file}"
         just _add_title_and_composer {{title}} {{composer}} "${file}"
@@ -76,7 +77,10 @@ _add_new_score_values type composer title: (_copy_template_files type composer t
     done
 
 # Create new score template.
-create type composer title: (_copy_template_files type composer title) (_add_new_score_values type composer title)
+create type composer title:
+    #!/usr/bin/env zsh
+    just _copy_template_files {{type}} {{composer}} {{title}}
+    just _add_new_score_values {{type}} {{composer}} {{title}}
 
 _get_files extension *scores:
     #!/usr/bin/env zsh
