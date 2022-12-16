@@ -1,5 +1,5 @@
 key_and_time = {
-  \key c \major
+  \key e \major
   \time 4/4
 }
 

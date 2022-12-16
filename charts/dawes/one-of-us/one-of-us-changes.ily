@@ -1,7 +1,7 @@
 changes_verse = \chords {
-  c1  |
+  e1  |
 }
 
 changes_chorus = \chords {
-  c1 |
+  a1 |
 }
