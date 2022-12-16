@@ -87,7 +87,7 @@ form_layout = \layout {
     \bold "Verse" ""
     \bold "Chorus" "(no Coda)"
     \bold "Verse" ""
-    \bold "Chorus" "4th time: Coda to End"
+    \bold "Chorus" "4th time, use 1st ending, then Coda to End"
     \bold "End" ""
   }
 }
