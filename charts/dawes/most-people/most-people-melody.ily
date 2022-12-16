@@ -6,7 +6,10 @@ verse_chorus = \new Voice \with {
     s1 |
   }
   g2 e |
-  s1 |
+  a2~
+  \codaMark \default
+  \bar "||"
+  \parenthesize a^\markup \italic "to Chorus" |
 }
 
 melody_chorus = \new Voice \with {

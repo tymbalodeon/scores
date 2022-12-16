@@ -3,36 +3,20 @@ key_and_time = {
   \time 4/4
 }
 
-base = {
-  s1 * 2 |
-}
-
-verse = {
-  \repeat unfold 4 {
-    \base
-  }
-}
-
-chorus = {
-  s2 |
-  s1 |
-  s2
-}
-
 structure_verse = {
   \key_and_time
-  \verse
+  \repeat volta 2 {
+    \repeat unfold 4 {
+      s1 * 2 |
+    }
+  }
 }
 
 structure_chorus = {
   \key_and_time
   \partial 2
   \mark \markup \box \italic "4x"
-  \chorus
-}
-
-structure = {
-  \key_and_time
-  \verse
-  \chorus
+  s2 |
+  s1 |
+  s2
 }
