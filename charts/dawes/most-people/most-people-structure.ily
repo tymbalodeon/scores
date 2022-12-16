@@ -14,7 +14,9 @@ verse = {
 }
 
 chorus = {
-  \base
+  s2 |
+  s1 |
+  s2
 }
 
 structure_verse = {
@@ -24,6 +26,8 @@ structure_verse = {
 
 structure_chorus = {
   \key_and_time
+  \partial 2
+  \mark \markup \box \italic "4x"
   \chorus
 }
 

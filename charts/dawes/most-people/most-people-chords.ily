@@ -8,14 +8,15 @@ verse = \chordmode {
     e:m |
     b:m |
     g2 e:/gs |
-    a1
+    a1 |
   }
 }
 
 chorus = \chordmode {
   \repeat volta 4 {
-    g1 |
-    d2 a |
+    a8. d8 a8 g16 |
+    s1 |
+    d2
   }
 }
 

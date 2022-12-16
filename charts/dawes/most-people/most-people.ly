@@ -3,6 +3,7 @@
 \include "settings.ily"
 \include "style.ily"
 \include "most-people-chords.ily"
+\include "most-people-melody.ily"
 \include "most-people-structure.ily"
 
 \header {
@@ -36,6 +37,7 @@ form_layout = \layout {
       instrumentName = \markup \box "Verse"
     } {
       <<
+        \verse_chorus
         \structure_verse
       >>
     }
@@ -51,6 +53,7 @@ form_layout = \layout {
       instrumentName = \markup \box "Chorus"
     } {
       <<
+        \melody_chorus
         \structure_chorus
       >>
     }
@@ -62,9 +65,13 @@ form_layout = \layout {
 \markup \fill-line {
   \column
   \override #'(padding . 5)
-  \table #'(1 -1 -1)
+  \table #'(1 -1)
   {
-    \bold Verse \italic "" ""
-    \bold Chorus \italic "" ""
+    \bold "Chorus" "instrumental"
+    \bold "Verse" ""
+    \bold "Chorus" ""
+    \bold "Verse" ""
+    \bold "Chorus" ""
+    \bold "Bridge" ""
   }
 }
