@@ -25,14 +25,12 @@ _get_new_score_parent type:
 _get_new_score_name score_directory title type template:
     #!/usr/bin/env zsh
     template_path={{template}}
-    new_score={{score_directory}}/{{title}}
     if [ {{type}} = "piano" ]; then
         extension=."${template_path:e}"
     else
         extension=-"${template_path:t}"
     fi
-    new_score="${new_score}${extension}"
-    printf "%s" "${new_score}"
+    printf "%s" {{score_directory}}/{{title}}"${extension}"
 
 _copy_template_files type composer title:
     #!/usr/bin/env zsh
@@ -84,12 +82,12 @@ _add_new_score_values type composer title:
         mv "${file}" "${file//-main/}"
     done
 
-# Create new score template.
+# Create new score template, and optionally edit ("--edit").
 create type composer title *edit:
     #!/usr/bin/env zsh
     just _copy_template_files {{type}} {{composer}} {{title}}
     just _add_new_score_values {{type}} {{composer}} {{title}}
-    if [ "{{edit}}" != "" ]; then
+    if [ "{{edit}}" = "--edit" ]; then
         just edit {{title}}
     fi
 
