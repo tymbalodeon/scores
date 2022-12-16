@@ -3,16 +3,12 @@ key_and_time = {
   \time 4/4
 }
 
-base = {
+verse = {
   s1 * 4 |
 }
 
-verse = {
-  \base
-}
-
 chorus = {
-  \base
+  s1 * 4 |
 }
 
 structure_verse = {

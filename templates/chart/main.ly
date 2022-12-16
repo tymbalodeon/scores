@@ -3,7 +3,7 @@
 \include "settings.ily"
 \include "style.ily"
 \include "melody.ily"
-\include "chords.ily"
+\include "changes.ily"
 \include "structure.ily"
 
 \header {

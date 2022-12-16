@@ -8,21 +8,19 @@
   composer = "Composer"
 }
 
-key_signature = \key c \major
+key_and_time = {
+  \key c \major
+  \time 4/4
+}
 
 upper = \relative c'' {
-  \clef treble
-  \key_signature
-  \time 4/4
-
+  \key_and_time
   c1
 }
 
 lower = \relative c {
   \clef bass
-  \key_signature
-  \time 4/4
-
+  \key_and_time
   c1
 }
 

@@ -14,44 +14,52 @@ pdfs_directory := "./pdfs"
 @_help:
     just --list
 
-_copy_template_files type composer title:
+_get_new_score_parent type:
     #!/usr/bin/env zsh
     if [ {{type}} = "piano" ]; then
-        parent_directory="scores"
-        use_template_name=false
-    else
-        parent_directory="charts"
-        use_template_name=true
+        printf "%s" "scores"
+        exit
     fi
+    printf "%s" "charts"
+
+_get_new_score_name score_directory title type template:
+    #!/usr/bin/env zsh
+    template_path={{template}}
+    new_score={{score_directory}}/{{title}}
+    if [ {{type}} = "piano" ]; then
+        extension=."${template_path:e}"
+    else
+        extension=-"${template_path:t}"
+    fi
+    new_score="${new_score}${extension}"
+    printf "%s" "${new_score}"
+
+_copy_template_files type composer title:
+    #!/usr/bin/env zsh
+    parent_directory=$(just _get_new_score_parent {{type}})
     score_directory=./"${parent_directory}"/{{composer}}/{{title}}
     if [ -d "${score_directory}" ]; then
         exit
     fi
     mkdir -p "${score_directory}"
     for template in ./templates/{{type}}*/*; do
-        template_name="${template:t}"
-        new_score="${score_directory}/{{title}}"
-        if [ "$use_template_name" = true ]; then
-            new_score="${new_score}-${template_name}"
-        else
-            new_score="${new_score}.${template:e}"
-        fi
+        new_score=$(
+            just _get_new_score_name \
+                "${score_directory}" {{title}} {{type}} "${template}"
+        )
         if test -f "${new_score}"; then
             continue
         fi
         cp "${template}" "${score_directory}"
-        mv "${score_directory}/${template_name}" "${new_score}"
+        mv "${score_directory}/${template:t}" "${new_score}"
     done
-
-_prepend_title title filetype file:
-    #!/usr/bin/env zsh
-    sed -i "" -e "s/{{filetype}}.ily/{{title}}-{{filetype}}.ily/g" {{file}}
 
 _prepend_titles title file:
     #!/usr/bin/env zsh
-    filetypes=("melody" "chords" "structure")
+    echo {{file}} >> ~/Desktop/test.log
+    filetypes=("melody" "changes" "structure")
     for filetype in "${filetypes[@]}"; do
-        just _prepend_title {{title}} "${filetype}" {{file}}
+        sed -i "" -e "s/${filetype}.ily/{{title}}-${filetype}.ily/g" {{file}}
     done
 
 _convert_to_titlecase word:
@@ -70,17 +78,20 @@ _add_title_and_composer title composer file:
 _add_new_score_values type composer title:
     #!/usr/bin/env zsh
     just _copy_template_files {{type}} {{composer}} {{title}}
-    for file in **/**{{title}}-chart.ly(N); do
+    for file in **/**{{title}}-main.ly(N); do
         just _prepend_titles {{title}} "${file}"
         just _add_title_and_composer {{title}} {{composer}} "${file}"
-        mv "${file}" "${file//-chart/}"
+        mv "${file}" "${file//-main/}"
     done
 
 # Create new score template.
-create type composer title:
+create type composer title *edit:
     #!/usr/bin/env zsh
     just _copy_template_files {{type}} {{composer}} {{title}}
     just _add_new_score_values {{type}} {{composer}} {{title}}
+    if [ "{{edit}}" != "" ]; then
+        just edit {{title}}
+    fi
 
 _get_files extension *scores:
     #!/usr/bin/env zsh
