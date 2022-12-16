@@ -83,11 +83,11 @@ form_layout = \layout {
   \override #'(padding . 5)
   \table #'(1 -1)
   {
-    \bold "Chorus" "instrumental"
+    \bold "Chorus" "instrumental (no Coda)"
     \bold "Verse" ""
-    \bold "Chorus" ""
+    \bold "Chorus" "(no Coda)"
     \bold "Verse" ""
-    \bold "Chorus" ""
+    \bold "Chorus" "4th time: Coda to End"
     \bold "End" ""
   }
 }

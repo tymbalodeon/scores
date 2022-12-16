@@ -12,11 +12,14 @@ changes_verse = \chords {
 
 changes_chorus = \chords {
   a8. d8 a8 g16 |
-  s1 |
+  \parenthesize g1 |
   d2
+  a8. d8 a8 g16 |
+  a2 |
 }
 
 changes_end = \chords {
-  a1 |
+  a16 |
+  \parenthesize a1 |
   g |
 }

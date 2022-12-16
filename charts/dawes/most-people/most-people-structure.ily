@@ -14,17 +14,27 @@ structure_verse = {
 
 structure_chorus = {
   \key_and_time
+  \partial 2
+  s2 |
   \repeat volta 2 {
-    \partial 2
-    \mark \markup \box \italic "4x"
-    s2 |
     s1 |
     s2
+    \alternative {
+      \volta 1, 2, 3 {
+        s2
+      }
+      \volta 4 {
+        s2
+      }
+    }
   }
+  \bar "||"
 }
 
 structure_end = {
   \key_and_time
+  \partial 16
+  s16 |
   \repeat volta 2 {
     s1 * 2 |
   }
