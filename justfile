@@ -47,6 +47,13 @@ _prepend_title title filetype file:
     #!/usr/bin/env zsh
     sed -i "" -e "s/{{filetype}}.ily/{{title}}-{{filetype}}.ily/g" {{file}}
 
+_prepend_titles title file:
+    #!/usr/bin/env zsh
+    filetypes=("melody" "chords" "structure")
+    for filetype in "${filetypes[@]}"; do
+        just _prepend_title {{title}} "${filetype}" {{file}}
+    done
+
 _convert_to_titlecase word:
     #!/usr/bin/env python
     word = "{{word}}"
@@ -55,21 +62,16 @@ _convert_to_titlecase word:
 
 _add_title_and_composer title composer file:
     #!/usr/bin/env zsh
-    sed -i "" -e "s/Title/{{title}}/g" {{file}}
-    sed -i "" -e "s/Composer/{{composer}}/g" {{file}}
+    title="$(just _convert_to_titlecase {{title}})"
+    composer="$(just _convert_to_titlecase {{composer}})"
+    sed -i "" -e "s/Title/${title}/g" {{file}}
+    sed -i "" -e "s/Composer/${composer}/g" {{file}}
 
 _add_new_score_values type composer title: (_copy_template_files type composer title)
     #!/usr/bin/env zsh
     for file in **/**{{title}}-chart.ly(N); do
-        filetypes=("melody" "chords" "structure")
-        for filetype in "${filetypes[@]}"; do
-            just _prepend_title {{title}} "${filetype}" "${file}"
-        done
-    done
-    for file in **/**{{title}}.ly(N); do
-        title="$(just _convert_to_titlecase {{title}})"
-        composer="$(just _convert_to_titlecase {{composer}})"
-        just _add_title_and_composer "${title}" "${composer}" "${file}"
+        just _prepend_titles {{title}} "${file}"
+        just _add_title_and_composer {{title}} {{composer}} "${file}"
         mv "${file}" "${file//-chart/}"
     done
 
