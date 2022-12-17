@@ -54,7 +54,6 @@ _copy_template_files type composer title:
 
 _prepend_titles title file:
     #!/usr/bin/env zsh
-    echo {{file}} >> ~/Desktop/test.log
     filetypes=("melody" "changes" "structure")
     for filetype in "${filetypes[@]}"; do
         sed -i "" -e "s/${filetype}.ily/{{title}}-${filetype}.ily/g" {{file}}
