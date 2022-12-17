@@ -454,7 +454,9 @@ flute = \relative c' {
 
   \time 7/8
   \tuplet 3/2 { fs8 gs as }
-  \tuplet 3/2 { c d e } \tuplet 5/4 { fs16 g gs a as } \tuplet 3/2 { b c cs\f) } |
+  \tuplet 3/2 { c d e }
+  \tuplet 5/4 { fs16 g gs a as }
+  \tuplet 3/2 { b c cs\f) } |
 
   \time 2/4
   R2 |
@@ -467,53 +469,93 @@ flute = \relative c' {
   ef,,8\pppp\<(\startTextSpan f gf ef f gf)\stopTextSpan |
 
   \time 6/8
-  \tuplet 4/6 {ef16( f \grace d''-> gf,, ef} \tuplet 4/6 {f gf \grace d''-> ef,, f)} |
+  \tuplet 4/6 { ef16( f \grace d''-> gf,, ef }
+  \tuplet 4/6 { f gf \grace d''-> ef,, f) } |
 
   \time 3/4
   \grace {ef'' c} g,8( a bf g a bf) |
 
   \time 6/8
-  \tuplet 4/6 {g16( a \grace {ef'' c} bf, g} \tuplet 4/6 {a bf \grace {ef' c} g, a)} |
+  \tuplet 4/6 {g16( a \grace {ef'' c} bf, g}
+  \tuplet 4/6 {a bf \grace {ef' c} g, a)} |
 
   \time 3/4
-  \tuplet 3/2 {\grace {g'' e} b,8( cs \grace {g''16 e} d,8} \tuplet 3/2 {b cs \grace {g''16 e} d,8} \tuplet 3/2 {b8 cs d)} |
+  \tuplet 3/2 {\grace {g'' e} b,8( cs \grace {g''16 e} d,8}
+  \tuplet 3/2 {b cs \grace {g''16 e} d,8}
+  \tuplet 3/2 {b8 cs d)} |
 
   \time 4/4
-  \grace {b''16 gs} ef,( f gf ef \tuplet 5/4 {f \grace {b'16 gs} gf, ef f \grace {b'16 gs} ef,} \tuplet 6/4 {ef f gf ef \grace {b''16 gs} f, gf\ff)} r4 |
+  \grace {b''16 gs} ef,( f gf ef
+  \tuplet 5/4 {f \grace {b'16 gs} gf, ef f \grace {b'16 gs} ef,}
+  \tuplet 6/4 {ef f gf ef \grace {b''16 gs} f, gf\ff)} r4 |
 
   \tempo 4=80
   \time 2/4
-  \tuplet 3/2 {d,16\ppp\<( a' fs } \tuplet 3/2 { cs' bf f'! } d32 af' f b! fs c'! a! ds)\ff |
+  \tuplet 3/2 {d,16\ppp\<( a' fs }
+  \tuplet 3/2 { cs' bf f'! } d32 af' f b! fs c'! a! ds)\ff |
 
   \tempo 4=88
   \time 3/4
-  \tuplet 3/2 {d,,!16\p\<( f! fs} \tuplet 3/2 {a! bf df!} d32 ef fs g a bf b cs \tuplet 5/4 {d[ a fs' cs f,]} \tuplet 7/4 {bf c d e f as d\fff)} |
+  \tuplet 3/2 {d,,!16\p\<( f! fs}
+  \tuplet 3/2 {a! bf df!} d32 ef fs g a bf b cs
+  \tuplet 5/4 {d[ a fs' cs f,]}
+  \tuplet 7/4 {bf c d e f as d\fff)} |
 
   \time 2/4
   R2 |
 
   \tempo 4=76
   \time 3/4
-  \acciaccatura as16 d,,,4\sf~( \tuplet 7/4 {d8\pppp\<_~ <d'\flageolet d,\harmonic_~> <a'\flageolet d,,\harmonic> <d\flageolet d,,\harmonic_~> <fs\flageolet d,,\harmonic> a c\ff)} |
+  \acciaccatura as16 d,,,4\sf~(
+  \tuplet 7/4 {
+    d8\pppp\<_~
+    <d'\flageolet d,\harmonic_~>
+    <a'\flageolet d,,\harmonic>
+    <d\flageolet d,,\harmonic_~>
+    <fs\flageolet d,,\harmonic>
+    a c\ff)
+  } |
 
   \time 5/8
   a,,\p\<(~ <a'\flageolet a,\harmonic~> <e'\flageolet a,,\harmonic> a cs\f) |
 
   \time 4/4
-  \tuplet 3/2 { ef,,,4\ppp\<(~ <ef'\flageolet ef,\harmonic~> <bf'\flageolet ef,,\harmonic~> } <ef ef,,\harmonic>8 g bf df\ff) |
+  \tuplet 3/2 {
+    ef,,,4\ppp\<(~
+    <ef'\flageolet ef,\harmonic~>
+    <bf'\flageolet ef,,\harmonic~>
+  }
+  <ef ef,,\harmonic>8 g bf df\ff) |
 
   \time 2/4
-  \tuplet 3/2 { c,,,\ppp\<~( <c'\flageolet c,\harmonic~> <g'\flageolet c,,\harmonic> } \tuplet 5/4 { c16 e g bf c\ff) } |
+  \tuplet 3/2 {
+    c,,,\ppp\<~(
+    <c'\flageolet c,\harmonic~>
+    <g'\flageolet c,,\harmonic>
+  }
+  \tuplet 5/4 { c16 e g bf c\ff) } |
 
   \time 3/4
-  ef,,,4\f~( \tuplet 7/4 { ef8\pppp\< <ef'\flageolet ef,\harmonic> <bf'\flageolet ef,,\harmonic> <ef\flageolet ef,,\harmonic> g bf df\ff) } |
+  ef,,,4\f~(
+  \tuplet 7/4 {
+    ef8\pppp\<
+    <ef'\flageolet ef,\harmonic>
+    <bf'\flageolet ef,,\harmonic>
+    <ef\flageolet ef,,\harmonic>
+    g bf df\ff)
+  } |
 
   \time 7/8
-  f,,,\p\<(~ <f'\flageolet f,\harmonic~> <c'\flageolet f,,\harmonic~> <f\flageolet f,,\harmonic~> <a\flageolet f,,\harmonic>\f) r4 |
+  f,,,\p\<(~
+  <f'\flageolet f,\harmonic~>
+  <c'\flageolet f,,\harmonic~>
+  <f\flageolet f,,\harmonic~>
+  <a\flageolet f,,\harmonic>\f) r4 |
 
   \tempo 4=92
   \time 3/4
-  fs,,->\ff~(^\markup { \italic "molto accel." } \tuplet 7/4 { fs8\pppp cs'-> g'-> c-> e-> g-> a->) } |
+  fs,,->\ff~(^\markup { \italic "molto accel." }
+  \tuplet 7/4 { fs8\pppp cs'-> g'-> c-> e-> g-> a->) } |
 
   \time 5/8
   \tuplet 4/6 { bf,,16--\ff\>( f'-- cf'-- ff-- } bf-- df-- ef-- e--) |
@@ -531,18 +573,22 @@ flute = \relative c' {
   \tempo 4=88
   \time 4/4
   \tuplet 5/4 { d,,8(--->\pppp\< f-- af-- c-- d-- }
-\tuplet 3/2 { fs as d }
-e16 fs gs as) |
+\tuplet 3/2 { fs as d } e16 fs gs as) |
 
 \tempo 4=132
-c32->\fff\> r b-> r bf-> r a-> r \tuplet 3/2 { gs16-> r fs-> r e-> r } \tuplet 5/4 { cs-> r as-> r fs-> r d-> r a->\ppp r } |
+c32->\fff\> r b-> r bf-> r a-> r
+\tuplet 3/2 { gs16-> r fs-> r e-> r }
+\tuplet 5/4 { cs-> r as-> r fs-> r d-> r a->\ppp r } |
 
 \time 2/4
 R2 |
 
 \tempo 4=96
 \time 4/4
-\tuplet 5/4 { d,8--->\pppp\<( f-- af-- c-- d-- } \tuplet 3/2 { fs as d } e16 fs \tuplet 3/2 { gs as c) } |
+\tuplet 5/4 {
+  d,8--->\pppp\<( f-- af-- c-- d--
+}
+\tuplet 3/2 { fs as d } e16 fs \tuplet 3/2 { gs as c) } |
 
 \tempo 4=138
 \time 2/4
@@ -553,17 +599,35 @@ R1 |
 
 \tempo 4=126
 \time 2/4
-\tuplet 5/4 { bf,,16\p\<( df ff g bf } \tuplet 5/4 { c d e fs gs\mf) } |
+\tuplet 5/4 {
+  bf,,16\p\<( df ff g bf
+}
+\tuplet 5/4 { c d e fs gs\mf) } |
 R2 |
 
 \tempo 4=96
-\tuplet 5/4 { fs,,32-+\pp\< r a-+ r c-+ r ef-+ r fs-+ r } \tuplet 5/4 { \xNotesOn gs r as r c r d r e\mp r \xNotesOff } |
+\tuplet 5/4 {
+  fs,,32-+\pp\< r a-+ r c-+ r ef-+ r fs-+ r
+}
+\tuplet 5/4 {
+  \xNotesOn
+  gs r as r c r d r e\mp r
+  \xNotesOff
+} |
 
 \time 4/4
 R1 |
 
 \tempo 4=50
-<d\flageolet d,,\harmonic>8(\ppp\>~ <d\flageolet g,,\harmonic>~ <d\flageolet d,\harmonic>~ <d\flageolet g,,\harmonic>~ \tuplet 3/2 { <d\flageolet d,,\harmonic>4~ <d\flageolet g,,\harmonic>~ <d\flageolet d,\harmonic>)\pppp }  |
+<d\flageolet d,,\harmonic>8(\ppp\>~
+<d\flageolet g,,\harmonic>~
+<d\flageolet d,\harmonic>~
+<d\flageolet g,,\harmonic>~
+\tuplet 3/2 {
+  <d\flageolet d,,\harmonic>4~
+  <d\flageolet g,,\harmonic>~
+  <d\flageolet d,\harmonic>)\pppp
+}  |
 R1 |
 
 \tempo 4=46
