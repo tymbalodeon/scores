@@ -14,7 +14,7 @@ pdfs_directory := "./pdfs"
 @_help:
     just --list
 
-_get_new_score_parent type:
+_get_new_score_parent_directory type:
     #!/usr/bin/env zsh
     if [ {{type}} = "piano" ]; then
         printf "%s" "scores"
@@ -34,7 +34,7 @@ _get_new_score_name score_directory title type template:
 
 _copy_template_files type composer title:
     #!/usr/bin/env zsh
-    parent_directory=$(just _get_new_score_parent {{type}})
+    parent_directory=$(just _get_new_score_parent_directory {{type}})
     score_directory=./"${parent_directory}"/{{composer}}/{{title}}
     if [ -d "${score_directory}" ]; then
         exit
