@@ -8,15 +8,13 @@
   composer = "Ben Rosen"
 }
 
-time_and_tempo = {
+flute = \relative c' {
   \numericTimeSignature
   \time 4/4
   \tempo 4 = 54
-}
 
-flute = \relative c' {
-  \time_and_tempo
-  \override Hairpin.minimum-length = #10
+  \override Hairpin.minimum-length = #8
+
   \tuplet 3/2 { d2~\ppp\< d~\ff\> d\pp } |
 
   \time 3/4
@@ -25,11 +23,13 @@ flute = \relative c' {
   \time 3/2
   d2~->\pp\< d:32~\ff\> d\pp |
 
+  \revert Hairpin.minimum-length
+
   \time 4/4
   R1 |
 
   \tempo 4 = 52
-  <d''\flageolet d,,\harmonic>8(\ppp\>~
+  <d''\flageolet d,,\harmonic>8~\ppp\>(
   <d\flageolet g,,\harmonic>~
   <d\flageolet d,\harmonic>~
   <d\flageolet g,,\harmonic>~
