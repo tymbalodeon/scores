@@ -21,9 +21,9 @@ Dependencies can be installed by running the included script: `./install-depende
 
 Available commands (can be shown by running `just`):
 
-- `clean *scores # Remove pdf(s).`
-- `compile *scores # Create pdf(s).`
-- `create type composer title *edit # Create new score template, and optionally edit ("--edit").`
-- `edit score # Open <score> in editor and pdf viewer, recompiling on file changes.`
-- `list\*scores # List pdf(s).`
-- `open \*scores # Open pdf(s).`
+- Remove pdf(s): `clean *scores`
+- Create pdf(s): `compile *scores`
+- Create new score template, and optionally edit ("--edit"): `create type composer title *edit`
+- Open \<score\> in editor and pdf viewer, recompiling on file changes: `edit score`
+- List pdf(s): `list *scores`
+- Open pdf(s): `open *scores`
