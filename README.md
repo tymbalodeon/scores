@@ -17,6 +17,13 @@ Recommended for development using `justfile` commands, incremental builds, file 
 
 Dependencies can be installed by running the included script: `./install-dependencies`
 
-## justfile
+## Tasks
 
-Run `just` to see available commands.
+Available commands (can be shown by running `just`):
+
+- `clean *scores # Remove pdf(s).`
+- `compile *scores # Create pdf(s).`
+- `create type composer title *edit # Create new score template, and optionally edit ("--edit").`
+- `edit score # Open <score> in editor and pdf viewer, recompiling on file changes.`
+- `list\*scores # List pdf(s).`
+- `open \*scores # Open pdf(s).`
