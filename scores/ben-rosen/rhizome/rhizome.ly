@@ -13,8 +13,6 @@ flute = \relative c' {
   \time 4/4
   \tempo 4 = 54
 
-  \override Hairpin.minimum-length = #8
-
   \tuplet 3/2 { d2~\ppp\< d~\ff\> d\pp } |
 
   \time 3/4
@@ -22,8 +20,6 @@ flute = \relative c' {
 
   \time 3/2
   d2~->\pp\< d:32~\ff\> d\pp |
-
-  \revert Hairpin.minimum-length
 
   \time 4/4
   R1 |
@@ -36,14 +32,14 @@ flute = \relative c' {
   \tuplet 3/2 {
     <d\flageolet d,,\harmonic>4~
     <d\flageolet g,,\harmonic>~
-    <d\flageolet d,\harmonic>)\pppp
+    <d\flageolet d,\harmonic>\pppp)
   }  |
 
   \time 3/4
   R2. |
 
   \time 5/4
-  \override Hairpin.minimum-length = #6
+
   d,,4~\pp\< d~\f\> d~\p\< d~\f\> d\pp  |
 
   \time 3/4
@@ -52,7 +48,7 @@ flute = \relative c' {
   \tempo 4 = 52
   \time 4/4
   \tuplet 3/2 {
-    d4\ppp\<(~
+    d4~\ppp\<(
     <d'\flageolet d,\harmonic~>
     <a'\flageolet d,,\harmonic~>
   }
@@ -66,49 +62,52 @@ flute = \relative c' {
 
   \tempo 4 = 56
   \time 5/4
-  fs,,4\p~ fs\ppp~ fs\ff~ fs\ppp~ fs\p |
+
+  fs,,4~\p\> fs~\ppp\< fs~\ff\> fs~\ppp\< fs\p |
 
   \time 3/4
   R2. |
 
   \tempo 4 = 58
   \time 4/4
-  \tuplet 3/2 { f'2(--\p bf,4-- } \tuplet 3/2 { f'-- bf,-- f'-- } |
-  bf,--\ppp) r \tuplet 3/2 { f'2(-- bf,4)--\pppp } |
+  \tuplet 3/2 { f'2--\p\>( bf,4-- } \tuplet 3/2 { f'-- bf,-- f'-- } |
+  bf,--\ppp) r \tuplet 3/2 { f'2--( bf,4--\pppp) } |
   \time 3/4
 
   R2. |
   \time 4/4
 
   \tempo 4 = 54
-  \tuplet 3/2 { d2\p~ d\mf~ d\p } |
+
+  \tuplet 3/2 { d2~\p\< d~\mf\> d\p\> } |
 
   \time 2/4
   cs,2\pp |
 
   \time 3/4
-  \acciaccatura es''16(->\sfz c,,2)\ppp\glissando( cqf4) |
+  \acciaccatura es''16->\sfz( c,,2\ppp \glissando)( cqf4) |
 
   \time 4/4
   R1 |
 
   \tempo 4 = 56
   \time 5/4
-  a'2\pp~ a4\f~ a2\pp
+
+  a'2~\pp\< a4~\f\> a2\pp
 
   \time 3/4
   R2. |
 
   \tempo 4 = 54
   \time 3/2
-  a2:32\mf~ a\ppp~ a:32\ff
+  a2:32~\mf\> a~\ppp\< a:32\ff
 
   \time 4/4
   R1 |
 
   \tempo 4 = 52
   \tuplet 3/2 {
-    a4\ppp\<(~
+    a4~\ppp\<(
     <a'\flageolet a,\harmonic~>
     <e'\flageolet a,,\harmonic>
   }
@@ -121,14 +120,14 @@ flute = \relative c' {
   \acciaccatura af,16->\sfz R1 |
 
   \time 3/2
-  <fs'\flageolet fs,,\harmonic>8(\ppp\>~
+  <fs'\flageolet fs,,\harmonic>8~\ppp\>(
   <fs\flageolet b,,\harmonic>~
   <fs\flageolet fs,\harmonic>~
   <fs\flageolet b,,\harmonic>~
   \tuplet 3/2 {
     <fs\flageolet fs,,\harmonic>2~
     <fs\flageolet b,,\harmonic>~
-    <fs\flageolet fs,\harmonic>)\pppp
+    <fs\flageolet fs,\harmonic>\pppp)
   } |
 
   \time 4/4
@@ -136,7 +135,7 @@ flute = \relative c' {
 
   \tempo 4 = 60
   \time 5/4
-  \appoggiatura d,,8 cs'2\p \appoggiatura fs,8\mf f'2~ f4\p |
+  \appoggiatura d,,8 cs'2\p\< \appoggiatura fs,8 f'2~\mf\> f4\p |
 
   \time 2/4
   R2 |
@@ -635,6 +634,10 @@ R1 |
 \tuplet 3/2 { \xNotesOn d,,8\ppppp r r } r4 |
 \tuplet 3/2 { \xNotesOn fs8 r r } r4 |
 \bar "|."
+}
+
+\layout {
+  \override Hairpin.minimum-length = #8
 }
 
 \score {
