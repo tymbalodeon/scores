@@ -8,6 +8,9 @@
   composer = "Ben Rosen"
 }
 
+harmonic_slur =
+\shape #'((0 . 0.5) (0 . 0) (0 . 0) (0 . 0.5)) PhrasingSlur
+
 flute = \relative c' {
   \numericTimeSignature
   \time 4/4
@@ -25,14 +28,16 @@ flute = \relative c' {
   R1 |
 
   \tempo 4=52
-  <d''\flageolet d,,\harmonic>8~\ppp\>(
-  <d\flageolet g,,\harmonic>~
-  <d\flageolet d,\harmonic>~
-  <d\flageolet g,,\harmonic>~
-  \tuplet 3/2 {
-    <d\flageolet d,,\harmonic>4~
+  \harmonic_slur
+
+  <d''\flageolet d,,\harmonic>8~\ppp\>\(
     <d\flageolet g,,\harmonic>~
-    <d\flageolet d,\harmonic>\pppp)
+    <d\flageolet d,\harmonic>~
+    <d\flageolet g,,\harmonic>~
+    \tuplet 3/2 {
+      <d\flageolet d,,\harmonic>4~
+      <d\flageolet g,,\harmonic>~
+      <d\flageolet d,\harmonic>\pppp\)
   }  |
 
   \time 3/4
@@ -120,14 +125,16 @@ flute = \relative c' {
   \acciaccatura af,16->\sfz R1 |
 
   \time 3/2
-  <fs'\flageolet fs,,\harmonic>8~\ppp\>(
-  <fs\flageolet b,,\harmonic>~
-  <fs\flageolet fs,\harmonic>~
-  <fs\flageolet b,,\harmonic>~
-  \tuplet 3/2 {
-    <fs\flageolet fs,,\harmonic>2~
+  \harmonic_slur
+
+  <fs'\flageolet fs,,\harmonic>8~\ppp\>\(
     <fs\flageolet b,,\harmonic>~
-    <fs\flageolet fs,\harmonic>\pppp)
+    <fs\flageolet fs,\harmonic>~
+    <fs\flageolet b,,\harmonic>~
+    \tuplet 3/2 {
+      <fs\flageolet fs,,\harmonic>2~
+      <fs\flageolet b,,\harmonic>~
+      <fs\flageolet fs,\harmonic>\pppp\)
   } |
 
   \time 4/4
@@ -621,14 +628,14 @@ R2 |
 R1 |
 
 \tempo 4=50
-<d\flageolet d,,\harmonic>8(\ppp\>~
-<d\flageolet g,,\harmonic>~
-<d\flageolet d,\harmonic>~
-<d\flageolet g,,\harmonic>~
-\tuplet 3/2 {
-  <d\flageolet d,,\harmonic>4~
+<d\flageolet d,,\harmonic>8\ppp\>~\(
   <d\flageolet g,,\harmonic>~
-  <d\flageolet d,\harmonic>)\pppp
+  <d\flageolet d,\harmonic>~
+  <d\flageolet g,,\harmonic>~
+  \tuplet 3/2 {
+    <d\flageolet d,,\harmonic>4~
+    <d\flageolet g,,\harmonic>~
+    <d\flageolet d,\harmonic>\pppp\)
 }  |
 R1 |
 
