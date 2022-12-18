@@ -52,14 +52,15 @@ flute = \relative c' {
 
   \tempo 4=52
   \time 4/4
+  \shape #'((0 . 1) (0 . 0) (0 . 0) (0 . 0)) PhrasingSlur
   \tuplet 3/2 {
-    d4~\ppp\<(
-    <d'\flageolet d,\harmonic~>
-    <a'\flageolet d,,\harmonic~>
-  }
-  <d\flageolet d,,\harmonic~>8
-  <fs\flageolet d,,\harmonic>
-  a c\ff)
+    d4~\ppp\<\(
+      <d'\flageolet d,\harmonic~>
+      <a'\flageolet d,,\harmonic~>
+    }
+    <d\flageolet d,,\harmonic~>8
+    <fs\flageolet d,,\harmonic>
+    a c\ff\)
 
   \time 3/4
   R2. |
