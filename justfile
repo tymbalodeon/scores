@@ -148,8 +148,8 @@ edit score: (compile score)
             open "${file}"
         done
         open "${ly_file}"
-        watchexec -e ly,ily just compile {{score}}
     done
+    watchexec -e ly,ily just compile {{score}}
 
 # List pdf(s).
 list *scores:

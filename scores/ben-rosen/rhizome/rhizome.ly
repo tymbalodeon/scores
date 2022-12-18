@@ -11,7 +11,7 @@
 flute = \relative c' {
   \numericTimeSignature
   \time 4/4
-  \tempo 4 = 54
+  \tempo 4=54
 
   \tuplet 3/2 { d2~\ppp\< d~\ff\> d\pp } |
 
@@ -24,7 +24,7 @@ flute = \relative c' {
   \time 4/4
   R1 |
 
-  \tempo 4 = 52
+  \tempo 4=52
   <d''\flageolet d,,\harmonic>8~\ppp\>(
   <d\flageolet g,,\harmonic>~
   <d\flageolet d,\harmonic>~
@@ -45,7 +45,7 @@ flute = \relative c' {
   \time 3/4
   R2. |
 
-  \tempo 4 = 52
+  \tempo 4=52
   \time 4/4
   \tuplet 3/2 {
     d4~\ppp\<(
@@ -60,7 +60,7 @@ flute = \relative c' {
   R2. |
   \acciaccatura ef,16->\sfz R2. |
 
-  \tempo 4 = 56
+  \tempo 4=56
   \time 5/4
 
   fs,,4~\p\> fs~\ppp\< fs~\ff\> fs~\ppp\< fs\p |
@@ -68,7 +68,7 @@ flute = \relative c' {
   \time 3/4
   R2. |
 
-  \tempo 4 = 58
+  \tempo 4=58
   \time 4/4
   \tuplet 3/2 { f'2--\p\>( bf,4-- } \tuplet 3/2 { f'-- bf,-- f'-- } |
   bf,--\ppp) r \tuplet 3/2 { f'2--( bf,4--\pppp) } |
@@ -77,7 +77,7 @@ flute = \relative c' {
   R2. |
   \time 4/4
 
-  \tempo 4 = 54
+  \tempo 4=54
 
   \tuplet 3/2 { d2~\p\< d~\mf\> d\p\> } |
 
@@ -90,7 +90,7 @@ flute = \relative c' {
   \time 4/4
   R1 |
 
-  \tempo 4 = 56
+  \tempo 4=56
   \time 5/4
 
   a'2~\pp\< a4~\f\> a2\pp
@@ -98,14 +98,14 @@ flute = \relative c' {
   \time 3/4
   R2. |
 
-  \tempo 4 = 54
+  \tempo 4=54
   \time 3/2
   a2:32~\mf\> a~\ppp\< a:32\ff
 
   \time 4/4
   R1 |
 
-  \tempo 4 = 52
+  \tempo 4=52
   \tuplet 3/2 {
     a4~\ppp\<(
     <a'\flageolet a,\harmonic~>
@@ -133,22 +133,22 @@ flute = \relative c' {
   \time 4/4
   R1 |
 
-  \tempo 4 = 60
+  \tempo 4=60
   \time 5/4
   \appoggiatura d,,8 cs'2\p\< \appoggiatura fs,8 f'2~\mf\> f4\p |
 
   \time 2/4
   R2 |
 
-  \tempo 4 = 63
+  \tempo 4=63
   \time 3/4
   \tuplet 3/2 { \appoggiatura d8 cs,4\ppp \appoggiatura fs'8 f,!4 r } r
 
-  \tempo 4 =60
+  \tempo 4=60
   \time 4/4
   \appoggiatura d8 cs'2\p\< \appoggiatura fs,8 f'!2 |
 
-  \tempo 4 = 56
+  \tempo 4=56
   \time 2/4
   \tuplet 3/2 {
     \acciaccatura a!8( as,8->\f\>)
@@ -163,14 +163,14 @@ flute = \relative c' {
   \time 2/4
 
   \xNotesOn
-  \tuplet 3/2 { a,8\ppp r r } \tuplet 3/2 {a r r }
+  \tuplet 3/2 { a,8\ppp r r } \tuplet 3/2 { a r r }
   \xNotesOff |
 
   R2 |
 
-  \tempo 4 = 69
+  \tempo 4=69
   \time 4/4
-  \tuplet 3/2 {d,2\ppp\<( fs a } |
+  \tuplet 3/2 { d,2\ppp\<( fs a } |
   d4 f af b\f) |
 
   \time 3/4
@@ -185,7 +185,7 @@ flute = \relative c' {
   \time 3/4
   R2. |
 
-  \tempo 4 = 56
+  \tempo 4=56
   \time 2/4
   \tuplet 3/2 {
     \acciaccatura gs''8( a,8->\f\>)
@@ -199,26 +199,26 @@ flute = \relative c' {
   \tuplet 3/2 { r8 r a }
   \xNotesOff r4 r |
 
-  \tempo 4 = 63
-  \tuplet 3/2 { fs''8(->\f\> e d } \tuplet 5/4 { b-- gs-- e-- c-- g!--) } |
+  \tempo 4=63
+  \tuplet 3/2 { fs''8->\f\>( e d } \tuplet 5/4 { b-- gs-- e-- c-- g!--) } |
 
   \time 2/4
-  c,4(\ppp\glissando cqf) |
+  c,4\ppp( \glissando cqf) |
   R2 |
 
-  \tempo 4 = 104
+  \tempo 4=104
   \time 4/4
   bf'''16->\ff\>( a af g
   \tuplet 3/2 { fs8\f\> e d }
   \tuplet 5/4 { b-- gs-- e-- c-- g!--) } |
 
   \time 2/4
-  c,4(\ppp\glissando cqf) |
+  c,4(\ppp \glissando cqf) |
 
   \time 3/4
   R2. |
 
-  \tempo 4 = 88
+  \tempo 4=88
   \time 4/4
   \tuplet 3/2 { a'4--\pp( d,-- a'--} \tuplet 3/2 { d,-- a'-- d,--) }
 
@@ -226,17 +226,17 @@ flute = \relative c' {
   af'''8:32\ff\>( ef:32 af:32) |
 
   \time 2/4
-  \tuplet 3/2 { a,,4--\ppp( d,-- a'--)} |
+  \tuplet 3/2 { a,,4--\ppp( d,-- a'--) } |
 
   \time 3/8
   fs''8:32\ff\>( cs:32 fs:32) |
 
   \time 5/4
-  \tuplet 3/2 { g4--\pp( c,-- g'--} \tuplet 3/2 { c,-- g'--) r } r
+  \tuplet 3/2 { g4--\pp( c,-- g'-- } \tuplet 3/2 { c,-- g'--) r } r
 
-  \tempo 4 = 96
+  \tempo 4=96
   \time 4/4
-  \tuplet 3/2 {as,,2\ppp\<( d fs } |
+  \tuplet 3/2 { as,,2\ppp\<( d fs } |
   as4 cs e g\f) |
 
   \time 2/4
@@ -245,28 +245,31 @@ flute = \relative c' {
   \time 4/4
   \acciaccatura es16->\sfz R1 |
 
-  \tempo 4 = 60
+  \tempo 4=60
   \time 3/4
-  \tuplet 3/2 { gs8(->\f\> fs e! } \tuplet 5/4 { cs-- as-- fs-- d-- a!--) } |
+  \tuplet 3/2 { gs8->\f\>( fs e! } \tuplet 5/4 { cs-- as-- fs-- d-- a!--) } |
 
   \time 2/4
   d,4\ppp r |
   R2 |
 
-  \tempo 4 = 66
+  \tempo 4=66
   \time 2/8
-  \tuplet 3/2 { b''16-.\f gs-. r} \xNotesOn \tuplet 3/2 { ef,\p c r} \xNotesOff
+  \tuplet 3/2 { b''16-.\f gs-. r }
+  \xNotesOn
+  \tuplet 3/2 { ef,\p c r }
+  \xNotesOff
 
   \time 2/4
   R2 |
 
   \time 2/8
-  \tuplet 3/2 { g'''16-+\ff e-+ r} \tuplet 3/2 { ef,,-.\pp c-. r}
+  \tuplet 3/2 { g'''16-+\ff e-+ r } \tuplet 3/2 { ef,,-.\pp c-. r }
 
   \time 2/4
   R2 |
 
-  \tempo 4 = 108
+  \tempo 4=108
   \time 4/4
   df'''16->\ff\>( c b bf
   \tuplet 3/2 { a8 g f }
