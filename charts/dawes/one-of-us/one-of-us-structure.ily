@@ -5,12 +5,22 @@ key_and_time = {
 
 structure_verse = {
   \key_and_time
-  s1 * 4 |
+  s1 * 8 |
   \bar "||"
 }
 
 structure_chorus = {
   \key_and_time
-  s1 * 4 |
+  \repeat volta 2 {
+    s1 * 2 |
+    \alternative {
+      \volta 1 {
+        s1 * 2 |
+      }
+      \volta 2 {
+        s1 * 2 |
+      }
+    }
+  }
   \bar "||"
 }
