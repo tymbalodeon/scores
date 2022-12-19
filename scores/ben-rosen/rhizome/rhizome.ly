@@ -26,16 +26,16 @@ flute = \relative c' {
 
   \break
   \tempo 4=52
-  \shape #'((0 . 1) (0 . 0) (0 . 0) (0 . 1)) PhrasingSlur
+  \shape #'((0 . 1) (0 . 0.5) (0 . 0.5) (0 . 1)) Slur
 
-  <d''\flageolet d,,\harmonic>8~\ppp\>\(
+  <d''\flageolet d,,\harmonic>8~\ppp\>(
+  <d\flageolet g,,\harmonic>~
+  <d\flageolet d,\harmonic>~
+  <d\flageolet g,,\harmonic>~
+  \tuplet 3/2 {
+    <d\flageolet d,,\harmonic>4~
     <d\flageolet g,,\harmonic>~
-    <d\flageolet d,\harmonic>~
-    <d\flageolet g,,\harmonic>~
-    \tuplet 3/2 {
-      <d\flageolet d,,\harmonic>4~
-      <d\flageolet g,,\harmonic>~
-      <d\flageolet d,\harmonic>\pppp\)
+    <d\flageolet d,\harmonic>\pppp)
   }  |
 
   \time 3/4
@@ -50,18 +50,23 @@ flute = \relative c' {
 
   \tempo 4=52
   \time 4/4
-  \shape #'((0 . 1) (0 . 2) (0 . 0.5) (0 . 0)) PhrasingSlur
+  \shape #'((0 . 1) (0 . 2) (0 . 0.5) (0 . 0)) Slur
+  \tieDown
+
   \tuplet 3/2 {
-    d4~\ppp\<\(
-      \once \stemDown <d'\flageolet d,\harmonic~>
-      <a'\flageolet d,,\harmonic~>
-    }
-    <d\flageolet d,,\harmonic~>8
-    <fs\flageolet d,,\harmonic>
-    a c\ff\)
+    d4~\ppp\<(
+    \once \stemDown <d'\flageolet d,\harmonic~>
+    <a'\flageolet d,,\harmonic~>
+  }
+  <d\flageolet d,,\harmonic~>8
+  <fs\flageolet d,,\harmonic>
+  a c\ff)
+
+  \tieNeutral
 
   \time 3/4
   R2. |
+  \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -4)) Slur
   \acciaccatura ef,16->\sfz R2. |
 
   \tempo 4=56
@@ -110,12 +115,17 @@ flute = \relative c' {
   R1 |
 
   \tempo 4=52
+  \shape #'((0 . 1) (0 . 2) (0 . 0.5) (0 . 0.5)) Slur
+  \tieDown
+
   \tuplet 3/2 {
     a4~\ppp\<(
     <a'\flageolet a,\harmonic~>
     <e'\flageolet a,,\harmonic>
   }
   a cs\ff) |
+
+  \tieNeutral
 
   \time 3/4
   R2. |
@@ -124,16 +134,16 @@ flute = \relative c' {
   \acciaccatura af,16->\sfz R1 |
 
   \time 3/2
-  \shape #'((0 . 1) (0 . 0) (0 . 0) (0 . 1)) PhrasingSlur
+  \shape #'((0 . 1) (0 . 0.5) (0 . 0.5) (0 . 1)) Slur
 
-  <fs'\flageolet fs,,\harmonic>8~\ppp\>\(
+  <fs'\flageolet fs,,\harmonic>8~\ppp\>(
+  <fs\flageolet b,,\harmonic>~
+  <fs\flageolet fs,\harmonic>~
+  <fs\flageolet b,,\harmonic>~
+  \tuplet 3/2 {
+    <fs\flageolet fs,,\harmonic>2~
     <fs\flageolet b,,\harmonic>~
-    <fs\flageolet fs,\harmonic>~
-    <fs\flageolet b,,\harmonic>~
-    \tuplet 3/2 {
-      <fs\flageolet fs,,\harmonic>2~
-      <fs\flageolet b,,\harmonic>~
-      <fs\flageolet fs,\harmonic>\pppp\)
+    <fs\flageolet fs,\harmonic>\pppp)
   } |
 
   \break
