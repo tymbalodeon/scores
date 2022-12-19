@@ -639,14 +639,15 @@ R2 |
 R1 |
 
 \tempo 4=50
-<d\flageolet d,,\harmonic>8\ppp\>~\(
+\shape #'((0 . 1) (0 . 0.5) (0 . 0.5) (0 . 1)) Slur
+<d\flageolet d,,\harmonic>8\ppp\>~(
+<d\flageolet g,,\harmonic>~
+<d\flageolet d,\harmonic>~
+<d\flageolet g,,\harmonic>~
+\tuplet 3/2 {
+  <d\flageolet d,,\harmonic>4~
   <d\flageolet g,,\harmonic>~
-  <d\flageolet d,\harmonic>~
-  <d\flageolet g,,\harmonic>~
-  \tuplet 3/2 {
-    <d\flageolet d,,\harmonic>4~
-    <d\flageolet g,,\harmonic>~
-    <d\flageolet d,\harmonic>\pppp\)
+  <d\flageolet d,\harmonic>\pppp)
 }  |
 R1 |
 
