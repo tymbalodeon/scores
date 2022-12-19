@@ -674,6 +674,18 @@ R1 |
   \override Hairpin.minimum-length = #8
 }
 
+% #(set-global-staff-size 18)
+
+% \paper {
+%   #(set! paper-alist (cons '("1280x720" . (cons (* 9 in) (* 5.06525 in)))
+%                       paper-alist))
+%   #(set-paper-size "1280x720")
+%   left-margin = 0.75\in
+%   right-margin = 0.75\in
+%   top-margin = 0.5\in
+%   bottom-margin = 0.5\in
+% }
+
 \score {
   \new Staff \with {
     instrumentName = "Flute"
