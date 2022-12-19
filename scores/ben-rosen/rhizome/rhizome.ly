@@ -66,8 +66,7 @@ flute = \relative c' {
 
   \time 3/4
   R2. |
-  \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -4)) Slur
-  \acciaccatura ef,16->\sfz R2. |
+  \slashedGrace ef,16->\sfz R2. |
 
   \tempo 4=56
   \time 5/4
@@ -131,7 +130,7 @@ flute = \relative c' {
   R2. |
 
   \time 4/4
-  \acciaccatura af,16->\sfz R1 |
+  \slashedGrace af,16->\sfz R1 |
 
   \time 3/2
   \shape #'((0 . 1) (0 . 0.5) (0 . 0.5) (0 . 1)) Slur
@@ -195,10 +194,10 @@ flute = \relative c' {
   \acciaccatura d16->( cs,,2.\p) |
 
   \time 1/4
-  \acciaccatura es''16->\sfz R4 |
+  \slashedGrace es''16->\sfz R4 |
 
   \time 3/4
-  c,,2\pp\glissando( cqf4) |
+  c,,2\pp \glissando( cqf4) |
 
   \time 3/4
   R2. |
@@ -261,7 +260,7 @@ flute = \relative c' {
   R2 |
 
   \time 4/4
-  \acciaccatura es16->\sfz R1 |
+  \slashedGrace es16->\sfz R1 |
 
   \tempo 4=60
   \time 3/4
@@ -528,22 +527,31 @@ flute = \relative c' {
   \time 3/4
   \acciaccatura as16 d,,,4\sf~(
   \tuplet 7/4 {
+    \tieDown
     d8\pppp\<_~
     <d'\flageolet d,\harmonic_~>
-    <a'\flageolet d,,\harmonic>
+    <a'\flageolet d,,\harmonic~>
     <d\flageolet d,,\harmonic_~>
+    \tieNeutral
     <fs\flageolet d,,\harmonic>
     a c\ff)
   } |
 
   \time 5/8
+  \shape #'((0 . 0.5) (0 . 2) (0 . 2) (0 . 0.5)) Slur
+  \tieDown
   a,,\p\<(~ <a'\flageolet a,\harmonic~> <e'\flageolet a,,\harmonic> a cs\f) |
+  \tieNeutral
 
   \time 4/4
   \tuplet 3/2 {
+    \shape #'((-1 . 3) (0 . 0) (0 . 0) (0 . 0)) Slur
+    \tieDown
     ef,,,4\ppp\<(~
+    \once \stemDown
     <ef'\flageolet ef,\harmonic~>
     <bf'\flageolet ef,,\harmonic~>
+    \tieNeutral
   }
   <ef ef,,\harmonic>8 g bf df\ff) |
 
@@ -566,14 +574,18 @@ flute = \relative c' {
   } |
 
   \time 7/8
+  \shape #'((0 . 2) (0 . 1) (0 . 1) (0 . 1)) Slur
+  \tieDown
   f,,,\p\<(~
   <f'\flageolet f,\harmonic~>
   <c'\flageolet f,,\harmonic~>
   <f\flageolet f,,\harmonic~>
+  \tieNeutral
   <a\flageolet f,,\harmonic>\f) r4 |
 
   \tempo 4=92
   \time 3/4
+  \shape #'((0 . 0) (0 . 1) (0 . 1) (0 . 1)) Slur
   fs,,->\ff~(^\markup { \italic "molto accel." }
   \tuplet 7/4 { fs8\pppp cs'-> g'-> c-> e-> g-> a->) } |
 
