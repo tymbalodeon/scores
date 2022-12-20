@@ -182,5 +182,10 @@ clean *scores:
     fi
     for file in "${files[@]}"; do
         rm -f "${file}"
+        if [ -n "${OUTPUT_DIRECTORY}" ]; then
+            output_file="${OUTPUT_DIRECTORY}"/"${file:t}"
+            echo $output_file
+            rm -f "${output_file}"
+        fi
         echo "Removed ${file}".
     done
