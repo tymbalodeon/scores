@@ -111,9 +111,9 @@ _get_pdf_files ly_file:
     pdf_files=({{pdfs_directory}}/*"${score_title}"*(N))
     printf "%s" "${pdf_files[*]}"
 
-_run_lilypond_and_copy_to_output ly_file pdf_file:
+_run_lilypond_and_copy_to_output ly_file pdf_file settings:
     #!/usr/bin/env zsh
-    lilypond -o {{pdfs_directory}} {{ly_file}}
+    lilypond -dinclude-settings="{{settings}}" -o {{pdfs_directory}} {{ly_file}}
     if [ -n "${OUTPUT_DIRECTORY}" ]; then
         ly_file={{ly_file}}
         IFS=" " read -r -A pdf_files <<<"$(just _get_pdf_files "${ly_file}")"
@@ -123,7 +123,7 @@ _run_lilypond_and_copy_to_output ly_file pdf_file:
     fi
 
 # Create pdf(s).
-compile *scores:
+compile settings="letter.ily" *scores="":
     #!/usr/bin/env zsh
     IFS=" " read -r -A files <<<"$(just _get_files "ly" {{scores}})"
     if [ -z "${files[*]}" ]; then
@@ -134,7 +134,7 @@ compile *scores:
         without_extension="${file:r}"
         pdf_file={{pdfs_directory}}/"${without_extension:t}".pdf
         checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
-        just _run_lilypond_and_copy_to_output "${file}" "${pdf_file}"
+        just _run_lilypond_and_copy_to_output "${file}" "${pdf_file}" "{{settings}}"
     done
 
 # Open <score> in editor and pdf viewer, recompiling on file changes.
