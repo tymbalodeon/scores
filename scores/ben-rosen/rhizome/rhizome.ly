@@ -2,7 +2,7 @@
 
 \include "settings.ily"
 \include "style.ily"
-% \include "video-slides.ily"
+\include "video-slides.ily"
 
 \header {
   title = "Rhizome"
@@ -675,10 +675,22 @@ R1 |
   \override Hairpin.minimum-length = #8
 }
 
+music =
 \score {
   \new Staff \with {
     instrumentName = "Flute"
   } {
     \flute
   }
+}
+
+\book {
+  \music
+}
+
+\book {
+#(set-global-staff-size 10)
+  \bookOutputSuffix "video"
+  \video_slides
+  \music
 }

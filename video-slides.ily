@@ -1,5 +1,4 @@
-#(set-global-staff-size 18)
-
+video_slides =
 \paper {
   #(set! paper-alist (cons '("video-slides" . (cons (* 9 in) (* 5.06525 in)))
                       paper-alist))
