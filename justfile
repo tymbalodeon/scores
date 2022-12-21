@@ -134,7 +134,7 @@ compile *scores:
         without_extension="${file:r}"
         pdf_file={{pdfs_directory}}/"${without_extension:t}".pdf
         checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
-        just _run_lilypond_and_copy_to_output "${file}" "${pdf_file}"
+            just _run_lilypond_and_copy_to_output "${file}" "${pdf_file}"
     done
 
 # Open <score> in editor and pdf viewer, recompiling on file changes.
@@ -198,6 +198,7 @@ update *scores:
     fi
     for file in "${files[@]}"; do
         convert-ly --current-version --edit "${file}"
+        rm -f "${file}"~
     done
 
 # Install dependencies.
