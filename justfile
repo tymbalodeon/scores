@@ -202,4 +202,5 @@ update *scores:
 
 # Install dependencies.
 install:
+    #!/usr/bin/env zsh
     ./install-dependencies
