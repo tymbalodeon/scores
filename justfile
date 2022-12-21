@@ -122,8 +122,7 @@ _run_lilypond_and_copy_to_output ly_file pdf_file:
         done
     fi
 
-# Create pdf(s).
-compile *scores:
+_run_checkexec command *scores:
     #!/usr/bin/env zsh
     IFS=" " read -r -A files <<<"$(just _get_files "ly" {{scores}})"
     if [ -z "${files[*]}" ]; then
@@ -134,8 +133,15 @@ compile *scores:
         without_extension="${file:r}"
         pdf_file={{pdfs_directory}}/"${without_extension:t}".pdf
         checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
-            just _run_lilypond_and_copy_to_output "${file}" "${pdf_file}"
+            {{command}}
     done
+
+# Create pdf(s).
+compile *scores:
+    #!/usr/bin/env zsh
+    just _run_checkexec \
+        'just _run_lilypond_and_copy_to_output \
+            "${file}" "${pdf_file}"' {{scores}}
 
 # Open <score> in editor and pdf viewer, recompiling on file changes.
 edit score: (compile score)
@@ -205,3 +211,15 @@ update *scores:
 install:
     #!/usr/bin/env zsh
     ./install-dependencies
+
+_display_score_name score:
+    #!/usr/bin/env python
+    score = "{{score}}"
+    score = score.replace("-", " ")
+    score = score.title()
+    print(score)
+
+# List scores with outdated or non-existent pdfs.
+outdated *scores:
+    #!/usr/bin/env zsh
+    just _run_checkexec 'just _display_score_name "${pdf_file:t:r}"' {{scores}}
