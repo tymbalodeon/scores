@@ -24,7 +24,7 @@ dependencies.
 
 ## Tasks
 
-This project uses `[just](https://just.systems/man/en/ "just")` as a task
+This project uses [`just`](https://just.systems/man/en/ "just") as a task
 runner. Available commands:
 
 - Show available commands: `just`
