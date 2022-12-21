@@ -24,16 +24,18 @@ dependencies.
 
 ## Tasks
 
-Available commands (can be shown by running `just`):
+This project uses `[just](https://just.systems/man/en/ "just")` as a task
+runner. Available commands:
 
-- Remove pdf(s): `clean *scores`
-- Create pdf(s): `compile *scores`
+- Show available commands: `just`
+- Remove pdf(s): `just clean *scores`
+- Create pdf(s): `just compile *scores`
 - Create new score template, and optionally edit ("--edit"):
-  `create type composer title *edit`
+  `just create type composer title *edit`
 - Open \<score\> in editor and pdf viewer, recompiling on file changes:
-  `edit score`
-- Install dependencies: `install`
-- List pdf(s): `list *scores`
-- Open pdf(s): `open *scores`
-- List scores with outdated or non-existent pdfs: `outdated *scores`
-- Update lilypond version: `update *scores`
+  `just edit score`
+- Install dependencies: `just install`
+- List pdf(s): `just list *scores`
+- Open pdf(s): `just open *scores`
+- List scores with outdated or non-existent pdfs: `just outdated *scores`
+- Update lilypond version: `just update *scores`
