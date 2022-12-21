@@ -184,8 +184,18 @@ clean *scores:
         rm -f "${file}"
         if [ -n "${OUTPUT_DIRECTORY}" ]; then
             output_file="${OUTPUT_DIRECTORY}"/"${file:t}"
-            echo $output_file
             rm -f "${output_file}"
         fi
         echo "Removed ${file}".
+    done
+
+# Update lilypond version.
+update *scores:
+    #!/usr/bin/env zsh
+    IFS=" " read -r -A files <<<"$(just _get_files "ly" {{scores}})"
+    if [ -z "${files[*]}" ]; then
+        exit
+    fi
+    for file in "${files[@]}"; do
+        convert-ly --current-version --edit "${file}"
     done
