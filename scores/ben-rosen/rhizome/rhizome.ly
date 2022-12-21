@@ -310,36 +310,36 @@ flute = \relative c' {
   \xNotesOff
   r4 \acciaccatura { es,16-.\fff c-. } r2 |
 
-  \tempo 4 = 120
+  \tempo 4=120
   \override TextSpanner.bound-details.left.text = "molto accel."
   es,8\ppp\<(\startTextSpan f gf es f gf)\stopTextSpan
 
   \time 6/8
   \tuplet 4/6 {
-    es16( f \acciaccatura d''-> gf,, es
+    es16( f \slashedGrace d''-> gf,, es
   }
   \tuplet 4/6 {
-    f gf \acciaccatura d''-> es,, f)
+    f gf \slashedGrace d''-> es,, f)
   } |
 
   \time 3/4
-  \acciaccatura d''16->
+  \slashedGrace d''16->
   \tuplet 3/2 {
     gf,,8( es
-    \acciaccatura gf''16-> f,,8
+    \slashedGrace gf''16-> f,,8
   }
   \tuplet 3/2 {
-    gf8 es \acciaccatura gf''16-> f,,8
+    gf8 es \slashedGrace gf''16-> f,,8
   }
   \tuplet 3/2 { gf8 es f) } |
 
   \time 4/4
-  \acciaccatura a''16-> es,16( f gf es
+  \slashedGrace a''16-> es,16( f gf es
   \tuplet 5/4 {
-    f \acciaccatura a'-> gf, es f \acciaccatura b'-> gf,
+    f \slashedGrace a'-> gf, es f \slashedGrace b'-> gf,
   }
   \tuplet 3/2 { es f gf }
-  \tuplet 3/2 { es f \acciaccatura b'-> gf,\f) } r4 |
+  \tuplet 3/2 { es f \slashedGrace b'-> gf,\f) } r4 |
 
   \tempo 4 = 80
   \tuplet 3/2 { d,16\pp\<( a' fs }
@@ -364,13 +364,13 @@ flute = \relative c' {
   \time 2/4
   R2 |
 
-  \tempo 4 = 54
+  \tempo 4=54
   \time 3/4
   \acciaccatura d16->\sfz
   \tuplet 3/2 { cs,,,4\pp\glissando cqs\glissando c! } r4 |
 
   \time 2/4
-  \acciaccatura fs''16->\sfz
+  \slashedGrace fs''16->\sfz
   R2 |
 
   \tempo 4 = 72
