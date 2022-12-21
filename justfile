@@ -59,16 +59,14 @@ _prepend_titles title file:
         sed -i "" -e "s/${filetype}.ily/{{title}}-${filetype}.ily/g" {{file}}
     done
 
-_convert_to_titlecase word:
-    #!/usr/bin/env python
-    word = "{{word}}"
-    word = word.replace("-", " ").title()
-    print(word)
+_display_title_case word:
+    #!/usr/bin/env zsh
+    echo {{titlecase(word)}}
 
 _add_title_and_composer title composer file:
     #!/usr/bin/env zsh
-    title="$(just _convert_to_titlecase {{title}})"
-    composer="$(just _convert_to_titlecase {{composer}})"
+    title="$(just _display_title_case {{title}})"
+    composer="$(just _display_title_case {{composer}})"
     sed -i "" -e "s/Title/${title}/g" {{file}}
     sed -i "" -e "s/Composer/${composer}/g" {{file}}
 
@@ -212,14 +210,7 @@ install:
     #!/usr/bin/env zsh
     ./install-dependencies
 
-_display_score_name score:
-    #!/usr/bin/env python
-    score = "{{score}}"
-    score = score.replace("-", " ")
-    score = score.title()
-    print(score)
-
 # List <scores> with outdated or non-existent pdfs.
 outdated *scores:
     #!/usr/bin/env zsh
-    just _run_checkexec 'just _display_score_name "${pdf_file:t:r}"' {{scores}}
+    just _run_checkexec 'just _display_title_case "${pdf_file:t:r}"' {{scores}}
