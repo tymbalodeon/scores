@@ -15,7 +15,7 @@ install_dependency() {
             curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
             ;;
         "lilypond")
-            brew install lilypond-unstable
+            brew install lilypond
             ;;
         "just")
             brew install just
