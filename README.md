@@ -37,5 +37,5 @@ runner. Available commands:
 - Install dependencies: `just install`
 - List pdf(s): `just list *scores`
 - Open pdf(s): `just open *scores`
-- List scores with outdated or non-existent pdfs: `just outdated *scores`
+- List \<scores\> with outdated or non-existent pdfs: `just outdated *scores`
 - Update lilypond version: `just update *scores`
