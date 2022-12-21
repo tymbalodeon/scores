@@ -37,7 +37,7 @@ install_dependency() {
 
 check_dependency() {
     if command -v "${1}" &>/dev/null; then
-        echo "\"${1}\" installed."
+        echo "\"${1}\" already installed."
     else
         echo "Installing ${1}..."
         install_dependency "${1}"
@@ -49,7 +49,7 @@ for dependency in "${dependencies[@]}"; do
 done
 
 if mdfind -name "kMDItemFSName == '*.app'" | grep "Skim" &>/dev/null; then
-    echo '"Skim" installed.'
+    echo '"Skim" already installed.'
 else
     echo "Installing Skim..."
     install_dependency "Skim"

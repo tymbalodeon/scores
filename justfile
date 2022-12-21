@@ -199,3 +199,7 @@ update *scores:
     for file in "${files[@]}"; do
         convert-ly --current-version --edit "${file}"
     done
+
+# Install dependencies.
+install:
+    ./install-dependencies
