@@ -25,5 +25,8 @@ Available commands (can be shown by running `just`):
 - Create pdf(s): `compile *scores`
 - Create new score template, and optionally edit ("--edit"): `create type composer title *edit`
 - Open \<score\> in editor and pdf viewer, recompiling on file changes: `edit score`
+- Install dependencies: `install`
 - List pdf(s): `list *scores`
 - Open pdf(s): `open *scores`
+- List scores with outdated or non-existent pdfs: `outdated *scores`
+- Update lilypond version: `update *scores`
