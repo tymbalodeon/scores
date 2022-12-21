@@ -30,8 +30,10 @@ runner. Available commands:
 - `just`: Show available commands
 - `just clean * scores`: Remove pdf(s).
 - `just compile *scores`: Create pdf(s).
-- `just create type composer title *edit`: Create new score template, and optionally edit ("--edit").
-- `just edit score`: Open \<score\> in editor and pdf viewer, recompiling on file changes.
+- `just create type composer title *edit`: Create new score template, and
+  optionally edit ("--edit").
+- `just edit score`: Open \<score\> in editor and pdf viewer, recompiling on
+  file changes.
 - `just install`: Install dependencies.
 - `just list *scores`: List pdf(s).
 - `just open *scores`: Open pdf(s).
