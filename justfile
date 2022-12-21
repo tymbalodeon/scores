@@ -195,7 +195,7 @@ clean *scores:
         echo "Removed ${file}".
     done
 
-# Update lilypond version.
+# Update lilypond version in <scores>.
 update *scores:
     #!/usr/bin/env zsh
     IFS=" " read -r -A files <<<"$(just _get_files "ly" {{scores}})"
@@ -219,7 +219,7 @@ _display_score_name score:
     score = score.title()
     print(score)
 
-# List scores with outdated or non-existent pdfs.
+# List <scores> with outdated or non-existent pdfs.
 outdated *scores:
     #!/usr/bin/env zsh
     just _run_checkexec 'just _display_score_name "${pdf_file:t:r}"' {{scores}}
