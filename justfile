@@ -193,16 +193,28 @@ clean *scores:
         echo "Removed ${file}".
     done
 
+_get_lilypond_version:
+    #!/usr/bin/env zsh
+    version_text=$(lilypond --version)
+    first_line=$(echo "${version_text}" | head -1)
+    version_number=$(echo "${first_line}" | grep -o "[0-9]\.[0-9]\{2\}\.[0-9]")
+    echo "${version_number}"
+
 # Update lilypond version in <scores>.
 update *scores:
     #!/usr/bin/env zsh
-    IFS=" " read -r -A files <<<"$(just _get_files "ly" {{scores}})"
-    if [ -z "${files[*]}" ]; then
+    ly_files=(**/**.ly(N))
+    IFS=" " read -r -A files <<<"${ly_files}"
+    if [ -z "${files[*]}" ] || ! command -v lilypond &>/dev/null; then
         exit
     fi
+    current_lilypond_version=$(just _get_lilypond_version)
     for file in "${files[@]}"; do
-        convert-ly --current-version --edit "${file}"
-        rm -f "${file}"~
+        file_version=$(grep -o "${current_lilypond_version}" "${file}")
+        if [ "${file_version}" != "${current_lilypond_version}" ]; then
+            convert-ly --current-version --edit "${file}"
+            rm -f "${file}"~
+        fi
     done
 
 # Install dependencies.
