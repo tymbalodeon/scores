@@ -4,7 +4,11 @@ intro = {
 
 verse = \relative c'' {
   r8 bf16 bf bf8 bf bf bf g g |
-  R1 * 8
+  bf4 g8 d'~( d bf4 a8~ |
+  a) a8 a4 a a8 a |
+  gs4 a8 c8~( c a4 g8~ |
+  g) r8 r2. |
+  R1 * 4 |
 }
 
 chorus = \relative c' {

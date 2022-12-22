@@ -4,8 +4,8 @@ intro = \lyricmode {
 }
 
 verse_one = \lyricmode {
-  Did -- n't know what time it was, the lights were low
-  I leaned back on my radio
+  Did -- n't know what time it was, the lights were low _ _ _ _
+  I leaned back on my ra -- di -- o _ _ _ _
   Some cat was laying down some rock 'n' roll
   "Lotta soul," he said
   Then the loud sound did seem to fade
@@ -39,6 +39,6 @@ la = \lyricmode {
   La, la, la, la-la, la, la, la
 }
 
-words = {
+words = \lyricmode {
   \verse_one
 }
