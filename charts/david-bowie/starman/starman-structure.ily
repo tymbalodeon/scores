@@ -1,5 +1,4 @@
-key_and_time = {
-  \key c \major
+key_and_time = { \key c \major
   \time 4/4
 }
 
@@ -55,6 +54,7 @@ structure_solo = {
 
 structure = {
   \key_and_time
+  \intro
   \verse
   \chorus
 }

@@ -4,6 +4,7 @@
 \include "style.ily"
 \include "starman-melody.ily"
 \include "starman-changes.ily"
+\include "starman-lyrics.ily"
 \include "starman-structure.ily"
 
 \header {
@@ -32,7 +33,10 @@ melody = \new Staff {
     <<
       \numericTimeSignature
       \changes
-      \melody
+      <<
+        \melody
+        \addlyrics \words
+      >>
     >>
   }
 }

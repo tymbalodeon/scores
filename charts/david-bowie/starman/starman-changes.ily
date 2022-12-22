@@ -2,6 +2,7 @@ intro = \chordmode {
   bf1:maj/a |
   s |
   f:maj7 |
+  s |
 }
 
 verse = \chordmode {
@@ -50,6 +51,7 @@ changes_solo = \chords {
 }
 
 changes = \chords {
+  \intro
   \verse
   \chorus
 }
