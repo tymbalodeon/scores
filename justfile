@@ -26,25 +26,25 @@ _get_new_score_name score_directory title type template:
     #!/usr/bin/env zsh
     template_path={{template}}
     if [ {{type}} = "piano" ]; then
-        extension=."${template_path:e}"
+        extension=".${template_path:e}"
     else
-        extension=-"${template_path:t}"
+        extension="-${template_path:t}"
     fi
     printf "%s" {{score_directory}}/{{title}}"${extension}"
 
 _copy_template_files type composer title:
     #!/usr/bin/env zsh
-    parent_directory=$(just _get_new_score_parent_directory {{type}})
+    parent_directory="$(just _get_new_score_parent_directory {{type}})"
     score_directory=./"${parent_directory}"/{{composer}}/{{title}}
     if [ -d "${score_directory}" ]; then
         exit
     fi
     mkdir -p "${score_directory}"
     for template in ./templates/{{type}}*/*; do
-        new_score=$(
+        new_score="$(
             just _get_new_score_name \
                 "${score_directory}" {{title}} {{type}} "${template}"
-        )
+        )"
         if test -f "${new_score}"; then
             continue
         fi
@@ -84,7 +84,7 @@ create type composer title *edit:
     #!/usr/bin/env zsh
     just _copy_template_files {{type}} {{composer}} {{title}}
     just _add_new_score_values {{type}} {{composer}} {{title}}
-    if [ "{{edit}}" = "--edit" ]; then
+    if [ {{edit}} = "--edit" ]; then
         just edit {{title}}
     fi
 
@@ -195,9 +195,9 @@ clean *scores:
 
 _get_lilypond_version:
     #!/usr/bin/env zsh
-    version_text=$(lilypond --version)
-    first_line=$(echo "${version_text}" | head -1)
-    version_number=$(echo "${first_line}" | grep -o "[0-9]\.[0-9]\{2\}\.[0-9]")
+    version_text="$(lilypond --version)"
+    first_line="$(echo "${version_text}" | head -1)"
+    version_number="$(echo "${first_line}" | grep -o "[0-9]\.[0-9]\{2\}\.[0-9]")"
     echo "${version_number}"
 
 # Update lilypond version in <scores>.
@@ -208,9 +208,9 @@ update *scores:
     if [ -z "${files[*]}" ] || ! command -v lilypond &>/dev/null; then
         exit
     fi
-    current_lilypond_version=$(just _get_lilypond_version)
+    current_lilypond_version="$(just _get_lilypond_version)"
     for file in "${files[@]}"; do
-        file_version=$(grep -o "${current_lilypond_version}" "${file}")
+        file_version="$(grep -o "${current_lilypond_version}" "${file}")"
         if [ "${file_version}" != "${current_lilypond_version}" ]; then
             convert-ly --current-version --edit "${file}"
             rm -f "${file}"~
@@ -226,3 +226,4 @@ install:
 outdated *scores:
     #!/usr/bin/env zsh
     just _run_checkexec 'just _display_title_case "${pdf_file:t:r}"' {{scores}}
+
