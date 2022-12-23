@@ -8,7 +8,7 @@ export OUTPUT_DIRECTORY := ```
     printf "%s" "${OUTPUT_DIRECTORY}"
 ```
 
-ly_directories := "(^templates/)#**"
+non_template_files := "(^templates/)#*"
 pdfs_directory := "./pdfs"
 
 @_help:
@@ -89,11 +89,11 @@ _get_files extension *scores:
     setopt extendedglob
     scores=({{scores}})
     if [ -z "${scores[*]}" ]; then
-        files=({{ly_directories}}.{{extension}}(N))
+        files=({{non_template_files}}.{{extension}}(N))
     else
         files=()
         for file in "${scores[@]}"; do
-            files+=({{ly_directories}}"${file}"*.{{extension}}(N))
+            files+=({{non_template_files}}"${file}"*.{{extension}}(N))
         done
     fi
     printf "%s" "${files[*]}"
