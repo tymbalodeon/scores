@@ -193,7 +193,9 @@ _get_lilypond_version:
     #!/usr/bin/env zsh
     version_text="$(lilypond --version)"
     first_line="$(echo "${version_text}" | head -1)"
-    version_number="$(echo "${first_line}" | grep -o "[0-9]\.[0-9]\{2\}\.[0-9]")"
+    version_number="$(
+        echo "${first_line}" | grep -o "[0-9]\.[0-9]\{2\}\.[0-9]"
+    )"
     echo "${version_number}"
 
 # Update lilypond version in <scores>.
