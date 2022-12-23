@@ -24,11 +24,10 @@ _get_new_score_parent_directory type:
 
 _get_new_score_name score_directory title type template:
     #!/usr/bin/env zsh
-    template_path={{template}}
     if [ {{type}} = "piano" ]; then
-        extension=".${template_path:e}"
+        extension=".{{extension(template)}}"
     else
-        extension="-${template_path:t}"
+        extension="-{{file_name(template)}}"
     fi
     printf "%s" {{score_directory}}/{{title}}"${extension}"
 
@@ -100,17 +99,15 @@ _get_files extension *scores:
 
 _get_pdf_files ly_file:
     #!/usr/bin/env zsh
-    ly_file={{ly_file}}
-    score_title="${ly_file:r:t}"
+    score_title={{file_stem(ly_file)}}
     pdf_files=({{pdfs_directory}}/*"${score_title}"*(N))
     printf "%s" "${pdf_files[*]}"
 
-_run_lilypond_and_copy_to_output ly_file pdf_file:
+_run_lilypond_and_copy_to_output ly_file:
     #!/usr/bin/env zsh
     lilypond -o {{pdfs_directory}} {{ly_file}}
     if [ -n "${OUTPUT_DIRECTORY}" ]; then
-        ly_file={{ly_file}}
-        IFS=" " read -r -A pdf_files <<<"$(just _get_pdf_files "${ly_file}")"
+        IFS=" " read -r -A pdf_files <<<"$(just _get_pdf_files {{ly_file}})"
         for file in "${pdf_files[@]}"; do
             cp "${file}" "${OUTPUT_DIRECTORY}"
         done
@@ -134,8 +131,7 @@ _run_checkexec command *scores:
 compile *scores:
     #!/usr/bin/env zsh
     just _run_checkexec \
-        'just _run_lilypond_and_copy_to_output \
-            "${file}" "${pdf_file}"' {{scores}}
+        'just _run_lilypond_and_copy_to_output "${file}"' {{scores}}
 
 # Open <score> in editor and pdf viewer, recompiling on file changes.
 edit score: (compile score)
