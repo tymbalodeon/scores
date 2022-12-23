@@ -158,6 +158,47 @@ list *scores:
         echo "${file}"
     done
 
+_get_sorted_score_names:
+    #!/usr/bin/env zsh
+    score_directories=(**/.(e\''test -z $REPLY/*(/DN[1])'\':h))
+    scores=()
+    for score in "${score_directories[@]}"; do
+        if [[ ("${score}" != pdfs* && "${score}" != templates*) ]]; then
+            score_name="${score:t}"
+            scores+=("${score_name}")
+        fi
+    done
+    IFS=$'\n' scores=($(sort <<<"${scores[*]}"))
+    printf "%s" "${scores[*]}"
+
+list-scores:
+    #!/usr/bin/env zsh
+    scores=($(just _get_sorted_score_names))
+    outdated_scores=($(just _get_outdated))
+    results="TITLE;PDF STATUS\n-----;----------\n"
+    for score in "${scores[@]}"; do
+        file_name="${score}"
+        score="${score//-/ }"
+        score="${(C)score}"
+        results+="${score};"
+        pdf_files=(**/**"${file_name}"*.pdf(N))
+        if [ "${pdf_files}" = "" ]; then
+            pdf_status="NO PDF"
+        else
+            pdf_status="up to date"
+        fi
+        for file in "${pdf_files[@]}"; do
+            file_stem="${file:t:r}"
+            score_name="${file_stem//-form/}"
+            score_name="${score_name//-video/}"
+            if ((${outdated_scores[(Ie)${score_name}]})); then
+                pdf_status="OUTDATED"
+            fi
+        done
+        results+="${pdf_status:-}\n"
+    done
+    echo "${results}" | column -t -s ";"
+
 # Open pdf(s).
 open *scores:
     #!/usr/bin/env zsh
@@ -216,7 +257,15 @@ install:
     #!/usr/bin/env zsh
     ./install-dependencies
 
+_get_outdated *scores:
+    #!/usr/bin/env zsh
+    just _run_checkexec \ 'echo "${pdf_file:t:r}"' {{scores}}
+
 # List <scores> with outdated or non-existent pdfs.
 outdated *scores:
     #!/usr/bin/env zsh
-    just _run_checkexec \ 'echo "${(C)${pdf_file:t:r}//-/ }"' {{scores}}
+    outdated_scores=($(just _get_outdated {{scores}}))
+    IFS=$'\n' outdated_scores=($(sort <<<"${outdated_scores[*]}"))
+    for file in "${outdated_scores[@]}"; do
+        echo "${(C)file//-/ }"
+    done
