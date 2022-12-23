@@ -59,14 +59,10 @@ _prepend_titles title file:
         sed -i "" -e "s/${filetype}.ily/{{title}}-${filetype}.ily/g" {{file}}
     done
 
-_display_title_case word:
-    #!/usr/bin/env zsh
-    echo {{titlecase(word)}}
-
 _add_title_and_composer title composer file:
     #!/usr/bin/env zsh
-    title="$(just _display_title_case {{title}})"
-    composer="$(just _display_title_case {{composer}})"
+    title={{titlecase(title)}}
+    composer={{titlecase(composer)}}
     sed -i "" -e "s/Title/${title}/g" {{file}}
     sed -i "" -e "s/Composer/${composer}/g" {{file}}
 
@@ -222,8 +218,11 @@ install:
     #!/usr/bin/env zsh
     ./install-dependencies
 
+_display_title_case word:
+    #!/usr/bin/env zsh
+    echo {{titlecase(word)}}
+
 # List <scores> with outdated or non-existent pdfs.
 outdated *scores:
     #!/usr/bin/env zsh
     just _run_checkexec 'just _display_title_case "${pdf_file:t:r}"' {{scores}}
-
