@@ -7,13 +7,8 @@ intro = {
 }
 
 verse = {
-  \repeat volta 2 {
-    s1 * 6 |
-    \alternative {
-      \volta 1 { s1 }
-      \volta 2 { s1 * 2 }
-    }
-  }
+  s1 * 7 |
+  s1 * 8 |
 }
 
 chorus = {
@@ -36,7 +31,13 @@ structure_intro = {
 
 structure_verse = {
   \key_and_time
-  \verse
+  \repeat volta 2 {
+    s1 * 6 |
+    \alternative {
+      \volta 1 { s1 }
+      \volta 2 { s1 * 2 }
+    }
+  }
   \bar "||"
 }
 

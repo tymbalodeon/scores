@@ -8,13 +8,13 @@ verse_one = \lyricmode {
   I leaned back on my ra -- di -- o __ _ _ _ _
   Some cat was lay -- ing down some rock 'n' roll
   'Lot -- ta soul,' he said
-  Then the loud sound did seem to fade
-  Came back like a slow voice on a wave of phase
-  That weren't no DJ, that was hazy cosmic jive
+  Then the loud sound did seem to fade __ _ _ _ _
+  Came back like a slow voice on a wave of phase __ _ _ _ _
+  That weren't no D -- J, that was ha -- zy cos -- mic jive __ _ _
 }
 
 chorus = \lyricmode {
-  There's a starman waiting in the sky
+  There's a Star -- man wait -- ing in the sky
   He'd like to come and meet us
   But he thinks he'd blow our minds
   There's a starman waiting in the sky
@@ -41,4 +41,6 @@ la = \lyricmode {
 
 words = \lyricmode {
   \verse_one
+  \chorus
+  \verse_two
 }

@@ -5,16 +5,19 @@ intro = \chordmode {
   s |
 }
 
-verse = \chordmode {
+verse_part_one = \chordmode {
   g1:m  |
   s |
   f  |
   s |
   c  |
   c:7 |
+}
 
+verse = \chordmode {
+  \verse_part_one
   f2 af4 bf |
-
+  \verse_part_one
   a1 |
   g |
 }
@@ -39,7 +42,12 @@ changes_intro = \chords {
 }
 
 changes_verse = \chords {
-  \verse
+  \verse_part_one
+
+  f2 af4 bf |
+
+  a1 |
+  g |
 }
 
 changes_chorus = \chords {
