@@ -17,4 +17,3 @@
                (set! current-line-lengths line-lengths-in-bars)
                (set! current-line-lengths (cdr current-line-lengths)))
               (set! total (+ total (car current-line-lengths))))))))))))
-
