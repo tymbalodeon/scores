@@ -43,7 +43,7 @@ chorus = \relative c' {
 }
 
 guitar = \new CueVoice \relative c'' {
-  s1 * 30 |
+  s1 * 34 |
   d4 r8 d~ d c4 bf8 |
   a4 r8 a~ a bf4 c8 |
   e4 r8 e~ e d4 c8 |
