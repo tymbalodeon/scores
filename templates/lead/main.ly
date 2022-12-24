@@ -2,9 +2,12 @@
 
 \include "settings.ily"
 \include "style.ily"
-\include "melody.ily"
+
 \include "changes.ily"
+\include "lyrics.ily"
+\include "melody.ily"
 \include "structure.ily"
+
 
 \header {
   title = "Title"
@@ -13,7 +16,7 @@
 
 melody = \new Staff {
   <<
-    \melody
+    \melody \addlyrics \words
     \structure
   >>
 }

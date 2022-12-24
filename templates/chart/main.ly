@@ -2,8 +2,10 @@
 
 \include "settings.ily"
 \include "style.ily"
-\include "melody.ily"
+
 \include "changes.ily"
+\include "lyrics.ily"
+\include "melody.ily"
 \include "structure.ily"
 
 \header {
