@@ -242,14 +242,14 @@ _get_sorted_score_names *scores:
     if [[ ! -z "{{scores}}" ]]; then
         for search_term in {{scores}}; do
             for score in "${score_directories[@]}"; do
-                if [[ "${score:t}" = *"${search_term}"* ]]; then
-                    scores+=("${score:t}")
+                if [[ "${score}" = *"${search_term}"* ]]; then
+                    scores+=("${score}")
                 fi
             done
         done
     else
         for score in "${score_directories[@]}"; do
-            scores+=("${score:t}")
+            scores+=("${score}")
         done
     fi
     IFS=$'\n' scores=($(sort <<<"${scores[*]}"))
@@ -260,12 +260,13 @@ status *scores:
     #!/usr/bin/env zsh
     scores=($(just _get_sorted_score_names {{scores}}))
     outdated_scores=($(just _get_outdated))
-    results="TITLE;PDF STATUS\n-----;----------\n"
+    results="ARTIST;TITLE;PDF STATUS\n-----;----------;----------\n"
     for score in "${scores[@]}"; do
-        file_name="${score}"
+        file_name="${score:t}"
         score="${score//-/ }"
         score="${(C)score}"
-        results+="${score};"
+        artist="${score:h:t}"
+        results+="${artist};${score:t};"
         pdf_files=(**/**"${file_name}"*.pdf(N))
         if [ "${pdf_files}" = "" ]; then
             pdf_status="NO PDF"
