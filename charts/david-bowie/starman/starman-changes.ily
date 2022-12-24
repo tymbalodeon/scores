@@ -83,4 +83,7 @@ changes = \chords {
   \chorus
   \solo
   \verse
+  \repeat unfold 2 {
+    \chorus
+  }
 }

@@ -26,8 +26,7 @@ verse_one = \relative c'' {
   r2 r4 g8 a |
 }
 
-chorus = \relative c' {
-  f2 f' |
+chorus_base = \relative c'' {
   e8 d16 c~ c8 d c4 r8 d |
   e8 d c16 d8. c16 d8. r8 d16 d |
   e8 d c16 d8. c8 r g f |
@@ -40,6 +39,11 @@ chorus = \relative c' {
   f8 r f g16 f~ f8 g f g8 |
   r4 c,8 d16 c~ c8 d c d8 |
   r8 g,16 g~ g8 g c8 d a16( g) f8 |
+}
+
+chorus = \relative c' {
+  f2 f' |
+  \chorus_base
 }
 
 guitar = \new CueVoice \relative c'' {
@@ -77,6 +81,11 @@ verse_two = \relative c'' {
   r2 r4 g8 a |
 }
 
+final_chorus = \relative c' {
+  r4 f f'2 |
+  \chorus_base
+}
+
 melody = {
   \intro
   \verse_one
@@ -84,4 +93,5 @@ melody = {
   \solo
   \verse_two
   \chorus
+  \final_chorus
 }

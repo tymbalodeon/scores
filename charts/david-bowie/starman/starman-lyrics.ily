@@ -14,8 +14,8 @@ verse_one = \lyricmode {
   That weren't no D -- J, that was ha -- zy cos -- mic jive __
 }
 
-chorus = \lyricmode {
-  There's a Star -- man wait -- ing in the sky
+chorus_base = \lyricmode {
+  Star -- man wait -- ing in the sky
   He'd like to come and meet us
   But he thinks he'd blow our minds
 
@@ -27,6 +27,11 @@ chorus = \lyricmode {
   Let the child -- ren lose it
   Let the child -- ren use it
   Let all the child -- ren boo -- gie
+}
+
+chorus = \lyricmode {
+  There's a
+ \chorus_base
 }
 
 verse_two = \lyricmode {
@@ -49,4 +54,5 @@ words = \lyricmode {
   \chorus
   \verse_two
   \chorus
+  \chorus_base
 }

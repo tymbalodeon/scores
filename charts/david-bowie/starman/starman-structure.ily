@@ -60,5 +60,7 @@ structure = {
   \verse
   \chorus
   \solo
-  \chorus
+  \repeat unfold 2 {
+    \chorus
+  }
 }
