@@ -38,4 +38,5 @@ runner. Available commands:
 - `just list *scores`: List pdf(s).
 - `just open *scores`: Open pdf(s).
 - `just outdated *scores`: List \<scores\> with outdated or non-existent pdfs.
+- `just status *scores`: Show status of pdf(s) for \<scores\>.
 - `just update *scores`: Update lilypond version in \<scores\>.

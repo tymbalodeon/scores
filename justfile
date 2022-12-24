@@ -158,60 +158,6 @@ list *scores:
         echo "${file}"
     done
 
-_get_sorted_score_names *scores:
-    #!/usr/bin/env zsh
-    score_directories=(
-        **/.(Ne: \
-            '[[ $REPLY != pdfs* ]] \
-                && [[ $REPLY != templates* ]]  \
-                && test -z $REPLY/*(/N[1])' \
-        ::h)
-    )
-    scores=()
-    if [[ ! -z "{{scores}}" ]]; then
-        for search_term in {{scores}}; do
-            for score in "${score_directories[@]}"; do
-                if [[ "${score:t}" = *"${search_term}"* ]]; then
-                    scores+=("${score:t}")
-                fi
-            done
-        done
-    else
-        for score in "${score_directories[@]}"; do
-            scores+=("${score:t}")
-        done
-    fi
-    IFS=$'\n' scores=($(sort <<<"${scores[*]}"))
-    printf "%s" "${scores[*]}"
-
-list-scores *scores:
-    #!/usr/bin/env zsh
-    scores=($(just _get_sorted_score_names {{scores}}))
-    outdated_scores=($(just _get_outdated))
-    results="TITLE;PDF STATUS\n-----;----------\n"
-    for score in "${scores[@]}"; do
-        file_name="${score}"
-        score="${score//-/ }"
-        score="${(C)score}"
-        results+="${score};"
-        pdf_files=(**/**"${file_name}"*.pdf(N))
-        if [ "${pdf_files}" = "" ]; then
-            pdf_status="NO PDF"
-        else
-            pdf_status="up to date"
-        fi
-        for file in "${pdf_files[@]}"; do
-            file_stem="${file:t:r}"
-            score_name="${file_stem//-form/}"
-            score_name="${score_name//-video/}"
-            if ((${outdated_scores[(Ie)${score_name}]})); then
-                pdf_status="OUTDATED"
-            fi
-        done
-        results+="${pdf_status:-}\n"
-    done
-    echo "${results}" | column -t -s ";"
-
 # Open pdf(s).
 open *scores:
     #!/usr/bin/env zsh
@@ -282,3 +228,58 @@ outdated *scores:
     for file in "${outdated_scores[@]}"; do
         echo "${(C)file//-/ }"
     done
+
+_get_sorted_score_names *scores:
+    #!/usr/bin/env zsh
+    score_directories=(
+        **/.(Ne: \
+            '[[ $REPLY != pdfs* ]] \
+                && [[ $REPLY != templates* ]]  \
+                && test -z $REPLY/*(/N[1])' \
+        ::h)
+    )
+    scores=()
+    if [[ ! -z "{{scores}}" ]]; then
+        for search_term in {{scores}}; do
+            for score in "${score_directories[@]}"; do
+                if [[ "${score:t}" = *"${search_term}"* ]]; then
+                    scores+=("${score:t}")
+                fi
+            done
+        done
+    else
+        for score in "${score_directories[@]}"; do
+            scores+=("${score:t}")
+        done
+    fi
+    IFS=$'\n' scores=($(sort <<<"${scores[*]}"))
+    printf "%s" "${scores[*]}"
+
+# Show status of pdf(s) for <scores>.
+status *scores:
+    #!/usr/bin/env zsh
+    scores=($(just _get_sorted_score_names {{scores}}))
+    outdated_scores=($(just _get_outdated))
+    results="TITLE;PDF STATUS\n-----;----------\n"
+    for score in "${scores[@]}"; do
+        file_name="${score}"
+        score="${score//-/ }"
+        score="${(C)score}"
+        results+="${score};"
+        pdf_files=(**/**"${file_name}"*.pdf(N))
+        if [ "${pdf_files}" = "" ]; then
+            pdf_status="NO PDF"
+        else
+            pdf_status="up to date"
+        fi
+        for file in "${pdf_files[@]}"; do
+            file_stem="${file:t:r}"
+            score_name="${file_stem//-form/}"
+            score_name="${score_name//-video/}"
+            if ((${outdated_scores[(Ie)${score_name}]})); then
+                pdf_status="OUTDATED"
+            fi
+        done
+        results+="${pdf_status:-}\n"
+    done
+    echo "${results}" | column -t -s ";"
