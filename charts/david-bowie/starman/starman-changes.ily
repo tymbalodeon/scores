@@ -72,4 +72,5 @@ changes = \chords {
   \intro
   \verse
   \chorus
+  \verse
 }

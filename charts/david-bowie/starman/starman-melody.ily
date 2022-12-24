@@ -2,7 +2,7 @@ intro = {
   R1 * 4 |
 }
 
-verse = \relative c'' {
+verse_one = \relative c'' {
   r8 bf16 bf bf8 bf bf bf g g |
   bf4 g8 d'~( d bf4 a8~ |
   a) a8 a4 a a8 a |
@@ -17,7 +17,7 @@ verse = \relative c'' {
   gs4 a8 c8~( c a4 g8~ |
   g) g g c, g' c, g' a |
   bf4 c8 d4 c8 c16( g a8) |
-  R1 * 1 |
+  R1 |
   r2 r4 g8 a |
 }
 
@@ -37,22 +37,28 @@ chorus = \relative c' {
   r8 g,16 g~ g8 g c8 d a16( g) f8 |
 }
 
-melody_verse = \new Voice \with {
-  \consists "Pitch_squash_engraver"
-} \relative c' {
-  \improvisationOn
-  \verse
-}
+verse_two = \relative c'' {
+  r8 bf8 bf bf bf bf bf bf |
+  bf8 g4 d8'~( d bf4 a8~ |
+  a) a a a a4 a8 a |
+  gs4 a8 c8~( c a4 g8~ |
+  g) g g g g g g a |
+  bf8 bf bf c r d c c  |
+  R1 |
 
-melody_chorus = \new Voice \with {
-  \consists "Pitch_squash_engraver"
-} \relative c' {
-  \improvisationOn
-  \chorus
+  r8 bf8 bf bf bf bf bf bf |
+  a4 g8 d'~( d bf4 a8~ |
+  a) a a a a a a a |
+  gs4 a8 c8~( c a4 g8~ |
+  g) g g g g g g a |
+  bf8 bf c d r c c16( g a8) |
+  R1 |
+  r2 r4 g8 a |
 }
 
 melody = {
   \intro
-  \verse
+  \verse_one
   \chorus
+  \verse_two
 }

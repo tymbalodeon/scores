@@ -30,12 +30,13 @@ chorus = \lyricmode {
 }
 
 verse_two = \lyricmode {
-  I had to phone someone so I picked on you
-  Hey, that's far out, so you heard him too
-  Switch on the TV, we may pick him up on channel two
-  Look out your window, I can see his light
-  If we can sparkle he may land tonight
-  Don't tell your poppa or he'll get us locked up in fright
+  I had to phone some -- one soI picked on you __
+  Hey, that's far out, so you heard him too __
+  Switch on the T -- V, we may pick him up on chan -- nel two
+
+  Look out your win -- dow, I can see his light __
+  If we can spark -- le he may land to -- night __
+  Don't tell your pop -- pa or he'll get us locked up in fright
 }
 
 la = \lyricmode {
@@ -46,4 +47,5 @@ words = \lyricmode {
   \verse_one
   \chorus
   \verse_two
+  \chorus
 }
