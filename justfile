@@ -16,7 +16,7 @@ pdfs_directory := "./pdfs"
 
 _get_new_score_parent_directory type:
     #!/usr/bin/env zsh
-    if [ {{type}} = "piano" ]; then
+    if [ "{{type}}" = "piano" ]; then
         printf "%s" "scores"
         exit
     fi
@@ -24,7 +24,7 @@ _get_new_score_parent_directory type:
 
 _get_new_score_name score_directory title type template:
     #!/usr/bin/env zsh
-    if [ {{type}} = "piano" ]; then
+    if [ "{{type}}" = "piano" ]; then
         extension=".{{extension(template)}}"
     else
         extension="-{{file_name(template)}}"
