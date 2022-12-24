@@ -168,19 +168,19 @@ _get_sorted_score_names *scores:
         ::h)
     )
     scores=()
-    for score in "${score_directories[@]}"; do
-        if [[ -z "{{scores}}" ]]; then
-            score_name="${score:t}"
-            scores+=("${score_name}")
-        else
-            for search_term in {{scores}}; do
+    if [[ ! -z "{{scores}}" ]]; then
+        for search_term in {{scores}}; do
+            for score in "${score_directories[@]}"; do
                 if [[ "${score:t}" = *"${search_term}"* ]]; then
-                    score_name="${score:t}"
-                    scores+=("${score_name}")
+                    scores+=("${score:t}")
                 fi
             done
-        fi
-    done
+        done
+    else
+        for score in "${score_directories[@]}"; do
+            scores+=("${score:t}")
+        done
+    fi
     IFS=$'\n' scores=($(sort <<<"${scores[*]}"))
     printf "%s" "${scores[*]}"
 
