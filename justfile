@@ -263,8 +263,7 @@ status *scores:
     results="ARTIST;TITLE;PDF STATUS\n------;-----;----------\n"
     for score in "${scores[@]}"; do
         file_name="${score:t}"
-        score="${score//-/ }"
-        score="${(C)score}"
+        score="${(C)${score//-/ }}"
         artist="${score:h:t}"
         results+="${artist};${score:t};"
         pdf_files=(**/**"${file_name}"*.pdf(N))
