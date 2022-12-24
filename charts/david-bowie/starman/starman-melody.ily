@@ -37,7 +37,8 @@ chorus = \relative c' {
   r8 g,16 g~ g8 g c8 d a16( g) f8 |
 }
 
-solo = \relative c'' {
+guitar = \new CueVoice \relative c'' {
+  s1 * 30 |
   d4 r8 d~ d c4 bf8 |
   a4 r8 a~ a bf4 c8 |
   e4 r8 e~ e d4 c8 |
@@ -48,7 +49,7 @@ solo = \relative c'' {
   e4 r8 e~ e d c a |
 }
 
-solo_rest = {
+solo = {
   s1 * 7 |
 }
 
@@ -75,6 +76,6 @@ melody = {
   \intro
   \verse_one
   \chorus
-  \solo_rest
+  \solo
   \verse_two
 }

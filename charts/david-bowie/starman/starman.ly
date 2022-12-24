@@ -13,8 +13,8 @@
 
 melody = \new Staff {
   <<
-    \melody
-    \addlyrics \words
+    \melody \addlyrics \words
+    \guitar
     \structure
   >>
 }
