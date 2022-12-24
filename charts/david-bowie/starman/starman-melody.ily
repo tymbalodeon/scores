@@ -83,4 +83,5 @@ melody = {
   \chorus
   \solo
   \verse_two
+  \chorus
 }

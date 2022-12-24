@@ -60,4 +60,5 @@ structure = {
   \verse
   \chorus
   \solo
+  \chorus
 }
