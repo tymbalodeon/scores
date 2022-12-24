@@ -4,10 +4,10 @@ intro = \lyricmode {
 }
 
 verse_one = \lyricmode {
-  Did -- n't know what time it was, the lights were low _ _ _ _
-  I leaned back on my ra -- di -- o _ _ _ _
-  Some cat was laying down some rock 'n' roll
-  "Lotta soul," he said
+  Did -- n't know what time it was, the lights were low __ _ _ _ _
+  I leaned back on my ra -- di -- o __ _ _ _ _
+  Some cat was lay -- ing down some rock 'n' roll
+  'Lot -- ta soul,' he said
   Then the loud sound did seem to fade
   Came back like a slow voice on a wave of phase
   That weren't no DJ, that was hazy cosmic jive
