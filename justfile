@@ -260,7 +260,7 @@ status *scores:
     #!/usr/bin/env zsh
     scores=($(just _get_sorted_score_names {{scores}}))
     outdated_scores=($(just _get_outdated))
-    results="ARTIST;TITLE;PDF STATUS\n-----;----------;----------\n"
+    results="ARTIST;TITLE;PDF STATUS\n------;-----;----------\n"
     for score in "${scores[@]}"; do
         file_name="${score:t}"
         score="${score//-/ }"
