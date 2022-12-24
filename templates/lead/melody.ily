@@ -1,8 +1,8 @@
-verse = {
+verse = \relative c'' {
   c1 |
 }
 
-chorus = {
+chorus = \relative c'' {
   c1 |
 }
 

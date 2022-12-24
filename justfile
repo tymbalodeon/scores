@@ -53,15 +53,15 @@ _copy_template_files type composer title:
 
 _prepend_titles title file:
     #!/usr/bin/env zsh
-    filetypes=("melody" "changes" "structure")
+    filetypes=("changes" "lyrics" "melody" "structure")
     for filetype in "${filetypes[@]}"; do
         sed -i "" -e "s/${filetype}.ily/{{title}}-${filetype}.ily/g" {{file}}
     done
 
 _add_title_and_composer title composer file:
     #!/usr/bin/env zsh
-    title={{titlecase(title)}}
-    composer={{titlecase(composer)}}
+    title="{{titlecase(title)}}"
+    composer="{{titlecase(composer)}}"
     sed -i "" -e "s/Title/${title}/g" {{file}}
     sed -i "" -e "s/Composer/${composer}/g" {{file}}
 
@@ -79,8 +79,8 @@ create type composer title *edit:
     #!/usr/bin/env zsh
     just _copy_template_files {{type}} {{composer}} {{title}}
     just _add_new_score_values {{type}} {{composer}} {{title}}
-    if [ {{edit}} = "--edit" ]; then
-        just edit {{title}}
+    if [ "{{edit}}" = "--edit" ]; then
+        just edit "{{title}}"
     fi
 
 _get_files extension *scores:
