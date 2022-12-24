@@ -158,22 +158,35 @@ list *scores:
         echo "${file}"
     done
 
-_get_sorted_score_names:
+_get_sorted_score_names *scores:
     #!/usr/bin/env zsh
-    score_directories=(**/.(e\''test -z $REPLY/*(/DN[1])'\':h))
+    score_directories=(
+        **/.(Ne: \
+            '[[ $REPLY != pdfs* ]] \
+                && [[ $REPLY != templates* ]]  \
+                && test -z $REPLY/*(/N[1])' \
+        ::h)
+    )
     scores=()
     for score in "${score_directories[@]}"; do
-        if [[ ("${score}" != pdfs* && "${score}" != templates*) ]]; then
+        if [[ -z "{{scores}}" ]]; then
             score_name="${score:t}"
             scores+=("${score_name}")
+        else
+            for search_term in {{scores}}; do
+                if [[ "${score}" = *"${search_term}"* ]]; then
+                    score_name="${score:t}"
+                    scores+=("${score_name}")
+                fi
+            done
         fi
     done
     IFS=$'\n' scores=($(sort <<<"${scores[*]}"))
     printf "%s" "${scores[*]}"
 
-list-scores:
+list-scores *scores:
     #!/usr/bin/env zsh
-    scores=($(just _get_sorted_score_names))
+    scores=($(just _get_sorted_score_names {{scores}}))
     outdated_scores=($(just _get_outdated))
     results="TITLE;PDF STATUS\n-----;----------\n"
     for score in "${scores[@]}"; do
