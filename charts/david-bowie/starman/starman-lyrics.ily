@@ -8,22 +8,25 @@ verse_one = \lyricmode {
   I leaned back on my ra -- di -- o __ _ _ _ _
   Some cat was lay -- ing down some rock 'n' roll
   'Lot -- ta soul,' he said
+
   Then the loud sound did seem to fade __ _ _ _ _
   Came back like a slow voice on a wave of phase __ _ _ _ _
   That weren't no D -- J, that was ha -- zy cos -- mic jive __ _ _
 }
 
 chorus = \lyricmode {
-  There's a Star -- man wait -- ing in the sky
+  There's a Star -- man wait -- ing in _ the sky
   He'd like to come and meet us
   But he thinks he'd blow our minds
-  There's a starman waiting in the sky
+
+  There's a Star -- man wait -- ing in __  _ the sky
   He's told us not to blow it
-  'Cause he knows it's all worthwhile
-  He told me
-  Let the children lose it
-  Let the children use it
-  Let all the children boogie
+  'Cause he knows __ _ it's all worth -- while
+  He told __ _ me __ _
+
+  Let the child _ -- ren lose it
+  Let the child _ -- ren use it
+  Let all _ the child -- ren boo _ -- gie
 }
 
 verse_two = \lyricmode {

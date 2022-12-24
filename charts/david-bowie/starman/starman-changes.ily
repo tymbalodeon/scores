@@ -22,15 +22,24 @@ verse = \chordmode {
   g |
 }
 
-chorus = \chordmode {
+chorus_main = \chordmode {
   f1  |
   d:m  |
   a2:m a:m/g  |
   c c:7 |
+}
 
+chorus_end = \chordmode {
   bf bf:m |
   f d:7/fs |
   g:m c |
+}
+
+chorus = \chordmode {
+  \repeat unfold 2 {
+    \chorus_main
+  }
+  \chorus_end
 }
 
 solo = \chordmode {
@@ -51,7 +60,8 @@ changes_verse = \chords {
 }
 
 changes_chorus = \chords {
-  \chorus
+  \chorus_main
+  \chorus_end
 }
 
 changes_solo = \chords {

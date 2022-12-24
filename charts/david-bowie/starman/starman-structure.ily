@@ -12,9 +12,7 @@ verse = {
 }
 
 chorus = {
-  \repeat volta 2 {
-    s1 * 4 |
-  }
+  s1 * 8 |
   s1 * 3 |
 }
 
@@ -43,7 +41,10 @@ structure_verse = {
 
 structure_chorus = {
   \key_and_time
-  \chorus
+  \repeat volta 2 {
+    s1 * 4 |
+  }
+  s1 * 3 |
   \bar "||"
 }
 
