@@ -17,7 +17,7 @@ chorus = {
 }
 
 solo = {
-  s1 * 4|
+  s1 * 7 |
 }
 
 structure_intro = {
@@ -59,4 +59,5 @@ structure = {
   \intro
   \verse
   \chorus
+  \solo
 }

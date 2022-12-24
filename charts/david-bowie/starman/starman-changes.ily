@@ -43,7 +43,14 @@ chorus = \chordmode {
 }
 
 solo = \chordmode {
+  bf1 |
+  f |
+  c |
+  f |
 
+  bf1 |
+  f |
+  c |
 }
 
 changes_intro = \chords {
@@ -72,5 +79,6 @@ changes = \chords {
   \intro
   \verse
   \chorus
+  \solo
   \verse
 }

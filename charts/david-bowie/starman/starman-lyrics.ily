@@ -30,7 +30,7 @@ chorus = \lyricmode {
 }
 
 verse_two = \lyricmode {
-  I had to phone some -- one soI picked on you __
+  I had to phone some -- one so I picked on you __
   Hey, that's far out, so you heard him too __
   Switch on the T -- V, we may pick him up on chan -- nel two
 

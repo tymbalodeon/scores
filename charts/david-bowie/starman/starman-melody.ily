@@ -37,8 +37,12 @@ chorus = \relative c' {
   r8 g,16 g~ g8 g c8 d a16( g) f8 |
 }
 
+solo = {
+  s1 * 7 |
+}
+
 verse_two = \relative c'' {
-  r8 bf8 bf bf bf bf bf bf |
+  r8 bf8 bf bf bf bf bf bf16 bf |
   bf8 g4 d8'~( d bf4 a8~ |
   a) a a a a4 a8 a |
   gs4 a8 c8~( c a4 g8~ |
@@ -60,5 +64,6 @@ melody = {
   \intro
   \verse_one
   \chorus
+  \solo
   \verse_two
 }
