@@ -6,8 +6,9 @@
   tagline = ##f
 }
 
-#(set! paper-alist (cons '("video-slide" . (cons (* 9 in) (* 5.06525 in)))
-                        paper-alist))
+#(set! paper-alist (cons
+                    '("video-slide" . (cons (* 9 in) (* 5.06525 in)))
+                    paper-alist))
 
 paper_block =
 #(define-scheme-function (paper-type) (string?)
