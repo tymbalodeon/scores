@@ -14,6 +14,7 @@
 melody = \new Staff {
   <<
     \melody
+    \addlyrics \words
     \structure
   >>
 }
@@ -35,7 +36,6 @@ melody = \new Staff {
       \changes
       <<
         \melody
-        \addlyrics \words
       >>
     >>
   }
