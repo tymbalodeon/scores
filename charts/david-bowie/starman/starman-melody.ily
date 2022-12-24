@@ -46,20 +46,26 @@ chorus = \relative c' {
   \chorus_base
 }
 
-guitar = \new CueVoice \relative c'' {
-  s1 * 34 |
-  d4 r8 d~ d c4 bf8 |
-  a4 r8 a~ a bf4 c8 |
-  e4 r8 e~ e d4 c8 |
-  a4 r8 a~ a bf4 c8 |
-
-  d4 r8 d~ d c4 bf8 |
-  a4 r8 a~ a bf4 c8 |
-  e4 r8 e~ e d c a |
+guitar_solo_base = \relative c'' {
+    d4 r8 d~ d c4 bf8 |
+    a4 r8 a~ a bf4 c8 |
+    e4 r8 e~ e d4 c8 |
+    a4 r8 a~ a bf4 c8 |
 }
 
-solo = {
-  s1 * 7 |
+guitar_solo = \relative c'' {
+    \guitar_solo_base
+
+    d4 r8 d~ d c4 bf8 |
+    a4 r8 a~ a bf4 c8 |
+    e4 r8 e~ e d c a |
+}
+
+instrumental = \new CueVoice {
+    s1 * 34 |
+    \guitar_solo
+    s1 * 37 |
+    \guitar_solo_base
 }
 
 verse_two = \relative c'' {
@@ -86,12 +92,18 @@ final_chorus = \relative c' {
   \chorus_base
 }
 
+la = \relative c'' {
+  \guitar_solo_base
+}
+
 melody = {
   \intro
   \verse_one
   \chorus
-  \solo
+  s1 * 7 |
   \verse_two
   \chorus
   \final_chorus
+  s1 * 4 |
+  \la
 }

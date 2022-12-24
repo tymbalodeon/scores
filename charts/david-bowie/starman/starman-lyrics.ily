@@ -45,7 +45,10 @@ verse_two = \lyricmode {
 }
 
 la = \lyricmode {
-  La, la, la, la-la, la, la, la
+  La, la, la, la,
+  la, la, la, la,
+  la, la, la, la,
+  la, la, la, la...
 }
 
 words = \lyricmode {
@@ -55,4 +58,5 @@ words = \lyricmode {
   \verse_two
   \chorus
   \chorus_base
+  \la
 }

@@ -42,11 +42,15 @@ chorus = \chordmode {
   \chorus_end
 }
 
-solo = \chordmode {
+solo_base = \chordmode {
   bf1 |
   f |
   c |
   f |
+}
+
+solo = \chordmode {
+  \solo_base
 
   bf1 |
   f |
@@ -85,5 +89,8 @@ changes = \chords {
   \verse
   \repeat unfold 2 {
     \chorus
+  }
+  \repeat unfold 2 {
+    \solo_base
   }
 }

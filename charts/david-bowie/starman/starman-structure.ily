@@ -1,4 +1,5 @@
-key_and_time = { \key c \major
+key_and_time = {
+  \key f \major
   \time 4/4
 }
 
@@ -50,7 +51,9 @@ structure_chorus = {
 
 structure_solo = {
   \key_and_time
-  \solo
+  s1 * 4 |
+  \bar "||"
+  s1 * 3 |
   \bar "||"
 }
 
@@ -59,8 +62,13 @@ structure = {
   \intro
   \verse
   \chorus
-  \solo
+  s1 * 7 |
+  \verse
   \repeat unfold 2 {
     \chorus
+  }
+  s1 * 4 |
+  \repeat volta 2 {
+    s1 * 4 |
   }
 }

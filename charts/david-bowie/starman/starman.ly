@@ -14,15 +14,9 @@
 melody = \new Staff {
   <<
     \melody \addlyrics \words
-    \guitar
+    \instrumental
     \structure
   >>
-}
-
-\layout {
-  \context {
-    \Score \consists #(set-bars-per-line '(4))
-  }
 }
 
 \book {
@@ -31,6 +25,20 @@ melody = \new Staff {
   }
 
   \score {
+    \layout {
+      \context {
+        \Score \consists #(set-bars-per-line '(4 4 4 3
+                                               4 4
+                                               4 4 3
+                                               4 3
+                                               4 3
+                                               4 4
+                                               4 4 3
+                                               4 4 3
+                                               4 4))
+      }
+
+    }
     <<
       \numericTimeSignature
       \changes
@@ -42,6 +50,9 @@ melody = \new Staff {
 }
 
 form_layout = \layout {
+  \context {
+    \Score \consists #(set-bars-per-line '(4))
+  }
   ragged-last = ##f
 }
 
@@ -130,7 +141,8 @@ form_layout = \layout {
       \bold Chorus \italic "" ""
       \bold Solo \italic "" ""
       \bold Verse \italic "" ""
-      \bold Chorus \italic "" ""
+      \bold Chorus \italic "2x" ""
+      \bold Solo \italic "" "loop first 4 bars only"
     }
   }
 }
