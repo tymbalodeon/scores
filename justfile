@@ -174,7 +174,7 @@ _get_sorted_score_names *scores:
             scores+=("${score_name}")
         else
             for search_term in {{scores}}; do
-                if [[ "${score}" = *"${search_term}"* ]]; then
+                if [[ "${score:t}" = *"${search_term}"* ]]; then
                     score_name="${score:t}"
                     scores+=("${score_name}")
                 fi
