@@ -64,9 +64,11 @@ structure = {
   \chorus
   s1 * 7 |
   \verse
+  \pageBreak
   \repeat unfold 2 {
     \chorus
   }
+  \pageBreak
   s1 * 4 |
   \repeat volta 2 {
     s1 * 4 |
