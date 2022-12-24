@@ -76,7 +76,9 @@ changes_solo = \chords {
 }
 
 changes = \chords {
-  \intro
+  \repeat unfold 2 {
+    \intro
+  }
   \verse
   \chorus
   \solo

@@ -3,7 +3,7 @@ key_and_time = { \key c \major
 }
 
 intro = {
-  s1 * 4 |
+  s1 * 8 |
 }
 
 verse = {

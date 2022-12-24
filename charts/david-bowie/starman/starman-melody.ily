@@ -1,5 +1,10 @@
-intro = {
+intro = \relative c'' {
   R1 * 4 |
+
+  r8 f d bf~ bf4 r |
+  R1 |
+  r8 e c a~ a4 r |
+  R1 |
 }
 
 verse_one = \relative c'' {

@@ -44,6 +44,7 @@ la = \lyricmode {
 }
 
 words = \lyricmode {
+  \intro
   \verse_one
   \chorus
   \verse_two
