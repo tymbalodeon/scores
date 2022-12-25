@@ -10,15 +10,15 @@ get_new_score_name () {
 }
 
 copy_template_files() {
-    score_directory=./scores/{{composer}}/{{title}}
+    score_directory=./scores/"${2}"/"${3}"
     if [ -d "${score_directory}" ]; then
-        exit
+        return
     fi
     mkdir -p "${score_directory}"
-    for template in ./templates/{{type}}*/*; do
+    for template in ./templates/"${1}"*/*; do
         new_score="$(
             get_new_score_name \
-                {{type}} "${template}" {{title}} "${score_directory}"
+                "${1}" "${template}" "${3}" "${score_directory}"
         )"
         if test -f "${new_score}"; then
             continue
@@ -43,19 +43,19 @@ add_title_and_composer() {
 }
 
 add_new_score_values() {
-    for file in **/**{{title}}-main.ly(N); do
-        prepend_titles {{title}} "${file}"
-        add_title_and_composer {{title}} {{composer}} "${file}"
+    for file in **/**"${2}"-main.ly(N); do
+        prepend_titles "${2}" "${file}"
+        add_title_and_composer "${2}" "${1}" "${file}"
         mv "${file}" "${file//-main/}"
     done
 }
 
 create_files() {
     copy_template_files "${1}" "${2}" "${3}"
-    add_new_score_values "${1}" "${2}" "${3}"
+    add_new_score_values "${2}" "${3}"
 }
 
-create_files {{type}} {{composer}} {{title}}
-if [ "{{edit}}" = "--edit" ]; then
-    just edit "{{title}}"
+create_files "${1}" "${2}" "${3}"
+if [ "${4}" = "--edit" ]; then
+    just edit "${3}"
 fi

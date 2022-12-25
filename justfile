@@ -15,68 +15,9 @@ pdfs_directory := "./pdfs"
     just --list
 
 # Create new score template, and optionally edit ("--edit").
-create type composer title *edit:
+create type composer title +edit="":
     #!/usr/bin/env zsh
-    get_new_score_name () {
-        if [ "${1}" = "piano" ]; then
-            extension=".${2:e}"
-        else
-            extension="-${2:t}"
-        fi
-        file_name="${3}${extension}"
-        printf "%s" "${4}/${file_name}"
-    }
-
-    copy_template_files() {
-        score_directory=./scores/{{composer}}/{{title}}
-        if [ -d "${score_directory}" ]; then
-            exit
-        fi
-        mkdir -p "${score_directory}"
-        for template in ./templates/{{type}}*/*; do
-            new_score="$(
-                get_new_score_name \
-                    {{type}} "${template}" {{title}} "${score_directory}"
-            )"
-            if test -f "${new_score}"; then
-                continue
-            fi
-            cp "${template}" "${score_directory}"
-            mv "${score_directory}/${template:t}" "${new_score}"
-        done
-    }
-
-    prepend_titles() {
-        filetypes=("changes" "lyrics" "melody" "structure")
-        for filetype in "${filetypes[@]}"; do
-            sed -i "" -e "s/${filetype}.ily/${1}-${filetype}.ily/g" "${2}"
-        done
-    }
-
-    add_title_and_composer() {
-        title="${(C)1}"
-        composer="${(C)2}"
-        sed -i "" -e "s/Title/${title}/g" "${3}"
-        sed -i "" -e "s/Composer/${composer}/g" "${3}"
-    }
-
-    add_new_score_values() {
-        for file in **/**{{title}}-main.ly(N); do
-            prepend_titles {{title}} "${file}"
-            add_title_and_composer {{title}} {{composer}} "${file}"
-            mv "${file}" "${file//-main/}"
-        done
-    }
-
-    create_files() {
-        copy_template_files "${1}" "${2}" "${3}"
-        add_new_score_values "${1}" "${2}" "${3}"
-    }
-
-    create_files {{type}} {{composer}} {{title}}
-    if [ "{{edit}}" = "--edit" ]; then
-        just edit "{{title}}"
-    fi
+    ./scripts/create {{type}} {{composer}} {{title}} {{edit}}
 
 _get_files extension *scores:
     #!/usr/bin/env zsh
