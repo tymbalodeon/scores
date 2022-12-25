@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+
 get_new_score_name () {
     if [ "${1}" = "piano" ]; then
         extension=".${2:e}"
