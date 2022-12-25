@@ -14,18 +14,18 @@ pdfs_directory := "./pdfs"
 @_help:
     just --list
 
-_get_new_score_name score_directory title type template:
-    #!/usr/bin/env zsh
-    if [ "{{type}}" = "piano" ]; then
-        extension=".{{extension(template)}}"
-    else
-        extension="-{{file_name(template)}}"
-    fi
-    file_name="{{title}}${extension}"
-    printf "%s" "{{score_directory}}/${file_name}"
-
 _copy_template_files type composer title:
     #!/usr/bin/env zsh
+    get_new_score_name () {
+        if [ "${1}" = "piano" ]; then
+            extension=".${2:e}"
+        else
+            extension="-${2:t}"
+        fi
+        file_name="${3}${extension}"
+        printf "%s" "${4}/${file_name}"
+    }
+
     score_directory=./scores/{{composer}}/{{title}}
     if [ -d "${score_directory}" ]; then
         exit
@@ -33,8 +33,8 @@ _copy_template_files type composer title:
     mkdir -p "${score_directory}"
     for template in ./templates/{{type}}*/*; do
         new_score="$(
-            just _get_new_score_name \
-                "${score_directory}" {{title}} {{type}} "${template}"
+            get_new_score_name \
+                {{type}} "${template}" {{title}} "${score_directory}"
         )"
         if test -f "${new_score}"; then
             continue
