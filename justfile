@@ -14,7 +14,8 @@ pdfs_directory := "./pdfs"
 @_help:
     just --list
 
-_copy_template_files type composer title:
+# Create new score template, and optionally edit ("--edit").
+create type composer title *edit:
     #!/usr/bin/env zsh
     get_new_score_name () {
         if [ "${1}" = "piano" ]; then
@@ -26,25 +27,25 @@ _copy_template_files type composer title:
         printf "%s" "${4}/${file_name}"
     }
 
-    score_directory=./scores/{{composer}}/{{title}}
-    if [ -d "${score_directory}" ]; then
-        exit
-    fi
-    mkdir -p "${score_directory}"
-    for template in ./templates/{{type}}*/*; do
-        new_score="$(
-            get_new_score_name \
-                {{type}} "${template}" {{title}} "${score_directory}"
-        )"
-        if test -f "${new_score}"; then
-            continue
+    copy_template_files() {
+        score_directory=./scores/{{composer}}/{{title}}
+        if [ -d "${score_directory}" ]; then
+            exit
         fi
-        cp "${template}" "${score_directory}"
-        mv "${score_directory}/${template:t}" "${new_score}"
-    done
+        mkdir -p "${score_directory}"
+        for template in ./templates/{{type}}*/*; do
+            new_score="$(
+                get_new_score_name \
+                    {{type}} "${template}" {{title}} "${score_directory}"
+            )"
+            if test -f "${new_score}"; then
+                continue
+            fi
+            cp "${template}" "${score_directory}"
+            mv "${score_directory}/${template:t}" "${new_score}"
+        done
+    }
 
-_add_new_score_values type composer title:
-    #!/usr/bin/env zsh
     prepend_titles() {
         filetypes=("changes" "lyrics" "melody" "structure")
         for filetype in "${filetypes[@]}"; do
@@ -59,17 +60,16 @@ _add_new_score_values type composer title:
         sed -i "" -e "s/Composer/${composer}/g" "${3}"
     }
 
-    for file in **/**{{title}}-main.ly(N); do
-        prepend_titles {{title}} "${file}"
-        add_title_and_composer {{title}} {{composer}} "${file}"
-        mv "${file}" "${file//-main/}"
-    done
+    add_new_score_values() {
+        for file in **/**{{title}}-main.ly(N); do
+            prepend_titles {{title}} "${file}"
+            add_title_and_composer {{title}} {{composer}} "${file}"
+            mv "${file}" "${file//-main/}"
+        done
+    }
 
-# Create new score template, and optionally edit ("--edit").
-create type composer title *edit:
-    #!/usr/bin/env zsh
-    just _copy_template_files {{type}} {{composer}} {{title}}
-    just _add_new_score_values {{type}} {{composer}} {{title}}
+    copy_template_files {{type}} {{composer}} {{title}}
+    add_new_score_values {{type}} {{composer}} {{title}}
     if [ "{{edit}}" = "--edit" ]; then
         just edit "{{title}}"
     fi
