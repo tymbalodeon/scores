@@ -43,26 +43,25 @@ _copy_template_files type composer title:
         mv "${score_directory}/${template:t}" "${new_score}"
     done
 
-_prepend_titles title file:
-    #!/usr/bin/env zsh
-    filetypes=("changes" "lyrics" "melody" "structure")
-    for filetype in "${filetypes[@]}"; do
-        sed -i "" -e "s/${filetype}.ily/{{title}}-${filetype}.ily/g" {{file}}
-    done
-
-_add_title_and_composer title composer file:
-    #!/usr/bin/env zsh
-    title="{{titlecase(title)}}"
-    composer="{{titlecase(composer)}}"
-    sed -i "" -e "s/Title/${title}/g" {{file}}
-    sed -i "" -e "s/Composer/${composer}/g" {{file}}
-
 _add_new_score_values type composer title:
     #!/usr/bin/env zsh
-    just _copy_template_files {{type}} {{composer}} {{title}}
+    prepend_titles() {
+        filetypes=("changes" "lyrics" "melody" "structure")
+        for filetype in "${filetypes[@]}"; do
+            sed -i "" -e "s/${filetype}.ily/${1}-${filetype}.ily/g" "${2}"
+        done
+    }
+
+    add_title_and_composer() {
+        title="${(C)1}"
+        composer="${(C)2}"
+        sed -i "" -e "s/Title/${title}/g" "${3}"
+        sed -i "" -e "s/Composer/${composer}/g" "${3}"
+    }
+
     for file in **/**{{title}}-main.ly(N); do
-        just _prepend_titles {{title}} "${file}"
-        just _add_title_and_composer {{title}} {{composer}} "${file}"
+        prepend_titles {{title}} "${file}"
+        add_title_and_composer {{title}} {{composer}} "${file}"
         mv "${file}" "${file//-main/}"
     done
 
