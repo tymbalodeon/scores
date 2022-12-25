@@ -68,8 +68,12 @@ create type composer title *edit:
         done
     }
 
-    copy_template_files {{type}} {{composer}} {{title}}
-    add_new_score_values {{type}} {{composer}} {{title}}
+    create_files() {
+        copy_template_files "${1}" "${2}" "${3}"
+        add_new_score_values "${1}" "${2}" "${3}"
+    }
+
+    create_files {{type}} {{composer}} {{title}}
     if [ "{{edit}}" = "--edit" ]; then
         just edit "{{title}}"
     fi
