@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+score_title="${1:t:r}"
+pdf_files=("${PDFS_DIRECTORY}"/*"${score_title}"*(N))
+printf "%s" "${pdf_files[*]}"

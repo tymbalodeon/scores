@@ -58,18 +58,8 @@ _run_checkexec command *scores:
     ./scripts/compile
 
 # Open <score> in editor and pdf viewer, recompiling on file changes.
-edit score: (compile score)
-    #!/usr/bin/env zsh
-    for file in **/**{{score}}*.ly(N); do
-        without_extension="${file:r}"
-        ly_file="${without_extension}.ly"
-        IFS=" " read -r -A pdf_files <<<"$(just _get_pdf_files "${ly_file}")"
-        for file in "${pdf_files[@]}"; do
-            open "${file}"
-        done
-        open "${ly_file}"
-    done
-    watchexec -e ly,ily just compile {{score}}
+@edit score: (compile score)
+    ./scripts/edit {{score}}
 
 # List pdf(s).
 list *scores:
