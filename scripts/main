@@ -6,12 +6,20 @@ export PDFS_DIRECTORY="${PDFS_DIRECTORY:-./pdfs}"
 
 command="${1}"
 if [ -z "${command}" ]; then
-    echo "USAGE: './scripts/main <COMMAND> <ARGS>'\n"
-    echo "Available commands:"
-    available_commands=($(ls "${COMMANDS}"))
-    for command in "${available_commands[@]}"; do
-        echo "    ${command}"
-    done
+    echo \
+        "Available recipes:
+    clean *scores    # Remove pdf(s).
+    commit message   # Commit and push all files.
+    compile *scores  # Create pdf(s).
+    create type composer title *edit # Create new score template, and optionally edit ("--edit").
+    edit score       # Open <score> in editor and pdf viewer, recompiling on file changes.
+    install          # Install dependencies.
+    list *scores     # List pdf(s).
+    main *message    # Switch back to main branch, optionally committing the current branch.
+    open *scores     # Open pdf(s).
+    outdated *scores # List <scores> with outdated or non-existent pdfs.
+    status *scores   # Show status of pdf(s) for <scores>.
+    update *scores   # Update lilypond version in <scores>."
     exit
 fi
 shift
