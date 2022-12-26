@@ -1,5 +1,6 @@
 set dotenv-load
 
+export PDFS_DIRECTORY := "./pdfs"
 export OUTPUT_DIRECTORY := ```
     OUTPUT_DIRECTORY="${OUTPUT_DIRECTORY:-}"
     if [ -n "${OUTPUT_DIRECTORY}" ]; then
@@ -7,10 +8,6 @@ export OUTPUT_DIRECTORY := ```
     fi
     printf "%s" "${OUTPUT_DIRECTORY}"
 ```
-
-non_template_files := "(^templates/)#*"
-pdfs_directory := "./pdfs"
-export PDFS_DIRECTORY := "./pdfs"
 
 @_help:
     just --list
