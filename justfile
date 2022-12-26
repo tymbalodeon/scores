@@ -87,13 +87,8 @@ _get_outdated *scores:
     just _run_checkexec \ 'echo "${pdf_file:t:r}"' {{scores}}
 
 # List <scores> with outdated or non-existent pdfs.
-outdated *scores:
-    #!/usr/bin/env zsh
-    outdated_scores=($(just _get_outdated {{scores}}))
-    IFS=$'\n' outdated_scores=($(sort <<<"${outdated_scores[*]}"))
-    for file in "${outdated_scores[@]}"; do
-        echo "${(C)file//-/ }"
-    done
+@outdated *scores:
+    ./scripts/outdated {{scores}}
 
 _get_sorted_score_names *scores:
     #!/usr/bin/env zsh

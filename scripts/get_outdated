@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-export PDFS_DIRECTORY="./pdfs"
-
 IFS=" " read -r -A files <<<"$(./scripts/get_files "ly" "$@")"
 if [ -z "${files[*]}" ]; then
     exit
@@ -11,5 +9,5 @@ for file in "${files[@]}"; do
     without_extension="${file:r}"
     pdf_file="${PDFS_DIRECTORY}/${without_extension:t}.pdf"
     checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
-        ./scripts/run_lilypond_and_copy_to_output "${file}"
+        echo "${pdf_file:t:r}"
 done
