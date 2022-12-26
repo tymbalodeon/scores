@@ -50,3 +50,7 @@ export OUTPUT_DIRECTORY := ```
 # Show status of pdf(s) for <scores>.
 @status *scores:
     ./scripts/main status {{scores}}
+
+# Switch back to main branch.
+@main:
+    git checkout main
