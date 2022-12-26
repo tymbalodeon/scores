@@ -1,5 +1,6 @@
 set dotenv-load
 
+main := "./scripts/main"
 export OUTPUT_DIRECTORY := ```
     output_directory="${OUTPUT_DIRECTORY:-}"
     if [ -n "${output_directory}" ]; then
@@ -12,32 +13,32 @@ export OUTPUT_DIRECTORY := ```
     just --list
 
 # Create new score template, and optionally edit ("--edit").
-@create type composer title +edit="":
-    ./scripts/main create {{type}} {{composer}} {{title}} {{edit}}
+@create type composer title *edit:
+    {{main}} create {{type}} {{composer}} {{title}} {{edit}}
 
 # Create pdf(s).
 @compile *scores:
-    ./scripts/main compile {{scores}}
+    {{main}} compile {{scores}}
 
 # Open <score> in editor and pdf viewer, recompiling on file changes.
 @edit score: (compile score)
-    ./scripts/main edit {{score}}
+    {{main}} edit {{score}}
 
 # List pdf(s).
 @list *scores:
-    ./scripts/main list {{scores}}
+    {{main}} list {{scores}}
 
 # Open pdf(s).
 @open *scores:
-    ./scripts/main open {{scores}}
+    {{main}} open {{scores}}
 
 # Remove pdf(s).
 @clean *scores:
-    ./scripts/main clean {{scores}}
+    {{main}} clean {{scores}}
 
 # Update lilypond version in <scores>.
 @update *scores:
-    ./scripts/main update {{scores}}
+    {{main}} update {{scores}}
 
 # Install dependencies.
 @install:
@@ -45,12 +46,23 @@ export OUTPUT_DIRECTORY := ```
 
 # List <scores> with outdated or non-existent pdfs.
 @outdated *scores:
-    ./scripts/main outdated {{scores}}
+    {{main}} outdated {{scores}}
 
 # Show status of pdf(s) for <scores>.
 @status *scores:
-    ./scripts/main status {{scores}}
+    {{main}} status {{scores}}
 
-# Switch back to main branch.
-@main:
-    git checkout main
+# Commit and push all files.
+commit message:
+    #!/usr/bin/env zsh
+    if [ -z "{{message}}" ]; then
+        return
+    fi
+    git add .
+    git commit -m "{{message}}"
+    git push
+
+# Switch back to main branch, optionally committing the current branch.
+main *message="": (commit message)
+    #!/usr/bin/env zsh
+    ./scripts/helpers/_checkout_branch "main"
