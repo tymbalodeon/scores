@@ -25,9 +25,8 @@ dependencies.
 ## Tasks
 
 Task scripts are provided to facilitate development. These can be called
-directly or using [`just`](https://just.systems/man/en/ "just"). (For use
-without `just`, call `./scripts/main <COMMAND> <ARGS>` instead.) Available
-commands:
+directly (using `./scripts/main <COMMAND> <ARGS>`) or using
+[`just`](https://just.systems/man/en/ "just"). Available commands:
 
 - `just`: Show available commands
 - `just clean *scores`: Remove pdf(s).

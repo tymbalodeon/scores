@@ -3,6 +3,7 @@
 lilypond -o "${PDFS_DIRECTORY}" "${1}"
 if [ -n "${OUTPUT_DIRECTORY}" ]; then
     IFS=" " read -r -A pdf_files <<<"$("${HELPERS}"/_get_pdf_files "${1}")"
+    pdf_files=($("${HELPERS}"/_get_pdf_files "${1}"))
     for file in "${pdf_files[@]}"; do
         cp "${file}" "${OUTPUT_DIRECTORY}"
     done
