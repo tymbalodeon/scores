@@ -9,7 +9,7 @@ get_lilypond_version() {
     echo "${version_number}"
 }
 
-IFS=" " read -r -A files <<<"$(./scripts/get_files "ly" "$@")"
+IFS=" " read -r -A files <<<"$("${HELPERS}"/_get_files "ly" "$@")"
 if [ -z "${files[*]}" ] || ! command -v lilypond &>/dev/null; then
     exit
 fi

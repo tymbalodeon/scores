@@ -17,18 +17,20 @@ watching:
 - [skim](https://skim-app.sourceforge.io/ "skim")
 
 Dependencies can be installed by running the included script:
-`./install-dependencies`
+`./install_dependencies`
 
 Or, if `just` is already installed: `just install` to install the rest of the
 dependencies.
 
 ## Tasks
 
-This project uses [`just`](https://just.systems/man/en/ "just") as a task
-runner. Available commands:
+Task scripts are provided to facilitate development. These can be called
+directly or using [`just`](https://just.systems/man/en/ "just"). (For use
+without `just`, call `./scripts/main <COMMAND> <ARGS>` instead.) Available
+commands:
 
 - `just`: Show available commands
-- `just clean * scores`: Remove pdf(s).
+- `just clean *scores`: Remove pdf(s).
 - `just compile *scores`: Create pdf(s).
 - `just create type composer title *edit`: Create new score template, and
   optionally edit ("--edit").

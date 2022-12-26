@@ -1,13 +1,12 @@
 #!/usr/bin/env zsh
 
-IFS=" " read -r -A files <<<"$(./scripts/get_files "ly" "$@")"
+IFS=" " read -r -A files <<<"$("${HELPERS}"/_get_files "ly" "$@")"
 if [ -z "${files[*]}" ]; then
     exit
 fi
-mkdir -p "${PDFS_DIRECTORY}"
 for file in "${files[@]}"; do
     without_extension="${file:r}"
     pdf_file="${PDFS_DIRECTORY}/${without_extension:t}.pdf"
     checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
-        echo "${pdf_file:t:r}"
+        "${HELPERS}"/_run_lilypond_and_copy_to_output "${file}"
 done

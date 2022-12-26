@@ -28,7 +28,7 @@ get_sorted_score_names() {
 }
 
 scores=($(get_sorted_score_names "$@"))
-outdated_scores=($(./scripts/get_outdated))
+outdated_scores=($("${HELPERS}"/_get_outdated))
 results="ARTIST;TITLE;PDF STATUS\n------;-----;----------\n"
 for score in "${scores[@]}"; do
     file_name="${score:t}"

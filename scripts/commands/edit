@@ -3,7 +3,7 @@
 for file in **/**"${1}"*.ly(N); do
     without_extension="${file:r}"
     ly_file="${without_extension}.ly"
-    IFS=" " read -r -A pdf_files <<<"$(./scripts/get_pdf_files "${ly_file}")"
+    IFS=" " read -r -A pdf_files <<<"$("${HELPERS}"/_get_pdf_files "${ly_file}")"
     for file in "${pdf_files[@]}"; do
         open "${file}"
     done
