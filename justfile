@@ -10,13 +10,13 @@ export OUTPUT_DIRECTORY := ```
 
 non_template_files := "(^templates/)#*"
 pdfs_directory := "./pdfs"
+export PDFS_DIRECTORY := "./pdfs"
 
 @_help:
     just --list
 
 # Create new score template, and optionally edit ("--edit").
-create type composer title +edit="":
-    #!/usr/bin/env zsh
+@create type composer title +edit="":
     ./scripts/create {{type}} {{composer}} {{title}} {{edit}}
 
 _get_files extension *scores:
@@ -39,16 +39,6 @@ _get_pdf_files ly_file:
     pdf_files=({{pdfs_directory}}/*"${score_title}"*(N))
     printf "%s" "${pdf_files[*]}"
 
-_run_lilypond_and_copy_to_output ly_file:
-    #!/usr/bin/env zsh
-    lilypond -o {{pdfs_directory}} {{ly_file}}
-    if [ -n "${OUTPUT_DIRECTORY}" ]; then
-        IFS=" " read -r -A pdf_files <<<"$(just _get_pdf_files {{ly_file}})"
-        for file in "${pdf_files[@]}"; do
-            cp "${file}" "${OUTPUT_DIRECTORY}"
-        done
-    fi
-
 _run_checkexec command *scores:
     #!/usr/bin/env zsh
     IFS=" " read -r -A files <<<"$(just _get_files "ly" {{scores}})"
@@ -64,10 +54,8 @@ _run_checkexec command *scores:
     done
 
 # Create pdf(s).
-compile *scores:
-    #!/usr/bin/env zsh
-    just _run_checkexec \
-        'just _run_lilypond_and_copy_to_output "${file}"' {{scores}}
+@compile *scores:
+    ./scripts/compile
 
 # Open <score> in editor and pdf viewer, recompiling on file changes.
 edit score: (compile score)

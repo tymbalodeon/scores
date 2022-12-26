@@ -1,0 +1,35 @@
+#!/usr/bin/env zsh
+
+export PDFS_DIRECTORY="./pdfs"
+
+get_files() {
+    setopt extendedglob
+    extension="${1}"
+    shift
+    scores=("$@")
+    if [ -z "${scores[*]}" ]; then
+        files=((^templates/)#*."${extension}"(N))
+    else
+        files=()
+        for file in "${scores[@]}"; do
+            files+=((^templates/)#*."${file}"*."${extension}"(N))
+        done
+    fi
+    printf "%s" "${files[*]}"
+}
+
+run_checkexec() {
+    IFS=" " read -r -A files <<<"$(get_files "ly" "$@")"
+    if [ -z "${files[*]}" ]; then
+        exit
+    fi
+    mkdir -p "${PDFS_DIRECTORY}"
+    for file in "${files[@]}"; do
+        without_extension="${file:r}"
+        pdf_file="${PDFS_DIRECTORY}/${without_extension:t}.pdf"
+        checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
+            ./scripts/run_lilypond_and_copy_to_output "${file}"
+    done
+}
+
+run_checkexec "$@"
