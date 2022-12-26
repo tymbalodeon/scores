@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+get_lilypond_version() {
+    version_text="$(lilypond --version)"
+    first_line="$(echo "${version_text}" | head -1)"
+    version_number="$(
+        echo "${first_line}" | grep -o "[0-9]\.[0-9]\{2\}\.[0-9]"
+    )"
+    echo "${version_number}"
+}
+
+IFS=" " read -r -A files <<<"$(./scripts/get_files "ly" "$@")"
+if [ -z "${files[*]}" ] || ! command -v lilypond &>/dev/null; then
+    exit
+fi
+current_lilypond_version="$(get_lilypond_version)"
+for file in "${files[@]}"; do
+    file_version="$(grep -o "${current_lilypond_version}" "${file}")"
+    if [ "${file_version}" != "${current_lilypond_version}" ]; then
+        convert-ly --current-version --edit "${file}"
+        rm -f "${file}"~
+    fi
+done
