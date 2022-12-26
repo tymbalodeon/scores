@@ -63,6 +63,6 @@ commit message:
     git push
 
 # Switch back to main branch, optionally committing the current branch.
-main *message="": (commit message)
+main *message: (commit message)
     #!/usr/bin/env zsh
     ./scripts/helpers/_checkout_branch "main"

@@ -30,6 +30,7 @@ directly (using `./scripts/main <COMMAND> <ARGS>`) or using
 
 - `just`: Show available commands
 - `just clean *scores`: Remove pdf(s).
+- `just commit message`: Commit and push all files.
 - `just compile *scores`: Create pdf(s).
 - `just create type composer title *edit`: Create new score template, and
   optionally edit ("--edit").
@@ -37,6 +38,8 @@ directly (using `./scripts/main <COMMAND> <ARGS>`) or using
   file changes.
 - `just install`: Install dependencies.
 - `just list *scores`: List pdf(s).
+- `just main *message`: Switch back to main branch, optionally committing the
+  current branch.
 - `just open *scores`: Open pdf(s).
 - `just outdated *scores`: List \<scores\> with outdated or non-existent pdfs.
 - `just status *scores`: Show status of pdf(s) for \<scores\>.
