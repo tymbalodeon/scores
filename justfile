@@ -68,13 +68,7 @@ _run_checkexec command *scores:
 # Open pdf(s).
 open *scores:
     #!/usr/bin/env zsh
-    IFS=" " read -r -A files <<<"$(just _get_files "pdf" {{scores}})"
-    if [ -z "${files[*]}" ]; then
-        exit
-    fi
-    for file in "${files[@]}"; do
-        open "${file}"
-    done
+    ./scripts/open {{scores}}
 
 # Remove pdf(s).
 clean *scores:

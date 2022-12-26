@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+IFS=" " read -r -A files <<<"$(just _get_files "pdf" "$@")"
+if [ -z "${files[*]}" ]; then
+    exit
+fi
+for file in "${files[@]}"; do
+    open "${file}"
+done
