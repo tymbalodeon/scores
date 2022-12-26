@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+setopt extendedglob
+extension="${1}"
+shift
+scores=("$@")
+if [ -z "${scores[*]}" ]; then
+    files=((^templates/)#*."${extension}"(N))
+else
+    files=()
+    for file in "${scores[@]}"; do
+        files+=((^templates/)#*."${file}"*."${extension}"(N))
+    done
+fi
+printf "%s" "${files[*]}"
