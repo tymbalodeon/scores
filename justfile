@@ -2,11 +2,11 @@ set dotenv-load
 
 export PDFS_DIRECTORY := "./pdfs"
 export OUTPUT_DIRECTORY := ```
-    OUTPUT_DIRECTORY="${OUTPUT_DIRECTORY:-}"
-    if [ -n "${OUTPUT_DIRECTORY}" ]; then
-        mkdir -p "${OUTPUT_DIRECTORY}"
+    output_directory="${OUTPUT_DIRECTORY:-}"
+    if [ -n "${output_directory}" ]; then
+        mkdir -p "${output_directory}"
     fi
-    printf "%s" "${OUTPUT_DIRECTORY}"
+    printf "%s" "${output_directory}"
 ```
 
 @_help:

@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-export PDFS_DIRECTORY="./pdfs"
-
 IFS=" " read -r -A files <<<"$(./scripts/get_files "ly" "$@")"
 if [ -z "${files[*]}" ]; then
     exit
