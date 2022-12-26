@@ -66,25 +66,12 @@ _run_checkexec command *scores:
     ./scripts/list {{scores}}
 
 # Open pdf(s).
-open *scores:
-    #!/usr/bin/env zsh
+@open *scores:
     ./scripts/open {{scores}}
 
 # Remove pdf(s).
-clean *scores:
-    #!/usr/bin/env zsh
-    IFS=" " read -r -A files <<<"$(just _get_files "pdf" {{scores}})"
-    if [ -z "${files[*]}" ]; then
-        exit
-    fi
-    for file in "${files[@]}"; do
-        rm -f "${file}"
-        if [ -n "${OUTPUT_DIRECTORY}" ]; then
-            output_file="${OUTPUT_DIRECTORY}"/"${file:t}"
-            rm -f "${output_file}"
-        fi
-        echo "Removed ${file}".
-    done
+@clean *scores:
+    ./scripts/clean {{scores}}
 
 _get_lilypond_version:
     #!/usr/bin/env zsh

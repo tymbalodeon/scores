@@ -9,7 +9,7 @@ if [ -z "${scores[*]}" ]; then
 else
     files=()
     for file in "${scores[@]}"; do
-        files+=((^templates/)#*."${file}"*."${extension}"(N))
+        files+=((^templates/)#*"${file}"*."${extension}"(N))
     done
 fi
 printf "%s" "${files[*]}"
