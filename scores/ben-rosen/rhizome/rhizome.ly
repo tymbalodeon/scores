@@ -501,18 +501,28 @@ flute = \relative c' {
   \tuplet 4/6 {a bf \slashedGrace {ef' c} g, a)} |
 
   \time 3/4
-  \tuplet 3/2 {\slashedGrace {g'' e} b,8( cs \slashedGrace {g''16 e} d,8}
-  \tuplet 3/2 {b cs \slashedGrace {g''16 e} d,8}
-  \tuplet 3/2 {b8 cs d)} |
+  \slurDown
+  \tupletDown
+  \tuplet 3/2 { \slashedGrace { g'' e } b,8([ cs \slashedGrace { g''16 e } d,8] }
+  \tuplet 3/2 { b[ cs \slashedGrace { g''16 e } d,8] }
+  \tuplet 3/2 { b8 cs d) } |
+  \tupletNeutral
+  \slurNeutral
 
   \time 4/4
-  \slashedGrace {b''16 gs} ef,( f gf ef
-  \tuplet 5/4 {f \slashedGrace {b'16 gs} gf, ef f \slashedGrace {b'16 gs} ef,}
-  \tuplet 6/4 {ef f gf ef \slashedGrace {b''16 gs} f, gf\ff)} r4 |
+  \slurDown
+  \slashedGrace { b''16 gs } ef,( f gf ef
+  \tuplet 5/4 { f[
+    \slashedGrace { b'16 gs }
+    gf, ef f
+    \slashedGrace { b'16 gs }
+    ef,] }
+  \tuplet 6/4 { ef[ f gf ef \slashedGrace { b''16 gs } f, gf\ff)] } r4 |
+  \slurNeutral
 
   \tempo 4=80
   \time 2/4
-  \tuplet 3/2 {d,16\ppp\<( a' fs }
+  \tuplet 3/2 { d,16\ppp\<( a' fs }
   \tuplet 3/2 { cs' bf f'! } d32 af' f b! fs c'! a! ds)\ff |
 
   \tempo 4=88
@@ -560,6 +570,7 @@ flute = \relative c' {
   \time 2/4
   \tuplet 3/2 {
     c,,,\ppp\<~(
+    \once \override NoteHead.extra-spacing-width = #'(-0.5 . 1.5)
     <c'\flageolet c,\harmonic~>
     <g'\flageolet c,,\harmonic>
   }
@@ -580,17 +591,17 @@ flute = \relative c' {
   \time 7/8
   \shape #'((0 . 2) (0 . 1) (0 . 1) (0 . 1)) Slur
   \tieDown
-  f,,,\p\<(~
+  f,,,\p\<(~[
   <f'\flageolet f,\harmonic~>
   <c'\flageolet f,,\harmonic~>
   <f\flageolet f,,\harmonic~>
   \tieNeutral
-  <a\flageolet f,,\harmonic>\f) r4 |
+  <a\flageolet f,,\harmonic>\f)] r4 |
 
   \tempo 4=92
   \time 3/4
   \once \override DynamicText.extra-spacing-width = #'(-0.5 . 2.5)
-  \shape #'((0 . 0) (0 . 1) (0 . 1) (0 . 1)) Slur
+  \shape #'((0 . 0) (0 . 0) (0 . 2) (0 . 0)) Slur
   fs,,->\ff~(^\markup { \italic "molto accel." }
   \tuplet 7/4 { fs8\pppp cs'-> g'-> c-> e-> g-> a->) } |
 
