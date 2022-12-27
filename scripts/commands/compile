@@ -1,6 +1,5 @@
 #!/usr/bin/env zsh
 
-IFS=" " read -r -A files <<<"$("${HELPERS}"/_get_files "ly" "$@")"
 files=($("${HELPERS}"/_get_files "ly" "$@"))
 if [ -z "${files[*]}" ]; then
     exit
