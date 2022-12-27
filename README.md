@@ -44,3 +44,22 @@ directly (using `./scripts/main <COMMAND> <ARGS>`) or using
 - `just outdated *scores`: List \<scores\> with outdated or non-existent pdfs.
 - `just status *scores`: Show status of pdf(s) for \<scores\>.
 - `just update *scores`: Update lilypond version in \<scores\>.
+
+## Templates
+
+Templates are provided for common types of scores. To create a score from a
+template, call `just create` (or `./scripts/main create`) with a `type` value
+containing the name of the template type plus any options, separated spaces.
+
+For example:
+
+- To create a lead sheet with lyrics: `just create "lead lyrics" <composer> <title>`
+- To create a chart without lyrics: `just create chart <composer> <title>`
+
+### Types
+
+- `chart`: single score that produces two output files, one for `lead` and one
+  for `form`
+- `lead`: (as in "lead sheet") melody with chords, optionally with `lyrics`
+- `form`: measures (usually chord rhythms) with chords, broken into sections
+- `piano`: solo piano
