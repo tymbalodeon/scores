@@ -1,21 +1,5 @@
 #!/usr/bin/env zsh
 
-IFS=" " read -r -A ARGS <<< "$@"
-if ((${ARGS[(Ie)chart]})); then
-    TEMPLATE="chart"
-elif ((${ARGS[(Ie)form]})); then
-    TEMPLATE="form"
-elif ((${ARGS[(Ie)lead]})); then
-    TEMPLATE="lead"
-elif ((${ARGS[(Ie)piano]})); then
-    TEMPLATE="piano"
-fi
-if [ "${TEMPLATE}" = "chart" ] \
-    || [ "${TEMPLATE}" = "lead" ] \
-     && ((${ARGS[(Ie)lyrics]})); then
-    LYRICS="true"
-fi
-
 get_new_score_name () {
     if [ "${1}" = "piano" ]; then
         extension=".${2:e}"
@@ -74,6 +58,21 @@ copy_template_files() {
     done
 }
 
+IFS=" " read -r -A ARGS <<< "$@"
+if ((${ARGS[(Ie)chart]})); then
+    TEMPLATE="chart"
+elif ((${ARGS[(Ie)form]})); then
+    TEMPLATE="form"
+elif ((${ARGS[(Ie)lead]})); then
+    TEMPLATE="lead"
+elif ((${ARGS[(Ie)piano]})); then
+    TEMPLATE="piano"
+fi
+if [ "${TEMPLATE}" = "chart" ] \
+    || [ "${TEMPLATE}" = "lead" ] \
+     && ((${ARGS[(Ie)lyrics]})); then
+    LYRICS="true"
+fi
 "${HELPERS}"/_checkout_branch "${3}"
 copy_template_files "${1}" "${2}" "${3}"
 if [ "${4}" = "--edit" ]; then
