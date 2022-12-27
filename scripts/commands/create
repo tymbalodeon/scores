@@ -1,5 +1,21 @@
 #!/usr/bin/env zsh
 
+IFS=" " read -r -A ARGS <<< "$@"
+if ((${ARGS[(Ie)chart]})); then
+    TEMPLATE="chart"
+elif ((${ARGS[(Ie)form]})); then
+    TEMPLATE="form"
+elif ((${ARGS[(Ie)lead]})); then
+    TEMPLATE="lead"
+elif ((${ARGS[(Ie)piano]})); then
+    TEMPLATE="piano"
+fi
+if [ "${TEMPLATE}" = "chart" ] \
+    || [ "${TEMPLATE}" = "lead" ] \
+     && ((${ARGS[(Ie)lyrics]})); then
+    LYRICS="true"
+fi
+
 get_new_score_name () {
     if [ "${1}" = "piano" ]; then
         extension=".${2:e}"
@@ -7,21 +23,33 @@ get_new_score_name () {
         extension="-${2:t}"
     fi
     file_name="${3}${extension}"
-    printf "%s" "${4}/${file_name}"
+    printf "%s" "${4}/${file_name//-main}"
 }
 
-prepend_titles() {
+prepend_title_to_file_names() {
     filetypes=("changes" "lyrics" "melody" "structure")
     for filetype in "${filetypes[@]}"; do
         sed -i "" -e "s/${filetype}.ily/${1}-${filetype}.ily/g" "${2}"
     done
 }
 
-add_title_and_composer() {
+update_title_and_composer() {
     title="${(C)1}"
     composer="${(C)2}"
-    sed -i "" -e "s/Title/${title}/g" "${3}"
-    sed -i "" -e "s/Composer/${composer}/g" "${3}"
+    perl -i -pe "s/Title/${title}/g" "${3}"
+    perl -i -pe "s/Composer/${composer}/g" "${3}"
+}
+
+update_main_file() {
+    if [ "${TEMPLATE}" = "lead" ] \
+        || [ "${TEMPLATE}" = "chart" ] \
+        && [ "${LYRICS}" != "true" ]; then
+        perl -i -pe 's/\\include "lyrics.ily"\n//g' "${1}"
+        perl -i -pe 's/ \\addlyrics \\words//g' "${1}"
+    fi
+    prepend_title_to_file_names "${2}" "${1}"
+    update_title_and_composer "${2}" "${3}" "${1}"
+    # mv "${1}" "${1//-main/}"
 }
 
 copy_template_files() {
@@ -34,13 +62,14 @@ copy_template_files() {
         )"
         if test -f "${new_score}"; then
             continue
+        elif [[ "${template}" = *"lyrics.ily" ]] \
+            && [ "${LYRICS}" != "true" ]; then
+            continue
         fi
         cp "${template}" "${score_directory}"
         mv "${score_directory}/${template:t}" "${new_score}"
-        if [ "${new_score}" = "main.ly" ]; then
-            prepend_titles "${3}" "${file}"
-            add_title_and_composer "${3}" "${2}" "${file}"
-            mv "${file}" "${file//-main/}"
+        if [[ "${template}" = *"main.ly" ]]; then
+            update_main_file "${new_score}" "${3}" "${2}"
         fi
     done
 }

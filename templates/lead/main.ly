@@ -8,7 +8,6 @@
 \include "melody.ily"
 \include "structure.ily"
 
-
 \header {
   title = "Title"
   composer = "Composer"
