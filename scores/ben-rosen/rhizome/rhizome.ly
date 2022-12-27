@@ -66,7 +66,7 @@ flute = \relative c' {
 
   \time 3/4
   R2. |
-  \slashedGrace ef,16->\sfz R2. |
+  \slashedGrace ef,16^>\sfz R2. |
 
   \tempo 4=56
   \time 5/4
@@ -93,7 +93,8 @@ flute = \relative c' {
   cs,2\pp |
 
   \time 3/4
-  \acciaccatura es''16->\sfz( c,,2\ppp \glissando)( cqf4) |
+  \once \override DynamicText.extra-spacing-width = #'(-0.5 . 1)
+  \slashedGrace es''16^>\sfz c,,2\ppp \glissando( cqf4) |
 
   \time 4/4
   R1 |
@@ -130,7 +131,7 @@ flute = \relative c' {
   R2. |
 
   \time 4/4
-  \slashedGrace af,16->\sfz R1 |
+  \slashedGrace af,16^>\sfz R1 |
 
   \time 3/2
   \shape #'((0 . 1) (0 . 0.5) (0 . 0.5) (0 . 1)) Slur
@@ -152,18 +153,18 @@ flute = \relative c' {
 
   \tempo 4=60
   \time 5/4
-  \appoggiatura d,,8 cs'2\p\< \appoggiatura fs,8 f'2~\mf\> f4\p |
+  \acciaccatura d,,8 cs'2\p\< \acciaccatura fs,8 f'2~\mf\> f4\p |
 
   \time 2/4
   R2 |
 
   \tempo 4=63
   \time 3/4
-  \tuplet 3/2 { \appoggiatura d8 cs,4\ppp \appoggiatura fs'8 f,!4 r } r
+  \tuplet 3/2 { \acciaccatura d8 cs,4\ppp \acciaccatura fs'8 f,!4 r } r
 
   \tempo 4=60
   \time 4/4
-  \appoggiatura d8 cs'2\p\< \appoggiatura fs,8 f'!2 |
+  \acciaccatura d8 cs'2\p\< \acciaccatura fs,8 f'!2 |
 
   \tempo 4=56
   \time 2/4
@@ -194,7 +195,7 @@ flute = \relative c' {
   \acciaccatura d16->( cs,,2.\p) |
 
   \time 1/4
-  \slashedGrace es''16->\sfz R4 |
+  \slashedGrace es''16^>\sfz R4 |
 
   \time 3/4
   c,,2\pp \glissando( cqf4) |
