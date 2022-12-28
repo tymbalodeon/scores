@@ -153,27 +153,34 @@ flute = \relative c' {
 
   \tempo 4=60
   \time 5/4
-  \acciaccatura d,,8 cs'2\p\< \acciaccatura fs,8 f'2~\mf\> f4\p |
+  \slashedGrace d,,8 cs'2\p\< \slashedGrace fs,8 f'2~\mf\> f4\p |
 
   \time 2/4
   R2 |
 
   \tempo 4=63
   \time 3/4
-  \tuplet 3/2 { \acciaccatura d8 cs,4\ppp \acciaccatura fs'8 f,!4 r } r
+  \tuplet 3/2 {
+    \slashedGrace d8 cs,4\ppp
+    \slashedGrace fs'8
+    f,!4 r
+  }
+  r
 
   \tempo 4=60
   \time 4/4
-  \acciaccatura d8 cs'2\p\< \acciaccatura fs,8 f'!2 |
+  \slashedGrace d8 cs'2\p\< \slashedGrace fs,8 f'!2 |
 
   \tempo 4=56
   \time 2/4
+  \once \override TupletBracket.positions = #'(7 . 5.5)
   \tuplet 3/2 {
-    \acciaccatura a!8( as,8->\f\>)
-    \acciaccatura a'!8( as,)
-    \acciaccatura a'!8( as,)
+    \slashedGrace a!8 as,8->\f\>
+    \slashedGrace a'!8 as,
+    \slashedGrace a'!8 as,
   }
-  \acciaccatura a''!8( as,16\pp) as as r |
+  \once \override NoteHead.extra-spacing-width = #'(-1 . 0.5)
+  \slashedGrace a''!8 as,16\pp as as r |
 
   \time 1/8
   R8 |
@@ -206,11 +213,12 @@ flute = \relative c' {
   \tempo 4=56
   \time 2/4
   \tuplet 3/2 {
-    \acciaccatura gs''8( a,8->\f\>)
-    \acciaccatura gs'8( a,)
-    \acciaccatura gs'8( a,)
+    \slashedGrace gs''8 a,8->\f\>
+    \slashedGrace gs'8 a,
+    \slashedGrace gs'8 a,
   }
-  \acciaccatura gs''8( a,16->-+\pp) a,-+ a-+ r |
+  \once \override NoteHead.extra-spacing-width = #'(-1.5 . 0.5)
+  \slashedGrace gs''8 a,16->-+\pp a,-+ a-+ r |
 
   \time 3/4
   \xNotesOn
@@ -221,7 +229,9 @@ flute = \relative c' {
   \tuplet 3/2 { fs''8->\f\>( e d } \tuplet 5/4 { b-- gs-- e-- c-- g!--) } |
 
   \time 2/4
-  c,4\ppp( \glissando cqf) |
+  c,4\ppp( \glissando
+  \once \override NoteHead.extra-spacing-width = #'(-3 . 0.5)
+  cqf) |
   R2 |
 
   \tempo 4=104
@@ -231,7 +241,9 @@ flute = \relative c' {
   \tuplet 5/4 { b-- gs-- e-- c-- g!--) } |
 
   \time 2/4
-  c,4(\ppp \glissando cqf) |
+  c,4(\ppp \glissando
+  \once \override NoteHead.extra-spacing-width = #'(-3 . 0.5)
+  cqf) |
 
   \time 3/4
   R2. |
@@ -296,9 +308,13 @@ flute = \relative c' {
   \time 2/4
   R2 |
 
-  \tempo 4 = 88
+  \tempo 4=88
   \time 3/4
-  \slashedGrace { b16-+-.\ppp gs-+-. }
+  \slashedGrace {
+    b16-+-.\ppp
+    \once \override NoteHead.extra-spacing-width = #'(-0.5 . 7)
+    gs-+-.
+  }
   R2. |
 
   \time 2/4
@@ -312,8 +328,7 @@ flute = \relative c' {
   r4 \slashedGrace { es,16-.\fff c-. } r2 |
 
   \tempo 4=120
-  \override TextSpanner.bound-details.left.text = "molto accel."
-  es,8\ppp\<(\startTextSpan f gf es f gf)\stopTextSpan
+  es,8\ppp\<(^\markup { \italic "molto accel." } f gf es f gf)
 
   \time 6/8
   \tuplet 4/6 {
@@ -342,13 +357,13 @@ flute = \relative c' {
   \tuplet 3/2 { es f gf }
   \tuplet 3/2 { es f \slashedGrace b'^> gf,\f) } r4 |
 
-  \tempo 4 = 80
+  \tempo 4=80
   \tuplet 3/2 { d,16\pp\<( a' fs }
   \tuplet 3/2 { cs' bf f'! } d32 af' f b! fs c'! a! ds
   \tuplet 5/4 { c e f gf e }
   \tuplet 7/4 { g a bf gs b! cs d\ff) } r4 |
 
-  \tempo 4 = 76
+  \tempo 4=76
   \time 3/4
   \once \override DynamicText.extra-spacing-width = #'(-0.5 . 2.5)
   d,,,->\fff~ \tuplet 7/4 { d8\pppp\<( a'-> es'-> af->  c-> es-> f->) } |
@@ -360,7 +375,7 @@ flute = \relative c' {
   \tuplet 3/2 { d,,4\ppp\<( fs as } d8 f! af b) |
   \tuplet 3/2 { d,8( fs as } \tuplet 5/4 { d16 f! af b d\ff) } r4
 
-  \tempo 4 = 144
+  \tempo 4=144
   \tuplet 3/2 { d,16->\fff( e fs } \tuplet 3/2 { gs as c) }
 
   \time 2/4
@@ -375,7 +390,7 @@ flute = \relative c' {
   \slashedGrace fs''16^>\sfz
   R2 |
 
-  \tempo 4 = 72
+  \tempo 4=72
   \time 3/4
   \tuplet 3/2 {as16\ff\>-> r gs-> r fs-> r}
   \tuplet 5/4 {ds-> r c-> r gs-> r e-> r b-> r} |
@@ -383,7 +398,7 @@ flute = \relative c' {
   \time 3/4
   e,4\ppp r r |
 
-  \tempo 4 = 63
+  \tempo 4=63
   \time 2/4
   \tuplet 3/2 {
     \slashedGrace b''8 c,8\ppp->
@@ -392,7 +407,7 @@ flute = \relative c' {
   }
   \slashedGrace b'' c,16 c r8 |
 
-  \tempo 4 = 116
+  \tempo 4=116
   \time 4/4
   d'32\fff\>-> r df-> r c-> r b-> r
   \tuplet 3/2 {as16-> r gs-> r fs-> r }
@@ -401,7 +416,7 @@ flute = \relative c' {
   \time 3/4
   e,4\ppp r r |
 
-  \tempo 4 = 66
+  \tempo 4=66
   \time 2/8
   \tuplet 3/2 {
     \slashedGrace g'!8 gs,\pppp-> \slashedGrace g'! gs, \slashedGrace g'! gs,
@@ -415,7 +430,7 @@ flute = \relative c' {
   \time 2/4
   R2 |
 
-  \tempo 4 = 88
+  \tempo 4=88
   \time 5/8
   d'8.:64\ff\>( a:64 d8:64 a:64) |
 
