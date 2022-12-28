@@ -160,7 +160,12 @@ flute = \relative c' {
 
   \tempo 4=63
   \time 3/4
-  \tuplet 3/2 { \slashedGrace d8 cs,4\ppp \slashedGrace fs'8 f,!4 r } r
+  \tuplet 3/2 {
+    \slashedGrace d8 cs,4\ppp
+    \slashedGrace fs'8
+    f,!4 r
+  }
+  r
 
   \tempo 4=60
   \time 4/4
@@ -168,11 +173,13 @@ flute = \relative c' {
 
   \tempo 4=56
   \time 2/4
+  \once \override TupletBracket.positions = #'(7 . 5.5)
   \tuplet 3/2 {
     \slashedGrace a!8 as,8->\f\>
     \slashedGrace a'!8 as,
     \slashedGrace a'!8 as,
   }
+  \once \override NoteHead.extra-spacing-width = #'(-1 . 0.5)
   \slashedGrace a''!8 as,16\pp as as r |
 
   \time 1/8
@@ -206,11 +213,12 @@ flute = \relative c' {
   \tempo 4=56
   \time 2/4
   \tuplet 3/2 {
-    \acciaccatura gs''8( a,8->\f\>)
-    \acciaccatura gs'8( a,)
-    \acciaccatura gs'8( a,)
+    \slashedGrace gs''8 a,8->\f\>
+    \slashedGrace gs'8 a,
+    \slashedGrace gs'8 a,
   }
-  \acciaccatura gs''8( a,16->-+\pp) a,-+ a-+ r |
+  \once \override NoteHead.extra-spacing-width = #'(-1.5 . 0.5)
+  \slashedGrace gs''8 a,16->-+\pp a,-+ a-+ r |
 
   \time 3/4
   \xNotesOn
@@ -221,7 +229,9 @@ flute = \relative c' {
   \tuplet 3/2 { fs''8->\f\>( e d } \tuplet 5/4 { b-- gs-- e-- c-- g!--) } |
 
   \time 2/4
-  c,4\ppp( \glissando cqf) |
+  c,4\ppp( \glissando
+  \once \override NoteHead.extra-spacing-width = #'(-3 . 0.5)
+  cqf) |
   R2 |
 
   \tempo 4=104
@@ -231,7 +241,9 @@ flute = \relative c' {
   \tuplet 5/4 { b-- gs-- e-- c-- g!--) } |
 
   \time 2/4
-  c,4(\ppp \glissando cqf) |
+  c,4(\ppp \glissando
+  \once \override NoteHead.extra-spacing-width = #'(-3 . 0.5)
+  cqf) |
 
   \time 3/4
   R2. |
@@ -296,73 +308,88 @@ flute = \relative c' {
   \time 2/4
   R2 |
 
-  \tempo 4 = 88
+  \tempo 4=88
   \time 3/4
-  \slashedGrace { b16-+-.\ppp gs-+-. }
+  \slashedGrace {
+    b16-+-.\ppp
+    \once \override NoteHead.extra-spacing-width = #'(-0.5 . 7)
+    gs-+-.
+  }
   R2. |
 
   \time 2/4
-  \slashedGrace { es''16-.\fff c-. }
+  \slashedGrace { ef''16-.\fff c-. }
   R2 |
 
   \time 3/4
   \xNotesOn
   \slashedGrace { b'16-.\pppp gs-. }
   \xNotesOff
-  r4 \slashedGrace { es,16-.\fff c-. } r2 |
+  r4 \slashedGrace { ef,16-.\fff c-. } r2 |
 
   \tempo 4=120
-  \override TextSpanner.bound-details.left.text = "molto accel."
-  es,8\ppp\<(\startTextSpan f gf es f gf)\stopTextSpan
+  ef,8\ppp\<(^\markup { \italic "molto accel." } f gf ef f gf)
 
   \time 6/8
+  \tupletDown
+  \once \override TupletBracket.visible-over-note-heads = ##t
+  \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -0.5)) Slur
   \tuplet 4/6 {
-    es16( f \slashedGrace d''^> gf,, es
+    ef16( f
+    \slashedGrace d''^>
+    gf,, ef
   }
+  \once \override TupletBracket.visible-over-note-heads = ##t
   \tuplet 4/6 {
-    f gf \slashedGrace d''^> es,, f)
+    f gf \slashedGrace d''^> ef,, f)
   } |
+  \tupletNeutral
 
   \time 3/4
   \slashedGrace d''16^>
   \tuplet 3/2 {
-    gf,,8( es
+    gf,,8( ef
     \slashedGrace gf''16^> f,,8
   }
+  \once \override TupletNumber.X-offset = #3.5
   \tuplet 3/2 {
-    gf8 es \slashedGrace gf''16^> f,,8
+    gf8 ef \slashedGrace gf''16^> f,,8
   }
-  \tuplet 3/2 { gf8 es f) } |
+  \tuplet 3/2 { gf8 ef f) } |
 
   \time 4/4
   \slurDown
-  \slashedGrace a''16^> es,16( f gf es
+  \slashedGrace a''16^> ef,16( f gf ef
   \tuplet 5/4 {
-    f \slashedGrace a'^> gf, es f \slashedGrace b'^> gf,
+    f \slashedGrace a'^> gf, ef f \slashedGrace b'^> gf,
   }
-  \tuplet 3/2 { es f gf }
-  \tuplet 3/2 { es f \slashedGrace b'^> gf,\f) } r4 |
+  \tuplet 3/2 { ef f gf }
+  \tuplet 3/2 { ef f \slashedGrace b'^> gf,\f) } r4 |
   \slurNeutral
 
-  \tempo 4 = 80
+  \tempo 4=80
   \tuplet 3/2 { d,16\pp\<( a' fs }
   \tuplet 3/2 { cs' bf f'! } d32 af' f b! fs c'! a! ds
   \tuplet 5/4 { c e f gf e }
   \tuplet 7/4 { g a bf gs b! cs d\ff) } r4 |
 
-  \tempo 4 = 76
+  \tempo 4=76
   \time 3/4
   \once \override DynamicText.extra-spacing-width = #'(-0.5 . 2.5)
-  d,,,->\fff~ \tuplet 7/4 { d8\pppp\<( a'-> es'-> af->  c-> es-> f->) } |
+  d,,,->\fff~( \tuplet 7/4 {
+    d8\pppp\<
+    \once \override NoteHead.extra-spacing-width = #'(-0.5 . 1.5)
+    a'-> ef'-> af->  c-> ef-> f->)
+  } |
 
   \time 5/8
-  \tuplet 4/6 {d,,16--\fff\>( a'-- es'-- af-- } c-- es-- f-- gf--) |
+  \tuplet 4/6 {d,,16--\fff\>( a'-- ef'-- af-- } c-- ef-- f-- gf--) |
 
   \time 4/4
   \tuplet 3/2 { d,,4\ppp\<( fs as } d8 f! af b) |
   \tuplet 3/2 { d,8( fs as } \tuplet 5/4 { d16 f! af b d\ff) } r4
 
-  \tempo 4 = 144
+  \tempo 4=144
   \tuplet 3/2 { d,16->\fff( e fs } \tuplet 3/2 { gs as c) }
 
   \time 2/4
@@ -370,41 +397,53 @@ flute = \relative c' {
 
   \tempo 4=54
   \time 3/4
+  \once \override DynamicText.extra-spacing-width = #'(-0.5 . 0.5)
   \slashedGrace d16^>\sfz
-  \tuplet 3/2 { cs,,,4\pp \glissando cqs \glissando c } r4 |
+  \tuplet 3/2 {
+    cs,,,4\pp \glissando
+    \once \override NoteHead.extra-spacing-width = #'(-4 . 0.5)
+    cqs \glissando
+    \once \override NoteHead.extra-spacing-width = #'(-3 . 0.5)
+    c
+  } r4 |
 
   \time 2/4
   \slashedGrace fs''16^>\sfz
   R2 |
 
-  \tempo 4 = 72
+  \tempo 4=72
   \time 3/4
-  \tuplet 3/2 {as16\ff\>-> r gs-> r fs-> r}
-  \tuplet 5/4 {ds-> r c-> r gs-> r e-> r b-> r} |
-
-  \time 3/4
-  e,4\ppp r r |
-
-  \tempo 4 = 63
-  \time 2/4
-  \tuplet 3/2 {
-    \slashedGrace b''8 c,8\ppp->
-    \slashedGrace b' c,
-    \slashedGrace b' c,
-  }
-  \slashedGrace b'' c,16 c r8 |
-
-  \tempo 4 = 116
-  \time 4/4
-  d'32\fff\>-> r df-> r c-> r b-> r
-  \tuplet 3/2 {as16-> r gs-> r fs-> r }
+  \tuplet 3/2 { as16\ff\>-> r gs-> r fs-> r }
+  \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0.5)
   \tuplet 5/4 { ds-> r c-> r gs-> r e-> r b-> r } |
 
   \time 3/4
   e,4\ppp r r |
 
-  \tempo 4 = 66
+  \tempo 4=63
+  \time 2/4
+  \tuplet 3/2 {
+    \slashedGrace b''8
+    \once \override NoteHead.extra-spacing-width = #'(-2 . 0.5)
+    c,8\ppp->
+    \slashedGrace b' c,
+    \slashedGrace b' c,
+  }
+  \slashedGrace b'' c,16 c r8 |
+
+  \tempo 4=116
+  \time 4/4
+  d'32\fff\>-> r df-> r c-> r b-> r
+  \tuplet 3/2 {as16-> r gs-> r fs-> r }
+  \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0.5)
+  \tuplet 5/4 { ds-> r c-> r gs-> r e-> r b-> r } |
+
+  \time 3/4
+  e,4\ppp r r |
+
+  \tempo 4=66
   \time 2/8
+  \once \override TupletBracket.positions = #'(6.5 . 5.5)
   \tuplet 3/2 {
     \slashedGrace g'!8 gs,\pppp-> \slashedGrace g'! gs, \slashedGrace g'! gs,
   } |
@@ -412,12 +451,13 @@ flute = \relative c' {
   \tempo 4=76
   \time 3/4
   \tuplet 3/2 {gs''16\f\>-> r fs-> r e-> r}
+  \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0.5)
   \tuplet 5/4 {cs-> r bf-> r fs-> r d-> r a\ppp-> r} |
 
   \time 2/4
   R2 |
 
-  \tempo 4 = 88
+  \tempo 4=88
   \time 5/8
   d'8.:64\ff\>( a:64 d8:64 a:64) |
 
@@ -446,20 +486,26 @@ flute = \relative c' {
   \tempo 4=84
   \time 3/4
   \tuplet 3/2 {fs16\f\>->-+ r e-+ r d-+ r}
+  \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0.5)
   \tuplet 5/4 {b-+ r gs-+ r e-+ r c-+ r g-+ r} |
 
   \time 2/4
-  c,4(\ppp\glissando cqf) |
+  c,4(\ppp\glissando
+  \once \override NoteHead.extra-spacing-width = #'(-4 . 0.5)
+  cqf) |
   R2 |
 
   \tempo 4=104
   \time 4/4
   bf'''32\ff\>-> r a r af r g r
   \tuplet 3/2 {fs16 r e r d r }
+  \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0.5)
   \tuplet 5/4 {\xNotesOn b r gs r e r c r g r \xNotesOff } |
 
   \time 3/4
-  c,4(\ppp\glissando cqf) r |
+  c,4(\ppp\glissando
+  \once \override NoteHead.extra-spacing-width = #'(-4 . 0.5)
+  cqf) r |
 
   \tempo 4=132
   \time 5/4
@@ -488,12 +534,16 @@ flute = \relative c' {
 
   \tempo 4=132
   \time 3/4
-  \override TextSpanner.bound-details.left.text = "molto accel."
-  ef,,8\pppp\<(\startTextSpan f gf ef f gf)\stopTextSpan |
+  ef,,8\pppp\<(^\markup { \italic "molto accel." } f gf ef f gf) |
 
   \time 6/8
+  \tupletDown
+  \once \override TupletBracket.visible-over-note-heads = ##t
+  \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -0.5)) Slur
   \tuplet 4/6 { ef16( f \slashedGrace d''^> gf,, ef }
+  \once \override TupletBracket.visible-over-note-heads = ##t
   \tuplet 4/6 { f gf \slashedGrace d''^> ef,, f) } |
+  \tupletNeutral
 
   \time 3/4
   \grace {ef'' c} g,8( a bf g a bf) |
@@ -505,7 +555,11 @@ flute = \relative c' {
   \time 3/4
   \slurDown
   \tupletDown
-  \tuplet 3/2 { \slashedGrace { g'' e } b,8([ cs \slashedGrace { g''16 e } d,8] }
+  \once \override TupletBracket.stencil = ##f
+  \once \override TupletNumber.X-offset = #8
+  \tuplet 3/2 { \slashedGrace { g'' e }
+  \shape #'((0 . 0) (0 . -1) (0 . 0) (0 . 0)) Slur
+                b,8([ cs \slashedGrace { g''16 e } d,8] }
   \tuplet 3/2 { b[ cs \slashedGrace { g''16 e } d,8] }
   \tuplet 3/2 { b8 cs d) } |
   \tupletNeutral
@@ -572,8 +626,8 @@ flute = \relative c' {
   \time 2/4
   \tuplet 3/2 {
     c,,,\ppp\<~(
-    \once \override NoteHead.extra-spacing-width = #'(-0.5 . 1.5)
     <c'\flageolet c,\harmonic~>
+    \once \override NoteHead.extra-spacing-width = #'(-1.5 . 0.5)
     <g'\flageolet c,,\harmonic>
   }
   \tuplet 5/4 { c16 e g bf c\ff) } |
@@ -628,6 +682,7 @@ flute = \relative c' {
 \tempo 4=132
 c32->\fff\> r b-> r bf-> r a-> r
 \tuplet 3/2 { gs16-> r fs-> r e-> r }
+  \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0.5)
 \tuplet 5/4 { cs-> r as-> r fs-> r d-> r a->\ppp r } |
 
 \time 2/4
