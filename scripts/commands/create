@@ -73,7 +73,6 @@ if [ "${TEMPLATE}" = "chart" ] \
      && ((${ARGS[(Ie)lyrics]})); then
     LYRICS="true"
 fi
-"${HELPERS}"/_checkout_branch "${3}"
 copy_template_files "${1}" "${2}" "${3}"
 if [ "${4}" = "--edit" ]; then
     just edit "${3}"

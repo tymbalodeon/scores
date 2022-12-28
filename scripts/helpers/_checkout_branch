@@ -1,9 +1,0 @@
-#!/usr/bin/env zsh
-
-if [ "$(git branch --show-current)" = "${1}" ]; then
-    return
-fi
-if [ -z "$(git branch | grep "${1}")" ]; then
-    git branch "${1}"
-fi
-git checkout "${1}"

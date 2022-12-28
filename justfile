@@ -61,7 +61,3 @@ commit message:
     git add .
     git commit -m "{{message}}"
     git push
-
-# Switch back to main branch, optionally committing the current branch.
-@main *message: (commit message)
-    ./scripts/helpers/_checkout_branch "main"
