@@ -435,6 +435,7 @@ flute = \relative c' {
   \time 4/4
   d'32\fff\>-> r df-> r c-> r b-> r
   \tuplet 3/2 {as16-> r gs-> r fs-> r }
+  \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0.5)
   \tuplet 5/4 { ds-> r c-> r gs-> r e-> r b-> r } |
 
   \time 3/4
@@ -442,6 +443,7 @@ flute = \relative c' {
 
   \tempo 4=66
   \time 2/8
+  \once \override TupletBracket.positions = #'(6.5 . 5.5)
   \tuplet 3/2 {
     \slashedGrace g'!8 gs,\pppp-> \slashedGrace g'! gs, \slashedGrace g'! gs,
   } |
@@ -449,6 +451,7 @@ flute = \relative c' {
   \tempo 4=76
   \time 3/4
   \tuplet 3/2 {gs''16\f\>-> r fs-> r e-> r}
+  \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0.5)
   \tuplet 5/4 {cs-> r bf-> r fs-> r d-> r a\ppp-> r} |
 
   \time 2/4
@@ -483,16 +486,20 @@ flute = \relative c' {
   \tempo 4=84
   \time 3/4
   \tuplet 3/2 {fs16\f\>->-+ r e-+ r d-+ r}
+  \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0.5)
   \tuplet 5/4 {b-+ r gs-+ r e-+ r c-+ r g-+ r} |
 
   \time 2/4
-  c,4(\ppp\glissando cqf) |
+  c,4(\ppp\glissando
+  \once \override NoteHead.extra-spacing-width = #'(-4 . 0.5)
+  cqf) |
   R2 |
 
   \tempo 4=104
   \time 4/4
   bf'''32\ff\>-> r a r af r g r
   \tuplet 3/2 {fs16 r e r d r }
+  \once \override NoteHead.extra-spacing-width = #'(-2.5 . 0.5)
   \tuplet 5/4 {\xNotesOn b r gs r e r c r g r \xNotesOff } |
 
   \time 3/4
