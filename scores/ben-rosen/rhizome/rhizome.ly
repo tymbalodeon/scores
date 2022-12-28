@@ -153,27 +153,27 @@ flute = \relative c' {
 
   \tempo 4=60
   \time 5/4
-  \acciaccatura d,,8 cs'2\p\< \acciaccatura fs,8 f'2~\mf\> f4\p |
+  \slashedGrace d,,8 cs'2\p\< \slashedGrace fs,8 f'2~\mf\> f4\p |
 
   \time 2/4
   R2 |
 
   \tempo 4=63
   \time 3/4
-  \tuplet 3/2 { \acciaccatura d8 cs,4\ppp \acciaccatura fs'8 f,!4 r } r
+  \tuplet 3/2 { \slashedGrace d8 cs,4\ppp \slashedGrace fs'8 f,!4 r } r
 
   \tempo 4=60
   \time 4/4
-  \acciaccatura d8 cs'2\p\< \acciaccatura fs,8 f'!2 |
+  \slashedGrace d8 cs'2\p\< \slashedGrace fs,8 f'!2 |
 
   \tempo 4=56
   \time 2/4
   \tuplet 3/2 {
-    \acciaccatura a!8( as,8->\f\>)
-    \acciaccatura a'!8( as,)
-    \acciaccatura a'!8( as,)
+    \slashedGrace a!8 as,8->\f\>
+    \slashedGrace a'!8 as,
+    \slashedGrace a'!8 as,
   }
-  \acciaccatura a''!8( as,16\pp) as as r |
+  \slashedGrace a''!8 as,16\pp as as r |
 
   \time 1/8
   R8 |
@@ -335,12 +335,14 @@ flute = \relative c' {
   \tuplet 3/2 { gf8 es f) } |
 
   \time 4/4
+  \slurDown
   \slashedGrace a''16^> es,16( f gf es
   \tuplet 5/4 {
     f \slashedGrace a'^> gf, es f \slashedGrace b'^> gf,
   }
   \tuplet 3/2 { es f gf }
   \tuplet 3/2 { es f \slashedGrace b'^> gf,\f) } r4 |
+  \slurNeutral
 
   \tempo 4 = 80
   \tuplet 3/2 { d,16\pp\<( a' fs }
@@ -497,8 +499,8 @@ flute = \relative c' {
   \grace {ef'' c} g,8( a bf g a bf) |
 
   \time 6/8
-  \tuplet 4/6 {g16( a \slashedGrace {ef'' c} bf, g}
-  \tuplet 4/6 {a bf \slashedGrace {ef' c} g, a)} |
+  \tuplet 4/6 { g16( a \slashedGrace { ef'' c } bf, g }
+  \tuplet 4/6 { a bf \slashedGrace { ef' c } g, a) } |
 
   \time 3/4
   \slurDown
