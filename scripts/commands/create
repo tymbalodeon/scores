@@ -1,7 +1,8 @@
 #!/usr/bin/env zsh
 
 get_new_score_name () {
-    if [ "${1}" = "piano" ]; then
+    if [ "${1}" = "piano" ] \
+        || [ "${1}" = "single" ]; then
         extension=".${2:e}"
     else
         extension="-${2:t}"
@@ -35,7 +36,7 @@ update_main_file() {
     fi
     prepend_title_to_file_names "${2}" "${1}"
     update_title_and_composer "${2}" "${3}" "${1}"
-    # mv "${1}" "${1//-main/}"
+    mv "${1}" "${1//-main/}"
 }
 
 copy_template_files() {
@@ -69,6 +70,8 @@ elif ((${ARGS[(Ie)lead]})); then
     TEMPLATE="lead"
 elif ((${ARGS[(Ie)piano]})); then
     TEMPLATE="piano"
+elif ((${ARGS[(Ie)single]})); then
+    TEMPLATE="single"
 fi
 if [ "${TEMPLATE}" = "chart" ] \
     || [ "${TEMPLATE}" = "lead" ] \
