@@ -62,12 +62,66 @@ bass = \relative c' {
   d fs ( \glissando a ) d ~ d a g4 |
   fs4 fs fs8 fs r fs ~ |
   fs cs fs as cs e d cs |
+
+  \repeat volta 2 {
+    b,4 b r8 cs r d ~ |
+    d d d d ~ d d d a |
+    g'4 g g8 fs r e ~ |
+    \alternative {
+      \volta 1 {
+        e e e e ~ e e e ( d ) |
+      }
+      \volta 2 {
+        e e e ( d ) e b' e, ( d ) |
+      }
+    }
+  }
+
+  g,4 g g8 b cs d ~ |
+  d d d d ~ d d d a |
+  fs'4 fs fs8 fs a, b ~ |
+  b b r a ~ a a a fs |
+
+  g4 g g8 b cs d ~ |
+  d fs ( \glissando a ) d ~ d a g4 |
+  fs4 fs fs8 fs cs fs, ~ |
+  fs fs fs fs ~ fs fs fs ( e ) |
+
+  g4 g g8 b cs d ~ |
+  d d d d ~ d d d a |
+  fs'4 fs fs8 fs a, b ~ |
+  b b r a ~ a a a fs |
+
+  g4 g g8 b cs d ~ |
+  d fs g a ~ a g fs ( g ) |
+  fs4 fs fs8 fs a, b ~ |
+  b b r a ~ a a a fs |
+
+  g4 g g8 b cs d ~ |
+  d fs ( \glissando a ) d ~ d a g4 |
+  fs4 fs fs8 fs a, b ~ |
+  b b r a ~ a a a fs |
+
+  g4 g g8 b cs d ~ |
+  d fs ( \glissando a ) d e ( fs ) e ( d ) |
+  fs, fs fs fs fs fs cs fs |
+  fs fs fs fs fs fs fs cs |
+
+  fs1 ~ |
+  fs1 |
+
+  s1 * 8 |
+
+  \bar "|."
 }
 
 \layout {
   \context {
     \Score \consists #(set-bars-per-line '(3 4 4 4
-                                           2 4 4 4))
+                                           2 4 4 4
+                                           5 4 4 4
+                                           4 4 4 4
+                                           4 4))
   }
 }
 
