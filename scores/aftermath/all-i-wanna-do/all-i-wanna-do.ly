@@ -64,7 +64,7 @@ bass = \relative c' {
   fs cs fs as cs e d cs |
 
   \repeat volta 2 {
-    b4, b r8 cs r d ~ |
+    b,4 b r8 cs r d ~ |
     d d d d ~ d d d a |
     g'4 g g8 fs r e ~ |
     \alternative {
