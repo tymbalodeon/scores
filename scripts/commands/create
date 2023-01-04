@@ -20,6 +20,8 @@ prepend_title_to_file_names() {
 update_title_and_composer() {
     title="${(C)1}"
     composer="${(C)2}"
+    title="${title//-/ }"
+    composer="${composer//-/ }"
     perl -i -pe "s/Title/${title}/g" "${3}"
     perl -i -pe "s/Composer/${composer}/g" "${3}"
 }
