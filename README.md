@@ -42,6 +42,7 @@ directly (using `./scripts/main <COMMAND> <ARGS>`) or using
 - `just open *scores`: Open pdf(s).
 - `just outdated *scores`: List \<scores\> with outdated or non-existent pdfs.
 - `just status *scores`: Show status of pdf(s) for \<scores\>.
+- `just templates`: List template types.
 - `just update *scores`: Update lilypond version in \<scores\>.
 
 ## Templates
