@@ -125,9 +125,12 @@ music = \relative c {
 
 \layout {
   \context {
-    \Score \consists #(set-bars-per-line '(4 4 4 5 5
-                                           4 5 5
-                                           4 4 4))
+    \Score
+    \consists
+    #(set-bars-per-line
+      '(4 4 4 5 5
+        4 5 5
+        4 4 4))
   }
 }
 
