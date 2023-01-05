@@ -117,7 +117,7 @@ music = \relative c {
     }
   }
 
-  fs1 ~ |
+  fs,1 ~ |
   fs
 
   \bar "|."
