@@ -192,6 +192,49 @@ lower = \relative c {
   }
 
   <c c,>8 <b b,> <a a,> <g g,>4 <f f,> <ef ef,>8 |
+
+  \repeat unfold 2 {
+    <<
+      {
+        \voiceTwo
+        \ottava #-1 <df,, df' af'>1 |
+      }
+      \\
+      {
+        \voiceOne
+        r4 \ottava #0 <af''' df f>2 <bf ef g>4 |
+      }
+    >>
+
+    \clef "treble"
+
+    \tuplet 3/2 {
+      <c' f a>8 <bf ef g> <af df f>
+    }
+
+    <af df f>4
+
+    \clef "bass"
+
+    <df,, df'>
+    <df, df'> |
+  }
+
+  <<
+    {
+      \voiceTwo
+      \ottava #-1 <df, df' af'>1 |
+    }
+    \\
+    {
+      \voiceOne
+      r4 \ottava #0 <b''' ef>4 <af df f>2 |
+    }
+  >>
+
+  df2 s2 |
+  <df, df'>4 r r2 |
+
 }
 
 \layout {
