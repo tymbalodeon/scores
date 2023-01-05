@@ -13,6 +13,8 @@ music = \relative c {
   \key b \major
   \time 4/4
 
+  \sectionLabel "Intro"
+
   \repeat volta 2 {
     fs4 fs fs8 fs r cs ~ |
     cs cs cs cs ~ cs cs cs cs |
@@ -21,6 +23,7 @@ music = \relative c {
   }
 
   \sectionLabel "Verse"
+
   \repeat volta 2 {
     fs4 fs8 fs ~ fs fs fs fs |
     gs4 gs8 gs ~ gs gs gs gs |
@@ -35,6 +38,7 @@ music = \relative c {
 
 
   \sectionLabel "Chorus"
+
   \repeat volta 4 {
     r4 b b8 cs ( fs ) gs ~ |
     gs as b as r gs fs r |
@@ -52,6 +56,8 @@ music = \relative c {
     }
   }
 
+  \sectionLabel "Intro"
+
   \repeat volta 2 {
     fs4 fs fs8 fs r cs ~ |
     cs cs cs cs ~ cs cs cs cs |
@@ -60,6 +66,7 @@ music = \relative c {
   }
 
   \sectionLabel "Verse"
+
   \repeat volta 2 {
     fs4 fs8 fs ~ fs fs fs fs |
     gs4 gs8 gs ~ gs gs gs gs |
@@ -68,6 +75,7 @@ music = \relative c {
   }
 
   \sectionLabel "Chorus"
+
   \repeat volta 4 {
     r4 b b8 cs ( fs ) gs ~ |
     gs as b as r gs fs r |
@@ -86,6 +94,7 @@ music = \relative c {
   }
 
   \sectionLabel "Solo"
+
   \repeat volta 4 {
     ds4 ds ds8 ds r b ~ |
     b b b b ~ b b b b |
@@ -100,6 +109,7 @@ music = \relative c {
   fs fs -> fs fs fs -> fs fs -> fs |
 
   \sectionLabel "Chorus"
+
   \repeat volta 4 {
     r4 b b8 cs ( fs ) gs ~ |
     gs as b as r gs fs r |
