@@ -4,7 +4,7 @@
 \include "style.ily"
 
 \header {
-  title = \markup { "Prélude en Ré" \flat }
+  title = \markup { "Prélude en Ré♭" }
   composer = "Lili Boulanger"
 }
 
