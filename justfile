@@ -28,7 +28,6 @@ templates:
     templates+="    single|${CYAN}# Score for a single staff instrument.${CLEAR_COLOR}\n"
     echo -e "${templates}" | column -t -s "|"
 
-
 # Create pdf(s).
 @compile *scores:
     {{main}} compile {{scores}}
@@ -74,4 +73,3 @@ commit message:
     git add .
     git commit -m "{{message}}"
     git push
-
