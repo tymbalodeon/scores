@@ -25,26 +25,36 @@ middle = \relative c'' {
 upper = \relative c' {
   \clef treble
   \key_signature
-  \time 4/4
 
-  r4 <df ef f>2 <b df ef g>4 |
-  <df ef f a> <ef f bf>2 r4 |
-  r <df ef f>2 <b df ef g>4 |
+  % measure 1
+  r4 <df ef f>4 ~ <df ef f> <b df ef g>4 |
+
+  % measure 2
+  <df ef f a> <ef f bf> ~ <ef f bf> r4 |
+
+  % measure 3
+  r <df ef f> ~ <df ef f> <b df ef g>4 |
+
+  % measure 4
   <ef f a>8 c' <ef, f bf> r r4 <ef f a>8 c' |
 
-  bf8 f'4.~ f8 f, <a ef a,>4 |
-  <<
-    \new Voice {
-      \voiceOne r8 f' af2.~ |
-      af8 gf f ef ef df r4 |
-      r8 f bf4~ bf8 f a f |
-    }
-    \new Voice {
-      \voiceTwo <bf,, f' bf>4 r r <a ef' a> |
-      <bf' f bf,> r r <a ef a,> |
-      <bf f bf,> r r <f' df a> |
-    }
-  >>
+  % measure 5
+  << {
+    r8 f4. ~ f8 f, s
+  } \\ {
+    bf4 r r <a ef a,>4
+  } >> |
+
+  % measure 6
+  << {
+    r8 f' af2.~ |
+    af8 gf f ef ef df r4 |
+    r8 f bf4~ bf8 f a f |
+  } \\ {
+    <bf,, f' bf>4 r r <a ef' a> |
+    <bf' f bf,> r r <a ef a,> |
+    <bf f bf,> r r <f' df a> |
+  } >>
 
   <bf,, f' bf>8 f'' af4. gf8 <f, a df f> ef' |
   <ef, bf' ef> df' r4 r8 f,4 f8 |
@@ -104,13 +114,11 @@ upper = \relative c' {
 }
 
 lower = \relative c {
-  \clef bass
+  \clef "bass"
   \key_signature
-  \time 4/4
-  \beam_override
 
   \ottava #-1 <df, df,>1 \ottava #0 |
-  <a'' b>4 <af df>2 \ottava #-1 <df,,, df' af'>4~ |
+  <a'' b>4 <af df> ~ <af df> \ottava #-1 <df,,, df' af'>4~ |
   <df df' af'>4 \ottava #0 r4 r2 |
   <a''' b df>4 <af df>8 r \ottava #-1 <df,,, df' af'>4 \ottava #0 <b''' df>4 |
 
@@ -126,20 +134,24 @@ lower = \relative c {
   r
 
   \clef "treble"
-  <cf''' ef>2 <f, a c>4 |
-  <c a> <ef g>2 <f a>4 |
+
+  <cf''' ef>2 <f, a cs>4 |
+  <cs' a> <ef, g>2 <f a>4 |
 
   <f ef b> <f df b>
 
   \clef "bass"
+
   <df,, df' af'>
 
   \clef "treble"
+
   <f'' ef b>
 
   <f df af> r
 
   \clef "bass"
+
   <df,, df' af'>2 |
 
   r4 <df df' af'>2
