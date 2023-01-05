@@ -16,6 +16,16 @@ export OUTPUT_DIRECTORY := ```
 @create type composer title *edit:
     {{main}} create {{type}} {{composer}} {{title}} {{edit}}
 
+# List template types.
+templates:
+    #!/usr/bin/env zsh
+    templates="    form;# Separate scores for sections"
+    templates+=", with form summary at the bottom.\n"
+    templates+="    lead;# \"Lead sheet\" showing melody and chords.\n"
+    templates+="    piano;# Piano staff score.\n"
+    templates+="    single;# Score for a single staff instrument.\n"
+    echo "${templates}" | column -t -s ";"
+
 # Create pdf(s).
 @compile *scores:
     {{main}} compile {{scores}}
@@ -61,3 +71,4 @@ commit message:
     git add .
     git commit -m "{{message}}"
     git push
+
