@@ -96,24 +96,26 @@ soprano =  \relative cs'' {
   gs2 ) _\pp r2 \bar "|."
 }
 
-PartPOneVoiceOneLyricsOne =  \lyricmode {\set ignoreMelismata = ##t A
-    ring of "gold " __\skip1 and a milk white "dove " __\skip1 are good
-    -- ly gifts for "thee," and a hemp -- en rope for your "own "
-    __\skip1 love to hang u -- pon a "tree." For "you " __\skip1 \skip1
-    a "house " __\skip1 of I -- vor -- y "(Ro" -- \skip1 ses are white
-    in the "rose " __\skip1 bow -- "er)!" A nar -- row bed for me "to "
-    __\skip1 "lie," "(White," O "white " __\skip1 is the hem -- lock
-    flow -- "er)!" Myr -- \skip1 \skip1 \skip1 tle and jess -- \skip1
-    \skip1 \skip1 \skip1 a -- mine for "you " __\skip1 \skip1 \skip1
-    "(O " __\skip1 \skip1 \skip1 the "red " __\skip1 rose is fair "to "
-    __\skip1 "see)! " __\skip1 For "me " __\skip1 the cy -- \skip1
-    \skip1 \skip1 "press " __\skip1 and the "rue, " __\skip1 "(Fi" --
-    \skip1 \skip1 "nest " __\skip1 of "all " __\skip1 is rose -- \skip1
-    mar -- "y)!" For you three lo -- \skip1 \skip1 vers of your "hand,"
-    "(green" grass where a man lies "dead)! " __\skip1 \skip1 \skip1 For
-    me three pa -- "ces " __\skip1 in the "sand," "(Plant" li -- lies at
-    my "head)! " __\skip1 \skip1
-    }
+words = \lyricmode {
+  \set ignoreMelismata = ##t
+  A ring of gold __ _ and a milk white dove __ _
+  are good -- ly gifts for thee,
+  and a hemp -- en rope for your "own "
+  __\skip1 love to hang u -- pon a "tree." For "you " __\skip1 \skip1
+  a "house " __\skip1 of I -- vor -- y "(Ro" -- \skip1 ses are white
+  in the "rose " __\skip1 bow -- "er)!" A nar -- row bed for me "to "
+  __\skip1 "lie," "(White," O "white " __\skip1 is the hem -- lock
+  flow -- "er)!" Myr -- \skip1 \skip1 \skip1 tle and jess -- \skip1
+  \skip1 \skip1 \skip1 a -- mine for "you " __\skip1 \skip1 \skip1
+  "(O " __\skip1 \skip1 \skip1 the "red " __\skip1 rose is fair "to "
+  __\skip1 "see)! " __\skip1 For "me " __\skip1 the cy -- \skip1
+  \skip1 \skip1 "press " __\skip1 and the "rue, " __\skip1 "(Fi" --
+  \skip1 \skip1 "nest " __\skip1 of "all " __\skip1 is rose -- \skip1
+  mar -- "y)!" For you three lo -- \skip1 \skip1 vers of your "hand,"
+  "(green" grass where a man lies "dead)! " __\skip1 \skip1 \skip1 For
+  me three pa -- "ces " __\skip1 in the "sand," "(Plant" li -- lies at
+  my "head)! " __\skip1 \skip1
+}
 
 PartPTwoVoiceOne =  \relative fs' {
     \clef "treble" \numericTimeSignature\time 2/2 \key b \major | % 1
@@ -475,7 +477,7 @@ PartPTwoVoiceThree =  \relative as''' {
       \context Staff <<
         \mergeDifferentlyDottedOn\mergeDifferentlyHeadedOn
         \context Voice = "soprano" {  \soprano }
-        \new Lyrics \lyricsto "soprano" { \set stanza = "1." \PartPOneVoiceOneLyricsOne }
+        \new Lyrics \lyricsto "soprano" { \set stanza = "1." \words  }
       >>
     >>
     \new PianoStaff
