@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-get_new_score_name () {
+get_new_score_name() {
     if [ "${1}" = "piano" ] \
         || [ "${1}" = "single" ]; then
         extension=".${2:e}"
@@ -28,8 +28,7 @@ update_title_and_composer() {
 }
 
 update_main_file() {
-    if [ "${TEMPLATE}" = "lead" ] \
-        || [ "${TEMPLATE}" = "chart" ] \
+    if [[ "${TEMPLATE}" = *"lead" ]] \
         && [ "${LYRICS}" != "true" ]; then
         perl -i -pe 's/\\include "lyrics.ily"\n//g' "${1}"
         perl -i -pe 's/ \\addlyrics \\words//g' "${1}"
@@ -62,23 +61,25 @@ copy_template_files() {
 }
 
 IFS=" " read -r -A ARGS <<< "$@"
-if ((${ARGS[(Ie)chart]})); then
-    TEMPLATE="chart"
-elif ((${ARGS[(Ie)form]})); then
+if ((${ARGS[(I)*form*]})); then
     TEMPLATE="form"
-elif ((${ARGS[(Ie)lead]})); then
-    TEMPLATE="lead"
+fi
+if ((${ARGS[(I)*lead*]})); then
+    if [ "${TEMPLATE}" = "form" ]; then
+        TEMPLATE+="-lead"
+    else
+        TEMPLATE="lead"
+    fi
 elif ((${ARGS[(Ie)piano]})); then
     TEMPLATE="piano"
 elif ((${ARGS[(Ie)single]})); then
     TEMPLATE="single"
 fi
-if [ "${TEMPLATE}" = "chart" ] \
-    || [ "${TEMPLATE}" = "lead" ] \
-     && ((${ARGS[(Ie)lyrics]})); then
+if [[ "${TEMPLATE}" = *"lead" ]] \
+    && ((${ARGS[(I)*lyrics*]})); then
     LYRICS="true"
 fi
-copy_template_files "${1}" "${2}" "${3}"
+copy_template_files "${TEMPLATE}" "${2}" "${3}"
 if [ "${4}" = "--edit" ]; then
     just edit "${3}"
 fi
