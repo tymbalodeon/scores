@@ -49,12 +49,14 @@ directly (using `./scripts/main <COMMAND> <ARGS>`) or using
 
 Templates are provided for common types of scores. To create a score from a
 template, call `just create` (or `./scripts/main create`) with a `type` value
-containing the name of the template type plus any options, separated spaces.
+containing the name of the template type plus any options, separated by commas
+without spaces.
 
 For example:
 
-- To create a lead sheet with lyrics: `just create "lead lyrics" <composer> <title>`
-- To create a chart without lyrics: `just create chart <composer> <title>`
+- To create a lead sheet with lyrics: `just create "lead,lyrics" <composer> <title>`
+- To create both a lead sheet and a form chart without lyrics:
+  `just create "lead,form" <composer> <title>`
 
 ### Types
 
@@ -63,3 +65,13 @@ For example:
 - `lead`: (as in "lead sheet") melody with chords, optionally with `lyrics`
 - `form`: measures (usually chord rhythms) with chords, broken into sections
 - `piano`: solo piano
+
+- `form`: Separate scores for sections, with form summary at the bottom.
+- `lead`: Lead sheet showing melody and chords.
+- `piano`: Piano staff score.
+- `single`: Score for a single staff instrument.
+
+Options:
+
+- `lyrics`: Add lyrics to `lead` with `lead,lyrics`.
+- `form,lead`: Create lead sheet and form chart from one score.

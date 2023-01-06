@@ -23,7 +23,7 @@ templates:
     CLEAR_COLOR="\e[0m"
     templates="    form|${CYAN}# Separate scores for sections"
     templates+=", with form summary at the bottom.${CLEAR_COLOR}\n"
-    templates+="    lead|${CYAN}# \"Lead sheet\" showing melody and chords.${CLEAR_COLOR}\n"
+    templates+="    lead|${CYAN}# Lead sheet showing melody and chords.${CLEAR_COLOR}\n"
     templates+="    piano|${CYAN}# Piano staff score.${CLEAR_COLOR}\n"
     templates+="    single|${CYAN}# Score for a single staff instrument.${CLEAR_COLOR}\n"
     echo -e "${templates}" | column -t -s "|"
