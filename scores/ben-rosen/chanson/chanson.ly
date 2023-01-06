@@ -10,9 +10,9 @@
 }
 
 key_time_and_tempo = {
+  \tempo 4=60
   \key b \major
   \time 2/2
-  \tempo 4=60
 }
 
 soprano =  \relative cs'' {
@@ -22,14 +22,14 @@ soprano =  \relative cs'' {
   R1 * 5 |
 
   % measure 6
-  r8 cs8 \( -\mp ds8 gs,8 fs8 ( ds8 ) e8 fs8 |
+  r8 cs \( -\mp ds gs, fs ( ds ) e fs |
 
   % measure 7
-  b4 -\markup \italic "poco cresc." cs4 ds4 ( fs4 ) \) |
+  b4 -\markup \italic "poco cresc." cs ds ( fs ) \) |
 
   % measure 8
   \time 5/4
-  r4 r8 cs8 \( -\mf as8 -\markup \italic "poco decresc." fs8 b4 as4 |
+  r4 r8 cs \( -\mf as -\markup \italic "poco decresc." fs b4 as |
 
   % measure 9
   \time 3/4
@@ -37,84 +37,137 @@ soprano =  \relative cs'' {
 
   % measure 10
   \time 2/2
-  r8 e'16 \( -\mp ds16 cs8 b8 gs8 ds8 e8 fs8 ~ |
+  r8 e'16 \( -\mp ds cs8 b gs ds e fs ~ |
 
   % measure 11
-  fs8 gs8 \) r8 b8 \( -\markup \italic "sub." -\mf fs'4. -> cs8 |
+  fs gs \) r b \( -\markup \italic "sub." -\mf fs'4. -> cs8 |
 
   % measure 12
-  cs8 e8 ds4. \) r8 ef4 \( -\markup \italic "cresc."
+  cs e ds4. \) r8 ef4 \( -\markup \italic "cresc."
 
+  % measure 13
   \key df \major
-  f8 -- bf,8 ef8 \) df8 c16 ( bf16 ) a8 gf'8. -- f16 |
-  d4 r4 af16 ( _\mp bf16 ) gf16 ef16 f8 _\< df16 ef16 _\! | % 15
-  ff8. ( _\> ef16 ) df8 df8 r4 _\! r8 af'8 ( _\mf | % 16
-  ef'8 gf8 f8 bf,8 ef8 _\markup{ \small\italic {cresc.} } df16 c16 ) a4
-  \bar "||"
-  \key c \minor r4 ef4 ( _\mp bf'8 a8 ~ a8 g16 f16 | % 18
-  \time 5/4  g8 _\> ef8 d4 c4 ) _\! _\p r2 \bar "||"
-  \time 6/4  \key ef \minor \tempo 4=70 R1. | \barNumberCheck #20
-  \numericTimeSignature\time 4/4  R1*2 | % 22
-  af'8 ( _\mf _\< bf16 gf16 ) \times 2/3 {
-    f8 ef'8 df8 }
-  gf,16 ( bf16 c16 df16 f8. ) _\! _\f ef16 | % 23
-  ef8 gf8 \times 2/3 {
-    cf,8 ( _\> bf8 af8 ~ }
-  af4 ) _\! _\mp r4 | % 24
-  \time 3/4  R2. \bar "||"
-  \numericTimeSignature\time 4/4  \key gs \minor \once \omit
-  TupletBracket
-  \times 4/5  {
-    gs16 ( _\mf a16 gs16 fs16 e16 }
-  b'8. ) ( ds,16 ) ds8 cs8 e8. fs16 ~ | % 26
-  \time 2/4  fs8 gs8 ~ gs8 r8 | % 27
-  \numericTimeSignature\time 4/4  r8. gs16 ( a8 b16 ) gs16 fs16 ( b16
-  e16 ds16 ) cs16 ( gs16 ) b16 e16 | % 28
-  fs8 ( gs8 ) r4 \once \omit TupletBracket
-  \times 4/6  {
-    b,16 ( _\mp cs16 b16 ) as16 ( gs16 ) fs16 }
-  \once \omit TupletBracket
-  \times 2/3  {
-    gs8 ( cs,8 ) e8 }
-  | % 29
-  fs8. ( gs16 ) as8 ds8 r8 fs8 ( -- _\markup{ \small\italic {sub.} }
-  _\mf e8 _\< ds8 _\! | \barNumberCheck #30
-  gs8 -- _\f cs,8 b8 ) as8 b8 cs8 gs4 | % 31
-  r8 fs8 ( _\< \times 2/3 {
-    as8 b8 cs8 }
-  e8 fs8 as4 ~ -- _\! _\ff _\markup{ \small\italic {con passione} } | % 32
-  \time 3/4  as4. b,8 ~ b4 ) | % 33
-  \numericTimeSignature\time 4/4  R1 _ "rit." | % 34
-  \time 5/4  r8 _\markup{ \bold {A tempo} } cs8 ( _\mp ds8 gs,8 fs8 ds8
-  ~ \once \omit TupletBracket
-  \times 2/3  {
-    ds8 e8 _\> fs8 }
-  cs4 ) _\! | % 35
-  \numericTimeSignature\time 2/2  r8 ds8 ( _\p _\< e8 fs8 b4 cs4 _\!
-  _\mp | % 36
-  as2. _\> gs4 ~ _\! | % 37
-  gs2 ) _\pp r2 \bar "|."
+  f8 ( bf, ef ) df c16 ( bf ) a8 gf'8. f16 |
+
+  % measure 14
+  d4 \) r af16 ( -\mp bf ) gf ef f8 -\< df16 ef -\! |
+
+  % measure 15
+  ff8. ( _\> ef16 ) df8 df r4 _\! r8 af' \( _\mf |
+
+  % measure 16
+  ef' gf f bf, ef -\markup \italic "cresc." df16 ( c ) a4 \) |
+
+  % measure 17
+  \key c \minor
+  r ef \( -\mp bf'8 a4 g16 f |
+
+  % measure 18
+  \time 5/4
+  g8 -\> ef d4 c \) -\! -\p r2
+
+  % measure 19
+  \tempo 4=70
+  \key ef \minor
+  \time 6/4
+  R1. |
+
+  % measure 20
+  \time 4/4
+  R1 * 2 |
+
+  % measure 22
+  af'8 ( -\mf -\< bf16 gf
+  \tuplet 3/2 { f8 ) ef' df }
+  gf,16 ( bf c df f8. ) -\! -\f ef16 |
+
+  % measure 23
+  ef8 gf
+  \tuplet 3/2 { cf, ( _\> bf af ~ }
+  af4 ) -\! -\mp r |
+
+  % measure 24
+  \time 3/4
+  R2. |
+
+  % measure 25
+  \time 4/4
+  \key gs \minor
+  \tuplet 5/4 { gs16 ( -\mf a gs fs ) e }
+  b'8. ( ds,16 ) ds8 cs e8. fs16 ~ |
+
+  % measure 26
+  \time 2/4
+  fs8 gs ~ gs r |
+
+  % measure 27
+  \time 4/4
+  r8. gs16 a8 ( b16 ) gs fs ( b
+  e ds  cs ) gs b e |
+
+  % measure 28
+  fs8 ( gs ) r4
+  \tuplet 6/4 { b,16 ( -\mp cs b ) as ( gs ) fs }
+  \tuplet 3/2  { gs8 ( cs, ) e } |
+
+  % measure 29
+  fs8. ( gs16 ) as8 ds r fs -\markup \italic "sub."
+  -\mf e -\< ds -\! |
+
+  % measure 30
+  gs -\f ( cs, b ) as b cs gs4 |
+
+  % measure 31
+  r8 fs _\< \tuplet 3/2 { as b cs }
+  e fs as4 ~ -\! -\ff -\markup \italic "con passione" ( |
+
+  % measure 32
+  \time 3/4
+  as4. b,8 ~ b4 ) |
+
+  % measure 33
+  \time 4/4
+  R1 - "rit." |
+
+  % measure 34
+  \time 5/4
+  r8 -\markup \bold "A tempo" cs -\mp ds gs, fs ds ~
+  \tuplet 3/2  { ds e _\> fs } cs4 _\! |
+
+  % measure 35
+  \time 2/2
+  r8 ds _\p _\< e fs b4 cs _\!
+  _\mp |
+
+  % measure 36
+  as2. _\> ( gs4 ~ _\! |
+
+  % measure 37
+  gs2 _\pp ) r
+
+  \bar "|."
 }
 
 words = \lyricmode {
-  \set ignoreMelismata = ##t
-  A ring of gold __ _ and a milk white dove __ _
-  are good -- ly gifts for thee,
-  and a hemp -- en rope for your "own "
-  __\skip1 love to hang u -- pon a "tree." For "you " __\skip1 \skip1
-  a "house " __\skip1 of I -- vor -- y "(Ro" -- \skip1 ses are white
-  in the "rose " __\skip1 bow -- "er)!" A nar -- row bed for me "to "
-  __\skip1 "lie," "(White," O "white " __\skip1 is the hem -- lock
-  flow -- "er)!" Myr -- \skip1 \skip1 \skip1 tle and jess -- \skip1
-  \skip1 \skip1 \skip1 a -- mine for "you " __\skip1 \skip1 \skip1
-  "(O " __\skip1 \skip1 \skip1 the "red " __\skip1 rose is fair "to "
-  __\skip1 "see)! " __\skip1 For "me " __\skip1 the cy -- \skip1
-  \skip1 \skip1 "press " __\skip1 and the "rue, " __\skip1 "(Fi" --
-  \skip1 \skip1 "nest " __\skip1 of "all " __\skip1 is rose -- \skip1
-  mar -- "y)!" For you three lo -- \skip1 \skip1 vers of your "hand,"
-  "(green" grass where a man lies "dead)! " __\skip1 \skip1 \skip1 For
-  me three pa -- "ces " __\skip1 in the "sand," "(Plant" li -- lies at
-  my "head)! " __\skip1 \skip1
+  A ring of gold and a milk -- white dove
+      Are good -- ly gifts for thee,
+  And a hemp -- en rope for your own love
+      To hang u -- pon a tree.
+
+  For you __ a House of I -- vor -- y,
+      (Ros -- es are white in the rose -- bow -- er)!
+  A nar -- row bed for me to lie,
+      (White, O white, is the hem -- lock flow -- er)!
+
+  Myr -- tle and jess -- a -- mine for you,
+      (O __ the red __ rose is fair to __ see)!
+  For me the cy -- press and the rue,
+      (Fi -- nest of all __ is rose -- mar -- y)!
+
+  For you three lov -- ers of your hand,
+      (Green grass where a man lies dead)! __
+  For me three pac -- es on the sand,
+      (Plant li -- lies at my head)! __
 }
 
 PartPTwoVoiceOne =  \relative fs' {
