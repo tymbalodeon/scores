@@ -60,7 +60,7 @@ For example:
 
 ### Types
 
-- `form`: Separate scores for sections, with form summary at the bottom.
+- `form`: Form chart with separate sections and form summary at the bottom.
 - `lead`: Lead sheet showing melody and chords.
 - `piano`: Piano staff score.
 - `single`: Score for a single staff instrument.
