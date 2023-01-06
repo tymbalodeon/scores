@@ -60,12 +60,6 @@ For example:
 
 ### Types
 
-- `chart`: single score that produces two output files, one for `lead` and one
-  for `form`
-- `lead`: (as in "lead sheet") melody with chords, optionally with `lyrics`
-- `form`: measures (usually chord rhythms) with chords, broken into sections
-- `piano`: solo piano
-
 - `form`: Separate scores for sections, with form summary at the bottom.
 - `lead`: Lead sheet showing melody and chords.
 - `piano`: Piano staff score.
