@@ -13,12 +13,12 @@ key_and_time = {
   \time 4/4
 }
 
-upper = \relative c'' {
+upper_staff = \relative c'' {
   \key_and_time
   c1
 }
 
-lower = \relative c {
+lower_staff = \relative c {
   \clef bass
   \key_and_time
   c1
@@ -35,7 +35,7 @@ lower = \relative c {
     instrumentName = "Piano"
   }
   <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
+    \new Staff = "upper" \upper_staff
+    \new Staff = "lower" \lower_staff
   >>
 }
