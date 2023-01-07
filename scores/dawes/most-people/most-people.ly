@@ -11,7 +11,6 @@
   subtitle = "Dawes"
 }
 
-
 \layout {
   \context {
     \Score \consists #(set-bars-per-line '(4))

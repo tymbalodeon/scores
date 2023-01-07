@@ -16,12 +16,6 @@ beam_override = {
   \set Timing.beatStructure = 1,1,1,1
 }
 
-middle = \relative c'' {
-  <bf' f>8 <f af,> <bf f> <f af,> r <bf ef,> <a f> <f a,> |
-  <bf f>8 <ef, af,> r <ef af,> <bf' f> <f af,> <bf f> <ef, af,> |
-  <f ef cf gf>8 <ef gf,> <f cf> <ef gf,> r <ef gf,> <f cf> <ef gf,> |
-}
-
 upper_staff = \relative c' {
   \clef "treble"
   \key_signature
@@ -50,7 +44,7 @@ upper_staff = \relative c' {
 
   % measure 5
   << {
-    r8 f'4. ~ f8 f, s
+    r8 f'4. ~ f8 f, r4
   } \\ {
     bf4 r2 <a ef a,>4
   } >> |
@@ -83,7 +77,11 @@ upper_staff = \relative c' {
   } >>
 
   % measure 10
-  <ef bf' ef>8 df' r4 r8 f,4 f8 |
+  << {
+    ef'8 [ df ]
+  } \\ {
+    <ef, bf'>4
+  } >> r4 r8 f4 f8 |
 
   % measure 11
   f' f,4 f8 f'8 f, <ef'  f> f, |
@@ -91,26 +89,48 @@ upper_staff = \relative c' {
   % measure 12
   <f' gf> <ef gf, f> <f gf> <ef gf, f>4 <ef gf, f>8 <f gf> <ef gf, f> |
 
+  % measure 13
   <a ef> <f a,> <c' ef,> <f, a,> r <ef a,> <a ef> <ef a,> |
 
-  <<
-    \new Voice {
-      \voiceOne
-      r8 f' af4. gf8 f ef |
-      ef df s2. |
-    }
-    \middle
-  >>
+  << {
+    % measure 14
+    r8 f' af4. gf8 f ef |
 
+    % measure 15
+    ef df s2. |
+  } \\ {
+
+    % measure 14
+    <bf f>8 <f af,> <bf f> <f af,> r <bf ef,> <a f> <f a,> |
+
+    % measure 15
+    <bf f>8 <ef, af,> r <ef af,> <bf' f> <f af,> <bf f> <ef, af,> |
+  } >>
+
+  % measure 16
+  <f ef cf gf>8 <ef gf,> <f cf> <ef gf,> r <ef gf,> <f cf> <ef gf,> |
+
+  % measure 17
   \time 3/4
+  <g ds cs f,>8 <b, ds> <g' cs> <ds a> <g cs, b> <ds cs f,> |
 
-  <g, ds cs f,>8 <b, ds> <g' cs> <ds a> <g cs, b> <ds cs f,> |
+  % measure 18
   <a' f ef> <ef gf, f>4 <ef gf, f>8 <a f ef> <cs, gf f> |
 
+  % measure 19
   \time 4/4
-  <f f,>8. <cs a>16 <f f,>8. <cs a>16 <f df g, f>8 <df bf> <f df g, f> <df bf> |
   <f f,>8. <cs a>16 <f f,>8. <cs a>16
-  \tuplet 5/4 { <f df g, f>8 <df bf> <f df g, f> <df bf> <f df g, f> } |
+  \stemUp
+  <f df g, f>8 <df bf> <f df g, f> <df bf> |
+  \stemNeutral
+
+  % measure 20
+  <f f,>8. <cs a>16 <f f,>8. <cs a>16
+  \stemUp
+  \tuplet 5/4 {
+    <f df g, f>8 <df bf> <f df g, f> <df bf> <f df g, f>
+  } |
+  \stemNeutral
 
   \time 3/4
 
@@ -310,12 +330,12 @@ lower_staff = \relative c {
 
 }
 
-% \layout {
-%   \context {
-%     \Score
-%     \consists #(set-bars-per-line '(4))
-%   }
-% }
+\layout {
+  % \context {
+  %   \Score
+  %   \consists #(set-bars-per-line '(4))
+  % }
+}
 
 \score {
   \new PianoStaff \with {
