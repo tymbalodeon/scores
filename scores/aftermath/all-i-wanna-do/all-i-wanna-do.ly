@@ -17,12 +17,12 @@ music = \relative c' {
     R1 * 15
   }
 
-  r2 r4 g4 ( \glissando
+  r2 r4 g4 \glissando
 
   \sectionLabel "Chorus"
 
   \repeat volta 2 {
-    g,4 ) g g8 b cs d ~ |
+    g,4 g g8 b cs d ~ |
     d8 d d d ~ d d d a |
 
     \alternative {
