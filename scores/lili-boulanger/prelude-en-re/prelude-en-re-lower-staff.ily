@@ -1,25 +1,12 @@
-bass_pedal = {
-  \ottava #-1
-  <<
-    af,4
-    \\
-    <df,, df'>4
-  >>
-  \ottava #0
-}
-
 lower_staff = \relative c {
   \key df \major
   \clef "bass"
 
   % measure 1
-  \ottava #-1
   <df, df,>1 |
-  \ottava #0
 
   % measure 2
   <a'' b>4 <af df>2
-  \ottava #-1
   <<
     af,4 ~
     \\
@@ -32,17 +19,24 @@ lower_staff = \relative c {
     \\
     <df,, df'>4
   >>
-  \ottava #0
   r r2 |
 
   % measure 4
   <a''' b df>4 <af df>8 r
-  \bass_pedal
+  <<
+    af,4
+    \\
+    <df,, df'>4
+  >>
   <b''' df>4 |
 
   % measure 5
   <af df ef f> r
-  \bass_pedal
+  <<
+    af,4
+    \\
+    <df,, df'>4
+  >>
   <f' df' f> |
 
   % measure 6
@@ -62,51 +56,45 @@ lower_staff = \relative c {
   % measure 10
   <df af' df>
   <<
-    af''2
+    af'2
     \\
-  <df,, af' df>2
+    <df,, af' df>2
   >>
   r4 |
 
   % measure 11
   r
   \clef "treble"
-  <cf''' ef>2 <f, a cs>4 |
+  <cf'''' ef>2 <f, a df>4 |
 
   % measure 12
-  <cs' a> <ef, g>2 <f a>4 |
+  <df' a> <ef, g>2 <f a>4 |
 
   % measure 13
   \clef "bass"
   <f ef b> <f df b>
-  \ottava #-1
   <<
     af,,4
     \\
     <df,, df'>4
   >>
-  \ottava #0
   <f''' ef b> |
 
   % measure 14
   <f df af> r
-  \ottava #-1
   <<
     af,,2
     \\
     <df,, df'>2
   >> |
-  \ottava #0
 
   % measure 15
   r4
-  \ottava #-1
   <<
     af''2
     \\
     <df,, df'>2
   >>
-  \ottava #0
   \clef "treble"
   f'''4 |
 
@@ -205,7 +193,7 @@ lower_staff = \relative c {
   % measure 33
   df2
   << {
-    ef4 ef,
+    s4 ef
   } \\ {
     <ef, ef'>4 <ef, ef'>
   } >> |

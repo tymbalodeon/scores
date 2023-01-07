@@ -53,9 +53,10 @@ upper_staff = \relative c' {
 
   % measure 9
   << {
-    bf,8 f' af4. gf8 f ef
+    r8
+    f' af4. gf8 f ef
   } \\ {
-    <bf, f'>4 r2 <f' a df>4
+    <bf,, f' bf>4 r2 <f'' a df>4
   } >>
 
   % measure 10
@@ -63,13 +64,14 @@ upper_staff = \relative c' {
     ef'8 [ df ]
   } \\ {
     <ef, bf'>4
-  } >> r4 r8 f4 f8 |
+  } >>
+  r4 r8 f,4 f8 |
 
   % measure 11
-  f' f,4 f8 f'8 f, <ef'  f> f, |
+  f' f, r f f' f, <ef' f> f, |
 
   % measure 12
-  <f' gf> <ef gf, f> <f gf> <ef gf, f>4 <ef gf, f>8 <f gf> <ef gf, f> |
+  <f' g> <ef g, f> <f g> <ef g, f> r <ef g, f>8 <f g> <ef g, f> |
 
   % measure 13
   <a ef> <f a,> <c' ef,> <f, a,> r <ef a,> <a ef> <ef a,> |
@@ -97,7 +99,7 @@ upper_staff = \relative c' {
   <g ds cs f,>8 <b, ds> <g' cs> <ds a> <g cs, b> <ds cs f,> |
 
   % measure 18
-  <a' f ef> <ef gf, f>4 <ef gf, f>8 <a f ef> <cs, gf f> |
+  <a' f ef>8 <ef gf, f> r <ef gf, f> <a f ef> <cs, gf f> |
 
   % measure 19
   \time 4/4
@@ -159,7 +161,7 @@ upper_staff = \relative c' {
   } \\ {
     ef4 ef,
   } >>
-  s2 |
+  ef' s |
 
   % measure 34
   R1 |
