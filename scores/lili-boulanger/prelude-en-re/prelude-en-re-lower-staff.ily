@@ -115,7 +115,7 @@ lower_staff = \relative c {
 
   % measure 17
   \time 3/4
-  g8 f ~ f g a b |
+  g8 f4 g8 a [ b ] |
 
   % measure 18
   c4 b cs8 ds |

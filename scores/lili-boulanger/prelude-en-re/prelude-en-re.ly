@@ -11,7 +11,6 @@
 
 \score {
   \new PianoStaff {
-    \overrideTimeSignatureSettings 3/4 1/4 #'(1 1 1) #'()
     <<
       \new Staff = "upper" \upper_staff
       \new Staff = "lower" \lower_staff
