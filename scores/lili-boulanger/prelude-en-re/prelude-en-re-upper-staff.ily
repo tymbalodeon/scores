@@ -13,11 +13,10 @@ upper_staff = \relative c' {
 
   % measure 4
   << {
-    a'8 [ c bf ]
+    a'8 c bf f' ~ f4
   } \\ {
-    <ef, f>4 <ef f>8
+    <ef, f>4 <ef f>8 r r4
   } >>
-  r r4
   << {
     a8 c
   } \\ {
@@ -26,9 +25,9 @@ upper_staff = \relative c' {
 
   % measure 5
   << {
-    r8 f'4. ~ f8 f, r4
+    bf'8 f'4. ~ f8 f, r4
   } \\ {
-    bf4 r2 <a ef a,>4
+    <ef f>4 r2 <a ef a,>4
   } >> |
 
   << {
@@ -56,7 +55,7 @@ upper_staff = \relative c' {
     r8
     f' af4. gf8 f ef
   } \\ {
-    <bf,, f' bf>4 r2 <f'' a df>4
+    <bf, f' bf>4 r2 <f' a df>4
   } >>
 
   % measure 10
@@ -68,10 +67,10 @@ upper_staff = \relative c' {
   r4 r8 f,4 f8 |
 
   % measure 11
-  f' f, r f f' f, <ef' f> f, |
+  f' f,4 f8 f' f, <ef' f> f, |
 
   % measure 12
-  <f' g> <ef g, f> <f g> <ef g, f> r <ef g, f>8 <f g> <ef g, f> |
+  <f' g> <ef g, f> <f g> <ef g, f> ~ <ef g, f> <ef g, f>8 <f g> <ef g, f> |
 
   % measure 13
   <a ef> <f a,> <c' ef,> <f, a,> r <ef a,> <a ef> <ef a,> |
@@ -92,14 +91,14 @@ upper_staff = \relative c' {
   } >>
 
   % measure 16
-  <f ef cf gf>8 <ef gf,> <f cf> <ef gf,> r <ef gf,> <f cf> <ef gf,> |
+  <f ef cf gf>8 <ef gf,> <f cf> <ef gf,> ~ <ef gf,> <ef gf,> <f cf> <ef gf,> |
 
   % measure 17
   \time 3/4
   <g ds cs f,>8 <b, ds> <g' cs> <ds a> <g cs, b> <ds cs f,> |
 
   % measure 18
-  <a' f ef>8 <ef gf, f> r <ef gf, f> <a f ef> <cs, gf f> |
+  <a' f ef>8 <ef gf, f>4 <ef gf, f>8 <a f ef> [ <cs, gf f> ] |
 
   % measure 19
   \time 4/4

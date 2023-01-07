@@ -31,7 +31,7 @@ lower_staff = \relative c {
   <b''' df>4 |
 
   % measure 5
-  <af df ef f> r
+  <af df> r
   <<
     af,4
     \\
