@@ -156,11 +156,11 @@ upper_staff = \relative c' {
 
   % measure 33
   << {
-    <ef' ef'>4 <ef, ef'>
+    <ef' ef'>4 <ef, ef'> <ef, ef'>
   } \\ {
-    ef4 ef,
+    ef'4 ef,
   } >>
-  ef' s |
+  s |
 
   % measure 34
   R1 |

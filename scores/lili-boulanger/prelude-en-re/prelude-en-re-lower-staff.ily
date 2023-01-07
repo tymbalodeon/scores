@@ -138,66 +138,91 @@ lower_staff = \relative c {
     \new Voice { \voiceTwo <af, df>2. }
   >> |
 
-  % measure 23
-  % measure 24
   \time 4/4
   \clef "bass"
-  \repeat unfold 2 {
+  << {
+    % measures 23-24
+    \repeat unfold 2 {
+      <af, df f>4 <g' ef bf>2 <a f c>4 |
+    }
+
+    % measures 25-26
+    \repeat unfold 2 {
+      <b g d>4 b2 <c af f ef>4 |
+    }
+
+    % measure 27
+    <cs cs,>8 <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 |
+
+    % measure 28
+    r4 <af, df f>2 <bf ef g>4 |
+
+    % measures 29-30
+    \clef "treble"
+      \repeat unfold 2 {
+      \tuplet 3/2 { <c' f a>8 <bf ef g> <af df f> }
+      <af df f>4 r2 |
+    }
+
+    % measure 31
+    r4 <b ef>4 <af df f>2 |
+
+    % measure 32
+    R1 |
+
+    % measure 33
+    s2
+    \clef "bass"
     << {
-      <af, df f>4 <g' ef bf>2 <a f c>4
+      s4 ef'
     } \\ {
-      df,,,1
-    } >>
-  } |
-
-  % measure 25
-  % measure 26
-  \repeat unfold 2 {
-    <b''' g d>4 b2 <c af f ef>4 |
-  }
-
-  % measure 27
-  <cs cs,>8 <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 |
-
-  % measure 28
-  % measure 30
-  \repeat unfold 2 {
-    << {
-      r4 <af df f>2 <bf ef g>4
-    } \\ {
-      <df,,, df' af'>1
+      ef,4 <ef, ef'>
     } >> |
 
-    % measure 29
-    % measure 31
-    \clef "treble"
-    \tuplet 3/2 { <c''' f a>8 <bf ef g> <af df f> }
-    <af df f>4
-    \clef "bass"
-    <df, df'> <df, df'> |
-  }
+    % measure 34
+    R1 |
+  } {
+    % measures 23-24
+    \new Staff {
+      \once \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
+      \key df \major
+      \clef "bass"
+      \ottava #-1
+      \repeat unfold 2 {
+        df,1 |
+      }
+      \ottava #0
 
-  % measure 32
-  <<
-    {
-      \voiceTwo
-      <df, df' af'>1
+      % measures 25-27
+      R1 * 3 |
+
+      % measure 28
+      << {
+        af''1
+      } \\ {
+        <df,, df'>1
+      } >> |
+
+      % measures 29-30
+      \repeat unfold 2 {
+        r2 <df' df'>4 <df, df'> |
+      }
+
+      % measure 31
+      R1 |
+
+      % measure 32
+      << {
+        af''1
+      } \\ {
+        <df,, df'>1
+      } >> |
+
+      % measure 33
+      df'2 r |
+
+      % measure 34
+      <df df'>4 r r2 |
     }
-    \\
-    {
-      \voiceOne
-      r4 <b''' ef>4 <af df f>2
-    }
-  >> |
-
-  % measure 33
-  df2
-  << {
-    s4 ef
-  } \\ {
-    <ef, ef'>4 <ef, ef'>
-  } >> |
-
-  % measure 34
-  <df df'>4 r r2 |
+  } >>
 }
