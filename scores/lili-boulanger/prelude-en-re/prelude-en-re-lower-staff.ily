@@ -22,7 +22,7 @@ lower_staff = \relative c {
   r r2 |
 
   % measure 4
-  <a''' b df>4 <af df>8 r
+  <a''' b df>4 <af df>4
   <<
     af,4
     \\
