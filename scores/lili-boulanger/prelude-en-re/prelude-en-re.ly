@@ -194,10 +194,10 @@ lower_staff = \relative c {
 
   % measure 13
   \clef "bass"
-  <f ef b> <f df b> <df,,, df' af'> |
+  <f ef b> <f df b> <df,,, df' af'> <f''' ef b> |
 
   % measure 14
-  <f''' ef b> <f df af> r <df,,, df' af'>2 |
+  <f df af> r <df,,, df' af'>2 |
 
   % measure 15
   r4 <df df' af'>2
@@ -249,10 +249,11 @@ lower_staff = \relative c {
   \time 4/4
   \clef "bass"
   \repeat unfold 2 {
-    <<
-      { <af, df f>4 <g' ef bf>2 <a f c>4 }
-      \new Voice { df,,,1 }
-    >>
+    << {
+      <af, df f>4 <g' ef bf>2 <a f c>4
+    } \\ {
+      df,,,1
+    } >>
   } |
 
   % measure 25
