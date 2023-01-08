@@ -180,10 +180,10 @@ lower_staff = \relative c {
     } >> |
 
     % measure 34
-    R1 |
+    <df df'>4 r r2 |
   } {
     % measures 23-24
-    \new Staff {
+    \new Staff = "third" {
       \once \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
       \key df \major
       \clef "bass"
@@ -193,13 +193,17 @@ lower_staff = \relative c {
       }
       \ottava #0
 
-      % measures 25-27
+      % measures 25-26
       R1 * 2 |
-      <cs''' cs,>8 <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 |
+
+      % measure 27
+      \change Staff = "upper"
+      r2 <ef''' ef'>4 <ef' ef'> |
 
       % measure 28
+      \change Staff = "third"
       << {
-        af,1
+        af,,,1
       } \\ {
         <df,, df'>1
       } >> |
@@ -223,7 +227,7 @@ lower_staff = \relative c {
       df'2 r |
 
       % measure 34
-      <df df'>4 r r2 |
+      R1 |
     }
   } >>
 }
