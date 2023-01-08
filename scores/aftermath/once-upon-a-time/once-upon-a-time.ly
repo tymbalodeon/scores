@@ -8,209 +8,229 @@
 }
 
 riff = \relative d {
-    \sectionLabel "Riff"
+  \sectionLabel "Riff"
 
-    \repeat volta 2 {
-        d4 d d8 d4 \glissando g,8 ~ |
+  \repeat volta 2 {
+    d4 d d8 d4 \glissando g,8 ~ |
 
-        g8 g g g ~ g g g4 \glissando |
+    g8 g g g ~ g g g4 \glissando |
 
-        b4 b b8 b4 \glissando g8 ~ |
+    b4 b b8 b4 \glissando g8 ~ |
 
-        g8 g g g ~ g g g4 \glissando |
-    }
+    g8 g g g ~ g g g4 \glissando |
+  }
 }
 
 chorus = \relative b, {
-    \sectionLabel "Chorus"
+  \sectionLabel "Chorus"
 
-    \repeat volta 3 {
-        b4 b r8 cs ( d ) g ~ |
+  \repeat volta 3 {
+    b4 b r8 cs ( d ) g ~ |
 
-        g8 g r g ~ g g g d |
+    g8 g r g ~ g g g d |
 
-        \alternative {
-            \volta 1 {
-                fs4 fs d8 fs ( g ) ( a ) ~ |
+    \alternative {
+      \volta 1 {
+        fs4 fs d8 fs ( g ) ( a ) ~ |
 
-                a8 d r cs ~ cs d,  a'4
-            }
+        a8 d r cs ~ cs d,  a'4
+      }
 
-            \volta 2 {
-                fs4 fs d8 fs ( g ) ( a ) ~ |
+      \volta 2 {
+        fs4 fs d8 fs ( g ) ( a ) ~ |
 
-                a8 cs d e ~ e d cs d |
-            }
+        a8 cs d e ~ e d cs d |
+      }
 
-            \volta 3 {
-                fs,4. d8 ~ d4 cs |
+      \volta 3 {
+        fs,4. d8 ~ d4 cs |
 
-                a4. g8 ~ g4 fs |
-            }
-        }
+        a4. g8 ~ g4 fs |
+      }
     }
+  }
 }
 music = \relative d {
-    \key d \major
-    \time 4/4
-    \clef "bass"
+  \key d \major
+  \time 4/4
+  \clef "bass"
 
-    \compressMMRests {
-        R1 * 24 |
-    }
+  \compressMMRests {
+    R1 * 24 |
+  }
 
-    \sectionLabel "Riff"
+  \sectionLabel "Riff"
 
-    \repeat volta 2 {
-        d4 d d8 d4 \glissando g,8 ~ |
+  \repeat volta 2 {
+    d4 d d8 d4 \glissando g,8 ~ |
 
+    g8 g g g ~ g g g4 \glissando |
+
+    b4 b b8 b4 \glissando g8 ~ |
+
+    \alternative {
+      \volta 1 {
         g8 g g g ~ g g g4 \glissando |
+      }
 
-        b4 b b8 b4 \glissando g8 ~ |
-
-        \alternative {
-            \volta 1 {
-                g8 g g g ~ g g g4 \glissando |
-            }
-
-            \volta 2 {
-                g8 g g g ~ g g g4 |
-            }
-        }
+      \volta 2 {
+        g8 g g g ~ g g g4 |
+      }
     }
+  }
 
-    \chorus
+  \chorus
 
-    \riff
+  \riff
 
-    \sectionLabel "Verse"
+  \sectionLabel "Verse"
 
-    d'4 d r8 a' r d, |
+  d'4 d r8 a' r d, |
 
-    r8 d r d ~ d e fs4 |
+  r8 d r d ~ d e fs4 |
 
-    g4 g r8 a r g ~ |
+  g4 g r8 a r g ~ |
 
-    g4 r8 g ~ g g cs ( d ) ~ |
+  g4 r8 g ~ g g cs ( d ) ~ |
 
+  << {
     d4 d ~ d8 d4. ~ |
 
     d4. d8 ~ d4 a |
+  } \\ {
+    b,2 b4. b8 ~ |
 
-    g4 g
-    \once \override NoteHead.style = #'cross a,8
-    \once \override NoteHead.style = #'cross a
-    fs'8 g |
+    b8 b4. ~ b8 b r4 |
+  } >>
 
-    r8 g r g ~ g fs e4 |
+  g'4 g
+  \once \override NoteHead.style = #'cross a,8
+  \once \override NoteHead.style = #'cross a
+  fs'8 g |
 
-    d4 d r8 a' g fs ~ |
+  r8 g r g ~ g fs e4 |
 
-    fs4. fs8 ~ fs4 e8 fs |
+  d4 d r8 a' g fs ~ |
 
-    g4 r8 a ~ a4 cs ~ |
+  fs4. fs8 ~ fs4 e8 fs |
 
-    cs8 a4. r2 |
+  << {
+    g4. a8~ a4 cs ~ |
 
+    cs8 a4.
+  } \\ {
+    r4 d, ~ d8 d4. |
+
+    d d8
+  } >>
+
+  g fs4 d8 |
+
+  << {
     r4 fs ~ fs8 fs r4 |
 
     r4 r8 b ~ b4 a |
+  } \\ {
+    b,2 b4. b8 |
 
-    g4 g
-    \once \override NoteHead.style = #'cross a,8
-    \once \override NoteHead.style = #'cross a
-    fs' g |
+    r cs ( d4 ) ~ d8 d4. |
+  } >>
 
-    r8 g r g ~ g fs e4 |
+  g4 g
+  \once \override NoteHead.style = #'cross a,8
+  \once \override NoteHead.style = #'cross a
+  fs' g |
 
-    \sectionLabel "Riff"
+  r8 g r g ~ g fs e4 |
 
-    \repeat volta 2 {
-      d4 d d8 d4 \glissando g,8 ~ |
+  \sectionLabel "Riff"
 
-      g8 g g g ~ g g g4 \glissando |
+  \repeat volta 2 {
+    d4 d d8 d4 \glissando g,8 ~ |
 
-      b4 b4 b8 b4 \glissando g8 ~ |
+    g8 g g g ~ g g g4 \glissando |
 
-      \alternative {
-        \volta 1 {
-          g8 g g g ~ g g g4 \glissando |
-        }
+    b4 b4 b8 b4 \glissando g8 ~ |
 
-        \volta 2  {
-          g8 g g g ~ g g g4 |
-        }
+    \alternative {
+      \volta 1 {
+        g8 g g g ~ g g g4 \glissando |
+      }
+
+      \volta 2  {
+        g8 g g g ~ g g g4 |
       }
     }
-
-    \chorus
-
-    \riff
-
-    \sectionLabel "Solo"
-
-    \repeat volta 2 {
-      d'2 d |
-
-      g,2 g |
-
-      b2 b |
-
-      g2 g |
-    }
-
-    \repeat volta 2 {
-      b2 b |
-
-      a2 a |
-
-      \alternative {
-        \volta 1 {
-          g2 g |
-
-          d'2 cs |
-        }
-
-        \volta 2 {
-          \repeat unfold 2 {
-            \repeat unfold 8 { g8 } |
-          }
-        }
-      }
-    }
-
-    \repeat volta 2 {
-      b4. b8 ~ b2 |
-
-      a4. a8 ~ a2 |
-
-      \alternative {
-        \volta 1 {
-          g4. g8 ~ g2 |
-
-          d'2 cs |
-        }
-
-        \volta 2 {
-          \repeat unfold 2 {
-            \repeat unfold 8 { g8 } |
-          }
-        }
-      }
-    }
-
-    \repeat unfold 4 { g8 } g g g g ~ -> |
-
-    g1 ~ |
-
-    g1 |
-
-    \compressMMRests {
-      R1 * 24 |
-    }
-
-    \bar "|."
   }
+
+  \chorus
+
+  \riff
+
+  \sectionLabel "Solo"
+
+  \repeat volta 2 {
+    d'2 d |
+
+    g,2 g |
+
+    b2 b |
+
+    g2 g |
+  }
+
+  \repeat volta 2 {
+    b2 b |
+
+    a2 a |
+
+    \alternative {
+      \volta 1 {
+        g2 g |
+
+        d'2 cs |
+      }
+
+      \volta 2 {
+        \repeat unfold 2 {
+          \repeat unfold 8 { g8 } |
+        }
+      }
+    }
+  }
+
+  \repeat volta 2 {
+    b4. b8 ~ b2 |
+
+    a4. a8 ~ a2 |
+
+    \alternative {
+      \volta 1 {
+        g4. g8 ~ g2 |
+
+        d'2 cs |
+      }
+
+      \volta 2 {
+        \repeat unfold 2 {
+          \repeat unfold 8 { g8 } |
+        }
+      }
+    }
+  }
+
+  \repeat unfold 4 { g8 } g g g g ~ -> |
+
+  g1 ~ |
+
+  g1 |
+
+  \compressMMRests {
+    R1 * 24 |
+  }
+
+  \bar "|."
+}
 
 \score {
   \new Staff \with {
