@@ -20,66 +20,141 @@ music = \relative f {
   }
 
   \repeat volta 2 {
-    | % 25
-    f4 f4 f8 f4 f8 ~ | % 26
-    f8 c8 f8 f8 ~ f8 f8 f4 | % 27
-    bf4 bf4 ~ bf8 bf8 f8 bf,8 ~ | % 28
-    bf8 bf4 bf8 ~ bf8 bf8 f'8 bf8 ~ }
-  \alternative { {
-    | % 29
-    bf4 bf4 ~ bf8 c8 df8 ef8 ~ | \barNumberCheck #30
-    ef8 df4 c8 ~ c8 df8 c4 }
-                 {
-                   | % 31
-                   bf2. f8 bf8 ~ | % 32
-                   bf4 f8 bf8 ~ bf2 }
-               } | % 33
-  d,4 d4 ~ d8 d8 ( f8 ) _\markup{ \bold\teeny {S} } bf8 ~ | % 34
-  bf8 bf4 bf8 ~ bf8 bf8 bf4 | % 35
-  a4 a4 a8 a8 r4 | % 36
-  e8 e4 c8 ~ c8 f8 f8 e8 | % 37
-  d4 d4 ~ d8 d8 ( f8 ) _\markup{ \bold\teeny {S} } bf8 ~ | % 38
-  bf8 bf4 bf8 ~ bf8 bf8 c8 bf8 | % 39
-  a4 a4 a8 a8 r4 | \barNumberCheck #40
-  e8 e4 c8 ~ c8 f8 f8 e8 \repeat volta 2 {
-    | % 41
-    d4 _ "Play 4 times" d4 ~ d8 d8 ( _\markup{ \bold\teeny {S} } f8
-    ) bf8 ~ | % 42
-    bf8 bf4 bf8 ~ bf8 bf8 bf4 | % 43
-    a4. f8 ~ f4 a4 | % 44
-    e8 e4 c8 ~ c8 f8 f8 e8 }
+    % measure 25
+    f4 f f8 f4 f8 ~ |
+
+    % measure 26
+    f8 c f f ~ f f f4 |
+
+    % measure 27
+    bf4 bf ~ bf8 bf f bf, ~ |
+
+    % measure 28
+    bf8 bf4 bf8 ~ bf bf f' bf ~
+
+    \alternative {
+      \volta 1 {
+        % measure 29
+        bf4 bf ~ bf8 c df ef ~ |
+
+        % measure 30
+        ef8 df4 c8 ~ c df c4 |
+      }
+
+      \volta 2 {
+        % measure 31
+        \repeatTie bf2. f8 bf ~ |
+
+        % measure 32
+        bf4 f8 bf8 ~ bf2
+      }
+    }
+  }
+
+  % measure 33
+  d,4 d ~ d8 d ( f ) bf ~ |
+
+  % measure 34
+  bf8 bf4 bf8 ~ bf bf bf4 |
+
+  % measure 35
+  a4 a a8 a r4 |
+
+  % measure 36
+  e8 e4 c8 ~ c f f e |
+
+  % measure 37
+  d4 d ~ d8 d ( f ) bf8 ~ |
+
+  % measure 38
+  bf8 bf4 bf8 ~ bf bf c bf |
+
+  % measure 39
+  a4 a a8 a r4 |
+
+  % measure 40
+  e8 e4 c8 ~ c f f e
+
   \repeat volta 2 {
-    | % 45
-    f4 f4 f8 f4 f8 ~ | % 46
-    f8 c8 f8 f8 ~ f8 f8 f4 | % 47
-    bf4 bf4 ~ bf8 bf8 f8 bf,8 ~ | % 48
-    bf8 bf4 bf8 ~ bf8 bf8 f'8 bf8 ~ }
-  \alternative { {
-    | % 49
-    bf4 bf4 bf8 c8 df8 ef8 ~ | \barNumberCheck #50
-    ef8 df4 c8 ~ c8 df8 c4 }
-                 {
-                   | % 51
-                   bf2. f8 bf8 ~ | % 52
-                   bf4 f8 bf8 ~ bf2 }
-               } | % 53
+    % measure 41
+    d4 d ~ d8 d ( f ) bf ~ |
+
+    % measure 42
+    bf8 bf4 bf8 ~ bf bf bf4 |
+
+    % measure 43
+    a4. f8 ~ f4 a |
+
+    % measure 44
+    e8 e4 c8 ~ c f f e
+  }
+
+  \repeat volta 2 {
+    % measure 45
+    f4 f f8 f4 f8 ~ |
+
+    % measure 46
+    f8 c f f ~ f f f4 |
+
+    % measure 47
+    bf4 bf ~ bf8 bf f bf, ~ |
+
+    % measure 48
+    bf8 bf4 bf8 ~ bf bf f' bf ~
+
+    \alternative {
+      \volta 1 {
+        % measure 49
+        bf4 bf bf8 c df ef ~ |
+
+        % measure 50
+        ef8 df4 c8 ~ c df c4
+      }
+
+      \volta 2 {
+        % measure 51
+        \repeatTie bf2. f8 bf ~ |
+
+        % measure 52
+        bf4 f8 bf ~ bf2 }
+
+    }
+  }
+
   bf1 ~ | % 54
+
   bf1 \bar "||"
+
   \key c \major c,2 c4. c8 ~ | % 56
+
   c4 b4 b2 | % 57
+
   a1 ~ | % 58
+
   a4 e'4 a8 e8 a,4 | % 59
+
   c2 c4. c8 ~ | \barNumberCheck #60
+
   c4 e2 g4 | % 61
+
   a2. e'8 c8 ~ | % 62
+
   c8 a8 d8 c8 ~ c2 | % 63
+
   c,2 c4. d8 ~ | % 64
+
   d4 e2 g4 | % 65
+
   a2. e8 a,8 ~ | % 66
+
   a8 a4. a'8 e8 a,4 | % 67
+
   c2 c4. e8 ~ | % 68
+
   e4 g2 gs4 | % 69
+
   a1 ~ | \barNumberCheck #70
+
   a1 \repeat volta 2 {
     | % 71
     c,2 c4. c8 ~ | % 72
