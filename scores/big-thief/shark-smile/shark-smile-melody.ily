@@ -15,7 +15,7 @@ verseMelody = {
     gs a gs8 a4 fs8~ |
     \alternative {
       \volta 1 {
-        fs4 r r8 cs' cs cs8~ |
+        fs4 r r8 cs' cs cs8 \laissezVibrer |
       }
       \volta 2 {
         fs,4 r8 a a a4 cs8 |
@@ -69,7 +69,7 @@ melody = \relative c'' {
       \volta 1 {
         r4 cs8 cs a4 a |
         gs a gs8 a4 fs8~ |
-        fs4 r r8 cs' cs cs8~ |
+        fs4 r r8 cs' cs cs \laissezVibrer |
       }
       \volta 2 {
         s1*2 |
