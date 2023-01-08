@@ -1,7 +1,6 @@
 \version "2.24.0"
 
 \include "settings.ily"
-\include "style.ily"
 
 \header {
   title = "All I Wanna Do"
@@ -159,18 +158,6 @@ music = \relative c' {
   }
 
   \bar "|."
-}
-
-\layout {
-  \context {
-    \Score
-    \consists
-    #(set-bars-per-line
-      '(17 5 5 6
-        4 4 4 5
-        4 4 4 4
-        4 4 10))
-  }
 }
 
 \score {

@@ -1,7 +1,6 @@
 \version "2.24.0"
 
 \include "settings.ily"
-\include "style.ily"
 
 \header {
   title = "Safe Haven"
@@ -28,12 +27,14 @@ music = \relative fs {
     R1 * 2 |
   }
 
-  % measures 3-6
   \sectionLabel "Riff"
+
+  % measures 3-6
   \riff
 
-  % measure 7
   \sectionLabel "Verse"
+
+  % measure 7
   d8 d r d fs fs r fs |
 
   % measure 8
@@ -202,6 +203,7 @@ music = \relative fs {
 
   % measure 61
   \sectionLabel "Riff"
+
   fs8 d a' e as fs cs' b ~ |
 
   % measure 62
@@ -250,18 +252,6 @@ music = \relative fs {
   d1
 
   \bar "|."
-}
-
-\layout {
-  \context {
-    \Score
-    \consists
-    #(set-bars-per-line '(6 4 4 4
-                          4 4 4 4
-                          4 4 4 4
-                          4 4 4 4
-                          4 6))
-  }
 }
 
 \score {

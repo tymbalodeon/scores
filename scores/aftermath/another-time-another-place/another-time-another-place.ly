@@ -1,7 +1,6 @@
 \version "2.24.0"
 
 \include "settings.ily"
-\include "style.ily"
 
 \header {
   title = "Another Time, Another Place"
@@ -131,17 +130,6 @@ music = \relative c {
   fs
 
   \bar "|."
-}
-
-\layout {
-  \context {
-    \Score
-    \consists
-    #(set-bars-per-line
-      '(4 4 4 5 5
-        4 5 5
-        4 4 4))
-  }
 }
 
 \score {

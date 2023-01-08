@@ -1,7 +1,6 @@
 \version "2.24.0"
 
 \include "settings.ily"
-\include "style.ily"
 
 \header {
   title = "Smile"
@@ -280,18 +279,6 @@ music = \relative f {
   c1
 
   \bar "|."
-}
-
-\layout {
-  \context {
-    \Score
-    \consists
-    #(set-bars-per-line '(27 5 4 4
-                          4 4 4 6
-                          4 4 4 4
-                          4 4 4 4
-                          4 4 4))
-  }
 }
 
 \score {

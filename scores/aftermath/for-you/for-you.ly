@@ -1,7 +1,6 @@
 \version "2.24.0"
 
 \include "settings.ily"
-\include "style.ily"
 
 \header {
   title = "For You"
@@ -285,19 +284,6 @@ music = \relative e' {
   a1 |
 
   \bar "|."
-}
-
-\layout {
-  \context {
-    \Score
-    \consists
-    #(set-bars-per-line
-      '(13 4 14 4
-        4 4 4 4
-        4 4 5 4
-        4 4 4 4
-        4 5))
-  }
 }
 
 \score {
