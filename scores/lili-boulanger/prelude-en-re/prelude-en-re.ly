@@ -1,6 +1,7 @@
 \version "2.24.0"
 
 \include "settings.ily"
+\include "markup.ily"
 \include "prelude-en-re-upper-staff.ily"
 \include "prelude-en-re-lower-staff.ily"
 
