@@ -3,10 +3,13 @@ lower_staff = \relative c {
   \clef "bass"
 
   % measure 1
+  \ottava #-1
   <df, df,>1 |
+  \ottava #0
 
   % measure 2
   <a'' b>4 <af df>2
+  \ottava #-1
   <<
     af,4 ~
     \\
@@ -19,47 +22,60 @@ lower_staff = \relative c {
     \\
     <df,, df'>4
   >>
+  \ottava #0
   r r2 |
 
   % measure 4
   <a''' b df>4 <af df>4
+  \ottava #-1
   <<
     af,4
     \\
     <df,, df'>4
   >>
+  \ottava #0
   <b''' df>4 |
 
   % measure 5
   <af df> r
+  \ottava #-1
   <<
     af,4
     \\
     <df,, df'>4
   >>
+  \ottava #0
   <f' df' f> |
 
   % measure 6
   % measure 7
   \repeat unfold 2 {
     <df af' df>
+    \ottava #-1
     <df, df'>2
+    \ottava #0
     <f' df' f>4 |
   }
 
   % measure 8
   % measure 9
   \repeat unfold 2 {
-    <df af' df> <df, df'>2 <f' a df f>4 |
+    <df af' df>
+    \ottava #-1
+    <df, df'>2
+    \ottava #0
+    <f' a df f>4 |
   }
 
   % measure 10
   <df af' df>
+  \ottava #-1
   <<
     af'2
     \\
     <df,, af' df>2
   >>
+  \ottava #0
   r4 |
 
   % measure 11
@@ -73,28 +89,34 @@ lower_staff = \relative c {
   % measure 13
   \clef "bass"
   <f ef b> <f df b>
+  \ottava #-1
   <<
     af,,4
     \\
     <df,, df'>4
   >>
+  \ottava #0
   <f''' ef b> |
 
   % measure 14
   <f df af> r
+  \ottava #-1
   <<
     af,,2
     \\
     <df,, df'>2
-  >> |
+  >>
+  \ottava #0 |
 
   % measure 15
   r4
+  \ottava #-1
   <<
     af''2
     \\
     <df,, df'>2
   >>
+  \ottava #0
   \clef "treble"
   f'''4 |
 
@@ -202,26 +224,33 @@ lower_staff = \relative c {
 
       % measure 28
       \change Staff = "third"
+      \ottava #-1
       << {
         af,,,1
       } \\ {
         <df,, df'>1
-      } >> |
+      } >>
+      \ottava #0 |
 
       % measures 29-30
       \repeat unfold 2 {
-        r2 <df' df'>4 <df, df'> |
+        r2 <df' df'>4
+        \ottava #-1
+        <df, df'>
+        \ottava #0 |
       }
 
       % measure 31
       R1 |
 
       % measure 32
+      \ottava #-1
       << {
         af''1
       } \\ {
         <df,, df'>1
-      } >> |
+      } >>
+      \ottava #0 |
 
       % measure 33
       df'2 r |

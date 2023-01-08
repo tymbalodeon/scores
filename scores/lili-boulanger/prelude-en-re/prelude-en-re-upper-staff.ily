@@ -149,21 +149,34 @@ upper_staff = \relative c' {
   % measures 28-31
   \change Staff = "upper"
   \repeat unfold 2 {
+    \ottava #1
     <ef''' ef'>4
+    \ottava #0
     <ef,, ef'> <ef' ef'>
-    <ef' ef'> |
+    \ottava #1
+    <ef' ef'>
+    \ottava #0 |
 
     <ef,, ef'> <ef' ef'> <ef, ef'> <ef' ef'> |
   }
 
   % measure 32
-  <ef' ef'> <a,, ef' a>2 <bf f' bf>4 |
+  \ottava #1
+  <ef' ef'>
+  \ottava #0
+  <a,, ef' a>2 <bf f' bf>4 |
 
   % measure 33
   << {
-    <ef' ef'>4 <ef, ef'> <ef, ef'>
+    \ottava #1
+    <ef' ef'>4
+    \ottava #0
+    <ef, ef'> <ef, ef'>
   } \\ {
-    ef'4 ef,
+    \ottava #1
+    ef'4
+    \ottava #0
+    ef,
   } >>
   s |
 
