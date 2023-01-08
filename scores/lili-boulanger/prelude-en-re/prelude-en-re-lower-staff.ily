@@ -152,7 +152,7 @@ lower_staff = \relative c {
     }
 
     % measure 27
-    <cs cs,>8 <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 |
+    <b g d>2 r |
 
     % measure 28
     r4 <af, df f>2 <bf ef g>4 |
@@ -194,11 +194,12 @@ lower_staff = \relative c {
       \ottava #0
 
       % measures 25-27
-      R1 * 3 |
+      R1 * 2 |
+      <cs''' cs,>8 <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 |
 
       % measure 28
       << {
-        af''1
+        af,1
       } \\ {
         <df,, df'>1
       } >> |

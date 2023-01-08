@@ -141,10 +141,7 @@ upper_staff = \relative c' {
   }
 
   % measure 27
-  \clef "bass"
-  <b g d>2
-  \clef "treble"
-  <ef ef'>4 <ef' ef'> |
+  r2 <ef ef'>4 <ef' ef'> |
 
   % measures 28-31
   \repeat unfold 2 {
