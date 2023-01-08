@@ -265,11 +265,10 @@ music = \relative d {
         }
 
         \volta 2 {
-          % measure 91
-          g1 ~ :8 |
-
-          % measure 92
-          g1 :8 |
+          % measures 91-92
+          \repeat unfold 2 {
+            \repeat unfold 8 { g8 } |
+          }
         }
       }
     }
@@ -291,17 +290,16 @@ music = \relative d {
         }
 
         \volta 2 {
-          % measure 97
-          g1 ~ :8 |
-
-          % measure 98
-          g1 ~ :8 |
+          % measures 97-98
+          \repeat unfold 2 {
+            \repeat unfold 8 { g8 } |
+          }
         }
       }
     }
 
     % measure 99
-    g2 ~ :8 g4. :8 g8 ~ -> |
+    \repeat unfold 4 { g8 } g g g g ~ -> |
 
     % measure 100
     g1 ~ |
