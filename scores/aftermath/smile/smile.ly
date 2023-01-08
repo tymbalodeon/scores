@@ -43,7 +43,7 @@ music = \relative f {
 
       \volta 2 {
         % measure 31
-        \repeatTie bf2. f8 bf ~ |
+        bf2. \repeatTie f8 bf ~ |
 
         % measure 32
         bf4 f8 bf8 ~ bf2
@@ -113,92 +113,184 @@ music = \relative f {
 
       \volta 2 {
         % measure 51
-        \repeatTie bf2. f8 bf ~ |
+        bf2. \repeatTie f8 bf ~ |
 
         % measure 52
         bf4 f8 bf ~ bf2 }
-
     }
   }
 
-  bf1 ~ | % 54
+  % measure 53
+  bf1 ~ |
 
-  bf1 \bar "||"
+  % measure 54
+  bf1 |
 
-  \key c \major c,2 c4. c8 ~ | % 56
+  % measure 55
+  \key c \major
+  c,2 c4. c8 ~ |
 
-  c4 b4 b2 | % 57
+  % measure 56
+  c4 b b2 |
 
-  a1 ~ | % 58
+  % measure 57
+  a1 ~ |
 
-  a4 e'4 a8 e8 a,4 | % 59
+  % measure 58
+  a4 e' a8 e a,4 |
 
-  c2 c4. c8 ~ | \barNumberCheck #60
+  % measure 59
+  c2 c4. c8 ~ |
 
-  c4 e2 g4 | % 61
+  % measure 60
+  c4 e2 g4 |
 
-  a2. e'8 c8 ~ | % 62
+  % measure 61
+  a2. e'8 c ~ |
 
-  c8 a8 d8 c8 ~ c2 | % 63
+  % measure 62
+  c8 a d c ~ c2 |
 
-  c,2 c4. d8 ~ | % 64
+  % measure 63
+  c,2 c4. d8 ~ |
 
-  d4 e2 g4 | % 65
+  % measure 64
+  d4 e2 g4 |
 
-  a2. e8 a,8 ~ | % 66
+  % measure 65
+  a2. e8 a, ~ |
 
-  a8 a4. a'8 e8 a,4 | % 67
+  % measure 66
+  a8 a4. a'8 e a,4 |
 
-  c2 c4. e8 ~ | % 68
+  % measure 67
+  c2 c4. e8 ~ |
 
-  e4 g2 gs4 | % 69
+  % measure 68
+  e4 g2 gs4 |
 
-  a1 ~ | \barNumberCheck #70
+  % measure 69
+  a1 ~ |
 
-  a1 \repeat volta 2 {
-    | % 71
-    c,2 c4. c8 ~ | % 72
-    c4 b4 b2 | % 73
-    e2 e4. e8 ~ | % 74
-    e8 b8 e,2 g4 }
-  \alternative { {
-    | % 75
-    a2 a4. b8 ~ | % 76
-    b4 c2 d4 | % 77
-    f2. c8 f8 ~ | % 78
-    f8 c8 f4 f8 e8 d4 }
-                 {
-                   | % 79
-                   a2 a4. e'8 ~ | \barNumberCheck #80
-                   e4 d4 c8 d8 c4 | % 81
-                   f2. c8 f8 ~ | % 82
-                   f4 e8 f8 e4 b4 }
-               } | % 83
-  c2 c4. c8 ~ | % 84
-  c4 b4 b2 | % 85
-  e,2 e4. e'8 ~ | % 86
-  e8 b8 e,4 g4 gs4 | % 87
-  a2. b8 c8 | % 88
-  d4 c4 b8 c8 b4 | % 89
-  f2. c'8 f8 ~ | \barNumberCheck #90
-  f8 c8 f4 f8 e8 d4 | % 91
-  c2 c2 | % 92
-  b2 b2 | % 93
-  e,2 e4. e'8 ~ | % 94
-  e8 b8 e,2 g4 | % 95
-  a2. b8 c8 | % 96
-  d4 e2 g4 | % 97
-  f2. c8 f8 ~ | % 98
-  f4 f4 f8 e8 d4 | % 99
-  c1 ~ | \barNumberCheck #100
-  c1 ~ | % 101
-  c1 ~ | % 102
-  c1 \bar "|."
+  % measure 70
+  a1 |
+
+  \repeat volta 2 {
+    % measure 71
+    c,2 c4. c8 ~ |
+
+    % measure 72
+    c4 b4 b2 |
+
+    % measure 73
+    e2 e4. e8 ~ |
+
+    % measure 74
+    e8 b8 e,2 g4
+
+    \alternative {
+      \volta 1 {
+        % measure 75
+        a2 a4. b8 ~ |
+
+        % measure 76
+        b4 c2 d4 |
+
+        % measure 77
+        f2. c8 f ~ |
+
+        % measure 78
+        f8 c8 f4 f8 e d4
+      }
+
+      \volta 2 {
+          % measure 78
+          a2 a4. e'8 ~ |
+
+          % measure 79
+          e4 d c8 d c4 |
+
+          % measure 80
+          f2. c8 f ~ |
+
+          % measure 81
+          f4 e8 f e4 b |
+      }
+    }
+  }
+
+  % measure 82
+  c2 c4. c8 ~ |
+
+  % measure 83
+  c4 b b2 |
+
+  % measure 84
+  e,2 e4. e'8 ~ |
+
+  % measure 85
+  e8 b e,4 g gs |
+
+  % measure 86
+  a2. b8 c |
+
+  % measure 87
+  d4 c b8 c b4 |
+
+  % measure 88
+  f2. c'8 f ~ |
+
+  % measure 89
+  f8 c f4 f8 e d4 |
+
+  % measure 90
+  c2 c |
+
+  % measure 91
+  b2 b |
+
+  % measure 92
+  e,2 e4. e'8 ~ |
+
+  % measure 93
+  e8 b e,2 g4 |
+
+  % measure 94
+  a2. b8 c |
+
+  % measure 95
+  d4 e2 g4 |
+
+  % measure 96
+  f2. c8 f ~ |
+
+  % measure 97
+  f4 f f8 e d4 |
+
+  % measure 98
+  c1 ~ |
+
+  % measure 99
+  c1 ~ |
+
+  % measure 100
+  c1 ~ |
+
+  % measure 101
+  c1
+
+  \bar "|."
 }
 
 \layout {
   \context {
-    \Score \consists #(set-bars-per-line '(4))
+    \Score
+    \consists
+    #(set-bars-per-line '(27 5 4 4
+                          4 4 4 6
+                          4 4 4 4
+                          4 4 4 4
+                          4 4 4))
   }
 }
 
