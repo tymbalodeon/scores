@@ -17,38 +17,39 @@ music = \relative e' {
   \partial 2
   r2 |
 
-  % measures 1-12
+  % measures 1-11
   \compressMMRests {
     R1 * 11 |
   }
 
-  % measure 13
+  % measure 12
   r2 e8 b4. \glissando |
 
   \repeat volta 2 {
-    % measure 14
+    % measure 13
     \repeat unfold 8 { e,8 } |
 
-    % measure 15
+    % measure 14
     \repeat unfold 8 { b } |
 
-    % measure 16
+    % measure 15
     \repeat unfold 8 { a } |
 
     \alternative {
       \volta 1 {
-      % measure 17
+      % measure 16
         \repeat unfold 8 { b } |
       }
 
       \volta 2 {
-        % measure 18
+        % measure 17
         a ( b ) b b \repeat unfold 4 { b }
       }
     }
   }
 
-  % measures 19-25
+  % measures 18-25
+  \sectionLabel "Verse"
   \compressMMRests {
     R1 * 8 |
   }
@@ -80,6 +81,7 @@ music = \relative e' {
   }
 
   % measure 32
+  \sectionLabel "Chorus"
   \repeat unfold 8 { e8 } |
 
   % measure 33
@@ -142,6 +144,7 @@ music = \relative e' {
   }
 
   % measure 52
+  \sectionLabel "Verse"
   e4 r8 e ~ \repeat unfold 4 { e } |
 
   \repeat volta 2 {
@@ -174,6 +177,7 @@ music = \relative e' {
 
       \volta 2 {
         % measure 61
+        \sectionLabel "Chorus"
         e,4 e'8 e \repeat unfold 4 { e }
       }
     }
