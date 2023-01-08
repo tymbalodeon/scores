@@ -27,7 +27,7 @@ upper_staff = \relative c' {
   << {
     bf'8 f'4. ~ f8 f, r4
   } \\ {
-    <ef f>4 r2 <a ef a,>4
+    <ef f>4 r r <a ef a,>
   } >> |
 
   << {
@@ -41,13 +41,13 @@ upper_staff = \relative c' {
     r8 f bf4~ bf8 f a f |
   } \\ {
     % measure 6
-    <bf,, f' bf>4 r2 <a ef' a>4 |
+    <bf,, f' bf>4 r r <a ef' a> |
 
     % measure 7
-    <bf' f bf,> r2 <a ef a,>4 |
+    <bf' f bf,> r r <a ef a,> |
 
     % measure 8
-    <bf f bf,> r2 <f' df a>4 |
+    <bf f bf,> r r <f' df a> |
   } >>
 
   % measure 9
@@ -55,7 +55,7 @@ upper_staff = \relative c' {
     r8
     f' af4 ~ af8 gf f ef
   } \\ {
-    <bf, f' bf>4 r2 <f' a df>4
+    <bf, f' bf>4 r r <f' a df>
   } >>
 
   % measure 10
