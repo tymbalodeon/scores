@@ -13,11 +13,8 @@ riff = \relative d {
 
   \repeat volta 2 {
     d4 d d8 d4 \glissando g,8 ~ |
-
     g8 g g g ~ g g g4 \glissando |
-
     b4 b b8 b4 \glissando g8 ~ |
-
     g8 g g g ~ g g g4 \glissando |
   }
 }
@@ -27,25 +24,21 @@ chorus = \relative b, {
 
   \repeat volta 3 {
     b4 b r8 cs ( d ) g ~ |
-
     g8 g r g ~ g g g d |
 
     \alternative {
       \volta 1 {
         fs4 fs d8 fs ( g ) ( a ) ~ |
-
         a8 d r cs ~ cs d,  a'4
       }
 
       \volta 2 {
         fs4 fs d8 fs ( g ) ( a ) ~ |
-
         a8 cs d e ~ e d cs d |
       }
 
       \volta 3 {
         fs,4. d8 ~ d4 cs |
-
         a4. g8 ~ g4 fs |
       }
     }
@@ -64,9 +57,7 @@ music = \relative d {
 
   \repeat volta 2 {
     d4 d d8 d4 \glissando g,8 ~ |
-
     g8 g g g ~ g g g4 \glissando |
-
     b4 b b8 b4 \glissando g8 ~ |
 
     \alternative {
@@ -81,31 +72,25 @@ music = \relative d {
   }
 
   \chorus
-
   \riff
 
   \mark \default
 
   d'4 d r8 a' r d, |
-
   r8 d r d ~ d e fs4 |
-
   g4 g r8 a r g ~ |
-
 
   << {
     \stemNeutral
     g4 r8 g ~ g g cs ( d ) ~ |
-
     \stemUp
     d4 d ~ d8 d4. ~ |
-
     d4. d8 ~ d4 a |
+
   } \\ {
+
     s1 |
-
     b,2 b4. b8 ~ |
-
     b8 b4. ~ b8 b r4 |
   } >>
 
@@ -115,18 +100,16 @@ music = \relative d {
   fs'8 g |
 
   r8 g r g ~ g fs e4 |
-
   d4 d r8 a' g fs ~ |
-
   fs4. fs8 ~ fs4 e8 fs |
 
   << {
     g4. a8~ a4 cs ~ |
-
     cs8 a4.
-  } \\ {
-    r4 d, ~ d8 d4. |
 
+  } \\ {
+
+    r4 d, ~ d8 d4. |
     d d8
   } >>
 
@@ -134,11 +117,11 @@ music = \relative d {
 
   << {
     r4 fs ~ fs8 fs r4 |
-
     r4 r8 b ~ b4 a |
-  } \\ {
-    b,2 b4. b8 |
 
+  } \\ {
+
+    b,2 b4. b8 |
     r cs ( d4 ) ~ d8 d4. |
   } >>
 
@@ -153,9 +136,7 @@ music = \relative d {
 
   \repeat volta 2 {
     d4 d d8 d4 \glissando g,8 ~ |
-
     g8 g g g ~ g g g4 \glissando |
-
     b4 b4 b8 b4 \glissando g8 ~ |
 
     \alternative {
@@ -170,30 +151,24 @@ music = \relative d {
   }
 
   \chorus
-
   \riff
 
   \mark \default
 
   \repeat volta 2 {
     d'2 d |
-
     g,2 g |
-
     b2 b |
-
     g2 g |
   }
 
   \repeat volta 2 {
     b2 b |
-
     a2 a |
 
     \alternative {
       \volta 1 {
         g2 g |
-
         d'2 cs |
       }
 
@@ -207,13 +182,11 @@ music = \relative d {
 
   \repeat volta 2 {
     b4. b8 ~ b2 |
-
     a4. a8 ~ a2 |
 
     \alternative {
       \volta 1 {
         g4. g8 ~ g2 |
-
         d'2 cs |
       }
 
@@ -226,9 +199,7 @@ music = \relative d {
   }
 
   \repeat unfold 4 { g8 } g g g g ~ -> |
-
   g1 ~ |
-
   g1 |
 
   \compressMMRests {

@@ -5,6 +5,7 @@
 \header {
   title = "All I Wanna Do"
   composer = "Aftermath"
+  arranger = "Ben Rosen, bass"
 }
 
 music = \relative c' {
@@ -16,9 +17,9 @@ music = \relative c' {
     R1 * 15
   }
 
-  r2 r4 g4 \glissando
+  r2 r4 g4 \glissando |
 
-  \sectionLabel "Chorus"
+  \mark \default
 
   \repeat volta 2 {
     g,4 g g8 b cs d ~ |
@@ -37,7 +38,7 @@ music = \relative c' {
     }
   }
 
-  \sectionLabel "Intro"
+  \mark \default
 
   \repeat volta 2 {
     b'4 b r8 cs r d ~ |
@@ -55,7 +56,7 @@ music = \relative c' {
     }
   }
 
-  \sectionLabel "Verse"
+  \mark \default
 
   \repeat volta 2 {
     b4 b r8 cs r d ~ |
@@ -81,7 +82,7 @@ music = \relative c' {
     }
   }
 
-  \sectionLabel "Chorus"
+  \mark \default
 
   g,4 g g8 b cs d ~ |
   d d d d ~ d d d a |
@@ -98,7 +99,7 @@ music = \relative c' {
   fs4 fs fs8 fs r fs ~ |
   fs cs fs as cs e d cs |
 
-  \sectionLabel "Solo"
+  \mark \default
 
   \repeat volta 2 {
     b,4 b r8 cs r d ~ |
@@ -116,7 +117,7 @@ music = \relative c' {
     }
   }
 
-  \sectionLabel "Chorus"
+  \mark \default
 
   g,4 g g8 b cs d ~ |
   d d d d ~ d d d a |
@@ -133,7 +134,7 @@ music = \relative c' {
   fs'4 fs fs8 fs a, b ~ |
   b b r a ~ a a a fs |
 
-  \sectionLabel "Chorus"
+  \mark \default
 
   g4 g g8 b cs d ~ |
   d fs g a ~ a g fs ( g ) |
@@ -162,7 +163,7 @@ music = \relative c' {
 
 \score {
   \new Staff \with {
-    instrumentName = "Bass Guitar"
+    instrumentName = "Bass"
   } {
     \music
   }

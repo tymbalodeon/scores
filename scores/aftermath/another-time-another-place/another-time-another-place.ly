@@ -5,6 +5,7 @@
 \header {
   title = "Another Time, Another Place"
   composer = "Aftermath"
+  arranger = "Ben Rosen, bass"
 }
 
 music = \relative c {
@@ -12,7 +13,7 @@ music = \relative c {
   \key b \major
   \time 4/4
 
-  \sectionLabel "Intro"
+  \mark \default
 
   \repeat volta 2 {
     fs4 fs fs8 fs r cs ~ |
@@ -21,7 +22,7 @@ music = \relative c {
     r e r e' ~ e ( d ) b ( cs )
   }
 
-  \sectionLabel "Verse"
+  \mark \default
 
   \repeat volta 2 {
     fs4 fs8 fs ~ fs fs fs fs |
@@ -33,10 +34,9 @@ music = \relative c {
   fs4 fs8 fs ~ fs fs fs fs |
   gs4 gs8 gs ~ gs gs gs gs |
   b, r b r b b r e |
-  r e r e ~ e ( d ) b ( cs )
+  r e r e ~ e ( d ) b ( cs ) |
 
-
-  \sectionLabel "Chorus"
+  \mark \default
 
   \repeat volta 4 {
     r4 b b8 cs ( fs ) gs ~ |
@@ -55,7 +55,7 @@ music = \relative c {
     }
   }
 
-  \sectionLabel "Intro"
+  \mark \default
 
   \repeat volta 2 {
     fs4 fs fs8 fs r cs ~ |
@@ -64,16 +64,16 @@ music = \relative c {
     r e r e' ~ e ( d ) b ( cs )
   }
 
-  \sectionLabel "Verse"
+  \mark \default
 
   \repeat volta 2 {
     fs4 fs8 fs ~ fs fs fs fs |
     gs4 gs8 gs ~ gs gs gs gs |
     b,4 b8 b ~ b b b b |
-    e e r e ~ e ( d ) b ( cs )
+    e e r e ~ e ( d ) b ( cs ) |
   }
 
-  \sectionLabel "Chorus"
+  \mark \default
 
   \repeat volta 4 {
     r4 b b8 cs ( fs ) gs ~ |
@@ -92,7 +92,7 @@ music = \relative c {
     }
   }
 
-  \sectionLabel "Solo"
+  \mark \default
 
   \repeat volta 4 {
     ds4 ds ds8 ds r b ~ |
@@ -107,7 +107,7 @@ music = \relative c {
   fs8 -> fs fs fs -> fs fs fs -> fs |
   fs fs -> fs fs fs -> fs fs -> fs |
 
-  \sectionLabel "Chorus"
+  \mark \default
 
   \repeat volta 4 {
     r4 b b8 cs ( fs ) gs ~ |
@@ -127,14 +127,14 @@ music = \relative c {
   }
 
   fs,1 ~ |
-  fs
+  fs1 |
 
   \bar "|."
 }
 
 \score {
   \new Staff \with {
-    instrumentName = "Bass guitar"
+    instrumentName = "Bass"
   } {
     \music
   }
