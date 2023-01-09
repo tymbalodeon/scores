@@ -5,6 +5,7 @@
 \header {
   title = "Once Upon A Time"
   composer = "Aftermath"
+  arranger = "Ben Rosen, bass"
 }
 
 riff = \relative d {
@@ -234,7 +235,7 @@ music = \relative d {
 
 \score {
   \new Staff \with {
-    instrumentName = "Bass guitar"
+    instrumentName = "Bass"
   } {
     \music
   }
