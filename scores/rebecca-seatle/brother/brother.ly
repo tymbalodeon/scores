@@ -5,6 +5,7 @@
 \header {
   title = "Brother"
   composer = "Rebecca Seatle"
+  arranger = "Ben Rosen, bass"
 }
 
 music = \relative cs {
@@ -112,7 +113,7 @@ music = \relative cs {
 
 \score {
   \new Staff \with {
-    instrumentName = "Bass guitar"
+    instrumentName = "Bass"
   } {
     \music
   }
