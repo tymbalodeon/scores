@@ -61,6 +61,8 @@ music = \relative b, {
     \verse
   }
 
+  \mark \default
+
   b2 a' |
 
   g2 fs4 e8 d |
@@ -76,6 +78,8 @@ music = \relative b, {
   e4 e fs fs |
 
   g4 g a a |
+
+  \mark \default
 
   \repeat volta 2 {
     b2 b'4 r8 fs |
@@ -129,7 +133,11 @@ music = \relative b, {
 
   b1 |
 
+  \mark \default
+
   \chorus
+
+  \mark \default
 
   \repeat unfold 8 { b8 } |
 
@@ -150,6 +158,8 @@ music = \relative b, {
   a4. a8 cs ( e ) a4 ~ |
 
   a1 |
+
+  \mark \default
 
   \repeat volta 2 {
     \verse
@@ -178,6 +188,8 @@ music = \relative b, {
   a2 a |
 
   b1 |
+
+  \mark \default
 
   \chorus
 
