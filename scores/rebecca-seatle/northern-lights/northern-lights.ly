@@ -104,10 +104,10 @@ music = \relative b, {
   } \\ {
     e,,1 |
 
-    s2 |
-  } >> |
+    s2
+  } >>
 
-  g''8 \arpeggio fs4. |
+  g''8 fs4. |
 
   e2 d |
 
