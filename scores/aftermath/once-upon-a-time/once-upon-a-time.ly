@@ -44,6 +44,7 @@ chorus = \relative b, {
     }
   }
 }
+
 music = \relative d {
   \key d \major
   \time 4/4

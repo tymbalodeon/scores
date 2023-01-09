@@ -84,6 +84,7 @@ music = \relative b, {
   }
 
   << {
+
     r2 a ~ |
     a2
 
@@ -91,6 +92,7 @@ music = \relative b, {
 
     e,,1 |
     s2
+
   } >>
 
   g''8 fs4. |
