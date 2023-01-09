@@ -9,7 +9,7 @@
 }
 
 riff = \relative d {
-  \sectionLabel "Riff"
+  \mark \default
 
   \repeat volta 2 {
     d4 d d8 d4 \glissando g,8 ~ |
@@ -23,7 +23,7 @@ riff = \relative d {
 }
 
 chorus = \relative b, {
-  \sectionLabel "Chorus"
+  \mark \default
 
   \repeat volta 3 {
     b4 b r8 cs ( d ) g ~ |
@@ -60,7 +60,7 @@ music = \relative d {
     R1 * 24 |
   }
 
-  \sectionLabel "Riff"
+  \mark \default
 
   \repeat volta 2 {
     d4 d d8 d4 \glissando g,8 ~ |
@@ -84,7 +84,7 @@ music = \relative d {
 
   \riff
 
-  \sectionLabel "Verse"
+  \mark \default
 
   d'4 d r8 a' r d, |
 
@@ -92,13 +92,18 @@ music = \relative d {
 
   g4 g r8 a r g ~ |
 
-  g4 r8 g ~ g g cs ( d ) ~ |
 
   << {
+    \stemNeutral
+    g4 r8 g ~ g g cs ( d ) ~ |
+
+    \stemUp
     d4 d ~ d8 d4. ~ |
 
     d4. d8 ~ d4 a |
   } \\ {
+    s1 |
+
     b,2 b4. b8 ~ |
 
     b8 b4. ~ b8 b r4 |
@@ -144,7 +149,7 @@ music = \relative d {
 
   r8 g r g ~ g fs e4 |
 
-  \sectionLabel "Riff"
+  \mark \default
 
   \repeat volta 2 {
     d4 d d8 d4 \glissando g,8 ~ |
@@ -168,7 +173,7 @@ music = \relative d {
 
   \riff
 
-  \sectionLabel "Solo"
+  \mark \default
 
   \repeat volta 2 {
     d'2 d |
