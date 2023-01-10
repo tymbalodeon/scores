@@ -84,8 +84,8 @@ music = \relative fs {
 
   b4 b \tuplet 3/2 { b fs8 } b4 cs d |
   fs4 fs \tuplet 3/2 { fs cs8 } fs4 e d |
-  b1. ~ |
   b1. |
+  R1. |
 
   \bar "|."
 }

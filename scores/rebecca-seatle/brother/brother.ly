@@ -8,107 +8,94 @@
   arranger = "Ben Rosen, bass"
 }
 
+intro = \relative cs {
+  \repeat volta 2 {
+    cs8. gs'16 r8 ds' ( e2 ) ~ |
+    e8 cs'4 gs8 ~ gs4 ds \glissando |
+    b,8. fs'16 r8 cs'8 ( b2 ) ~ |
+    b8 ds4 gs8 ~ gs4 b, |
+  }
+}
+
+hits = \relative cs {
+  cs2. r8 e' ~ |
+  e8 cs r ds ~ ds bs ~ bs4 |
+  cs,2. r8 a' ~ |
+  a8 a r gs ~ gs2 |
+
+  cs,2. r8 e' ~ |
+  e8 a r ds, ~ ds gs ~ gs4 |
+  cs,,2. r8 a ~ |
+  a8 a r gs ~ gs2 |
+}
+
+verse = \relative cs {
+  \repeat volta 2 {
+    cs8 e'16 e e8 ds16 ds ds8 cs16 cs a8 gs |
+    e8 cs'16 cs cs8 a16 a a8 gs16 gs e8 ds |
+    cs8 b'16 b b8 gs16 gs gs8 e16 e ds8 cs |
+    gs8 cs16 cs cs8 b16 b b8 gs16 gs fs8 e |
+  }
+}
+
 music = \relative cs {
   \tempo 4=120
   \key cs \minor
   \time 4/4
   \clef "bass"
 
+  \intro
+
+  \repeat unfold 2 {
+    \hits
+    \verse
+  }
+
+  \hits
+
   \repeat volta 2 {
-    |
-    cs8. gs'16 r8 ds'8 ( e2 ) ~
-    |
-    e8 cs'4 gs8 ~ gs4 ds4
-    \glissando |
-    b,8. fs'16 r8 cs'8 ( b2 ) ~ |
-    b8 ds4 gs8 ~ gs4 b,4 }
-  |
-  cs,2. r8 e'8 ~ |
-  e8 cs8 r8 ds8 ~ ds8 bs8 ~ bs4 |
-  cs,2. r8 a'8 ~ |
-  a8 a8 r8 gs8 ~ gs2 |
-  cs,2. r8 e'8 ~ |
-  e8 a8 r8 ds,8 ~ ds8 gs8 ~ gs4 |
-  cs,,2. r8 a8 ~ |
-  a8 a8 r8 gs8 ~ gs2 \repeat volta 2 {
-    |
-    cs8  e'16 e16 e8 ds16 ds16 ds8 cs16 cs16 a8
-    gs8 |
-    e8 cs'16 cs16 cs8 a16 a16 a8 gs16 gs16 e8 ds8 |
-    cs8 b'16 b16 b8 gs16 gs16 gs8 e16 e16 ds8 cs8 |
-    gs8 cs16 cs16 cs8 b16 b16 b8 gs16 gs16 fs8 e8 }
-  |
-  cs'2. r8 e'8 ~ |
-  e8 cs8 r8 ds8 ~ ds8 bs8 ~ bs4 |
-  cs,2. r8 a'8 ~ |
-  a8 a8 r8 gs8 ~ gs2 |
-  cs,2. r8 e'8 ~ |
-  e8 a8 r8 ds,8 ~ ds8 gs8 ~ gs4 |
-  cs,,2. r8 a8 ~ |
-  a8 a8 r8 gs8 ~ gs2 \repeat volta 2 {
-    |
-    cs8 e'16 e16 e8 ds16 ds16 ds8 cs16 cs16 a8 gs8 |
-    e8 cs'16 cs16 cs8 a16 a16 a8 gs16 gs16 e8 ds8 |
-    cs8 b'16 b16 b8 gs16 gs16 gs8 e16 e16 ds8 cs8 |
-    gs8 cs16 cs16 cs8 b16 b16 b8 gs16 gs16 fs8 e8 }
-  |
-  cs'2. r8 e'8 ~ |
-  e8 cs8 r8 ds8 ~ ds8 bs8 ~ bs4 |
-  cs,2. r8 a'8 ~ |
-  a8 a8 r8 gs8 ~ gs2 |
-  cs,2. r8 e'8 ~ |
-  e8 a8 r8 ds,8 ~ ds8 gs8 ~ gs4 |
-  cs,,2. r8 a8 ~ |
-  a8 a8 r8 gs8 ~ gs2 \repeat volta 2 {
-    |
-    cs8  e16 e16 e8 fs8 gs8 b8 r4 |
-    cs,8 e16 e16 e8 fs8 gs8 e'8 cs8 r8 |
-    a,8 cs16 cs16 cs8 e8 fs8 gs8 r4 |
-    a,8 cs16 cs16 e8 cs8 b8 ds8 fs8 r8 }
-  |
-  cs2. r8 e'8 ~ |
-  e8 cs8 r8 ds8 ~ ds8 bs8 ~ bs4 |
-  cs,2. r8 a'8 ~ |
-  a8 a8 r8 gs8 ~ gs2 |
-  cs,2. r8 e'8 ~ |
-  e8 a8 r8 ds,8 ~ ds8 gs8 ~ gs4 |
-  cs,,2. r8 a8 ~ |
-  a8 a8 r8 gs8 ~ gs2 |
-  s1*12 \repeat volta 2 {
-    |
-    cs8.  gs'16 r8 ds'8 ( e2 ) ~ |
-    e8 cs'4 gs8 ~ gs4  ds4
-    \glissando |
-    b,8. fs'16 r8 cs'8 ( b2 ) ~ |
-    b8 ds4 gs8 ~ gs4 b,4 }
-  |
-  cs,2. r8 e'8 ~ |
-  e8 cs8 r8 ds8 ~ ds8 bs8 ~ bs4 |
-  cs,2. r8 a'8 ~ |
-  a8 a8 r8 gs8 ~ gs2 |
-  cs,2. r8 e'8 ~ |
-  e8 a8 r8 ds,8 ~ ds8 gs8 ~ gs4 |
-  cs,,2. r8 a8 ~ |
-  a8 a8 r8 gs8 ~ gs2 \repeat volta 2 {
-    |
-    cs8 e'8 ( ds8 ) b8 cs8 fs,8 gs8 b8 |
-    cs,8 e'8 ( ds8 ) b8 cs8 fs,8 gs8 e8 |
-    b8 e'8 ( ds8 ) cs8 gs8 b8 e,8 fs8 }
-  \alternative { {
-    |
-    b,8 e'8 ( ds8 ) cs8 gs8 b8 e,8 fs8 }
-                 {
-                   |
-                   b,4 r4 r2 }
-               } |
-  a4 r8 a8 ~ a8 r8 a4 ~ |
-  a2 a4 b4 |
-  cs4 r8 cs8 ~ cs8 r8 cs4 ~ |
-  cs2 cs4 b4 |
-  a4 r8 a8 ~ a8 r8 a4 ~ |
-  a2 a4 b4 |
-  cs4 _ "rit." r8 cs8 ~ cs8 r8 cs4 ~ |
-  cs1 \bar "|."
+    cs8  e16 e e8 fs gs b r4 |
+    cs,8 e16 e e8 fs gs e' cs r |
+    a,8 cs16 cs cs8 e fs gs r4 |
+    a,8 cs16 cs e8 cs b ds fs r |
+  }
+
+  \hits
+
+  \compressMMRests {
+    R1 * 12 |
+  }
+
+  \intro
+  \hits
+
+  \repeat volta 2 {
+    cs8 e' ( ds ) b cs fs, gs b |
+    cs,8 e' ( ds ) b cs fs, gs e |
+    b8 e' ( ds ) cs gs b e, fs |
+
+    \alternative {
+      \volta 1 {
+        b,8 e' ( ds ) cs gs b e, fs |
+      }
+
+      \volta 2 {
+        b,4 r r2 |
+      }
+    }
+  }
+
+  a4 r8 a ~ a r a4 ~ |
+  a2 a4 b |
+  cs4 r8 cs ~ cs r cs4 ~ |
+  cs2 cs4 b |
+
+  a4 r8 a ~ a r a4 ~ |
+  a2 a4 b |
+  cs4 -\markup \italic "rit." r8 cs ~ cs r cs4 ~ |
+  cs1 |
+
+  \bar "|."
 }
 
 \score {
