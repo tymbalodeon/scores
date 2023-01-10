@@ -47,11 +47,20 @@ music = \relative cs {
   \intro
 
   \repeat unfold 2 {
+    \mark \default
+
     \hits
+
+    \mark \default
+
     \verse
   }
 
+  \mark \default
+
   \hits
+
+  \mark \default
 
   \repeat volta 2 {
     cs8  e16 e e8 fs gs b r4 |
@@ -60,14 +69,25 @@ music = \relative cs {
     a,8 cs16 cs e8 cs b ds fs r |
   }
 
+  \mark \default
+
   \hits
+
+  \mark \default
 
   \compressMMRests {
     R1 * 12 |
   }
 
+  \mark \default
+
   \intro
+
+  \mark \default
+
   \hits
+
+  \mark \default
 
   \repeat volta 2 {
     cs8 e' ( ds ) b cs fs, gs b |
@@ -84,6 +104,8 @@ music = \relative cs {
       }
     }
   }
+
+  \mark \default
 
   a4 r8 a ~ a r a4 ~ |
   a2 a4 b |
