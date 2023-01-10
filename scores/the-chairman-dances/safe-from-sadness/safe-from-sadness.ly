@@ -5,33 +5,41 @@
 \header {
   title = "Safe From Sadness"
   composer = "The Chairman Dances"
+  arranger = "Ben Rosen, bass"
 }
 
-music = \relative fs {
+extra_beats = {
+  \time 2/2
+  R1 |
+
+  \time 4/2
+}
+
+music = \relative fs, {
   \key fs \major
-  \time 4/4
+  \numericTimeSignature
+  \time 4/2
   \clef "bass"
 
   \compressMMRests {
-    R1 * 2 |
+    R \breve * 6 |
+    \extra_beats
+    R \breve * 8 |
+    R \breve * 3 |
+    \extra_beats
+    R \breve * 6 |
   }
 
-  fs1 ~ |
-  fs2 fs2 |
-  gs1 ~ |
-  gs2 gs2 |
-  ds'1 ~ |
-  ds4. ds8 ~ ds4 es4 |
-  fs1 ~ |
-  fs2 ds'2 |
-  as1 ~ |
-  as1 ~ |
-  as2 as,2 |
-  cs1 |
-  b1 ~ |
-  b2. fs4 |
-  b1 ~ |
-  b4. b8 ~ b4 cs4 |
+  fs1 ~ fs2 fs |
+  gs1 ~ gs2 gs |
+  ds'1 ~ ds4. ds8 ~ ds4 es4 |
+  fs1 ~ fs2 ds'2 |
+
+  as \breve ~ |
+  as2 as, cs1 |
+  b1 ~ b2. fs4 |
+  b1 ~ b4. b8 ~ b4 cs |
+
   fs1 ~ |
   fs2 fs,2 |
   gs1 ~ |
@@ -65,7 +73,7 @@ music = \relative fs {
   b1 ~ |
   b2. fs4 |
   b1 ~ |
-  b,4. b8 ~ b4 cs4 |
+  b4. b8 ~ b4 cs4 |
   fs1 ~ |
   fs2 fs2 |
   ds'2 ds2 |
@@ -112,37 +120,36 @@ music = \relative fs {
   gs4. gs8 ~ gs4 ds4 |
   b4. b8 ~ b4 fs4 |
   b4. b8 ~ b4 fs4 |
-  b4 b4 cs4 cs4 | 0
-  ds4 ds4 es4 es4 |1
-  fs4. fs8 ~ fs4 cs4 |2
-  fs,4. fs'8 ~ fs4 fs,8 fss8 |3
-  gs4. gs8 ~ gs4 ds'4 |4
-  gs8 as4 gs8 ~ gs4 ds4 |5
-  b4. b8 ~ b4 fs'4 |6
-  b4. b8 ~ b4 fs4 |7
-  \acciaccatura { cs'8 ( } ds4 ) ds4 cs4 cs4 |8
-  b4 as4 ds,4 es4 |9
-  fs4. fs8 ~ fs4 cs4 | 0
-  fs,4. fs'8 ~ fs4 fs,8 fss8 |1
-  gs4. gs8 ~ gs4 ds'4 |2
-  gs8 as4 gs8 ~ gs4 ds4 |3
-  b4. b8 ~ b4 fs4 |4
-  b4. b8 ~ b4 fs4 |5
-  b4 as8 b8 cs4 b8 cs8 |6
-  ds4 cs8 ds8 es4 ds8 es8 |7
-  fs4. fs8 ~ fs4 cs4 |8
-  fs,4. fs'8 ~ fs4 fs,8 fss8 |9
-  gs4 ds'4 b'4 as4 | 0
-  gs4 ds4 gs,4 as4 |1
-  <b fs'>1 ~ ~ |2
-  <b fs'>1 ~ ~ |3
-  <b fs'>1 ~ ~ |4
-  <b fs'>1 \bar "|."
+  b4 b4 cs4 cs4 |
+  ds4 ds4 es4 es4 |
+  fs4. fs8 ~ fs4 cs4 |
+  fs,4. fs'8 ~ fs4 fs,8 fss8 |
+  gs4. gs8 ~ gs4 ds'4 |
+  gs8 as4 gs8 ~ gs4 ds4 |
+  b4. b8 ~ b4 fs'4 |
+  b4. b8 ~ b4 fs4 |
+  \acciaccatura { cs'8 ( } ds4 ) ds4 cs4 cs4 |
+  b4 as4 ds,4 es4 |
+  fs4. fs8 ~ fs4 cs4 |
+  fs,4. fs'8 ~ fs4 fs,8 fss8 |
+  gs4. gs8 ~ gs4 ds'4 |
+  gs8 as4 gs8 ~ gs4 ds4 |
+  b4. b8 ~ b4 fs4 |
+  b4. b8 ~ b4 fs4 |
+  b4 as8 b8 cs4 b8 cs8 |
+  ds4 cs8 ds8 es4 ds8 es8 |
+
+  fs4. fs8 ~ fs4 cs fs,4. fs'8 ~ fs4 fs,8 fss |
+  gs4 ds' b' as gs ds gs, as |
+  <b fs'> \breve ~ |
+  <b fs'> \breve |
+
+  \bar "|."
 }
 
 \score {
   \new Staff \with {
-    instrumentName = "Bass guitar"
+    instrumentName = "Bass"
   } {
     \music
   }
