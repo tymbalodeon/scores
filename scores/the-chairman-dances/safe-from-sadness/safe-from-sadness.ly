@@ -25,6 +25,7 @@ music = \relative fs, {
     R \breve * 6 |
     \extra_beats
     R \breve * 8 |
+    \extra_beats
     R \breve * 3 |
     \extra_beats
     R \breve * 6 |
