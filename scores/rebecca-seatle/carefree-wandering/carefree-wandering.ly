@@ -39,15 +39,17 @@ music = \relative fs {
   b1. |
   R1. |
 
-  b4 ~ \tuplet 3/2 { b4 fs'8 } \tuplet 3/2 { b4 fs8 } d4 \tuplet 3/2 { fs b8 } fs r |
+  b4 ~ \tuplet 3/2 { b4 fs'8 } \tuplet 3/2 { b4 fs8 }
+    d4 \tuplet 3/2 { fs b8 } fs r |
   g4 \tuplet 3/2 { b e8 ~ } e4 cs2. |
-  b,4 ~ \tuplet 3/2 { b4 fs'8 } \tuplet 3/2 { b4 fs8 } d4 \tuplet 3/2 { fs4 b8 } fs8 r8 |
+  b,4 ~ \tuplet 3/2 { b4 fs'8 } \tuplet 3/2 { b4 fs8 }
+    d4 \tuplet 3/2 { fs4 b8 } fs8 r8 |
   g4 \tuplet 3/2 { b4 fs'8 } \tuplet 3/2 { e4 b8 } cs2 cs4 |
 
   b,2 cs4 d2 e4 |
   g,2 g4 fs2 fs4 |
-  b2 cs4 d4 e fs
-  g2 g4 fs2 fs4
+  b2 cs4 d4 e fs |
+  g2 g4 fs2 fs4 |
 
   b,4 b b b4 cs d |
   fs, fs fs fs4 gs as |
