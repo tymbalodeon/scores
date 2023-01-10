@@ -10,56 +10,38 @@
 
 music = \relative fs {
   \key b \minor
-  \time 3/4
+  \time 6/4
   \clef "bass"
 
   \compressMMRests {
-    R2. * 4 |
+    R1. * 3 |
   }
 
-  r4 r4 fs4 |
-  b2. ~ |
-  b2. |
-  d,2. |
+  r1 r4 fs |
 
-  e2. |
-  b2 cs4 |
-  d2 e4 |
-  g,2 g4 |
+  b1. |
+  d,2. e |
+  b2 cs4 d2 e4 |
+  g,2 g4 fs2 fs4 |
 
-  fs2 fs4 |
-  b2 cs4 |
-  d4 e4 fs4 |
-  g2 g4 |
+  b2 cs4 d e fs |
+  g2 g4 fs2 fs4 |
+  b,4 b b b cs d |
+  fs,4 fs fs fs gs as |
 
-  fs2 fs4 |
-  b,4 b4 b4 |
-  b4 cs4 d4 |
-  fs,4 fs4 fs4 |
+  b4 \tuplet 3/2 { b' fs8 } \tuplet 3/2 { b4 fs8 } b,4 cs d |
+  fs4 fs fs fs gs as |
+  b4 \tuplet 3/2 { b fs8 } \tuplet 3/2 { b4 fs8 } b,4 cs d |
+  fs,4 fs fs fs gs as |
 
-  fs4 gs4 as4 |
-  b4 \tuplet 3/2 { b'4 fs8 } \tuplet 3/2 { b4 fs8 } |
-  b,4 cs4 d4 |
-  fs4 fs4 fs4 |
-
-  fs4 gs4 as4 |
-  b4 \tuplet 3/2 { b4 fs8 } \tuplet 3/2 { b4 fs8 } |
-  b,4 cs4 d4 |
-  fs,4 fs4 fs4 |
-
-  fs4 gs4 as4 |
-  b4 b4 \tuplet 3/2 { b4 fs8 } |
-  b4 cs4 d4 |
-  fs4 fs4 \tuplet 3/2 { fs4 cs8 } |
-
-  fs4 e4 d4 |
-  b2. ~ |
-  b2. |
-  s1. |
+  b4 b \tuplet 3/2 { b fs8 } b4 cs d |
+  fs4 fs \tuplet 3/2 { fs cs8 } fs4 e d |
+  b1. |
+  R1. |
 
   b4 ~ \tuplet 3/2 { b4 fs'8 } \tuplet 3/2 { b4 fs8 } |
-  d4 \tuplet 3/2 { fs4 b8 } fs8 r8 |
-  g4 \tuplet 3/2 { b4 e8 ~ } e4 |
+  d4 \tuplet 3/2 { fs b8 } fs r |
+  g4 \tuplet 3/2 { b e8 ~ } e4 |
   cs2. |
 
   b,4 ~ \tuplet 3/2 { b4 fs'8 } \tuplet 3/2 { b4 fs8 } |
