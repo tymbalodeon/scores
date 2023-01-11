@@ -311,32 +311,32 @@ upper_staff =  \relative fs' {
   \tuplet 3/2  {
     r8 <a b>8 ds8 }
 
-  \3 /3  {
+  \tuplet 3/2   {
     e8 b'8 cs8 } |
-  \time 2/4  \3 /3 {
+  \time 2/4  \tuplet 3/2  {
     r8 <fs, gs>8 <ds gs>8 }
 
-  \3 /3  {
+  \tuplet 3/2   {
     <e fs ds'>8 b'8 a8 } |
-  \time 4/4  \3 /3 {
+  \time 4/4  \tuplet 3/2  {
     r8 <ds, gs>8 cs'8 }
 
-  \3 /3  {
+  \tuplet 3/2   {
     <fs, b e>8 gs'8 <cs, fs>8 }
-  \3 /3  {
+  \tuplet 3/2   {
     r8 <ds gs>8 ds'8 }
 
-  \3 /3  {
+  \tuplet 3/2   {
     fs8 b,8 gs8 } |
-  \3 /3  {
+  \tuplet 3/2   {
     r8 <gs, cs>8 <gs cs>8 }
 
-  \3 /3  {
+  \tuplet 3/2   {
     <ds b'>8 gs8 fs8 }
-  \3 /3  {
+  \tuplet 3/2   {
     r8 <fs as b ds>8 <cs' as'>8 }
 
-  \3 /3  {
+  \tuplet 3/2   {
     <ds fs b>8 b8 <as cs fs>8 } |
   <fs b e>8 ( <cs' ds gs>8 <gs cs fs>8 <cs, e fs b>8 ) r8 <ds fs gs
                                                            cs>8 _\f _\< <cs fs b>4 ~ ~ ~ | \barNumberCheck #30
@@ -351,6 +351,7 @@ upper_staff =  \relative fs' {
   \clef "treble"
   r4 -\p -\> cs'4 ( <b ds>2 ~ -\! |
   <b ds>2 ) -\pp r2
+
 
   \bar "|."
 }
