@@ -12,19 +12,33 @@ verse = \relative g, {
   \mark \default
 
   \repeat percent 4 {
-    \repeat unfold 8 { g8 } |
+    \repeat percent 2 {
+      \repeat unfold 4 { g8 }
+    }
+  } |
+
+  \repeat percent 4 {
+    \repeat unfold 4 { c8 }
+  } |
+
+  \repeat percent 2 {
+    \repeat unfold 4 { b8 }
+  } |
+
+  \repeat percent 2 {
+    \repeat unfold 4 { d8 }
+  } |
+
+  \repeat percent 3 {
+    \repeat unfold 4 { g,8 }
   }
 
-  \repeat unfold 2 {
-    \repeat unfold 8 { c8 } |
-  }
+  g8 d' g, g' |
 
-  \repeat unfold 8 { b8 } |
-  \repeat unfold 8 { d8 } |
+  \repeat percent 2 {
+    \repeat unfold 4 { g,8 }
+  } |
 
-  \repeat unfold 8 { g,8 } |
-  g8 g g g g d' g, g' |
-  \repeat unfold 8 { g,8 } |
   g'8 g g, g a a b b |
 
   c8 c c c c e c g' |
@@ -54,14 +68,24 @@ chorus = \relative g {
 interlude = \relative g {
   \mark \default
 
-  \repeat unfold 8 { g8 } |
-  g8 g g a \repeat unfold 4 { a } |
-  \repeat unfold 8 { g8 } |
+  \repeat percent 2 {
+    \repeat unfold 4 { g8 }
+  } |
+
   g8 g g a \repeat unfold 4 { a } |
 
-  \repeat unfold 8 { e8 } |
+  \repeat percent 2 {
+    \repeat unfold 4 { g8 }
+  } |
+
+  g8 g g a \repeat unfold 4 { a } |
+
+  \repeat percent 2 {
+    \repeat unfold 4 { e8 }
+  } |
+
   e8 e e a \repeat unfold 4 { a } |
-  g8 g g g g g d' b' ~ |
+  g8 g g g g g \glissando d' b' ~ |
   b8 d,4 d,8 e b' e,4 |
 }
 
@@ -74,13 +98,18 @@ music = \relative g {
   \partial 4
   r4 |
 
-  \repeat unfold 8 { g8 } |
-  g8 g g g g g g d |
-  g8 g g g g g d' b' ~ |
+  \repeat percent 3 {
+    \repeat unfold 4 { g8 }
+  }
+  g8 g g d |
+  g8 g g g g g \glissando d' b' ~ |
   b8 d,4 d,8 e b' e,4 |
 
   \verse
-  \repeat unfold 8 { d8 } |
+
+  \repeat percent 2 {
+    \repeat unfold 4 { d8 }
+  } |
 
   \interlude
 
@@ -109,8 +138,8 @@ music = \relative g {
 
   \mark \default
 
-  e,4 e e e |
-  a,4 a a a |
+  e,4 -. e -. e -. e -.|
+  a,4 -\markup \italic "simile" a a a |
   d4 d d d |
   c4 c c b |
   g4 e' e8 e g gs |
@@ -129,23 +158,34 @@ music = \relative g {
   \repeat unfold 4 { d8 } d b a b |
 
   \repeat unfold 2 {
-    \repeat unfold 8 { g8 } |
+    \repeat percent 2 {
+      \repeat unfold 4 { g8 }
+    } |
+
     g8 g g a \repeat unfold 4 { a } |
   }
 
-  \repeat unfold 8 { e8 } |
+  \repeat percent 2 {
+    \repeat unfold 4 { e8 }
+  } |
+
   e8 e e a \repeat unfold 4 { a } |
-  \repeat unfold 8 { g8 } |
+
+  \repeat percent 2 {
+    \repeat unfold 4 { g8 }
+  } |
+
   g8 g g a \repeat unfold 4 { a } |
 
-  \repeat unfold 8 { g8 } |
+  \repeat percent 2 {
+    \repeat unfold 4 { g8 }
+  } |
+
   g8 g g a \repeat unfold 4 { a } |
   \repeat unfold 4 { e8 } e e e e, |
   e'8 e e a \repeat unfold 4 { a } |
 
   g8 -. r r4 r2 |
-
-  R1
 
   \bar "|."
 }
