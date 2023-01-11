@@ -17,8 +17,10 @@ verse = \relative g, {
     }
   } |
 
-  \repeat percent 4 {
-    \repeat unfold 4 { c8 }
+  \repeat percent 2 {
+    \repeat percent 2 {
+      \repeat unfold 4 { c8 }
+    }
   } |
 
   \repeat percent 2 {
