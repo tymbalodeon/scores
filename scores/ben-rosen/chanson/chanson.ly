@@ -135,9 +135,21 @@ soprano =  \relative cs'' {
 upper_staff =  \relative fs' {
   \key_time_and_tempo
 
-  <fs as b ds>2 -\p r4 r8 ( -\< gs |
-  as4 ds8 es fs4 -\f -\> as ) |
-  r4 -\mp -\markup \italic "piu tranquillo" s <cs ds>4. ( b8 |
+  <fs as b ds>2 -- -\p r4
+
+  << {
+
+    r8 ( -\< gs |
+    as4 ds8 es fs4 -\f -\> as ) |
+
+  } \\ {
+
+      ds,,4 ~ |
+      ds8 fs gs4 <e b'>2 |
+
+  } >>
+
+  s4 -\mp -\markup \italic "piu tranquillo" s <cs'' ds>4. ( b8 |
 
   as fs ds gs, )
   \tuplet 6/4  {
@@ -146,162 +158,201 @@ upper_staff =  \relative fs' {
     cs as fs )
   } \change Staff = "upper" |
 
-  <gs as>4 <b e>2. -> -\mf -\> |
 
-  s1 |
+  << {
 
-  % s2 -\p fs''16 ( es cs gs
-  % \change Staff = "lower"
-  % b,
-  % \change Staff = "upper"
-  % cs as fs ) |
+    r2 a' ~ |
+    a4 s2. |
 
-  % \time 5/4
-  % \clef "bass"
-  % es ( as cs
-  % \clef "treble"
-  % gs' -\< ds es as gs fs ds cs8 ~ cs ) -\! <ds e gs>8 -_ -\f r4 |
+  } \\ {
 
-  % \time 3/4
-  % r8 -\mp r ( cs' ) -. -> r r <ds e fs b> ~ -\p |
+    <gs, as>4
+    <b e>2. -> -\mf -\> |
 
-  % \time 2/2
-  % <ds e fs b>8 -\mp s4. r2|
+  } >>
 
-  % \change Staff = "lower"
-  % gs,,16 e,
-  % \change Staff = "upper"
-  % b''' ( ds, ) r fs' ( cs' as )
-  % r as, ( ds, cs ) r8. <b' as'>16 ( ~ |
+  s2 fs''16 cs cs gs
+  \change Staff = "lower"
+  \clef "bass"
+  b,
+  \change Staff = "upper"
+  cs as fs |
+  \clef "bass"
 
-  % <b ds gs> ) -. <gs cs> ( <as b> fs' )
-  % \tuplet 6/4  {
-  %   ds ( as e fss
-  %   \change Staff = "lower"
-  %   cs ds, )
-  % } \change Staff = "upper"
-  % r4 <gf' a df>
+  \time 5/4
 
-  % \key df \major
-  % \change Staff = "lower"
-  % bf,, ( -\! -\markup \italic "sub." -\mp -\< g' c
-  % \change Staff = "upper"
-  % f bf ef a f g df g, f
-  % \clef "bass"
-  % ef af, bf ef, ) |
+  es as cs
+  \clef "treble"
+  gs' ds es as gs fs ds cs8 ~ cs <ds e gs> -. -- r4 |
 
-  % \clef "treble"
-  % <g c f a>4 -\mf <f' af c> ( -\markup \italic "sub." -\p -\<
-  % <af df> <a c af'> -\! -\markup \italic "espressivo" |
+  r4 s8 r4 <ds' e fs b>8 ~ |
+  <cs e fs b> s s4 e16 ds' b
+  \change Staff = "lower"
+  cs,
+  \change Staff = "upper"
+  gs'
+  \change Staff = "lower"
+  fs,
+  \change Staff = "upper"
+  as b ~ |
 
-  % <a ef'> -\mf <af af'> gf'16 f c df <c ef>
-  % \change Staff = "lower" |
+  b8 s r16 fs' cs' as r as, ds, cs r8 r16 <b' as'> ~ |
+  <b ds gs> <gs cs> <as b> fs' \tuplet 6/4 {
+    ds16 as e fss
+    \change Staff = "lower"
+    cs ds,
+  }
+  \change Staff = "upper"
 
-  % bf,,
-  % \change Staff = "upper"
-  % c' a ef' df g, f'8 g af <f bf>8 <c d f a>4 ) |
+  << {
 
-  % \key c \minor
-  % <ef f a>1 ~ -\mp |
+    r4 <gf' a df> |
 
-  % \time 5/4
-  % <ef f a>8 <bf' g'> ~ \arpeggio <bf g'>4 r8
-  % -\p s d -. r r4
-  % \key ef \minor
-  % \time 6/4
-  % \clef "bass"
-  % <af, bf ef f>4. -\f <f bf df gf> <gf bf cf ef>4 <bf ef> -\> <af df> |
+  } \\ {
 
-  % \time 4/4
-  % <gf af df f>2 r4 -\!
-  % \clef "treble"
-  % <df' f gf af> \arpeggio |
+    r8 df ef [
+    % \change Staff = "lower"
+    af, ] |
 
-  % \tuplet 3/2 { r8 -\mf <f, df'> <f df'> }
-  % \tuplet 3/2 { f' ef df }
-  % \tuplet 3/2 { r _\> <f, df'> <f df'> }
-  % \tuplet 3/2 { f' gf ef } _\! |
-  % \tuplet 3/2 { r8 _\mp <af, df>8 <af df>8 }
-  % \tuplet 3/2  {
-  %   f'8 bf8 af8 }
-  % \tuplet 3/2  {
-  %   r8 <af, df>8 <af df>8 }
+  } >>
 
-  % \tuplet 3/2  {
-  %   df'8 af8 gf8 }
-  % |
-  % \tuplet 3/2  {
-  %   r8 <gf, bf>8 af'8 }
+  \key df \major
 
-  % \tuplet 3/2  {
-  %   f8 gf8 af8 ~ }
+  \change Staff = "lower"
+  bf,16 ( -\markup \italic "sub." -\mp -\< g' c
+  \change Staff = "upper"
+  f bf ef a f g df g, f
+  \clef "bass"
+  ef af, bf ef, ) |
 
-  % \tuplet 3/2  {
-  %   af8 gf8 ef8 }
-  % \tuplet 3/2  {
-  %   b8 c16 ~ }
-  % c8 ~ |
-  % \time 3/4
-  % \tuplet 3/2  {
-  %   c8 _\> cs8 e8 ~ }
-  % <gs, a'>8 _\! <a gs'>8
-  % \tuplet 3/2  {
-  %   ds8 _\! _\< e8 gs,8 }
-  % \bar "||"
-  % \time 4/4  \key gs \minor \tuplet 3/2 {
-  %   r8 _\mf <b cs>8 <a cs>8 }
+  \clef "treble"
+  <g c f a>4 -\mf <f' af c> -\markup \italic "sub." -\p -\<
+  <af df> <a c af'> -\! -\markup \italic "espressivo" |
 
-  % \tuplet 3/2  {
-  %   e'8 fs8 ds8 }
-  % \tuplet 3/2  {
-  %   r8 <a b>8 ds8 }
+  << {
 
-  % \times 2/3  {
-  %   e8 b'8 cs8 }
-  % |
-  % \time 2/4  \times 2/3 {
-  %   r8 <fs, gs>8 <ds gs>8 }
+    <a ef'>4 -\mf <af af'> gf'16 f c df <c ef>4
 
-  % \times 2/3  {
-  %   <e fs ds'>8 b'8 a8 }
-  % |
-  % \time 4/4  \times 2/3 {
-  %   r8 <ds, gs>8 cs'8 }
+  } \\ {
 
-  % \times 2/3  {
-  %   <fs, b e>8 gs'8 <cs, fs>8 }
-  % \times 2/3  {
-  %   r8 <ds gs>8 ds'8 }
+    df8 b ef df <a c>4 f16 df af ef |
 
-  % \times 2/3  {
-  %   fs8 b,8 gs8 }
-  % |
-  % \times 2/3  {
-  %   r8 <gs, cs>8 <gs cs>8 }
+  } >>
+  \change Staff = "lower" |
 
-  % \times 2/3  {
-  %   <ds b'>8 gs8 fs8 }
-  % \times 2/3  {
-  %   r8 <fs as b ds>8 <cs' as'>8 }
+  bf
+  \change Staff = "upper"
+  c' a ef' df g, f'8 g16 af <f bf>8 <c d f a>4 |
 
-  % \times 2/3  {
-  %   <ds fs b>8 b8 <as cs fs>8 }
-  % |
-  % <fs b e>8 ( <cs' ds gs>8 <gs cs fs>8 <cs, e fs b>8 ) r8 <ds fs gs
-  %                                                          cs>8 _\f _\< <cs fs b>4 ~ ~ ~ | \barNumberCheck #30
-  % <cs fs b>8 <fs as ds>4 <e as ds fs>8 ~ ~ ~ ~ <e as ds fs>4 <b' cs
-  %                                                             gs'>4 _\! |
-  % r8 _\ff <ds, gs b>8 ~ ~ ~ <ds gs b>2 <ds fs b>4 |
-  % \time 3/4  r4 _\fff <cs' cs'>2 |
-  % \time 4/4  s8*5 e,8 ~ e8 fs8 ~ |
-  % \time 5/4  fs8 s8*5 \clef "bass" s2 |
-  % \time 2/2  <e, as>2. r4 |
+  \key c \minor
 
-  % \clef "treble"
-  % r4 -\p -\> cs'4 ( <b ds>2 ~ -\! |
-  % <b ds>2 ) -\pp r2
+  << {
 
-  % \bar "|."
+    s2 r4 <ef' f df'> |
+
+  } \\ {
+
+    <ef, f a>1 ~ -\mp |
+
+    \time 5/4
+
+    <ef f a>8
+
+  } >>
+
+  <bf' gf'>4. r4 s2 |
+
+  \key ef \minor
+  \time 6/4
+  \clef "bass"
+
+  <af, bf ef f>4. -\f <f bf df gf> <gf bf cf ef>4 <bf ef> -\> <af df> |
+
+  \time 4/4
+  <gf af df f>2 r4 -\!
+  \clef "treble"
+  <df' f gf af> \arpeggio |
+
+  \tuplet 3/2 { r8 -\mf <f, df'> <f df'> }
+  \tuplet 3/2 { f' ef df }
+  \tuplet 3/2 { r _\> <f, df'> <f df'> }
+  \tuplet 3/2 { f' gf ef } _\! |
+  \tuplet 3/2 { r8 _\mp <af, df>8 <af df>8 }
+  \tuplet 3/2  {
+    f'8 bf8 af8 }
+  \tuplet 3/2  {
+    r8 <af, df>8 <af df>8 }
+
+  \tuplet 3/2  {
+    df'8 af8 gf8 }|
+  \tuplet 3/2  {
+    r8 <gf, bf>8 af'8 }
+
+  \tuplet 3/2  {
+    f8 gf8 af8 ~ }
+
+  \tuplet 3/2  {
+    af8 gf8 ef8 }
+  \tuplet 3/2  {
+    b8 c16 ~ }
+  c8 ~ |
+  \time 3/4
+  \tuplet 3/2  {
+    c8 _\> cs8 e8 ~ }
+  <gs, a'>8 _\! <a gs'>8
+  \tuplet 3/2  {
+    ds8 _\! _\< e8 gs,8 }
+  \bar "||"
+  \time 4/4  \key gs \minor \tuplet 3/2 {
+    r8 _\mf <b cs>8 <a cs>8 }
+
+  \tuplet 3/2  {
+    e'8 fs8 ds8 }
+  \tuplet 3/2  {
+    r8 <a b>8 ds8 }
+
+  \3 /3  {
+    e8 b'8 cs8 } |
+  \time 2/4  \3 /3 {
+    r8 <fs, gs>8 <ds gs>8 }
+
+  \3 /3  {
+    <e fs ds'>8 b'8 a8 } |
+  \time 4/4  \3 /3 {
+    r8 <ds, gs>8 cs'8 }
+
+  \3 /3  {
+    <fs, b e>8 gs'8 <cs, fs>8 }
+  \3 /3  {
+    r8 <ds gs>8 ds'8 }
+
+  \3 /3  {
+    fs8 b,8 gs8 } |
+  \3 /3  {
+    r8 <gs, cs>8 <gs cs>8 }
+
+  \3 /3  {
+    <ds b'>8 gs8 fs8 }
+  \3 /3  {
+    r8 <fs as b ds>8 <cs' as'>8 }
+
+  \3 /3  {
+    <ds fs b>8 b8 <as cs fs>8 } |
+  <fs b e>8 ( <cs' ds gs>8 <gs cs fs>8 <cs, e fs b>8 ) r8 <ds fs gs
+                                                           cs>8 _\f _\< <cs fs b>4 ~ ~ ~ | \barNumberCheck #30
+  <cs fs b>8 <fs as ds>4 <e as ds fs>8 ~ ~ ~ ~ <e as ds fs>4 <b' cs
+                                                              gs'>4 _\! |
+  r8 _\ff <ds, gs b>8 ~ ~ ~ <ds gs b>2 <ds fs b>4 |
+  \time 3/4  r4 _\fff <cs' cs'>2 |
+  \time 4/4  s8*5 e,8 ~ e8 fs8 ~ |
+  \time 5/4  fs8 s8*5 \clef "bass" s2 |
+  \time 2/2  <e, as>2. r4 |
+
+  \clef "treble"
+  r4 -\p -\> cs'4 ( <b ds>2 ~ -\! |
+  <b ds>2 ) -\pp r2
+
+  \bar "|."
 }
 
 lower_staff = \relative cs' {
@@ -358,10 +409,10 @@ lower_staff = \relative cs' {
   gs' e ds fs
   \change Staff = "lower"
   \clef "treble"
-  ds' cs b8 r4 cs16 ds |
+  ds' cs b8 r4 cs,16 ds |
 
   \clef "bass"
-  gs,,16 e,
+  gs,16 e,
   \change Staff = "upper"
   b''' ds,
   \change Staff = "lower"
