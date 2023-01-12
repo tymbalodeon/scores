@@ -18,7 +18,7 @@ verse = \relative b, {
 
     \alternative {
       \volta 1 {
-        \repeat unfold 4 { e8 } ~ e e e ( d ) |
+        e8 e e e ~ e e e ( d ) |
       }
 
       \volta 2 {
@@ -53,7 +53,7 @@ music = \relative g {
 
       \volta 3 {
         fs'4 fs fs8 fs cs fs, ~ |
-        \repeat unfold 4 { fs8 } ~ fs fs fs ( e ) |
+        fs8 fs fs fs ~ fs fs fs ( e ) |
       }
     }
   }
@@ -69,7 +69,7 @@ music = \relative g {
     \alternative {
       \volta 1 {
         g'4 g g8 fs r e ~ |
-        \repeat unfold 4 { e8 } ~ e e e ( d ) |
+        e8 e e e ~ e e e ( d ) |
       }
 
       \volta 2 {
