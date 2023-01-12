@@ -8,7 +8,27 @@
   arranger = "Ben Rosen, bass"
 }
 
-music = \relative c' {
+verse = \relative b, {
+  \mark \default
+
+  \repeat volta 2 {
+    b4 b r8 cs r d ~ |
+    d d d d ~ d d d a |
+    g'4 g g8 fs r e ~ |
+
+    \alternative {
+      \volta 1 {
+        \repeat unfold 4 { e8 } ~ e e e ( d ) |
+      }
+
+      \volta 2 {
+        e e e ( d ) e b' e, ( d ) |
+      }
+    }
+  }
+}
+
+music = \relative g {
   \clef "bass"
   \key d \major
   \time 4/4
@@ -33,39 +53,23 @@ music = \relative c' {
 
       \volta 3 {
         fs'4 fs fs8 fs cs fs, ~ |
-        fs8 fs fs fs ~ fs fs fs ( e ) |
+        \repeat unfold 4 { fs8 } ~ fs fs fs ( e ) |
       }
     }
   }
+
+  \verse
 
   \mark \default
 
   \repeat volta 2 {
     b'4 b r8 cs r d ~ |
     d d d d ~ d d d a |
-    g'4 g g8 fs r e ~ |
-
-    \alternative {
-      \volta 1 {
-        e e e e ~ e e e ( d ) |
-      }
-
-      \volta 2 {
-        e e e ( d ) e b' e, ( d ) |
-      }
-    }
-  }
-
-  \mark \default
-
-  \repeat volta 2 {
-    b4 b r8 cs r d ~ |
-    d d d d ~ d d d a |
 
     \alternative {
       \volta 1 {
         g'4 g g8 fs r e ~ |
-        e e e e ~ e e e ( d ) |
+        \repeat unfold 4 { e8 } ~ e e e ( d ) |
       }
 
       \volta 2 {
@@ -87,35 +91,19 @@ music = \relative c' {
   g,4 g g8 b cs d ~ |
   d d d d ~ d d d a |
   fs'4 fs fs8 fs a, b ~ |
-  b b r a ~ a a a fs |
+  b b r a ~ a a a fs ( |
 
-  g4 g g8 b cs d ~ |
+  g4 ) g g8 b cs d ~ |
   d fs g a ~ a g fs g |
   fs4 fs fs8 fs a, b ~ |
-  b b r a ~ a a a fs |
+  b b r a ~ a a a fs ( |
 
-  g4 g g8 b cs d ~ |
+  g4 ) g g8 b cs d ~ |
   d fs ( \glissando a ) d ~ d a g4 |
   fs4 fs fs8 fs r fs ~ |
   fs cs fs as cs e d cs |
 
-  \mark \default
-
-  \repeat volta 2 {
-    b,4 b r8 cs r d ~ |
-    d d d d ~ d d d a |
-    g'4 g g8 fs r e ~ |
-
-    \alternative {
-      \volta 1 {
-        e e e e ~ e e e ( d ) |
-      }
-
-      \volta 2 {
-        e e e ( d ) e b' e, ( d ) |
-      }
-    }
-  }
+  \verse
 
   \mark \default
 
@@ -132,21 +120,21 @@ music = \relative c' {
   g4 g g8 b cs d ~ |
   d d d d ~ d d d a |
   fs'4 fs fs8 fs a, b ~ |
-  b b r a ~ a a a fs |
+  b b r a ~ a a a fs ( |
 
   \mark \default
 
-  g4 g g8 b cs d ~ |
+  g4 ) g g8 b cs d ~ |
   d fs g a ~ a g fs ( g ) |
   fs4 fs fs8 fs a, b ~ |
-  b b r a ~ a a a fs |
+  b b r a ~ a a a fs ( |
 
-  g4 g g8 b cs d ~ |
+  g4 ) g g8 b cs d ~ |
   d fs ( \glissando a ) d ~ d a g4 |
   fs4 fs fs8 fs a, b ~ |
-  b b r a ~ a a a fs |
+  b b r a ~ a a a fs ( |
 
-  g4 g g8 b cs d ~ |
+  g4 ) g g8 b cs d ~ |
   d fs ( \glissando a ) d e ( fs ) e ( d ) |
   fs, fs fs fs fs fs cs fs |
   fs fs fs fs fs fs fs cs |
