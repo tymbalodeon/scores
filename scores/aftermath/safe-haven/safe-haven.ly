@@ -8,11 +8,28 @@
   arranger = "Ben Rosen, bass"
 }
 
-riff = {
+riff = \relative fs {
   fs8 d a' e as fs cs' b ~ |
   b8 d8 b8 g8 fs8 fs8 e8 a,8 |
   d8 d a' e as fs cs' b ~ |
   b8 d b g fs fs e a, |
+}
+
+pre_riff = {
+  e4 e r8 fs r g ~ |
+  \repeat unfold 8 { g8 } |
+  e,4 e r8 fs r g ~ |
+  g8 g g g g g g e |
+
+  \mark \default
+
+  a4 a r8 e' a g ~ |
+  g4 r8 g8 ( fs8 ) ( d8 ) d8 e8 |
+
+  \repeat volta 2 {
+    a,4 a' r8 e a g ~ |
+    g4 r8 g ( fs ) ( d8 ) d8 e8 |
+  }
 }
 
 music = \relative fs {
@@ -40,20 +57,8 @@ music = \relative fs {
   d8 d r d cs cs r cs |
   g8 g r g a a cs d |
 
-  e4 e r8 fs r g ~ |
-  \repeat unfold 8 { g8 } |
-  e,4 e r8 fs r g ~ |
-  g8 g g g g g g e |
 
-  \mark \default
-
-  a4 a r8 e' a g ~ |
-  g4 r8 g8 ( fs8 ) ( d8 ) d8 e8 |
-
-  \repeat volta 2 {
-    a,4 a' r8 e a g ~ |
-    g4 r8 g ( fs ) ( d8 ) d8 e8 |
-  }
+  \pre_riff
 
   \mark \default
 
@@ -71,20 +76,7 @@ music = \relative fs {
   d8 d r d cs cs r cs |
   g8 g r g a a cs d |
 
-  e4 e r8 fs r g ~ |
-  \repeat unfold 8 { g8 } |
-  e,4 e r8 fs r g ~ |
-  g8 g g g g g g e |
-
-  \mark \default
-
-  a4 a r8 e' a g ~ |
-  g4 r8 g8 ( fs8 ) ( d8 ) d8 e8 |
-
-  \repeat volta 2 {
-    a,4 a' r8 e a g ~ |
-    g4 r8 g ( fs ) ( d8 ) d8 e8 |
-  }
+  \pre_riff
 
   \repeat volta 2 {
     \mark \default
