@@ -8,7 +8,7 @@
   arranger = "Ben Rosen, bass"
 }
 
-verse = \relative b, {
+instrumental = \relative b, {
   \mark \default
 
   \repeat volta 2 {
@@ -41,14 +41,17 @@ music = \relative g {
 
   \mark \default
 
+  g,4
+
   \repeat volta 2 {
-    g,4 g g8 b cs d ~ |
+    g g8 b cs d ~ |
     d8 d d d ~ d d d a |
 
     \alternative {
       \volta 1,2 {
         fs'4 fs fs8 fs a, b ~ |
-        b8 b r a ~ a a a fs |
+        b8 b r a ~ a a a fs ( |
+        g4 )
       }
 
       \volta 3 {
@@ -58,7 +61,7 @@ music = \relative g {
     }
   }
 
-  \verse
+  \instrumental
 
   \mark \default
 
@@ -103,7 +106,7 @@ music = \relative g {
   fs4 fs fs8 fs r fs ~ |
   fs cs fs as cs e d cs |
 
-  \verse
+  \instrumental
 
   \mark \default
 
