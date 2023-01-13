@@ -13,7 +13,8 @@ instrumental = \relative e {
     e2 e4. e8 ~ |
     e4 \glissando b b2 |
     gs2 gs4. gs8 ~ |
-    gs4 a4 a2 * 1/2 \glissando
+    gs4 a4
+      a2 * 1/2 \glissando
       \single \hideNotes
       \tweak X-offset #0 \tweak X-extent #'( 0 . 0 )
       e'2 * 1/2 |

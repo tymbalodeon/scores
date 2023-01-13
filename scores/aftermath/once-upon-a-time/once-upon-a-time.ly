@@ -15,7 +15,20 @@ riff = \relative d {
     d4 d d8 d4 \glissando g,8 ~ |
     g8 g g g ~ g g g4 \glissando |
     b4 b b8 b4 \glissando g8 ~ |
-    g8 g g g ~ g g g4 \glissando |
+
+    \alternative {
+      \volta 1 {
+        g8 g g g ~ g g
+        g4 * 1/2 \glissando
+        \single \hideNotes
+        \tweak X-offset #1 \tweak X-extent #'( 0 . 0 )
+        d'4 * 1/2 |
+      }
+
+      \volta 2 {
+        g,8 \repeatTie g g g ~ g g g4 |
+      }
+    }
   }
 }
 
@@ -54,45 +67,34 @@ music = \relative d {
     R1 * 24 |
   }
 
-  \mark \default
-
-  \repeat volta 2 {
-    d4 d d8 d4 \glissando g,8 ~ |
-    g8 g g g ~ g g g4 \glissando |
-    b4 b b8 b4 \glissando g8 ~ |
-
-    \alternative {
-      \volta 1 {
-        g8 g g g ~ g g g4 \glissando |
-      }
-
-      \volta 2 {
-        g8 g g g ~ g g g4 |
-      }
-    }
-  }
+  \riff
 
   \chorus
+
   \riff
 
   \mark \default
 
-  d'4 d r8 a' r d, |
+  d4 d r8 a' r d, |
   r8 d r d ~ d e fs4 |
   g4 g r8 a r g ~ |
 
+  g4 r8 g ~ g g
+
   << {
+
     \stemNeutral
-    g4 r8 g ~ g g cs ( d ) ~ |
+    cs ( d ) ~ |
     \stemUp
     d4 d ~ d8 d4. ~ |
     d4. d8 ~ d4 a |
 
   } \\ {
 
-    s1 |
+    s4
     b,2 b4. b8 ~ |
     b8 b4. ~ b8 b r4 |
+
   } >>
 
   g'4 g
@@ -174,8 +176,10 @@ music = \relative d {
       }
 
       \volta 2 {
-        \repeat unfold 2 {
-          \repeat unfold 8 { g8 } |
+        \repeat percent 2 {
+          \repeat percent 2 {
+            \repeat unfold 4 { g8 }
+          } |
         }
       }
     }
@@ -192,8 +196,10 @@ music = \relative d {
       }
 
       \volta 2 {
-        \repeat unfold 2 {
-          \repeat unfold 8 { g8 } |
+        \repeat percent 2 {
+          \repeat percent 2 {
+            \repeat unfold 4 { g8 }
+          } |
         }
       }
     }
@@ -202,6 +208,8 @@ music = \relative d {
   \repeat unfold 4 { g8 } g g g g ~ -> |
   g1 ~ |
   g1 |
+
+  \mark \default
 
   \compressMMRests {
     R1 * 24 |
