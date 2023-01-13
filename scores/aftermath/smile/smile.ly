@@ -8,16 +8,7 @@
   arranger = "Ben Rosen, bass"
 }
 
-music = \relative f {
-  \tempo 4 = 144
-  \key f \major
-  \time 4/4
-  \clef "bass"
-
-  \compressMMRests {
-    R1 * 24 |
-  }
-
+chorus = \relative f {
   \repeat volta 2 {
     f4 f f8 f4 f8 ~ |
     f8 c f f ~ f f f4 |
@@ -36,8 +27,21 @@ music = \relative f {
       }
     }
   }
+}
 
-  d,4 d ~ d8 d ( f ) bf ~ |
+music = \relative f {
+  \tempo 4 = 144
+  \key f \major
+  \time 4/4
+  \clef "bass"
+
+  \compressMMRests {
+    R1 * 24 |
+  }
+
+  \chorus
+
+  d4 d ~ d8 d ( f ) bf ~ |
   bf8 bf4 bf8 ~ bf bf bf4 |
   a4 a a8 a r4 |
   e8 e4 c8 ~ c f f e |
@@ -54,25 +58,9 @@ music = \relative f {
     e8 e4 c8 ~ c f f e
   }
 
-  \repeat volta 2 {
-    f4 f f8 f4 f8 ~ |
-    f8 c f f ~ f f f4 |
-    bf4 bf ~ bf8 bf f bf, ~ |
-    bf8 bf4 bf8 ~ bf bf f' bf ~
+  \chorus
 
-    \alternative {
-      \volta 1 {
-        bf4 bf bf8 c df ef ~ |
-        ef8 df4 c8 ~ c df c4
-      }
-
-      \volta 2 {
-        bf2. \repeatTie f8 bf ~ |
-        bf4 f8 bf ~ bf2 }
-    }
-  }
-
-  bf1 ~ |
+  bf'1 ~ |
   bf1 |
 
   \key c \major
