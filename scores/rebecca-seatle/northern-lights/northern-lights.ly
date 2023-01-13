@@ -115,10 +115,15 @@ music = \relative b, {
 
   \mark \default
 
-  \repeat unfold 8 { b8 } |
-  \repeat unfold 8 { b8 } |
+  \repeat percent 4 {
+    \repeat unfold 4 { b8 }
+  } |
+
   \repeat unfold 4 { a8 } \repeat unfold 4 { g } |
-  \repeat unfold 8 { fs8 } |
+
+  \repeat percent 2 {
+    \repeat unfold 4 { fs8 }
+  } |
 
   \repeat unfold 4 { e8 } \repeat unfold 4 { d } |
   \repeat unfold 4 { c8 } \repeat unfold 4 { b } |
