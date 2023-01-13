@@ -8,19 +8,45 @@
   arranger = "Ben Rosen, bass"
 }
 
+instrumental = {
+  \repeat volta 2 {
+    fs4 fs fs8 fs r cs ~ |
+    cs8 cs cs cs ~ cs cs cs cs |
+    gs4 gs gs8 gs r e |
+    r8 e r e' ~ e ( d ) b ( cs )
+  }
+}
+
+chorus = {
+  \mark \default
+
+  \repeat volta 4 {
+    r4 b -> b8 ( cs ) fs gs ~ |
+    gs8 as b as r gs fs r |
+
+    \alternative {
+      \volta 1,2,3 {
+        cs4 cs cs8 cs r gs' |
+        r8 gs r gs ~ gs fs ds cs |
+      }
+
+      \volta 4 {
+        \repeat percent 2 {
+          \repeat percent 2 {
+            \repeat unfold 4 { cs8 }
+          }
+        }
+      }
+    }
+  }
+}
+
 music = \relative c {
   \clef "bass"
   \key b \major
   \time 4/4
 
-  \mark \default
-
-  \repeat volta 2 {
-    fs4 fs fs8 fs r cs ~ |
-    cs cs cs cs ~ cs cs cs cs |
-    gs4 gs gs8 gs r e |
-    r e r e' ~ e ( d ) b ( cs )
-  }
+  \instrumental
 
   \mark \default
 
@@ -36,33 +62,11 @@ music = \relative c {
   b, r b r b b r e |
   r e r e ~ e ( d ) b ( cs ) |
 
-  \mark \default
-
-  \repeat volta 4 {
-    r4 b b8 cs ( fs ) gs ~ |
-    gs as b as r gs fs r |
-
-    \alternative {
-      \volta 1,2,3 {
-        cs4 cs cs8 cs r gs' |
-        r gs r gs ~ gs fs ds cs |
-      }
-
-      \volta 4 {
-        cs8 cs cs cs cs cs cs cs |
-        cs cs cs cs cs cs cs cs |
-      }
-    }
-  }
+  \chorus
 
   \mark \default
 
-  \repeat volta 2 {
-    fs4 fs fs8 fs r cs ~ |
-    cs cs cs cs ~ cs cs cs cs |
-    gs4 gs gs8 gs r e |
-    r e r e' ~ e ( d ) b ( cs )
-  }
+  \instrumental
 
   \mark \default
 
@@ -73,24 +77,7 @@ music = \relative c {
     e e r e ~ e ( d ) b ( cs ) |
   }
 
-  \mark \default
-
-  \repeat volta 4 {
-    r4 b b8 cs ( fs ) gs ~ |
-    gs as b as r gs fs r |
-
-    \alternative {
-      \volta 1,2,3 {
-        cs4 cs cs8 cs r gs' |
-        r gs r gs ~ gs fs ds cs |
-      }
-
-      \volta 4 {
-        cs8 cs cs cs cs cs cs cs |
-        cs cs cs cs cs cs cs cs |
-      }
-    }
-  }
+  \chorus
 
   \mark \default
 
@@ -107,24 +94,7 @@ music = \relative c {
   fs8 -> fs fs fs -> fs fs fs -> fs |
   fs fs -> fs fs fs -> fs fs -> fs |
 
-  \mark \default
-
-  \repeat volta 4 {
-    r4 b b8 cs ( fs ) gs ~ |
-    gs as b as r gs fs r |
-
-    \alternative {
-      \volta 1,2,3 {
-        cs4 cs cs8 cs r gs' |
-        r gs r gs ~ gs fs ds cs |
-      }
-
-      \volta 4 {
-        cs8 cs cs cs cs cs cs cs |
-        cs cs cs cs cs cs cs cs |
-      }
-    }
-  }
+  \chorus
 
   fs,1 ~ |
   fs1 |
