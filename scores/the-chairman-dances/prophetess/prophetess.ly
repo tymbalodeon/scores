@@ -31,7 +31,7 @@ slaps = \relative f {
 
 music = \relative f {
   \tempo 4 = 160
-  \key r \major
+  \key f \major
   \time 4/4
   \clef "bass"
 
@@ -143,14 +143,14 @@ music = \relative f {
 
   \slaps
 
-  f'8 ~ |
+  f8 ~ |
 
   f1 ~
 
   \instrumental
 
-  f,2 ~ f8 f4. |
-  f'2 r2
+  f2 ~ f8 f4 f'8 ~ |
+  f4 r2. |
 
   \bar "|."
 }
