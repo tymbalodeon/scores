@@ -8,6 +8,57 @@
   arranger = "Ben Rosen, bass"
 }
 
+instrumental = \relative e {
+  \repeat volta 2 {
+    e2 e4. e8 ~ |
+    e4 \glissando b b2 |
+    gs2 gs4. gs8 ~ |
+    gs4 a4 a2 * 1/2 \glissando
+      \single \hideNotes
+      \tweak X-offset #0 \tweak X-extent #'( 0 . 0 )
+      e'2 * 1/2 |
+  }
+}
+
+chorus_end = \relative a, {
+  a4. e'8 ~ e4 a ~ |
+  a8 e4. a,4 e'8 a |
+  b,4. fs'8 ~ fs4 b ~ |
+  b8 a4. gs4 ds |
+}
+
+chorus = \relative ds {
+  \repeat percent 2 {
+    \repeat unfold 4 { ds8 }
+  } |
+
+  \repeat percent 2 {
+    \repeat unfold 4 { cs8 }
+  } |
+
+  \repeat percent 2 {
+    \repeat unfold 4 { b8 }
+  } |
+
+  \chorus_end
+
+  e8 \repeat unfold 7 { e, } |
+
+  \repeat percent 2 {
+    \repeat unfold 4 { fs8 }
+  } |
+
+  \repeat percent 2 {
+    \repeat unfold 4 { a8 }
+  } |
+
+  b4 b e ds |
+
+  \chorus_end
+
+  \instrumental
+}
+
 music = \relative e' {
   \tempo 4 = 176
   \key e \major
@@ -24,13 +75,23 @@ music = \relative e' {
   r2 e8 b4. \glissando |
 
   \repeat volta 2 {
-    \repeat unfold 8 { e,8 } |
-    \repeat unfold 8 { b } |
-    \repeat unfold 8 { a } |
+    \repeat percent 2 {
+      \repeat unfold 4 { e,8 }
+    } |
+
+    \repeat percent 2 {
+      \repeat unfold 4 { b8 }
+    } |
+
+    \repeat percent 2 {
+      \repeat unfold 4 { a8 }
+    } |
 
     \alternative {
       \volta 1 {
-        \repeat unfold 8 { b } |
+        \repeat percent 2 {
+          \repeat unfold 4 { b8 }
+        } |
       }
 
       \volta 2 {
@@ -56,41 +117,21 @@ music = \relative e' {
       }
 
       \volta 2 {
-        \repeat unfold 8 { a8 } |
+        \repeat percent 2 {
+          \repeat unfold 4 { a8 }
+        } |
         a8 ( b ) b b \repeat unfold 4 { b } |
       }
     }
   }
 
-  % measure 32
   \mark \default
 
-  \repeat unfold 8 { e8 } |
-  \repeat unfold 8 { ds8 } |
-  \repeat unfold 8 { cs8 } |
-  \repeat unfold 8 { b8 } |
+  \repeat percent 2 {
+    \repeat unfold 4 { e8 }
+  } |
 
-  a4. e'8 ~ e4 a ~ |
-  a8 e4. a,4 e'8 a |
-  b,4. fs'8 ~ fs4 b ~ |
-  b8 a4. gs4 ds |
-
-  e8 \repeat unfold 7 { e, } |
-  \repeat unfold 8 { fs8 } |
-  \repeat unfold 8 { a8 } |
-  b4 b e ds |
-
-  a4. e'8 ~ e4 a ~ |
-  a8 e4. a,4 e'8 a |
-  b,4. fs'8 ~ fs4 b ~ |
-  b8 a4. gs4 ds |
-
-  \repeat volta 2 {
-    e2 e4. e8 ~ |
-    e4 \glissando b b2 |
-    a2 a4. a8 ~ |
-    a4 b4 b2 |
-  }
+  \chorus
 
   \mark \default
 
@@ -119,48 +160,29 @@ music = \relative e' {
     }
   }
 
-  \repeat unfold 8 { ds8 } |
-  \repeat unfold 8 { cs8 } |
-  \repeat unfold 8 { b8 } |
-  a4. e'8 ~ e4 a ~ |
-
-  a8 e4. a,4 e'8 a |
-  b,4. fs'8 ~ fs4 b ~ |
-  b8 a4. gs4 ds |
-  e8 \repeat unfold 7 { e, } |
-
-  \repeat unfold 8 { fs8 } |
-  \repeat unfold 8 { a8 } |
-  b4 b e ds |
-  a4. e'8 ~ e4 a ~ |
-
-  a8 e4. a,4 e'8 a |
-  b,4. fs'8 ~ fs4 b ~ |
-  b8 a4. gs4 ds |
+  \chorus
 
   \repeat volta 2 {
-    e2 e4. e8 ~ |
-    e4 \glissando b b2 |
-    gs2 gs4. gs8 ~ |
-    gs4 a4 a2 |
-  }
+    e4 e8 e ~ \repeat unfold 4 { e } |
+    b4 b8 b ~ \repeat unfold 4 { b } |
 
-  \repeat volta 2 {
-      e'4 e8 e ~ \repeat unfold 4 { e } |
-      b4 b8 b ~ \repeat unfold 4 { b } |
+    \alternative {
+      \volta 1 {
+        gs4 gs8 gs ~ \repeat unfold 4 { gs } |
+        \repeat unfold 4 { a } cs cs ds ds |
+      }
 
-      \alternative {
-        \volta 1 {
-          gs4 gs8 gs ~ \repeat unfold 4 { gs } |
-          \repeat unfold 4 { a } cs cs ds ds |
-        }
+      \volta 2 {
+        \repeat percent 2 {
+          \repeat unfold 4 { gs,8 }
+        } |
 
-        \volta 2 {
-          \repeat unfold 8 { gs,8 } |
-          \repeat unfold 8 { a8 } |
-        }
+        \repeat percent 2 {
+          \repeat unfold 4 { a8 }
+        } |
       }
     }
+  }
 
   fs4 fs ~ fs8 fs fs a8 ~ |
   a1 |
