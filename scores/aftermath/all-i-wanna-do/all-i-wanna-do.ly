@@ -76,13 +76,10 @@ music = \relative g {
       }
 
       \volta 2 {
-        \afterGrace
-        g4 \glissando
-        {
-          \hideNotes
-          d4
-          \unHideNotes
-        }
+        g4 * 1/2 \glissando
+          \single \hideNotes
+          \tweak X-offset #2 \tweak X-extent #'( 0 . 0 )
+          d4 * 1/2 |
         r4 r8 fs r e |
         r8 e r e r e e ( d ) |
       }
