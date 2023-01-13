@@ -31,10 +31,8 @@ chorus = {
       }
 
       \volta 4 {
-        \repeat percent 2 {
-          \repeat percent 2 {
-            \repeat unfold 4 { cs8 }
-          }
+        \repeat percent 4 {
+          \repeat unfold 4 { cs8 }
         }
       }
     }
