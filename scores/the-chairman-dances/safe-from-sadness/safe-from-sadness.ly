@@ -9,143 +9,142 @@
 }
 
 extra_rests = {
-  \time 2/2
+  \time 2/4
   R1 |
 
-  \time 4/2
+  \time 4/4
 }
 
 music = \relative fs, {
   \key fs \major
   \numericTimeSignature
-  \time 4/2
+  \time 4/4
   \clef "bass"
 
   \compressMMRests {
-    R \breve * 6 |
+    R1 * 6 |
     \extra_rests
-    R \breve * 8 |
+    R1 * 8 |
     \extra_rests
-    R \breve * 3 |
+    R1 * 3 |
     \extra_rests
-    R \breve * 6 |
+    R1 * 6 |
   }
 
-  fs1. fs2 |
-  gs1. gs2 |
-  ds'1 ~ ds4. ds es4 |
-  fs1. ds'2 |
+  fs2. fs4 |
+  gs2. gs4 |
+  ds'2 ~ ds8. ds es8 |
+  fs2. ds'4 |
 
-  as \breve ~ |
-  as2 as, cs1 |
-  b1 ~ b2. fs4 |
-  b1 ~ b4. b cs4 |
+  as1 ~ |
+  as4 as, cs2 |
+  b2 ~ b4. fs8 |
+  b2 ~ b8. b cs8 |
 
-  fs1. fs,2 |
-  gs1. gs2 |
-  ds'1 ~ ds4 es8 fs4. as4 |
-  ds1 ~ ds2. es8 ( fs8 ) ~ |
+  fs2. fs,4 |
+  gs2. gs4 |
+  ds'2 ~ ds8 es16 fs8. as8 |
+  ds2 ~ ds4. es16 ( fs16 ) ~ |
 
-  <as, fs'>1 ~ <as fs'>2. fs4 |
-  as,1. as2 |
+  <as, fs'>2 ~ <as fs'>4. fs8 |
+  as,2. as4 |
 
-  \time 2/2
+  \time 2/4
 
-  cs1 |
+  cs2 |
 
-  \time 4/2
+  \time 4/4
 
-  b ~ b2. fs4 |
-  b1 ~ b4. b cs4 |
+  b ~ b4. fs8 |
+  b2 ~ b8. b cs8 |
 
-  fs1. fs,2 |
-  gs1. gs2 |
-  ds'1 ~ ds4. ds es4 |
-  fs1 ~ fs2 ds' |
+  fs2. fs,4 |
+  gs2. gs4 |
+  ds'2 ~ ds8. ds es8 |
+  fs2 ~ fs4 ds' |
 
-  as1 ~ as2. fs4 |
-  as,1. gs2 |
+  as2 ~ as4. fs8 |
+  as,2. gs4 |
 
-  \time 2/2
+  \time 2/4
 
-  cs1 |
+  cs2 |
 
-  \time 4/2
+  \time 4/4
 
-  b ~ b2. fs4 b1 ~ |
+  b2 ~ b4. fs8 |
+  b2 ~ b8. b cs8 |
+  fs2. fs4 |
 
-  b4. b cs4 |
-  fs1. fs2 |
+  \time 2/4
 
-  \time 2/2
+  ds'4 ds |
 
-  ds'2 ds |
+  \time 4/4
 
-  \time 4/2
+  <b fs'>2 ~ <b fs'>4. fs8 |
 
-  <b fs'>1 ~ <b fs'>2. fs4 |
+  b4 cs ds es |
+  fs2. fs,,4 |
 
-  b2 cs ds es |
-  fs1. fs,,2 |
+  \time 2/4
 
-  \time 2/2
+  ds'4 ds4 |
 
-  ds'2 ds2 |
+  \time 4/4
 
-  \time 4/2
+  <b fs'>2 ~ <b fs'>4. fs'8 |
 
-  <b fs'>1 ~ <b fs'>2. fs'4 |
+  \acciaccatura { cs'16 } ds8 ds cs cs b as ds, es |
+  fs2. fs,4 |
 
-  \acciaccatura { cs'8 } ds4 ds cs cs b as ds, es |
-  fs1. fs,2 |
+  \time 2/4
 
-  \time 2/2
+  ds'4 ds4 |
 
-  ds'2 ds2 |
+  \time 4/4
 
-  \time 4/2
+  <b fs'>2 ~ <b fs'>4. fs8 |
 
-  <b fs'>1 ~ <b fs'>2. fs4 |
+  b4 cs ds es |
+  fs2. fs,4 |
+  ds'4 ds e e |
+  b'2 ~ b4. fs8 |
 
-  b2 cs ds es |
-  fs1. fs,2 |
-  ds'2 ds e e |
-  b'1 ~ b2. fs4 |
+  b2 ~ b8 fs b as |
+  gs2 gs8. ds16 ~ ds4 |
+  gs,1 |
 
-  b1 ~ b4 fs b as |
-  gs1 gs4. ds8 ~ ds2 |
-  gs, \breve |
+  \time 2/4
 
-  \time 2/2
+  gs4 as4 |
 
-  gs2 as2 |
+  \time 4/4
 
-  \time 4/2
+  b2 ~ b4. fs8 |
+  b2 ~ b4 ~ b16 fs fs b ~ |
+  b2 ~ b16 b b b ~ b8 cs |
 
-  b1 ~ b2. fs4 |
-  b1 ~ b2 ~ b8 fs fs b ~ |
-  b1 ~ b8 b b b ~ b4 cs |
+  fs8. fs cs8 fs,8. fs' fs,16 fss16 |
+  gs8. gs ds'8 gs8. gs ds8 |
+  b8. b fs8 b8. b fs8 |
+  b8 b cs cs ds ds es es |
 
-  fs4. fs cs4 fs,4. fs' fs,8 fss8 |
-  gs4. gs ds'4 gs4. gs ds4 |
-  b4. b fs4 b4. b fs4 |
-  b4 b cs cs ds ds es es |
+  fs8. fs cs8 fs,8. fs' fs,16 fss16 |
+  gs8. gs ds'8 gs16 as8 gs8. ds8 |
+  b8. b fs'8 b8. b fs8 |
+  \acciaccatura { cs'16 } ds8 ds cs cs b as ds, es |
 
-  fs4. fs cs4 fs,4. fs' fs,8 fss8 |
-  gs4. gs ds'4 gs8 as4 gs4. ds4 |
-  b4. b fs'4 b4. b fs4 |
-  \acciaccatura { cs'8 } ds4 ds cs cs b as ds, es |
+  fs8. fs cs8 fs,8. fs' fs,16 fss16 |
+  gs8. gs ds'8 gs16 as8 gs8. ds8 |
+  b8. b fs8 b8. b fs8 |
+  b8 as16 b16 cs8 b16 cs16
+  ds8 cs16 ds16 es8 ds16 es16 |
 
-  fs4. fs cs4 fs,4. fs' fs,8 fss8 |
-  gs4. gs ds'4 gs8 as4 gs4. ds4 |
-  b4. b fs4 b4. b fs4 |
-  b4 as8 b8 cs4 b8 cs8 |
-  ds4 cs8 ds8 es4 ds8 es8 |
-
-  fs4. fs cs4 fs,4. fs' fs,8 fss8 |
-  gs4 ds' b' as gs ds gs, as |
-  <b fs'> \breve ~ |
-  <b fs'> \breve |
+  fs8. fs cs8 fs,8. fs' fs,16 fss16 |
+  gs8 ds' b' as gs ds gs, as |
+  <b fs'>1 ~ |
+  <b fs'>1 |
 
   \bar "|."
 }
