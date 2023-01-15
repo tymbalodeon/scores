@@ -138,8 +138,7 @@ music = \relative fs, {
   | fs8. fs16 ~ fs8 cs fs,8. fs'16 ~ fs8 fs,16 fss
   | gs8. gs16 ~ gs8 ds' gs16 as8 gs16 ~ gs8 ds
   | b8. b16 ~ b8 fs b8. b16 ~ b8 fs
-  | b8 as16 b cs8 b16 cs
-  | ds8 cs16 ds es8 ds16 es
+  | b8 as16 b cs8 b16 cs ds8 cs16 ds es8 ds16 es
 
   | fs8. fs16 ~ fs8 cs fs,8. fs'16 ~ fs8 fs,16 fss
   | gs8 ds' b' as gs ds gs, as
