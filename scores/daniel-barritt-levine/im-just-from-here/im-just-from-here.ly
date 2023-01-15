@@ -3,9 +3,9 @@
 \include "settings.ily"
 \include "style.ily"
 
-\include "never-been-nowhere-never-done-nothing-changes.ily"
-\include "never-been-nowhere-never-done-nothing-melody.ily"
-\include "never-been-nowhere-never-done-nothing-structure.ily"
+\include "im-just-from-here-changes.ily"
+\include "im-just-from-here-melody.ily"
+\include "im-just-from-here-structure.ily"
 
 \header {
   title = "I'm Just From Here"
