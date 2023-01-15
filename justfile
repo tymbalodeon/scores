@@ -1,12 +1,12 @@
 set dotenv-load
 
 main := "./scripts/main"
-export OUTPUT_DIRECTORY := ```
-    output_directory="${OUTPUT_DIRECTORY:-}"
-    if [ -n "${output_directory}" ]; then
-        mkdir -p "${output_directory}"
+export PDFS_DIRECTORY := ```
+    pdfs_directory="${PDFS_DIRECTORY:-}"
+    if [ -n "${pdfs_directory}" ]; then
+        mkdir -p "${pdfs_directory}"
     fi
-    printf "%s" "${output_directory}"
+    printf "%s" "${pdfs_directory}"
 ```
 
 @_help:

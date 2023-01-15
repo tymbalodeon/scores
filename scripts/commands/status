@@ -35,7 +35,7 @@ for score in "${scores[@]}"; do
     score="${(C)${score//-/ }}"
     artist="${score:h:t}"
     results+="${artist};${score:t};"
-    pdf_files=(**/**"${file_name}"*.pdf(N))
+    pdf_files=("${PDFS_DIRECTORY}"/*"${file_name}"*.pdf(N))
     if [ "${pdf_files}" = "" ]; then
         pdf_status="NO PDF"
     else

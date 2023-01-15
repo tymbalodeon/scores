@@ -1,15 +1,33 @@
 #!/usr/bin/env zsh
 
+join_with_separator() {
+    local IFS="${1}"
+    shift
+    echo "$*"
+}
+
 setopt extendedglob
 extension="${1}"
 shift
 scores=("$@")
 if [ -z "${scores[*]}" ]; then
-    files=((^templates/)#*."${extension}"(N))
+    if [ "${extension}" = "pdf" ]; then
+        files=($(join_with_separator \
+                    ":" \
+                    "${PDFS_DIRECTORY}"/*."${extension}"(N)))
+    else
+        files=((^templates/)#*."${extension}"(N))
+    fi
 else
     files=()
     for file in "${scores[@]}"; do
-        files+=((^templates/)#*"${file}"*."${extension}"(N))
+        if [ "${extension}" = "pdf" ]; then
+            files+=($(join_with_separator \
+                        ":" \
+                        "${PDFS_DIRECTORY}"/*"${file}"*."${extension}"(N)))
+        else
+            files+=((^templates/)#*"${file}"*."${extension}"(N))
+        fi
     done
 fi
 printf "%s" "${files[*]}"

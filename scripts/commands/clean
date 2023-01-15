@@ -1,14 +1,11 @@
 #!/usr/bin/env zsh
 
+IFS=":"
 files=($("${HELPERS}"/_get_files "pdf" "$@"))
 if [ -z "${files[*]}" ]; then
     exit
 fi
 for file in "${files[@]}"; do
     rm -f "${file}"
-    if [ -n "${OUTPUT_DIRECTORY}" ]; then
-        output_file="${OUTPUT_DIRECTORY}"/"${file:t}"
-        rm -f "${output_file}"
-    fi
     echo "Removed ${file}".
 done

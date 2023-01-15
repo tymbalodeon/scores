@@ -8,5 +8,5 @@ for file in "${files[@]}"; do
     without_extension="${file:r}"
     pdf_file="${PDFS_DIRECTORY}/${without_extension:t}.pdf"
     checkexec "${pdf_file}" "${without_extension}"*.*ly(N) ./*.ily -- \
-        "${HELPERS}"/_run_lilypond_and_copy_to_output "${file}"
+        lilypond -o "${PDFS_DIRECTORY}" "${file}"
 done
