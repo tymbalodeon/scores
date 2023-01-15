@@ -60,9 +60,9 @@ templates:
 @outdated *scores:
     {{main}} outdated {{scores}}
 
-# Show status of pdf(s) for <scores>.
-@status *scores:
-    {{main}} status {{scores}}
+# Show status of pdf(s) for scores with a title or artist matching <keyword>.
+@status *keyword:
+    {{main}} status {{keyword}}
 
 # Commit and push all files.
 commit message:
