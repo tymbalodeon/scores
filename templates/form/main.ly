@@ -18,7 +18,8 @@
 \layout {
   ragged-last = ##f
   \context {
-    \Score \consists #(set-bars-per-line '(4))
+    \Score \consists
+    #(set-bars-per-line '(4))
   }
 }
 

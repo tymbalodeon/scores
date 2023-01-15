@@ -15,18 +15,19 @@ key_and_time = {
 
 upper_staff = \relative c'' {
   \key_and_time
-  c1
+  | c1
 }
 
 lower_staff = \relative c {
   \clef bass
   \key_and_time
-  c1
+  | c1
 }
 
 \layout {
   \context {
-    \Score \consists #(set-bars-per-line '(4))
+    \Score \consists
+    #(set-bars-per-line '(4))
   }
 }
 

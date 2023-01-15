@@ -5,12 +5,12 @@ key_and_time = {
 
 structure_verse = {
   \key_and_time
-  s1 * 4 |
+  | s1 * 4
   \bar "||"
 }
 
 structure_chorus = {
   \key_and_time
-  s1 * 4 |
+  | s1 * 4
   \bar "||"
 }

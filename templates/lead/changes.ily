@@ -1,9 +1,9 @@
 verse = \chordmode {
-  c1  |
+  | c1
 }
 
 chorus = \chordmode {
-  c1  |
+  | c1
 }
 
 changes = \chords {

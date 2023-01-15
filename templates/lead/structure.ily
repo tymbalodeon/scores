@@ -4,11 +4,11 @@ key_and_time = {
 }
 
 verse = {
-  s1 * 4 |
+  | s1 * 4
 }
 
 chorus = {
-  s1 * 4 |
+  | s1 * 4
 }
 
 structure = {

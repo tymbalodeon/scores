@@ -1,9 +1,9 @@
 verse = \relative c'' {
-  c1 |
+  | c1
 }
 
 chorus = \relative c'' {
-  c1 |
+  | c1
 }
 
 melody = {

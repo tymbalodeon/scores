@@ -31,7 +31,7 @@ update_main_file() {
     if [[ "${TEMPLATE}" = *"lead" ]] \
         && [ "${LYRICS}" != "true" ]; then
         perl -i -pe 's/\\include "lyrics.ily"\n//g' "${1}"
-        perl -i -pe 's/ \\addlyrics \\words//g' "${1}"
+        perl -i -pe 's/ \\addlyrics \\text//g' "${1}"
     fi
     prepend_title_to_file_names "${2}" "${1}"
     update_title_and_composer "${2}" "${3}" "${1}"

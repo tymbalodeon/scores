@@ -6,7 +6,7 @@ chorus = \lyricmode {
   Chorus
 }
 
-words = \lyricmode {
+text = \lyricmode {
   \verse
   \chorus
 }
