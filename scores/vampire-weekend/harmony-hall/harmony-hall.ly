@@ -73,20 +73,20 @@
 \markup \fill-line {
   \column
   \override #'(padding . 5)
-  \table #'(1 -1 -1)
+  \table #'(1 -1)
   {
-    \bold "Riff" \italic "" ""
-    \bold "Verse" \italic "" ""
-    \bold "Pre-Chorus" \italic "4x" ""
-    \bold "Chorus" \italic "" ""
-    \bold "Riff" \italic "2x" "first 2 measures only"
-    \bold "Verse" \italic "" ""
-    \bold "Pre-Chorus" \italic "4x" ""
-    \bold "Chorus" \italic "" ""
-    \bold "Chorus" \italic "" "Piano solo (no repeat)"
-    \bold "Pre-Chorus" \italic "4x" "no rhythm"
-    \bold "Chorus" \italic "" "1st repeat instrumental"
-    \bold "Chorus" \italic "" "no repeat"
-    \bold "Riff" \italic "" ""
+    \bold "Riff" ""
+    \bold "Verse" ""
+    \bold "Pre-Chorus" ""
+    \bold "Chorus" ""
+    \bold "Riff" "first 2 measures only"
+    \bold "Verse" ""
+    \bold "Pre-Chorus" ""
+    \bold "Chorus" ""
+    \bold "Chorus" "Piano solo (no repeat)"
+    \bold "Pre-Chorus" "no rhythm"
+    \bold "Chorus" "1st repeat instrumental"
+    \bold "Chorus" "no repeat"
+    \bold "Riff" ""
   }
 }

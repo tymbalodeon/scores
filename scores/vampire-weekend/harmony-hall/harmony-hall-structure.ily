@@ -12,8 +12,9 @@ structure_riff = {
 
 structure_pre_chorus = {
   \key_and_time
-  | s1 * 2
-  \bar "||"
+  \repeat volta 4 {
+    | s1 * 2 ^\markup \box \italic "4x"
+  }
 }
 
 structure_chorus = {
