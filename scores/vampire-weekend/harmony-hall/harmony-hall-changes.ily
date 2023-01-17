@@ -1,8 +1,8 @@
 changes_riff = \chords {
-    | b1
-    | s1
-    | e1
-    | s1
+  | b1
+  | s1
+  | e1
+  | s1
 }
 
 changes_verse = \chords {
@@ -10,15 +10,18 @@ changes_verse = \chords {
 }
 
 changes_pre_chorus = \chords {
-  \repeat unfold 4 {
-    | fs2 b
-    | e1
-  }
+  | fs2 b
+  | e1
 }
 
 changes_chorus = \chords {
-  \repeat unfold 4 {
+  \repeat unfold 2 {
     | fs2 b
     | e1
   }
+
+  | fs2 b
+  | e2 cs:m
+  | fs2 b
+  | e1
 }

@@ -5,24 +5,20 @@ key_and_time = {
 
 structure_riff = {
   \key_and_time
-  | s1 * 4
-  \bar "||"
-}
-
-structure_verse = {
-  \key_and_time
-  | s1 * 8
-  \bar "||"
+  \repeat volta 2 {
+    | s1 * 4
+  }
 }
 
 structure_pre_chorus = {
   \key_and_time
-  | s1 * 8
+  | s1 * 2
   \bar "||"
 }
 
 structure_chorus = {
   \key_and_time
-  | s1 * 8
-  \bar "||"
+  \repeat volta 2 {
+    | s1 * 8
+  }
 }

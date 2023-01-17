@@ -30,25 +30,11 @@
     \numericTimeSignature
     \changes_riff
     \new Staff \with {
-      instrumentName = \markup \box "Riff"
+      instrumentName = \markup \box "Riff/Verse"
     } {
       <<
         \melody_riff
         \structure_riff
-      >>
-    }
-  >>
-}
-
-\score {
-  <<
-    \numericTimeSignature
-    \changes_verse
-    \new Staff \with {
-      instrumentName = \markup \box "Verse"
-    } {
-      <<
-        \structure_verse
       >>
     }
   >>
@@ -89,7 +75,18 @@
   \override #'(padding . 5)
   \table #'(1 -1 -1)
   {
-    \bold Verse \italic "" ""
-    \bold Chorus \italic "" ""
+    \bold "Riff" \italic "" ""
+    \bold "Verse" \italic "" ""
+    \bold "Pre-Chorus" \italic "4x" ""
+    \bold "Chorus" \italic "" ""
+    \bold "Riff" \italic "2x" "first 2 measures only"
+    \bold "Verse" \italic "" ""
+    \bold "Pre-Chorus" \italic "4x" ""
+    \bold "Chorus" \italic "" ""
+    \bold "Chorus" \italic "" "Piano solo (no repeat)"
+    \bold "Pre-Chorus" \italic "4x" "no rhythm"
+    \bold "Chorus" \italic "" "1st repeat instrumental"
+    \bold "Chorus" \italic "" "no repeat"
+    \bold "Riff" \italic "" ""
   }
 }
