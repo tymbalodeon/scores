@@ -28,13 +28,41 @@
 \score {
   <<
     \numericTimeSignature
+    \changes_riff
+    \new Staff \with {
+      instrumentName = \markup \box "Riff"
+    } {
+      <<
+        \melody_riff
+        \structure_riff
+      >>
+    }
+  >>
+}
+
+\score {
+  <<
+    \numericTimeSignature
     \changes_verse
     \new Staff \with {
       instrumentName = \markup \box "Verse"
     } {
       <<
-        \melody_verse
         \structure_verse
+      >>
+    }
+  >>
+}
+
+\score {
+  <<
+    \numericTimeSignature
+    \changes_pre_chorus
+    \new Staff \with {
+      instrumentName = \markup \box "Pre-Chorus"
+    } {
+      <<
+        \structure_pre_chorus
       >>
     }
   >>
@@ -48,7 +76,6 @@
       instrumentName = \markup \box "Chorus"
     } {
       <<
-        \melody_chorus
         \structure_chorus
       >>
     }

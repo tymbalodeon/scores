@@ -1,16 +1,28 @@
 key_and_time = {
-  \key c \major
+  \key b \major
   \time 4/4
 }
 
-structure_verse = {
+structure_riff = {
   \key_and_time
   | s1 * 4
   \bar "||"
 }
 
+structure_verse = {
+  \key_and_time
+  | s1 * 8
+  \bar "||"
+}
+
+structure_pre_chorus = {
+  \key_and_time
+  | s1 * 8
+  \bar "||"
+}
+
 structure_chorus = {
   \key_and_time
-  | s1 * 4
+  | s1 * 8
   \bar "||"
 }
