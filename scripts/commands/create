@@ -41,7 +41,7 @@ update_main_file() {
 copy_template_files() {
     score_directory=./scores/"${2}"/"${3}"
     mkdir -p "${score_directory}"
-    for template in ./templates/"${1}"*/*; do
+    for template in ./templates/"${1}"/*; do
         new_score="$(
             get_new_score_name \
                 "${1}" "${template}" "${3}" "${score_directory}"
