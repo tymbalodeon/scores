@@ -112,11 +112,9 @@ upper_voices_prelude_three = {
 
     \relative d {
       | d'2. ~
-      | d8. f
-      | e8. d
+      | d8. f e8. d
       | e8 d e g f e
-      | f8. f
-      | g8. a
+      | f8. f  g8. a
       | bf4. g
       | a2.
       | f8 g f a g f
@@ -518,8 +516,7 @@ lower_voices_prelude_three = {
       | g8 f g a g f
       | g2.
       | a8 bf a g f e
-      | g8. a
-      | bf8. g
+      | g8. a bf8. g
       | e8 f g a bf g
       | a4. f8 g a
       | g2.
