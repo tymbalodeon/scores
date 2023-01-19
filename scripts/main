@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-COMMANDS="./scripts/commands"
+export COMMANDS="./scripts/commands"
 export HELPERS="./scripts/helpers"
 export PDFS_DIRECTORY="${PDFS_DIRECTORY:-./pdfs}"
 
