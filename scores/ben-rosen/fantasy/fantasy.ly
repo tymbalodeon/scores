@@ -7,10 +7,33 @@
   composer = "Ben Rosen"
 }
 
-key_and_time = {
+key_and_time_prelude_one = {
   \tempo 4 = 56
   \key d \minor
   \time 2/4
+}
+
+key_and_time_prelude_two = {
+  \tempo \markup { \rhythm  { c4 } = \rhythm { c4. } }
+  \key b \minor
+  \time 6/8
+}
+
+key_and_time_fugue = {
+  \tempo \markup { \rhythm  { c8. } = \rhythm { c8 } }
+  \time 3/4
+}
+
+prelude = {
+  \section
+  \sectionLabel "Prelude"
+  \key_and_time_prelude_one
+}
+
+fugue = {
+  \section
+  \sectionLabel "Fugue"
+  \key_and_time_fugue
 }
 
 upper_voices_prelude_one = {
@@ -45,7 +68,7 @@ upper_voices_prelude_one = {
       | a2
       | \tuplet 3/2 { a8 g a ~ } a4 ~
       | a2 ~
-      | a2 -\fermata
+      | a2
 
       | a8 g a f
       | e2
@@ -69,7 +92,7 @@ upper_voices_prelude_two = {
       | g8 a b ~ b c b
       | gs16 a8 a16 gs8 gs16 a8 a16 gs8
       | a8 gs a g fs g
-      | fs2. ^\fermata
+      | fs2. -\fermata
 
       | fs8. fs fs e
       | d8. cs d4.
@@ -78,7 +101,7 @@ upper_voices_prelude_two = {
       | f8. a b b
       | cs8. cs cs cs
       | cs8. cs cs bf
-      | a2. -\fermata
+      | a2. - \fermata
     }
 
   }  \\ {
@@ -92,7 +115,7 @@ upper_voices_prelude_two = {
       | e8 fs g ~ g a g
       | e8 fs e d e8. d16
       | cs16 d8 d16 cs8 ~ cs d cs
-      | cs2. -\fermata
+      | cs2.
 
       | cs8. cs d cs
       | b8. as b4.
@@ -101,7 +124,7 @@ upper_voices_prelude_two = {
       | c8. fs g gs
       | a8. g bf a
       | g8. f e f
-      | e2. -\fermata
+      | e2.
     }
 
   } >>
@@ -142,8 +165,8 @@ upper_voices_prelude_three = {
       | a4. a8 g a
       | b8 c b ~ b4.
       | bf8 a bf a8.
-      \change Staff = "lower"
-      bf
+        \change Staff = "lower"
+        \stemUp bf
     }
 
   } >>
@@ -188,34 +211,33 @@ upper_voices_fugue_one = {
 upper_voices_fugue_two = {
  << {
 
-   \relative d'' {
-     | d8 \tuplet 3/2 { e16 d cs } d8 e f d
-     | gs8 \tuplet 3/2 { a16 gs fs } gs8 a b gs
-     | f16 bf a g f e d cs d f e d
-     | cs16 e d8 cs16 e d f e g f e
-     | f16 a g8 f16 a g bf a e f d
+    \relative d'' {
+      | d8 \tuplet 3/2 { e16 d cs } d8 e f d
+      | gs8 \tuplet 3/2 { a16 gs fs } gs8 a b gs
+      | f16 bf a g f e d cs d f e d
+      | cs16 e d8 cs16 e d f e g f e
+      | f16 a g8 f16 a g bf a e f d
 
-     \time 2/4
+      \time 2/4
 
-     | f8 g, a
-       \change Staff = "lower"
-       g,
-   }
+      | f8 g, a
+        \change Staff = "lower"
+        g,
+    }
 
  } \\ {
 
+    \relative f' {
+      | f8 e f g a4
+      | bf8 a bf c d4
+      | d8 e f f, g4
+      | a8 \tuplet 3/2 { bf16 a gs } a8 b cs a
+      | d8 \tuplet 3/2 { e16 d cs } d8 e f d
 
-   \relative f' {
-     | f8 e f g a4
-     | bf8 a bf c d4
-     | d8 e f f, g4
-     | a8 \tuplet 3/2 { bf16 a gs } a8 b cs a
-     | d8 \tuplet 3/2 { e16 d cs } d8 e f d
+      \time 2/4
 
-     \time 2/4
-
-     | a16 d c bf a g f e
-   }
+      | a16 d c bf a g f e
+    }
 
  } >>
 }
@@ -350,7 +372,7 @@ upper_voices_fugue_four = {
 }
 
 upper_staff = \relative e'' {
-  \key_and_time
+  \prelude
 
   \upper_voices_prelude_one
 
@@ -359,8 +381,7 @@ upper_staff = \relative e'' {
   | \tuplet 3/2 { d8 a bf } \tuplet 3/2 { g8 a f }
   | \tuplet 3/2 { d8 a f } d4
 
-  \key b \minor
-  \time 6/8
+  \key_and_time_prelude_two
 
   \upper_voices_prelude_two
 
@@ -368,8 +389,7 @@ upper_staff = \relative e'' {
 
   \upper_voices_prelude_three
 
-  \tempo 4 = 69
-  \time 3/4
+  \fugue
 
   | d8 \tuplet 3/2 { e16 d cs } d8 e f d
   | g8 \tuplet 3/2 { a16 g fs } g8 a bf g
@@ -426,7 +446,7 @@ lower_voices_prelude_one = {
       | d4 ~ d8. cs16 ~
       | cs2
       | \tuplet 3/2 { g'8 f e ~ } e4 ~
-      | e2 -\fermata
+      | e2
 
       | c2
       | bf8 a bf g
@@ -470,7 +490,7 @@ lower_voices_prelude_two = {
       | b8. c16 b8 e8. e16 b8
       | b8 a8 b8 b8 cs8 b8
       | a8 b8 a8 ~ a16 b8 b16 a8
-      | as2. -\fermata
+      | as2.
 
       | r8 as8 as8 r8 b8 as8
       | r8 fs8 fs8 fs4.
@@ -479,7 +499,7 @@ lower_voices_prelude_two = {
       | r8 a8 c8 r8 d8 e16 d16
       | r8 e8 e8 r8 g8 f8
       | r8 e8 d8 r8 cs8 d8
-      | cs2. -\fermata
+      | cs2. 
     }
 
   } \\ {
@@ -546,7 +566,8 @@ lower_voices_prelude_three = {
 
 lower_staff = \relative b {
   \clef "bass"
-  \key_and_time
+
+  \prelude
 
   \lower_voices_prelude_one
 
@@ -559,11 +580,10 @@ lower_staff = \relative b {
   | d2
 
   | r4
-  \clef "bass"
-  \tuplet 3/2 { r8 f,, g }
+    \clef "bass"
+    \tuplet 3/2 { r8 f,, g }
 
-  \key b \minor
-  \time 6/8
+  \key_and_time_prelude_two
 
   \lower_voices_prelude_two
 
@@ -576,7 +596,7 @@ lower_staff = \relative b {
   | e8. cs d f
   | a,,8 e' a e' a e'
 
-  \time 3/4
+  \fugue
 
   | R2. * 7
 
@@ -605,7 +625,7 @@ lower_staff = \relative b {
 
   \time 2/4
 
-  | c4. bf8
+  | c4. \stemDown bf8 \stemNeutral
   | d8 c bf a
   | d8 a' r16 g a f
   | g8 d' r16 c d bf
