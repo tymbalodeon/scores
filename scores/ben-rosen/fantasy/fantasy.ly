@@ -261,20 +261,30 @@ lower_voices_one = {
   } >>
 }
 
-lower_staff = \relative c {
+lower_staff = \relative b {
   \clef "bass"
   \key_and_time
 
   \lower_voices_one
 
-  bf8 g8 e'8 d8 s4 \clef "treble" |
-  <cs a'>4 ~ |
-  a'8 e8 a,8 e'8 |
-  d2 |
-  \clef "bass" r4 \times 2/3 {
-    r8 f,8 g8 }
-  \bar "||"
-  \time 6/8  \key b \minor a2. |
+  | bf8 g e' d
+
+  \clef "treble"
+
+  | cs4 a' ~
+  | a8 e a e'
+  | d2
+
+  | r4
+
+  \clef "bass"
+
+  | \tuplet 3/2 { r8 f,, g }
+
+  \key b \minor
+  \time 6/8
+
+  a2. |
   g4. b4. |
   as4. ~ as8 gs8 as8 |
   b8 a8 b8 a4. |
