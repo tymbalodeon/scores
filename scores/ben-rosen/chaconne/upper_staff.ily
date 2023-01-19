@@ -1,34 +1,87 @@
 theme = {
   << {
 
-    | a2 ( -\p fs4
-    | gs2 b4
-    | as2 g4
-    | gs2.
-    | gs2 fs4
-    | es2 d4
-    | ds2.
-    | cs2. )
+    \relative a'' {
+      | a2 ( -\p fs4
+      | gs2 b4
+      | as2 g4
+      | gs2.
+      | gs2 fs4
+      | es2 d4
+      | ds2.
+      | cs2. )
 
-    | a2. (
-    | b2 a4
-    | gs2.
-    | g2.
-    | fs2 es4
-    | fs2 ds4
-    | es4 fs4 gs4
-    | a2 gs4 )
+      | a2. (
+      | b2 a4
+      | gs2.
+      | g2.
+      | fs2 es4
+      | fs2 ds4
+      | es4 fs4 gs4
+      | a2 gs4 )
+
+      | fs4 ( gs2
+      | b2 g4
+      | gs2 e4
+      | ds2 g4
+      | gs4 fs2
+      | gs4 as2
+      | fs2 b4 ~
+      | b2. )
+
+      | a4 ( fs2
+      | gs4 es2
+      | gs4 as2
+      | cs4 b as
+      | gs2 a4
+      | fs2 e4
+      | es2.
+      | fs4 gs b )
+
+      | a2.
+      | gs4. a8 gs4
+      | as2.
+      | b4. fs8 b4
+    }
 
   } \\ {
 
-    | cs2 ( d4
-    | cs2.
-    | cs2 as4
-    | b2 ds4
-    | b2 a4
-    | gs2 b4
-    | fs2.
-    | es2. )
+    \relative cs'' {
+      | cs2 ( d4
+      | cs2.
+      | cs2 as4
+      | b2 ds4
+      | b2 a4
+      | gs2 b4
+      | fs2.
+      | es2. )
+
+      | d2. (
+      | d2 b4
+      | cs2.
+      | as2.
+      | b2 gs4
+      | a2. )
+      | s2. * 2
+
+      | cs2 ( d4
+      | cs4 b2
+      | as4 gs2
+      | b2 cs4
+      | d2 e4
+      | es4 d2
+      | c4 d2
+      | es2. )
+
+      | d2 cs4
+      | d2 ds4
+      | cs c cs
+      | ds2 cs4
+      | d4 es2
+      | ds4 c2
+      | b4 d cs ~
+      | cs4 c2
+    }
 
   } >>
 }
@@ -36,28 +89,6 @@ theme = {
 upper_staff = \relative a'' {
   \theme
 
-  | fs4 ( gs2
-  | b2 g4
-  | gs2 e4
-  | ds2 g4
-  | gs4 fs2
-  | gs4 as2
-  | fs2 b4 ~
-  | b2. )
-
-  | a4 ( fs2
-  | gs4 es2
-  | gs4 as2
-  | cs4 b4 as4
-  | gs2 a4
-  | fs2 e4
-  | es2.
-  | fs4 gs4 b4 )
-
-  | a2.
-  | gs4. a8 gs4
-  | as2.
-  | b4. fs8 b4
   gs2.
   es4 e4 es4
   fs8 ( es8 ds8 a'8 gs8 fs8 )
