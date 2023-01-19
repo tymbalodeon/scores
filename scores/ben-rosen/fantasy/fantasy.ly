@@ -144,8 +144,8 @@ upper_voices_prelude_three = {
       | a4. a8 g a
       | b8 c b ~ b4.
       | bf8 a bf a8.
-        \change Staff = "lower"
-        bf
+      \change Staff = "lower"
+      bf
     }
 
   } >>
@@ -341,40 +341,40 @@ lower_voices_prelude_two = {
 }
 
 lower_voices_prelude_three = {
- << {
+  << {
 
-   \relative f {
-    | f2.
-    | g8 f g a g f
-    | g2.
-    | a8 bf a g f e
-    | g8. a
-    | bf8. g
-    | e8 f g a bf g
-    | a4. f8 g a
-    | g2.
-    | f8 g f ~ f4.
-    | f2.
-    | g4. e4.
-   }
+    \relative f {
+      | f2.
+      | g8 f g a g f
+      | g2.
+      | a8 bf a g f e
+      | g8. a
+      | bf8. g
+      | e8 f g a bf g
+      | a4. f8 g a
+      | g2.
+      | f8 g f ~ f4.
+      | f2.
+      | g4. e4.
+    }
 
- } \\ {
+  } \\ {
 
-   \relative d {
-     | d2. ~
-     | d2.
-     | cs8. a e' cs
-     | d2.
-     | bf2.
-     | a2.
-     | f'8 e f f e d
-     | c8. d16 c8 c d e
-     | d2.
-     | d4. d8 cs d
-     | cs4. a
-   }
+    \relative d {
+      | d2. ~
+      | d2.
+      | cs8. a e' cs
+      | d2.
+      | bf2.
+      | a2.
+      | f'8 e f f e d
+      | c8. d16 c8 c d e
+      | d2.
+      | d4. d8 cs d
+      | cs4. a
+    }
 
- } >>
+  } >>
 }
 
 lower_staff = \relative b {
@@ -392,8 +392,8 @@ lower_staff = \relative b {
   | d2
 
   | r4
-    \clef "bass"
-    \tuplet 3/2 { r8 f,, g }
+  \clef "bass"
+  \tuplet 3/2 { r8 f,, g }
 
   \key b \minor
   \time 6/8
@@ -450,53 +450,68 @@ lower_staff = \relative b {
 
   \time 3/4
 
-  a4. e'8 d8 cs8 |
-  \numericTimeSignature\time 4/4  d4. e8 d8 c8 b4 |
-  \time 2/4  a8 e'8 f8 d8 |
-  e8 a8 b8 d8 |
-  c8 b8 a16 f16 g16 e16 |
-  f16 e16 d16 f16 g16 f16 e16 d16 |
-  e8 gs8 a8 a,8 |
-  d8 f8 e8 d8 |
-  c8 e'8 r16 c16 b16 a16 |
-  \time 3/4  gs16 b16 d,16 e16 f16 e16 d16 f16 g16 e16 f16 d16 |
-  c8 \times 2/3 {
-    d16 c16 b16 }
-  c8 d8 e8 c8 |
-  f8 \times 2/3 {
-    g16 f16 e16 }
-  f8 g8 a8 f8 |
-  e16 bf'16 a16 g16 f16 e16 d16 b16 c8 \times 2/3 {
-    d16 c16 b16 }
-  |
-  c8 cs8 d8 \times 2/3 {
-    e16 d16 cs16 }
-  d8 ds8 |
-  e8 \times 2/3 {
-    fs16 e16 ds16 }
-  e8 fs8 g8 e8 |
-  a8 \times 2/3 {
-    b16 a16 gs16 }
-  a8 b8 c8 a8 |
-  g16 c16 b16 a16 g16 fs16 e16 ds16 e16 a16 g16 fs16 |
-  e16 d16 c16 b16 c16 f16 e16 d16 c16 b16 a16 gs16 |
-  a4 gs4. b8 |
-  a8 e'8 f8 d8 a8 d8 |
-  g,8 a8 bf8 a16 g16 a4 |
-  d,4. e8 f8 d8 |
-  g4. a8 bf8 g8 |
-  f4 f'4 bf4 |
-  a8. g16 f8 d8 cs8 a8 |
-  a'4 s2 |
-  <d,, d'>2. \bar "|."
+  | a4. e'8 d cs
+
+  \time 2/4
+
+  | d4. e8 d c b4
+  | a8 e' f d
+  | e8 a b d8
+  | c8 b a16 f g e
+  | f16 e d f g f e d
+  | e8 gs a a,8
+  | d8 f e d8
+  | c8 e' r16 c b a
+
+  \time 3/4
+
+  | gs16 b d, e f e d f g e f d
+  | c8 \tuplet 3/2 { d16 c b } c8 d e c
+  | f8 \tuplet 3/2 { g16 f e } f8 g a f8
+
+  \time 2/4
+
+  | e16 bf' a g f e d b
+
+  | c8 \tuplet 3/2 { d16 c b } c8 cs
+  | d \tuplet 3/2 { e16 d cs } d8 ds
+
+  \time 3/4
+
+  | e8 \tuplet 3/2 { fs16 e ds } e8 fs g e8
+  | a8 \tuplet 3/2 { b16 a gs } a8 b c a
+
+  \time 2/4
+
+  | g16 c b a g fs e ds e a g fs e d c b c f e d c b a gs
+
+  \time 3/4
+
+  | a4 gs4. b8
+
+  \time 2/4
+
+  | a8 e' f d
+  | a8 d g, a
+  | bf8 a16 g a4
+
+  \time 3/4
+
+  | d,4. e8 f d
+  | g4. a8 bf g
+  | f4 f'4 bf4
+  | a8. g16 f8 d cs a
+  | d4 g, << { a'16 g32 f g16 e } \\ a,4 >>
+  | <d, d'>2.
+
+  \bar "|."
 }
 
 \score {
-  \new PianoStaff \with {
-    instrumentName = "Piano"
+  \new PianoStaff {
+    <<
+      \new Staff = "upper" \upper_staff
+      \new Staff = "lower" \lower_staff
+    >>
   }
-  <<
-    \new Staff = "upper" \upper_staff
-    \new Staff = "lower" \lower_staff
-  >>
 }
