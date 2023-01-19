@@ -148,7 +148,7 @@ upper_voices_prelude_three = {
       | e8 f g g a bf
       | bf8 a g a g f
       | g8 f e f e d
-      | cs2. \trill
+      | \afterGrace 15/16 cs2. \trill { b16 cs }
     }
 
   } \\ {
@@ -165,8 +165,8 @@ upper_voices_prelude_three = {
       | a4. a8 g a
       | b8 c b ~ b4.
       | bf8 a bf a8.
-        \change Staff = "lower"
-        \stemUp bf
+      \change Staff = "lower"
+      \stemUp bf
     }
 
   } >>
@@ -209,7 +209,7 @@ upper_voices_fugue_one = {
 }
 
 upper_voices_fugue_two = {
- << {
+  << {
 
     \relative d'' {
       | d8 \tuplet 3/2 { e16 d cs } d8 e f d
@@ -221,11 +221,11 @@ upper_voices_fugue_two = {
       \time 2/4
 
       | f8 g, a
-        \change Staff = "lower"
-        g,
+      \change Staff = "lower"
+      g,
     }
 
- } \\ {
+  } \\ {
 
     \relative f' {
       | f8 e f g a4
@@ -239,7 +239,7 @@ upper_voices_fugue_two = {
       | a16 d c bf a g f e
     }
 
- } >>
+  } >>
 }
 
 upper_voices_fugue_three = {
@@ -327,8 +327,8 @@ upper_voices_fugue_four = {
       | a16 d c b a g f e
       | d16 a d e f d cs g
       | f16 a g f
-        \clef "bass"
-        e8. c16
+      \clef "bass"
+      e8. c16
 
       \time 3/4
 
@@ -337,8 +337,8 @@ upper_voices_fugue_four = {
 
 
       | a16 c f ef
-        \clef "treble"
-        d f bf a g bf ef d
+      \clef "treble"
+      d f bf a g bf ef d
       | cs16 e a, cs d a bf8 g16 bf a g
       | f16 e d a' g f g e f8 e
     }
@@ -353,8 +353,8 @@ upper_voices_fugue_four = {
       | c8 r r4
       | r4 a8 e
       | d cs16 d
-        \clef "bass"
-        cs a g e
+      \clef "bass"
+      cs a g e
 
       \time 3/4
 
@@ -362,8 +362,8 @@ upper_voices_fugue_four = {
       | bf'8 c a f f4
 
       | f4
-        \clef "treble"
-        bf ef
+      \clef "treble"
+      bf ef
       | e4 d8. f16 e8. cs16
       | d4 <bf d e> d8 cs
     }
@@ -397,7 +397,7 @@ upper_staff = \relative e'' {
 
   \upper_voices_fugue_one
 
-    d16 a c bf
+  d16 a c bf
   | bf16 d g a g f e d
   | e g c d c bf a g
   | a c f g f ef d c
@@ -580,8 +580,8 @@ lower_staff = \relative b {
   | d2
 
   | r4
-    \clef "bass"
-    \tuplet 3/2 { r8 f,, g }
+  \clef "bass"
+  \tuplet 3/2 { r8 f,, g }
 
   \key_and_time_prelude_two
 
