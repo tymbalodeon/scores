@@ -698,11 +698,22 @@ lower_staff = \relative b {
   \bar "|."
 }
 
-\score {
+music = \score {
   \new PianoStaff {
     <<
       \new Staff = "upper" \upper_staff
       \new Staff = "lower" \lower_staff
     >>
   }
+}
+
+\book {
+  \music
+}
+
+#(set-global-staff-size 18)
+\book {
+  \bookOutputSuffix "video"
+  \paper_block "video-slide"
+  \music
 }
