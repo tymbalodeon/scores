@@ -9,7 +9,7 @@
 
 \header {
   title = "Knucklebean"
-  composer = "Daniel Barritt Levine"
+  composer = "Daniel Barritt-Levine"
 }
 
 melody = \new Staff {

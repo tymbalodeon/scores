@@ -10,7 +10,7 @@
 \header {
   title = "I'm Just From Here"
   subtitle = "Never Been Nowhere, Never Done Nothing"
-  composer = "Daniel Barritt Levine"
+  composer = "Daniel Barritt-Levine"
 }
 
 melody = \new Staff {
