@@ -8,7 +8,7 @@
 }
 
 key_and_time_prelude_one = {
-  \tempo 4 = 56
+  \tempo "Adagio"
   \key d \minor
   \time 2/4
 }
