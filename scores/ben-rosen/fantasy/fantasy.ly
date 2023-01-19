@@ -340,9 +340,9 @@ upper_voices_fugue_four = {
       | d16 g f ef d ef d c d c d bf
 
 
-      | a16 c f ef
-        \clef "treble"
-        d f bf a g bf ef d
+      \clef "treble"
+
+      | a16 c f ef d f bf a g bf ef d
       | cs16 e a, cs d a bf8 g16 bf a g
       | f16 e d a' g f g e f8 e
     }
@@ -362,9 +362,9 @@ upper_voices_fugue_four = {
       | f8 g e c c4
       | bf'8 c a f f4
 
-      | f4
-        \clef "treble"
-        bf ef
+      \clef "treble"
+
+      | f4 bf ef
       | e4 d8. f16 e8. cs16
       | d4 <bf d e> d8 cs
     }
