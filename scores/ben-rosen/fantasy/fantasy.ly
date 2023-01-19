@@ -63,6 +63,62 @@ upper_voices_one = {
   } >>
 }
 
+upper_voices_two = {
+ << {
+
+   \relative fs' {
+     | fs2.
+     | g4. gs
+     | fs8. gs16 as8 e8. e
+     | fs8. a16 g8 fs e fs
+
+     | b4. a8. g16 a8
+     | g8 a b ~ b c b
+     | gs16 a8 a16 gs8 gs16 a8 a16 gs8
+     | a8 gs a g fs g
+
+     | fs2. ^\fermata
+
+     | fs8. fs fs e
+     | d8. cs d4.
+     | d4. e
+     | e4. e
+
+     | f8. a b b
+     | cs8. cs cs cs
+     | cs8. cs cs bf
+     | a2. -\fermata
+   }
+
+ }  \\ {
+
+   \relative d' {
+     | d4. c8 b c
+     | b4. d8 cs d
+     | cs2.
+     | d2.
+
+     | fs2.
+     | e8 fs g ~ g a g
+     | e8 fs e d e8. d16
+     | cs16 d8 d16 cs8 ~ cs d cs
+
+     | cs2. -\fermata
+
+     | cs8. cs d cs
+     | b8. as b4.
+     | b8. a b8 c d
+     | c8. b as8 b c
+
+     | c8. fs g gs
+     | a8. g bf a
+     | g8. f e f
+     | e2. -\fermata
+   }
+
+ } >>
+}
+
 upper_staff = \relative e'' {
   \key_and_time
 
@@ -73,18 +129,11 @@ upper_staff = \relative e'' {
   | \tuplet 3/2 { d8 a bf } \tuplet 3/2 { g8 a f }
   | \tuplet 3/2 { d8 a f } d4
 
-  \time 6/8  \key b \minor fs2. |
-  g4. gs4. |
-  fs8. gs16 as8 \once \omit TupletBracket
-  \times 3/2  {
-    e8 e8 }
-  |
-  fs8. a16 g8 fs8 e8 fs8 |
-  b4. a8. g16 a8 |
-  g8 a8 b8 ~ b8 c8 b8 |
-  gs16 a8 a16 gs8 gs16 a8 a16 gs8 |
-  a8 gs8 a8 g8 fs8 g8 |
-  fs2. ^\fermata |
+  \key b \minor
+  \time 6/8
+
+  \upper_voices_two
+
   \once \omit TupletBracket
   \times 3/2  {
     fs8 fs8 }
