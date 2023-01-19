@@ -13,7 +13,7 @@ key_and_time = {
   \time 2/4
 }
 
-upper_voices_one = {
+upper_voices_prelude_one = {
   << {
 
     \relative d'' {
@@ -57,7 +57,7 @@ upper_voices_one = {
   } >>
 }
 
-upper_voices_two = {
+upper_voices_prelude_two = {
   << {
 
     \relative fs' {
@@ -107,7 +107,7 @@ upper_voices_two = {
   } >>
 }
 
-upper_voices_three = {
+upper_voices_prelude_three = {
   << {
 
     \relative d {
@@ -151,10 +151,41 @@ upper_voices_three = {
   } >>
 }
 
+upper_voices_fugue_one = {
+  << {
+
+    \relative a' {
+      | a8 \tuplet 3/2 { b16 a gs }
+      | a8 b c a
+      | d8 \tuplet 3/2 { e16 d cs }
+      | d8 e f d
+      | c16 g' f e f bf a g f e d cs
+      | d16 c bf a g8 a d cs
+      | d4. cs8 a4
+      | bf4. a8 g bf
+      | a8 d16 e d8 g16 e
+      | f8 r
+    }
+
+  } \\ {
+
+    \relative c' {
+      | c4. b8 a4
+      | f'4. e8 d f
+      | e8 d16 cs d8 cs16 a d c bf a
+      | bf16 ef d c bf8 f g a
+      | f'4. e8 d4
+      | d4. cs8 d4
+      | d8 e f bf a16 f g e
+    }
+
+  } >>
+}
+
 upper_staff = \relative e'' {
   \key_and_time
 
-  \upper_voices_one
+  \upper_voices_prelude_one
 
   | e8 d cs g' ~
   | g8 f e f \tuplet 3/2 { g8 a bf } \tuplet 3/2 { a8 d cs }
@@ -164,55 +195,36 @@ upper_staff = \relative e'' {
   \key b \minor
   \time 6/8
 
-  \upper_voices_two
+  \upper_voices_prelude_two
 
   \key d \minor
 
-  \upper_voices_three
+  \upper_voices_prelude_three
 
-  \time 3/4  \tempo 4=69 d8 \times 2/3 {
-    e16 d16 cs16 }
-  d8 e8 f8 d8 |
-  g8 \times 2/3 {
-    a16 g16 fs16 }
-  g8 a8 bf8 g8 |
-  f16 bf16 a16 g16 f16 e16 d16 cs16 d16 f16 e16 d16 |
-  a'8 \times 2/3 {
-    b16 a16 gs16 }
-  a8 b8 c8 a8 |
-  d8 \times 2/3 {
-    e16 d16 cs16 }
-  d8 e8 f8 d8 |
-  c16 g'16 f16 e16 f16 bf16 a16 g16 f16 e16 d16 cs16 |
-  d16 c16 bf16 a16 g8 a8 d8 cs8 |
-  d4. cs8 a4 |
-  bf4. a8 g8 bf8 |
-  \time 2/4  a8 d16 e16 d8 g16 e16 |
-  f8 r8 r4 s2 s2*5 s2 |
-  \time 3/4  d8 \times 2/3 {
-    e16 d16 cs16 }
-  d8 e8 f8 d8 |
-  g8 \times 2/3 {
-    a16 g16 fs16 }
-  g8 a8 bf8 g8 |
-  f16 bf16 a16 g16 f16 e16 d16 cs16 d16 f16 e16 d16 |
-  cs16 e16 d8 cs16 e16 d16 f16 e16 g16 f16 e16 |
-  f16 a16 g8 f16 a16 g16 bf16 a16 e16 f16 d16 |
-  \time 2/4  f8 g,8 s2. s1*3 s2 |
-  \time 3/4  r4 d'8 \times 2/3 {
+  \tempo 4 = 69
+  \time 3/4
+
+  | d8 \tuplet 3/2 { e16 d cs } d8 e f d
+  | g8 \tuplet 3/2 { a16 g fs } g8 a bf g
+  | f16 bf a g f e d cs d f e d
+
+  \upper_voices_fugue_one
+
+  d'8 \times 2/3 {
     e16 d16 cs16 }
   d8 e8 |
-  \numericTimeSignature\time 4/4  f8 d8 gs8 \times 2/3 {
+  f8 d8 gs8 \times 2/3 {
     a16 gs16 fs16 }
   gs8 a8 b8 gs8 |
-  \time 2/4  a8 e8 d8 f8 |
+
+  a8 e8 d8 f8 |
   e4 d4 |
   e4 c8 d8 |
   c4 b8 c8 |
   b4 r8 e8 |
   f8. a16 gs4 |
   e4 e8 r8 |
-  \time 3/4  b8. d16 c8. d16 c8 b8 |
+  b8. d16 c8. d16 c8 b8 |
   e8 b8 g4 g8. c16 |
   c16 d16 c16 bf16 a16 f16 e16 g16 f16 g16 a8 |
   e'16 c8. c8 f8 e4 |
@@ -234,7 +246,7 @@ upper_staff = \relative e'' {
   <f, a d>2. \bar "|."
 }
 
-lower_voices_one = {
+lower_voices_prelude_one = {
   << {
 
     \relative a {
@@ -278,7 +290,7 @@ lower_voices_one = {
   } >>
 }
 
-lower_voices_two = {
+lower_voices_prelude_two = {
   << {
 
     \relative a {
@@ -328,7 +340,7 @@ lower_voices_two = {
   } >>
 }
 
-lower_voices_three = {
+lower_voices_prelude_three = {
  << {
 
    \relative f {
@@ -369,7 +381,7 @@ lower_staff = \relative b {
   \clef "bass"
   \key_and_time
 
-  \lower_voices_one
+  \lower_voices_prelude_one
 
   | bf8 g e' d
 
@@ -386,11 +398,11 @@ lower_staff = \relative b {
   \key b \minor
   \time 6/8
 
-  \lower_voices_two
+  \lower_voices_prelude_two
 
   \key d \minor
 
-  \lower_voices_three
+  \lower_voices_prelude_three
 
   | g8. bf bf a
   | g8. e f d
@@ -401,35 +413,44 @@ lower_staff = \relative b {
 
   | R2. * 7
 
-  d8 \times 2/3 {
-    e16 d16 cs16 }
-  d8 e8 f8 d8 |
-  g8 \times 2/3 {
-    a16 g16 fs16 }
-  g8 a8 bf8 g8 |
-  \time 2/4  f16 bf16 a16 g16 f16 e16 d16 cs16 |
-  d8 e8 f8 d8 |
-  g8 a8 bf8 g8 |
-  c,8 d8 e8 c8 |
-  f8 g8 a8 f8 |
-  bf,8 c8 d8 bf8 |
-  e8 f8 g8 e8 |
-  a8 g8 f8 e8 |
-  d8 cs8 a8 cs8 |
-  \time 3/4  d16 a'16 g16 e16 f16 d16 e16 cs16 d16 e16 f16 a16 |
-  g16 d'16 c16 a16 bf16 g16 a16 fs16 g16 a16 bf16 g16 |
-  a16 g16 f16 e16 d16 c16 bf16 a16 bf16 d16 c16 bf16 |
-  a4. gs8 a8 cs8 |
-  d4. c8 f8 bf,8 |
-  \time 2/4  s2. bf8 a8 |
-  d8 a'8 r16 g16 a16 f16 |
-  g8 d'8 r16 c16 d16 bf16 |
-  c,8 g'8 r16 f16 g16 e16 |
-  f8 c'8 r16 bf16 c16 a16 |
-  bf,8 f'8 r16 e16 f16 d16 |
-  e8 bf'8 r16 a16 g16 f16 |
-  d8 f8 g8 bf,8 |
-  \time 3/4  a4. e'8 d8 cs8 |
+  | d,8 \tuplet 3/2 { e16 d cs } d8 e f d
+  | g8 \tuplet 3/2 { a16 g fs } g8 a bf g
+
+  \time 2/4
+
+  | f16 bf a g f e d cs
+  | d8 e f d
+  | g8 a bf g
+  | c,8 d e c
+  | f8 g a f
+  | bf,8 c d bf
+  | e8 f g e
+  | a8 g f e
+  | d8 cs a cs
+
+  \time 3/4
+
+  | d16 a' g e f d e cs d e f a
+  | g16 d' c a bf g a fs g a bf g
+  | a16 g f e d c bf a bf d c bf
+  | a4. gs8 a cs
+  | d4. c8 f bf,
+
+  \time 2/4
+
+  | c4. bf8
+  | d8 c bf a
+  | d8 a' r16 g a f
+  | g8 d' r16 c d bf
+  | c,8 g' r16 f g e
+  | f8 c' r16 bf c a
+  | bf,8 f' r16 e f d
+  | e8 bf' r16 a g f
+  | d8 f g bf,
+
+  \time 3/4
+
+  a4. e'8 d8 cs8 |
   \numericTimeSignature\time 4/4  d4. e8 d8 c8 b4 |
   \time 2/4  a8 e'8 f8 d8 |
   e8 a8 b8 d8 |
