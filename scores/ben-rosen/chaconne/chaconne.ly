@@ -180,12 +180,14 @@ lower_staff = \relative c {
   \new StaffGroup <<
     \new Staff \with {
       instrumentName = "Violin"
+      shortInstrumentName = "Vln."
     } {
       \key_and_time
       \violin
     }
     \new PianoStaff \with {
       instrumentName = "Piano"
+      shortInstrumentName = "Pno."
     }
     <<
       \new Staff = "upper" {
