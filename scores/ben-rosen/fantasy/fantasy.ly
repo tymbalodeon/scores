@@ -64,59 +64,59 @@ upper_voices_one = {
 }
 
 upper_voices_two = {
- << {
+  << {
 
-   \relative fs' {
-     | fs2.
-     | g4. gs
-     | fs8. gs16 as8 e8. e
-     | fs8. a16 g8 fs e fs
+    \relative fs' {
+      | fs2.
+      | g4. gs
+      | fs8. gs16 as8 e8. e
+      | fs8. a16 g8 fs e fs
 
-     | b4. a8. g16 a8
-     | g8 a b ~ b c b
-     | gs16 a8 a16 gs8 gs16 a8 a16 gs8
-     | a8 gs a g fs g
+      | b4. a8. g16 a8
+      | g8 a b ~ b c b
+      | gs16 a8 a16 gs8 gs16 a8 a16 gs8
+      | a8 gs a g fs g
 
-     | fs2. ^\fermata
+      | fs2. ^\fermata
 
-     | fs8. fs fs e
-     | d8. cs d4.
-     | d4. e
-     | e4. e
+      | fs8. fs fs e
+      | d8. cs d4.
+      | d4. e
+      | e4. e
 
-     | f8. a b b
-     | cs8. cs cs cs
-     | cs8. cs cs bf
-     | a2. -\fermata
-   }
+      | f8. a b b
+      | cs8. cs cs cs
+      | cs8. cs cs bf
+      | a2. -\fermata
+    }
 
- }  \\ {
+  }  \\ {
 
-   \relative d' {
-     | d4. c8 b c
-     | b4. d8 cs d
-     | cs2.
-     | d2.
+    \relative d' {
+      | d4. c8 b c
+      | b4. d8 cs d
+      | cs2.
+      | d2.
 
-     | fs2.
-     | e8 fs g ~ g a g
-     | e8 fs e d e8. d16
-     | cs16 d8 d16 cs8 ~ cs d cs
+      | fs2.
+      | e8 fs g ~ g a g
+      | e8 fs e d e8. d16
+      | cs16 d8 d16 cs8 ~ cs d cs
 
-     | cs2. -\fermata
+      | cs2. -\fermata
 
-     | cs8. cs d cs
-     | b8. as b4.
-     | b8. a b8 c d
-     | c8. b as8 b c
+      | cs8. cs d cs
+      | b8. as b4.
+      | b8. a b8 c d
+      | c8. b as8 b c
 
-     | c8. fs g gs
-     | a8. g bf a
-     | g8. f e f
-     | e2. -\fermata
-   }
+      | c8. fs g gs
+      | a8. g bf a
+      | g8. f e f
+      | e2. -\fermata
+    }
 
- } >>
+  } >>
 }
 
 upper_staff = \relative e'' {
@@ -134,43 +134,9 @@ upper_staff = \relative e'' {
 
   \upper_voices_two
 
-  \once \omit TupletBracket
-  \times 3/2  {
-    fs8 fs8 }
-  \once \omit TupletBracket
-  \times 3/2  {
-    fs8 e8 }
-  |
-  \once \omit TupletBracket
-  \times 3/2  {
-    d8 cs8 }
-  d4. |
-  d4. e4. |
-  e4. e4. |
-  \once \omit TupletBracket
-  \times 3/2  {
-    f8 a8 }
-  \once \omit TupletBracket
-  \times 3/2  {
-    b8 b8 }
-  |
-  \once \omit TupletBracket
-  \times 3/2  {
-    cs8 cs8 }
-  \once \omit TupletBracket
-  \times 3/2  {
-    cs8 cs8 }
-  |
-  \once \omit TupletBracket
-  \times 3/2  {
-    cs8 cs8 }
-  \once \omit TupletBracket
-  \times 3/2  {
-    cs8 bf8 }
-  |
-  a2. ^\fermata \bar "||"
-  \key d \minor d,2. ~ |
-  \once \omit TupletBracket
+  \key d \minor
+
+  d'2. ~ |
   \times 3/2  {
     d8 f8 }
   \once \omit TupletBracket
@@ -287,24 +253,83 @@ lower_voices_one = {
   } \\ {
 
     \relative d {
-       | d2 ~
-       | d4 cs ~
-       | cs4 d ~
-       | d2 ~
+      | d2 ~
+      | d4 cs ~
+      | cs4 d ~
+      | d2 ~
 
-       | \tuplet 3/2 { d8 e f } bf,4
-       | d8 f a4 ~
-       | a2 ~
-       | a4 \tuplet 3/2 { b8 cs a ~ }
+      | \tuplet 3/2 { d8 e f } bf,4
+      | d8 f a4 ~
+      | a2 ~
+      | a4 \tuplet 3/2 { b8 cs a ~ }
 
-       | a2 -\fermata
+      | a2 -\fermata
 
-       | f2 ~
-       | f2
-       | d8 c d a
-       | bf2
+      | f2 ~
+      | f2
+      | d8 c d a
+      | bf2
 
-       | a4 r
+      | a4 r
+    }
+
+  } >>
+}
+
+lower_voices_two = {
+  << {
+
+    \relative a {
+      | a2.
+      | g4. b
+      | as4. ~ as8 gs as
+      | b8 a8 b8 a4.
+
+      | ds8. e16 ds8 b4.
+      | b8. c16 b8 e8. e16 b8
+      | b8 a8 b8 b8 cs8 b8
+      | a8 b8 a8 ~ a16 b8 b16 a8
+
+      | as2. -\fermata
+
+      | r8 as8 as8 r8 b8 as8
+      | r8 fs8 fs8 fs4.
+      | fs4. g4.
+      | g4.
+
+      | fs8. g
+      | r8 a8 c8 r8 d8 e16 d16
+      | r8 e8 e8 r8 g8 f8
+      | r8 e8 d8 r8 cs8 d8
+
+      | cs2. -\fermata
+    }
+
+  } \\ {
+
+    \relative d {
+      | d8 c d ef4.
+      | d8 f d e4.
+      | fs8 e cs ~ cs4.
+      | b4. d8. e16 d8
+
+      | b8 fs' b ds, fs b,
+      | e2.
+      | e8. fs16 e8 e4.
+      | e2.
+
+      | fs2. -\fermata
+
+      | r8 fs e r d cs
+      | r8 b cs b4.
+      | b8 d fs e8. d
+      | c8 d e cs4.
+
+      | r8 f a r g b
+      | r8 a a r a a
+      | r8 a a r a a
+
+      | a2. -\fermata
     }
 
   } >>
@@ -333,26 +358,8 @@ lower_staff = \relative b {
   \key b \minor
   \time 6/8
 
-  a2. |
-  g4. b4. |
-  as4. ~ as8 gs8 as8 |
-  b8 a8 b8 a4. |
-  ds8. e16 ds8 b4. |
-  b8. c16 b8 e8. e16 b8 |
-  b8 a8 b8 b8 cs8 b8 |
-  a8 b8 a8 ~ a16 b8 b16 a8 |
-  as2. |
-  r8 as8 as8 r8 b8 as8 |
-  r8 fs8 fs8 fs4. |
-  fs4. g4. |
-  g4. \once \omit TupletBracket
-  \times 3/2  {
-    fs8 g8 }
-  |
-  r8 a8 c8 r8 d8 e16 d16 |
-  r8 e8 e8 r8 g8 f8 |
-  r8 e8 d8 r8 cs8 d8 |
-  cs2. \bar "||"
+  \lower_voices_two
+
   \key d \minor f,2. |
   g8 f8 g8 a8 g8 f8 |
   g2. |
