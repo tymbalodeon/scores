@@ -127,7 +127,7 @@ upper_voices_prelude_three = {
       | e8 f g g a bf
       | bf8 a g a g f
       | g8 f e f e d
-      | cs2. -"rit."
+      | cs2. \trill
     }
 
   } \\ {
@@ -155,14 +155,15 @@ upper_voices_fugue_one = {
   << {
 
     \relative a' {
-      | a8 \tuplet 3/2 { b16 a gs }
-      | a8 b c a
-      | d8 \tuplet 3/2 { e16 d cs }
-      | d8 e f d
+      | a8 \tuplet 3/2 { b16 a gs } a8 b c a
+      | d8 \tuplet 3/2 { e16 d cs } d8 e f d
       | c16 g' f e f bf a g f e d cs
       | d16 c bf a g8 a d cs
       | d4. cs8 a4
       | bf4. a8 g bf
+
+      \time 2/4
+
       | a8 d16 e d8 g16 e
       | f8 r
     }
@@ -176,7 +177,88 @@ upper_voices_fugue_one = {
       | bf16 ef d c bf8 f g a
       | f'4. e8 d4
       | d4. cs8 d4
-      | d8 e f bf a16 f g e
+
+      \time 2/4
+
+      | d8 e f bf
+      | a16 f g e
+    }
+
+  } >>
+}
+
+upper_voices_fugue_two = {
+ << {
+
+   \relative d'' {
+     | d8 \tuplet 3/2 { e16 d cs } d8 e f d
+     | gs8 \tuplet 3/2 { a16 gs fs } gs8 a b gs
+     | f16 bf a g f e d cs d f e d
+     | cs16 e d8 cs16 e d f e g f e
+     | f16 a g8 f16 a g bf a e f d
+
+     \time 2/4
+
+     | f8 g, a
+       \change Staff = "lower"
+       g,
+   }
+
+ } \\ {
+
+
+   \relative f' {
+     | f8 e f g a4
+     | bf8 a bf c d4
+     | d8 e f f, g4
+     | a8 \tuplet 3/2 { bf16 a gs } a8 b cs a
+     | d8 \tuplet 3/2 { e16 d cs } d8 e f d
+
+     \time 2/4
+
+     | a16 d c bf a g f e
+   }
+
+ } >>
+}
+
+upper_voices_fugue_three = {
+  << {
+
+    \relative d'' {
+      | r4 d8 \tuplet 3/2 { e16 d cs } d8 e
+
+      \time 2/4
+
+      | f8 d gs \tuplet 3/2 { a16 gs fs }
+      | gs8 a b gs
+      | a8 e d f
+      | e4 d
+      | e4 c8 d
+      | c4 b8 c
+      | b4 r8 e
+      | f8. a16 gs4
+      | e4 e8 r
+    }
+
+  } \\ {
+
+    \relative f' {
+      | f8 \tuplet 3/2 { g16 f e } f8 g a g
+
+      \time 2/4
+
+      | a8 \tuplet 3/2 { b16 a gs } b8 c
+      | b8 c d b
+      | c16 d c b a c b d
+      | c8 e, gs16 a b gs
+      | a16 e' d e c8 b
+      | a8 c, d a'
+      | gs16 fs e d' c b c a ~
+      | a16 a d8 e b16 d
+      | d4 c8 r
+
+      \time 3/4
     }
 
   } >>
@@ -210,40 +292,27 @@ upper_staff = \relative e'' {
 
   \upper_voices_fugue_one
 
-  d'8 \times 2/3 {
-    e16 d16 cs16 }
-  d8 e8 |
-  f8 d8 gs8 \times 2/3 {
-    a16 gs16 fs16 }
-  gs8 a8 b8 gs8 |
+    d16 a c bf
+  | bf16 d g a g f e d
+  | e g c d c bf a g
+  | a c f g f ef d c
+  | d f, bf c bf a g f
+  | g bf e f e d cs b
+  | cs a b cs d d, cs e
+  | f e f g a g f e
 
-  a8 e8 d8 f8 |
-  e4 d4 |
-  e4 c8 d8 |
-  c4 b8 c8 |
-  b4 r8 e8 |
-  f8. a16 gs4 |
-  e4 e8 r8 |
-  b8. d16 c8. d16 c8 b8 |
-  e8 b8 g4 g8. c16 |
-  c16 d16 c16 bf16 a16 f16 e16 g16 f16 g16 a8 |
-  e'16 c8. c8 f8 e4 |
-  e4 d4 d8 a16 c16 |
-  b8 a8 g8 a8 b8 r8 |
-  e8 d8 c8 d8 e8 r8 |
-  e,8 fs8 g8 b8 c8 b8 ~ |
-  b8 a16 g16 e'8 c8 a16 d16 c16 b16 |
-  a8 c8 b8 f'8 e8 gs8 |
-  a16 d16 c16 b16 a16 g16 f16 e16 d16 a16 d16 e16 |
-  f16 d16 cs16 g16 f16 a16 g16 f16 e8. cs16 |
-  a16 _\markup{ \bold {Poco meno mosso} } d16 c16 bf16 a16 bf16 a16 g16
-  a16 bf16 c16 ef16 |
-  d16 g16 f16 ef16 d16 ef16 d16 c16 d16 c16 d16 bf16 |
-  a16 c16 f16 ef16 d16 f16 bf16 a16 g16 bf16 ef16 d16 |
-  cs16 _ "rit." e16 a,16 cs16 d16 a16 bf8 g16 bf16 a16 g16 |
-  f16 e16 d16 a'16 g16 f16 g16 e16 <d f>8 <cs e>8 | \barNumberCheck
-  #110
-  <f, a d>2. \bar "|."
+  \upper_voices_fugue_two
+
+  | f16 bf a g a g f e
+  | f16 d' e c d e f a
+  | bf16 g a f g a bf d,
+  | e16 c d bf c d e g
+  | a16 f g e f g a c,
+  | d16 bf c a bf c d f
+  | g16 e f d e f g a
+  | bf g a f e d c e,
+
+  \upper_voices_fugue_three
 }
 
 lower_voices_prelude_one = {
