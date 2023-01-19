@@ -239,6 +239,23 @@ upper_voices_fugue_three = {
       | b4 r8 e
       | f8. a16 gs4
       | e4 e8 r
+
+      \time 3/4
+
+      | b8. d16 c8. d16 c8 b
+      | e b g4 g8. c16
+      | c16 d c bf a f e g f g a8
+
+      \time 2/4
+
+      | e'16 c8. c8 f
+      | e4 e
+      | d4 d8 a16 c
+
+      \time 3/4
+
+      | b8 a g a b r
+      | e d c d e r
     }
 
   } \\ {
@@ -259,6 +276,65 @@ upper_voices_fugue_three = {
       | d4 c8 r
 
       \time 3/4
+
+      | e,16 d e8 a16 g a8 g4
+      | g16 a g f e c b d c d e8
+      | a8 e c4 ~ c8. f16
+
+      \time 2/4
+
+      | g8 f16 bf a4
+      | g4 g8 a16 g
+      | f4 f8 fs
+
+      \time 3/4
+
+      | g4 g8 fs e r
+      | c'4 c8 b a r
+    }
+
+  } >>
+}
+
+upper_voices_fugue_four = {
+  << {
+
+    \relative a' {
+      | a8 c b f' a gs
+
+      \time 2/4
+
+      | a16 d c b a g f e
+      | d16 a d e f d cs g
+      | f16 a g f e8. c16
+
+      \time 3/4
+
+      | a16 d c bf a bf a g a bf c ef
+      | d16 g f ef d ef d c d c d bf
+      | a16 c f ef d f bf a g bf ef d
+      | cs16 e a, cs d a bf8 g16 bf a g
+      | f16 e d a' g f g e f8 e
+    }
+
+  } \\ {
+
+    \relative a' {
+      | a8 d, e4 b'
+
+      \time 2/4
+
+      | c8 r r4
+      | r4 a8 e
+      | d cs16 d cs a g e
+
+      \time 3/4
+
+      | f8 g e c c4
+      | bf'8 c a f f4
+      | f4 bf ef
+      | e4 d8. f16 e8. cs16
+      | d4 <bf d e> d8 cs
     }
 
   } >>
@@ -313,6 +389,20 @@ upper_staff = \relative e'' {
   | bf g a f e d c e,
 
   \upper_voices_fugue_three
+
+  \time 2/4
+
+  | e8 fs g b
+  | c b4 a16 g
+  | e'8 c a16 d c b
+
+  \time 3/4
+
+  \upper_voices_fugue_four
+
+  <f, a d>2.
+
+  \bar "|."
 }
 
 lower_voices_prelude_one = {
