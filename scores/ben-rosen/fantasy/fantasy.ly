@@ -306,13 +306,19 @@ upper_voices_fugue_four = {
 
       | a16 d c b a g f e
       | d16 a d e f d cs g
-      | f16 a g f e8. c16
+      | f16 a g f
+        \clef "bass"
+        e8. c16
 
       \time 3/4
 
       | a16 d c bf a bf a g a bf c ef
       | d16 g f ef d ef d c d c d bf
-      | a16 c f ef d f bf a g bf ef d
+
+
+      | a16 c f ef
+        \clef "treble"
+        d f bf a g bf ef d
       | cs16 e a, cs d a bf8 g16 bf a g
       | f16 e d a' g f g e f8 e
     }
@@ -326,13 +332,18 @@ upper_voices_fugue_four = {
 
       | c8 r r4
       | r4 a8 e
-      | d cs16 d cs a g e
+      | d cs16 d
+        \clef "bass"
+        cs a g e
 
       \time 3/4
 
       | f8 g e c c4
       | bf'8 c a f f4
-      | f4 bf ef
+
+      | f4
+        \clef "treble"
+        bf ef
       | e4 d8. f16 e8. cs16
       | d4 <bf d e> d8 cs
     }
