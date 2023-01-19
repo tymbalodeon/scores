@@ -13,23 +13,18 @@ key_and_time = {
   \time 2/4
 }
 
-voices_one = {
+upper_voices_one = {
   << {
 
     \relative d'' {
       | d2 ~
-      | d4 e16 d16 cs16 g'16
-      | e4 ~ e16 f16 e16 d16
-      | \tuplet 3/2 { e8 f8 a8 }
+      | d4 e16 d cs g'
+      | e4 ~ e16 f e d
+      | \tuplet 3/2 { e8 f a } g4 ~
 
-      | g4 ~
-      | g4 ~
-      | \tuplet 3/2 { g8 e8 f8 }
-      | \tuplet 3/2 { f8 e8 d8 }
-
-      | e4 ~
-      | e4
-      | \tuplet 3/2 { e8 d8 cs8 ~ }
+      | g4 ~ \tuplet 3/2 { g8 e f }
+      | \tuplet 3/2 { f8 e d } e4 ~
+      | e4 \tuplet 3/2 { e8 d cs ~ }
       | cs2 ~
 
       | cs2 -\fermata
@@ -38,7 +33,8 @@ voices_one = {
       | c4. bf8
       | a2 ~
       | a4. bf8
-      | g8 a8 bf8 e,8
+
+      | g8 a bf e,
     }
 
   } \\ {
@@ -70,7 +66,7 @@ voices_one = {
 upper_staff = \relative e'' {
   \key_and_time
 
-  \voices_one
+  \upper_voices_one
 
   | e8 d cs g' ~
   | g8 f e f \tuplet 3/2 { g8 a bf } \tuplet 3/2 { a8 d cs }
@@ -215,30 +211,62 @@ upper_staff = \relative e'' {
   <f, a d>2. \bar "|."
 }
 
+lower_voices_one = {
+  << {
+
+    \relative a {
+      | a4 ~ a8. c16
+      | bf16 g a bf ~ bf4 ~
+      | bf16 g a bf a4 ~
+      | a4 ~ \tuplet 3/2 { a8 bf a }
+
+      | g4. bf8
+      | d4 ~ d8. cs16 ~
+      | cs2
+      | \tuplet 3/2 { g'8 f e ~ } e4 ~
+
+      | e2 -\fermata
+
+      | c2
+      | bf8 a bf g
+      | a2 ~
+      | a8 g8 a8 f8
+
+      | e4 g8 a
+    }
+
+  } \\ {
+
+    \relative d {
+       | d2 ~
+       | d4 cs ~
+       | cs4 d ~
+       | d2 ~
+
+       | \tuplet 3/2 { d8 e f } bf,4
+       | d8 f a4 ~
+       | a2 ~
+       | a4 \tuplet 3/2 { b8 cs a ~ }
+
+       | a2 -\fermata
+
+       | f2 ~
+       | f2
+       | d8 c d a
+       | bf2
+
+       | a4 r
+    }
+
+  } >>
+}
+
 lower_staff = \relative c {
-  \clef bass
+  \clef "bass"
   \key_and_time
-  \clef "bass" \time 2/4 \key d \minor |
-  a4 ~ a8. c16 |
-  bf16 g16 a16 bf16 ~ bf4 ~ |
-  bf16 g16 a16 bf16 a4 ~ |
-  a4 ~ \once \omit TupletBracket
-  \times 2/3  {
-    a8 bf8 a8 }
-  |
-  g4. bf8 |
-  d4 ~ d8. cs16 ~ |
-  cs2 |
-  \once \omit TupletBracket
-  \times 2/3  {
-    g'8 f8 e8 ~ }
-  e4 ~ |
-  e2 |
-  c2 |
-  bf8 a8 bf8 g8 |
-  a2 ~ |
-  a8 g8 a8 f8 |
-  e4 g8 a8 |
+
+  \lower_voices_one
+
   bf8 g8 e'8 d8 s4 \clef "treble" |
   <cs a'>4 ~ |
   a'8 e8 a,8 e'8 |
