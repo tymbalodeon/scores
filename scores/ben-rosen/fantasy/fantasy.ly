@@ -248,10 +248,12 @@ upper_voices_fugue_three = {
     \relative d'' {
       | r4 d8 \tuplet 3/2 { e16 d cs } d8 e
 
+      \time 4/4
+
+      | f8 d gs \tuplet 3/2 { a16 gs fs } gs8 a b gs
+
       \time 2/4
 
-      | f8 d gs \tuplet 3/2 { a16 gs fs }
-      | gs8 a b gs
       | a8 e d f
       | e4 d
       | e4 c8 d
@@ -283,10 +285,12 @@ upper_voices_fugue_three = {
     \relative f' {
       | f8 \tuplet 3/2 { g16 f e } f8 g a g
 
+      \time 4/4
+
+      | a8 \tuplet 3/2 { b16 a gs } b8 c b8 c d b
+
       \time 2/4
 
-      | a8 \tuplet 3/2 { b16 a gs } b8 c
-      | b8 c d b
       | c16 d c b a c b d
       | c8 e, gs16 a b gs
       | a16 e' d e c8 b
@@ -327,8 +331,8 @@ upper_voices_fugue_four = {
       | a16 d c b a g f e
       | d16 a d e f d cs g
       | f16 a g f
-      \clef "bass"
-      e8. c16
+        \clef "bass"
+        e8. c16
 
       \time 3/4
 
@@ -337,8 +341,8 @@ upper_voices_fugue_four = {
 
 
       | a16 c f ef
-      \clef "treble"
-      d f bf a g bf ef d
+        \clef "treble"
+        d f bf a g bf ef d
       | cs16 e a, cs d a bf8 g16 bf a g
       | f16 e d a' g f g e f8 e
     }
@@ -352,18 +356,15 @@ upper_voices_fugue_four = {
 
       | c8 r r4
       | r4 a8 e
-      | d cs16 d
-      \clef "bass"
-      cs a g e
-
-      \time 3/4
-
+      | d8 cs16 d
+        \clef "bass"
+        cs a g e
       | f8 g e c c4
       | bf'8 c a f f4
 
       | f4
-      \clef "treble"
-      bf ef
+        \clef "treble"
+        bf ef
       | e4 d8. f16 e8. cs16
       | d4 <bf d e> d8 cs
     }
@@ -639,9 +640,12 @@ lower_staff = \relative b {
 
   | a4. e'8 d cs
 
-  \time 2/4
+  \time 4/4
 
   | d4. e8 d c b4
+
+  \time 2/4
+
   | a8 e' f d
   | e8 a b d8
   | c8 b a16 f g e
