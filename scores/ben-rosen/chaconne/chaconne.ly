@@ -5,6 +5,12 @@
 \include "upper_staff.ily"
 \include "lower_staff.ily"
 
+
+\paper {
+  left-margin = 1\in
+  bottom-margin = 0.75\in
+}
+
 \header {
   title = "Chaconne"
   composer = "Ben Rosen"
@@ -21,6 +27,7 @@ key_and_time = {
     \new Staff \with {
       instrumentName = "Violin"
       shortInstrumentName = "Vln."
+      \magnifyStaff #5/7
     } {
       \key_and_time
       \violin
