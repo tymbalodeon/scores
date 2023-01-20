@@ -80,22 +80,64 @@ lower_staff = \relative fs' {
 
   } >>
 
-  cs8 d8 cs8 c8 b8 a8
-  b4. c8 b4
-  gs4. fs8 es8 e8
-  fs4 gs4 fs4
-  fs4. a8 cs8 b8
-  gs4. es8 gs4
-  a4. fs8 b8 a8
-  gs4 a4 g4
-  fs2.
-  es4 a4 es4
-  gs2.
-  g4. fs8 g4
-  fs2.
-  fs4. e8 fs4
-  es4. _\< b8 d8 cs8 _\!
-  gs4 -> cs,8 _\< gs'8 c8 _\! es8
+  << {
+
+    \relative cs' {
+      | cs8 d cs c b a
+      | b4. c8 b4
+      | gs4. fs8 es e
+      | fs4 gs fs
+      | fs4. a8 cs b
+      | gs4. es8 gs4
+      | a4. fs8 b a
+      | gs4 a g
+    }
+
+  } \\ {
+
+    \relative fs {
+      | fs2.
+      | es4 e ds
+      | cs2.
+      | b4 gs b
+      | b8 cs es fs a gs
+      | b,4 cs b
+      | ds2.
+      | es4 b cs
+    }
+
+  } >>
+
+
+  << {
+
+    \relative fs {
+      | fs2.
+      | es4 a es
+      | gs2.
+      | g4. fs8 g4
+      | fs2.
+      | fs4. e8 fs4
+      | es4. -\< b8 d cs -\!
+      | gs4
+    }
+
+  } \\ {
+
+    \relative fs {
+      | d4. a8 c b
+      | b4. ds8 b4
+      | cs8 fs e ds b d
+      | cs4 ds cs
+      | d2.
+      | ds4 b ds
+      | cs8 b a gs fs es
+      | cs4 ->
+    }
+
+  } >>
+
+  cs,8 _\< gs'8 c _\! es
   R2.
   e8 fs,8 r4 r4
   r8 es8 c'8 cs8 e,8 b'8
@@ -104,6 +146,7 @@ lower_staff = \relative fs' {
   gs8 b,4 r8 cs,4 -. ->
   R2.
   c4 -. -> cs4 ~ cs16 a'16 es'16 gs16
+
   cs2 r4
   a8 d,8 r8 c8 gs'8 ds'8 ~
   ds8 cs8 b8 gs8 d'8 g,8
