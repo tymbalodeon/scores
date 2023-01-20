@@ -2,41 +2,41 @@ part_one = {
   << {
 
     \relative a'' {
-      | a2 ( -\p fs4
+      | a2 \( -\p fs4
       | gs2 b4
       | as2 g4
       | gs2.
       | gs2 fs4
       | es2 d4
       | ds2.
-      | cs2. )
+      | cs2. \)
 
-      | a2. (
+      | a2. \(
       | b2 a4
       | gs2.
       | g2.
       | fs2 es4
       | fs2 ds4
       | es4 fs4 gs4
-      | a2 gs4 )
+      | a2 gs4 \)
 
-      | fs4 ( gs2
+      | fs4 \( gs2
       | b2 g4
       | gs2 e4
       | ds2 g4
       | gs4 fs2
       | gs4 as2
       | fs2 b4 ~
-      | b2. )
+      | b2. \)
 
-      | a4 ( fs2
+      | a4 \( fs2
       | gs4 es2
       | gs4 as2
       | cs4 b as
       | gs2 a4
       | fs2 e4
       | es2.
-      | fs4 gs b )
+      | fs4 gs b \)
 
       | a2.
       | gs4. a8 gs4
@@ -44,55 +44,56 @@ part_one = {
       | b4. fs8 b4
       | gs2.
       | es4 e es
-      | fs8 ( es ds a' gs fs )
+      | fs8 \( es ds a' gs fs \)
       | cs4 gs' es
+
       | fs2.
       | gs4 es gs
-      | e4. ( g8 gs fs )
+      | e4. \( g8 gs fs \)
       | ds4. e8 ds4
-      | b8 ( cs d cs d cs )
+      | b8 \( cs d cs d cs \)
       | c4 ds c
-      | cs2. (
-      | c4 ) -> r2
+      | cs2. \(
+      | c4 \) ->
     }
 
   } \\ {
 
     \relative cs'' {
-      | cs2 ( d4
+      | cs2 \( d4
       | cs2.
       | cs2 as4
       | b2 ds4
       | b2 a4
       | gs2 b4
       | fs2.
-      | es2. )
+      | es2. \)
 
-      | d2. (
+      | d2. \(
       | d2 b4
       | cs2.
       | as2.
       | b2 gs4
-      | a2. )
+      | a2. \)
       | s2. * 2
 
-      | cs2 ( d4
+      | cs2 \( d4
       | cs4 b2
       | as4 gs2
       | b2 cs4
       | d2 e4
       | es4 d2
       | c4 d2
-      | es2. )
+      | es2. \)
 
-      | d2 ( cs4
+      | d2 \( cs4
       | d2 ds4
       | cs c cs
       | ds2 cs4
       | d4 es2
       | ds4 c2
       | b4 d cs ~
-      | cs4 c2 )
+      | cs4 c2 \)
 
       | fs4. e8 ds d
       | cs4 d cs
@@ -110,7 +111,7 @@ part_one = {
       | gs4. a8 gs a
       | a4. gs8 a4
       | gs2.
-      | es4 r2
+      | es4
     }
 
   } >>
@@ -119,7 +120,8 @@ part_one = {
 upper_staff = \relative a'' {
   \part_one
 
-  c'4 -\f fs4 ( cs8 a8
+  r2
+  c,,4 -\f fs4 ( cs8 a8
   r4 r8 ) gs'8 ( cs,8 b8 ~
   b8 ) r8 r4 as'8 ( e8
   ds8 b4 gs'4 b,8 )
