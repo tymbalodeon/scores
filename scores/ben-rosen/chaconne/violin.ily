@@ -119,10 +119,7 @@ violin = \relative c''' {
   | cs16 ds cs as a cs e ds a es ds c
   | b16 a gs g ds d c b c b a gs
   | g2. -\!
-  | R2.
-
-  | R2. * 16
-  | R2. * 2 -"rit."
+  | R2. * 19
 
   \bar "|."
 }
