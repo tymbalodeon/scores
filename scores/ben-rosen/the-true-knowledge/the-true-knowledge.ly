@@ -2,6 +2,8 @@
 
 \include "settings.ily"
 \include "soprano.ily"
+\include "piano_upper_staff.ily"
+\include "piano_lower_staff.ily"
 
 \header {
   title = "The True Knowledge"
@@ -16,25 +18,6 @@ key_and_time = {
   \time 4/4
 }
 
-upper_staff = \relative c'' {
-  \key_and_time
-
-  \partial 2
-  r2
-
-  | c1
-}
-
-lower_staff = \relative c {
-  \clef "bass"
-  \key_and_time
-
-  \partial 2
-  r2
-
-  | c1
-}
-
 \score {
   <<
     \new Staff \with {
@@ -46,8 +29,14 @@ lower_staff = \relative c {
       instrumentName = "Piano"
     } {
       <<
-        \new Staff = "upper" \upper_staff
-        \new Staff = "lower" \lower_staff
+        \new Staff = "upper" {
+          \key_and_time
+          \upper_staff
+        }
+        \new Staff = "lower" {
+          \key_and_time
+          \lower_staff
+        }
       >>
     }
   >>
