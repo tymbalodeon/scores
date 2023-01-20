@@ -6,7 +6,17 @@ upper_staff = \relative b {
     <c'' c'>4. --
     \ottava #0
     r8 g,4 -\mf af'4
-  | bf,4 << { d8 -\f f8 } \\ { r8 b, } >> <fs b e>4 -> <ds gs cs>
+  | bf,4
+    << {
+
+      d8 -\f f8 s4
+
+    } \\ {
+
+      r8 b, ~ <fs b e>4 ->
+
+    } >>
+    <ds gs cs>
   | <b' e a>4 -\< <f' bf ef> -\! -\> <d g c> -\! r8 cs ~ -\! -\<
   | <gs cs fs>4 -> -\> <e a ds>4 -\! r4 r8
     \ottava #1
@@ -15,15 +25,10 @@ upper_staff = \relative b {
     \ottava #0
     r8 f,,8 ~ -\p -\< <c f bf>8 -. -> r4 g'8 ~ -\!
 
-  | <ef g b>8 -. -> r8 r4 r8 b8 -\f e8 cs8
-  | f8 bf8 ef,8 c8 \tuplet 3/2 { e4 cs'4 a4 }
-
-  f8 g8 c8 a8 \tuplet 3/2 {
-    cs4 as'4 fs4 }
-  \tuplet 3/2  {
-    b4 -\> gs4 e4 ~ }
-  \tuplet 3/2  {
-    <b e>4 ~ ~ <fs b e>4 <ds gs cs>4 }
+  | <ef g b>8 -. -> r8 r4 r8 b -\f e cs
+  | f8 bf ef, c \tuplet 3/2 { e4 cs'4 a4 }
+  | f8 g c a \tuplet 3/2 { cs4 as'4 fs4 }
+  | \tuplet 3/2 { b4 -\> gs4 e4 ~ } \tuplet 3/2 { <b e>4 ~ ~ <fs b e>4 <ds gs cs>4 }
 
   <b e a>4 <g c f>4 <b fs'>4 -\! -\p -\markup{ \bold {A tempo} } <a'
                                                                   cs>4 \ottava #0
