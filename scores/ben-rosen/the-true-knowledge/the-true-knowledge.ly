@@ -1,9 +1,9 @@
 \version "2.24.0"
 
 \include "settings.ily"
-\include "soprano.ily"
-\include "piano_upper_staff.ily"
-\include "piano_lower_staff.ily"
+\include "the-true-knowledge-soprano.ily"
+\include "the-true-knowledge-piano-upper-staff.ily"
+\include "the-true-knowledge-piano-lower-staff.ily"
 
 \header {
   title = "The True Knowledge"

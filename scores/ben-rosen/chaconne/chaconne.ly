@@ -1,9 +1,9 @@
 \version "2.24.0"
 
 \include "settings.ily"
-\include "violin.ily"
-\include "upper_staff.ily"
-\include "lower_staff.ily"
+\include "chaconne-violin.ily"
+\include "chaconne-upper-staff.ily"
+\include "chaconne-lower-staff.ily"
 
 \header {
   title = "Chaconne"
