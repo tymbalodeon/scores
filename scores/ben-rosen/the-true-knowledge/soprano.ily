@@ -1,53 +1,66 @@
 soprano = \relative g' {
   \partial 2
-  r8 g8 ( _\p _\< af8 bf8 ) _\! s2
-  d4 ( _\mf f4 ) r8 fs4 ( _\f c8 ~
-  c8 ef8 -. a,4 ) -> r8 b8 ( _\mp _\< e8 cs8
-  a8 ef'8 c4. fs8 f4 ) _\! _\f
-  r4 r8 f8 ( \times 2/3 {
-    d8 bf8 ) af8 }
-  g4
-  r8 ef8 ( a4 ) -. -> r8 gf8 ( c4 ) -. ->
-  r8 b8 ( e8 cs8 \times 2/3 {
-    f4 d4 bf4 ) }
+  r8 g -\p -\< af bf -\!
 
-  af4. af8 g4 r4
-  R1*2 _ "rit."
-  r2 r8 _\markup{ \bold {A tempo} } g8 ( _\p _\< af8 bf8 )
-  f'4 ( _\! _\mf d4 ) r4 cs4 ( _\p _\>
-  g4. g4 g4 ) _\! r8
-  r2 r8 cs8 ( _\mf _\< fs8 ds8
-  b8 f'8 d4. gs8 g4 ) _\! _\f
-  r2 r8 b,8 ( fs8 a8
-  \times 2/3  {
-    f4 _\< af4 ) c4 }
-  d4. d8 _\!
-  ef4 r2 e8 ( e8
-  g4 e4 ) c4. c8
-  \time 5/4  c4 bf8 bf8 a4 r8 a8 ( _\mf _\< bf8 c8 )
-  \numericTimeSignature\time 4/4  e4 ( g4 ) r4 gs4 ( _\! _\ff
-  f4. d4 b4 ) r8
-  r8 ds8 ( _\mf _\< as8 cs8 f8 b,8 d4 ~
-  d8 gs,8 gs4 ) r8 gs8 ( \times 2/3 {
-    a8 c8 ) e8 }
+  | d4 ( -\mf f4 ) r8 fs4 -\f c8 ~
+  | c8 ef -. a,4 -> r8 b -\mp -\< e8 cs
+  | a8 ef' c4. fs8 f4 -\! -\f
 
-  fs4. _\! _\f g8 ds8 as8 cs4
-  r8 cs4 ( g4 e'4 as,8 ~
-  as4 ) r8 b8 ( _\< \times 2/3 {
-    c4 d4 fs4 ) }
-  _\!
-  a4 _\ff a2 r4
-  R1 \bar "."
+  | r4 r8 f \tuplet 3/2 { d ( bf ) af } g4
+  | r8 ef a4 -. -> r8 gf c4 -. ->
+  | r8 b e cs \tuplet 3/2 { f4 ( d ) bf }
+  | af4. af8 g4 r
+
+  | R1 * 2
+
+  \tempo "A tempo"
+
+  | r2 r8 g -\p -\< af bf
+
+  | f'4 ( -\! -\mf d ) r cs -\p -\>
+  | g4. g g -\! r8
+  | r2 r8 cs -\mf -\< fs ds
+  | b8 f' d4. gs
+
+  | g4 -\! -\f r r8 b, fs a
+  | \tuplet 3/2 { f4 ( -\< af ) c } d4. d8 -\!
+  | ef4 r2 e8 e
+  | g4 ( e ) c4. c8
+
+  \time 5/4
+
+  | c4 bf8 bf a4 r8 a -\mf -\< bf c
+
+  \time 4/4
+
+  | e4 ( g ) r gs -\! -\ff
+  | f4. d4 b r8
+  | r8 ds -\mf -\< as cs f b, d4 ~
+  | d8 gs, gs4 r8 gs \tuplet 3/2 { a ( c ) e }
+
+  | fs4. -\! -\f g8 ds as cs4
+  | r8 cs4 g e' as,8 ~
+  | as4 r8 b -\< \tuplet 3/2 { c4 ( d fs ) } -\!
+  | a4 -\ff a2 r4
+
+  | R1
+
+  \bar "|."
 }
 
 text = \lyricmode {
-  Thou know -- est "all " __\skip1 I "seek " __\skip1 in vain what lands to
-  till or sow with "seed." The "land " __\skip1 is black with brier
-  and "weed," Nor cares for fall -- \skip1 ing tears or "rain." Thou
-  know -- est "all; " __\skip1 I sit and wait with blind -- ed eyes
-  and hands that fail Till the last lift -- \skip1 ing of the veil and
-  the "first " __\skip1 o -- pen -- ing of the "gate." Thou know --
-  est "all; " __\skip1 I can -- not "see." I trust I shall not "live "
-  __\skip1 in "vain," I "know " __\skip1 that we will meet a -- gain
-  in some di -- "vine " __\skip1 e -- ter -- \skip1 \skip1 ni -- ty
+  Thou know -- est all; __ I seek in vain
+  What lands to till or sow with seed
+  The land is black with briar and weed,
+  Nor cares for fall -- ing tears or rain.
+
+  Thou know -- est all; __ I sit and wait
+  With blind -- ed eyes and hands that fail,
+  Till the last lift -- ing of the veil
+  And the first op -- en -- ing of the gate.
+
+  Thou know -- est all; __ I can -- not see.
+  I trust I shall not live in vain,
+  I know that we shall meet a -- gain
+  In some di -- vine e -- ter -- nit -- y.
 }

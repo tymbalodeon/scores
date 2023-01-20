@@ -38,7 +38,7 @@ key_and_time = {
   }
 
   \score {
-    \new StaffGroup <<
+    <<
       \new Staff \with {
         instrumentName = "Violin"
         shortInstrumentName = "Vln."
@@ -47,20 +47,22 @@ key_and_time = {
         \key_and_time
         \violin
       }
+
       \new PianoStaff \with {
         instrumentName = "Piano"
         shortInstrumentName = "Pno."
+      } {
+        <<
+          \new Staff = "upper" {
+            \key_and_time
+            \upper_staff
+          }
+          \new Staff = "lower" {
+            \key_and_time
+            \lower_staff
+          }
+        >>
       }
-      <<
-        \new Staff = "upper" {
-          \key_and_time
-          \upper_staff
-        }
-        \new Staff = "lower" {
-          \key_and_time
-          \lower_staff
-        }
-      >>
     >>
   }
 }
