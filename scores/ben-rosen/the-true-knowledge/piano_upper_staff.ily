@@ -1,12 +1,12 @@
 upper_staff = \relative b {
   \partial 2
-  | <b e>4 -\p <a cs>
+   <b e>4 -\p <a cs>
 
   | \ottava #1
     <c'' c'>4. --
     \ottava #0
     r8 g,4 -\mf af'4
-  | bf,4 << { d8 -\f f8 -\< } \\ { r8 b, } >> <fs b e>4 -> -\! -\> <ds gs cs> -\!
+  | bf,4 << { d8 -\f f8 } \\ { r8 b, } >> <fs b e>4 -> <ds gs cs>
   | <b' e a>4 -\< <f' bf ef> -\! -\> <d g c> -\! r8 cs ~ -\! -\<
   | <gs cs fs>4 -> -\> <e a ds>4 -\! r4 r8
     \ottava #1
@@ -38,10 +38,15 @@ upper_staff = \relative b {
   \clef "treble" g8 ef8 b'8 d8
   \tuplet 3/2  {
     bf4 df4 f4 }
-  r8 -\! g,8 ~ <d g c>8 -. -> r8  \barNumberCheck #20
-  \time 5/4  r8 a'8 ~ <f a cs>8 -. -> r8 \ottava #0 \ottava #1 <f''
-                                                                f'>2 -> s4
-  \numericTimeSignature\time 4/4  \ottava #1 s2. \ottava #0 <c' c'>4 ~
+  r8 -\! g,8 ~ <d g c>8 -. -> r8
+
+  \time 5/4
+
+  r8 a'8 ~ <f a cs>8 -. -> r8 \ottava #0 \ottava #1 <f'' f'>2 -> s4
+
+  \time 4/4
+
+  \ottava #1 s2. \ottava #0 <c' c'>4 ~
   -> -\! -\f
   <c, c'>2 r4 r8 ds,8 ~ -\mf
   <as ds gs>4 -\< <cs fs b>4 <f bf ef>4 <b e a>4

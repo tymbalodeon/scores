@@ -1,3 +1,20 @@
+text = \lyricmode {
+  Thou know -- est all; __ I seek in vain
+  What lands to till or sow with seed
+  The land is black with briar and weed,
+  Nor cares for fall -- ing tears or rain.
+
+  Thou know -- est all; __ I sit and wait
+  With blind -- ed eyes and hands that fail,
+  Till the last lift -- ing of the veil
+  And the first op -- en -- ing of the gate.
+
+  Thou know -- est all; __ I can -- not see.
+  I trust I shall not live in vain,
+  I know that we shall meet a -- gain
+  In some di -- vine e -- ter -- nit -- y.
+}
+
 soprano = \relative g' {
   \partial 2
   r8 g -\p -\< af bf -\!
@@ -18,7 +35,7 @@ soprano = \relative g' {
   | r2 r8 g -\p -\< af bf
 
   | f'4 ( -\! -\mf d ) r cs -\p -\>
-  | g4. g g -\! r8
+  | g4. g4 g -\! r8
   | r2 r8 cs -\mf -\< fs ds
   | b8 f' d4. gs
 
@@ -46,21 +63,4 @@ soprano = \relative g' {
   | R1
 
   \bar "|."
-}
-
-text = \lyricmode {
-  Thou know -- est all; __ I seek in vain
-  What lands to till or sow with seed
-  The land is black with briar and weed,
-  Nor cares for fall -- ing tears or rain.
-
-  Thou know -- est all; __ I sit and wait
-  With blind -- ed eyes and hands that fail,
-  Till the last lift -- ing of the veil
-  And the first op -- en -- ing of the gate.
-
-  Thou know -- est all; __ I can -- not see.
-  I trust I shall not live in vain,
-  I know that we shall meet a -- gain
-  In some di -- vine e -- ter -- nit -- y.
 }
