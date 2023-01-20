@@ -1,55 +1,53 @@
 upper_staff = \relative b {
   \partial 2
-   <b e>4 -\p <a cs>
+   <b e>4 \p <a cs>
 
   | \ottava #1
     <c'' c'>4. --
     \ottava #0
-    r8 g,4 -\mf af'4
+    r8 g,4 \mf af'4
   | bf,4
     << {
 
-      d8 -\f f8 s4
+      d8 f8 s4
 
     } \\ {
 
-      r8 b, ~ <fs b e>4 ->
-
+      r8 b, ~ \stemUp <fs b e>4 -> \f \> \stemNeutral <ds gs cs> \!
     } >>
-    <ds gs cs>
-  | <b' e a>4 -\< <f' bf ef> -\! -\> <d g c> -\! r8 cs ~ -\! -\<
+  | <b' e a>4 \< <f' bf ef> \> <d g c> \! r8 cs ~ \<
 
-  | <gs cs fs>4 -> -\> <e a ds>4 -\! r4 r8
+  | <gs cs fs>4 -> \> <e a ds>4 \! r4 r8
     \ottava #1
-    <ds'' ds'>8 ~ -> ~ -\f
+    <ds'' ds'>8 ~ -> \f
   | <ds ds'>4
     \ottava #0
-    r8 f,, ~ -\p -\< <c f bf> -. -> r4 g'8 ~ -\!
+    r8 f,, ~ \p \< <c f bf> -. -> r4 g'8 ~
 
-  | <ef g b>8 -. -> r8 r4 r8 b -\f e cs
+  | <ef g b>8 -. -> \! r8 r4 r8 b \f e cs
   | f8 bf ef, c \tuplet 3/2 { e4 cs' a }
 
   | f8 g c a \tuplet 3/2 { cs4 as' fs }
-  | \tuplet 3/2 { b4 -\> gs e ~ } \tuplet 3/2 { <b e> ~ ~ <fs b e> <ds gs cs> }
+  | \tuplet 3/2 { b4 \> gs e ~ } \tuplet 3/2 { <b e> ~ ~ <fs b e> <ds gs cs> }
 
-  | <b e a>4 <g c f> \tempo "A tempo" <b fs'> -\! -\p<a' cs>
+  | <b e a>4 <g c f> \tempo "A tempo" <b fs'> \p <a' cs>
   | \ottava #1
-    <g'' g'>1 -\mf
+    <g'' g'>1 \mf
     \ottava #0
   | R1
 
-  | r4 r8 cs,, ~ -\f -\< <gs cs fs>4 -\! -\> <es as ds> -\! -\<
-  | <cs' fs b>4 -\! -\> <g c fs> <e a d> -\! r8 ds' ~ -\<
-  | <as ds gs>4 -\! -\> <fs b es> -\! <ds gs cs> r
+  | r4 r8 cs,, ~ \f \< <gs cs fs>4 \> <es as ds> \<
+  | <cs' fs b>4 \> <g c fs> <e a d> \! r8 ds' ~ \<
+  | <as ds gs>4 \> <fs b es> \! <ds gs cs> r
 
   \clef "bass"
 
-  | r8 cs -\f gs b g -\< d a' c
+  | r8 cs \f gs b g \< d a' c
   | \tuplet 3/2 { af4 cf ef }
     \clef "treble"
     g8 ef b' d
 
-  | \tuplet 3/2 { bf4 df f } r8 -\! g, ~ <d g c> -. -> r
+  \tuplet 3/2 { bf4 df f \! } r8 g, ~ <d g c> -. -> r
 
   \time 5/4
 
