@@ -19,7 +19,9 @@ key_and_time = {
 \book {
   \bookOutputSuffix "violin"
   \score {
-    \new Staff {
+    \new Staff \with {
+      instrumentName = "Violin"
+    } {
       \key_and_time
 
       \compressMMRests {
