@@ -32,12 +32,19 @@ lower_staff = \relative ds,, {
 
   \time 5/4
 
-  | r8 ds' ~ <b ds g> -. -> r r2.
+  | r8 ds' ~ <b ds g> -. -> r
+    << {
+      r4 <b fs'> <cs, a'>
+    } \\ {
+
+      <d,, d'>2. ->
+
+    } >>
 
   \time 4/4
 
-  | <d,,, d'>2. -> <b b'>4 ~ ->
-  | <b b'>2 r2
+  | <f f'>2. -> <b, b'>4 ~ ->
+  | <b b'>2 r
 
   | r4 r8 ds'' ~ <as ds gs>4 <cs, fs b>
   | <f, bf ef>4 <b' e a> <cs,, cs'>2 ->

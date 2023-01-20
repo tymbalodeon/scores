@@ -52,31 +52,40 @@ upper_staff = \relative b {
   \time 5/4
 
   | r8 a' ~ <f a cs> -. -> r
-    \ottava #1
-    <f'' f'>2 -> s4
-    \ottava #0
+    << {
+
+      \ottava #1
+      <f'' f'>2. ->
+      \ottava #0
+
+      } \\ {
+
+        r4 <ds, gs> \mp <es cs'>
+
+      } >>
 
   \time 4/4
 
-  | r2.
+  | \ottava #2
+    <d'' d'>2.
     \ottava #1
-    <c' c'>4 ~ -> -\! -\f
+    <c, c'>4 ~ -> \f
   | <c c'>2
     \ottava #0
-    r4 r8 ds,, ~ -\mf
+    r4 r8 ds,, ~ \mf
 
-  | <as ds gs>4 -\< <cs fs b> <f bf ef> <b e a>
-  | <d g c>4 r <e e'>2 -> -\! -\ff
-  | <e,, a d>4. -> -\< b''8 ~ <g b ds>4. -> r16 d ( -\!
+  | <as ds gs>4 \< <cs fs b> <f bf ef> <b e a>
+  | <d g c>4 r <e e'>2 -> \ff
+  | <e, a d>4. -> \< b''8 ~ <g b ds>4. -> r16 d (
 
-  | ds16 -\< es a ) g ( af bf d ) e, ( f g b ) c ( cs ds g ) fs16
-  | g8 -> -\! -\ff c,, f ef r ds' -\< gs es
+  | ds16 es a ) g ( af bf d ) e, ( f g b ) c ( cs ds g ) fs16
+  | g8 -> \ff c,, f ef r ds' \< gs es
   | \ottava #1
     b'2 ->
     \ottava #0
-    cs2 -> -\!
+    cs2 ->
   | \ottava #2
-    c'2 -> -\fff
+    c'2 -> \fff
     \ottava #0 r2
 
   \bar "|."
