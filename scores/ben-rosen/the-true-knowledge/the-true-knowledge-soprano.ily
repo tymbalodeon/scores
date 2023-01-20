@@ -30,9 +30,7 @@ soprano = \relative g' {
 
   | R1 * 2
 
-  \tempo "A tempo"
-
-  | r2 r8 g -\p -\< af bf
+  | r2 \tempo "A tempo" r8 g -\p -\< af bf
 
   | f'4 ( -\! -\mf d ) r cs -\p -\>
   | g4. g4 g -\! r8

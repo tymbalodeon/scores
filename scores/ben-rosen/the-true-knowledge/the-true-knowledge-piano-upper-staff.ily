@@ -32,13 +32,13 @@ upper_staff = \relative b {
   | f8 g c a \tuplet 3/2 { cs4 as' fs }
   | \tuplet 3/2 { b4 -\> gs e ~ } \tuplet 3/2 { <b e> ~ ~ <fs b e> <ds gs cs> }
 
-  | <b e a>4 <g c f> <b fs'> -\! -\p -\tempo "A tempo" <a' cs>
+  | <b e a>4 <g c f> \tempo "A tempo" <b fs'> -\! -\p<a' cs>
   | \ottava #1
     <g'' g'>1 -\mf
     \ottava #0
   | R1
 
-  | r4 r8 cs,, ~ -\f -\< <gs cs fs> -\! -\> <es as ds> -\! -\<
+  | r4 r8 cs,, ~ -\f -\< <gs cs fs>4 -\! -\> <es as ds> -\! -\<
   | <cs' fs b>4 -\! -\> <g c fs> <e a d> -\! r8 ds' ~ -\<
   | <as ds gs>4 -\! -\> <fs b es> -\! <ds gs cs> r
 
@@ -71,7 +71,7 @@ upper_staff = \relative b {
   | <d g c>4 r <e e'>2 -> -\! -\ff
   | <e,, a d>4. -> -\< b''8 ~ <g b ds>4. -> r16 d ( -\!
 
-  | ds16 -\< es a ) g ( af bf d ) e, ( f g b ) c ( cs ds g ) fs
+  | ds16 -\< es a ) g ( af bf d ) e, ( f g b ) c ( cs ds g ) fs16
   | g8 -> -\! -\ff c,, f ef r ds' -\< gs es
   | \ottava #1
     b'2 ->
