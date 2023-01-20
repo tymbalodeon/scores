@@ -39,3 +39,15 @@ soprano = \relative g' {
   a4 _\ff a2 r4
   R1 \bar "."
 }
+
+text = \lyricmode {
+  Thou know -- est "all " __\skip1 I "seek " __\skip1 in vain what lands to
+  till or sow with "seed." The "land " __\skip1 is black with brier
+  and "weed," Nor cares for fall -- \skip1 ing tears or "rain." Thou
+  know -- est "all; " __\skip1 I sit and wait with blind -- ed eyes
+  and hands that fail Till the last lift -- \skip1 ing of the veil and
+  the "first " __\skip1 o -- pen -- ing of the "gate." Thou know --
+  est "all; " __\skip1 I can -- not "see." I trust I shall not "live "
+  __\skip1 in "vain," I "know " __\skip1 that we will meet a -- gain
+  in some di -- "vine " __\skip1 e -- ter -- \skip1 \skip1 ni -- ty
+}

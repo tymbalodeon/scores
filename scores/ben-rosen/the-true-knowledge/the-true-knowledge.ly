@@ -6,11 +6,13 @@
 \header {
   title = "The True Knowledge"
   composer = "Ben Rosen"
+  lyricist = "Oscar Wilde"
 }
 
 key_and_time = {
   \tempo 4 = 66
   \key c \major
+  \numericTimeSignature
   \time 4/4
 }
 
@@ -19,14 +21,18 @@ upper_staff = \relative c'' {
 
   \partial 2
   r2
+
+  | R1 * 32
 }
 
 lower_staff = \relative c {
-  \clef bass
+  \clef "bass"
   \key_and_time
 
   \partial 2
   r2
+
+  | R1 * 32
 }
 
 \score {
@@ -35,15 +41,18 @@ lower_staff = \relative c {
       instrumentName = "Soprano"
     } {
       \key_and_time
-
-      \soprano
+      \soprano \addlyrics \text
     }
     \new PianoStaff \with {
       instrumentName = "Piano"
     }
     <<
-      \new Staff = "upper" \upper_staff
-      \new Staff = "lower" \lower_staff
+      \new Staff = "upper" {
+        \upper_staff
+      }
+      \new Staff = "lower" {
+        \lower_staff
+      }
     >>
   >>
 }
