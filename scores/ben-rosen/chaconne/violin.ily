@@ -98,33 +98,31 @@ violin = \relative c''' {
   | g16 fs d b gs es g as r8 a'16 gs
   | r16 fs e b' d,8 d'16 cs b4 ~ \trill
   | b8 ds8 \trill gs,8 \trill e16 es r c' e b
-  | as8 r16 <c, gs'> -. r <gs d'> -. r8 \tuplet 3/2 { ds''16 e ds } \tuplet 3/2  { cs16 ds cs }
+  | as8 r16 <c, gs'> -. r <gs d'> -. r8
+    \tuplet 3/2 { ds''16 e ds }
+    \tuplet 3/2  { cs16 ds cs }
   | \tuplet 3/2 { b16 gs es }
     \tuplet 3/2 { r8 a16 }
     \tuplet 3/2 { r a c }
     \tuplet 3/2 { r d, fs }
     r8 e \open
-  | r4 e16 cs16 a'16 fs16 d'16 b16 cs16 as16
-  c4 r2
-  a,16 cs16 e16 gs16 b16 ds,16 as8 r8 fs'16 d'16
-  b4 \times 2/3 {
-    a8 g8 e8 }
-  r16 e16 -. r16 d32 -. r32
-  \times 2/3  {
-    r16 d16 gs,16 }
-  \times 2/3  {
-    as16 c16 d16 }
-  \times 2/3  {
-    b16 g16 fs16 }
-  \times 2/3  {
-    g16 fs16 g16 }
-  gs'16 b16 gs16 g16
-  d16 g16 d16 cs16 b16 a'16 gs16 es16 as16 cs16 gs16 as16
-  cs16 ds16 cs16 as16 a16 cs16 e16 ds16 a16 es16 ds16 c16
-  b16 a16 gs16 g16 ds16 d16 c16 b16 c16 b16 a16 gs16
-  g2. -\!
-  R2.*15
-  R2.*4 -"rit."
+  | r4 e16 cs a' fs d' b cs as
+  | c4 r2
+  | a,16 cs e gs b ds, as8 r fs'16 d'
+  | b4 \tuplet 3/2 { a8 g e } r16 e -. r d32 -. r32
+  | \tuplet 3/2 { r16 d gs, }
+    \tuplet 3/2 { as16 c d }
+    \tuplet 3/2 { b16 g fs }
+    \tuplet 3/2 { g16 fs g }
+    gs'16 b gs g
+  | d16 g d cs b a' gs es as cs gs as
+  | cs16 ds cs as a cs e ds a es ds c
+  | b16 a gs g ds d c b c b a gs
+  | g2. -\!
+  | R2.
+
+  | R2. * 16
+  | R2. * 2 -"rit."
 
   \bar "|."
 }
