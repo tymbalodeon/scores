@@ -75,4 +75,39 @@ upper_staff = \relative c'' {
   \time 3/4
 
   | <gs b e gs>4 <b d g b> <b ds fs b>
+
+  \time 4/4
+
+  | bf,,2 -> \f ( g'4 -> ~ \tuplet 3/2 { g8 d16 -> ~ } d8
+
+  \time 3/4
+
+  | f2 -> ) <d' b'>4 ~
+  | <d b'>2 <ds' fs>4 ~
+
+  \time 5/4
+
+  | <ds fs> <g, b>2 ~ \tuplet 3/2 { <g b>8 <g b> <d' f> }
+    \ottava #2
+    <df' f>8. as,32 fs'
+
+  \time 3/4
+
+  | <a c>2 r4
+    \ottava #0
+
+  | d,,,2. -> \mf
+
+  \repeat unfold 2 {
+    \time 4/4
+
+    | R1
+
+    \time 3/4
+
+    | R2.
+  }
+
+  | s2.
+
 }

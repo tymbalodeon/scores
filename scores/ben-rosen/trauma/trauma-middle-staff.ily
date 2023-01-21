@@ -44,4 +44,45 @@ middle_staff = \relative c' {
 
   | <gs b e gs>4 <b d g b> <b ds fs b>
 
+  \time 4/4
+
+  \clef "treble"
+
+  | \repeat unfold 4 { <ef af>8 c }
+
+  \time 3/4
+
+  | \repeat unfold 3 { <g' c>8 e }
+  | \repeat unfold 3 { <c' e>8 g }
+
+  \time 5/4
+
+  | \repeat unfold 5 { <e' gs>8 b }
+
+  \time 3/4
+
+  \repeat unfold 2 {
+    | \repeat unfold 3 { <c, e>8 g }
+  }
+
+  \repeat unfold 2 {
+    \time 4/4
+
+    | \repeat unfold 4 { <c e>8 g }
+
+    \time 3/4
+
+    | \repeat unfold 3 { <b e>8 gs }
+  }
+
+  | \repeat unfold 3 {
+    \change Staff = "upper"
+    <bf ef>16
+    \change Staff = "middle"
+    <c e>
+    \change Staff = "upper"
+    <af ef>
+    \change Staff = "middle"
+    g
+  }
 }

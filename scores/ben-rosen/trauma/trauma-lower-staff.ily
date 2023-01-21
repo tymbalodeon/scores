@@ -61,4 +61,41 @@ lower_staff = \relative c {
   | <fs fs'>8 <cs cs'> ~ <cs cs'>2 <a' a'>8 ~
   | <a a'>8 <e e'> ~ <e e'>4. <ef ef'>4 ~
   | <ef ef'>8 <bf bf'> ~ <bf bf'>2
+
+  \time 4/4
+
+  | R1
+
+  \time 3/4
+
+  | R2. * 2
+
+  \time 5/4
+
+  | R1 * 5/4
+
+  \time 3/4
+
+  | R2. * 2
+
+  \time 4/4
+
+  | c'2 ~ ( c8 d ~ d16 bf8. ~
+
+  \time 3/4
+
+  | bf2. )
+
+  \time 4/4
+
+  \ottava #-1
+
+  | af2 ~ ( af8 fs ~ fs16 e8. ~
+
+  \time 3/4
+
+  | e4. d )
+  | c2. -> \ff
+
+  \ottava #0
 }
