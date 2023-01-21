@@ -1,7 +1,6 @@
 \version "2.24.0"
 
 \include "settings.ily"
-\include "style.ily"
 
 \header {
   title = "Ralph Dreams of Lennie"
