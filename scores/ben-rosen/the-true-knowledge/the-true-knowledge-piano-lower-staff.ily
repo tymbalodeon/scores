@@ -4,11 +4,11 @@ lower_staff = \relative ds,, {
   \partial 2
   r2
 
-  | <ds ds'>4. -- r16 as'' -\p -\< b cs f ds e fs as c,
-  | cs16 ds g gs a b ds8 r4 -\! r8 b ~ -\! -\f
-  | <fs b e>4 -> -\> <ds gs cs> -\! <b e a> -\< <f' bf ef> -\! -\! -\>
+  | <ds ds'>4. -- r16 as'' ( \p \< b cs f ) ds ( e fs as ) c, (
+  | cs16 ds g ) gs ( a b ds8 ) r4 \! r8 b ~ \f
+  | <fs b e>4 -> \> <ds gs cs> <b e a> \< <f' bf ef> \>
 
-  | <d g c>4 r r r8 <c,, c'> ~ -> ~
+  | <d g c>4 \! r r r8 <c,, c'> ~ ->
   | <c c'>4 r8 b'' ~ <fs b e> -. -> r4 cs'8 ~
 
   | <a cs es>8 -. -> r8 r4 r8 b, e cs
@@ -22,9 +22,9 @@ lower_staff = \relative ds,, {
 
   | R1
 
-  | r2 r4 r8 cs''' ~ -\f
-  | <gs cs fs>4 -\! -\> <es as ds> <cs fs b> -\! -\< <g' c f> -\! -\! -\>
-  | <e a d>8 ds' ~ -\< <as ds gs>4 -\! -\> <fs b es> -\! r
+  | r2 r4 r8 cs''' ~ \f
+  | <gs cs fs>4 \! \> <es as ds> <cs fs b> \! \< <g' c f> \! \! \>
+  | <e a d>8 ds' ~ \< <as ds gs>4 \! \> <fs b es> \! r
   | r8 cs, gs b \tuplet 3/2 { g4 bf d, }
   | r8 ds'' as cs \tuplet 3/2 { a4 c e }
 
@@ -52,15 +52,22 @@ lower_staff = \relative ds,, {
     r8 ds'''' ~ <as ds gs>4. ->
     \ottava #1
     es''8
-    \ottava #0
     <cs es a>4 ->
+    \ottava #0
 
   \clef "bass"
 
-  | r16 e,,, ds cs a b as gs e d cs b g gf f ef
-  | \tuplet 3/2 { d4 -> d' fs } r8 ds as cs
+  | r16 e,,, ( ds cs a ) b ( as gs e ) d ( cs b g ) gf ( f ef
+  | \tuplet 3/2 { d4 -> ) d' fs } r8 ds as cs
+
+  \ottava #-1
+
   | e,2 -> a2 ->
-  | ds,2 -> r2
+  | ds,2 ->
+
+  \ottava #0
+
+  r2
 
   \bar "|."
 }

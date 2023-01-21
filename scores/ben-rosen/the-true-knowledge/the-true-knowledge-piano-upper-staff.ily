@@ -66,23 +66,30 @@ upper_staff = \relative b {
 
   \time 4/4
 
-  | \ottava #2
-    <d'' d'>2.
-    \ottava #1
-    <c, c'>4 ~ -> \f
+    <d' d'>2.
+    <c c'>4 ~ -> \f
   | <c c'>2
-    \ottava #0
-    r4 r8 ds,, ~ \mf
+    r4 r8 ds, ~ \mf
 
   | <as ds gs>4 \< <cs fs b> <f bf ef> <b e a>
-  | <d g c>4 r <e e'>2 -> \ff
-  | <e, a d>4. -> \< b''8 ~ <g b ds>4. -> r16 d (
+  | <d g c>4 r \!
+    << {
+
+      <e e'>2 -> \ff
+
+    } \\ {
+
+      r4 r8 a,, ~
+      | <e a d>4. ->
+
+    } >>
+
+   \< b''8 ~ <g b ds>4. -> r16 d (
 
   | ds16 es a ) g ( af bf d ) e, ( f g b ) c ( cs ds g ) fs16
   | g8 -> \ff c,, f ef r ds' \< gs es
   | \ottava #1
     b'2 ->
-    \ottava #0
     cs2 ->
   | \ottava #2
     c'2 -> \fff
