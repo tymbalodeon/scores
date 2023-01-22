@@ -66,14 +66,18 @@ music = \relative df {
 
   | r8 r16 c ~ c4 r8 r16 ef ~ ef4
   | r8 r16 f ~ f8. f16 ~ f4 af8 -> af8 ->
-  | f,,16 -> f f f -> f f g g af af af af' -> \repeat unfold 4 { af }
-  | << {
+  | f,,16 -> f f f -> f f g g af af af af' ->
+   << {
 
-      af2
+      \stemDown
+      \repeat unfold 3 { af16 } af ~
+      \stemUp
+      | af2
 
     } \\ {
 
-      \repeat unfold 8 { df,16 }
+      s4
+      | \repeat unfold 8 { df,16 }
 
     } >>
     df16 \repeat unfold 7 { <df af'> -> \downbow }
