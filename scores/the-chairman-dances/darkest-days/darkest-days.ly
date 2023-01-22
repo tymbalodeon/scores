@@ -64,15 +64,22 @@ music = \relative df {
   | \repeat unfold 4 { af16 } af af af ef \repeat unfold 4 { af, } bf bf c c
   | \repeat unfold 8 { df16 } df' df c c bf bf af g
 
-  | f16 f f c' f, f g g af af af ef' af, af af bf
-  | df,16 df df f' df, df df f' df, df df8
-    << {
+  | << {
 
-      af''8 -> af ->
+      s8. c8 -> s8. s ef8 ->
 
     } \\ {
 
-      f,16 f8 -> f16 ->
+      f,16 f f c' f, f g g af af af ef' af, af af bf
+
+    } >>
+  | << {
+
+      s8. f'8 -> s f -> s8. af8 -> af ->
+
+    } \\ {
+
+      df,,16 df df f' df, df df f' df, df df8 ( f16 ) f8 -> f16 ->
 
     } >>
   | f,16 -> f f f -> f f g g af af af af' ->
@@ -94,11 +101,11 @@ music = \relative df {
   \repeat volta 3 {
     | << {
 
-      s8. c'8 [ af af ] s c
+      s8. c'8 -> [ af -> af -> ] s c ->
 
     } \\ {
 
-      | af,16 af af c' af, af' af, af' af, af af c' af, af bf c
+      af,16 af af c' af, af' af, af' af, af af c' af, af bf c
 
     } >>
 
@@ -106,11 +113,11 @@ music = \relative df {
       \volta 1,2 {
         | << {
 
-          s8. c'8 [ af af ] s c
+          s8. c'8 -> [ af -> af -> ] s c ->
 
         } \\ {
 
-          | df,16 df df c' df, af' df, af' df, df df c' df, af' af ( bf )
+          df,16 df df c' df, af' df, af' df, df df c' df, af' af ( bf )
 
         } >>
       }
@@ -118,11 +125,11 @@ music = \relative df {
       \volta 3 {
         | << {
 
-          s8. c8 [ af af ] s8. s4
+          s8. c8 -> [ af -> af -> ] s8. s4
 
         } \\ {
 
-          | df,16 df df c' df, af' df, af' df df c c bf bf af16 g
+          df,16 df df c' df, af' df, af' df df c c bf bf af16 g
 
         } >>
       }
@@ -131,23 +138,23 @@ music = \relative df {
 
   | << {
 
-    | s8. c8 s8. s ef8
+    s8. c8 -> s8. s ef8 ->
 
   } \\ {
 
-    | f,16 f f c' f, f g g af af af ef' af, af af bf
+    f,16 f f c' f, f g g af af af ef' af, af af bf
 
   } >>
   | << {
 
-    | s8. f'8 s16 g8
+    s8. f'8 -> s16 g8 ->
       \ottava #1
-      af bf c ef
+      af -> bf -> c -> ef ->
       \ottava #0
 
   } \\ {
 
-    | df,,16 df df f' df, df g' df,
+    df,,16 df df f' df, df g' df,
       \ottava #1
       af'' f, bf' f, c'' af, ef'' af,,
       \ottava #0
