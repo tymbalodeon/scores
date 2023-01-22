@@ -64,9 +64,18 @@ music = \relative df {
   | \repeat unfold 4 { af16 } af af af ef \repeat unfold 4 { af, } bf bf c c
   | \repeat unfold 8 { df16 } df' df c c bf bf af g
 
-  | r8 r16 c ~ c4 r8 r16 ef ~ ef4
-  | r8 r16 f ~ f8. f16 ~ f4 af8 -> af8 ->
-  | f,,16 -> f f f -> f f g g af af af af' ->
+  | f16 f f c' f, f g g af af af ef' af, af af bf
+  | df,16 df df f' df, df df f' df, df df8
+    << {
+
+      af''8 -> af ->
+
+    } \\ {
+
+      f,16 f8 -> f16 ->
+
+    } >>
+  | f,16 -> f f f -> f f g g af af af af' ->
    << {
 
       \stemDown
@@ -77,37 +86,102 @@ music = \relative df {
     } \\ {
 
       s4
-      | \repeat unfold 8 { df,16 }
+      | df,16 -> df df df -> df df df -> df
 
     } >>
     df16 \repeat unfold 7 { <df af'> -> \downbow }
 
-  | af16 af af c' af, af' af, af' af, af af c' af, af bf c
-  | df16 df df c' df, af' df, af' df, df df c' df, af' af ( bf )
-  | af,16 af af c' af, af' af, af' af, af af c' af, af bf c
-  | df16 df df c' df, af' df, af' df, df df c' df, af' af ( bf )
+  \repeat volta 3 {
+    | << {
 
-  | af,16 af af c' af, af' af, af' af, af af c' af, af bf c
-  | df16 df df c' df, af' df, af' df df c c bf bf af16 g
-  | r8 r16 c ~ c4 r8 r16 ef ~ ef4
-  | r8 r16 f ~ f8 g af -> bf -> c -> ef ->
-
-  | f,,,16 -> f f f -> f f g g af af af af' -> \repeat unfold 4 { af16 }
-  | << {
-
-      af2
+      s8. c'8 [ af af ] s c
 
     } \\ {
 
-      \repeat unfold 8 { df,16 }
+      | af,16 af af c' af, af' af, af' af, af af c' af, af bf c
 
     } >>
+
+    \alternative {
+      \volta 1,2 {
+        | << {
+
+          s8. c'8 [ af af ] s c
+
+        } \\ {
+
+          | df,16 df df c' df, af' df, af' df, df df c' df, af' af ( bf )
+
+        } >>
+      }
+
+      \volta 3 {
+        | << {
+
+          s8. c8 [ af af ] s8. s4
+
+        } \\ {
+
+          | df,16 df df c' df, af' df, af' df df c c bf bf af16 g
+
+        } >>
+      }
+    }
+  }
+
+  | << {
+
+    | s8. c8 s8. s ef8
+
+  } \\ {
+
+    | f,16 f f c' f, f g g af af af ef' af, af af bf
+
+  } >>
+  | << {
+
+    | s8. f'8 s16 g8
+      \ottava #1
+      af bf c ef
+      \ottava #0
+
+  } \\ {
+
+    | df,,16 df df f' df, df g' df,
+      \ottava #1
+      af'' f, bf' f, c'' af, ef'' af,,
+      \ottava #0
+
+  } >>
+
+
+  | f,16 -> f f f -> f f g g af af af af' ->
+    << {
+
+        \repeat unfold 3 { af16  } af ~
+        | af2
+
+      } \\ {
+
+        s4
+        | df,16 -> df df df -> df df df af
+
+      } >>
     \repeat unfold 4 { df16 } df ( ef ) ef ef
   | r8 af,8 ~ -> af2.
 
-  | s1 * 7
-  | r2 r4 af'4 ~
-  | af1
+  | R1 * 7
+  | f4. g8
+    << {
+
+      r4 af' ~
+      | <df, af'>1
+
+    } \\ {
+
+      af2
+
+    } >>
 
   \bar "|."
 }
