@@ -8,146 +8,161 @@
   arranger = "Ben Rosen, bass"
 }
 
+hits = \relative a {
+  | \repeat unfold 2 { a2. }
+  | \repeat unfold 2 { <e a>2. }
+}
+
+instrumental = \relative a, {
+  | a4
+  \ottava #1
+  cs''4 a4
+  \ottava #0
+  | a,,4
+  \ottava #1
+  d''4 cs4
+  \ottava #0
+  | a,,4
+  \ottava #1
+  cs''4 a4
+  \ottava #0
+}
+
+riff = \relative d {
+  | d4 d'4 cs8 a,
+  | d4 \acciaccatura { e'8 } fs e cs a
+}
+
 music = \relative a {
-    \clef "bass"
-    \tempo 4 = 100
-    \key a \major
-    \time 3/4
+  \clef "bass"
+  \tempo 4 = 100
+  \key a \major
+  \time 3/4
 
-    | a2.
-    | a2.
-    | <e a>2.
-    | <e a>2.
+  \hits
 
-    | r4 a,8 e'16 fs16 a4
+  | r4 a,8 e'16 fs16 a4
+  \repeat volta 2 {
     | fs,4 r8 b16 cs16 e4
     | a,4 r8 e'16 fs16 a4
-    | fs,4 r8 b16 cs16 e8 fs8
+    | fs,4 r8 b16 cs16 e8 fs
 
-    | g,4 r8 a16 b16 d8 e8
-    | g4 g8 a,8 b8 cs8
-    | d4 d'4 cs8 a,8
-    | d4 \acciaccatura { e'8 ( } fs8 ) e8 cs8 a8
+    | g,4 r8 a16 b16 d8 e
+    | g4 g8 a, b cs
+    \riff
 
-    | a,4 r8 e'16 fs16 a4
-    | fs,4 r8 b16 cs16 e4
-    | a,4 r8 e'16 fs16 a4
-    | fs,4 r8 b16 cs16 e8 fs8
+    \alternative {
+      \volta 1 {
+        | a4 r8 e'16 fs16 a4
+      }
 
-    | g,4 r8 a16 b16 d8 e8
-    | g4 g8 a,8 b8 cs8
-    | d4 d'4 cs8 a,8
-    | d4 \acciaccatura { e'8 ( } fs8 ) e8 cs8 a8
+      \volta 2 {
+        | a,4
+        \ottava #1
+        d''4 cs4
+        \ottava #0
+      }
+    }
+  }
 
-    | a,4
-      \ottava #1
-      d''4 cs4
-      \ottava #0
-    | a,,4
-      \ottava #1
-      cs''4 a4
-      \ottava #0
-    | a,,4
-      \ottava #1
-      d''4 cs4
-      \ottava #0
-    | a,,4
-      \ottava #1
-      cs''4 a4
-      \ottava #0
+  \instrumental
 
-    | g,,4 r8 a16 b16 d8 e8
-    | g4 g8 a,8 b8 cs8
-    | d4 d'4 cs8 a,8
-    | d4 \acciaccatura { e'8 ( } fs8 ) e8 cs8 a8
+  | g,,4 r8 a16 b16 d8 e
+  | g4 g8 a, b cs
+  \riff
 
-    | a,4 d''4 cs4
-    | a,,4 cs''4 a4
-    | a,,4 d''4 cs4
-    | a,,4 cs''4 a4
+  | a,4
+  \ottava #1
+  d''4 cs4
+  \ottava #0
 
-    | r4 r4 fs4
-    | fs,,8 fs8 r4 r4
-    | a8 a8 r4 r4
+  \instrumental
 
-    \time 2/4
+  | r2 fs4
+  | fs,,8 fs8 r2
+  | a8 a8 r2
 
-    | fs8 fs8 r4
+  \time 2/4
 
-    \time 3/4
+  | fs8 fs8 r4
 
-    | g4 r8 a16 b16 d8 e8
-    | g4 g8 a,8 b8 cs8
-    | d4 d'4 cs8 a,8
-    | d4 \acciaccatura { e'8 ( } fs8 ) e8 cs8 a8
+  \time 3/4
 
-    a,8 a8 r8 e'16 fs16 a4
-    fs,8 fs8 r8 b16 cs16 e4
-    a,16 a16 a8 r8 e'16 fs16 a4
-    fs,16 fs16 fs8 r8 b16 cs16 e8 fs8
-    g,4 r8 a16 b16 d8 e8
-    g4 g8 a,8 b8 cs8
-    d4 d'4 cs8 a,8
-    d4 \acciaccatura { e'8 ( } fs8 ) e8 cs8 a,8
-    d4 d'4 cs8 a,8
-    d4 \acciaccatura { e'8 ( } fs8 ) e8 cs8 a8
-    c,2. :16
-    d2 :8 d8 e8
-    a,2 :8 a8 as8
-    b2 :8 a8 b8
-    c2 :8 d8 g8
-    fs2 :8 g8 fs8
-    e4 :8 e8 b8 e,8 es8
-    fs2 :8 e8 fs8
-    g2 :8 g8 a8
-    d4 :8 e4 :8 fs8 d8
-    a'4 :8 g4 :8 fs4 :8
-    e4 :8 d4 :8 df4 :8
-    c4 :8 \acciaccatura { b'8 ( } c8 ) d8 e8 c,8
-    d4 :8 fs'8 g8 fs8 d8
-    e8 a,8 e'8 b8 e8 cs8
-    e8 fs8 g8 a8 b8 d8
-    c,8 e,,8 c''8 e,,8 g8 e8
-    a2 :8 \acciaccatura { c'8 ( } d8 ) c8
-    d,8 a'8 d,8 a'8 d,8 a'8
-    a,4 d''4 cs4
-    a,,4 cs''4 a4
-    a,,4 d''4 cs4
-    a,,4 cs''4 a4
-    g,,4 r8 a16 b16 d8 e8
-    g4 g8 a,8 b8 cs8
-    d4 d'4 cs8 a,8
-    d4 \acciaccatura { e'8 ( } fs8 ) e8 cs8 a8
-    a,4 d''4 cs4
-    a,,4 cs''4 a4
-    a,,4 d''4 cs4
-    a,,4 cs''4 a4
-    g,,4 r8 a16 b16 d8 e8
-    g4 g8 a,8 b8 cs8
-    d4 d'4 cs8 a,8
-    d4 \acciaccatura { e'8 ( } fs8 ) e8 cs8 a,8
-    d4 d'4 cs8 a,8
-    d4 \acciaccatura { e'8 ( } fs8 ) e8 cs8 a8
-    a2.
-    a2.
-    <e a>2.
-    <e a>2.
-    a2 a4
-    fs,2 fs4
+  | g4 r8 a16 b16 d8 e8
+  | g4 g8 a,8 b8 cs8
+  | \riff
+
+  | a8 a8 r8 e'16 fs16 a4
+  | fs,8 fs8 r8 b16 cs16 e4
+  | a,16 a16 a8 r8 e'16 fs16 a4
+  | fs,16 fs16 fs8 r8 b16 cs16 e8 fs8
+  | g,4 r8 a16 b16 d8 e8
+  | g4 g8 a,8 b8 cs8
+  | \repeat volta 2 {
+    \riff
+  }
+
+  | \repeat unfold 6 { c8 }
+  | \repeat unfold 4 { d8 } d e
+  | \repeat unfold 4 { a,8 } a as
+  | \repeat unfold 4 { b8 } a b
+
+  | \repeat unfold 4 { c8 } d g
+  | \repeat unfold 4 { fs8 } g fs
+  | e8 e e b e, es
+  | \repeat unfold 4 { fs8 } e fs
+
+  | \repeat unfold 4 { g8 } g a
+  | d8 d e e fs d
+  | a'8 a g g fs fs
+  | e8 e d d df df
+
+  | c8 c \acciaccatura { b' } c d e c,
+  | d8 d fs' g fs d
+  | e8 a, e' b e cs
+  | e8 fs g a b d
+
+  | c,8 e,, c'' e,, g e
+  | \repeat unfold 4 { a8 } \acciaccatura { c' } d c
+  | d,8 a' d, a' d, a'
+
+  | a,4
+  \ottava #1
+  d''4 cs4
+  \ottava #0
+  | \instrumental
+
+  | g,4 g8 a, b cs
+  | \riff
+
+  | a4
+  \ottava #1
+  d''4 cs4
+  \ottava #0
+  | \instrumental
+
+  | g,,4 r8 a16 b16 d8 e8
+  | g4 g8 a,8 b8 cs8
+
+  | \repeat volta 2 {
+    \riff
+  }
+
+  | \hits
+
+  | \repeat unfold 3 {
     a'2 a4
     fs,2 fs4
-    a'2 a4
-    fs,2 fs4
-    \times 3/2  {
-        <\tweak style #'diamond a' \tweak style #'diamond d \tweak style #'diamond g>4
-        <\tweak style #'diamond cs \tweak style #'diamond fs \tweak
-            style #'diamond b>4 }
+  }
 
-    \times 3/2  {
-        <\tweak style #'diamond a \tweak style #'diamond d \tweak style #'diamond g>4
-        <\tweak style #'diamond cs \tweak style #'diamond fs \tweak
-            style #'diamond b>4 }
-    \bar "."
+  \repeat unfold 2 {
+    <\tweak style #'diamond a' \tweak style #'diamond d \tweak style #'diamond g>4.
+    <\tweak style #'diamond cs \tweak style #'diamond fs \tweak style #'diamond b>8 ~
+    <\tweak style #'diamond cs \tweak style #'diamond fs \tweak style #'diamond b>4
+  }
+
+
+  \bar "|."
 }
 
 \score {
