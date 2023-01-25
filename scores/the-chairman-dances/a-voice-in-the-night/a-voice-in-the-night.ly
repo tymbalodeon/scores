@@ -8,12 +8,27 @@
   arranger = "Ben Rosen, bass"
 }
 
+riff = \relative f' {
+  | \ottava #1
+    f8 bf c ef, ~ ef f ef4
+    \ottava #0
+  | \acciaccatura { bf8 ( } c ) ef f bf, ~ bf c bf4
+  | af2 ~ af8 ef'4 d8 ~
+  | d8 c bf g af bf ef, f
+
+  | f'8 bf c ef, ~ ef f ef4
+  | \acciaccatura { bf8 ( } c ) ef f bf, ~ bf c bf4
+  | af1 ~
+  | af8 ef' d c bf af ef e
+
+}
+
 music = \relative c {
   \clef "bass"
   \tempo 4 = 120
   \key af \major
 
-  | R1 * 8
+  | R1 * 7
 
   | r2 r4 ef8 e
 
@@ -24,7 +39,7 @@ music = \relative c {
 
     \alternative {
       \volta 1 {
-        | af4. af8 bf bf ef, e
+        | af4. af8 ( bf ) bf ef, e
       }
 
       \volta 2 {
@@ -37,21 +52,13 @@ music = \relative c {
     }
   }
 
-  | f4 f4 ef'8 bf'8 ef,8
-    \once \override NoteHead.style = #'cross af,8
-  | c8 ef8 f8 bf,8 ~ bf8 c8 bf4
-  | af2. ef'8 af8 ~
+  | f4 f ef'8 bf' ef,
+    \once \override NoteHead.style = #'cross af,
+  | c8 ef f bf, ~ bf c8 bf4
+  | af2. ef'8 af ~
   | af1
 
-  | f'8 bf8 c8 ef,8 ~ ef8 f8 ef4
-  | \acciaccatura { bf8 ( } c8 ) ef8 f8 bf,8 ~ bf8 c8 bf4
-  | af2 ~ af8 ef'4 d8 ~
-  | d8 c8 bf8 g8 af8 bf8 ef,8 f8
-
-  | f'8 bf8 c8 ef,8 ~ ef8 f8 ef4
-  | \acciaccatura { bf8 ( } c8 ) ef8 f8 bf,8 ~ bf8 c8 bf4
-  | af1 ~
-  | af8 ef'8 d8 c8 bf8 af8 ef8 e8
+  \riff
 
   f4 f4 ef4 ef4
   c4 c4 bf4 bf4
@@ -129,14 +136,8 @@ music = \relative c {
   bf8 c8 d4 d8 ef8 f4
   <bf, d'>1
   <bf d'>1
-  f'8 bf8 c8 ef,8 ~ ef8 f8 ef4
-  \acciaccatura { bf8 ( } c8 ) ef8 f8 bf,8 ~ bf8 c8 bf4
-  af2 ~ af8 ef'4 d8 ~
-  d8 c8 bf8 g8 af8 bf8 c,8 ef8
-  f'8 bf8 c8 ef,8 ~ ef8 f8 ef4
-  \acciaccatura { bf8 ( } c8 ) ef8 f8 bf,8 ~ bf8 c8 bf4
-  af2 ~ af8 \acciaccatura { f'8 } g4 f8
-  r8 ef8 d8 c8 bf8 af8 ef8 e8
+
+  \riff
   f4 f4 ef4 ef4
   c4 c4 bf4 bf4
   af2. ef'8 af8 ~

@@ -72,7 +72,7 @@ music = \relative c,  {
   \key b \major
 
   \partial 4
-  | r4
+  r4
 
   \verse
 
@@ -105,14 +105,14 @@ music = \relative c,  {
       }
 
       \volta 3 {
-        r8 \acciaccatura { b'' } cs  b gs fs ds cs ( b )
+        r8 \acciaccatura { b''' } cs  b gs fs ds cs ( b )
       }
     }
   }
 
   \verse
 
-  | a4 e' a,8 cs a e' ~
+  | a,4 e' a,8 cs a e' ~
   | e8 gs4 b8 ~ b cs b4
   | b,4 fs' b,8 fs' b, ds'
   | b,8 e' b, ds' b, b' fs4
