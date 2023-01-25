@@ -34,9 +34,12 @@ music = \relative c'' {
 
   | fs2. as4
 
-  | ds''2 cs
+
+  | \ottava #1
+    ds''2 cs
   | b1 ~
   | b4 gs fs gs
+    \ottava #0
 
   \time 2/4
 
@@ -45,11 +48,13 @@ music = \relative c'' {
   \time 4/4
 
   | <cs, as'>1 ~
-  | as'2 r
-  | ds2 cs4 ~ cs16 ds cs8
+  | <fs, cs' as'>2. fs,4
+  | \ottava #1
+    ds'''2 cs4 ~ cs16 ds cs8
   | b2 as8. fs16 ~ fs8 ds ~
   | ds2 ds4 e
   | fs1
+    \ottava #0
   | b,,1
 
   \key e \major
