@@ -20,7 +20,7 @@ music = \relative c'' {
 
   \time 4/4
 
-  | R1 * 6
+  | R1 * 5
 
   | << {
 
@@ -33,7 +33,6 @@ music = \relative c'' {
   } >>
 
   | fs2. as4
-
 
   | \ottava #1
     ds''2 cs
