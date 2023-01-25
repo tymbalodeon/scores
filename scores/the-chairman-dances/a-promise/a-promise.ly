@@ -71,7 +71,8 @@ music = \relative c,  {
   \tempo 4 = 140
   \key b \major
 
-  | R1
+  \partial 4
+  | r4
 
   \verse
 
