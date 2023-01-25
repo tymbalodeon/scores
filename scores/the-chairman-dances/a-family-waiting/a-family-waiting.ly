@@ -71,14 +71,14 @@ music = \relative a {
   | g4 g8 a, b cs
   \riff
 
-  | a,4
+  | a4
   \ottava #1
   d''4 cs4
   \ottava #0
 
   \instrumental
 
-  | r2 fs4
+  | r2 fs,4
   | fs,,8 fs8 r2
   | a8 a8 r2
 
@@ -156,11 +156,10 @@ music = \relative a {
   }
 
   \repeat unfold 2 {
-    <\tweak style #'diamond a' \tweak style #'diamond d \tweak style #'diamond g>4.
-    <\tweak style #'diamond cs \tweak style #'diamond fs \tweak style #'diamond b>8 ~
-    <\tweak style #'diamond cs \tweak style #'diamond fs \tweak style #'diamond b>4
+    | <a' \harmonic d \harmonic g \harmonic>4.
+      <cs \harmonic fs \harmonic b \harmonic>8 ~
+      <cs \harmonic fs \harmonic b \harmonic>4
   }
-
 
   \bar "|."
 }
