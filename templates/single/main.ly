@@ -1,7 +1,6 @@
 \version "2.24.0"
 
 \include "settings.ily"
-\include "style.ily"
 
 \header {
   title = "Title"
@@ -14,17 +13,12 @@ music = \relative c'' {
   | c1
 }
 
-\layout {
-  \context {
-    \Score \consists
-    #(set-bars-per-line '(4))
-  }
-}
-
 \score {
   \new Staff \with {
     instrumentName = "Instrument"
+    \numericTimeSignature
   } {
+    \compressMMRests
     \music
   }
 }
