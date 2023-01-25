@@ -8,53 +8,94 @@
   arranger = "Ben Rosen, bass"
 }
 
-verse = \relative fs, {
-  \repeat volta 2 {
-    | r4 fs2 -> cs'4
-    | fs'8 ds4 cs8 ~ cs fs, ( gs ) b ~
-    | b4 cs, ~ -> cs8 ds' ( e ) ds ~
+loco = _\markup \italic "loco"
 
-    \alternative {
-      \volta 1 {
-        | ds8 fs, ( gs ) b gs fs ds cs
-        | gs4 ds' b'8 as gs16 fs ds8 ~
-        | ds4 cs b as
-        | << {
+verse_base = \relative fs, {
+  | r4 fs2 -> cs'4
+  | fs'8 ds4 cs8 ~ cs fs, ( gs ) b ~
+  | b4 cs, ~ -> cs8 ds' ( e ) ds ~
+  | ds8 fs, ( gs ) b gs fs ds cs
 
-          r4 <b' fs'> ~ <b fs'>8 b \glissando ( fs' ) ds' ~
-          ds8 ~ <fs, ds'>4 cs'8 ~ cs b gs fs
+  | gs4 ds' b'8 as gs16 fs ds8 ~
+  | ds4 cs b as
+  << {
 
-        } \\ {
+    | r4
+      \ottava #1
+      <b' fs'> ~ <b fs'>8 b \glissando ( fs' ) ds' ~
+    | ds8 ~ <fs, ds'>4 cs'8 ~ cs b gs fs
+      \ottava #0
 
-          e,,2 e ~
-          e4 e2.
+  } \\ {
 
-        } >>
-      }
+    \set Voice.middleCPosition = #(+ 6)
+    | e,,2 \loco e ~
+    | e4 e2.
+    \unset Voice.middleCPosition
 
-      \volta 2 {
-        | ds''8 \repeatTie fs, ( gs ) b cs, ( ds ) fs4
-        | gs,4 ds' b''8 as gs16 fs ds8 ~
-        | ds4 cs b as
-        | << {
+  } >>
 
-          e1 \harmonic
-          <as' cs>8 ( <gs b>4 ) <fs as>8 ~ <fs as> <e gs>4.
+  | r4 fs2 -> cs'4
+  | fs'8 ds4 cs8 ~ cs fs, ( gs ) b ~
+}
 
-        } \\ {
+verse_end = \relative gs, {
+  | gs4 ds'
+    \ottava #1
+    b''8 as gs16 fs ds8 ~
+  | ds4
+    \ottava #0
+    cs b as
+  | << {
 
-          r4 e,,2 e4 ~
-          e1
+    e1 \harmonic
+    \ottava #1
+    <as' cs>8 ( <gs b>4 ) <fs as>8 ~ <fs as> <e gs>4.
+    \ottava #0
 
-        } >>
-      }
-    }
-  }
+  } \\ {
+
+    r4 e,,2 e4 ~ \loco
+    \set Voice.middleCPosition = #(+ 6)
+    e1
+    \unset Voice.middleCPosition
+
+  } >>
+}
+
+verse_one = \relative b {
+  \verse_base
+
+  | b4 cs, ~ -> cs8 ds' ( e ) ds ~
+  | ds8 fs, ( gs ) b cs, ( ds ) fs4
+
+  \verse_end
+}
+
+verse_two = \relative b {
+  \verse_base
+
+  | b4 cs, ~ -> cs8 ds' ( e ) fs ~
+  | fs8 fs, ( gs ) b cs, ( ds ) fs4
+
+  \verse_end
+}
+
+verse_three = \relative b {
+  \verse_base
+
+  | b4 cs, ~ -> cs8 ds' ( e ) fs
+  | e8 ( ds ) cs b cs, ( ds ) fs4
+
+  \verse_end
 }
 
 riff_base = \relative b {
-  | r4 b -> r8 ds' fs, ( gs ) ~
+  | r4 b -> r8
+    \ottava #1
+    ds' fs, ( gs ) ~
   | gs8 cs fs, b ds, gs cs, fs
+    \ottava #0
   | r4 gs, -> r8 cs ( ds ) fs ~
 }
 
@@ -74,7 +115,7 @@ music = \relative c,  {
   \partial 4
   r4
 
-  \verse
+  \verse_one
 
   \repeat volta 2 {
     \riff_base
@@ -90,13 +131,14 @@ music = \relative c,  {
     }
   }
 
-  \verse
+  \verse_two
+
 
   \repeat volta 3 {
     \riff_base
 
     \alternative {
-      \volta 1 {
+      \volta 1,3 {
         \riff_volta_one
       }
 
@@ -104,13 +146,16 @@ music = \relative c,  {
         \riff_volta_two
       }
 
-      \volta 3 {
-        r8 \acciaccatura { b''' } cs  b gs fs ds cs ( b )
+      \volta 4 {
+        r8
+        \ottava #1
+        \acciaccatura { b''' -"Solo" } cs  b gs fs ds cs ( b )
+        \ottava #0
       }
     }
   }
 
-  \verse
+  \verse_three
 
   | a,4 e' a,8 cs a e' ~
   | e8 gs4 b8 ~ b cs b4
@@ -118,16 +163,33 @@ music = \relative c,  {
   | b,8 e' b, ds' b, b' fs4
 
   | a,4 e' a,8 cs a e' ~
-  | e8 gs4 b8 cs e cs4
+  | e8 gs4 b8 ( cs ) e cs4
   | b,4 fs' b,8 fs' b, ds'
   | b,8 e' b, ds' b, b' fs4
 
-  | a,4 e'' a,,8 fs'' gs b
-  | a,,8 cs'' a,, ds'' a,, e''' ds4
+  | a,4
+    \ottava #1 e''
+    \set Voice.middleCPosition = #(+ 6)
+    a,,8 \loco
+    \unset Voice.middleCPosition
+    fs'' gs b
+  | \set Voice.middleCPosition = #(+ 6)
+    a,,8 \loco
+    \unset Voice.middleCPosition
+    cs''
+    \set Voice.middleCPosition = #(+ 6)
+    a,,
+    \unset Voice.middleCPosition
+    ds''
+    \set Voice.middleCPosition = #(+ 6)
+    a,,
+    \unset Voice.middleCPosition
+    e''' ds4
+    \ottava #0
   | b,,4 fs' b,8 fs' b, ds'
   | b,8 e' b, ds' b, b' fs4
 
-  \repeat volta 2 {
+  \repeat volta 6 {
     | a,4 gs'2. ~
     | gs4 gs2.
   }
