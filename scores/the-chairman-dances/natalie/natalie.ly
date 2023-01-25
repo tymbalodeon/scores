@@ -8,6 +8,14 @@
   arranger = "Ben Rosen, bass"
 }
 
+loco = _\markup \italic "loco"
+
+loco_a = {
+  \set Voice.middleCPosition = #(+ 6)
+  a,,1 \loco
+  \unset Voice.middleCPosition
+}
+
 music = \relative c'' {
   \clef "bass"
   \key b \major
@@ -24,11 +32,23 @@ music = \relative c'' {
 
   | << {
 
-    <gs as>1 \trill
+    \ottava #1
+    as1 \trill -\markup \italic "(trill A♯ only)"
+    \ottava #0
 
   } \\ {
 
-    e,,2. e4
+    \ottava #1
+    gs1
+    \ottava #0
+
+  } \\ {
+
+    \set Voice.middleCPosition = #(+ 6)
+    \stemDown
+    e,,2. \loco e4
+    \stemNeutral
+    \unset Voice.middleCPosition
 
   } >>
 
@@ -38,7 +58,6 @@ music = \relative c'' {
     ds''2 cs
   | b1 ~
   | b4 gs fs gs
-    \ottava #0
 
   \time 2/4
 
@@ -47,7 +66,9 @@ music = \relative c'' {
   \time 4/4
 
   | <cs, as'>1 ~
-  | <fs, cs' as'>2. fs,4
+  | <fs, cs' as'>2.
+    \ottava #0
+    fs,4 \loco
   | \ottava #1
     ds'''2 cs4 ~ cs16 ds cs8
   | b2 as8. fs16 ~ fs8 ds ~
@@ -60,41 +81,49 @@ music = \relative c'' {
 
   | << {
 
+      \ottava #1
       e'2 b'8. a16 ~ a8 gs
+      \ottava #0
 
     } \\ {
 
-      a,,1
+      \loco_a
 
     } >>
   | <b fs'>1
   | << {
 
+      \ottava #1
       e'2 cs'8. b16 ~ b8 a
+      \ottava #0
 
     } \\ {
 
-      a,,1
+      \loco_a
 
     } >>
   | <b fs'>1
   | << {
 
+      \ottava #1
       e'2 gs8. a16 ~ a8 gs
+      \ottava #0
 
     } \\ {
 
-      a,,1
+      \loco_a
 
     } >>
   | <b fs'>1
   | << {
 
-    e'2 \acciaccatura { cs'8 ( } ds8. ) cs16 ~ cs8 b
+      \ottava #1
+      e'2 \acciaccatura { cs'8 ( } ds8. ) cs16 ~ cs8 b
+      \ottava #0
 
-    } \\ {
+      } \\ {
 
-      a,,1
+      \loco_a
 
     } >>
   | <b fs'>1 ~
