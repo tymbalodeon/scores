@@ -11,41 +11,41 @@
 music = \relative c {
   \clef "bass"
   \key f \major
-  \time 3/4
+  \time 9/16
 
-  | R2. * 6
+  | R1 * 351/16
 
-  | c2.
-  | g2.
-  | a2.
-  | f2.
+  | c4. ~ c8.
+  | g4. ~ g8.
+  | a4. ~ a8.
+  | f4. ~ f8.
 
-  | c'2.
-  | g2.
-  | a2.
-  | r4 \tuplet 3/2 { a'4 g8 }
+  | c'4. ~ c8.
+  | g4. ~ g8.
+  | a4. ~ a8.
+  | f8. a'8 g16 f8.
 
-  | f4
-  | e4 \tuplet 3/2 { e4 d8 }
-  | c4
-  | g2.
+  | e8. e8 d16 c8.
+  | g4. ~ g8.
+  | a4. ~ a8.
+  | f4. ~ f8.
 
-  | a2.
-  | f2.
-  | c'2.
-  | g2.
+  | c'4. ~ c8.
+  | g4. ~ g8.
+  | a4. ~ a8.
+  | f4. ~ f8.
 
-  a2.
-  f2.
-  a2 a4
-  g2 e4
-  f2. ~
-  <f f'>2 f4
-  a2 a4
-  c4 d4 e4
-  f2. ~
-  <f, f'>2.
-  R1 * 12
+  | a4. a8.
+  | g8. e f ~
+  | <f f'>4. f8.
+
+  | a4. a8.
+  | c8. d e
+  | f4. ~ f8. ~
+  | <f, f'>4. ~ <f f'>8.
+
+  | R1 * 108/16
+
   bf4 ~ \tuplet 3/2 {
     bf4 a'8 }
   c4
