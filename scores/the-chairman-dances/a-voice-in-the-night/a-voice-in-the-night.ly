@@ -8,7 +8,7 @@
   arranger = "Ben Rosen, bass"
 }
 
-verse = \relative f {
+verse_base = \relative f {
   \repeat volta 3 {
     | f4 -. f -- ef -. ef --
     | c4 ^\markup \italic "sim." c bf bf
@@ -31,26 +31,58 @@ verse = \relative f {
 
   | f4 f ef'8 bf' ef,4
   | c8 ef f bf, ~ bf c8 bf4
-  | af2. ef'8 af ~
-  | af1
 }
 
-riff = \relative f' {
-  \repeat volta 2 {
+verse_main = \relative af {
+  \verse_base
+
+  | af2. ef'8 af ~
+  | af1
+
+}
+
+riff_base = \relative f' {
     | \ottava #1
     f8 bf c ef, ~ ef f ef4
     \ottava #0
     | \acciaccatura { bf8 ( } c ) ef f bf, ~ bf c bf4
+}
+
+riff_first_ending = \relative af {
+  | af2 ~ af8 ef'4 d8 ~
+  | d8 c bf g af bf ef, f
+}
+
+riff = \relative f' {
+  \repeat volta 2 {
+    \riff_base
 
     \alternative {
       \volta 1 {
-        | af2 ~ af8 ef'4 d8 ~
-        | d8 c bf g af bf ef, f
+        \riff_first_ending
       }
 
       \volta 2 {
         | af1 ~
         | af8 ef' d c bf af ef e
+      }
+    }
+  }
+}
+
+
+riff_end = \relative af {
+  \repeat volta 2 {
+    \riff_base
+
+    \alternative {
+      \volta 1 {
+        \riff_first_ending
+      }
+
+      \volta 2 {
+        | af2 ~ af8 \acciaccatura { f' } g4 f8 ~
+        | f ef d c bf af ef e
       }
     }
   }
@@ -64,11 +96,11 @@ music = \relative c {
   | R1 * 7
 
   | r2 r4 ef8 e
-  \verse
+  \verse_main
 
   \riff
 
-  \verse
+  \verse_main
 
   | \ottava #1
     <f af'>4 <f af'> <ef g'> <ef g'>
@@ -126,8 +158,8 @@ music = \relative c {
   | <bf d'>1
     \ottava #0
 
-  \riff
-  \verse
+  \riff_end
+  \verse_base
 
   r4 <af, c''>2. ~ -+
   <af c''>1
