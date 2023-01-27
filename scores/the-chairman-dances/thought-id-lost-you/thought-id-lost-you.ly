@@ -72,38 +72,38 @@ music = \relative c {
       \ottava #0
       e,, f fs
 
-    | g8 g g d' g2
+    | g8 g g g g g g d'
+    | g8 g g g g2
 
     | a,4 c'8 b g8. a32 g f8 e
     | c4 a g'8 f e d
-
     | c8 e c' b g8. a32 b c8 d
     | e8 c
       \ottava #1
       d' c b g
       \ottava #0
       c,, b
+
     | a4 c'8 b g8. a32 g f8 e
     | c4 a g'8 e, g gs
-
     | a8 c g' f e d c b
     | f4 a'8 f, g a b g
+
     | a4 c'8 b g8. a32 g f8 e
     | c4 a g'8 f e d
-
     | c8 e c' b g8. a32 b c8 d
     | e8 c,
       \ottava #1
       g'' e, b'' g, d'' b,
       \ottava #0
+
     | a,4 c'8 b g8. a32 g f8 e
     | c4 a g'8 e, g gs
-
     | a8 c g' f e d c b
     | bf4 \acciaccatura { e'16 } f e d c bf a g f e d c bf
+
     | a8 a e'16 e,16 a8 a' e, f fs
     | g4. g8 d'4. d8
-
     | g1
 
     \bar "|."
