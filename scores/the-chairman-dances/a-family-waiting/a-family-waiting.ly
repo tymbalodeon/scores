@@ -78,7 +78,7 @@ music = \relative a {
 
   \instrumental
 
-  | r2 fs,4
+  | r2 fs,4 \glissando
   | fs,,8 fs8 r2
   | a8 a8 r2
 
@@ -132,7 +132,8 @@ music = \relative a {
   \ottava #0
   | \instrumental
 
-  | g,4 g8 a, b cs
+  | g,,4 r8 a16 b16 d8 e
+  | g4 g8 a, b cs
   | \riff
 
   | a4
@@ -150,10 +151,12 @@ music = \relative a {
 
   | \hits
 
-  | \repeat unfold 3 {
-    a'2 a4
-    fs,2 fs4
+  \repeat unfold 2 {
+    | a'2 a4 \glissando
+    | fs,2 fs4 \glissando
   }
+  | a'2 a4 \glissando
+  | fs,2 fs4
 
   \repeat unfold 2 {
     | <a' \harmonic d \harmonic g \harmonic>4.
