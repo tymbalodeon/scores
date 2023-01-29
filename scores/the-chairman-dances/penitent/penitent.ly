@@ -142,8 +142,8 @@ music = \relative c' {
   | \acciaccatura { bf8 } c8. bf8 a16 bf8.
   | g4.
     \ottava #1
-    \acciaccatura { a'8 } bf8
-  | a16 g8 d16 bf8 a16 g8.
+    \acciaccatura { a'8 } bf8 a16
+  | g8 d16 bf8 a16 g8.
     \ottava #0
 
   | d4. ~ d8.
@@ -226,7 +226,7 @@ music = \relative c' {
   | f8. ( g )
     \ottava #0
     c,
-  | ( d8. )
+  |  d8.
   << {
     <e c'>4. ~
     | <e c'>4. ~ <e c'>8.
