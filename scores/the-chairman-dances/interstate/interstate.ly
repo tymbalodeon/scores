@@ -43,76 +43,70 @@ music = \relative df {
   \time 9/16
 
   | <ff cf'>4. ~ <ff cf'>8.
-
-  % \time 6/16
-
   | <gf df'>4. ~ <gf df'>8. ~
   | <gf df'>4. ~ <gf df'>8.
 
   \time 9/16
 
-  f'8. ~ f8 gf16 f8.
+  | f'8. ~ f8 gf16 f8.
+  | c4. ~ c8. ~
 
-  \time 5/8  c4. ~ c8 bf8
-  \time 9/16  \tuplet 3/2 {
-    af8 ff16 ~ }
-  \tuplet 3/2  {
-    ff8 cf16 ~ }
-  cf8
-  \time 6/16  df2.
-  \time 9/16  f8 \tuplet 3/2 {
-    f8 ef16 }
-  df8
-  gf,8 af8 bf8
-  \times 6/4  {
-    af16 bf16 df16 ef32 ff,32 }
+  \time 6/16
 
-  \times 3/5  {
-    ef''8 ff,,8 cf'''8 ef,8 ff,,8 }
+  | c8. bf
 
-  \times 3/5  {
-    ef''8 ff2 }
+  \time 9/16
 
-  f8 ~ \tuplet 3/2 {
-    f8 gf16 }
-  f8
-  \time 5/8  c4. \tuplet 3/2 {
-    af'8 c,16 }
-  bf8
-  \time 9/16  \tuplet 3/2 {
-    af8 ff'16 }
-  \tuplet 3/2  {
-    af,8 ff16 }
-  cf8
-  \time 6/16  df'8 gf,,4 ~ -+ _\markup{ \tiny {R.H.} } gf4.
-  \time 9/16  f'8 \tuplet 3/2 {
-    f8 ef16 }
-  df8
-  gf,8 af8 bf8
-  \once \omit TupletBracket
-  \times 6/4  {
-    af16 bf16 df16 ef32 ff,32 }
+  | af8 ff16 ~ ff8 cf16 ~ cf8.
 
-  \times 3/5  {
-    ef''8 ff,,8 cf'''8 ef,8 ff,,8 }
+  \time 6/16
 
-  \times 3/5  {
-    ef''8 ff4 af,4 }
+  | df4.
 
-  \time 6/16  s1.
-  \time 9/16  f8 ~ \tuplet 3/2 {
-    f8 gf16 }
-  f8
-  \time 5/8  c4. c8 bf8
-  \time 9/16  af4.
-  \time 6/16  bf4. ~ bf8 af8 gf8
-  \time 9/16  f4.
-  gf8 af8 bf8
-  \times 6/4  {
-    af16 bf16 df16 ef32 ff,32 }
+  \time 9/16
 
-  \times 3/5  {
-    gf''8 ff,,8 ef'''8 gf,8 ff,,8 }
+  | f8. f8 ef16 df8.
+  | gf,8. af bf
+  | \tuplet 4/3 { af8. bf df ef8 ff,16 }
+  | \tuplet 5/3 { ef''8. ff,, cf''' ef, ff,, }
+
+  | \tuplet 5/3  { ef''8. ff2. }
+  | f8. ~ f8 gf16  f8.
+  | c4. ~ c8.
+
+  \time 6/16
+
+  | af'8 c,16 bf8.
+
+  \time 9/16
+
+  | af8 ff'16 af,8 ff16 cf8.
+  | df'8. gf,,4.~ -+
+  | gf4. ~ gf8.
+  | f'8. f8 ef16 df8.
+
+  | gf,8. af bf
+  | \tuplet 4/3 { af8. bf df ef8 ff,16 }
+  | \tuplet 5/3 { ef''8. ff,, cf''' ef, ff,, }
+  | \tuplet 5/3 { ef''8. ff4. af,4. }
+
+  | f8. ~ f8 gf16 f8.
+  | c4. ~ c8. ~
+
+  \time 6/16
+
+  | c8. bf
+
+  \time 9/16
+
+  | af4. ~ af8.
+  | bf4. ~ bf8. ~
+  | bf8. af8. gf
+  | f4. ~ f8.
+
+  | gf8. af bf
+  | \tuplet 4/3 { af8. bf df ef8 ff,16 }
+  | \tuplet 5/3 { gf''8. ff,, ef''' gf, ff,, }
 
   ef'''4 gf,8
   f,8 ~ \tuplet 3/2 {
