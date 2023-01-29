@@ -169,55 +169,57 @@ music = \relative c' {
   | e8. f g
   | a8. bf c8 c,16
 
-  % \tuplet 3/2  {
-  %   d8 f'16 ~ }
-  % f8 ~ \tuplet 3/2 {
-  %   f8 d,16 }
-  % \tuplet 3/2  {
-  %   e8 g'16 ~ }
-  % g8 ~ \tuplet 3/2 {
-  %   g8 e,16 }
+  | d8 f'16 ~ f8. ~ f8 d,16
+  | e8 g'16 ~ g8. ~ g8 e,16
+  | f8 a'16 ~ a8. ~ a8 f,16
+  | a'8 g16 f8 e16 d8.
 
-  % \tuplet 3/2  {
-  %   f8 a'16 ~ }
-  % a8 ~ \tuplet 3/2 {
-  %   a8 f,16 }
-  % \tuplet 3/2  {
-  %   a'8 g16 }
-  % \tuplet 3/2  {
-  %   f8 e16 }
-  % d8
-  % bf8 a'4 bf,8 a'8 bf,8
-  % g8 a8 bf8 a8 g8 f8
-  % d,8 d8 \tuplet 3/2 {
-  %   d8 c16 }
-  % e8 e8 \tuplet 3/2 {
-  %   e8 c16 }
+  | bf8. a'4.
+  | bf,8. a' bf,
+  | g8. a bf
+  | a8. g f
 
-  % f8 f8 \tuplet 3/2 {
-  %   f8 c16 }
-  % f8 g8 a8
-  % bf8 d8 f8 d''8 c8 bf8
-  % a8 f8 d8 c8 bf8 a8
-  % d,,8 a'8 d8 e,8 e'8 c8
-  % f,8 a'8 g8 f8 e8 c8
-  % bf8 d'4 bf,8 d'8 bf,8
-  % g8 a8 bf8 a8 g8 f8
-  % d8 d8 \tuplet 3/2 {
-  %   d8 c16 }
-  % e8 e8 \tuplet 3/2 {
-  %   e8 c16 }
+  | d,8. d d8 c16
+  | e8. e e8 c16
+  | f8. f f8 c16
+  | f8. g a
 
-  % f8 f8 \tuplet 3/2 {
-  %   f8 c16 }
-  % f8 g8 a8
-  % bf8 d8 f8 a8 bf8 c8
-  % g8 a8 bf8 a8 g8 f8
-  % d,8 d''8 c8 e,,8 e''8 c8
-  % f,,8 a''8 g8 f8 e8 c8
-  % bf,8 f'8 bf8 c'8 bf8 a8
-  % f8 ( g8 ) c,8 ( d8 ) <e c'>4
-  % <e c'>2.
+  | bf8. d f
+  | d''8. c bf
+  | a8. f d
+  | c8. bf a
+
+  | d,,8. a' d
+  | e,8. e' c
+  | f,8. a' g
+  | f8. e c
+
+  | bf8. d'4.
+  | bf,8. d' bf,
+  | g8. a bf
+  | a8. g f
+
+  | d8. d d8 c16
+  | e8. e e8 c16
+  | f8. f f8 c16
+  | f8. g a
+
+  | bf8. d f
+  | a8. bf c
+  | g8. a bf
+  | a8. g f
+
+  | d,8. d'' c
+  | e,,8. e'' c
+  | f,,8. a'' g
+  | f8. e c
+
+  | bf,8. f' bf
+  | c'8. bf a
+  | f8. ( g ) c,
+  | ( d8. ) <e c'>4.
+
+  | <e c'>4. ~ <e c'>8.
 
   \bar "|."
 }
