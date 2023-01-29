@@ -93,104 +93,56 @@ music = \relative c' {
       c,,16
   }
 
-  % \time 6/8
+  | f4. ~ f8. ~
+  | f4. c8.
+  | f4. ~ f8. ~
+  | f4. c8.
 
-  % \repeat volta 2 {
-  %   a''8 ~ \tuplet 3/2 {
-  %     a8 f16 ~ }
-  %   \tuplet 3/2  {
-  %     f8 a,16 }
-  %   c'8 ~ \tuplet 3/2 {
-  %     c8 a16 ~ }
-  %   \tuplet 3/2  {
-  %     a8 a,16 }
+  | c'4. ~ c8. ~
+  | c4. ~ c8.
+  | c,4. ~ c8. ~
+  | c4. ~ c8.
 
-  %   e''8 ~ \tuplet 3/2 {
-  %     e8 c16 ~ }
-  %   \tuplet 3/2  {
-  %     c8 a,16 }
-  %   g''8 ~ \tuplet 3/2 {
-  %     g8 e16 ~ }
-  %   \tuplet 3/2  {
-  %     e8 c,,16 }
+  \repeat volta 2 {
 
-  %   b'''8 ~ \tuplet 3/2 {
-  %     b8 g16 ~ }
-  %   \tuplet 3/2  {
-  %     g8 c,,,16 }
-  %   d'''8 ~ \tuplet 3/2 {
-  %     d8 a16 ~ }
-  %   \tuplet 3/2  {
-  %     a8 c,,,16 }
+    f4 ~ \once \omit TupletBracket
+    \tuplet 3/2  {
+      f8 c16 }
+    \tuplet 3/2  {
+      c''8 d16 ~ }
+    \tuplet 3/2  {
+      d8 a16 }
+    \tuplet 3/2  {
+      e'8 c,,16 }
 
-  %   \alternative {
-  %     \volta 1 {
-  %       g'''8 ~ \tuplet 3/2 {
-  %         g8 e16 ~ }
-  %       \tuplet 3/2  {
-  %         e8 c,,16 }
-  %       d''8 ~ \tuplet 3/2 {
-  %         d8 c,16 ~ }
-  %       c8
-  %     }
+    f4 ~ \once \omit TupletBracket
+    \tuplet 3/2  {
+      f8 c16 }
+    \tuplet 3/2  {
+      g'8 a16 }
+    d,8 e8
+    c'4 ~ \once \omit TupletBracket
+    \tuplet 3/2  {
+      c8 c,16 }
+    e''8 ~ \tuplet 3/2 {
+      e8 c16 ~ }
+    c8
+    c,4 ~ \once \omit TupletBracket
+    \tuplet 3/2  {
+      c8 c,16 }
+    e''8 ~ \tuplet 3/2 {
+      e8 c16 ~ }
+    c8 }
 
-  %     \volta 2 {
-  %       g''8 ~ \tuplet 3/2 {
-  %         g8 e16 ~ }
-  %       \tuplet 3/2  {
-  %         e8 c,,16 }
-  %       d''8 ~ \tuplet 3/2 {
-  %         d8 c,,16 ~ }
-  %       c8
-  %     }
-  %   }
-  % }
-
-  % f4. ~ f4 c8
-  % f4. ~ f4 c8
-  % c'2.
-  % c,2.
-
-  % \repeat volta 2 {
-
-  %   f4 ~ \once \omit TupletBracket
-  %   \tuplet 3/2  {
-  %     f8 c16 }
-  %   \tuplet 3/2  {
-  %     c''8 d16 ~ }
-  %   \tuplet 3/2  {
-  %     d8 a16 }
-  %   \tuplet 3/2  {
-  %     e'8 c,,16 }
-
-  %   f4 ~ \once \omit TupletBracket
-  %   \tuplet 3/2  {
-  %     f8 c16 }
-  %   \tuplet 3/2  {
-  %     g'8 a16 }
-  %   d,8 e8
-  %   c'4 ~ \once \omit TupletBracket
-  %   \tuplet 3/2  {
-  %     c8 c,16 }
-  %   e''8 ~ \tuplet 3/2 {
-  %     e8 c16 ~ }
-  %   c8
-  %   c,4 ~ \once \omit TupletBracket
-  %   \tuplet 3/2  {
-  %     c8 c,16 }
-  %   e''8 ~ \tuplet 3/2 {
-  %     e8 c16 ~ }
-  %   c8 }
-
-  % f,,4 e'8 f4 a8
-  % \once \omit TupletBracket
-  % \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
-  % \times 3/4  {
-  %   c8 d8 e8 f8 }
-  % \once \omit TupletBracket
-  % \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
-  % \times 3/4  {
-  %   g8 a8 b8 c8 }
+  f,,4 e'8 f4 a8
+  \once \omit TupletBracket
+  \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
+  \times 3/4  {
+    c8 d8 e8 f8 }
+  \once \omit TupletBracket
+  \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
+  \times 3/4  {
+    g8 a8 b8 c8 }
 
   % e2.
 
