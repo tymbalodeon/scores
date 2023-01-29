@@ -185,8 +185,10 @@ music = \relative c' {
   | f8. g a
 
   | bf8. d f
-  | d''8. c bf
+  | \ottava #1
+    d''8. c bf
   | a8. f d
+    \ottava #0
   | c8. bf a
 
   | d,,8. a' d
@@ -211,15 +213,27 @@ music = \relative c' {
 
   | d,8. d'' c
   | e,,8. e'' c
-  | f,,8. a'' g
+  | f,,8.
+    \ottava #1
+    a'' g
   | f8. e c
+    \ottava #0
+
 
   | bf,8. f' bf
-  | c'8. bf a
-  | f8. ( g ) c,
-  | ( d8. ) <e c'>4.
-
-  | <e c'>4. ~ <e c'>8.
+  | \ottava #1
+    c'8. bf a
+  | f8. ( g )
+    \ottava #0
+    c,
+  | ( d8. )
+  << {
+    <e c'>4. ~
+    | <e c'>4. ~ <e c'>8.
+  } \\ {
+    r8. c,,8.
+    | d4. -+ ~ d8.
+  } >>
 
   \bar "|."
 }
