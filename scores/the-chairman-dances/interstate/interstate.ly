@@ -107,62 +107,66 @@ music = \relative df {
   | gf8. af bf
   | \tuplet 4/3 { af8. bf df ef8 ff,16 }
   | \tuplet 5/3 { gf''8. ff,, ef''' gf, ff,, }
+  | ef'''4. gf,8.
 
-  ef'''4 gf,8
-  f,8 ~ \tuplet 3/2 {
-    f8 gf16 }
-  f8
-  \time 5/8  c4 c8 \tuplet 3/2 {
-    ef8 c16 }
-  bf8
-  \time 9/16  ff4 ff8
-  \time 6/16  gf4. ~ gf8 gf8 af8
-  bf8 ~ \tuplet 3/2 {
-    bf8 gf16 ~ }
-  gf8 \tuplet 3/2 {
-    af'8 bf16 ~ }
-  \tuplet 3/2  {
-    bf8 gf16 ~ }
-  gf8
-  \time 9/16  <af df>8 ~ ~ \tuplet 3/2 {
-    <af df>8 <af df>16 }
-  r8
-  \time 5/8  <ef af>4. ~ ~ <ef af>8 <ef af>8
-  \time 9/16  <gf, cf ef>8 ~ ~ ~ \tuplet 3/2 {
-    <gf cf ef>8 <gf cf ef>16 }
-  r8
-  \time 6/16  <af df f>4. ~ ~ ~ <af df f>8 af8 gf8
-  \time 9/16  f4.
-  gf8 af8 bf8
-  \times 6/4  {
-    af16 bf16 df16 ef32 ff,32 }
+  | f,8. ~ f8 gf16 f8.
+  | c4. c8.
 
-  \times 3/5  {
-    gf''8 ff,,8 ef'''8 gf,8 ff,,8 }
+  \time 6/16
 
-  \tuplet 3/2  {
-    ef'''8 df16 }
-  cf8 \tuplet 3/2 {
-    \acciaccatura { bf8*3/2 ( } cf8 ) bf16 }
+  | ef8 c16 bf8.
 
-  \tuplet 3/2  {
-    af8 df,16 }
-  af8 <af df>8
-  \time 5/8  <ef af>4. <ef af>8 <ef af>8
-  \time 9/16  <gf, cf ef>8 ~ ~ ~ \tuplet 3/2 {
-    <gf cf ef>8 <gf cf ef>16 }
-  r8
-  \time 6/16  <af df f>4. ~ ~ ~ <af df f>4 df8
-  \time 9/16  f,4.
-  gf8 af8 bf8
-  af8 af'4
-  \times 6/4  {
-    af,16 bf16 df16 ef32 ff,32 }
+  \time 9/16
 
-  \times 3/5  {
-    ef''8 ff,,8 cf'''4 ef8 ~ }
+  | ff4. ff8.
+  | gf4. ~ gf8. ~
+  | gf8. gf af
+  | bf8. ~ bf8 gf16 ~ gf8.
 
-  ef4.
+  | af'8 bf16 ~ bf8 gf16 ~ gf8.
+  | <af df>8. ~ <af df>8 <af df>16 r8.
+  | <ef af>4. ~ <ef af>8. ~
+
+  \time 6/16
+
+  | <ef af>8. <ef af>
+
+  \time 9/16
+
+  | <gf, cf ef>8. ~ <gf cf ef>8 <gf cf ef>16  r8.
+  | <af df f>4. ~ <af df f>8. ~
+  | <af df f>8. af gf
+
+  | f4. ~ f8.
+  | gf8. af bf
+  | \tuplet 4/3 { af8. bf df ef8 ff,16 }
+  | \tuplet 5/3 { gf''8. ff,, ef''' gf, ff,, }
+
+  | ef'''8 df16 cf8. \acciaccatura { bf8 } cf8 bf16
+  | af8 df,16 af8. <af df>
+  | <ef af>4. ~ <ef af>8. ~
+
+  \time 6/16
+
+  | <ef af>8. <ef af>
+
+  \time 9/16
+
+  | <gf, cf ef>8. ~ <gf cf ef>8 <gf cf ef>16 r8.
+  | <af df f>4. ~ <af df f>8. ~
+
+  \time 6/16
+
+  | <af df f>8. df
+
+  \time 9/16
+  | f,4. ~ f8.
+  | gf8. af bf
+  | af8. af'4.
+  | \tuplet 4/3 { af,8. bf df ef8 ff,16 }
+
+  | \tuplet 5/3 { ef''8. ff,, cf'''4. ef8. ~ }
+  | ef4. ~ ef8.
 
   \bar "|."
 }
