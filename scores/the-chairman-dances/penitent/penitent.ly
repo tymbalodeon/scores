@@ -104,96 +104,70 @@ music = \relative c' {
   | c4. ~ c8.
 
   \repeat volta 2 {
+    | f4. ~ f8 c16
+    | c''8 d16 ~ d8 a16 e'8 c,,16
 
-    f4 ~ \once \omit TupletBracket
-    \tuplet 3/2  {
-      f8 c16 }
-    \tuplet 3/2  {
-      c''8 d16 ~ }
-    \tuplet 3/2  {
-      d8 a16 }
-    \tuplet 3/2  {
-      e'8 c,,16 }
+    | f4. ~ f8 c16
+    | g'8 a16 d,8. e
 
-    f4 ~ \once \omit TupletBracket
-    \tuplet 3/2  {
-      f8 c16 }
-    \tuplet 3/2  {
-      g'8 a16 }
-    d,8 e8
-    c'4 ~ \once \omit TupletBracket
-    \tuplet 3/2  {
-      c8 c,16 }
-    e''8 ~ \tuplet 3/2 {
-      e8 c16 ~ }
-    c8
-    c,4 ~ \once \omit TupletBracket
-    \tuplet 3/2  {
-      c8 c,16 }
-    e''8 ~ \tuplet 3/2 {
-      e8 c16 ~ }
-    c8 }
+    \repeat unfold 2 {
+      | c'4. ~ c8 c,16
+      | e''8. ~ e8 c16 ~ c8.
+    }
+  }
 
-  f,,4 e'8 f4 a8
-  \once \omit TupletBracket
-  \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
-  \times 3/4  {
-    c8 d8 e8 f8 }
-  \once \omit TupletBracket
-  \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
-  \times 3/4  {
-    g8 a8 b8 c8 }
+  | f,,4. e'8.
+  | f4. a8.
+  | \tuplet 4/3 { c8. d e f }
 
-  % e2.
+  \ottava #1
 
-  % R1 * 3
+  | \tuplet 4/3 { g8. a b c }
+  | e4. ~ e8.
 
-  % r4. r8 a,,,8 c8 \bar ""
-  % \key d \minor d4. e4.
-  % f4. f8 g8 a8
-  % bf4 ~ \once \omit TupletBracket
-  % \tuplet 3/2  {
-  %   bf8 f16 }
-  % \acciaccatura { bf8 ( } c8 ) \tuplet 3/2 {
-  %   bf8 a16 }
-  % bf8
-  % g4 \once \omit TupletBracket
-  % \tuplet 3/2  {
-  %   \acciaccatura { a'8*3/2 ( } bf8 ) a16 }
-  % \tuplet 3/2  {
-  %   g8 d16 }
-  % \tuplet 3/2  {
-  %   bf8 a16 }
-  % g8
-  % d4. e4.
-  % f4 c8 f8 a8 c8
-  % d4. ~ \tuplet 3/2 {
-  %   d8 c16 }
-  % \tuplet 3/2  {
-  %   d8 e16 }
-  % \tuplet 3/2  {
-  %   f8 g16 }
+  \ottava #0
 
-  % \tuplet 3/2  {
-  %   a8 bf16 }
-  % \tuplet 3/2  {
-  %   a8 f16 }
-  % \tuplet 3/2  {
-  %   g8 af16 }
-  % \tuplet 3/2  {
-  %   g8 f16 }
-  % \tuplet 3/2  {
-  %   d8 a,16 }
-  % \tuplet 3/2  {
-  %   c8 a16 }
+  | R1 * 27/16
 
-  % d4 \acciaccatura { c'8 ( } d8 ) c8 ~ \tuplet 3/2 {
-  %   c8 d16 }
-  % c8
-  % a4 \grace { g16 ( } a8 ) c8 d8 g,8
-  % f4 a,8 bf8 c8 d8
-  % e8 f8 g8 a8 bf8 \tuplet 3/2 {
-  %   c8 c,16 }
+  | r8. a,,, c
+
+  \key d \minor
+
+  | d4. ~ d8.
+  | e4. ~ e8.
+  | f4. ~ f8.
+  | f8. g a
+
+  | bf4. ~ bf8 f16
+  | \acciaccatura { bf8 } c8. bf8 a16 bf8.
+  | g4.
+    \ottava #1
+    \acciaccatura { a'8 } bf8
+  | a16 g8 d16 bf8 a16 g8.
+    \ottava #0
+
+  | d4. ~ d8.
+  | e4. ~ e8.
+  | f4. c8.
+  | f8. a c
+
+  | d4. ~ d8. ~
+  | d8 c16 d8 e16 f8 g16
+  | \ottava #1
+    a8 ( bf16 a8 ) f16 g8 ( af16
+  | g8 ) f16 d8
+    \ottava #0
+    a,16 c8 a16
+
+  | d4. \acciaccatura { c'8 } d8.
+  | c8. ~ c8 d16 c8.
+  | a4. \acciaccatura { g16 } a8.
+  | c8. d g,
+
+  | f4. a,8.
+  | bf8. c d
+  | e8. f g
+  | a8. bf c8 c,16
 
   % \tuplet 3/2  {
   %   d8 f'16 ~ }
