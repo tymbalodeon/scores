@@ -27,7 +27,9 @@ music = \relative d' {
       \volta 4 {
         \time 2/4
 
-        | r4 r8 d16 ( e16 )
+        | r4 r8
+          \ottava #1
+          d16 ( e16 )
       }
     }
   }
@@ -38,7 +40,10 @@ music = \relative d' {
 
   \time 2/4
 
-  | e16 ) r16 a,16 ( b16 ) a4 ~
+  | e16 )
+    \ottava #0
+    r16
+    a,16 ( b16 ) a4 ~
 
   \time 4/4
 
@@ -46,7 +51,9 @@ music = \relative d' {
 
   \time 2/4
 
-  | a4. d16 ( e16 )
+  | a4.
+    \ottava #1
+    d16 ( e16 )
 
   \time 4/4
 
@@ -62,11 +69,13 @@ music = \relative d' {
 
   \time 2/4
 
-  | a8 e8 a,4
+  | a8 e8
+    a,4
+    \ottava #0
 
   \time 4/4
 
-  | a,4. a'8 ~ a8 e8 a8 a,8
+  | a,4. -\markup \italic "loco" a'8 ~ a8 e8 a8 a,8
 
   \time 2/4
 
@@ -257,11 +266,14 @@ music = \relative d' {
 
   \time 4/4
 
-  | d4 d8 \acciaccatura { gs'8 } a8 ~ a8 gs8 fs8 e8
+  | d4 d8
+    \ottava #1
+    \acciaccatura { gs'8 } a8 ~ a8 gs8 fs8 e8
 
   \time 2/4
 
   | d8 cs8 b8 a8
+    \ottava #0
 
   \time 4/4
 
@@ -273,7 +285,10 @@ music = \relative d' {
   | g1 ~
   | g2. g4
   | g'1
-  | b'2. a,8 as8
+  | \ottava #1
+    b'2.
+    \ottava #0
+    a,8 as8
 
   | b1
   | cs4. d8 ~ d4. cs16 d16
