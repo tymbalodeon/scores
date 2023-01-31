@@ -89,43 +89,42 @@ music = \relative c {
   | bf8. ~ bf16. d' f bf
   | d8 c16 ~ c8 c16 ~ c8 bf,16
   | c'8 a16 ~ a8 a16 ~ a8 a,,16
-
   | a''8 bf16 a8 f16 d8 e,,16
+
   | a''8. a8 g16 ~ g8 g16
   | e8. g8 c,16 ~ c8 c16
   | a8.  c8 e,16 ~ e8 e16
-
   | d8. g, a
+
   | bf8. ~ bf8 f'16 c'8 g16
   | bf8. g'8 d16 f8.
   | c'8 g16 bf8. a8 bf16
-
   | a8 f16 d8 f16 bf,8 e,,16
+
   | f8. ~ f8 c'16 g'8 d16
   | f8. d'8 a16 c8.
-  | a16. f c' a e' c
+  | \tuplet 4/3 { a8. f c' a }
+  | \tuplet 4/3 { e'8. c g' e }
 
-  | g'16. e bf,8. ~ bf8 f'16
-  | c'8 g16 bf8. g'8 d16
-  | f8. c'8 g16 bf8.
-  | a8 bf16 a8 f16 d8 f16
+  | bf,8. ~ bf8 f'16 c'8 g16
+  | bf8. g'8 d16 f8.
+  | c'8 g16 bf8. a8 bf16
+  | a8 f16 d8 f16 bf,8 e,,16
 
-  | bf,8 e,,16 f8. ~ f8 c'16
-  | g'8 d16 f8. d'8 a16
-  | c8. a16. f c' a
+  | f8. ~ f8 c'16 g'8 d16
+  | f8. d'8 a16 c8.
+  | \tuplet 4/3 { a8. f c' a }
+  | \tuplet 4/3 { e'8. c g' e }
 
-  | e'16. c g' e bf,8. ~
-  | bf8 f'16 c'8 g16 bf8.
-  | g'8 d16 f8. c'8 g16
-  | bf8. d8 c16 a8 bf16
+  | bf,8. ~ bf8 f'16 c'8 g16
+  | bf8. g'8 d16 f8.
+  | c'8 g16 bf8. d8 c16
+  | a8 bf16 a8 f16 d8 e,,16
 
-  | a8 f16 d8 e,,16 f8.
-  | a''16. bf c a f g
-  | c,16. d e a, bf c
-
-  | e,4. ~ e8.
-
-  R2.
+  | f8. a''16. bf c a
+  | f16. g c, d e a,
+  | bf16. c e,4.
+  | e4. ~ e8.
 
   \bar "|."
 }
