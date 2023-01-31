@@ -8,44 +8,69 @@
   arranger = "Ben Rosen, bass"
 }
 
-music = \relative c'' {
+music = \relative g' {
   \clef "bass"
+  \time 2/2
 
   | R1 * 8
 
-  | g8 a8 b8. g16 ~ g4 ~ g8. g16 ~
-  | g2. \glissando a,4
+  | \ottava #1
+    g4 a b4. g8 ~
+  | g2 ~ g4. g8 ~
+  | g1. \glissando \parenthesize a,2
+    \ottava #0
 
   | R1 * 4
 
-  | b'8 c8 d8. b16 ~ b4 ~ b8. b16 ~
-  | b2. \glissando a,4
-  | g'8 a8 b8. g16 ~ g4 ~ g8. g16 ~
-  | g2. \glissando g8 d,8 \glissando
+  | \ottava #1
+    b'4 c4 d4. b8 ~
+  | b2 ~ b4. b8 ~
+  | b1. \glissando \parenthesize a,2
+  | g'4 a4 b4. g8 ~
 
-  | g4 g'4 ~ g16 g, c ( d ) d f g f, ~
-  | f4 ~ <f a'>4 ~ ~ <f a'>4 ~ ~ <f a'>16 d f ( d )
-  | g4 g'4 ~ g16 g, c ( d ) d f g f, ~
-  | f16 f8. a'4 ~ a4 ~ a16 d,, f ( d )
+  | g2 ~ g4. g8 ~
+  | g1. \glissando g,4
+    \ottava #0
+    d,4 \glissando
 
-  | g4 g'4 ~ g16 g, c ( d ) d f g f, ~
-  | f16 f8. a'4 ~ a4 ~ a16 d,, f ( d )
-  | g4 g'4 ~ g16 g, c ( d ) d f g f, ~
-  | f4 a'2.
+  | g2 g'2 ~
+  | g8 g, c ( d ) d f g f, ~
+  | f2 ~ <f a'>2  ~
+  | <f a'>2 ~ <f a'>8 d f ( d )
 
-  | g,2. ~ g8 g8
-  | d2. ~ d8 d8
-  | g2. ~ g8 g8
-  | d2. ~ d16 d f ( d )
+  | g2 g'2 ~
+  | g8 g, c ( d ) d f g f, ~
+  | f8 f4. a'2 ~
+  | a2 ~ a8 d,, f ( d )
+
+  | g2 g'2 ~
+  | g8 g, c ( d ) d f g f, ~
+  | f8 f4. a'2 ~
+  | a2 ~ a8 d,, f ( d )
+
+  | g2 g'2 ~
+  | g8 g, c ( d ) d f g f, ~
+  | f2 a'2 ~
+  | a1
+
+  | g,1 ~
+  | g2. g4
+  | d1 ~
+  | d2. d4
+
+  | g1 ~
+  | g2. g4
+  | d1 ~
+  | d2 ~ d8 d f ( d )
 
   \repeat volta 2 {
-    | g16 g' g a g d, g a e'' a,, e''16 d e, d' e, a,
-    | a'16 d,, a'' a, a' a b c r d,, r d g fs f e
+    | g8 g' g a g d, g a e'' a,, e''8 d e, d' e, a,
+    | a'8 d,, a'' a, a' a b c r d,, r d g fs f e
     | g g' g a g d, g a e'' a,, e'' d e, d' e, a,
-    | a' d,, a'' a, a' a b g16 g' f e f e d c b
+    | a' d,, a'' a, a' a b g8 g' f e f e d c b
   }
 
-  | a8 d,,8 ~ d2. ~
+  | a4 d,,2. ~
   | d1
 
   \bar "|."
