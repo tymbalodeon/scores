@@ -144,7 +144,9 @@ music = \relative e {
       \ottava #0
     | e8 -> cs8 b8 cs8 -> e8 cs8 -> a8 e8
     | e'8 -> cs8 b8 cs8 e8 -> a,8 gs8 fs8
+  }
 
+  \repeat volta 2 {
     | b8 -> gs8 fs8 gs8 -> b8 gs8 -> e8 b8
     | b'8 -> gs8 fs8 gs8 b8 -> gs8 fs8 -> d8
     | e8 -> cs8 b8 cs8 -> e8 cs8 -> a8 e8
