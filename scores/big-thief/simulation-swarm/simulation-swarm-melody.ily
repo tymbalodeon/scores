@@ -7,7 +7,7 @@ verseA = \relative c'' {
 }
 
 verseB = \relative c'' {
-  ef16 ef \parenthesize ef ef ef8 df df4 bf8 c16 df~ |
+  ef16 ef \parenthesize ef ef ef8 df df4 bf8 c16 df \laissezVibrer |
 }
 
 preChorusVerseB = \relative c'' {

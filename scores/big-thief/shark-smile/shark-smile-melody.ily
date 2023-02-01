@@ -42,7 +42,6 @@ chorusMelody = {
   }
 }
 
-
 melody = \relative c'' {
   s1*4 |
   \bar "||"
