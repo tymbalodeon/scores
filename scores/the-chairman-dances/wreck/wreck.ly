@@ -68,7 +68,7 @@ music = \relative a, {
 
   \verse_base
 
-  | a,4 r r2
+  | a4 r r2
   | r2 r4 r8 e
   | c'4 r8 e4 f8 fs4
   | g4 r r2
