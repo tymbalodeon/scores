@@ -59,7 +59,7 @@ music = \relative a, {
   | c4 r8 e,4 f8 fs4
   | g4 r r r8 e'
 
-  | a4 r r2
+  | a,4 r r2
   | r2 r4 r8 e
   | c'4 r r r8 e,
   | g4 r r2
