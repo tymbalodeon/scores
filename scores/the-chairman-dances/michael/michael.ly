@@ -107,24 +107,22 @@ music = \relative b {
   | cs4. ~ cs8 a8 b8
   | cs8. d16 cs8 b8 a8 b8
   | b2.
-  | \tuplet 4/6 { b16 a16 b16 cs16 }
+  | \tuplet 4/6 { b16 a16 b16 cs16 } \tuplet 4/6 { \acciaccatura { cs8 } d16 cs16 b16 a16 }
 
-  | \tuplet 4/6 { \acciaccatura { cs8 } d16 cs16 b16 a16 }
-  | \tuplet 4/6 { b16 a16 b16 cs16 }
-  | \tuplet 4/6  { \acciaccatura { cs8 } d16 cs16 b16 a16 }
+  | \tuplet 4/6 { b16 a16 b16 cs16 } \tuplet 4/6  { \acciaccatura { cs8 } d16 cs16 b16 a16 }
   | \tuplet 4/6 { b16 cs16 \acciaccatura { cs8 } d16 cs16 }
     \tuplet 5/3 { b8 cs8 b8 a8 b8 }
   | a4. \acciaccatura { g8 } a8. fs16 e8
     \ottava #0
   | d8 cs8 b8 a8 fs8 e8
-  | fs4. fs,4.
 
+  | fs4. fs,4.
   | a4. d8 a'8 ds,8
   | e,8 g'8 e,8 g8 b'8 g,8
   | b8 d'8 b,8 d8
     \ottava #1 b''8 cs8
-  | d2. ~
 
+  | d2. ~
   | d2.
 
   \bar "|."
