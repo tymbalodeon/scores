@@ -195,7 +195,7 @@ music = \relative d, {
 
 \score {
   \new Staff \with {
-    instrumentName = "Instrument"
+    instrumentName = "Bass"
     \numericTimeSignature
   } {
     \compressMMRests
