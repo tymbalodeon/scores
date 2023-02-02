@@ -76,13 +76,45 @@ middle_staff = \relative c' {
   }
 
   | \repeat unfold 3 {
-    \change Staff = "upper"
+      \repeat unfold 3 {
+        \change Staff = "upper"
+        <bf ef>16
+        \change Staff = "middle"
+        <c e>
+        \change Staff = "upper"
+        <af df>
+        \change Staff = "middle"
+        g
+      }
+  }
+  | \change Staff = "upper"
     <bf ef>16
     \change Staff = "middle"
     <c e>
     \change Staff = "upper"
-    <af ef>
-    \change Staff = "middle"
-    g
+    <af df>
+    \change Staff = "lower"
+    bf,,
+    \repeat unfold 2 {
+        \change Staff = "upper"
+        <bf'' ef>16
+        \change Staff = "middle"
+        <c e>
+        \change Staff = "upper"
+        <af df>
+        \change Staff = "middle"
+        g
+    }
+  | \repeat unfold 3 {
+      \repeat unfold 3 {
+        \change Staff = "upper"
+        <bf ef>16
+        \change Staff = "middle"
+        <c e>
+        \change Staff = "upper"
+        <af df>
+        \change Staff = "middle"
+        g
+      }
   }
 }

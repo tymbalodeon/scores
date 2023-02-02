@@ -98,4 +98,37 @@ lower_staff = \relative c {
   | c2. -> \ff
 
   \ottava #0
+
+  | R2.
+  | af''2. ->
+  | r8. bf,16 -> ~ bf2
+  | R2.
+
+  | r8.
+    \ottava #-1
+    d,16 -> ~ d2
+    \ottava #0
+
+  | R2.
+
+  \time 5/8
+
+  | R1 * 5/8
+
+  \time 3/4
+
+  | R2.
+
+  \time 5/8
+
+  | R1 * 5/8
+
+  \time 3/4
+
+  | \ottava #-1
+    c2.
+    \ottava #0
+
+  | R2. * 3
+
 }
