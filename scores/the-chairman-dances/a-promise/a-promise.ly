@@ -28,10 +28,8 @@ verse_base = \relative fs, {
 
   } \\ {
 
-    \set Voice.middleCPosition = #(+ 6)
     | e,,2 \loco e ~
     | e4 e2.
-    \unset Voice.middleCPosition
 
   } >>
 
@@ -56,9 +54,7 @@ verse_end = \relative gs, {
   } \\ {
 
     r4 e,,2 e4 ~ \loco
-    \set Voice.middleCPosition = #(+ 6)
     e1
-    \unset Voice.middleCPosition
 
   } >>
 }
@@ -169,22 +165,14 @@ music = \relative c,  {
 
   | a,4
     \ottava #1 e''
-    \set Voice.middleCPosition = #(+ 6)
-    a,,8 \loco
-    \unset Voice.middleCPosition
-    fs'' gs b
-  | \set Voice.middleCPosition = #(+ 6)
-    a,,8 \loco
-    \unset Voice.middleCPosition
-    cs''
-    \set Voice.middleCPosition = #(+ 6)
-    a,,
-    \unset Voice.middleCPosition
-    ds''
-    \set Voice.middleCPosition = #(+ 6)
-    a,,
-    \unset Voice.middleCPosition
-    e''' ds4
+    a,8 \loco
+    fs' gs b
+  |  a,8 \loco
+    cs'
+    a,
+    ds'
+    a,
+    e'' ds4
     \ottava #0
   | b,,4 fs' b,8 fs' b, ds'
   | b,8 e' b, ds' b, b' fs4
@@ -198,6 +186,17 @@ music = \relative c,  {
   | <b fs'>1
 
   \bar "|."
+}
+
+\layout {
+  \context {
+    \Staff
+    \remove Ottava_spanner_engraver
+  }
+  \context {
+    \Voice
+    \consists Ottava_spanner_engraver
+  }
 }
 
 \score {
