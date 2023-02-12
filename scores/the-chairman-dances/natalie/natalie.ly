@@ -8,10 +8,10 @@
   arranger = "Ben Rosen, bass"
 }
 
-loco = _\markup \italic "loco"
+loco = \markup \italic "loco"
 
 loco_a = {
-  a,,1 \loco
+  a,,1 -\loco
 }
 
 music = \relative c'' {
@@ -36,7 +36,7 @@ music = \relative c'' {
 
   } \\ {
 
-    e,,2. \loco e4
+    e,,2. -\loco e4
 
   } >>
 
@@ -56,7 +56,7 @@ music = \relative c'' {
   | <cs, as'>1 ~
   | <fs, cs' as'>2.
     \ottava #0
-    fs,4 \loco
+    fs,4 -\loco
   | \ottava #1
     ds'''2 cs4 ~ cs16 ds cs8
   | b2 as8. fs16 ~ fs8 ds ~
