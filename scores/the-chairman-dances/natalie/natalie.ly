@@ -11,9 +11,7 @@
 loco = _\markup \italic "loco"
 
 loco_a = {
-  \set Voice.middleCPosition = #(+ 6)
   a,,1 \loco
-  \unset Voice.middleCPosition
 }
 
 music = \relative c'' {
@@ -33,22 +31,12 @@ music = \relative c'' {
   | << {
 
     \ottava #1
-    as1 \trill -\markup \italic "(trill A♯ only)"
+    <as gs>1 \trill -\markup \italic "(trill A♯ only)"
     \ottava #0
 
   } \\ {
 
-    \ottava #1
-    gs1
-    \ottava #0
-
-  } \\ {
-
-    \set Voice.middleCPosition = #(+ 6)
-    \stemDown
     e,,2. \loco e4
-    \stemNeutral
-    \unset Voice.middleCPosition
 
   } >>
 
@@ -130,6 +118,17 @@ music = \relative c'' {
   | <b fs'>1
 
   \bar "|."
+}
+
+\layout {
+  \context {
+    \Staff
+    \remove Ottava_spanner_engraver
+  }
+  \context {
+    \Voice
+    \consists Ottava_spanner_engraver
+  }
 }
 
 \score {
