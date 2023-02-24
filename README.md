@@ -38,7 +38,6 @@ directly (using `./scripts/main <COMMAND> <ARGS>`) or using
   file changes.
 - `just install`: Install dependencies.
 - `just list *scores`: List pdf(s).
-  current branch.
 - `just open *scores`: Open pdf(s).
 - `just outdated *scores`: List \<scores\> with outdated or non-existent pdfs.
 - `just status *keyword`: Show status of pdf(s) for scores with a title or
