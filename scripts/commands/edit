@@ -14,4 +14,4 @@ for file in "${files[@]}"; do
     done
     open "${ly_file}"
 done
-watchexec --exts ly,ily --clear "${COMMANDS}"/compile "${1}"
+watchexec --exts ly,ily --clear clear "${COMMANDS}"/compile "${1}"
