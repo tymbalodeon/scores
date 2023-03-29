@@ -36,3 +36,29 @@ key_and_time = {
     >>
   }
 }
+
+\book {
+  \bookOutputSuffix "guitar"
+
+  \score {
+    \new Staff \with {
+      instrumentName = "Guitar"
+    } {
+      \key_and_time
+      \voiceOne
+    }
+  }
+}
+
+\book {
+  \bookOutputSuffix "bass"
+
+  \score {
+    \new Staff \with {
+      instrumentName = "Bass"
+    } {
+      \key_and_time
+      \voiceTwo
+    }
+  }
+}
