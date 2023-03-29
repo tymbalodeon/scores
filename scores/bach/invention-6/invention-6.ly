@@ -16,6 +16,8 @@ key_and_time = {
 }
 
 \score {
+  \remove_fingerings
+
   \new StaffGroup {
     <<
       \new Staff \with {
