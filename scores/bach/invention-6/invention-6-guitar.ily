@@ -1,4 +1,4 @@
-voiceOne = \relative c'' {
+voice_one = \relative c'' {
   \repeat volta 2 {
     | r16 e8 \3 -4 ds -3 d16 -2 ~
     | d cs8 -1 b \4 -4 a16 -2 ~

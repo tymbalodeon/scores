@@ -25,7 +25,7 @@ key_and_time = {
         shortInstrumentName = "G."
       } {
         \key_and_time
-        \voiceOne
+        \voice_one
       }
 
       \new Staff \with {
@@ -33,7 +33,7 @@ key_and_time = {
         shortInstrumentName = "B."
       } {
         \key_and_time
-        \voiceTwo
+        \voice_two
       }
     >>
   }
@@ -47,7 +47,7 @@ key_and_time = {
       instrumentName = "Guitar"
     } {
       \key_and_time
-      \voiceOne
+      \voice_one
     }
   }
 }
@@ -60,7 +60,10 @@ key_and_time = {
       instrumentName = "Bass"
     } {
       \key_and_time
-      \voiceTwo
+      <<
+        \bass_fingerings
+        \voice_two
+      >>
     }
   }
 }
