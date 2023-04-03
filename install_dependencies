@@ -15,7 +15,10 @@ install_dependency() {
             curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
             ;;
         "lilypond")
-            brew install lilypond
+            brew install lilypond-unstable
+            lilypond_path='export PATH="/usr/local/opt/lilypond-unstable/bin:${PATH}"'
+            grep -q "${lilypond_path}" \
+                || echo "${lilypond_path}" >> ${HOME}/.zshenv
             ;;
         "just")
             brew install just
