@@ -17,8 +17,9 @@ install_dependency() {
         "lilypond")
             brew install lilypond-unstable
             lilypond_path='export PATH="/usr/local/opt/lilypond-unstable/bin:${PATH}"'
-            grep -q "${lilypond_path}" \
-                || echo "${lilypond_path}" >> ${HOME}/.zshenv
+            zshenv="${HOME}"/.zshenv
+            grep -q "${lilypond_path}" ${zshenv} \
+                || echo "${lilypond_path}" >> ${zshenv} && source "${zshenv}"
             ;;
         "just")
             brew install just
