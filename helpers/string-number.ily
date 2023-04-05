@@ -122,3 +122,9 @@ add_string_number =
    (music string-number)
    (ly:music? string?)
    (add-articulation 'StringNumberEvent 'string-number 0 9 music string-number))
+
+add_fingering =
+#(define-music-function
+   (music finger-number)
+   (ly:music? string?)
+   (add-articulation 'FingeringEvent 'digit 0 5 music finger-number))
