@@ -144,6 +144,7 @@
     music)))
 
 add_string_number =
-#(define-music-function (music string-number)
+#(define-music-function
+   (music string-number)
    (ly:music? string?)
    (add-articulation 'StringNumberEvent 'string-number 0 9 music string-number))
