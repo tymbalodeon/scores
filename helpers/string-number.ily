@@ -117,13 +117,13 @@
         event)
       music)))
 
-add_string_number =
+add_string_numbers =
 #(define-music-function
    (music string-number)
    (ly:music? string?)
    (add-articulation 'StringNumberEvent 'string-number 0 9 music string-number))
 
-add_fingering =
+add_fingerings =
 #(define-music-function
    (music finger-number)
    (ly:music? string?)
