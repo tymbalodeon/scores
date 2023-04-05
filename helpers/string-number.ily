@@ -20,13 +20,11 @@
        (set! asterisk-index #f)
        (set! number-of-skips ""))
      (define (append-numeral numeral)
-       (set! number-of-skips (string-append number-of-skips
-                                            (string numeral))))
+       (set! number-of-skips
+             (string-append number-of-skips (string numeral))))
      (define (replace-with-expanded-skips expanded-skips index)
-       (set! skips (string-replace skips
-                                   expanded-skips
-                                   asterisk-index
-                                   (1+ index))))
+       (set! skips
+             (string-replace skips expanded-skips asterisk-index (1+ index))))
      (when (> length 0)
        (let loop ((index 0))
          (let ((character (string-ref skips index)))
@@ -36,14 +34,14 @@
                   (cond ((char-numeric? character)
                          (append-numeral character))
                         ((char-alphabetic? character)
-                         (if (string-null? number-of-skips)
-                             (reset)
-                             (let* ((number (string->number number-of-skips))
-                                    (expanded-skips (make-string number character)))
-                               (replace-with-expanded-skips expanded-skips index)
-                               (set! length (string-length skips))
-                               (set! index (+ asterisk-index number))
-                               (reset))))
+                         (when (not (string-null? number-of-skips))
+                           (let* ((number (string->number number-of-skips))
+                                  (expanded-skips (make-string number character)))
+                             (replace-with-expanded-skips expanded-skips index)
+                             (set! length (string-length skips))
+                             (set! index (+ asterisk-index number))
+                             ))
+                         (reset))
                         (else (reset)))))
            (when (< index (1- length))
              (loop (1+ index))))))
