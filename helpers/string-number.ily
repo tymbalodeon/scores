@@ -1,80 +1,70 @@
-#(define (name-of music-event)
-  (ly:music-property music-event 'name))
-
-#(define (remove-comments string)
-   (define (not-nul? character)
-     (not (char=? character #\nul)))
-   (let ((delete-character? #f)
+#(define (delete-comments string)
+   (let ((delete? #f)
          (previous-character #\a))
      (string-delete
       (lambda (character)
         (case character
           ((#\%)
-           (when (not-nul? character)
-             (set! delete-character? #t)))
+           (set! delete? #t))
           ((#\newline)
-           (set! delete-character? #f)))
+           (set! delete? #f)))
         (set! previous-character character)
-        delete-character?)
+        delete?)
       string)))
 
-#(define (expand-characters string)
-  "Transform in a string, *15x for example, in xxxxxxxxxxxxxxx (15 times)"
-  (let ((length (string-length string))
-        (star-position #f)
-        (times ""))
-    (if (> length 0)
-        (let loop ((index 0))
-          (let ((character (string-ref string index))
-                (reset (lambda ()
-                         (set! star-position #f)
-                         (set! times ""))))
-            (cond
-             ((eq? character #\*)
-              (set! star-position index))
-             ((char-numeric? character)
-              (if star-position
-                  (set! times
-                        (string-append times (string character)))))
-             ((char-alphabetic? character)
-              (if star-position
-                  (if (string-null? times)
-                      (reset)
-                      (let* ((times (string->number times))
-                             (replacement (make-string times character)))
-                        (set! string
-                              (string-replace string
-                                              replacement
-                                              star-position
-                                              (1+ index)))
-                        (set! length (string-length string))
-                        (set! index (+ star-position times))
-                        (reset)))))
-             (else (if star-position (reset)))))
-          (if (< index (1- length))
-              (loop (1+ index)))))
-    string))
+#(define (expand-skips skips)
+   (let ((length (string-length skips))
+         (asterisk-index #f)
+         (number-of-skips ""))
+     (define (reset)
+       (set! asterisk-index #f)
+       (set! number-of-skips ""))
+     (define (append-numeral numeral)
+       (set! number-of-skips (string-append number-of-skips
+                                            (string numeral))))
+     (define (replace-with-expanded-skips expanded-skips index)
+       (set! skips (string-replace skips
+                                   expanded-skips
+                                   asterisk-index
+                                   (1+ index))))
+     (when (> length 0)
+       (let loop ((index 0))
+         (let ((character (string-ref skips index)))
+           (cond ((eq? character #\*)
+                  (set! asterisk-index index))
+                 (asterisk-index
+                  (cond ((char-numeric? character)
+                         (append-numeral character))
+                        ((char-alphabetic? character)
+                         (if (string-null? number-of-skips)
+                             (reset)
+                             (let* ((number (string->number number-of-skips))
+                                    (expanded-skips (make-string number character)))
+                               (replace-with-expanded-skips expanded-skips index)
+                               (set! length (string-length skips))
+                               (set! index (+ asterisk-index number))
+                               (reset))))
+                        (else (reset)))))
+           (when (< index (1- length))
+             (loop (1+ index))))))
+     skips))
 
 #(define (add-articulation event-name property-name min max music articulation)
    (define (get-character-set)
      (char-set-adjoin char-set:letter+digit #\+ #\- #\'))
-
    (define (get-characters articulation)
-     (string->list (expand-characters (remove-comments articulation))))
-
+     (string->list (expand-skips (delete-comments articulation))))
+   (define (name-of music-event)
+     (ly:music-property music-event 'name))
    (define (note-event? event)
      (eq? (name-of event) 'NoteEvent))
-
    (define (valid-articulation? input)
      (pair? input))
-
    (define (can-add-articulation? event input)
      (and (note-event? event)
           (valid-articulation? input)))
-
    (define (in-range? index min max)
      (and (>= index min) (<= index max)))
-
    (define (set-articulations event
                               event-name
                               tweaks
@@ -88,10 +78,8 @@
                                       property-name index))
                     (ly:music-property event 'articulations))))
        (ly:music-set-property! event 'articulations articulations)))
-
    (let* ((character-set (get-character-set))
-          (characters (get-characters articulation))))
-
+          (characters (get-characters articulation)))
    (define (get-next-valid-character)
      (let ((character (car characters)))
        (if (char-set-contains? character-set character)
@@ -100,12 +88,10 @@
                   (if (null? characters)
                       #\nul
                       (get-next-valid-character))))))
-
    (define (get-current-character)
      (if (null? characters)
          #\nul
          (get-next-valid-character)))
-
    (define set-next-character
      (lambda (filter?)
        (set! current-character
@@ -116,7 +102,6 @@
                  (if filter?
                      (get-next-valid-character)
                      (car characters))))))
-
    (define (get-direction direction)
      (cond ((char=? current-character #\+)
             (set-next-character #t)
@@ -125,7 +110,6 @@
             (set-next-character #t)
             (get-direction -1))
            (else direction)))
-
    (music-map
     (lambda (event)
       (when (can-add-articulation? event characters)
@@ -157,7 +141,7 @@
             (set-articulations event event-name tweaks direction property-name index))
           (set-next-character #t)))
       event)
-    music))
+    music)))
 
 add_string_number =
 #(define-music-function (music string-number)
