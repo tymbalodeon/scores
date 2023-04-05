@@ -78,7 +78,7 @@ upper_staff = \relative c' {
   << {
     % measure 14
     r8 f'
-    \half_bracket #2 #3 #0.7
+    \halfBracket #2 #3 #0.7
     af4 ~ af8 gf f ef |
 
     % measure 15
@@ -87,7 +87,7 @@ upper_staff = \relative c' {
 
     % measure 14
     <bf f>8 <f af,>
-    \half_bracket #5.1 #-4 #0.7
+    \halfBracket #5.1 #-4 #0.7
     <bf f> <f af,> r <bf ef,> <a f> <f a,> |
 
     % measure 15

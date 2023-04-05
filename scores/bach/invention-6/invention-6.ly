@@ -10,32 +10,52 @@
   opus = "BWV 777"
 }
 
-key_and_time = {
+global = {
   \key e \major
   \time 3/8
 }
 
-\score {
-  \remove_fingerings
+\book {
+  \bookOutputSuffix "piano"
+  \score {
+    \new PianoStaff {
+      <<
+        \new Staff {
+          \global
+          \voice_one
+        }
 
-  \new StaffGroup {
-    <<
-      \new Staff \with {
-        instrumentName = "Guitar"
-        shortInstrumentName = "G."
-      } {
-        \key_and_time
-        \voice_one
-      }
+        \new Staff {
+          \global
+          \voiceTwo
+        }
+      >>
+    }
+  }
+}
 
-      \new Staff \with {
-        instrumentName = "Bass"
-        shortInstrumentName = "B."
-      } {
-        \key_and_time
-        \voice_two
-      }
-    >>
+\book {
+  \bookOutputSuffix "guitar-and-bass"
+  \score {
+    \new StaffGroup {
+      <<
+        \new Staff \with {
+          instrumentName = "Guitar"
+          shortInstrumentName = "G."
+        } {
+          \global
+          \voice_one
+        }
+
+        \new Staff \with {
+          instrumentName = "Bass"
+          shortInstrumentName = "B."
+        } {
+          \global
+          \voiceTwo
+        }
+      >>
+    }
   }
 }
 
@@ -46,7 +66,7 @@ key_and_time = {
     \new Staff \with {
       instrumentName = "Guitar"
     } {
-      \key_and_time
+      \global
       \voice_one
     }
   }
@@ -59,11 +79,8 @@ key_and_time = {
     \new Staff \with {
       instrumentName = "Bass"
     } {
-      \key_and_time
-      <<
-        \bass_fingerings
-        \voice_two
-      >>
+      \global
+      \bass
     }
   }
 }

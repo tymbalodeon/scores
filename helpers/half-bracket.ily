@@ -1,4 +1,4 @@
-half_bracket =
+halfBracket =
 #(define-music-function
    (distance-from-notehead height width)
    (number? number? number?)
