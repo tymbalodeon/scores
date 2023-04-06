@@ -3,6 +3,9 @@
 \include "settings.ily"
 \include "invention-6-voice-one.ily"
 \include "invention-6-voice-two.ily"
+\include "invention-6-piano.ily"
+\include "invention-6-guitar.ily"
+\include "invention-6-bass.ily"
 
 \header {
   title = "Invention 6"
