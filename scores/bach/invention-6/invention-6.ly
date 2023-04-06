@@ -1,9 +1,11 @@
 \version "2.25.3"
 
 \include "settings.ily"
+
 \include "invention-6-voice-one.ily"
 \include "invention-6-voice-two.ily"
-\include "invention-6-piano.ily"
+\include "invention-6-piano-upper.ily"
+\include "invention-6-piano-lower.ily"
 \include "invention-6-guitar.ily"
 \include "invention-6-bass.ily"
 
@@ -25,12 +27,12 @@ global = {
       <<
         \new Staff {
           \global
-          \voiceOne
+          \pianoUpper
         }
 
         \new Staff {
           \global
-          \voiceTwo
+          \pianoLower
         }
       >>
     }

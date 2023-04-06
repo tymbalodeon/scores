@@ -1,5 +1,7 @@
+\include "helpers/add-fingerings.ily"
+\include "helpers/add-string-numbers.ily"
+
 \include "invention-6-voice-one.ily"
-\include "helpers/string-number.ily"
 
 guitar =
 \addFingerings \voiceOne
@@ -25,8 +27,8 @@ guitar =
     3 2 1 2 3 1 3 4 2
 
     4 1 2 3 2 1
-    3  3 2 1
-    1  1 1 2
+    3 3 2 1
+    1 1 1 2
     4 3 1 2
 
     2 4 1

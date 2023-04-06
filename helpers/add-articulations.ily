@@ -116,15 +116,3 @@
               (next-char #t)))
         event)
       music)))
-
-addStringNumbers =
-#(define-music-function
-   (music string-number)
-   (ly:music? string?)
-   (add-articulation 'StringNumberEvent 'string-number 0 9 music string-number))
-
-addFingerings =
-#(define-music-function
-   (music finger-number)
-   (ly:music? string?)
-   (add-articulation 'FingeringEvent 'digit 0 5 music finger-number))

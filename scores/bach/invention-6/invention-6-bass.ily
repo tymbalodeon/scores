@@ -1,4 +1,6 @@
-\include "helpers/string-number.ily"
+\include "helpers/add-fingerings.ily"
+\include "helpers/add-string-numbers.ily"
+
 \include "invention-6-voice-two.ily"
 
 bass =
