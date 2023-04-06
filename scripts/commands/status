@@ -4,8 +4,9 @@ get_sorted_score_names() {
     score_directories=(
         **/.(Ne: \
             '[[ $REPLY != pdfs* ]] \
-                && [[ $REPLY != templates* ]]  \
+                && [[ $REPLY != helpers* ]]  \
                 && [[ $REPLY != scripts* ]]  \
+                && [[ $REPLY != templates* ]]  \
                 && test -z $REPLY/*(/N[1])' \
         ::h)
     )
