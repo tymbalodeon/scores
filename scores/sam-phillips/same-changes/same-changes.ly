@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "same-changes-melody.ily"
 \include "same-changes-chords.ily"
 \include "same-changes-structure.ily"

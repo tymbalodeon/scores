@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "simulation-swarm-chords.ily"
 \include "simulation-swarm-melody.ily"
 \include "simulation-swarm-structure.ily"

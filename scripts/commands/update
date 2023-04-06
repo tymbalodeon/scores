@@ -9,7 +9,7 @@ get_lilypond_version() {
     echo "${version_number}"
 }
 
-files=($("${HELPERS}"/_get_files "ly" "$@"))
+files=($("${HELPERS}"/_get_files "--include-templates" "ly" "$@"))
 if [ -z "${files[*]}" ] || ! command -v lilypond &>/dev/null; then
     exit
 fi

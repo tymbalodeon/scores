@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "most-people-chords.ily"
 \include "most-people-melody.ily"
 \include "most-people-structure.ily"

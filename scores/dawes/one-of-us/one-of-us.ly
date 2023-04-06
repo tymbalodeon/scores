@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "one-of-us-melody.ily"
 \include "one-of-us-changes.ily"
 \include "one-of-us-structure.ily"

@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "pony-st-melody.ily"
 \include "pony-st-chords.ily"
 \include "pony-st-structure.ily"

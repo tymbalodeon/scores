@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "shark-smile-chords.ily"
 \include "shark-smile-melody.ily"
 \include "shark-smile-structure.ily"

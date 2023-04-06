@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "in-a-sweater-poorly-knit-melody.ily"
 \include "in-a-sweater-poorly-knit-chords.ily"
 \include "in-a-sweater-poorly-knit-structure.ily"

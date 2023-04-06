@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "ghost-world-chords.ily"
 \include "ghost-world-melody.ily"
 \include "ghost-world-structure.ily"

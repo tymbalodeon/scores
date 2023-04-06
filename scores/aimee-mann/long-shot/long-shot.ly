@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "long-shot-chords.ily"
 \include "long-shot-melody.ily"
 \include "long-shot-structure.ily"

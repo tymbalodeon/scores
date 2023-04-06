@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "harmony-hall-melody.ily"
 \include "harmony-hall-changes.ily"
 \include "harmony-hall-structure.ily"

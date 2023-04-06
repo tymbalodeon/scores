@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "precious-jewel-melody.ily"
 \include "precious-jewel-chords.ily"
 \include "precious-jewel-structure.ily"

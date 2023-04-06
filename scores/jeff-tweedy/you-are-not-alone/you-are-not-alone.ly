@@ -1,7 +1,7 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "style.ily"
+\include "helpers/set-bars-per-line.ily"
 \include "you-are-not-alone-melody.ily"
 \include "you-are-not-alone-chords.ily"
 \include "you-are-not-alone-structure.ily"
