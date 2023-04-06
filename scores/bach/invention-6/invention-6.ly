@@ -22,7 +22,7 @@ global = {
       <<
         \new Staff {
           \global
-          \voice_one
+          \voiceOne
         }
 
         \new Staff {
@@ -44,7 +44,7 @@ global = {
           shortInstrumentName = "G."
         } {
           \global
-          \voice_one
+          \voiceOne
         }
 
         \new Staff \with {
@@ -67,7 +67,7 @@ global = {
       instrumentName = "Guitar"
     } {
       \global
-      \voice_one
+      \guitar
     }
   }
 }
