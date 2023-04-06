@@ -3,8 +3,10 @@
 
 \include "invention-6-voice-two.ily"
 
+bass = \keepWithTag #'bass \voiceTwo
+
 bass =
-\addFingerings \voiceTwo
+\addFingerings \bass
 #"
     1 4 1
     2 4 1

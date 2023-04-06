@@ -1,3 +1,36 @@
+lowNotesPianoOne = \relative gs, {
+  gs32 fs gs16 e32 ds
+  | e8
+}
+
+lowNotesPianoTwo = \relative ds, {
+  ds
+}
+
+lowNotesPianoThree = \relative cs, {
+  cs
+}
+
+lowNotesPianoFour = \relative b,, {
+  b
+}
+
+lowNotesBassOne = {
+  \transpose c c' \lowNotesPianoOne
+}
+
+lowNotesBassTwo = {
+  \transpose c c' \lowNotesPianoTwo
+}
+
+lowNotesBassThree = {
+  \transpose c c' \lowNotesPianoThree
+}
+
+lowNotesBassFour = {
+  \transpose c c' \lowNotesPianoFour
+}
+
 voiceTwo = \relative c {
   \clef "bass"
 
@@ -10,21 +43,37 @@ voiceTwo = \relative c {
     | r16 e8 ds d16 ~
     | d cs8 b a16 ~
     | a16 gs8 fs gs32 a
-    | gs16 b32 a b16 gs'32 fs gs16 e32 ds
+    | gs16 b32 a b16
+    <<
+      \tag #'piano \lowNotesPianoOne
+      \tag #'bass \lowNotesBassOne
+    >>
 
-    | e8 cs e
+    cs8 e
     | fs as cs
-    | ds, b ds
+    | <<
+      \tag #'piano \lowNotesPianoTwo
+      \tag #'bass \lowNotesBassTwo
+    >>
+    b, ds
     | e gs b
 
-    | cs, cs e
+    | <<
+      \tag #'piano \lowNotesPianoThree
+      \tag #'bass \lowNotesBassThree
+      >>
+    cs, e
     | fs gs as
     | b e, gs
     | fs16 cs' as cs e, cs'
 
     | ds,8 e fs | b,16 b'32 as b16 fs32 e fs16 ds32 cs
     | ds16 fs32 e fs16 ds32 cs ds16 b32 as
-    | b4 b8
+    | b4
+    <<
+      \tag #'piano \lowNotesPianoFour
+      \tag #'bass \lowNotesBassFour
+    >>
   }
 
   \repeat volta 2 {

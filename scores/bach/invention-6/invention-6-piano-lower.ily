@@ -2,8 +2,10 @@
 
 \include "invention-6-voice-two.ily"
 
+pianoLower = \keepWithTag #'piano \voiceTwo
+
 pianoLower =
-\addFingerings \voiceTwo
+\addFingerings \pianoLower
 #"
     5 4 3
     2 1 3
