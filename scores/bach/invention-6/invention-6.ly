@@ -1,8 +1,8 @@
 \version "2.25.3"
 
 \include "settings.ily"
-\include "invention-6-guitar.ily"
-\include "invention-6-bass.ily"
+\include "invention-6-voice-one.ily"
+\include "invention-6-voice-two.ily"
 
 \header {
   title = "Invention 6"
