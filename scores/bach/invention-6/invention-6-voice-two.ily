@@ -4,15 +4,19 @@ lowNotesPianoOne = \relative gs, {
 }
 
 lowNotesPianoTwo = \relative ds, {
-  ds
+  ds8
 }
 
 lowNotesPianoThree = \relative cs, {
-  cs
+  cs8
 }
 
 lowNotesPianoFour = \relative b,, {
-  b
+  b8
+}
+
+lowNotesPianoFive = \relative fs, {
+  fs8 gs
 }
 
 lowNotesBassOne = {
@@ -29,6 +33,10 @@ lowNotesBassThree = {
 
 lowNotesBassFour = {
   \transpose c c' \lowNotesPianoFour
+}
+
+lowNotesBassFive = {
+  \transpose c c' \lowNotesPianoFive
 }
 
 voiceTwo = \relative c {
@@ -107,10 +115,17 @@ voiceTwo = \relative c {
     | fs16 e8 ds d16 ~
     | d cs8 b a16 ~
     | a gs8 fs gs32 a
-    | gs16 b32 a b16 gs'32 fs gs16 e32 ds
+    | gs16 b32 a b16
+    <<
+      \tag #'piano \lowNotesPianoOne
+      \tag #'bass \lowNotesBassOne
+    >>
 
-    | e8 fs gs
-    | a, b cs
+    <<
+      \tag #'piano \lowNotesPianoFive
+      \tag #'bass \lowNotesBassFive
+    >>
+    | a8 b cs
     | ds e16 ds cs b
     | e8. b'32 a b16 gs32 fs
 
