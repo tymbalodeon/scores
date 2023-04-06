@@ -5,7 +5,8 @@ if [ -z "${files[*]}" ]; then
     exit
 fi
 for file in "${files[@]}"; do
-    base_name="${PDFS_DIRECTORY}/${file:r:t}"
+    without_extension="${file:r}"
+    base_name="${PDFS_DIRECTORY}/${without_extension:t}"
     score_files=("${base_name}"*.pdf(N))
     if [ -z "${score_files[*]}" ]; then
         lilypond -o "${PDFS_DIRECTORY}" "${file}"
