@@ -29,7 +29,7 @@
    (let ((articulations (string-split articulations space-or-newline?)))
      (string-join (map replace-with-skip-characters articulations))))
 
-#(define (add-articulation event-name property-name min max music finger-str)
+#(define (add-articulations event-name property-name min max music finger-str)
    (let* ((character-set (char-set-adjoin char-set:letter+digit #\+ #\- #\'))
           (characters (string->list (expand-skips (delete-comments finger-str))))
           (get-next-valid-character
