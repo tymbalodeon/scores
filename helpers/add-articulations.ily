@@ -1,16 +1,13 @@
 #(define (delete-comments string)
-   (let ((delete? #f)
-         (previous-character #\a))
-     (string-delete
-      (lambda (character)
-        (case character
-          ((#\%)
-           (set! delete? #t))
-          ((#\newline)
-           (set! delete? #f)))
-        (set! previous-character character)
-        delete?)
-      string)))
+   (let ((delete? #f))
+     (string-delete (lambda (character)
+                      (case character
+                        ((#\%)
+                         (set! delete? #t))
+                        ((#\newline)
+                         (set! delete? #f)))
+                      delete?)
+                    string)))
 
 #(define (expand-skips articulations)
    (define (space-or-newline? character)
