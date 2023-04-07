@@ -11,8 +11,8 @@ fingerings =
     1 5
 
     1 2 1
-    x 2 1 2
-    x 3 4 3 2
+    s 2 1 2
+    s 3 4 3 2
     3 1 2 1 2 3 2 1 2
 
     1 2 1
@@ -30,6 +30,6 @@ fingerings =
     3 1 2 1 2 3 2 1 2
     1 5
 "
-fingerings = \reverseArticulationDirections \fingerings
+fingerings = \moveArticulationsBelow \fingerings
 pianoLower = \keepWithTag #'piano \voiceTwo
 pianoLower = \addFingerings \pianoLower \fingerings

@@ -1,4 +1,4 @@
-reverseArticulationDirections =
+moveArticulationsBelow =
 #(define-scheme-function
    (articulation-string)
    (string?)
