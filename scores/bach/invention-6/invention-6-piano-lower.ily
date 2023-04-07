@@ -1,5 +1,5 @@
 \include "helpers/add-fingerings.ily"
-\include "helpers/reverse-articulation-directions.ily"
+\include "helpers/move-articulations-below.ily"
 
 \include "invention-6-voice-two.ily"
 
