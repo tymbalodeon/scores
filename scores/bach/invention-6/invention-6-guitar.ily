@@ -7,8 +7,8 @@ guitar =
 \addFingerings \voiceOne
 #"
     4 3 2
-    x 1 4 2
-    x 1 4 1 2
+    s 1 4 2
+    s 1 4 1 2
     1 4 1 4 4 1 4 2 1
 
     2 4 1
@@ -17,13 +17,13 @@ guitar =
     4 1
 
     1 1 3
-    x 2 1 2 4 1 2
-    x 1 2 3
-    x 3 1 3 4 1 2
+    s 2 1 2 4 1 2
+    s 1 2 3
+    s 3 1 3 4 1 2
 
-    x 4 1 3
-    x 4 1 3
-    x 2 1 4
+    s 4 1 3
+    s 4 1 3
+    s 2 1 4
     3 2 1 2 3 1 3 4 2
 
     4 1 2 3 2 1
@@ -37,8 +37,8 @@ guitar =
     4 1
 
     4 3 2
-    x 1 3 1
-    x 1 4 1 2
+    s 1 3 1
+    s 1 4 1 2
     1 3 1 3 3 1 3 2 1
 
     2 3 1 3 3 2 3 3 1
@@ -47,12 +47,12 @@ guitar =
     3 3 1 3 3 1 3 3 2
 
     3 4 2 1
-    x 3 2 3 3 2 3 2 1
+    s 3 2 3 3 2 3 2 1
     2 3 1 3
-    x 3 1 3 2 1 2 4 1
+    s 3 1 3 2 1 2 4 1
 
     4 2 1 4
-    x 2 1 2 2 1 2 3 1
+    s 2 1 2 2 1 2 3 1
     2 3 1 3 2 1 2 4 2
     4 3 1 3 3 1 3 2 1
     2 1 2 4 1 1
@@ -64,8 +64,8 @@ guitar =
     4 3 1 3 3 1
 
     3 4 3 2
-    x 1 4 2
-    x 1 4 1 2
+    s 1 4 2
+    s 1 4 1 2
     1 4 1 4 3 1 3 2 1
 
     2 4 1
@@ -78,7 +78,7 @@ guitar =
     4 1 2
     3
 
-    x 4 3 1 4 2
+    s 4 3 1 4 2
     1 2 1 2 3 1 3 3 1
     3 3 1 3 3 1 3 4 2
     4 4 2 1
@@ -87,80 +87,80 @@ guitar =
 guitar =
 \addStringNumbers \guitar
 #"
-    3 x x
-    x x 4 x
-    x x 5 4 x
-    x x x x x x x 5 x
+    3 s*2
+    s*2 4 s
+    s*2 5 4 s
+    s*7 5 s
 
-    x x 4
-    x x 3
-    x x x x 4
+    s*2 4
+    s*2 3
+    s*4 4
     3 5
 
     2 3 4
-    x 3 x x 4 x 5
-    x 2 3 4
-    x 3 x x 4 x 5
+    s 3 s*2 4 s 5
+    s 2 3 4
+    s 3 s*2 4 s 5
 
-    x 3 x 4
-    x 2 x 3
-    x x x 4
-    x 5 x x 4 x x x x
+    s 3 s 4
+    s 2 s 3
+    s*3 4
+    s 5 s*2 4 s*3 s
 
-    x 5 6 4 6 4
-    x x 3 2
-    1 x 2 3
-    4 5 x 6
+    s 5 6 4 6 4
+    s*2 3 2
+    1 s 2 3
+    4 5 s 6
 
-    6 x 5
-    x x 4
-    x x x x 5
+    6 s 5
+    s*2 4
+    s*4 5
     4 6
 
-    2 x x
-    x x 3 x
-    x x 4 3 x
-    x x x x x x x 4 x
+    2 s*2
+    s*2 3 s
+    s*2 4 3 s
+    s*7 4 s
 
-    x 3 x x 2 x x 4 x
-    x 3 x x 2 x x 3 x
-    x 2 x x 1 x x 3 x
-    x 2 x x x x x 3 x
+    s 3 s*2 2 s*2 4 s
+    s 3 s*2 2 s*2 3 s
+    s 2 s*2 1 s*2 3 s
+    s 2 s*5 3 s
 
-    x 4 x x
-    x 3 x x 4 x x 3 x
-    x 2 x 3
-    x x x x 4 x x x x
+    s 4 s*2
+    s 3 s*2 4 s*2 3 s
+    s 2 s 3
+    s*4 4 s*3 s
 
-    x 3 x 4
-    x x x x x x x x x
-    x 3 x x 4 x x 3 x
-    x 5 x x 4 x x 6 x
-    x 4 5 6 x 4
-    x 5 6 x
+    s 3 s 4
+    s*8 s
+    s 3 s*2 4 s*2 3 s
+    s 5 s*2 4 s*2 6 s
+    s 4 5 6 s 4
+    s 5 6 s
 
-    5 x 4
-    x x 3
-    x x x x 4
-    3 4 x x x x
+    5 s 4
+    s*2 3
+    s*4 4
+    3 4 s*3 s
 
-    x 3 x x x
-    x 4 x
-    x x 5 4 x
-    x x x x x x x 5 x
+    s 3 s*2 s
+    s 4 s
+    s*2 5 4 s
+    s*7 5 s
 
-    x x 4
-    x 3 x
-    5 x 4
-    x 3 x
+    s*2 4
+    s 3 s
+    5 s 4
+    s 3 s
 
     6 5 4
-    x 3 x
-    x x 4
+    s 3 s
+    s*2 4
     2
 
-    x 3 x x 4 x
-    x 5 x x 4 x x x x
-    x x x x x x x 3 x
-    x 4 x 5
+    s 3 s*2 4 s
+    s 5 s*2 4 s*3 s
+    s*7 3 s
+    s 4 s 5
 "

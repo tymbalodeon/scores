@@ -13,8 +13,8 @@ bass =
     2 4 2 1 4
     4 1
 
-    4 2 1 x
-    4 1 4 x
+    4 2 1 s
+    4 1 4 s
     2 1 1 2
     1 4 1 4 4 1 4 2 1
 
@@ -34,8 +34,8 @@ bass =
     2 2
 
     4 2 1
-    x 4 1 4
-    x 2 1 1 2
+    s 4 1 4
+    s 2 1 1 2
     1 4 1 4 4 1 4 2 1
 
     2 4 1
@@ -55,14 +55,14 @@ bass =
 
     2 4 1
     4 4 1
-    2 4 x
+    2 4 s
     1 2
     4 1 4
     1 1 4 1
 
-    x 4 2 1
-    x 4 1 4
-    x 2 1 1 2
+    s 4 2 1
+    s 4 1 4
+    s 2 1 1 2
     1 4 1 4 4 1 4 2 1
 
     2 4 1
@@ -71,13 +71,13 @@ bass =
     4 4 1 4 4 1
 
     4 1 2 4
-    x 2 1 2 4 1 2
-    x 4 1 2
-    x 4 1 4 4 1 2
+    s 2 1 2 4 1 2
+    s 4 1 2
+    s 4 1 4 4 1 2
 
-    x 4 1 2
-    x 1 4 2
-    x 1 4 1
+    s 4 1 2
+    s 1 4 2
+    s 1 4 1
     2 4 2 4 4 1 4 4 1
 
     4 1 4
@@ -90,39 +90,39 @@ bass =
 bass =
 \addStringNumbers \bass
 #"
-    3 x 2
-    x x 1
-    x x x x 2
+    3 s 2
+    s*2 1
+    s*4 2
     1 3
 
-    3 x x
-    x x x 4
-    x x x x x
-    x x x x 2 x x 3 x
+    3 s*2
+    s*3 4
+    s*5
+    s*4 2 s*2 3 s
 
-    x 4 3
-    x 2 x
+    s 4 3
+    s 2 s
     3 4 3
-    x 2 x
+    s 2 s
 
-    4 x 3
-    x x 2
-    x 3 2
-    3 2 x x 3 1
+    4 s 3
+    s*2 2
+    s 3 2
+    3 2 s*2 3 1
 
-    3 x x
-    4 2 x x 3 x x x x
-    x x x x x x x 4 x
-    x x
+    3 s*2
+    4 2 s*2 3 s*4
+    s*7 4 s
+    s*2
 
-    2 x x
-    x x x 3
-    x x x x x
-    x x x x x x x 4 x
+    2 s*2
+    s*3 3
+    s*4 s
+    s*7 4 s
 
-    x x 3
-    x x 2
-    x x x x 3
+    s*2 3
+    s*2 2
+    s*4 3
     2 4
 
     3 2 1
@@ -130,40 +130,40 @@ bass =
     3 2 1
     4 2
 
-    x x x
-    3 2 x
-    x x x
+    s*2 s
+    3 2 s
+    s*2 s
     3 2 1
 
-    3 x 2
+    3 s 2
     3 2 1
-    3 x 1
-    x x 2
-    x 3 x
-    4 x 2 x
+    3 s 1
+    s*2 2
+    s 3 s
+    4 s 2 s
 
-    x 3 x
-    x x x 4
-    x x x x x
-    x x x x x 2 x x 3 x
+    s 3 s
+    s*3 4
+    s*4 s
+    s*5 2 s*2 3 s
 
-    x x 2
-    4 x 3
-    x x x x 4
-    3 2 x x x x
+    s*2 2
+    4 s 3
+    s*4 4
+    3 2 s*3 s
 
-    x 1 2 3
-    x 2 x x 3 x 4
-    x 2 x 3
-    x 2 x x 3 x 4
+    s 1 2 3
+    s 2 s*2 3 s 4
+    s 2 s 3
+    s 2 s*2 3 s 4
 
-    x 2 x 3
-    x 1 2 x
-    x x 3 x
-    x 2 x x 3 x x 2 x
+    s 2 s 3
+    s 1 2 s
+    s*2 3 s
+    s 2 s*2 3 s*2 2 s
 
-    x x x
-    3 1 2 x
-    3 2 x 3 x 4
-    x 3
+    s*2 s
+    3 1 2 s
+    3 2 s 3 s 4
+    s 3
 "
