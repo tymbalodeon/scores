@@ -5,7 +5,7 @@
 
 bass = \keepWithTag #'bass \voiceTwo
 
-bass =
+bassWithFingerings =
 \addFingerings \bass
 #"
     1 4 1
@@ -87,8 +87,8 @@ bass =
   }
 "
 
-bass =
-\addStringNumbers \bass
+bassWithFingerings =
+\addStringNumbers \bassWithFingerings
 #"
     3 s 2
     s*2 1

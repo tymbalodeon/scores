@@ -57,7 +57,7 @@ global = {
           shortInstrumentName = "B."
         } {
           \global
-          \voiceTwo
+          \bass
         }
       >>
     }
@@ -85,7 +85,7 @@ global = {
       instrumentName = "Bass"
     } {
       \global
-      \bass
+      \bassWithFingerings
     }
   }
 }
