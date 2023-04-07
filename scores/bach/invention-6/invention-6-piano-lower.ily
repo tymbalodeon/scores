@@ -1,11 +1,9 @@
 \include "helpers/add-fingerings.ily"
+\include "helpers/reverse-articulation-directions.ily"
 
 \include "invention-6-voice-two.ily"
 
-pianoLower = \keepWithTag #'piano \voiceTwo
-
-pianoLower =
-\addFingerings \pianoLower
+fingerings =
 #"
     5 4 3
     2 1 3
@@ -32,3 +30,6 @@ pianoLower =
     3 1 2 1 2 3 2 1 2
     1 5
 "
+fingerings = \reverseArticulationDirections \fingerings
+pianoLower = \keepWithTag #'piano \voiceTwo
+pianoLower = \addFingerings \pianoLower \fingerings
