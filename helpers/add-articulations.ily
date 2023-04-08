@@ -30,71 +30,72 @@
      (string-join (map replace-with-skip-characters articulations))))
 
 #(define (add-articulations event-name property-name min max music finger-str)
-   (let* ((character-set (char-set-adjoin char-set:letter+digit #\+ #\- #\'))
-          (characters (string->list (expand-skips (delete-comments finger-str))))
-          (get-next-valid-character
-           (lambda ()
-             (define (loop)
-               (let ((character (car characters)))
-                 (if (char-set-contains? character-set character)
-                     character
-                     (begin (set! characters (cdr characters))
-                            (if (null? characters) #\nul (loop))))))
-             (loop)))
-          (current-char (if (null? characters)
-                            #\nul
-                            (get-next-valid-character)))
-          (next-char (lambda (filter?)
-                       (set! current-char
-                             (if (or (null? characters)
-                                     (begin (set! characters (cdr characters))
-                                            (null? characters)))
-                                 #\nul
-                                 (if filter? (get-next-valid-character)
-                                     (car characters)))))))
-     (define (set-direction direction)
-       (cond ((char=? current-char #\+)
-              (next-char #t)
-              (set-direction 1))
-             ((char=? current-char #\-)
-              (next-char #t)
-              (set-direction -1))
-             (else direction)))
-     (music-map
-      (lambda (event)
-        (if (and (eq? (ly:music-property event 'name) 'NoteEvent)
-                 (pair? characters))
-            (let*((dir (set-direction 0))
-                  (tweaks? (and
-                            (char=? current-char #\')
-                            (let loop ((text-list '())
-                                       (previous-character current-char))
-                              (next-char #f)
-                              (let*((apostrophe? (char=? current-char #\'))
-                                    (escaped-char? (and (or apostrophe?
-                                                            (char=? current-char #\%))
-                                                        (char=? previous-character #\nul))))
-                                (cond (escaped-char?
-                                       (loop (cons current-char (cdr text-list))
-                                             current-char))
-                                      ((or apostrophe? (null? characters))
-                                       (list (cons
-                                              (quote text)
-                                              (reverse-list->string text-list))))
-                                      (else (loop (cons current-char text-list)
-                                                  current-char)))))))
-                  (index (if tweaks? min (- (char->integer current-char)
-                                            (char->integer #\0))))
-                  (tweaks (if tweaks? tweaks? '())))
-              (if (and (>= index min)(<= index max))
-                  (ly:music-set-property! event
-                                          'articulations
-                                          (append (list (make-music
-                                                         event-name
-                                                         'tweaks tweaks
-                                                         'direction dir
-                                                         property-name index))
-                                                  (ly:music-property event 'articulations))))
-              (next-char #t)))
-        event)
-      music)))
+  (define (can-add-articulation event characters)
+    (and (eq? (ly:music-property event 'name) 'NoteEvent)
+         (pair? characters)))
+  (define (add-articulation event tweaks direction index)
+    (let* ((existing-articulation (ly:music-property event 'articulations))
+           (new-articulation (make-music event-name
+                                         'tweaks tweaks
+                                         'direction direction
+                                         property-name index))
+           (articulations (cons new-articulation existing-articulation)))
+      (ly:music-set-property! event 'articulations articulations)))
+  (let* ((character-set (char-set-adjoin char-set:letter+digit #\+ #\- #\'))
+         (characters (string->list (expand-skips (delete-comments finger-str))))
+         (get-next-valid-character (lambda ()
+                                     (define (loop)
+                                       (let ((character (car characters)))
+                                         (if (char-set-contains? character-set character)
+                                             character
+                                             (begin (set! characters (cdr characters))
+                                                    (if (null? characters) #\nul (loop))))))
+                                     (loop)))
+         (current-char (if (null? characters)
+                           #\nul
+                           (get-next-valid-character)))
+         (next-char (lambda (filter?)
+                      (set! current-char
+                            (if (or (null? characters)
+                                    (begin (set! characters (cdr characters))
+                                           (null? characters)))
+                                #\nul
+                                (if filter? (get-next-valid-character)
+                                    (car characters)))))))
+    (define (set-direction direction)
+      (case current-char
+        ((#\+)
+         (next-char #t)
+         (set-direction 1))
+        ((#\-)
+         (next-char #t)
+         (set-direction -1))
+        (else direction)))
+    (music-map (lambda (event)
+                 (if (can-add-articulation event characters)
+                     (let* ((direction (set-direction 0))
+                            (tweaks? (and (char=? current-char #\')
+                                          (let loop ((text-list '())
+                                                     (previous-character current-char))
+                                            (next-char #f)
+                                            (let*((apostrophe? (char=? current-char #\'))
+                                                  (escaped-char? (and (or apostrophe?
+                                                                          (char=? current-char #\%))
+                                                                      (char=? previous-character #\nul))))
+                                              (cond (escaped-char?
+                                                     (loop (cons current-char (cdr text-list))
+                                                           current-char))
+                                                    ((or apostrophe? (null? characters))
+                                                     (list (cons
+                                                            (quote text)
+                                                            (reverse-list->string text-list))))
+                                                    (else (loop (cons current-char text-list)
+                                                                current-char)))))))
+                            (index (if tweaks? min (- (char->integer current-char)
+                                                      (char->integer #\0))))
+                            (tweaks (if tweaks? tweaks? '())))
+                       (if (and (>= index min) (<= index max))
+                           (add-articulation event tweaks direction index))
+                       (next-char #t)))
+                 event)
+               music)))
