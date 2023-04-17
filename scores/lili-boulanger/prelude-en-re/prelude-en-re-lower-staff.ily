@@ -87,7 +87,7 @@ lower_staff = \relative c {
   <c' a> <ef, g>2 <f a>4 |
 
   % measure 13
-  % \clef "bass"
+  \clef "bass"
   <f ef b> <f df b>
   \ottava #-1
   <<
@@ -135,7 +135,7 @@ lower_staff = \relative c {
   \clef "bass"
   <gf,,, df' a'>2
   <<
-    \tuplet 3/2 { bf'4 ef c }
+    \tuplet 3/2 { bf'4 df bf }
     \\
     <df, gf,>2
   >> |
