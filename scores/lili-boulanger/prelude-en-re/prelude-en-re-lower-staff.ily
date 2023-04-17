@@ -87,8 +87,8 @@ lower_staff = \relative c {
   <c' a> <ef, g>2 <f a>4 |
 
   % measure 13
+  <f ef b> <f df af>
   \clef "bass"
-  <f ef b> <f df b>
   \ottava #-1
   <<
     af,,4
@@ -96,10 +96,12 @@ lower_staff = \relative c {
     <df,, df'>4
   >>
   \ottava #0
+  \clef "treble"
   <f''' ef b> |
 
   % measure 14
   <f df af> r
+  \clef "bass"
   \ottava #-1
   <<
     af,,2
