@@ -44,4 +44,4 @@ else
         fi
     done
 fi
-printf "%s" "${files[*]}"
+printf "${files[*]}"
