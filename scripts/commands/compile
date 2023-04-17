@@ -12,7 +12,7 @@ for file in "${files[@]}"; do
         lilypond -o "${PDFS_DIRECTORY}" "${file}"
     else
         for score_file in "${score_files[@]}"; do
-            checkexec "${score_file}" "${without_extension}"*.*ly(N) *.ily -- \
+            checkexec "${score_file}" "${without_extension}"*.*ly(N) **/**.ily -- \
                 lilypond -o "${PDFS_DIRECTORY}" "${file}"
         done
     fi

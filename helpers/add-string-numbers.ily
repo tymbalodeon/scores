@@ -2,6 +2,6 @@
 
 addStringNumbers =
 #(define-music-function
-   (music string-number)
+   (music string-numbers)
    (ly:music? string?)
-   (add-articulation 'StringNumberEvent 'string-number 0 9 music string-number))
+   (add-articulations 'StringNumberEvent 'string-number 0 9 music string-numbers))

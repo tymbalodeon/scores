@@ -2,6 +2,6 @@
 
 addFingerings =
 #(define-music-function
-   (music finger-number)
+   (music fingerings)
    (ly:music? string?)
-   (add-articulation 'FingeringEvent 'digit 0 5 music finger-number))
+   (add-articulations 'FingeringEvent 'digit 0 5 music fingerings))
