@@ -87,7 +87,7 @@ lower_staff = \relative c {
   <c' a> <ef, g>2 <f a>4 |
 
   % measure 13
-  \clef "bass"
+  % \clef "bass"
   <f ef b> <f df b>
   \ottava #-1
   <<
@@ -137,26 +137,26 @@ lower_staff = \relative c {
   <<
     \tuplet 3/2 { bf'4 ef c }
     \\
-    <df, g,>2
+    <df, gf,>2
   >> |
 
   % measure 20
   <gf, df' a'>2
   <<
     \new Voice { \voiceOne \tuplet 5/4 { bf'8 c df ef f } }
-    \new Voice { \voiceTwo <df, g>2 }
+    \new Voice { \voiceTwo <df, gf,>2 }
   >> |
 
   % measure 21
   \clef "treble"
   <<
-    \new Voice { \voiceOne g'8 a4 bf c8 }
+    \new Voice { \voiceOne gf'8 a4 bf c8 }
     \new Voice { \voiceTwo <bf, df>2. }
   >> |
 
   % measure 22
   <<
-    \new Voice { \voiceOne g'8 a4 bf c8 }
+    \new Voice { \voiceOne gf'8 a4 bf c8 }
     \new Voice { \voiceTwo <af, df>2. }
   >> |
 
@@ -176,27 +176,28 @@ lower_staff = \relative c {
     % measure 27
     <b g d>2 r |
 
-    % measure 28, 30
+    % measure 28
     \clef "treble"
-    \repeat unfold 2 {
-      r4 <af df f>2 <bf ef g>4 |
+    r4 <af df f>2 <bf ef g>4 |
 
-    % measures 29, 31
-      \tuplet 3/2 { <c f a>8 <bf ef g> <af df f> }
-      <af df f>4 r2 |
-    }
+    % measures 29
+    \tuplet 3/2 { <c f a>8 <bf ef g> <af df f> }
+    <af df f>4 r2 |
+
+    % measures 30
+    r4 <af df f>2 <bf ef g>4 |
+
+    % measures 31
+    \tuplet 3/2 { <d g b>8 <bf ef g> <af df f> }
+    <af df f>4 r2 |
 
     % measure 32
     r4 <b ef>4 <af df f>2 |
 
     % measure 33
-    s2
+    r2
     \clef "bass"
-    << {
-      s4 ef'
-    } \\ {
-      ef,4 <ef, ef'>
-    } >> |
+    ef4 <ef, ef'> |
 
     % measure 34
     <df df'>4 r r2 |
@@ -231,21 +232,21 @@ lower_staff = \relative c {
         \ottava #0 |
 
       % measures 29, 31
-        r2 <df' df'>4
-        \ottava #-1
+        r2 <df'' df'>4
         <df, df'>
       }
 
       % measure 32
+      \ottava #-1
       << {
-        af''1
+        af'1
       } \\ {
         <df,, df'>1
       } >>
       \ottava #0 |
 
       % measure 33
-      df'2 r |
+      df''2 r |
 
       % measure 34
       R1 |

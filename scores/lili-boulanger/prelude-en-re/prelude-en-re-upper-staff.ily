@@ -172,13 +172,13 @@ upper_staff = \relative c' {
     <ef' ef'>4
     \ottava #0
     <ef, ef'> <ef, ef'>
+    ef
   } \\ {
     \ottava #1
     ef'4
     \ottava #0
     ef,
-  } >>
-  s |
+  } >> |
 
   % measure 34
   R1 |
