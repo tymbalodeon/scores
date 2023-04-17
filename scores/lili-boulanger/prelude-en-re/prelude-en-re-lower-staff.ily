@@ -81,10 +81,10 @@ lower_staff = \relative c {
   % measure 11
   r
   \clef "treble"
-  <cf'''' ef>2 <f, a df>4 |
+  <cf'''' ef>2 <f, a cf>4 |
 
   % measure 12
-  <df' a> <ef, g>2 <f a>4 |
+  <c' a> <ef, g>2 <f a>4 |
 
   % measure 13
   \clef "bass"
@@ -128,20 +128,20 @@ lower_staff = \relative c {
   g8 f4 g8 a [ b ] |
 
   % measure 18
-  c4 b cs8 ds |
+  cs4 b cs8 ds |
 
   % measure 19
   \time 4/4
   \clef "bass"
-  <a,, df gf>2
+  <gf,,, df' a'>2
   <<
     \tuplet 3/2 { bf'4 ef c }
     \\
-    <df, g>2
+    <df, g,>2
   >> |
 
   % measure 20
-  <a df gf>2
+  <gf, df' a'>2
   <<
     \new Voice { \voiceOne \tuplet 5/4 { bf'8 c df ef f } }
     \new Voice { \voiceTwo <df, g>2 }
@@ -176,21 +176,18 @@ lower_staff = \relative c {
     % measure 27
     <b g d>2 r |
 
-    % measure 28
-    r4 <af, df f>2 <bf ef g>4 |
-
-    % measures 29-30
+    % measure 28, 30
     \clef "treble"
-      \repeat unfold 2 {
-      \tuplet 3/2 { <c' f a>8 <bf ef g> <af df f> }
+    \repeat unfold 2 {
+      r4 <af df f>2 <bf ef g>4 |
+
+    % measures 29, 31
+      \tuplet 3/2 { <c f a>8 <bf ef g> <af df f> }
       <af df f>4 r2 |
     }
 
-    % measure 31
-    r4 <b ef>4 <af df f>2 |
-
     % measure 32
-    R1 |
+    r4 <b ef>4 <af df f>2 |
 
     % measure 33
     s2
@@ -222,29 +219,24 @@ lower_staff = \relative c {
       \change Staff = "upper"
       r2 <ef''' ef'>4 <ef' ef'> |
 
-      % measure 28
+      % measure 28, 30
       \change Staff = "third"
-      \ottava #-1
-      << {
-        af,,,1
-      } \\ {
-        <df,, df'>1
-      } >>
-      \ottava #0 |
-
-      % measures 29-30
       \repeat unfold 2 {
+        \ottava #-1
+        << {
+          af,,,1
+        } \\ {
+          <df,, df'>1
+        } >>
+        \ottava #0 |
+
+      % measures 29, 31
         r2 <df' df'>4
         \ottava #-1
         <df, df'>
-        \ottava #0 |
       }
 
-      % measure 31
-      R1 |
-
       % measure 32
-      \ottava #-1
       << {
         af''1
       } \\ {
