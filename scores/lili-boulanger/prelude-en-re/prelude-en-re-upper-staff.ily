@@ -73,7 +73,7 @@ upper_staff = \relative c' {
   <f' g> <ef g, f> <f g> <ef g, f> ~ <ef g, f> <ef g, f>8 <f g> <ef g, f> |
 
   % measure 13
-  <a ef> <f a,> <c' ef,> <f, a,> r <ef a,> <a ef> <ef a,> |
+  <a ef> <f a,> <c' ef,> <f, a,> r <ef a,> <a f> <ef a,> |
 
   << {
     % measure 14
@@ -95,11 +95,11 @@ upper_staff = \relative c' {
   } >>
 
   % measure 16
-  <f ef cf gf>8 <ef gf,> <f cf> <ef gf,> ~ <ef gf,> <ef gf,> <f cf> <ef gf,> |
+  <f ef cf gf>8 <ef gf,> <f cf> <ef gf,> r <ef gf,> <f cf> <ef gf,> |
 
   % measure 17
   \time 3/4
-  <g ds cs f,>8 <b, ds> <g' cs> <ds a> <g cs, b> <ds cs f,> |
+  <g ds cs f,>8 <b, ds> <g' cs,> <ds a> <g cs, b> <ds cs f,> |
 
   % measure 18
   <a' f ef>8 <ef gf, f>4 <ef gf, f>8 <a f ef> [ <cs, gf f> ] |
@@ -122,18 +122,18 @@ upper_staff = \relative c' {
   % measures 21-22
   \time 3/4
   \repeat unfold 2 {
-    <d d,>16. <af bf>32 <d d,>16. <af bf>32 <d d,>16. <af bf>32
+    <d d,>16. <af bf>32 <ef ef'>16. <af bf>32 <f f'>16. <af bf>32
     r16. <af bf>32 <c c,>16. <af bf>32 <df df,>16. <af bf>32 |
   }
 
   % measure 23
   \time 4/4
   \ottava #1
-  <af''' af,>8 <g g,> <f f,> <ef ef,> <c c,> <b b,> <a a,> <g g,> |
+  <af''' af,>8 <g g,> <f f,> <ef ef,> <cs cs,> <b b,> <a a,> <g g,> |
   \ottava #0
 
   % measures 24
-  <f f,> <ef ef,> <c c,> <b b,> <a a,> <g g,> <f f,> <ef ef,> |
+  <f f,> <ef ef,> <cs cs,> <b b,> <a a,> <g g,> <f f,> <ef ef,> |
 
   % measuress 25-26
   \repeat unfold 2 {
