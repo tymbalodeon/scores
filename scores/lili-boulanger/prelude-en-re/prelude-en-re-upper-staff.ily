@@ -70,7 +70,7 @@ upper_staff = \relative c' {
   f' f,4 f8 f' f, <ef' f> f, |
 
   % measure 12
-  <f' g> <ef g, f> <f g> <ef g, f> ~ <ef g, f> <ef g, f>8 <f g> <ef g, f> |
+  <f' g> [ <ef g, f> ] <f g> <ef g, f>4 <ef g, f>8 <f g> [ <ef g, f> ] |
 
   % measure 13
   <a ef> <f a,> <c' ef,> <f, a,> r <ef a,> <a f> <ef a,> |
