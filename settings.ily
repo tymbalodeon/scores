@@ -24,5 +24,3 @@ paper_block =
    #})
 
 \paper_block "letter"
-
-\include "helpers/bar-numbers/center-bar-numbers.ily"
