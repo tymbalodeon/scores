@@ -101,7 +101,7 @@ upper_staff = \relative c' {
     <bf f> <f af,> ) r <bf ef,> ( <a f> <f a,> |
 
     % measure 15
-    <bf f>8 <ef, af,> )
+    <bf f>8 <ef, af,!> )
   } >>
 
   r <ef af,> ( <bf' f> <ef, af,> <bf' f> <ef, af,> |
