@@ -6,17 +6,17 @@ upper_staff = \relative c' {
   \clef "treble"
 
   % measure 1
-  r4 <df ef f>2 <b df ef g>4 |
+  r4 <ef f>2 <ef g>4 |
 
   % measure 2
-  <df ef f a>4 <ef f bf>2 r4 |
+  <ef f a>4 <ef f bf>2 r4 |
 
   % measure 3
-  r4 <df ef f>2 <b df ef g>4 |
+  r4 <ef f>2 <ef g>4 |
 
   % measure 4
   << {
-    a'8 c bf f' ~ f4
+    a8 c bf f' ~ f4
   } \\ {
     <ef, f>4 <ef f>8 r r4
   } >>

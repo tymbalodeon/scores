@@ -6,26 +6,31 @@ lower_staff = \relative c {
   \clef "bass"
 
   % measure 1
-  <df, df,>1 |
+  << {
+    \stemDown
+    r4 df'2 <b df>4 |
 
-  % measure 2
-  <a'' b>4 <af df>2
-  <<
-    af,4 ~
-    \\
-    <df,, df'>4 ~
-  >> |
+    % measure 2
+    <a b df>4 <af df>2
+    \stemNeutral
+    af,4 ~ |
 
-  % measure 3
-  <<
-    af''4
-    \\
-    <df,, df'>4
+    % measure 3
+    af4
+  } \\ {
+    <df, df,>1 |
+
+    % measure 2
+    s2. <df, df'>4 ~ |
+
+    % measure 3
+    <df df'>4
+  }
   >>
-  r r2 |
+  df'''2 <b df>4 |
 
   % measure 4
-  <a''' b df>4 <af df>8 r
+  <a b df>4 <af df>8 r
   <<
     af,4
     \\
