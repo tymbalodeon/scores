@@ -178,7 +178,7 @@ lower_staff = \relative c {
   <ef ef'>4 <ef' ef'>
   \change Staff = "lower"
 
-  measure 28
+  % measure 28
   << {
     r4
     \fakeTrebleClef
