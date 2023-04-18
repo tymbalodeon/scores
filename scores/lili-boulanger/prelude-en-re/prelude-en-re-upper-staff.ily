@@ -15,7 +15,7 @@ upper_staff = \relative c' {
   << {
     a'8 c bf f' ~ f4
   } \\ {
-    <ef, f>4 <ef f>4 r
+    <ef, f>4 <ef f>8 r r4
   } >>
   << {
     a8 c
@@ -137,12 +137,12 @@ upper_staff = \relative c' {
 
   % measuress 25-26
   \repeat unfold 2 {
-    <cs cs,> <b b,> <a a,> <g g,>4 <f f,> <ef ef,>8 |
+    <cs cs,> <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 |
   }
 
   % measure 27
   \showStaffSwitch
-  \change Staff = "third"
+  \change Staff = "lower"
   <cs cs,>8 <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 |
   \hideStaffSwitch
 
