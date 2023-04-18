@@ -1,4 +1,5 @@
 \include "helpers/fake-treble-clef.ily"
+\include "helpers/fake-bass-clef.ily"
 
 lower_staff = \relative c {
   \key df \major
@@ -152,7 +153,9 @@ lower_staff = \relative c {
     << {
       <af, df f>4 <g' ef bf>2 <a f c>4
     } \\ {
+      % \ottava #-1
       df,,,1
+      % \ottava #0
     } >> |
   }
 
@@ -164,12 +167,12 @@ lower_staff = \relative c {
   % measure 27
   \showStaffSwitch
   \change Staff = "upper"
-  \clef "bass"
+  \fakeBassClef
   <b g d>2
+  \hideStaffSwitch
 
   \clef "treble"
   <ef ef'>4 <ef' ef'>
-  \hideStaffSwitch
 
   % measure 28
   \change Staff = "lower"

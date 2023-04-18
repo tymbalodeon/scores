@@ -4,7 +4,7 @@
 \include "helpers/half-bracket.ily"
 \include "prelude-en-re-upper-staff.ily"
 \include "prelude-en-re-lower-staff.ily"
-\include "helpers/bar-numbers.ily"
+\include "helpers/bar-numbers/center-bar-numbers.ily"
 
 \header {
   title = "Prélude en Ré♭"
@@ -12,7 +12,14 @@
 }
 
 \layout {
-  \centerBarNumbers
+  \context {
+    \Staff
+    \remove Ottava_spanner_engraver
+  }
+  \context {
+    \Voice
+    \consists Ottava_spanner_engraver
+  }
 }
 
 \score {
