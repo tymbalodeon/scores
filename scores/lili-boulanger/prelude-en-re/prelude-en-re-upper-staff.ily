@@ -1,3 +1,6 @@
+\include "helpers/fake-treble-clef.ily"
+\include "helpers/fake-bass-clef.ily"
+
 upper_staff = \relative c' {
   \key df \major
   \clef "treble"
@@ -143,7 +146,8 @@ upper_staff = \relative c' {
   % measure 27
   \showStaffSwitch
   \change Staff = "lower"
-  <cs'' cs,>8 <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 |
+  % <cs'' cs,>8 <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 |
+  <as' as,>8 <g g,> <f! f,!> <e e,> ~ <e e,> <df df,>4 <c c,>8 |
   \hideStaffSwitch
 
   % measures 28-31

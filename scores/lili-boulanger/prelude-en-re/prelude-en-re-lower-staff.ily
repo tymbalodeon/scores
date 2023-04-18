@@ -167,20 +167,20 @@ lower_staff = \relative c {
   % measure 27
   \showStaffSwitch
   \change Staff = "upper"
-  \fakeBassClef
+  \clef "bass"
   <b g d>2
   \hideStaffSwitch
 
   \clef "treble"
   <ef ef'>4 <ef' ef'>
+  \change Staff = "lower"
 
   % measure 28
-  \change Staff = "lower"
   << {
     r4
     \fakeTrebleClef
       \relative af {
-        <af,, df f>2 <bf ef g>4
+        <af df f>2 <bf ef g>4
       } |
   } \\ {
     <df,,,, df' af'>1
@@ -199,7 +199,7 @@ lower_staff = \relative c {
     r4
     \fakeTrebleClef
       \relative af {
-        <af,, df f>2 <bf ef g>4
+        <af df f>2 <bf ef g>4
       } |
   } \\ {
     <df,, df' af'>1
@@ -219,7 +219,7 @@ lower_staff = \relative c {
     r4
     \fakeTrebleClef
       \relative af {
-        <b,, ef>4 <af df f>2
+        <b ef>4 <af df f>2
       } |
   } \\ {
     <df,, df' af'>1
