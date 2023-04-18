@@ -8,10 +8,10 @@ lower_staff = \relative c {
   % measure 1
   << {
     \stemDown
-    r4 df'2 <b df>4 |
+    r4 df'2 ( <b df>4 |
 
     % measure 2
-    <a b df>4 <af df>2
+    <a b df>4 <af df>2 )
     \stemNeutral
     af,4 ~ |
 
@@ -27,19 +27,19 @@ lower_staff = \relative c {
     <df df'>4
   }
   >>
-  df'''2 <b df>4 |
+  df'''2 ( <b df>4 |
 
   % measure 4
-  <a b df>4 <af df>8 r
+  <a b df>4 <af df>8 ) r
   <<
     af,4
     \\
     <df,, df'>4
   >>
-  <b''' df>4 |
+  <b''' df>4 ( |
 
   % measure 5
-  <af df> r
+  <af df> ) r
   <<
     af,4
     \\
@@ -75,13 +75,13 @@ lower_staff = \relative c {
   % measure 11
   r
   \clef "treble"
-  <cf'''' ef>2 <f, a cf>4 |
+  <cf'''' ef>2 ( <f, a cf>4 |
 
   % measure 12
   <c' a> <ef, g>2 <f a>4 |
 
   % measure 13
-  <f ef b> <f df af>
+  <f ef b> <f df af> )
   \clef "bass"
   <<
     af,,4
@@ -89,10 +89,10 @@ lower_staff = \relative c {
     <df,, df'>4
   >>
   \clef "treble"
-  <f''' ef b> |
+  <f''' ef b> ( |
 
   % measure 14
-  <f df af> r
+  <f df af> ) r
   \clef "bass"
   <<
     af,,2
@@ -108,7 +108,7 @@ lower_staff = \relative c {
     <df,, df'>2
   >>
   \clef "treble"
-  f'''4 |
+  f'''4 ( |
 
   % measure 16
   f2 ef4 f8 gf |
@@ -118,14 +118,14 @@ lower_staff = \relative c {
   g8 f4 g8 a [ b ] |
 
   % measure 18
-  cs4 b cs8 ds |
+  cs4 b cs8 ds ) |
 
   % measure 19
   \time 4/4
   \clef "bass"
   <gf,,, df' a'>2
   <<
-    \tuplet 3/2 { bf'4 df bf }
+    \tuplet 3/2 { bf'4 ( df bf ) }
     \\
     <df, gf,>2
   >> |
@@ -133,20 +133,20 @@ lower_staff = \relative c {
   % measure 20
   <gf, df' a'>2
   <<
-    \new Voice { \voiceOne \tuplet 5/4 { bf'8 c df ef f } }
+    \new Voice { \voiceOne \tuplet 5/4 { bf'8 ( c df ef f ) } }
     \new Voice { \voiceTwo <df, gf,>2 }
   >> |
 
   % measure 21
   \clef "treble"
   <<
-    \new Voice { \voiceOne gf'8 a4 bf c8 }
+    \new Voice { \voiceOne gf'8 ( a4 bf c8 ) }
     \new Voice { \voiceTwo <bf, df>2. }
   >> |
 
   % measure 22
   <<
-    \new Voice { \voiceOne gf'8 a4 bf c8 }
+    \new Voice { \voiceOne gf'8 ( a4 bf c8 ) }
     \new Voice { \voiceTwo <af, df>2. }
   >> |
 
@@ -156,17 +156,15 @@ lower_staff = \relative c {
   % measures 23-24
   \repeat unfold 2 {
     << {
-      <af, df f>4 <g' ef bf>2 <a f c>4
+      <af, df f>4 ( <g' ef bf>2 <a f c>4 )
     } \\ {
-      % \ottava #-1
       df,,,1
-      % \ottava #0
     } >> |
   }
 
   % measures 25-26
   \repeat unfold 2 {
-    <b''' g d>4 b2 <c af f ef>4 |
+    <b''' g d>4 ( b2 <c af f ef>4 ) |
   }
 
   % measure 27
@@ -185,18 +183,21 @@ lower_staff = \relative c {
     r4
     \fakeTrebleClef
       \relative af {
-        <af df f>2 <bf ef g>4
+        <af df f>2 ( <bf ef g>4
       } |
+
+    \clef "treble"
+    \tuplet 3/2 { <c, f a>8 <bf ef g> <af df f> }
+    <af df f>4 )
   } \\ {
-    <df,,,, df' af'>1
+    <df,,, df' af'>1
+    s2
   } >>
   \clef "treble"
 
   % measures 29
-  \tuplet 3/2 { <c''' f a>8 <bf ef g> <af df f> }
-  <af df f>4
   \clef "bass"
-  <df, df'> <df df,> |
+  <df'' df'>4 <df df,> |
 
   % measures 30
   \clef "bass"
@@ -204,18 +205,17 @@ lower_staff = \relative c {
     r4
     \fakeTrebleClef
       \relative af {
-        <af df f>2 <bf ef g>4
+        <af df f>2 ( <bf ef g>4
       } |
-  } \\ {
-    <df,, df' af'>1
-  } >>
-  \clef "treble"
 
-  % measures 31
-  \tuplet 3/2 { <d''' g b>8 <bf ef g> <af df f> }
-  <af df f>4
+    \clef "treble"
+    \tuplet 3/2 { <d' g b>8 <bf ef g> <af df f> }
+  <af df f>4 )
+  } \\ {
+    <df,,, df' af'>1
+  } >>
   \clef "bass"
-  <df, df'> <df df,> |
+  <df'' df'>4 <df df,> |
 
 
   % measure 32
@@ -224,7 +224,7 @@ lower_staff = \relative c {
     r4
     \fakeTrebleClef
       \relative af {
-        <b ef>4 <af df f>2
+        <b ef>4 ( <af df f>2 )
       } |
   } \\ {
     <df,, df' af'>1
