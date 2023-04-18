@@ -133,10 +133,10 @@ upper_staff = \relative c' {
 
   % measures 21-22
   \time 3/4
-  <d d,>16. ( <af bf>32 <ef ef'>16. <af bf>32 <f f'>16. <af bf>32
-  r16. <af bf>32  <c c,>16. <af bf>32 <df df,>16. <af bf>32 ) |
-  <d d,>16. <af bf>32 <ef ef'>16. <af bf>32 <f f'>16. <af bf>32
-  r16. <af bf>32 <c c,>16. <af bf>32 <df df,>16. <af bf>32 |
+  <d d,>16. ( <af bf>32 <ef ef'>16. <af bf>32 <f f'>16. <af bf>32 )
+  r16. <af bf>32 ^( <c c,>16. <af bf>32 <df df,>16. <af bf>32 ) |
+  <d d,>16. ( <af bf>32 <ef ef'>16. <af bf>32 <f f'>16. <af bf>32 )
+  r16. <af bf>32 ( <c c,>16. <af bf>32 <df df,>16. <af bf>32 ) |
 
   % measure 23
   \time 4/4
@@ -148,9 +148,8 @@ upper_staff = \relative c' {
   <f f,> <ef ef,> <cs cs,> <b b,> <a a,> <g g,> <f f,> <ef ef,> |
 
   % measuress 25-26
-  \repeat unfold 2 {
-    <cs cs,> ^( <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 ) |
-  }
+  <cs cs,> <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 ) |
+  <cs' cs,> ^( <b b,> <a a,> <g g,> ~ <g g,> <f f,>4 <ef ef,>8 ) |
 
   % measure 27
   \showStaffSwitch
