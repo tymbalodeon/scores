@@ -11,17 +11,6 @@
   composer = "Lili Boulanger"
 }
 
-\layout {
-  \context {
-    \Staff
-    \remove Ottava_spanner_engraver
-  }
-  \context {
-    \Voice
-    \consists Ottava_spanner_engraver
-  }
-}
-
 \score {
   \new PianoStaff {
     <<
