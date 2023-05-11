@@ -1,4 +1,4 @@
-\version "2.25.3"
+\version "2.25.4"
 
 \include "settings.ily"
 \include "chaconne-violin.ily"
