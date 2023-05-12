@@ -41,11 +41,11 @@ music = \relative g, {
 
     \alternative {
 
-      \volta 1 {
+      \volta 1,2 {
         g'16 g, f' fs
       }
 
-      \volta 2 {
+      \volta 3 {
         g16 d g,8
       }
     }
@@ -115,11 +115,11 @@ music = \relative g, {
     | r8 d'16 ( b ) d,, b'' ( a ) g, e' ( fs g ) e d, a d' ( b )
     \alternative {
       \volta 1 {
-        | r8 d'16 ( b ) d,, b'' ( a ) g, e' ( fs g ) a d,, a c' ( b )
+        | r8 d'16 ( b ) d,, b'' ( a ) g, e' ( fs g ) a d,, a c'' ( b )
       }
 
       \volta 2 {
-        | r8 d'16 ( b ) d,, b'' ( a ) g, d c'' b a g fs e d ~
+        | r8 d16 ( b ) d,, b'' ( a ) g, d c'' b a g fs e d ~
       }
     }
   }
