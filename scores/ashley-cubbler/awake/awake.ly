@@ -98,7 +98,35 @@ music = \relative g, {
   | f16 f f f r8 f16 f f f8 c16 f c f, fs
   | g16 g g g r e g g g g r e g8 g
 
+  \repeat volta 2 {
+    | r8 d'''16 ( b ) d,, b'' ( a ) g, e' ( fs g ) e d, a d' ( b )
+    \alternative {
+      \volta 1 {
+        | r8 d'16 ( b ) d,, b'' ( a ) g, e' ( fs g ) a d,, a b' ( a )
+      }
 
+      \volta 2 {
+        | r8 d'16 ( b ) d,, b'' ( a ) g, e' g fs e d, c' b a
+      }
+    }
+  }
+
+  \repeat volta 2 {
+    | r8 d'16 ( b ) d,, b'' ( a ) g, e' ( fs g ) e d, a d' ( b )
+    \alternative {
+      \volta 1 {
+        | r8 d'16 ( b ) d,, b'' ( a ) g, e' ( fs g ) a d,, a c' ( b )
+      }
+
+      \volta 2 {
+        | r8 d'16 ( b ) d,, b'' ( a ) g, d c'' b a g fs e d ~
+      }
+    }
+  }
+
+  | d1
+
+  \bar "|."
 }
 
 
