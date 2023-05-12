@@ -60,10 +60,45 @@ music = \relative g, {
   | e16 e e d ~ d d c c c b8 d,16 a' b a d,
   | d16 d d d ~ d d d d d d8 d16 d a a' b
   | c16 c c b ~ b b a a a b8 a,16 a'8 g
-  | f16 f f f ~ f8 f16 f f f8 c16 f c f, fs
-  | g16 g g g ~ g e g g g g8 e16 g8 g
+  | f16 f f f r8 f16 f f f8 c16 f c f, fs
+  | g16 g g g r e g g g g r e g8 g
 
   | R1 * 5
+  | r2 r4 r16 g8 e16
+
+  | g8. g16 ~ g e g8 ~ g16 g' ( a ) d, c' ( d8 ) d,16
+  | g,8. g16 ~ g e g8 ~ g16 a' ( bf ) d, d' ( e8 ) d,16
+  | g,8. g16 ~ g e g8 ~ g16 bf' ( c ) d, f' ( e8 ) d,16
+  | g,8. g16 ~ g e g8 ~ g16 g' ( a ) d, c' ( d8 ) d,16
+
+  | g,8. g16 ~ g8 \acciaccatura { g'16 } a8 ~ a g4 f8 ~
+  | f d4 c a8 g r
+  | R1
+
+  | g'16 g g g r8 g16 g g g8. g8 g,
+  | g'16 g g g r8 g16 g g g8. g8 d
+
+  \repeat volta 2 {
+    | g,8. g16 ~ g e g8 r16 c d e f e d c
+    | g8. g16 ~ g e g8 r16 c d e f d e d
+  }
+
+  | g,8. g16 ~ g e g8 ~ g16 g8 e16 g8 g
+
+  | d''16 d d d ~ d d, d' d d d8 d,16 d' d d, d
+  | d'16 d d d ~ d d, d' d d d8 d,16 d' d, d'8
+
+  | c,8. c16 ~ c a c8 ~ c16 c8 a16 d e g a
+  | d16 d d g, ~ g g d'16 d d g,8 g16 d' g, d8
+  | c8. c16 ~ c a c8 ~ c16 c8 d16 ( e ) g ( a ) b
+
+  | e16 e e d ~ d d c c c b8 d,16 a' b a d,
+  | d16 d d d ~ d d d d d d8 d16 a' d, a' b
+  | c16 c c b ~ b a, a' a a b8 a,16 a'8 g
+  | f16 f f f r8 f16 f f f8 c16 f c f, fs
+  | g16 g g g r e g g g g r e g8 g
+
+
 }
 
 
