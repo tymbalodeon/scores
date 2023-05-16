@@ -39,7 +39,7 @@ chorus = \relative a, {
   | a8 e'' c a, ~ a e'' c e,,
   | a8 e'' c a, ~ a c g'' c,,
 
-  | b8 d' b b, ~ b d' b b,
+  | b8 d' b b, ~ b d' b e,,
   | g8 b' g, d' ~ d fs' d, fs, ~
   | fs8 a' fs, fs ~ fs a' fs, e
 
@@ -54,14 +54,14 @@ postChorusBase = \relative fs, {
   | fs8 e'16 es fs8 cs e16 es fs8 cs e,
   | fs8 e'16 es fs8 cs e16 es fs8 cs a
   | b8 d' ( cs ) b a fs d cs
-  | b8 a gs cs fs a e e,
+  | b8 a ( gs ) cs fs a e e,
 
 }
 
 postChorusOne = \relative e, {
   \postChorusBase
 
-  | e2 r
+  | e'2 r
   | R1 * 3
 }
 
