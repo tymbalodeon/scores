@@ -53,8 +53,8 @@ chorus = \relative a, {
 postChorusBase = \relative fs, {
   | fs8 e'16 es fs8 cs e16 es fs8 cs e,
   | fs8 e'16 es fs8 cs e16 es fs8 cs a
-  | b8 d' ( cs ) b a fs d cs
-  | b8 a ( gs ) cs fs a e e,
+  | b8 d' ( cs ) b a fs e d (
+  | cs8 ) b a d fs a e e,
 
 }
 
