@@ -9,7 +9,7 @@
 }
 
 music = \relative g, {
-  \key g \major
+  \key c \major
   \time 4/4
   \clef "bass"
 
@@ -97,6 +97,8 @@ music = \relative g, {
   | c16 c c b ~ b a, a' a a b8 a,16 a'8 g
   | f16 f f f r8 f16 f f f8 c16 f c f, fs
   | g16 g g g r e g g g g r e g8 g
+
+  \key g \major
 
   \repeat volta 2 {
     | r8 d'''16 ( b ) d,, b'' ( a ) g, e' ( fs g ) e d, a d' ( b )
