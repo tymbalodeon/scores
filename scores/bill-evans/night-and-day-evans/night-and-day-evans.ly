@@ -1,4 +1,4 @@
-\version "2.25.4"
+\version "2.25.5"
 \language "english"
 \pointAndClickOff
 \paper {

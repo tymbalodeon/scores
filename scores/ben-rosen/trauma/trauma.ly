@@ -1,4 +1,4 @@
-\version "2.25.4"
+\version "2.25.5"
 
 \include "settings.ily"
 \include "trauma-upper-staff.ily"
