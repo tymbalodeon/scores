@@ -24,9 +24,9 @@ music = \relative fs, {
   | gs8 fs4. e4 ds
 
   | r4. fs,8 ~ fs4 fs
-  | b2. r4
+  | b1
   | fs4. fs'8 ~ fs4 fs,
-  | b2. r4
+  | b1
 
   | fs4. fs'8 ~ fs4 fs,
   | b4. ds8 ~ ds4 fs8 gs
@@ -39,7 +39,7 @@ music = \relative fs, {
 
   | cs'2. b,4
   | ds'2. b,4
-  | fs''2. r4
+  | fs''1
 
   | fs,,4. fs'8 ~ fs4 fs,
   | b4. gs'8 ~ gs fs4 cs8
@@ -55,9 +55,9 @@ music = \relative fs, {
   | a8 a a gs gs fs e e,
 
   | fs4. fs'8 ~ fs4 cs8 fs
-  | r8 fs r fs ~ fs4 r
-  | fs,4. fs'8 ~ fs4 cs8 fs
-  | r8 fs r fs ~ fs fs gs4
+  | r8 b, r b ~ b4 r
+  | fs4. fs'8 ~ fs4 cs8 fs
+  | r8 b, r b ~ b b cs4
 
   | e,4. e'8 ~ e4 fs,
   | b4. b'8 ~ b4 b,
@@ -77,7 +77,7 @@ music = \relative fs, {
   | b'4. a8 ~ a2
   | gs4. fs8 ~ fs4 e4
 
-  | r4. fs,8 ~ fs4 fs
+  | r4. fs,8 ~ fs2
   | b2. r4
   | fs4. fs'8 ~ fs4 fs,
   | b2. r4
@@ -88,9 +88,9 @@ music = \relative fs, {
   | gs4. fs8 ~ fs4 e4
 
   | b''4. a8 ~ a2
-  | gs4. fs8 ~ fs4 e4
+  | gs4. fs8 ~ fs4 cs4
 
-  | a,,1
+  | a,1
   | fs1
   | e2. b'4
   | e4. fs8 ~ fs4 gs
@@ -98,7 +98,7 @@ music = \relative fs, {
   | a,1
   | fs1
   | e2. b'4
-  | e4. b'8 ~ b4 cs
+  | e4. b'8 ~ b b cs4
 
   | a,1
   | fs1
