@@ -103,7 +103,7 @@ music = \relative fs, {
   | a,1
   | fs1
   | e2. b'4
-  | e4. ds8 ~ ds4 cs
+  | e4. ds8 ~ ds4 cs8 b ~
 
   | b1
   | r2. r8 a
