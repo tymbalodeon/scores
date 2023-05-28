@@ -94,7 +94,6 @@ music = \relative c {
   | g2. r4
 
   \bar "|."
-
 }
 
 \score {
