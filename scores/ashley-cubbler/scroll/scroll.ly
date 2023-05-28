@@ -73,8 +73,10 @@ music = \relative e, {
   | r2. r8 e,16 fs
   | ds'8 fs,16 cs' ~ cs fs, b8 r16 fs' fs8 ~ fs16 cs fs8
 
-  | cs'4. b8 ~ b fs b,4
-  | b16 b b b r8 b16 b b b r fs b fs b8
+  \ottava #1
+  | cs''4. b8 ~ b fs b,4
+  \ottava #0
+  | b,16 b b b r8 b16 b b b r fs b fs b8
   | b'16 b b b r8 b16 b b b r fs b fs b8
 
   | a,4. gs8 ~ gs4 e
