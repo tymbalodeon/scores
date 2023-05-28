@@ -74,7 +74,7 @@ music = \relative c {
   | g g16 d ~ d8 g fs fs16 b, ~ b8 fs'
   | e e16 b ~ b8 g e e g gs
   | a4. e'8 b'8. a16 ~ a8 e
-  | d2 r8 e, fs g
+  | d2 ~ d8 e, fs g
 
   | a4. e'8 c'8. b16 ~ b8 a
   | fs4 e d8. e16 ~ e8 e,
