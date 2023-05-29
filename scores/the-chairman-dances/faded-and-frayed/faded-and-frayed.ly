@@ -10,7 +10,7 @@
 
 music = \relative c {
   \key g \major
-  \time 4/4
+  \time 2/2
   \clef "bass"
 
   | R1 * 21
