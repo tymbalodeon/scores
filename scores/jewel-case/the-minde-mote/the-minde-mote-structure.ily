@@ -4,17 +4,39 @@ key_and_time = {
 }
 
 intro = {
-  | s1 * 4
+  | s1 * 6
 }
 
 verse = {
-  \repeat volta 2 {
-    | s1 * 8
-  }
+  | s1 * 9
 }
 
 chorus = {
-  | s1 * 4
+  | s1 * 8
+}
+
+bridge = {
+  | s1
+
+  \time 2/4
+
+  | s2
+
+  \time 4/4
+
+  | s1 * 3
+}
+
+coda = {
+  | s1
+
+  \time 2/4
+
+  | s2
+
+  \time 4/4
+
+  | s1
 }
 
 structure = {
@@ -22,4 +44,11 @@ structure = {
   \intro
   \verse
   \chorus
+  \verse
+  \bridge
+  \intro
+  \verse
+  \coda
+
+  \bar "|."
 }
