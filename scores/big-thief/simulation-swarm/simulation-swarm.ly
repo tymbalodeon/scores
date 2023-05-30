@@ -10,33 +10,41 @@
   title = "Simulation Swarm"
 }
 
-repeatNumbers = {
-  \override Dynamics.TextScript.padding = #3
-  s1 * 2^\markup { \box \normal-text "4x" } |
-  s1 * 2^\markup { \box \normal-text "4x" } |
-  s1 * 2^\markup { \box \normal-text "2x" } |
-  s1 * 2^\markup { \box \normal-text "8x" } |
-}
+% repeatNumbers = {
+%   \override Dynamics.TextScript.padding = #3
+%   s1 * 2^\markup { \box \normal-text "4x" } |
+%   s1 * 2^\markup { \box \normal-text "4x" } |
+%   s1 * 2^\markup { \box \normal-text "2x" } |
+%   s1 * 2^\markup { \box \normal-text "8x" } |
+% }
 
-\book {
-  \header {
-    composer = "Adrianne Lenker (Big Thief)"
-  }
+% \book {
+%   \header {
+%     composer = "Adrianne Lenker (Big Thief)"
+%   }
 
-  \score {
-    <<
-      \new Dynamics { \repeatNumbers }
-      \changes
-      {
-        \key df \major
-        \melody
-      }
-    >>
-  }
-}
+%   \score {
+%     <<
+%       \new Dynamics { \repeatNumbers }
+%       \changes
+%       {
+%         \key df \major
+%         \melody
+%       }
+%     >>
+%   }
+% }
 
 form_layout = \layout {
-  ragged-last = ##f
+  \context {
+    \Score \consists
+    #(set-bars-per-line '(
+      2 4 4 4
+      2 2
+      2 4 4 5
+      4
+    ))
+  }
 }
 
 \book {
@@ -49,111 +57,13 @@ form_layout = \layout {
   \score {
     \form_layout
     <<
-      \numericTimeSignature
-      \changes_verse
-      \new Staff \with {
-        instrumentName = \markup \box "Verse"
-      } {
+      \changes
+      {
+        \key df \major
         <<
-          \melody_verse
-          \structure_verse
+          \melody
+          \structure
         >>
-      }
-    >>
-  }
-
-  \markup \italic "...in the belly of the empty night..."
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_chorus_one
-      \new Staff \with {
-        instrumentName = \markup \box "Chorus"
-      } {
-        <<
-          \melody_chorus_one
-          \structure_chorus_one
-        >>
-      }
-    >>
-  }
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_verse
-      \new Staff \with {
-        instrumentName = \markup \box "Verse"
-      } {
-        <<
-          \melody_verse
-          \structure_verse
-        >>
-      }
-    >>
-  }
-
-  \markup \italic "...as the first little angel..."
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_solo
-      \new Staff \with {
-        instrumentName = \markup \box "Solo (4x)"
-      } {
-        \structure_solo
-      }
-    >>
-  }
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_verse
-      \new Staff \with {
-        instrumentName = \markup \box "Verse"
-      } {
-        <<
-          \melody_verse
-          \structure_verse
-        >>
-      }
-    >>
-  }
-
-  \markup \italic "...in the belly of the empty night..."
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_chorus_two
-      \new Staff \with {
-        instrumentName = \markup \box "Chorus"
-      } {
-        <<
-          \melody_chorus_two
-          \structure_chorus_two
-        >>
-      }
-    >>
-  }
-
-  \score {
-    \form_layout
-    <<
-      \numericTimeSignature
-      \changes_solo
-      \new Staff \with {
-        instrumentName = \markup \box "Solo (8x)"
-      } {
-        \structure_solo
       }
     >>
   }

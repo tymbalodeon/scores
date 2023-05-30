@@ -69,8 +69,11 @@ melody_verse = \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
   \improvisationOn
-  df2 gf |
-  af gf |
+
+  \repeat volta 2 {
+    df2 gf |
+    af gf |
+  }
 }
 
 melody_chorus_one = \new Voice \with {
@@ -121,4 +124,14 @@ melody_chorus_two = \new Voice \with {
   }
 
   s1 |
+}
+
+melody = {
+  \melody_verse
+  \melody_chorus_one
+  \melody_verse
+  | s1 * 2
+  \melody_verse
+  \melody_chorus_two
+  | s1 * 2
 }

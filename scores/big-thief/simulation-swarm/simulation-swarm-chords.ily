@@ -86,7 +86,9 @@ changes = \chords {
 }
 
 changes_verse = \chords {
-  \verse |
+  \repeat volta 2 {
+    \verse |
+  }
 }
 
 changes_chorus_one = \chords {
@@ -99,4 +101,14 @@ changes_chorus_two = \chords {
 
 changes_solo = \chords {
   \solo |
+}
+
+changes = \chords {
+  \verse
+  \chorusOne
+  \verse
+  \solo
+  \verse
+  \chorusTwo
+  \solo
 }
