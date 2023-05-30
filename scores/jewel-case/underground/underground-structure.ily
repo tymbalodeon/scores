@@ -19,10 +19,13 @@ two = {
 
 structure = {
   \key_and_time
+
   \one
   \two
 
   | s2.
+
+  \sectionLabel "Solo"
 
   \one
   \two
