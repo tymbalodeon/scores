@@ -19,12 +19,12 @@ melody = \new Staff {
   >>
 }
 
-% \layout {
-%   \context {
-%     \Score \consists
-%     #(set-bars-per-line '(4))
-%   }
-% }
+\layout {
+  \context {
+    \Score \consists
+    #(set-bars-per-line '(6 5 4 8 5 4 5 6 5 4 3))
+  }
+}
 
 \score {
   <<
