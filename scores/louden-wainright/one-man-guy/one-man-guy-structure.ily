@@ -10,6 +10,11 @@ verse = {
   }
 }
 
+verseTwo = {
+  \verse
+  | s1
+}
+
 chorus = {
   | s1 * 4
   | s1 * 4
@@ -17,10 +22,9 @@ chorus = {
 
 structure = {
   \verse
-  \verse
-
-  | s1
-
+  \verseTwo
+  \chorus
+  \verseTwo
   \chorus
 
   \bar "|."

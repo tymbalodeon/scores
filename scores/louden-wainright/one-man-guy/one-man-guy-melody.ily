@@ -22,6 +22,11 @@ verse = \relative c'' {
   }
 }
 
+verseTwo = {
+ \verse
+ | s1
+}
+
 chorus = \relative c'' {
   \new Voice \with {
     \consists "Pitch_squash_engraver"
@@ -51,13 +56,9 @@ chorus = \relative c'' {
 }
 
 melody = {
-  \sectionLabel "Verse"
-
   \verse
-  \verse
-
-  | s1
-
-  \sectionLabel "Chorus"
+  \verseTwo
+  \chorus
+  \verseTwo
   \chorus
 }

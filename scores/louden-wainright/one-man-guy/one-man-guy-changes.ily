@@ -16,6 +16,11 @@ verse = \chordmode {
   | b1:7
 }
 
+verseTwo = {
+  \verse
+  | s1
+}
+
 chorus = \chordmode {
   \repeat volta 2 {
     | e2 a
@@ -40,9 +45,8 @@ chorus = \chordmode {
 
 changes = \chords {
   \verse
-  \verse
-
-  | s1
-
+  \verseTwo
+  \chorus
+  \verseTwo
   \chorus
 }
