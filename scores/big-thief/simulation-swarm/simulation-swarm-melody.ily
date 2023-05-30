@@ -73,7 +73,7 @@ melody_verse = \new Voice \with {
   af gf |
 }
 
-melody_chorus = \new Voice \with {
+melody_chorus_one = \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
   \improvisationOn
@@ -90,4 +90,21 @@ melody_chorus = \new Voice \with {
   \repeat unfold 2 {
     s1 |
   }
+}
+
+melody_chorus_two = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} {
+  \improvisationOn
+  \repeat unfold 2 {
+    df2 bf |
+    af gf |
+  }
+  ef af |
+  df gf |
+  df bf |
+  af gf |
+  df bf |
+  s |
+  s1 |
 }

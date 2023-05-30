@@ -47,14 +47,12 @@ form_layout = \layout {
   \bookOutputSuffix "form"
 
   \header {
-    subtitle = "Big Thief"
+    composer = "Big Thief"
   }
 
   \paper {
-    score-system-spacing.basic-distance = #18
+    system-system-spacing.basic-distance = #11
   }
-
-  \markup \vspace #1
 
   \score {
     \form_layout
@@ -72,17 +70,84 @@ form_layout = \layout {
     >>
   }
 
+  \markup \italic "...in the belly of the empty night..."
+
   \score {
     \form_layout
     <<
       \numericTimeSignature
-      \changes_chorus
+      \changes_chorus_one
       \new Staff \with {
         instrumentName = \markup \box "Chorus"
       } {
         <<
-          \melody_chorus
-          \structure_chorus
+          \melody_chorus_one
+          \structure_chorus_one
+        >>
+      }
+    >>
+  }
+
+  \score {
+    \form_layout
+    <<
+      \numericTimeSignature
+      \changes_verse
+      \new Staff \with {
+        instrumentName = \markup \box "Verse"
+      } {
+        <<
+          \melody_verse
+          \structure_verse
+        >>
+      }
+    >>
+  }
+
+  \markup \italic "...as the first little angel..."
+
+  \score {
+    \form_layout
+    <<
+      \numericTimeSignature
+      \changes_solo
+      \new Staff \with {
+        instrumentName = \markup \box "Solo (4x)"
+      } {
+        \structure_solo
+      }
+    >>
+  }
+
+  \score {
+    \form_layout
+    <<
+      \numericTimeSignature
+      \changes_verse
+      \new Staff \with {
+        instrumentName = \markup \box "Verse"
+      } {
+        <<
+          \melody_verse
+          \structure_verse
+        >>
+      }
+    >>
+  }
+
+  \markup \italic "...in the belly of the empty night..."
+
+  \score {
+    \form_layout
+    <<
+      \numericTimeSignature
+      \changes_chorus_two
+      \new Staff \with {
+        instrumentName = \markup \box "Chorus"
+      } {
+        <<
+          \melody_chorus_two
+          \structure_chorus_two
         >>
       }
     >>
@@ -94,30 +159,10 @@ form_layout = \layout {
       \numericTimeSignature
       \changes_solo
       \new Staff \with {
-        instrumentName = \markup \box "Solo"
+        instrumentName = \markup \box "Solo (8x)"
       } {
         \structure_solo
       }
     >>
-  }
-
-  \markup \vspace #2
-
-  \markup \fill-line {
-    \column
-    \override #'(padding . 5)
-    \table #'(1 -1 -1)
-    {
-      \bold Verse \italic "x 4" "instrumental"
-      \bold Verse \italic "x 4" ""
-      \bold Verse \italic "x 2" "interlude"
-      \bold Verse \italic "x 8" ""
-      \bold Chorus \italic "" "no repeats"
-      \bold Verse \italic "x 6" ""
-      \bold Solo \italic "x 4" ""
-      \bold Verse \italic "x 6" ""
-      \bold Chorus \italic "" "2 repeats; al Coda"
-      \bold Solo \italic "x 8" ""
-    }
   }
 }

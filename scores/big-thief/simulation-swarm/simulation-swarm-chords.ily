@@ -34,7 +34,7 @@ chorusA = \chordmode {
   df2 bf:m | af gf |
 }
 
-chorus = \chordmode {
+chorusOne = \chordmode {
   \repeat unfold 2 { \chorusA }
   ef:m af | df gf |
   \chorusA
@@ -45,9 +45,20 @@ chorus = \chordmode {
   gf1 * 2 |
 }
 
+chorusTwo = \chordmode {
+  \repeat unfold 2 { \chorusA }
+  ef2:m af | df gf |
+  \chorusA
+  df2 bf:m |
+  \time 2/4
+  af |
+  \time 4/4
+  gf1 |
+}
+
 solo = \chordmode {
   \repeat volta 4 {
-    df1 | bf:m | gf | ef:m |
+    df2 bf:m | gf ef:m |
   }
 }
 
@@ -67,8 +78,12 @@ changes_verse = \chords {
   \verse |
 }
 
-changes_chorus = \chords {
-  \chorus |
+changes_chorus_one = \chords {
+  \chorusOne |
+}
+
+changes_chorus_two = \chords {
+  \chorusTwo |
 }
 
 changes_solo = \chords {
