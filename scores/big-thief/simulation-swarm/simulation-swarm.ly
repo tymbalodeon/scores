@@ -37,10 +37,6 @@ repeatNumbers = {
 
 form_layout = \layout {
   ragged-last = ##f
-  \context {
-    \Score
-    \consists #(set-bars-per-line '(4))
-  }
 }
 
 \book {
@@ -48,10 +44,6 @@ form_layout = \layout {
 
   \header {
     composer = "Big Thief"
-  }
-
-  \paper {
-    system-system-spacing.basic-distance = #11
   }
 
   \score {

@@ -27,10 +27,19 @@ structure_chorus_two = {
   s1 * 6 |
   \repeat volta 2 {
     s1 * 2 |
+    \alternative {
+      \volta 1 {
+        | s1 * 2
+      }
+
+      \volta 2 {
+        s1 |
+        \time 2/4
+        s2 |
+      }
+    }
   }
-  s1 |
-  \time 2/4
-  s2 |
+
   \time 4/4
   s1 |
   \bar "||"

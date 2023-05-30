@@ -48,10 +48,21 @@ chorusOne = \chordmode {
 chorusTwo = \chordmode {
   \repeat unfold 2 { \chorusA }
   ef2:m af | df gf |
-  \chorusA
-  df2 bf:m |
-  \time 2/4
-  af |
+  \repeat volta 2 {
+    \chorusA
+    \alternative {
+      \volta 1 {
+        \chorusA
+      }
+
+      \volta 2 {
+        df2 bf:m |
+        \time 2/4
+        af |
+      }
+    }
+  }
+
   \time 4/4
   gf1 |
 }
@@ -69,7 +80,7 @@ changes = \chords {
   \interlude
   \doubleVerse
   \bar "||"
-  \chorus
+  \chorusOne
   \codaMark \default
   \solo
 }

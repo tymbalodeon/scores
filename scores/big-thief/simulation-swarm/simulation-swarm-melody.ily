@@ -102,9 +102,23 @@ melody_chorus_two = \new Voice \with {
   }
   ef af |
   df gf |
-  df bf |
-  af gf |
-  df bf |
-  s |
+
+  \repeat volta 2 {
+    df bf |
+    af gf |
+    \alternative {
+      \volta 1 {
+        df bf |
+        af gf |
+      }
+
+      \volta 2 {
+
+        df bf |
+        s |
+      }
+    }
+  }
+
   s1 |
 }
