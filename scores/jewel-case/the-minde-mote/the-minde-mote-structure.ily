@@ -7,8 +7,12 @@ intro = {
   | s1 * 6
 }
 
-verse = {
+verseOne = {
   | s1 * 9
+}
+
+verseTwo = {
+  | s1 * 8
 }
 
 chorus = {
@@ -24,10 +28,10 @@ bridge = {
 
   \time 4/4
 
-  | s1 * 3
+  | s1 * 4
 }
 
-coda = {
+end = {
   | s1
 
   \time 2/4
@@ -42,13 +46,12 @@ coda = {
 structure = {
   \key_and_time
   \intro
-  \verse
+  \verseOne
   \chorus
-  \verse
+  \verseTwo
   \bridge
-  \intro
-  \verse
-  \coda
+  \chorus
+  \end
 
   \bar "|."
 }

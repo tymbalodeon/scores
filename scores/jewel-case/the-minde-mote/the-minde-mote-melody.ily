@@ -7,7 +7,7 @@ intro = \relative g' {
   | s1 * 2
 }
 
-verse = {
+verseOne = {
   \new Voice \with {
     \consists "Pitch_squash_engraver"
   } {
@@ -28,6 +28,20 @@ verse = {
         }
       }
     }
+  }
+}
+
+verseTwo = {
+  \new Voice \with {
+    \consists "Pitch_squash_engraver"
+  } {
+    \improvisationOn
+
+      | s1 * 5
+      | c4 c c c
+      | s1
+      | s1
+
   }
 }
 
@@ -58,12 +72,13 @@ bridge = \relative g {
       \improvisationOn
 
       | c4 c c c
+      | c1 ~
+      | c2 c4 c
     }
 
-  | s1
 }
 
-coda = \relative g {
+end = \relative g {
   | g8 b g' fs a, c g' fs
   | b, d fs g
   | s1
@@ -71,11 +86,10 @@ coda = \relative g {
 
 melody = {
   \intro
-  \verse
+  \verseOne
   \chorus
-  \verse
+  \verseTwo
   \bridge
-  \intro
-  \verse
-  \coda
+  \chorus
+  \end
 }

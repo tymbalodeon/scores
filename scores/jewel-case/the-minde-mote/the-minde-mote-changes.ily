@@ -1,19 +1,19 @@
 intro = \chordmode {
-  | g1
+  | s1
   | f1
-  | g1
+  | s1
   | c1
 
   | g1 * 2
 
 }
 
-verse = \chordmode {
+verseOne = \chordmode {
   \repeat volta 2 {
     | g1 * 3
     | f1
     | c1
-    | c4 g:/b a:m d:/fs
+    | c4 g:/b a:m d
 
     | g1
 
@@ -27,6 +27,16 @@ verse = \chordmode {
       }
     }
   }
+}
+
+verseTwo = \chordmode {
+    | g1 * 3
+    | f1
+    | c1
+    | c4 g:/b a:m d
+
+    | g1
+    | s1
 }
 
 chorus = \chordmode {
@@ -46,11 +56,12 @@ bridge = \chordmode {
   | g2:/b
   | c1
 
-  | c4 g:/b a:m d:/fs
+  | c4 g:/b a:m d
   | g1
+  | s2 g4 d:/fs
 }
 
-coda = \chordmode {
+end = \chordmode {
   | g2 a:m
   | g2:/b
   | c1
@@ -58,11 +69,10 @@ coda = \chordmode {
 
 changes = \chords {
   \intro
-  \verse
+  \verseOne
   \chorus
-  \verse
+  \verseTwo
   \bridge
-  \intro
-  \verse
-  \coda
+  \chorus
+  \end
 }
