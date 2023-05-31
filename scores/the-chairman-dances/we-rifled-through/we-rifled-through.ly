@@ -117,7 +117,6 @@ music = \relative e {
   | d d d d d d d d
   | d d d d d d d a
   | d d d d d d d d
-
   | <d a'>1
 
   \bar "|."
