@@ -69,8 +69,8 @@ music = \relative e {
   | d8 fs16 g a8 g ~ g fs d d,
   | g4 g, r2
 
-  | r8 e' e'4 r2
-  | r8 a,, a'4 r2
+  | r8 e' e'2.
+  | r8 a,, a'2.
   | r8 e, fs g a e fs g ~
   | g4 g' g8 fs4 e8 ~
 
@@ -101,8 +101,8 @@ music = \relative e {
 
   | fs fs fs fs fs d e, fs ~
   | fs fs fs fs fs e fs g ~
-  | g g g g g g g g
-  | g g g g g g r4
+  | g g g g g g g e
+  | g g g e g g r4
 
   | r4 a'2.
   | R1
