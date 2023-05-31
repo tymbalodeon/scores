@@ -23,7 +23,7 @@ music = \relative e {
 
   | e4 e8 b e fs g a ~
   | a4 a8 e' ( d ) cs a fs ~
-  | fs4 r8 d fs a fs g ~
+  | fs4 fs8 d e a fs g ~
   | g4 g, r4 r8 d' ~
 
   | d8 d d a d d d a
@@ -41,7 +41,7 @@ music = \relative e {
 
   | e8 e d d cs cs b a ~
   | a8 a g e fs a d a
-  | d8 e fs d a' g fs e
+  | d8 e fs d a' g fs d
   | g4 g, r r8 d' ~
 
   | d8 d d a d d d a
@@ -49,12 +49,12 @@ music = \relative e {
   | g8 g g e g g g e
   | g8 g g e g g4 a8 ~
 
-  | a8 a a a a a a e'
-  | a8 a a e a af4 g8 ~
+  | a8 a a a a a a \acciaccatura d e
+  | a8 a a e a af d, g8 ~
   | g8 g g d g g g d
   | g8 d g d g g, gs a ~
 
-  | a8 a a a a a a e'
+  | a8 a a a a a a \acciaccatura d e
   | a8 a a e a e fs g ~
   | g8 g g d g g g d
   | g8 d g fs'16 ( g fs8 ) e b e, ~
@@ -67,7 +67,7 @@ music = \relative e {
   | b8 e,,, a'' e,, g'' fs a,, e'' ~
   | e8 a,, d' a, cs' d e d ~
   | d8 fs16 ( g a8 ) g ~ g fs d d,
-  | g4 g, r2
+  | g8 e, g4 r2
 
   | r8 e' e'2.
   | r8 a,, a'2.
@@ -81,8 +81,8 @@ music = \relative e {
 
   | e8 b e e, fs' d' cs a ~
   | a4 a8 e a g fs d ~
-  | d8 d a' g ~ g fs d4
-  | g,4 g r r8 d' ~
+  | d8 d a' d, g fs d e,
+  | g4 g r r8 d' ~
 
   | d8 d d a d d d a
   | d8 d d a d e, fs g ~
@@ -101,8 +101,8 @@ music = \relative e {
 
   | fs fs fs fs fs d e, fs ~
   | fs fs fs fs fs e fs g ~
-  | g g g g g g g e
-  | g g g e g g r4
+  | g g g g g g g g
+  | g g g g g g r4
 
   | r4 a'2.
   | R1
@@ -114,9 +114,10 @@ music = \relative e {
   | r4 g2.
   | r2 r4 r8 d' ~
 
+  | d d d d d d d d
   | d d d d d d d a
   | d d d d d d d d
-  | <d a'>1 ~
+
   | <d a'>1
 
   \bar "|."
