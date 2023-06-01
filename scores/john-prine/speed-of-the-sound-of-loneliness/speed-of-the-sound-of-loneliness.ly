@@ -12,6 +12,7 @@
 }
 
 \layout {
+  \numericTimeSignature
   \context {
     \Score \consists
     #(set-bars-per-line '(4))
@@ -31,6 +32,9 @@
 \score {
   <<
     \last_changes
-    \last_chorus
+    {
+      \key g \major
+      \last_chorus
+    }
   >>
 }

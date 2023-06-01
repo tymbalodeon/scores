@@ -35,17 +35,6 @@
 %   }
 % }
 
-form_layout = \layout {
-  \context {
-    \Score \consists
-    #(set-bars-per-line '(
-      2 4 4 4
-      2 2
-      2 4 4 5
-      4
-    ))
-  }
-}
 
 \book {
   \bookOutputSuffix "form"
@@ -55,7 +44,20 @@ form_layout = \layout {
   }
 
   \score {
-    \form_layout
+
+    \layout {
+      \numericTimeSignature
+      \context {
+        \Score \consists
+        #(set-bars-per-line '(
+          2 4 4 4
+          2 2
+          2 4 4 5
+          4
+        ))
+      }
+    }
+
     <<
       \changes
       {
