@@ -95,7 +95,7 @@ music = \relative e {
   | g8 d g d g g r a ~
 
   | a8 a a a, a' a a a,
-  | a'8 a a a, a' a4 b8 ~
+  | a'8 a a a, a' a r b ~
   | b8 b b b, b' b b b,
   | b' b b b, b' a g fs ~
 
