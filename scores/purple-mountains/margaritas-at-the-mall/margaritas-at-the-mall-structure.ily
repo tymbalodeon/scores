@@ -3,21 +3,12 @@ structure_intro = {
 }
 
 structure_verse = {
-  \repeat volta 4 {
-    | s1 * 2
-
-    \alternative {
-      \volta 1,2,3 {
-        | s1 * 2
-      }
-
-      \volta 4 {
-        | s1
-      }
-    }
+  \repeat volta 2 {
+    | s1 ^\markup \bold \box "3x"
+    | s1 * 3
   }
 
-  | s1 * 5
+  | s1 * 6
 }
 
 structure_chorus_one = {
@@ -57,7 +48,9 @@ structure_chorus_two = {
 structure = {
   \structure_intro
   \structure_verse
+  \structure_verse
   \structure_chorus_one
+  \structure_verse
   \structure_verse
   \structure_chorus_two
 

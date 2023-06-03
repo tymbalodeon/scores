@@ -6,12 +6,22 @@ melody_intro = \new Voice \with {
   | s1 * 4
 }
 
-melody_verse = \new Voice \with {
+melody_verse_one = \new Voice \with {
   \consists "Pitch_squash_engraver"
 } \relative c' {
   \improvisationOn
 
   | s1 * 10
+}
+
+melody_verse_two = \new Voice \with {
+  \consists "Pitch_squash_engraver"
+} \relative c' {
+  \improvisationOn
+
+  | s1 * 9
+  | c4 r2.
+
 }
 
 melody_chorus_one = \new Voice \with {
@@ -40,8 +50,10 @@ melody_chorus_two = \new Voice \with {
 
 melody = {
   \melody_intro
-  \melody_verse
+  \melody_verse_one
+  \melody_verse_two
   \melody_chorus_one
-  \melody_verse
+  \melody_verse_one
+  \melody_verse_two
   \melody_chorus_two
 }

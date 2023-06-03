@@ -3,8 +3,8 @@ changes_intro = \chordmode {
     | s1 * 3
 }
 
-changes_verse = \chordmode {
-  \repeat volta 3 {
+changes_verse_one = \chordmode {
+  \repeat volta 2 {
     | a1:m
     | a1:m7
     | f1:maj
@@ -18,6 +18,23 @@ changes_verse = \chordmode {
 
   | d1
   | s1
+}
+
+changes_verse_two = \chordmode {
+  \repeat volta 2 {
+    | a1:m
+    | a1:m7
+    | f1:maj
+    | s1
+  }
+
+  | c1
+  | g1
+  | d1
+  | d1:sus
+
+  | d1
+  | d4 s2.
 }
 
 changes_chorus_one = \chordmode {
@@ -59,8 +76,10 @@ changes_chorus_two = \chordmode {
 
 changes = \chords {
   \changes_intro
-  \changes_verse
+  \changes_verse_one
+  \changes_verse_two
   \changes_chorus_one
-  \changes_verse
+  \changes_verse_one
+  \changes_verse_two
   \changes_chorus_two
 }
