@@ -1,6 +1,5 @@
 key_and_time = {
   \key g \major
-  \time 4/4
 }
 
 verse_one = {
