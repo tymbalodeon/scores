@@ -107,7 +107,7 @@ music = \relative gs {
   | b4 fs'8 cs ds fs gs fs ~
   | fs8 cs'4 as8 ~ as fs cs gs ~
   | gs4 gs'8 cs, ds fs gs fs ~
-  | fs gs4 fs8 ~ fs ds cs b ~
+  | fs gs4 fs8 ~ fs cs fs, b ~
 
   | b4 fs'8 cs ds fs gs fs ~
   | fs8 cs'4 as8 ~ as fs cs gs ~
@@ -117,12 +117,41 @@ music = \relative gs {
   | b4 fs'8 cs ds fs gs fs ~
   | fs8 fs'4 ds8 ~ ds b fs gs, ~
   | gs4 gs'8 cs, ds fs gs fs ~
-  | fs gs4 fs8 ~ fs ds cs b ~
+  | fs gs4 fs8 ~ fs cs fs, b ~
 
   | b4 fs'8 cs ds fs gs fs ~
   | fs8 fs' e ds ~ ds b fs gs, ~
-  | gs4 gs'8 cs, ds fs gs fs ~
-  | fs fs, fs' fs, ~ fs fs gs b ~
+  | gs4 gs'8 cs, ds fs gs cs
+  | b8 as fs ds cs fs, gs b ~
+
+  | b8 b fs' b, ~ b b fs' b, ~
+  | b8 b fs' b, ~ b b fs' fs,
+  | gs8 gs b' gs, ~ gs gs b' gs, ~
+  | gs8 gs b' gs, ~ gs gs b' fs,
+
+  | b8 b fs' b, ~ b b fs' b, ~
+  | b8 b fs' b, ~ b b fs' fs,
+  | gs8 gs b' gs, ~ gs gs b' gs, ~
+  | gs8 gs b' gs, b' gs, b' fs, ~
+
+  | fs8 fs fs' fs, ~ fs fs fs' fs, ~
+  | fs8 fs fs' fs, ~ fs fs fs' fs, ~
+  | gs8 gs gs' gs, ~ gs gs gs' gs, ~
+  | gs8 gs gs' gs, ~ gs gs gs' e,
+
+  | fs8 fs fs' fs, ~ fs fs fs' fs, ~
+  | fs8 fs fs' fs, ~ fs fs fs'4
+  | gs8 ds gs as fs as gs, b' ~
+  | b8 b4 gs,8 fs'' e ds e,, ~
+
+  | e2. r8 e' ~
+  | e2. r8 e, ~
+  | e2. r8 e' ~
+  | e2. r4
+
+  | R1 * 4
+
+  \bar "|."
 }
 
 \score {
