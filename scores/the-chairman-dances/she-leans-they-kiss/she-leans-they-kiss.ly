@@ -135,7 +135,7 @@ music = \relative gs {
   | gs8 gs b' gs, b' gs, b' fs, ~
 
   | fs8 fs fs' fs, ~ fs fs fs' fs, ~
-  | fs8 fs fs' fs, ~ fs fs fs' fs, ~
+  | fs8 fs fs' fs, ~ fs fs fs' fs,
   | gs8 gs gs' gs, ~ gs gs gs' gs, ~
   | gs8 gs gs' gs, ~ gs gs gs' e,
 
