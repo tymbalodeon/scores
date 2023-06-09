@@ -54,15 +54,23 @@ music = \relative gs {
   | r8 b fs' b, r b fs' b,
   | r8 gs gs' gs, r gs gs' e, ~
 
-  | e8 e' b' e, r e b' e,
-  | r8 e b' e, r e b' e,
-  | r8 cs cs' cs, r cs cs' cs,
-  | r8 cs cs' cs, r cs cs' e,, ~
+  \repeat volta 2 {
+    | e8 e' b' e, r e b' e,
+    | r8 e b' e, r e b' e,
+    | r8 cs cs' cs, r cs cs' cs,
 
-  | e8 e' b' e, r e b' e,
-  | r8 e b' e, r e b' e,
-  | r8 cs cs' cs, r cs cs' cs,
-  | r8 cs cs' cs, r cs cs' fs,, ~
+    \alternative {
+      \volta 1 {
+
+        | r8 cs cs' cs, r cs cs' e,, \laissezVibrer
+      }
+
+      \volta 2 {
+
+        | r8 cs' cs' cs, r cs cs' fs,, ~
+      }
+    }
+  }
 
   | fs2. r8 gs ~
   | gs2. r8 as ~
