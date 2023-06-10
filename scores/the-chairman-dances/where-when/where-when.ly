@@ -23,6 +23,8 @@ verseOne = \relative c {
 
   | e4 r8 g a b4 c8 ~
   | c8 d4 e8 ~ e f g4
+  | g4 r8 g g4 r8 g ~
+  | g g4 g8 g4 r
 }
 
 chorus = \relative c {
