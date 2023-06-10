@@ -4,7 +4,7 @@
 
 \header {
   title = "Zippers"
-  composer = "Ashley Cubbler"
+  composer = "Tomo Choco (Ashley Cubbler)"
   arranger = "Ben Rosen, bass"
 }
 

@@ -4,7 +4,7 @@
 
 \header {
   title = "We Interrupt This Broadcast"
-  composer = "The Chairman Dances"
+  composer = "The Chairman Dances (Eric Krewson)"
   arranger = "Ben Rosen, bass"
 }
 

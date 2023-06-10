@@ -4,7 +4,7 @@
 
 \header {
   title = "4700 Hazel"
-  composer = "The Chairman Dances"
+  composer = "The Chairman Dances (Eric Krewson)"
   arranger = "Ben Rosen, bass"
 }
 

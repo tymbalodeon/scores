@@ -5,7 +5,7 @@
 \header {
   title = "Blonde In The Bleachers"
   composer = "Joni Mitchell"
-  arranger = "The Chairman Dances; Ben Rosen, bass"
+  arranger = "The Chairman Dances (Eric Krewson); Ben Rosen, bass"
 }
 
 music = \relative c'' {

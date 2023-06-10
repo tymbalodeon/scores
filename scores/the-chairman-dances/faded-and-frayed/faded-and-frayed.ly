@@ -4,7 +4,7 @@
 
 \header {
   title = "Faded And Frayed"
-  composer = "The Chairman Dances"
+  composer = "The Chairman Dances (Eric Krewson)"
   arranger = "Ben Rosen, bass"
 }
 

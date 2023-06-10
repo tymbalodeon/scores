@@ -4,7 +4,7 @@
 
 \header {
   title = "Prophetess"
-  composer = "The Chairman Dances"
+  composer = "The Chairman Dances (Eric Krewson)"
 }
 
 instrumental = \relative f, {

@@ -4,7 +4,7 @@
 
 \header {
   title = "Nowhere To Be"
-  composer = "The Chairman Dances"
+  composer = "The Chairman Dances (Eric Krewson)"
   arranger = "Ben Rosen, bass"
 }
 
