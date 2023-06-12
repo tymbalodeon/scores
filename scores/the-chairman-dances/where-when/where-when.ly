@@ -101,7 +101,7 @@ verseThree = \relative c {
   | d8 a'16 d, e' f e d ~ d c8 a16 ~ a g f a,
   | e'8 c16 d e f g a ~ a c8 d16 ~ d c a d,
   | f16 a, f'' a,, e'' d c a, b' a g f ~ f e c b
-  | e8, e16 e g a b c ~ c d8 e16 ~ e d e f
+  | e,8 e16 e g a b c ~ c d8 e16 ~ e d e f
   | g8 g r2.
 }
 
