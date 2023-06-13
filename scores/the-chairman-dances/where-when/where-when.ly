@@ -8,18 +8,18 @@
   arranger = "Ben Rosen, bass"
 }
 
-verseOne = \relative e, {
+verseOne = \relative {
   \sectionLabel "Verse"
 
-  | R1 * 3
-  | r2 r4 r16 e g ( a )
+    | R1 * 3 |
+    | r2 r4 r8 fs,16 ( gs16 )
 
-  | c8. c16 g g8 c16 ~ c c8 c16 g' g, c cs
-  | d8. d16 a a8 d16 ~ d e8 f16 ~ f e d a
-  | e8. e16 c'16 c8 e16 ~ e16 g8 a16 ~ a g e e,
-  | f8 g16 ( a ) c ( d ) e f ~ f16 e8 d16 ~ d c a8
-  | e8. e16 g a8 b16 ~b16 c8 d16 ~ d e f a,
-  | g'8. g16 g8. g16 ~ g g8 g16 g16 a, g ( a )
+    | b8. b16 fs16 fs8 b16 ~ b16 b8 b16 fs'16 fs,16 b16 bs16
+    | cs8. cs16 gs16 gs8 cs16 ~ cs16 ds8 e16 ~ e16 ds16 cs16 gs16
+    | ds'8. ds16 b16 b8 ds16 ~ ds16 fs8 gs16 ~ gs16 fs16 ds8
+    | e,8 fs16 ( gs16 ) b16 ( cs16 ) ds16 e16 ~ e16 ds8 cs16 ~ cs16 b16 gs8
+    | ds8. ds16 fs16 gs8 as16 ~ as16 b8 cs16 ~ cs16 ds16 e16 gs16
+    | fs8. fs16 fs8. fs16 ~ fs16 fs8 fs16 fs16 gs16 fs16 ( gs16 )
 }
 
 chorusOne = \relative c {
@@ -117,17 +117,111 @@ bridge = \relative g {
   | f,8 f4 c'8 ~ c4 r16 e, g ( a )
 }
 
+% \absolute {
+%   \sectionLabel "Verse" |
+%   R1*3 |
+%   r2 r4 r16 ds,16 fs,16( gs,16) |
+%   b,8. b,16 fs,16 fs,8 b,16 ~ b,16 b,8 b,16 fs16 fs,16 b,16 bs,16 |
+%   cs8. cs16 gs,16 gs,8 cs16 ~ cs16 ds8 e16 ~ e16 ds16 cs16 gs,16 |
+%   ds,8. ds,16 b,16 b,8 ds16 ~ ds16 fs8 gs16 ~ gs16 fs16 ds16 ds,16 |
+%   e,8 fs,16( gs,16) b,16( cs16) ds16 e16 ~ e16 ds8 cs16 ~ cs16 b,16 gs,8 |
+%   ds,8. ds,16 fs,16 gs,8 as,16 ~ as,16 b,8 cs16 ~ cs16 ds16 e16 gs,16 |
+%   fs8. fs16 fs8. fs16 ~ fs16 fs8 fs16 fs16 gs,16 fs,16( gs,16)
+% }
+
+% \absolute {
+%   \sectionLabel "Chorus" |
+%   b,8. b,16 ds,16 ds,8 e,16 ~ e,16 es,8 fs,16 ~ fs,16 gs,16 b,16 bs,16 |
+%   cs8. cs16 e,16 e,8 fs,16 ~ fs,16 gs,8 b,16 ~ b,16 ds,16 cs16 css16 |
+%   ds8. ds16 ds,16 fs,8 gs,16 ~ gs,16 as,8 b,16 ~ b,16 cs16 ds16 b,16 |
+%   e8 b,16( cs16) e16 ds16 cs16 fs16 ~ fs16 fs,8 fs16 gs,8 as,8 |
+%   b,8. b,16 ds,16 ds,8 e,16 ~ e,16 es,8 fs,16 ~ fs,16 ds,16 b,16 bs,16 |
+%   cs8. ds16 e16 gs8 e'16 ~ e'16 ds'8 cs'16 ~ cs'16 b16 gs16 gs,16 |
+%   ds,8. ds,16 ds,16 fs,8 gs,16 ~ gs,16 as,8 b,16 ~ b,16 cs16 ds16 b,16 |
+%   e,8 b,16( cs16) e16 ds16 cs16 fs,16 ~ fs,16 fs8 fs,16 gs,8 as,8 |
+%   b,4 b,8. b,16 ~ b,16 b,8 b,16 b,16 ds,16 fs,16( gs,16) |
+%   b,4 b,8. b,16 ~ b,16 b,8 fs,16 b,16 ds,16 fs,16( gs,16)
+% }
+
+% \absolute {
+%   \sectionLabel "Verse" |
+%   b,8. b,16 fs16 fs8 b16 ~ b16 b8 fs16 b16 fs16 b,16 bs,16 |
+%   cs8. cs16 gs16 gs8 cs'16 ~ cs'16 cs'8 b16 cs'16 b16 gs16 gs,16 |
+%   ds8. ds16 fs16 fs8 b16 ~ b16 ds'8 cs'16 ~ cs'16 b16 gs16 gs,16 |
+%   e8 b,16( cs16) e16( fs16) gs16 b16 ~ b16 e'8 ds'16 ~ ds'16 cs'16 b16 gs,16 |
+%   ds8. ds16 ds,16 fs,8 gs,16 ~ gs,16 as,8 b,16 ~ b,16 cs16 ds16 gs,16 |
+%   fs4 fs4 r8. fs16 fs8 fs,16 gs,16
+% }
+
+% \absolute {
+%   \sectionLabel "Chorus" |
+%   b,8. b,16 ds,16 ds,8 e,16 ~ e,16 es,8 fs,16 ~ fs,16 gs,16 b,16 bs,16 |
+%   cs8. cs16 e,16 e,8 fs,16 ~ fs,16 gs,8 b,16 ~ b,16 ds,16 cs16 css16 |
+%   ds8. ds16 ds,16 fs,8 gs,16 ~ gs,16 as,8 b,16 ~ b,16 cs16 ds16 b,16 |
+%   e8 b,16( cs16) e16 ds16 cs16 fs16 ~ fs16 fs,8 fs16 gs,8 as,8 |
+%   b,8. b,16 ds,16 ds,8 e,16 ~ e,16 es,8 fs,16 ~ fs,16 ds,16 b,16 bs,16 |
+%   cs8. ds16 e16 gs16 b16 e'16 ~ e'16 ds'8 cs'16 ~ cs'16 b16 gs16 gs,16 |
+%   ds,8. ds,16 ds,16 fs,8 gs,16 ~ gs,16 as,8 b,16 ~ b,16 cs16 ds16 b,16 |
+%   e,8 b,16( cs16) e16 ds16 cs16 fs,16 ~ fs,16 fs8 fs,16 gs,8 as,8 |
+%   b,4 b,8. b,16 ~ b,16 b,8 b,16 b,16 ds,16 fs,16( gs,16) |
+%   b,4 b,8. b,16 ~ b,16 b,8 fs,16 b,16 ds,16 fs,16( gs,16)
+% }
+
+% \absolute {
+%   \sectionLabel "Verse" |
+%   b,8. b,16 fs16 fs8 b16 ~ b16 b8 fs16 b16 fs16 b,16 bs,16 |
+%   cs8 gs16 cs16 ds'16 e'16 ds'16 cs'16 ~ cs'16 b8 gs16 ~ gs16 fs16 e16 gs,16 |
+%   ds8 b,16 cs16 ds16 e16 fs16 gs16 ~ gs16 b8 cs'16 ~ cs'16 b16 gs16 cs16 |
+%   e16 gs,16 e'16 gs,16 ds'16 cs'16 b16 gs,16 as16 gs16 fs16 e16 ~ e16 ds16 b,16 as,16 |
+%   ds,8 ds,16 ds,16 fs,16 gs,16 as,16 b,16 ~ b,16 cs8 ds16 ~ ds16 cs16 ds16 e16 |
+%   fs8 fs8 r2.
+% }
+
+% \absolute {
+%   \sectionLabel "Bridge" |
+%   R1*3 |
+%   r2. r8 fs8 |
+%   b4. a8 ~ a2 |
+%   gs4. fs8 ~ fs8 b,8 fs,4 |
+%   b,4. cs8 ~ cs2 |
+%   e,8 e,4 b,8 ~ b,4 r16 ds,16 fs,16( gs,16)
+% }
+
+% \absolute {
+%   \sectionLabel "Chorus" |
+%   b,8. b,16 ds,16 ds,8 e,16 ~ e,16 es,8 fs,16 ~ fs,16 gs,16 b,16 bs,16 |
+%   cs8. cs16 e,16 e,8 fs,16 ~ fs,16 gs,8 b,16 ~ b,16 ds,16 cs16 css16 |
+%   ds8. ds16 ds,16 fs,8 gs,16 ~ gs,16 as,8 b,16 ~ b,16 cs16 ds16 b,16 |
+%   e8 b,16( cs16) e16 ds16 cs16 fs16 ~ fs16 fs,8 fs16 gs,8 as,8 |
+%   b,8. b,16 ds,16 ds,8 e,16 ~ e,16 es,8 fs,16 ~ fs,16 ds,16 b,16 bs,16 |
+%   cs8. ds16 e16 gs16 b16 e'16 ~ e'16 ds'8 cs'16 ~ cs'16 b16 gs16 gs,16 |
+%   ds,8. ds,16 ds,16 fs,8 gs,16 ~ gs,16 as,8 b,16 ~ b,16 cs16 ds16 b,16 |
+%   e,8 b,16( cs16) e16 ds16 cs16 fs,16 ~ fs,8 fs8 fs,8 fs8 |
+%   ds,1 |
+%   e,1 |
+%   fs,1 |
+%   gs,2 as,2 |
+%   < b, ds' >1 |
+%   < cs e' >1 |
+%   < ds fs' >1 |
+%   e,2 fs,2 |
+%   R1*3 |
+%   r2. r4\fermata
+% }
+
 music = \relative c {
   \key c \major
   \clef "bass"
 
-  \verseOne
-  \chorusOne
-  \verseTwo
-  \chorusTwo
-  \verseThree
-  \bridge
-  \chorusThree
+  % \transpose c b, {
+    \verseOne
+    \chorusOne
+    \verseTwo
+    \chorusTwo
+    \verseThree
+    \bridge
+    \chorusThree
+  % }
 
   \bar "|."
 }
