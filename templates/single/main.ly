@@ -1,6 +1,7 @@
 \version "2.25.5"
 
 \include "settings.ily"
+\include "helpers/bar-numbers/left-bar-numbers.ily"
 
 \header {
   title = "Title"

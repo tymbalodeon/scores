@@ -1,9 +1,10 @@
 \version "2.25.5"
 
 \include "settings.ily"
+\include "helpers/bar-numbers/left-bar-numbers.ily"
 
 \header {
-  title = "Faded And Frayed"
+  title = "Faded And Fraying"
   composer = "The Chairman Dances (Eric Krewson)"
   arranger = "Ben Rosen, bass"
 }
