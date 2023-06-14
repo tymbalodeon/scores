@@ -3,7 +3,7 @@
 \include "settings.ily"
 
 \header {
-  title = "Turn On The Lights The Radio"
+  title = "Turn On The Lights, The Radio"
   composer = "The Chairman Dances (Eric Krewson)"
 }
 
@@ -68,6 +68,14 @@ upper_chorus = {
   \repeat unfold 2 \f_pattern
 }
 
+upper_coda = {
+  \upper_intro
+  | r8 <g c e!> -. <g c e> -. r <g c e> -. <g c e> -. <g c e> -. <g c e> --
+  \c_pattern
+
+  \transpose c bf \c_pattern
+}
+
 upper_staff = \relative c' {
   \key_signature
 
@@ -79,9 +87,7 @@ upper_staff = \relative c' {
   \upper_verse_two
   \upper_chorus
 
-  \upper_intro
-  | r8 <g c e!> -. <g c e> -. r <g c e> -. <g c e> -. <g c e> -. <g c e> --
-  \c_pattern
+  \upper_coda
 }
 
 intro_pattern = \relative c, {
@@ -128,6 +134,13 @@ lower_chorus = {
   \transpose c f, \repeat unfold 2 \bass_pattern
 }
 
+lower_coda = {
+  \lower_intro
+  \repeat unfold 2 \bass_pattern
+
+  \transpose c bf, \repeat unfold 2 \bass_pattern
+}
+
 lower_staff = \relative c {
   \clef bass
   \key_signature
@@ -140,8 +153,7 @@ lower_staff = \relative c {
   \lower_verse_two
   \lower_chorus
 
-  \lower_intro
-  \repeat unfold 2 \bass_pattern
+  \lower_coda
 }
 
 \score {
