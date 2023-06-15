@@ -111,7 +111,7 @@ upper_coda = {
   }
 
   | \repeat unfold 4 { r4 <a, c ef gf> -. <a c ef gf>8 -. <a c ef gf> -. <a c ef gf> -. <a c ef gf> -- }
-  | <bf d f>4 r r2
+  | <bf d f>4 -. r r2
 
   | \bar "|."
 }
@@ -197,7 +197,7 @@ lower_coda = {
   }
 
   | \repeat unfold 4 { gf4 c8 c, ~ c4 c'8 c }
-  | bf4 r r2
+  | bf4 -. r r2
 
   \bar "|."
 }
