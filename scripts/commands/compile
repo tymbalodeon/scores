@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 
+mkdir -p "${PDFS_DIRECTORY}"
 files=($("${HELPERS}"/_get_files "ly" "$@"))
 if [ -z "${files[*]}" ]; then
     exit
