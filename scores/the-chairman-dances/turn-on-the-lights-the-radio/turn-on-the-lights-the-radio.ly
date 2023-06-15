@@ -87,6 +87,8 @@ upper_coda = {
   | r8 <g c e!> -. <g c e> -. r <g c e> -. <g c e> -. <g c e> -. <g c e> --
   \c_pattern
 
+  \key bf \major
+
   \repeat volta 2 {
     \transpose c bf \repeat unfold 2 \c_minor_pattern
     | r8 <f' bf d!> -. <f bf d> -. r <f bf d> -. <f bf d> -. <f bf d> -. <f bf d> --
@@ -190,6 +192,8 @@ lower_chorus = {
 lower_coda = {
   \lower_intro
   \repeat unfold 2 \bass_pattern
+
+  \key bf \major
 
   \repeat unfold 3 {
     \repeat volta 2 {
