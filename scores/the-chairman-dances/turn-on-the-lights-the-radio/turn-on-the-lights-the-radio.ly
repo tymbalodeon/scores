@@ -39,25 +39,33 @@ upper_intro = {
   \repeat unfold 2 \c_minor_pattern
 }
 
-upper_verse = \relative g {
-  | r8 <g c e!> -. <g c e> -. r <g c e> -. <g c e> -. <g c e> -. <g c e> --
-  \c_pattern
-  \repeat unfold 4 \g_pattern
-  \upper_tag
-  | <g c e>4 -. r <e'' g>16 c <e g> c -\markup \italic "(drum break)" <e g>4
-}
-
-upper_verse_one = {
+upper_verse_one = \relative g {
   \repeat volta 2 {
-    \upper_verse
+    | r8 <g c e!> -. <g c e> -. r <g c e> -. <g c e> -. <g c e> -. <g c e> --
+    \c_pattern
+    \repeat unfold 4 \g_pattern
+    \upper_tag
+    \alternative {
+      \volta 1 {
+        | <g c e>4 -. r <e'' g>16 c <e g> c <e g>4
+        | R1
+      }
 
-    | R1
+      \volta 2 {
+
+        | R1
+      }
+    }
   }
 }
 
-upper_verse_two = {
+upper_verse_two = \relative g {
   \repeat volta 2 {
-    \upper_verse
+    | r8 <g c e!> -. <g c e> -. r <g c e> -. <g c e> -. <g c e> -. <g c e> --
+    \c_pattern
+    \repeat unfold 4 \g_pattern
+    \upper_tag
+    | <g c e>4 -. r <e'' g>16 c <e g> c <e g>4
   }
 }
 
@@ -143,23 +151,30 @@ lower_intro = {
   \repeat unfold 2 \intro_pattern
 }
 
-lower_verse = {
-    \repeat unfold 2 \bass_pattern
-    \transpose c g, \repeat unfold 4 \bass_pattern
-    \repeat unfold 2 \lower_tag
-}
-
 lower_verse_one = {
   \repeat volta 2 {
-    \lower_verse
+    \repeat unfold 2 \bass_pattern
+    \transpose c g, \repeat unfold 4 \bass_pattern
+    \lower_tag
 
-    | R1
+    \alternative {
+      \volta 1 {
+        \lower_tag
+        | R1
+      }
+
+      \volta 2 {
+        | R1
+      }
+    }
   }
 }
 
 lower_verse_two = {
   \repeat volta 2 {
-    \lower_verse
+    \repeat unfold 2 \bass_pattern
+    \transpose c g, \repeat unfold 4 \bass_pattern
+    \repeat unfold 2 \lower_tag
   }
 }
 
