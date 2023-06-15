@@ -3,8 +3,9 @@
 \include "settings.ily"
 
 \header {
-  title = "Turn On The Lights, The Radio"
-  composer = "The Chairman Dances (Eric Krewson)"
+  title = "Turn on the Lights, the Radio"
+  composer = "Eric Krewson"
+  arranger = "(The Chairman Dances)"
 }
 
 key_signature = {
