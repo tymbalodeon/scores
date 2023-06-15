@@ -15,6 +15,10 @@ c_pattern = \relative c' {
   | r8 <g c e> -. <g c e> -. r <g c e> -. <g c e> -. <g c e> -. <g c e> --
 }
 
+c_pattern_inverted = \relative c' {
+  | r8 <c e g> -. <c e g> -. r <c e g> -. <c e g> -. <c e g> -. <c e g> --
+}
+
 g_pattern = \relative c' {
   | r8 <g b d> -. <g b d> -. r <g b d> -. <g b d> -. <g b d> -. <g b d> --
 }
@@ -28,7 +32,7 @@ c_minor_pattern = \relative c' {
 }
 
 a_minor_pattern = \relative c' {
-  | r8 <c e a> -. r4 r8 <c e a> -. r <c e a> --
+  | r8 <c e a> -. <c e a> -. r <c e a> -. <c e a> -. <c e a> -. <c e a> --
 }
 
 upper_tag = \relative c' {
@@ -71,7 +75,7 @@ upper_verse_two = \relative g {
 
 upper_chorus = {
   \repeat unfold 2 \a_minor_pattern
-  \repeat unfold 2 \c_pattern
+  \repeat unfold 2 \c_pattern_inverted
   \repeat unfold 2 \g_pattern
   \repeat unfold 2 \a_minor_pattern
   \repeat unfold 2 \f_pattern
@@ -106,8 +110,8 @@ upper_coda = {
     \transpose c bf \c_pattern
   }
 
-  | \repeat unfold 4 { r4 <a c ef> -. r8 <a c ef> -. r <a c ef> -- }
-  | <f bf d>4 r r2
+  | \repeat unfold 4 { r4 <a, c ef gf> -. <a c ef gf>8 -. <a c ef gf> -. <a c ef gf> -. <a c ef gf> -- }
+  | <bf d f>4 r r2
 
   | \bar "|."
 }
@@ -135,11 +139,7 @@ upper_staff = \relative c' {
   \upper_coda
 }
 
-intro_pattern = \relative c, {
-  | c4 g'8 -. g, ~ g4 g'8 -. g -.
-}
-
-bass_pattern = \relative c {
+bass_pattern = \relative c, {
   | c4 g'8 -. g, ~ g4 g'8 -. g -.
 }
 
@@ -148,13 +148,13 @@ lower_tag = \relative c, {
 }
 
 lower_intro = {
-  \repeat unfold 2 \intro_pattern
+  \repeat unfold 2 \bass_pattern
 }
 
 lower_verse_one = {
   \repeat volta 2 {
     \repeat unfold 2 \bass_pattern
-    \transpose c g, \repeat unfold 4 \bass_pattern
+    \transpose c g \repeat unfold 4 \bass_pattern
     \lower_tag
 
     \alternative {
@@ -173,17 +173,17 @@ lower_verse_one = {
 lower_verse_two = {
   \repeat volta 2 {
     \repeat unfold 2 \bass_pattern
-    \transpose c g, \repeat unfold 4 \bass_pattern
+    \transpose c g \repeat unfold 4 \bass_pattern
     \repeat unfold 2 \lower_tag
   }
 }
 
 lower_chorus = {
-  \transpose c a, \repeat unfold 2 \bass_pattern
-  \repeat unfold 2 \bass_pattern
-  \transpose c g, \repeat unfold 2 \bass_pattern
-  \transpose c a, \repeat unfold 2 \bass_pattern
-  \transpose c f, \repeat unfold 2 \bass_pattern
+  \transpose c a \repeat unfold 2 \bass_pattern
+  | \repeat unfold 2 \relative c { c4 g'8 -. g, ~ g4 g'8 -. g -. }
+  \transpose c g \repeat unfold 2 \bass_pattern
+  \transpose c a \repeat unfold 2 \bass_pattern
+  \transpose c f \repeat unfold 2 \bass_pattern
 }
 
 lower_coda = {
@@ -192,7 +192,7 @@ lower_coda = {
 
   \repeat unfold 3 {
     \repeat volta 2 {
-      \transpose c bf, \repeat unfold 4 \bass_pattern
+      \transpose c bf \repeat unfold 4 \bass_pattern
     }
   }
 
