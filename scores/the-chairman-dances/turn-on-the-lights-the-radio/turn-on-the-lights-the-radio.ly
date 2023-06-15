@@ -11,7 +11,6 @@ key_signature = {
   \key c \major
 }
 
-
 c_pattern = \relative c' {
   | r8 <g c e> -. <g c e> -. r <g c e> -. <g c e> -. <g c e> -. <g c e> --
 }
@@ -40,18 +39,19 @@ upper_intro = {
   \repeat unfold 2 \c_minor_pattern
 }
 
-upper_verse = {
+upper_verse = \relative g {
   | r8 <g c e!> -. <g c e> -. r <g c e> -. <g c e> -. <g c e> -. <g c e> --
   \c_pattern
   \repeat unfold 4 \g_pattern
-  \repeat unfold 2 \upper_tag
+  \upper_tag
+  | <g c e>4 -. r <e'' g>16 c <e g> c -\markup \italic "(drum break)" <e g>4
 }
 
 upper_verse_one = {
   \repeat volta 2 {
     \upper_verse
 
-    | R1 -\markup \italic "(drum break)"
+    | R1
   }
 }
 
