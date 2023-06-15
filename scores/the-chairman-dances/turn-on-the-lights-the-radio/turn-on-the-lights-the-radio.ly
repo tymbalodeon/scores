@@ -11,6 +11,7 @@ key_signature = {
   \key c \major
 }
 
+
 c_pattern = \relative c' {
   | r8 <g c e> -. <g c e> -. r <g c e> -. <g c e> -. <g c e> -. <g c e> --
 }
@@ -50,7 +51,7 @@ upper_verse_one = {
   \repeat volta 2 {
     \upper_verse
 
-    | R1
+    | R1 -\markup \italic "(drum break)"
   }
 }
 
@@ -73,20 +74,56 @@ upper_coda = {
   | r8 <g c e!> -. <g c e> -. r <g c e> -. <g c e> -. <g c e> -. <g c e> --
   \c_pattern
 
-  \transpose c bf \c_pattern
+  \repeat volta 2 {
+    \transpose c bf \repeat unfold 2 \c_minor_pattern
+    | r8 <f' bf d!> -. <f bf d> -. r <f bf d> -. <f bf d> -. <f bf d> -. <f bf d> --
+    \transpose c bf \c_pattern
+  }
+
+  \repeat volta 2 {
+    <<
+      \transpose c bf \repeat unfold 2 \c_minor_pattern
+      s1 ^\markup \italic "(drums)"
+    >>
+    | r8 <f bf d!> -. <f bf d> -. r <f bf d> -. <f bf d> -. <f bf d> -. <f bf d> --
+    \transpose c bf \c_pattern
+  }
+
+  \repeat volta 2 {
+    <<
+      \transpose c bf \repeat unfold 2 \c_minor_pattern
+      s1 ^\markup \italic "(vocals)"
+    >>
+    | r8 <f bf d!> -. <f bf d> -. r <f bf d> -. <f bf d> -. <f bf d> -. <f bf d> --
+    \transpose c bf \c_pattern
+  }
+
+  | \repeat unfold 4 { r4 <a c ef> -. r8 <a c ef> -. r <a c ef> -- }
+  | <f bf d>4 r r2
+
+  | \bar "|."
 }
 
 upper_staff = \relative c' {
   \key_signature
 
   \upper_intro
+
+  \sectionLabel "Verse"
   \upper_verse_one
+
+  \sectionLabel "Chorus"
   \upper_chorus
 
   \upper_intro
+
+  \sectionLabel "Verse"
   \upper_verse_two
+
+  \sectionLabel "Chorus"
   \upper_chorus
 
+  \sectionLabel "Coda"
   \upper_coda
 }
 
@@ -138,7 +175,16 @@ lower_coda = {
   \lower_intro
   \repeat unfold 2 \bass_pattern
 
-  \transpose c bf, \repeat unfold 2 \bass_pattern
+  \repeat unfold 3 {
+    \repeat volta 2 {
+      \transpose c bf, \repeat unfold 4 \bass_pattern
+    }
+  }
+
+  | \repeat unfold 4 { gf4 c8 c, ~ c4 c'8 c }
+  | bf4 r r2
+
+  \bar "|."
 }
 
 lower_staff = \relative c {
