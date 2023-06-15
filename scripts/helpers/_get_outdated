@@ -6,7 +6,7 @@ if [ -z "${files[*]}" ]; then
 fi
 for file in "${files[@]}"; do
     without_extension="${file:r}"
-    pdf_files=("${PDFS_DIRECTORY}/${without_extension:t}"*.pdf)
+    pdf_files=("${PDFS_DIRECTORY}/${without_extension:t}"*.pdf(N))
     for file in "${pdf_files[@]}"; do
         checkexec "${file}" "${without_extension}"*.*ly(N) **/**.ily -- \
             echo "${file:r:t}"
