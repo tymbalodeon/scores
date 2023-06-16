@@ -1,10 +1,11 @@
 \version "2.25.5"
 
 \include "settings.ily"
+\include "helpers/bar-numbers/left-bar-numbers.ily"
 
 \header {
   title = "We Rifled Through"
-  composer = "The Chairman Dances (Eric Krewson)"
+  composer = "Eric Krewson (The Chairman Dances)"
   arranger = "Ben Rosen, bass"
 }
 
@@ -69,8 +70,9 @@ music = \relative e {
   | d8 fs16 ( g a8 ) g ~ g fs d d,
   | g8 e, g4 r2
 
-  | r8 e' e'2.
-  | r8 a,, a'2.
+  | r8 e' \afterGrace e'2. \glissando { \hideNotes b8 \unHideNotes }
+  | r8 a, \afterGrace a'2. \glissando { \hideNotes e8 \unHideNotes }
+  % | r8 a,, a'2.
   | r8 e, fs g a e fs g ~
   | g4 g' g8 fs4 e8 ~
 
@@ -104,14 +106,14 @@ music = \relative e {
   | g g g g g g g g
   | g g g g g g r4
 
-  | r4 a'2.
+  | r4 \afterGrace a'2. \glissando { \hideNotes e8 \unHideNotes }
   | R1
-  | r4 g2.
+  | r4 \afterGrace g2. \glissando { \hideNotes d8 \unHideNotes }
   | R1
 
-  | r4 a,2.
+  | r4 \afterGrace a2. \glissando { \hideNotes e8 \unHideNotes }
   | R1
-  | r4 g2.
+  | r4 \afterGrace g2. \glissando { \hideNotes e8 \unHideNotes }
   | r2 r4 r8 d' ~
 
   | d d d d d d d d
