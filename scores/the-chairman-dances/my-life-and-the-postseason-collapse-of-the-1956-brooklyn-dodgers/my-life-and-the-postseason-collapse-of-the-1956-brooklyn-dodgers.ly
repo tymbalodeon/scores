@@ -5,7 +5,7 @@
 \header {
   title = "My Life"
   subtitle = "And The Postseason Collapse Of The 1956 Brooklyn Dodgers"
-  composer = "The Chairman Dances (Eric Krewson)"
+  composer = "Eric Krewson (The Chairman Dances)"
   arranger = "Ben Rosen, bass"
 }
 

@@ -4,7 +4,7 @@
 
 \header {
   title = "Well Wisher"
-  composer = "The Chairman Dances (Eric Krewson)"
+  composer = "Eric Krewson (The Chairman Dances)"
 }
 
 music = \relative b' {

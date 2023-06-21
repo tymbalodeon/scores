@@ -4,7 +4,7 @@
 
 \header {
   title = "A Family Waiting"
-  composer = "The Chairman Dances (Eric Krewson)"
+  composer = "Eric Krewson (The Chairman Dances)"
   arranger = "Ben Rosen, bass"
 }
 

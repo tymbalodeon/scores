@@ -4,7 +4,7 @@
 
 \header {
   title = "Psalm 128"
-  composer = "The Chairman Dances (Eric Krewson)"
+  composer = "Eric Krewson (The Chairman Dances)"
 }
 
 music = \relative e' {

@@ -5,7 +5,7 @@
 
 \header {
   title = "She Leans, They Kiss"
-  composer = "The Chairman Dances (Eric Krewson)"
+  composer = "Eric Krewson (The Chairman Dances)"
   arranger = "Ben Rosen, bass"
 }
 
