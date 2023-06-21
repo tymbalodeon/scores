@@ -8,8 +8,14 @@ Required for generating pdfs:
 
 - [LilyPond](https://lilypond.org/ "lilypond")
 
-Recommended for development using `justfile` commands, incremental builds, file
-watching:
+Recommended for development:
+
+### NEW
+
+- [thoth](https://github.com/tymbalodeon/thoth "thoth"): _(Currently in
+  development)_ A CLI tool for managing your score library
+
+### Old
 
 - [just](https://just.systems/man/en/ "just")
 - [checkexec](https://github.com/kurtbuilds/checkexec "checkexec")
@@ -22,7 +28,7 @@ Dependencies can be installed by running the included script:
 Or, if `just` is already installed: `just install` to install the rest of the
 dependencies.
 
-## Tasks
+#### Tasks
 
 Task scripts are provided to facilitate development. These can be called
 directly (using `./scripts/main <COMMAND> <ARGS>`) or using
@@ -45,7 +51,7 @@ directly (using `./scripts/main <COMMAND> <ARGS>`) or using
 - `just templates`: List template types.
 - `just update *scores`: Update lilypond version in \<scores\>.
 
-## Templates
+#### Templates
 
 Templates are provided for common types of scores. To create a score from a
 template, call `just create` (or `./scripts/main create`) with a `type` value
@@ -58,7 +64,7 @@ For example:
 - To create both a lead sheet and a form chart without lyrics:
   `just create "lead,form" <composer> <title>`
 
-### Types
+#### Types
 
 - `form`: Form chart with separate sections and form summary at the bottom.
 - `lead`: Lead sheet showing melody and chords.
