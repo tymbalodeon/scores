@@ -9,7 +9,7 @@
 #(set! paper-alist
        (assoc-set! paper-alist "video-slide" '(cons (* 9 in) (* 5.06525 in))))
 
-paper_block =
+paperBlock =
 #(define-scheme-function
    (paper-type)
    (string?)
@@ -23,4 +23,4 @@ paper_block =
      }
    #})
 
-\paper_block "letter"
+\paperBlock "letter"
