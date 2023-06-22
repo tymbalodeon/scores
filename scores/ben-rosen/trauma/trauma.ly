@@ -1,6 +1,6 @@
 \version "2.25.5"
 
-\include "settings.ily"
+\include "helpers/settings.ily"
 \include "trauma-upper-staff.ily"
 \include "trauma-middle-staff.ily"
 \include "trauma-lower-staff.ily"

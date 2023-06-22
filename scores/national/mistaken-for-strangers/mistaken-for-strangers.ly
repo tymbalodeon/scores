@@ -1,6 +1,6 @@
 \version "2.25.5"
 
-\include "settings.ily"
+\include "helpers/settings.ily"
 \include "helpers/set-bars-per-line.ily"
 \include "mistaken-for-strangers-melody.ily"
 \include "mistaken-for-strangers-chords.ily"

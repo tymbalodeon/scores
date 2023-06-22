@@ -1,6 +1,6 @@
 \version "2.25.5"
 
-\include "settings.ily"
+\include "helpers/settings.ily"
 
 \header {
   title = "Natalie"

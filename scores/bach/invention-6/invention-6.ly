@@ -1,6 +1,6 @@
 \version "2.25.5"
 
-\include "settings.ily"
+\include "helpers/settings.ily"
 
 \include "invention-6-voice-one.ily"
 \include "invention-6-voice-two.ily"

@@ -1,6 +1,6 @@
 \version "2.25.5"
 
-\include "settings.ily"
+\include "helpers/settings.ily"
 \include "the-true-knowledge-soprano.ily"
 \include "the-true-knowledge-piano-upper-staff.ily"
 \include "the-true-knowledge-piano-lower-staff.ily"

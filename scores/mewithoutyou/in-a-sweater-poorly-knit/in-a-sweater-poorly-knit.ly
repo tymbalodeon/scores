@@ -1,6 +1,6 @@
 \version "2.25.5"
 
-\include "settings.ily"
+\include "helpers/settings.ily"
 \include "helpers/set-bars-per-line.ily"
 \include "in-a-sweater-poorly-knit-melody.ily"
 \include "in-a-sweater-poorly-knit-chords.ily"

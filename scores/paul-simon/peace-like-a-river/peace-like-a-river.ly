@@ -1,6 +1,6 @@
 \version "2.25.5"
 
-\include "settings.ily"
+\include "helpers/settings.ily"
 \include "peace-like-a-river-chords.ily"
 \include "peace-like-a-river-melody.ily"
 

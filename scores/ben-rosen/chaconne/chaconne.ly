@@ -1,6 +1,6 @@
 \version "2.25.5"
 
-\include "settings.ily"
+\include "helpers/settings.ily"
 \include "chaconne-violin.ily"
 \include "chaconne-upper-staff.ily"
 \include "chaconne-lower-staff.ily"

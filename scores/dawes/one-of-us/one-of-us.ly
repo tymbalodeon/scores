@@ -1,6 +1,6 @@
 \version "2.25.5"
 
-\include "settings.ily"
+\include "helpers/settings.ily"
 \include "helpers/set-bars-per-line.ily"
 \include "one-of-us-melody.ily"
 \include "one-of-us-changes.ily"
