@@ -763,6 +763,6 @@ music = \score {
 #(set-global-staff-size 18)
 \book {
   \bookOutputSuffix "video"
-  \paper_block "video-slide"
+  \paperBlock "video-slide"
   \music
 }
