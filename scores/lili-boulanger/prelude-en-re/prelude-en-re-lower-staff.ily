@@ -1,5 +1,5 @@
-\include "helpers/fake-treble-clef.ily"
-\include "helpers/fake-bass-clef.ily"
+\include "helpers/fake-clef-treble.ily"
+\include "helpers/fake-clef-bass.ily"
 
 lower_staff = \relative c {
   \key df \major

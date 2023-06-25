@@ -1,4 +1,4 @@
-\version "2.25.5"
+\version "2.25.6"
 
 \include "helpers/settings.ily"
 
@@ -73,7 +73,7 @@ music = \relative c {
   f1
   f1
   \times 4/5  {
-    r4 _\ffffff b'4 _\ffffff g4 g4 e4 }
+    r4 _\fffff b'4 _\fffff g4 g4 e4 }
 
   \times 4/5  {
     e4 c4 c4 g4 e4 }
@@ -87,7 +87,7 @@ music = \relative c {
   \times 4/5  {
     r4 g'4 e4 e4 c4 }
 
-  e,,1 _\ffffff
+  e,,1 _\fffff
   \times 4/5  {
     r4 f''4 e4 e4 c4 }
 

@@ -1,10 +1,10 @@
-\version "2.25.5"
+\version "2.25.6"
 
 \include "helpers/settings.ily"
 \include "helpers/half-bracket.ily"
+\include "helpers/bar-numbers-center.ily"
 \include "prelude-en-re-upper-staff.ily"
 \include "prelude-en-re-lower-staff.ily"
-\include "helpers/bar-numbers/center-bar-numbers.ily"
 
 \header {
   title = "Prélude en Ré♭"

@@ -1,7 +1,7 @@
-\version "2.25.5"
+\version "2.25.6"
 
 \include "helpers/settings.ily"
-\include "helpers/bar-numbers/left-bar-numbers.ily"
+\include "helpers/bar-numbers-left.ily"
 
 \header {
   title = "We Rifled Through"
