@@ -10,8 +10,6 @@
 }
 
 verseOne = \relative fs {
-  \sectionLabel "Verse"
-
   | R1 * 3 |
   | r2 r4 r8 fs,16 ( gs )
 
@@ -19,13 +17,12 @@ verseOne = \relative fs {
   | cs8. cs16 gs gs8 cs16 ~ cs ds8 e16 ~ e ds cs8
   | ds8. ds16 b b8 ds16 ~ ds fs8 gs16 ~ gs fs ds8
   | e,8 fs16 ( gs ) b ( cs ) ds e ~ e ds8 cs16 ~ cs b gs8
+
   | ds'8. ds16 fs, gs8 as16 ~ as b8 cs16 ~ cs ds e8
   | fs8. fs16 fs8. fs16 ~ fs fs8 fs16 fs8 fs,16 ( gs )
 }
 
-chorusOne = \relative b, {
-  \sectionLabel "Chorus"
-
+chorus = \relative b, {
   | b8. b16 ds ds8 e16 ~ e es8 fs16 ~ fs gs b ( cs )
   | cs,8. cs16 e e8 fs16 ~ fs gs8 b16 ~ b cs ds ( e )
   | ds,8. ds16 fs gs8 as16 ~ as b8 cs16 ~ cs ds e8
@@ -40,9 +37,7 @@ chorusOne = \relative b, {
   | R1
 }
 
-chorusThree = \relative b, {
-  \sectionLabel "Chorus"
-
+chorusFinal = \relative b, {
   | b8. b16 ds ds8 e16 ~ e es8 fs16 ~ fs gs b ( cs )
   | cs,8. cs16 e e8 fs16 ~ fs gs8 b16 ~ b cs ds ( e )
   | ds,8. ds16 fs gs8 as16 ~ as b8 cs16 ~ cs ds e8
@@ -51,36 +46,33 @@ chorusThree = \relative b, {
   | b8. b16 ds ds8 e16 ~ e es8 fs16 ~ fs gs b ( cs )
   | cs,8. ds16 ( e ) gs b e16 ~ e ds8 cs16 ~ cs b gs8
   | ds8. ds16 fs gs8 as16 ~ as b8 cs16 ~ cs ds e8
-  | e,8 b16( cs) e ds cs fs ~ fs fs,8 fs'16 gs,8 as8
+  | e,16 e ds8 cs b fs' fs, gs as
 
-  | ds1
-  | e1
-  | fs1
-  | gs2 as2
+  | ds8. ds16 ds8. ds16 ds as ( b ) ds ~ ds fs b8
+  | e,,8. e16 e8. e16 e fs ( gs ) b ~ b cs ds8
+  | fs,8. fs16 fs8. fs16 fs b fs' fs ~ fs b, fs8
+  | gs8. gs16 gs8 fs16 gs as8. as16 as8 gs16 as
 
-  | < b ds >1
-  | < cs e >1
-  | < ds fs >1
-  | e2 fs2
+  | b8. b16 fs'8. fs16 fs b, fs' ds' ~ ds fs, b,8
+  | cs8. cs16 gs'8. gs16 gs cs, gs' e' ~ e gs, cs,8
+  | ds8. ds16 as'8. as16 as ds, as' fs' ~ fs as, ds,8
+  | e,16 e fs8 gs b as b cs ds
 
   | R1 * 3
   | r2. r4\fermata
 }
 
 verseTwo = \relative c {
-  \sectionLabel "Verse"
-
   | b8. b16 fs' fs8 b16 ~ b b8 fs16 b fs b, bs
   | cs8. cs16 gs' gs8 cs16 ~ cs cs8 b16 cs b gs8
   | ds8. ds16 fs16 gs8 b16 ~ b16 ds8 cs16 ~ cs b gs8
   | e8 b16 ( cs ) e ( fs ) gs b ~ b16 fs'8 e16 ~ e ds cs b
+
   | ds,8. ds16 fs, gs8 as16 ~ as b8 cs16 ~ cs ds8 e16
   | fs4 fs r8. fs16 fs8 fs,16 gs
 }
 
 verseThree = \relative b, {
-  \sectionLabel "Verse"
-
   | b8. b16 fs'16 fs8 b16 ~ b16 b8 fs16 b16 fs16 b,16 bs16
   | cs8 gs' ds'16 e16 ds16 cs16 ~ cs16 b8 gs16 ~ gs16 fs16 e8
   | ds8 b16 cs16 ds16 e16 fs16 gs16 ~ gs16 b8 cs16 ~ cs16 ds b8
@@ -91,8 +83,6 @@ verseThree = \relative b, {
 }
 
 bridge = \relative g {
-  \sectionLabel "Bridge"
-
   | R1 * 3
   | r2. r8 fs8
 
@@ -107,12 +97,12 @@ music = \relative c {
   \clef "bass"
 
   \verseOne
-  \chorusOne
+  \chorus
   \verseTwo
-  \chorusOne
+  \chorus
   \verseThree
   \bridge
-  \chorusThree
+  \chorusFinal
 
   \bar "|."
 }
