@@ -13,7 +13,8 @@ music = \relative c {
   \key a \major
   \clef "bass"
 
-  | R1 * 6
+  | R1 * 2
+  | R1 * 4
 
   \repeat volta 2 {
     | r8 a16 a r8 a16 a r8 a16 a r8 a16 a
