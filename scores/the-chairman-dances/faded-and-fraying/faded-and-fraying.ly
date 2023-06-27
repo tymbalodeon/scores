@@ -5,15 +5,19 @@
 
 \header {
   title = "Faded And Fraying"
-  composer = "Eric Krewson (The Chairman Dances)"
+  subtitle = "The Chairman Dances"
+  composer = "Eric Krewson"
   arranger = "Ben Rosen, bass"
 }
 
 music = \relative c {
   \key g \major
+  \time 2/2
   \clef "bass"
 
-  | R1 * 21
+  | R1 * 4
+  | R1 * 8
+  | R1 * 9
   | r2. e8 fs
 
   | g1 ~
@@ -52,15 +56,15 @@ music = \relative c {
   | R1
   | r2. bf'8 a
   | g2 d
-  | g, g4 r
+  | g, g'4 r
 
   | R1
-  | r2. bf8 a
+  | r2. bf,8 a
   | g2 d'
-  | g, g4 r
+  | g, g'4 r
 
   | R1
-  | r2. bf8 c
+  | r2. bf,8 c
   | d2. a'4
   | d2. r4
 
@@ -90,8 +94,8 @@ music = \relative c {
   | g1 ~
   | g2. e,8 fs
 
-  | g1 ~
-  | g2. r4
+  | g1
+  | g' -\fermata
 
   \bar "|."
 }
@@ -99,7 +103,6 @@ music = \relative c {
 \score {
   \new Staff \with {
     instrumentName = "Bass"
-    \numericTimeSignature
   } {
     \compressMMRests
     \music
