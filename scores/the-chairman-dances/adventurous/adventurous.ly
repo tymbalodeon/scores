@@ -61,7 +61,7 @@ music = \relative c {
     | r8 cs e cs' fs,, cs' b' e,,
     | cs'8 a' a, e' d cs b e,
     | r8 a e' b' fs, cs' a' e,
-    | cs'8 a' a, e' cs16 d cs8 b a
+    | cs'8 a' a, e' cs16 ( d ) cs8 b a
 
     \alternative {
       \volta 1 {
