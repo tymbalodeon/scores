@@ -5,7 +5,8 @@
 
 \header {
   title = "We Rifled Through"
-  composer = "Eric Krewson (The Chairman Dances)"
+  subtitle = "The Chairman Dances"
+  composer = "Eric Krewson"
   arranger = "Ben Rosen, bass"
 }
 

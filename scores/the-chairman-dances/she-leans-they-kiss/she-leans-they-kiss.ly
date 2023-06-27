@@ -5,7 +5,8 @@
 
 \header {
   title = "She Leans, They Kiss"
-  composer = "Eric Krewson (The Chairman Dances)"
+  subtitle = "The Chairman Dances"
+  composer = "Eric Krewson"
   arranger = "Ben Rosen, bass"
 }
 
@@ -13,7 +14,9 @@ music = \relative gs {
   \key b \major
   \clef "bass"
 
-  | R1 * 15
+  | R1 * 4
+  | R1 * 6
+  | R1 * 5
   | r2 gs8 fs cs e, ~
 
   | e4 e'8 e, b' cs fs gs ~
@@ -78,7 +81,10 @@ music = \relative gs {
   | as2. r8 cs ~
   | cs2 r8 fs fs fs
 
-  | R1 * 22
+  | R1 * 6
+  | R1 * 6
+  | R1 * 6
+  | R1 * 4
   | r2 gs8 fs cs e, ~
 
   | e4 e'8 e, b' cs fs gs ~
