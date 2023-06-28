@@ -12,7 +12,6 @@
 
 music = \relative c {
   \key g \major
-  \time 2/2
   \clef "bass"
 
   | R1 * 4
@@ -103,6 +102,7 @@ music = \relative c {
 \score {
   \new Staff \with {
     instrumentName = "Bass"
+    \numericTimeSignature
   } {
     \compressMMRests
     \music
