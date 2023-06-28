@@ -120,7 +120,7 @@ music = \relative e {
   | d d d d d d d d
   | d d d d d d d a
   | d d d d d d d d
-  | <d a'>1
+  | <d a'>8 -. r r4 r2
 
   \bar "|."
 }
