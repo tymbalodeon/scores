@@ -10,6 +10,24 @@
   arranger = "Ben Rosen, bass"
 }
 
+verse = \relative fs {
+  | r2 \acciaccatura fs16 gs8 fs ds e, ~
+
+  | e4 e'8 e, b' ( cs ) fs ( gs ) ~
+  | gs fs4 e8 ~ e e, fs4
+  | cs'4 gs'8 cs, ds' ( e ) ds cs ~
+  | cs b4 gs8 ~ gs fs e e,
+  | fs4 fs' fs8 cs ( ds ) fs ~
+  | fs fs4 fs8 ~ fs ds cs e, ~
+
+  | e4 e'8 e, b' ( cs ) fs ( gs ) ~
+  | gs \glissando ( b4 ) gs8 ~ gs fs e e,
+  | cs'4 gs'8 cs, fs' e ds cs ~
+  | cs b4 gs8 ~ gs cs, e,4
+  | fs4 fs' fs8 cs ( ds ) fs ~
+  | fs cs'4 b8 ~ b as fs e, ~
+}
+
 music = \relative gs {
   \key b \major
   \clef "bass"
@@ -17,25 +35,12 @@ music = \relative gs {
   | R1 * 4
   | R1 * 6
   | R1 * 5
-  | r2 gs8 fs cs e, ~
 
-  | e4 e'8 e, b' cs fs gs ~
-  | gs fs4 e8 ~ e e, fs4
-  | cs'4 gs'8 cs, ds' e ds cs ~
-  | cs b4 gs8 ~ gs fs e e,
-  | fs4 fs' fs8 cs ds fs ~
-  | fs fs4 fs8 ~ fs ds cs e, ~
+  \verse
 
-  | e4 e'8 e, b' cs fs gs ~
-  | gs b4 gs8 ~ gs fs e e,
-  | cs'4 gs'8 cs, fs' e ds cs ~
-  | cs b4 gs8 ~ gs cs, e,4
-  | fs4 fs' fs8 cs ds fs ~
-  | fs cs'4 b8 ~ b as fs e, ~
-
-  | e4 e'8 e, b' cs fs gs ~
-  | gs b4 cs8 ~ cs e fs4
-  | cs,4 e'8 cs, ds' e ds e,,
+  | e,4 e'8 e, b' ( cs ) fs gs ~
+  | gs \glissando ( b4 ) cs8 ~ cs e \glissando ( fs4 )
+  | cs,4 e'8 cs, ds' ( e ) ds e,,
   | a4 cs'8 a, e'' cs a a,
 
   | b'4 -. b2. ~
@@ -85,21 +90,10 @@ music = \relative gs {
   | R1 * 6
   | R1 * 6
   | R1 * 4
-  | r2 gs8 fs cs e, ~
 
-  | e4 e'8 e, b' cs fs gs ~
-  | gs fs4 e8 ~ e e, fs4
-  | cs'4 gs'8 cs, ds' e ds cs ~
-  | cs b4 gs8 ~ gs fs e e,
-  | fs4 fs' fs8 cs ds fs ~
-  | fs fs4 fs8 ~ fs ds cs e, ~
+  \verse
 
-  | e4 e'8 e, b' cs fs gs ~
-  | gs b4 gs8 ~ gs fs e e,
-  | cs'4 gs'8 cs, fs' e ds cs ~
-  | cs b4 gs8 ~ gs cs, e,4
-
-  | b'4 -. b2. ~
+  | b,4 -. b2. ~
   | b2. r8 ds
   | gs4 -. gs2. ~
   | gs2. r8 fs
@@ -109,34 +103,34 @@ music = \relative gs {
   | gs4 -. gs2. ~
   | gs2. r8 fs,
 
-  | b4 <b fs'>2 <b fs'>4 ~
-  | <b fs'>4 <b fs'>8 b fs' b, fs gs ~
-  | gs4 gs2 gs4 ~
-  | gs gs8 fs gs cs fs, b ~
+  | b4 -. <b fs'>2 -> <b fs'>4 -> ~
+  | <b fs'>4 <b fs'>8 -> b fs' b, fs gs -.
+  | r4 gs2 -> gs4 -> ~
+  | gs gs8 -> fs ( gs ) cs fs, b -.
 
-  | b4 <b fs'>2 <b fs'>4 ~
-  | <b fs'>4 <b fs'>8 b fs' b, fs gs ~
-  | gs4 gs2 gs4 ~
-  | gs gs8 fs gs cs fs, b ~
+  | r4 <b fs'>2 -> <b fs'>4 -> ~
+  | <b fs'>4 <b fs'>8 -> b fs' b, fs gs -.
+  | r4 gs2 -> gs4 -> ~
+  | gs gs8 -> fs ( gs ) cs fs, b ~
 
-  | b4 fs'8 cs ds fs gs fs ~
+  | b4 fs'8 cs ( ds ) fs gs fs ~
   | fs8 cs'4 as8 ~ as fs cs gs ~
-  | gs4 gs'8 cs, ds fs gs fs ~
+  | gs4 gs'8 cs, ( ds ) fs gs fs ~
   | fs gs4 fs8 ~ fs cs fs, b ~
 
-  | b4 fs'8 cs ds fs gs fs ~
+  | b4 fs'8 cs ( ds ) fs gs fs ~
   | fs8 cs'4 as8 ~ as fs cs gs ~
-  | gs4 gs'8 cs, ds fs gs fs ~
-  | fs fs, fs' fs, ~ fs fs gs b ~
+  | gs4 gs'8 cs, ( ds ) fs gs fs ~
+  | fs fs, fs' fs, ~ fs fs ( gs ) b ~
 
-  | b4 fs'8 cs ds fs gs fs ~
+  | b4 fs'8 cs ( ds ) fs gs fs ~
   | fs8 fs'4 ds8 ~ ds b fs gs, ~
-  | gs4 gs'8 cs, ds fs gs fs ~
+  | gs4 gs'8 cs, ( ds ) fs gs fs ~
   | fs gs4 fs8 ~ fs cs fs, b ~
 
-  | b4 fs'8 cs ds fs gs fs ~
+  | b4 fs'8 cs ( ds ) fs gs fs ~
   | fs8 fs' e ds ~ ds b fs gs, ~
-  | gs4 gs'8 cs, ds fs gs cs
+  | gs4 gs'8 cs, ( ds ) fs gs \acciaccatura b16 cs8
   | b8 as fs ds cs fs, gs b ~
 
   | b8 b fs' b, ~ b b fs' b, ~
@@ -160,9 +154,9 @@ music = \relative gs {
   | b8 b4 gs,8 fs'' e ds e,, ~
 
   | e2. r8 e' ~
-  | e2. r8 e, ~
+  | \afterGrace e2. \glissando { \hideNotes b8 \unHideNotes } r8 e, ~
   | e2. r8 e' ~
-  | e2. r4
+  | \afterGrace e2. \glissando { \hideNotes b8 \unHideNotes } r4
 
   | R1 * 4
 
