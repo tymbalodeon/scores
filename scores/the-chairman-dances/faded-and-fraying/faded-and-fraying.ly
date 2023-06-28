@@ -95,7 +95,7 @@ music = \relative c {
   | g2. e,8 fs
 
   | g1
-  | g' -\fermata
+  | g'2. -\fermata r4
 
   \bar "|."
 }
