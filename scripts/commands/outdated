@@ -1,7 +1,0 @@
-#!/usr/bin/env zsh
-
-outdated_scores=($("${HELPERS}"/_get_outdated "$@"))
-IFS=$'\n' outdated_scores=($(sort <<<"${outdated_scores[*]}"))
-for file in "${outdated_scores[@]}"; do
-    echo "${(C)file//-/ }"
-done

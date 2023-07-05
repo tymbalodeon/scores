@@ -1,6 +1,5 @@
-.env
-*.pdf
-*.midi
 *.log
+*.midi
+*.pdf
 *~
 .DS_Store

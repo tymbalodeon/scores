@@ -3,10 +3,6 @@
 dependencies=(
     "brew"
     "lilypond"
-    "just"
-    "cargo"
-    "checkexec"
-    "watchexec"
 )
 
 install_dependency() {
@@ -20,18 +16,6 @@ install_dependency() {
             zshenv="${HOME}"/.zshenv
             grep -q "${lilypond_path}" ${zshenv} \
                 || echo "${lilypond_path}" >> ${zshenv} && source "${zshenv}"
-            ;;
-        "just")
-            brew install just
-            ;;
-        "cargo")
-            curl https://sh.rustup.rs -sSf | sh
-            ;;
-        "checkexec")
-            cargo install checkexec
-            ;;
-        "watchexec")
-            brew install watchexec
             ;;
         "Skim")
             mdfind -name "kMDItemFSName == '*.app'" | grep "Skim"
