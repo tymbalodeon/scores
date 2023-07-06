@@ -4,8 +4,8 @@
 
 \header {
   title = "Turn on the Lights, the Radio"
+  subtitle = "The Chairman Dances"
   composer = "Eric Krewson"
-  arranger = "(The Chairman Dances)"
 }
 
 key_signature = {
