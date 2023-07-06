@@ -78,8 +78,8 @@ music = \relative fs, {
 
   | R1
   | r2. a'4
-  | d1 ~
   | d1
+  | R1
 
   | R1 * 4
 
@@ -91,6 +91,31 @@ music = \relative fs, {
 
   | d'4. d8 ~ d4 e8 es
   | fs4. fs8 ~ fs4 fs,
+  | e'4. e8 ~ e4. b8
+  | e4. e8 ~ e e, fs4
+
+  | d'4. d8 ~ d4 e,8 es
+  | fs4. fs8 ~ fs4 fs
+  | e'4. e8 ~ e4. b8
+  | e4. b'8 e b e,4
+
+  | d4. d8 \tuplet 3/2 { d'4 cs8 ~ } \tuplet 3/2 { cs8 b a }
+  | fs4. d8 a' g fs4
+  | e,2. r8 e'
+  | a'8 g ( fs4 ) d8 g, ( fs ) e,
+
+  | b'4 r8 b' ~ b a fs e,
+  | fs4 r8 fs' ~ fs4 e,8 fs
+  | g1
+  | r2 g'4 fs
+
+  | e2. b4
+  | a1
+
+  | R1 * 4
+  | R1 * 2
+
+  \bar "|."
 }
 
 \score {
