@@ -88,7 +88,7 @@ upper_staff = \relative c'' {
   \time 5/4
 
   | <ds fs> <g, b>2 ~ \tuplet 3/2 { <g b>8 <g b> <d' f> }
-    \ottava #2
+    \ottava #1
     <df' f>8. as,32 fs'
 
   \time 3/4

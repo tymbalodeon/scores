@@ -105,16 +105,72 @@ middle_staff = \relative c' {
         \change Staff = "middle"
         g
     }
-  | \repeat unfold 3 {
-      \repeat unfold 3 {
-        \change Staff = "upper"
-        <bf ef>16
-        \change Staff = "middle"
-        <c e>
-        \change Staff = "upper"
-        <af df>
-        \change Staff = "middle"
-        g
-      }
+  | \repeat unfold 2 {
+    \repeat unfold 3 {
+      \change Staff = "upper"
+      <bf ef>16
+      \change Staff = "middle"
+      <c e>
+      \change Staff = "upper"
+      <af df>
+      \change Staff = "middle"
+      g
+    }
   }
+
+  \clef "bass"
+
+  | \repeat unfold 3 {
+      \change Staff = "upper"
+      <bf ef af>16
+      \change Staff = "middle"
+      <c, e g>
+      \change Staff = "upper"
+      <af' df gf>
+      \change Staff = "middle"
+      <c, e g>
+  }
+
+  | \repeat unfold 2 {
+      \change Staff = "upper"
+      <bf' ef af>16
+      \change Staff = "middle"
+      <e,, b'>
+      \change Staff = "upper"
+      <af' df gf>
+      \change Staff = "middle"
+      <e, b'>
+    }
+
+  \change Staff = "upper"
+  <bf'' ef af>16
+  \change Staff = "middle"
+  <e,, b'>
+
+  | \repeat unfold 3 {
+      \change Staff = "upper"
+      <bf'' ef af>16
+      \change Staff = "middle"
+      <c, e g>
+      \change Staff = "upper"
+      <af' df gf>
+      \change Staff = "middle"
+      <c, e g>
+  }
+
+   \repeat unfold 2 {
+      \change Staff = "upper"
+      <bf' ef af>16
+      \change Staff = "middle"
+      <e,, b'>
+      \change Staff = "upper"
+      <af' df gf>
+      \change Staff = "middle"
+      <e, b'>
+    }
+
+  \change Staff = "upper"
+  <bf'' ef af>16
+  \change Staff = "middle"
+  <e,, b'>
 }
