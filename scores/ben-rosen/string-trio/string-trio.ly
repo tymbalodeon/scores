@@ -95,8 +95,8 @@ viola = \relative df {
 
   \tempo 2=48
 
-  ef2 ~ -> \breathe _\fp _\< \once \override
-  Glissando.style = #'zigzag ef1 \glissando _\!
+  ef2 ~ -> \breathe _\fp _\<
+  ef1 \glissando _\!
   g2 ~ _\fp _\<  g1
   \glissando _\!
   gf2 ~ _\fp _\<  gf1
@@ -105,8 +105,8 @@ viola = \relative df {
 
   \tempo 4=76
 
-  d2 ~ -> \breathe _\fp _\< \once \override
-  Glissando.style = #'zigzag d1 \glissando _\!
+  d2 ~ -> \breathe _\fp _\<
+   d1 \glissando _\!
   b1. _\! _\f _\mp _\< | \barNumberCheck #50
   bf1. ~ _\! _\f _\ppp _\< _\>
   bf2 _\! _\fff _\ppp r1
@@ -143,13 +143,13 @@ cello = \relative a, {
   bf1. ~ _\! _\mf _\<
   bf2 _\fff r1
   r2 a,2 ~ _\pp _\<  a2
-  \glissando s2 gf2 ~ _\! _\pp _\< \once \override Glissando.style =
-  #'zigzag gf2 \glissando s2 _\mp af2 ~ _\! _\pp _\< \once \override
-  Glissando.style = #'zigzag af2 \glissando s2 _\mp df2 ~ _\! _\p _\<
-   df2 \glissando s2 _\mp d2
+  \glissando s2 gf2 ~ _\! _\pp _\<
+  gf2 \glissando s2 _\mp af2 ~ _\! _\pp _\<
+  af2 \glissando s2 _\mp df2 ~ _\! _\p _\<
+  df2 \glissando s2 _\mp d2
   ~ _\! _\p _\<  d2
-  \glissando s2 _\mf ef2 ~ _\! _\p _\< \once \override Glissando.style
-  = #'zigzag ef2 \glissando s2 _\mf d1 ~ _\! _\p _\<
+  \glissando s2 _\mf ef2 ~ _\! _\p _\<
+   ef2 \glissando s2 _\mf d1 ~ _\! _\p _\<
   d1 _\mf ef2 ~ -> \breathe _\! _\f
   ef2 bf'1 ~
   bf2 g1 ~ _\! _\>
@@ -162,8 +162,8 @@ cello = \relative a, {
   d2 b2 _\> g2 ~ _\!
   g2 _\f a1
   d,1. -> _\! _\<
-  bf'2 ~ -> \breathe _\fp _\< \once \override Glissando.style =
-  #'zigzag bf1 \glissando _\!
+  bf'2 ~ -> \breathe _\fp _\<
+  bf1 \glissando _\!
   d2 ~ _\fp _\<  d1
   \glissando _\!
   df2 ~ _\fp _\<  df1
