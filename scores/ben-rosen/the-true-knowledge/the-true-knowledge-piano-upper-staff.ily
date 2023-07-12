@@ -84,7 +84,7 @@ upper_staff = \relative b {
 
     } >>
 
-   \< b''8 ~ <g b ds>4. -> r16 d (
+    b''8 \< ~ <g b ds>4. -> r16 d (
 
   | ds16 es a ) g ( af bf d ) e, ( f g b ) c ( cs ds g ) fs16
   | g8 -> \ff c,, f ef r ds' \< gs es
