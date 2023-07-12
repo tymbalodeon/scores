@@ -1,6 +1,8 @@
 \version "2.25.6"
 
 \include "helpers/settings.ily"
+\include "helpers/bar-numbers-left.ily"
+
 \include "the-true-knowledge-soprano.ily"
 \include "the-true-knowledge-piano-upper-staff.ily"
 \include "the-true-knowledge-piano-lower-staff.ily"
@@ -22,6 +24,7 @@ key_and_time = {
   <<
     \new Staff \with {
       instrumentName = "Soprano"
+      \magnifyStaff #5/7
     } {
       \soprano \addlyrics \text
     }
