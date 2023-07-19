@@ -38,8 +38,15 @@ music = \relative c {
 
     | R1 * 2
 
-    | d8 d''16 d d8 c16 c c8 b16 b b8 d,,
-    | r8
+    | d8 d''16 d d8 c16 c c8 b16 b b8 a
+    | r8 g16 g g8 f16 f f8 e16 e e8 d
+    | r8 b,16 b b8 c16 c c8 cs16 cs cs8 d
+    | R1
+
+    | d8 d''16 d d8 c16 c c8 b16 b b8 a
+    | r8 g16 g g8 f16 f f8 e16 e e8 d
+    | r8 b,16 b b8 c16 c c8 cs16 cs cs8 d
+    | R1
 }
 
 \score {

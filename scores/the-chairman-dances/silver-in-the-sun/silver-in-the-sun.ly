@@ -33,8 +33,8 @@ music = \relative fs, {
 
   | d4. d8 ~ d4 e8 es
   | fs4. fs8 ~ fs4 fs,
+  | g1 ~
   | g1
-  | R1
 
   | R1 * 3
   | r2. fs4
@@ -59,8 +59,8 @@ music = \relative fs, {
 
   | d4. d8 ~ d4 e,8 es
   | fs4. fs8 ~ fs4 fs
+  | g1 ~
   | g1
-  | R1
 
   \repeat unfold 2 {
     | e'2. b4
@@ -75,12 +75,12 @@ music = \relative fs, {
   | b4 e,,2 b'4
 
   | e2. b4
-  | a1
+  | a1 ~
 
-  | R1
+  | a1
   | r2. a'4
+  | d1 ~
   | d1
-  | R1
 
   | R1 * 4
 
