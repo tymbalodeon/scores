@@ -10,31 +10,27 @@
   arranger = "Ben Rosen, bass"
 }
 
-music = \relative c {
+music = \relative f, {
     \key c \major
     \time 4/4
 
     \clef "bass"
 
-    | r2. r8 f ~
-    | f f d c f d c g ~
-    | g g b r c cs d g ~
-    | g g e d g e d f, ~
+    \repeat volta 4 {
+      | f4 f'8 f, a b c f ~
+      | f f d4 c8 d f g, ~
+      | g g b r c cs d g ~
 
-    | f f a r b c d f ~
-    | f f d c f d c g ~
-    | g g b r c cs d g ~
-    | g g e d g e d f, ~
+      \alternative {
+        \volta 1,2,3 {
+          | g g e d a' g e f, \laissezVibrer
+        }
 
-    | f f a r b c d f ~
-    | f f d c f d c g ~
-    | g g b r c cs d g ~
-    | g g e d g e d f, ~
-
-    | f f a r b c d f ~
-    | f f d c f d c g ~
-    | g g b r c cs d g ~
-    | g1
+        \volta 4 {
+          | g'1 \repeatTie
+        }
+      }
+    }
 
     | R1 * 2
 
