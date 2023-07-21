@@ -24,7 +24,7 @@ music = \relative c'' {
   \key c \major
   \time 3/8
 
-  | s4. * 24
+  | s4. * 30
 }
 
 \score {
