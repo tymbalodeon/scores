@@ -25,7 +25,7 @@ verse = \relative fs {
   | cs'4 gs'8 cs, fs' e ds cs ~
   | cs b4 gs8 ~ gs cs, e,4
   | fs4 fs' fs8 cs ( ds ) fs ~
-  | fs cs'4 b8 ~ b as fs e, ~
+  | fs cs'4 b8 ~ b as fs e,
 }
 
 music = \relative gs {
@@ -38,7 +38,7 @@ music = \relative gs {
 
   \verse
 
-  | e,4 e'8 e, b' ( cs ) fs gs ~
+  | e4 e'8 e, b' ( cs ) fs gs ~
   | gs \glissando ( b4 ) cs8 ~ cs e \glissando ( fs4 )
   | cs,4 e'8 cs, ds' ( e ) ds e,,
   | a4 cs'8 a, e'' cs a a,
