@@ -16,8 +16,16 @@ music = \relative c {
     \clef "bass"
 
     | R2. * 4
+
+    \mark \default
+
     | R2. * 20
+
+    \mark \default
+
     | R2. * 20
+
+    \mark \default
 
     | d8 d d d d d
     | d8 d d d d a
@@ -61,11 +69,12 @@ music = \relative c {
 }
 
 \score {
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \music
-    }
+  \new Staff \with {
+    instrumentName = "Bass"
+    \numericTimeSignature
+  } {
+    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+    \compressMMRests
+    \music
+  }
 }
