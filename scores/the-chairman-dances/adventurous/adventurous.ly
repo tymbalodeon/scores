@@ -17,6 +17,8 @@ music = \relative c {
   | R1 * 2
   | R1 * 4
 
+  \mark \default
+
   \repeat volta 2 {
     | r8 a16 a r8 a16 a r8 a16 a r8 a16 a
     | r8 a16 a r8 a16 a r8 e16 e r8 e16 e
@@ -36,6 +38,8 @@ music = \relative c {
   | r8 e16 e r8 e16 e r8 e16 e r8 e16 e
   | r8 e16 e r8 e16 e r8 e fs gs
 
+  \mark \default
+
   | r8 a16 a r8 a16 a r8 a16 a r8 a16 a
   | r8 a16 a r8 a16 a r8 e16 e r8 e16 e
   | r8 a16 a r8 a16 a r8 a16 a r8 a16 a
@@ -46,12 +50,16 @@ music = \relative c {
   | r8 a16 a r8 a16 a r8 a16 a r8 a16 a
   | r8 a16 a r8 a16 a r8 a gs fs
 
+  \mark \default
+
   | r8 e16 e r8 e16 e r8 e16 e r8 e16 e
   | r8 e a d r e r a,
   | r8 e16 e r8 e16 e r8 e16 e r8 e16 e
   | r8 e a d r fs, r a
 
   | R1 * 2
+
+  \mark \default
 
   \repeat volta 2 {
     | r8 a' e' b' fs, cs' a' e,
@@ -71,6 +79,8 @@ music = \relative c {
       }
 
       \volta 2 {
+        \mark \default
+
         | r8 e16 e r8 e16 e r8 e16 e r8 e16 e
       }
     }
@@ -85,12 +95,16 @@ music = \relative c {
   | r8 e16 e r8 e16 e r8 e16 e r8 e16 e
   | r8 e a d r fs, r e ~
 
+  \mark \default
+
   | e1 ~
   | e1
 
   | R1 * 2
   | R1 * 7
   | r2 r8 e16 e r8 e16 e
+
+  \mark \default
 
   | r8 a16 a r8 a16 a r8 a16 a r8 a16 a
   | r8 a16 a r8 a16 a r8 e16 e r8 e16 e
@@ -102,8 +116,15 @@ music = \relative c {
   | r8 a16 a r8 a16 a r8 a16 a r8 a16 a
   | r8 a16 a r8 a16 a r8 gs fs e
 
+  \mark \default
+
   | R1 * 8
+
+  \mark \default ^\markup \italic "(drums)"
+
   | R1 * 8
+
+  \mark \default
 
   \repeat volta 2 {
     | r8 e16 e r8 e16 e r8 e16 e r8 e16 e
@@ -131,6 +152,7 @@ music = \relative c {
     instrumentName = "Bass"
     \numericTimeSignature
   } {
+    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
     \compressMMRests
     \music
   }
