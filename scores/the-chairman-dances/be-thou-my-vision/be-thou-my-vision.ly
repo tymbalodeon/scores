@@ -20,37 +20,37 @@ music = \relative c {
     | R2. * 20
 
     | d8 d d d d d
-    | d8 d d d d d
-    | c8 c c c c c
-    | b'8 b b b b b
-    | b8 b b b b b
+    | d8 d d d d a
+    | c8 c c c c ( d )
+    | g,8 g g g g g
+    | g8 g g g e g
 
     | a8 a a a a a
-    | a8 a a a a a
+    | a8 a a a e f
+    | g8 g g g g g
+    | f8 f f f f f
+    | f8 f f f f c'
+
+    | d8 d d d d d
+    | d8 d d d d a
+    | c8 c c c c ( d )
+    | g,8 g g g g g
+    | g8 g g g g ( a )
+
+    | c8 c c c c c
+    | c8 c c c e, f
+    | g8 g g g d' g
+    | f8 f f f f f
+    | f8 f f f f a,
+
+    | c8 c c c c c
+    | c8 c c c e, f
     | g8 g g g g g
     | f8 f f f f f
     | f8 f f f f f
 
-    | d'8 d d d d d
-    | d8 d d d d d
-    | c8 c c c c c
-    | b8 b b b b b
-    | b8 b b b b b
-
-    | c8 c c c c c
-    | c8 c c c c c
-    | b8 b b b b b
-    | f8 f f f f f
-    | f8 f f f f f
-
-    | c8 c c c c c
-    | c8 c c c c c
-    | b8 b b b b b
-    | d8 d d d d d
-    | d8 d d d d d
-
-    | e,8 e e e e e
-    | e8 e e e e e
+    | e2. ~
+    | e2.
     | R2.
 
     \bar "||"
