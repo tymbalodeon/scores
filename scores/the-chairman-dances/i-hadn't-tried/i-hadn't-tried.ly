@@ -24,31 +24,44 @@ music = \relative e {
   | R1 * 3
   | r2. r8 e16 e
 
-  \verse
+  | r8 e r e r e16 e r8 e16 e
+  | r8 e r e r e16 e r8 e16 e
+
+  | r8 e16 e r8 e r e16 e r8 e16 e
+  | r8 e16 e r8 e r e16 e r8 e
 
   \mark \default
 
   \repeat volta 2 {
-    \verse
-  }
+    | r8 e r e r e16 e r8 e16 e
+    | r8 e r e r e16 e r8 e16 e
 
-  \mark \default
-
-  \repeat volta 2 {
-    | fs,4 r a r
-    | e8 e'16 e r8 e r e16 e r8 e16 e
+    | r8 e16 e r8 e r e16 e r8 e16 e
     | r8 e16 e r8 e r e16 e r8 e
   }
 
-  \repeat unfold 2 {
-    | r8 e16 e r8 e r e16 e r8 e16 e
-  }
-
   \mark \default
 
   \repeat volta 2 {
-    \verse
+    | fs,4 fs'8 r a,4 a'8 r
+    | e,8 e'16 e r8 e r e16 e r8 e16 e
+    | r8 e r e r e16 e r8 e
   }
+
+  | r8 e16 e r8 e r e16 e r8 e16 e
+  | r8 e16 e r8 e16 e r8 e16 e r8 e
+
+  \mark \default
+
+  | r8 e16 e r8 e r e16 e r8 e16 e
+  | r8 e16 e r8 e r e16 e r8 e16 e
+  | r8 e16 e r8 e r e16 e r8 e16 e
+  | r8 e16 e r8 e r e16 e r8 e16 e
+
+  | r8 e16 e r8 e r e16 e r8 e16 e
+  | r8 e16 e r8 e r e16 e r8 e16 e
+  | r8 e16 e r8 e, r e'16 e r8 e16 e
+  | r8 e16 e r8 e r e16 e r8 e
 
   \mark \default
 
@@ -58,7 +71,7 @@ music = \relative e {
     \alternative {
       \volta 1 {
         | e,8 e'16 e r8 e r e16 e r8 e16 e
-        | r8 e16 e r8 e r e16 e r8 e
+        | r8 e r e r e16 e r8 e
       }
 
       \volta 2 {
@@ -135,6 +148,7 @@ music = \relative e {
     instrumentName = "Bass"
     \numericTimeSignature
   } {
+    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
     \compressMMRests
     \music
   }
