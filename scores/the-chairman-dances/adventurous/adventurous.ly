@@ -120,9 +120,9 @@ music = \relative c {
 
   | R1 * 8
 
-  \mark \default ^\markup \italic "(drums)"
+  \mark \default
 
-  | R1 * 8
+  | R1 * 8 ^\markup \italic "(drums)"
 
   \mark \default
 
