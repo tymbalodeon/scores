@@ -222,12 +222,64 @@ lower_staff = \relative c {
   \lower_coda
 }
 
-\score {
-  \new PianoStaff \with {
-    instrumentName = "Piano"
+bass_pattern = \relative c {
+  \clef "bass"
+
+  \repeat unfold 2 {
+    | c4.  g8 ~ g4 r
   }
-  <<
-    \new Staff = "upper" \upper_staff
-    \new Staff = "lower" \lower_staff
-  >>
+}
+
+bass = {
+  | \bass_pattern
+
+  \repeat volta 2 {
+    | \bass_pattern
+    \repeat unfold 2 {
+      | \transpose c g \bass_pattern
+    }
+    | c4 -. r r2
+
+    \alternative {
+      \volta 1 {
+        | c4 -. r r2
+        | R1
+      }
+
+      \volta 2 {
+        | R1
+      }
+    }
+  }
+
+  | \transpose c a, \bass_pattern
+  | \bass_pattern
+  | \transpose c g \bass_pattern
+  | \transpose c a, \bass_pattern
+  | \transpose c f \bass_pattern
+
+  | \bass_pattern
+}
+
+\book {
+  \score {
+    \new PianoStaff \with {
+      instrumentName = "Piano"
+    }
+    <<
+      \new Staff = "upper" \upper_staff
+      \new Staff = "lower" \lower_staff
+    >>
+  }
+}
+
+\book {
+  \bookOutputSuffix "bass"
+
+  \score {
+    \new Staff \with {
+      instrumentName = "Bass"
+    }
+    \bass
+  }
 }
