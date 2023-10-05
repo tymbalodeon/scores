@@ -43,7 +43,7 @@ music = \relative e {
   \mark \default
 
   \repeat volta 2 {
-    | fs,4 fs'8 r a,4 a'8 r
+    | fs,4 ( fs'8 -. ) r a,4 ( a'8 -. ) r
     | e,8 e'16 e r8 e r e16 e r8 e16 e
     | r8 e r e r e16 e r8 e
   }
@@ -66,7 +66,7 @@ music = \relative e {
   \mark \default
 
   \repeat volta 2 {
-    | fs,4 fs'8 r a,4 a'8 r
+    | fs,4 ( fs'8 -. ) r a,4 ( a'8 -. ) r
 
     \alternative {
       \volta 1 {
@@ -77,20 +77,46 @@ music = \relative e {
       \volta 2 {
         \mark \default
 
+        | r8 e16 e r8 e r d cs b
         | e,8 e'16 e r8 e r e16 e r8 e16 e
       }
     }
   }
 
-  | r8 e16 e r8 e r d cs b
+  | e,8 e'16 e r8 e r e16 e r8 e
+  | r8 e16 e r8 e e, \acciaccatura fs gs b cs
 
-  \repeat volta 4 {
-    | e,8 ^\markup "4x" e'16 e r8 e r e16 e r8 e16 e
+  \repeat volta 3 {
+    | e,8 e'16 e r8 e r e16 e r8 e16 e
     | r8 e16 e r8 e r d cs b
+    | e,8 e'16 e r8 e r e16 e r8 e
+    \alternative {
+      \volta 1,2 {
+        | r8 e16 e r8 e e, \acciaccatura fs gs b cs
+      }
+
+      \volta 3 {
+        | r8 e16 e r8 e e, \acciaccatura fs' gs b cs
+      }
+    }
   }
 
-  | b1
-  | b1
+  \repeat volta 2 {
+    | e,,8 e16 e r8 e r e r e
+    | r8 e16 e r8 e r e r e
+
+    \alternative {
+      \volta 1 {
+        | r8 e16 e r8 e r e r e
+        | r8 e16 e r8 e r \acciaccatura fs gs b cs
+      }
+
+      \volta 2 {
+        | b4. fs'8 ~ fs4 b, ~
+        | b4 b8 b b b r4
+      }
+    }
+  }
 
   | e,1 ~
   | e1
