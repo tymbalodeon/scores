@@ -15,14 +15,26 @@ music = \relative c {
   \clef "bass"
 
   | R1 * 4
+
+  \mark \default
+
   | R1 * 8
-  | R1 * 9
+
+  \mark \default
+
+  | R1 * 4
+
+  \mark \default
+
+  | R1 * 5
   | r2. e8 fs
 
   | g1 ~
   | g2. e,8 fs
   | g1 ~
   | g2. e'8 fs
+
+  \mark \default
 
   | g2 fs
   | e2. g,8 gs
@@ -34,10 +46,14 @@ music = \relative c {
   | a2 ~ a8 a b c
   | d2 fs8. a16 ~ a8 as
 
+  \mark \default
+
   | b4. fs8 b8. fs16 ~ fs8 f
   | e4. b'8 e8. d16 ~ d8 b
   | a4. e8 a a, b c
   | d4 fs a e8 fs
+
+  \mark \default
 
   | g d'16 b ~ b8 a g d'16 b ~ b8 g
   | e b'16 g ~ g8 e e, e g gs
@@ -51,6 +67,8 @@ music = \relative c {
 
   | g1 ~
   | g2. r4
+
+  \mark \default
 
   | R1
   | r2. bf'8 a
@@ -69,10 +87,14 @@ music = \relative c {
 
   | R1 * 2
 
+  \mark \default
+
   | b,4. fs'8 b8. fs16 ~ fs8 f
   | e4. b8 e8 e, fs g
   | a4. e8 a a b c
   | d4 fs, a e'8 fs
+
+  \mark \default
 
   | g g16 d ~ d8 g fs fs16 b, ~ b8 fs'
   | e e16 b ~ b8 g e e g gs
@@ -104,6 +126,7 @@ music = \relative c {
     instrumentName = "Bass"
     \numericTimeSignature
   } {
+    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
     \compressMMRests
     \music
   }
