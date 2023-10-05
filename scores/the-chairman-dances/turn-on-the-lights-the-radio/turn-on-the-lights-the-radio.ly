@@ -230,6 +230,16 @@ bass_pattern = \relative c {
   }
 }
 
+bass_chorus = {
+  | \transpose c a, \bass_pattern
+  | \bass_pattern
+  | \transpose c g \bass_pattern
+  | \transpose c a, \bass_pattern
+  | \transpose c f \bass_pattern
+
+  | \bass_pattern
+}
+
 bass = {
   | \bass_pattern
 
@@ -252,14 +262,38 @@ bass = {
     }
   }
 
-  | \transpose c a, \bass_pattern
-  | \bass_pattern
-  | \transpose c g \bass_pattern
-  | \transpose c a, \bass_pattern
-  | \transpose c f \bass_pattern
+  | \bass_chorus
+
+  \repeat volta 2 {
+    | \bass_pattern
+    \repeat unfold 2 {
+      | \transpose c g \bass_pattern
+    }
+    | c4 -. r r2
+    | c4 -. r r2
+  }
+
+  | \bass_chorus
 
   | \bass_pattern
+
+  \repeat volta 2 {
+    \repeat unfold 2 {
+      | \transpose c bf, \bass_pattern
+    }
+  }
+
+  \repeat volta 2 {
+    | \transpose c bf, ^\markup \italic "(drums)" \bass_pattern
+    | \bass_pattern
+  }
+
+  \repeat volta 2 {
+    | \transpose c bf, ^\markup \italic "(vocals)" \bass_pattern
+    | \bass_pattern
+  }
 }
+
 
 \book {
   \score {
