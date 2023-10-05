@@ -10,7 +10,14 @@
   arranger = "Ben Rosen, bass"
 }
 
-verse = \relative fs {
+music = \relative gs {
+  \key b \major
+  \clef "bass"
+
+  | R1 * 4
+  | R1 * 6
+  | R1 * 5
+
   | r2 \acciaccatura fs16 gs8 fs ds e, ~
 
   | e4 e'8 e, b' ( cs ) fs ( gs ) ~
@@ -26,19 +33,8 @@ verse = \relative fs {
   | cs b4 gs8 ~ gs cs, e,4
   | fs4 fs' fs8 cs ( ds ) fs ~
   | fs cs'4 b8 ~ b as fs e,
-}
 
-music = \relative gs {
-  \key b \major
-  \clef "bass"
-
-  | R1 * 4
-  | R1 * 6
-  | R1 * 5
-
-  \verse
-
-  | e,4 e'8 e, b' ( cs ) fs gs ~
+  | e4 e'8 e, b' ( cs ) fs gs ~
   | gs \glissando ( b4 ) cs8 ~ cs e \glissando ( fs4 )
   | cs,4 e'8 cs, ds' ( e ) ds e,,
   | a4 cs'8 a, e'' cs a a,
@@ -91,9 +87,21 @@ music = \relative gs {
   | R1 * 6
   | R1 * 4
 
-  \verse
+  | r2 \acciaccatura fs16 gs8 fs ds e, ~
 
-  | b,4 -. b2. ~
+  | e4 e'8 e, b' ( cs ) fs ( gs ) ~
+  | gs fs4 e8 ~ e e, fs4
+  | cs'4 gs'8 cs, ds' ( e ) ds cs ~
+  | cs b4 gs8 ~ gs fs e e,
+  | fs4 fs' fs8 cs ( ds ) fs ~
+  | fs fs4 fs8 ~ fs ds cs e, ~
+
+  | e4 e'8 e, b' ( cs ) fs ( gs ) ~
+  | gs \glissando ( b4 ) gs8 ~ gs fs e e,
+  | cs'4 gs'8 cs, fs' e ds cs ~
+  | cs b4 gs8 ~ gs cs, fs,4
+
+  | b4 -. b2. ~
   | b2. r8 ds
   | gs4 -. gs2. ~
   | gs2. r8 fs
