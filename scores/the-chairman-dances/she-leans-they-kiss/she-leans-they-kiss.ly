@@ -38,7 +38,7 @@ music = \relative gs {
 
   \verse
 
-  | e4 e'8 e, b' ( cs ) fs gs ~
+  | e,4 e'8 e, b' ( cs ) fs gs ~
   | gs \glissando ( b4 ) cs8 ~ cs e \glissando ( fs4 )
   | cs,4 e'8 cs, ds' ( e ) ds e,,
   | a4 cs'8 a, e'' cs a a,
