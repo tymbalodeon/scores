@@ -22,7 +22,7 @@ music = \relative d {
 
   \repeat volta 3 {
     | f4 f'8 f, a c d f ~
-    | f f d4 c8 d f g, ~
+    | f f d r c d f g, ~
     | g4 g'8 g, b d e g ~
 
     \alternative {
@@ -31,7 +31,7 @@ music = \relative d {
       }
 
       \volta 2 {
-        | g' \repeatTie g e4 d8 c a f \laissezVibrer
+        | g' \repeatTie g e r d c a f \laissezVibrer
       }
 
       \volta 3 {
@@ -54,23 +54,23 @@ music = \relative d {
       }
 
       \volta 4 {
-        | e,8 \repeatTie e'4. a8 g e f, ~
+        | e,8 \repeatTie e'4 r8 a g e f, ~
       }
     }
   }
 
   \repeat volta 4 {
     | f4 f'8 f, a c d f ~
-    | f f d4 c8 d f g, ~
+    | f f d r c d f g, ~
     | g4 g'8 g, b d e g ~
 
     \alternative {
       \volta 1,3 {
-        | g g e4 d8 c a f \laissezVibrer
+        | g g e r d c a f \laissezVibrer
       }
 
       \volta 2 {
-        | g' \repeatTie g e a, a' g e f, ~ \laissezVibrer
+        | g' \repeatTie g e a, a' g e f, \laissezVibrer
       }
 
       \volta 4 {
@@ -101,12 +101,12 @@ music = \relative d {
   | R1
   | r2 c'8 d f g, ~
   | g4 g'8 g, b d e g ~
-  | g g e4 d8 c a f ~
+  | g g e r d c a f ~
 
 
   \repeat volta 3 {
     | f4 f'8 f, a c d f ~
-    | f8 f d4 c8 d f g, ~
+    | f8 f d r c d f g, ~
     | g4 g'8 g, b d e g ~
 
     \alternative {
@@ -115,14 +115,20 @@ music = \relative d {
       }
 
       \volta 2 {
-        | g' \repeatTie g e4 d8 c a f \laissezVibrer
+        | g' \repeatTie g e r d c a f \laissezVibrer
       }
 
-      \volta 1 {
-        | g' \repeatTie g e a, a' g e f \laissezVibrer
+      \volta 3 {
+        | g' \repeatTie g e a, a' g e f ~
       }
     }
   }
+
+  | f4 c'8 c, a' b c f, ~
+  | f4 c'8 c, e' d c g ~
+  | g4 d'8 d, e' f g g, ~
+  | g4 d'8 d, e' f g g, ~
+
 }
 
 \score {
