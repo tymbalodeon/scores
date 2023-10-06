@@ -75,7 +75,7 @@ music = \relative fs, {
   | b4 e,,2 b'4
 
   | e2. b4
-  | a1 ~
+  | a1
 
   | R1
   | r2. a'4
