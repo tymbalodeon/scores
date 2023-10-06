@@ -124,13 +124,30 @@ music = \relative e {
   | a8 ( gs4 ) fs8 ~ fs8 e ( cs4 )
   | gs4. b8 ~ b b ( cs ) b ~
   | b4 r8 gs b gs ( fs4 )
-  | e,4. gs''8 ~ gs2 ~
-  | gs1
+  | <<
+    {
+      | r4. gs'8 ~ gs2 ~
+      | gs1
+    }
+    \\
+    {
+      | e,,1 ~
+      | e1
+    }
+  >>
 
-  | fs,4. ( a8 ~ a4 ) cs,8 e,
+  | fs'4. ( a8 ~ a4 ) cs,8 e,
   | fs4. a'8 ~ a gs ( fs4 )
-  | gs,4. b'8 ~ b cs ( ds4 ) ~
-  | <gs, ds'>1
+  << {
+    | r4. b8 ~ b cs8 ( ds4 ) ~
+    | ds1
+  } \\ {
+    | gs,,2 ~ gs8 r4 gs'8 ~
+    | gs1
+  } >>
+
+  \arpeggioArrowDown
+
   | <e, b'' e gs>1 \arpeggio ~
   | <e b'' e gs>1
 
