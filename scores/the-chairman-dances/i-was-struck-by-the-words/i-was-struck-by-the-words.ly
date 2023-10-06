@@ -18,7 +18,7 @@ music = \relative d {
 
   | R1 * 3
 
-  | r2 d8 c a f ~
+  | r2 d8 c a f -> ~
 
   | f4 f'8 f, a c d f ~
   | f f d r c ( d ) f g, ~
@@ -36,11 +36,11 @@ music = \relative d {
   | g g e a, a' g e d ~
 
   | d2 r8 a c d ~
-  | d4 a'8 r d8 c a d, -> ~ (
+  | d4 a'8 d, d'8 c a d, -> ~ (
 
   \repeat volta 4 {
     | d4 d'8 -. ) r c, -> c' -. r b, -> ~
-    | b4 b'8 -. e,, ( f e ) f g -> ~ (
+    | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
     | g4 g'8 -. ) r f, -> f' -. r e, -> ~
 
     \alternative {
@@ -49,7 +49,7 @@ music = \relative d {
       }
 
       \volta 4 {
-        | e,4 \repeatTie e'8 a, a' g e f, ~
+        | e,4 \repeatTie e'8 a, a' g e f, -> ~
       }
     }
   }
@@ -75,11 +75,11 @@ music = \relative d {
   | g g e a, a' g e d ~
 
   | d2 r8 a c d ~
-  | d4 a'8 r d8 c a d, -> ~ (
+  | d4 a'8 d, d'8 c a d, -> ~ (
 
   \repeat volta 2 {
     | d4 d'8 -. ) r c, -> c' -. r b, -> ~
-    | b4 b'8 -. e,, ( f e ) f g -> ~ (
+    | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
     | g4 g'8 -. ) r f, -> f' -. r e, -> ~
     | e4 e'8 -. e, ( g  a ) c -. d -> ~
   }
@@ -95,7 +95,7 @@ music = \relative d {
   | g1
 
   | R1
-  | r2 c8 d f g, ~
+  | r2 c8 d f g, -> ~
   | g4 g'8 g, b d e g ~
   | g g e r d c a f ~
 
