@@ -128,27 +128,38 @@ music = \relative d {
   \repeat volta 4 {
     | f8 f c' c, a' b ( c ) f, ~
     | f8 f c' c, e' d c g ~
-    | g8 g d' d, e' f ( g ) g, \parenthesize ~
 
     \alternative {
       \volta 1 {
+        | g8 g d' d, b' c ( d ) g, ~
         | g8 g b d a' g e f, \laissezVibrer
       }
 
       \volta 2 {
+        | g8 \repeatTie g d' d, b' c ( d ) g,
         | b8 d e ( g ) a e ( d ) c
       }
 
+      \volta 3 {
+        | g8 \repeatTie g d' d, b' c ( d ) g, ~
+        | g8 a, c d ( e ) g a f \laissezVibrer
+      }
+
+      \volta 4 {
+        | g8 \repeatTie g d' d, b' c  d ( e )
+        | d ( c ) b a g2 \fermata
+      }
     }
   }
+
+  \bar "|."
 }
 
 \score {
   \new Staff \with {
     instrumentName = "Bass"
     \numericTimeSignature
-  } {
-    \compressMMRests
+  } {\compressMMRests
     \music
   }
 }
