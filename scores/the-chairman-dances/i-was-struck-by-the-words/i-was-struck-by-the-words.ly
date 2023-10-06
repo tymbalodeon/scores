@@ -127,8 +127,7 @@ music = \relative d {
   | f4 c'8 c, a' b c f, ~
   | f4 c'8 c, e' d c g ~
   | g4 d'8 d, e' f g g, ~
-  | g4 d'8 d, e' f g g, ~
-
+  | g4 d'8 d, e' f g g,
 }
 
 \score {

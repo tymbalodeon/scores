@@ -30,8 +30,6 @@ music = \relative e {
   | r8 e16 e r8 e r e16 e r8 e16 e
   | r8 e16 e r8 e r e16 e r8 e
 
-  \mark \default
-
   \repeat volta 2 {
     | r8 e r e r e16 e r8 e16 e
     | r8 e r e r e16 e r8 e16 e
@@ -39,8 +37,6 @@ music = \relative e {
     | r8 e16 e r8 e r e16 e r8 e16 e
     | r8 e16 e r8 e r e16 e r8 e
   }
-
-  \mark \default
 
   \repeat volta 2 {
     | fs,4 ( fs'8 -. ) r a,4 ( a'8 -. ) r
@@ -51,8 +47,6 @@ music = \relative e {
   | r8 e16 e r8 e r e16 e r8 e16 e
   | r8 e16 e r8 e r e,16 e r8 e16 e
 
-  \mark \default
-
   | r8 e'16 e r8 e r e16 e r8 e16 e
   | r8 e16 e r8 e r e16 e r8 e16 e
   | r8 e16 e r8 e r e16 e r8 e16 e
@@ -62,8 +56,6 @@ music = \relative e {
   | r8 e16 e r8 e r e16 e r8 e16 e
   | r8 e,16 e r8 e r e'16 e r8 e16 e
   | r8 e16 e r8 e r e16 e r8 e,
-
-  \mark \default
 
   \repeat volta 2 {
     | fs4 ( fs'8 -. ) r a,4 ( a'8 -. ) r
@@ -76,8 +68,6 @@ music = \relative e {
 
       \volta 2 {
         \segnoMark \default
-
-        \mark \default
 
         | e8 e'16 e r8 e r e16 e r8 e16 e
         | r8 e16 e r8 e r d cs b
@@ -130,8 +120,6 @@ music = \relative e {
   | R1
   | R1
 
-  \mark \default
-
   | fs'2 ( ~ fs8 a ) e' ( fs )
   | a8 ( gs4 ) fs8 ~ fs8 e ( cs4 )
   | gs4. b8 ~ b b ( cs ) b ~
@@ -145,8 +133,6 @@ music = \relative e {
   | <gs, ds'>1
   | <e, b'' e gs>1 \arpeggio ~
   | <e b'' e gs>1
-
-  \mark \default
 
   \repeat volta 2 {
     | fs4 ( fs'8 -. ) r a,4 ( a'8 -. ) r
@@ -164,7 +150,6 @@ music = \relative e {
     instrumentName = "Bass"
     \numericTimeSignature
   } {
-    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
     \compressMMRests
     \music
   }

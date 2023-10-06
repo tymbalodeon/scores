@@ -41,8 +41,6 @@ end = \relative e {
   | R1 * 7
   | r2. e4
 
-  \mark \default
-
   \repeat volta 2 {
     | e,8 -. r e -. r e -. r e -. r
     | e8 -. r e -. r e -. r e ( f )
@@ -64,19 +62,11 @@ music = \relative d {
 
   \verse
 
-  \mark \default
-
   \chorus
-
-  \mark \default
 
   \verse
 
-  \mark \default
-
   \chorus
-
-  \mark \default
 
   \end
 
@@ -88,7 +78,6 @@ music = \relative d {
     instrumentName = "Bass"
     \numericTimeSignature
   } {
-    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
     \compressMMRests
     \music
   }

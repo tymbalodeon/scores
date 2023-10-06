@@ -20,8 +20,6 @@ music = \relative gs {
 
   | r2 \acciaccatura fs16 gs8 fs ds e, ~
 
-  \mark \default
-
   | e4 e'8 e, b' ( cs ) fs ( gs ) ~
   | gs fs4 e8 ~ e e, fs4
   | cs'4 gs'8 cs, ds' ( e ) ds cs ~
@@ -41,8 +39,6 @@ music = \relative gs {
   | cs,4 e'8 cs, ds' ( e ) ds e,,
   | a4 cs'8 a, e'' cs a a,
 
-  \mark \default
-
   | b'4 -. b2. ~
   | b2. r8 ds,
   | gs4 -. gs2. ~
@@ -55,8 +51,6 @@ music = \relative gs {
 
   | b4 -. b -. r2
   | R1
-
-  \mark \default
 
   | r8 b fs' b, r b fs' b,
   | r8 gs gs' gs, r gs gs' gs,
@@ -88,16 +82,12 @@ music = \relative gs {
   | as2. r8 cs ~
   | cs2 r8 fs fs fs
 
-  \mark \default
-
   | R1 * 6
   | R1 * 6
   | R1 * 6
   | R1 * 4
 
   | r2 \acciaccatura fs16 gs8 fs ds e, ~
-
-  \mark \default
 
   | e4 e'8 e, b' ( cs ) fs ( gs ) ~
   | gs fs4 e8 ~ e e, fs4
@@ -121,8 +111,6 @@ music = \relative gs {
   | gs4 -. gs2. ~
   | gs2. r8 fs,
 
-  \mark \default
-
   | b4 -. <b fs'>2 -> <b fs'>4 -> ~
   | <b fs'>4 <b fs'>8 -> b fs' b, fs gs -.
   | r4 gs2 -> gs4 -> ~
@@ -132,8 +120,6 @@ music = \relative gs {
   | <b fs'>4 <b fs'>8 -> b fs' b, fs gs -.
   | r4 gs2 -> gs4 -> ~
   | gs gs8 -> fs ( gs ) cs fs, b ~
-
-  \mark \default
 
   | b4 fs'8 cs ( ds ) fs gs fs ~
   | fs8 cs'4 as8 ~ as fs cs gs ~
@@ -154,8 +140,6 @@ music = \relative gs {
   | fs8 fs' e ds ~ ds b fs gs, ~
   | gs4 gs'8 cs, ( ds ) fs gs \acciaccatura b16 cs8
   | b8 as fs ds cs fs, gs b ~
-
-  \mark \default
 
   | b8 b fs' b, ~ b b fs' b, ~
   | b8 b fs' b, ~ b b fs' fs,
@@ -192,7 +176,6 @@ music = \relative gs {
     instrumentName = "Bass"
     \numericTimeSignature
   } {
-    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
     \compressMMRests
     \music
   }
