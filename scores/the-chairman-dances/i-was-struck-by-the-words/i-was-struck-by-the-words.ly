@@ -31,11 +31,11 @@ music = \relative d {
         }
 
         \volta 2 {
-          | g' g e4 d8 c a f \laissezVibrer
+          | g' \repeatTie g e4 d8 c a f \laissezVibrer
         }
 
         \volta 3 {
-          | g' g e a, a' g e d ~
+          | g' \repeatTie g e a, a' g e d ~
         }
       }
     }
@@ -43,6 +43,35 @@ music = \relative d {
     | d1 ~
     | d1
 
+    \repeat volta 4 {
+      | d4 ( d'8 -. ) r c, c' -. r b, -.
+      | r4 r8 e, f e f fs
+      | g4 ( g'8 -. ) r f, f' -. r e, -.
+      | r4 r8 g a e c' cs
+    }
+
+    \repeat volta 4 {
+      | f,4 f'8 f, a c d f ~
+      | f f d4 c8 d f g, ~
+      | g4 g'8 g, b d e g ~
+
+      \alternative {
+        \volta 1,3 {
+          | g g e4 d8 c a f \laissezVibrer
+        }
+
+        \volta 2 {
+          | g' \repeatTie g e a, a' g e f, ~ \laissezVibrer
+        }
+
+        \volta 4 {
+          | g' \repeatTie g e a, a' g e d ~
+        }
+      }
+    }
+
+    | d1 ~
+    | d1
 
     \repeat volta 4 {
       | d4 ( d'8 -. ) r c, c' -. r b, -.
