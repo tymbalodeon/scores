@@ -125,10 +125,22 @@ music = \relative d {
     }
   }
 
-  | f4 c'8 c, a' b c f, ~
-  | f4 c'8 c, e' d c g ~
-  | g4 d'8 d, e' f g g, ~
-  | g4 d'8 d, e' f g g,
+  \repeat volta 4 {
+    | f8 f c' c, a' b ( c ) f, ~
+    | f8 f c' c, e' d c g ~
+    | g8 g d' d, e' f ( g ) g, \parenthesize ~
+
+    \alternative {
+      \volta 1 {
+        | g8 g b d a' g e f, \laissezVibrer
+      }
+
+      \volta 2 {
+        | b8 d e ( g ) a e ( d ) c
+      }
+
+    }
+  }
 }
 
 \score {
