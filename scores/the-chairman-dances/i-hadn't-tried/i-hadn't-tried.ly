@@ -49,7 +49,7 @@ music = \relative e {
   }
 
   | r8 e16 e r8 e r e16 e r8 e16 e
-  | r8 e16 e r8 e16 e r8 e,16 e r8 e
+  | r8 e16 e r8 e r e,16 e r8 e16 e
 
   \mark \default
 
@@ -71,7 +71,7 @@ music = \relative e {
     \alternative {
       \volta 1 {
         | e,8 e'16 e r8 e r e16 e r8 e16 e
-        | r8 e r e r e16 e r8 e
+        | r8 e r e r e16 e r8 e,
       }
 
       \volta 2 {
@@ -79,7 +79,7 @@ music = \relative e {
 
         \mark \default
 
-        | e,8 e'16 e r8 e r e16 e r8 e16 e
+        | e8 e'16 e r8 e r e16 e r8 e16 e
         | r8 e16 e r8 e r d cs b
       }
     }
