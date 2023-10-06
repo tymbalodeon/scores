@@ -241,7 +241,7 @@ bass_chorus = {
   | \bass_pattern
 }
 
-bass = {
+bass = \relative c {
   | \bass_pattern
 
   \repeat volta 2 {
@@ -285,14 +285,23 @@ bass = {
   }
 
   \repeat volta 2 {
-    | \transpose c bf, ^\markup \italic "(drums)" \bass_pattern
-    | \bass_pattern
+    | bf4. ^\markup \italic "(drums)" f8 ~ f4 r
+    | \repeat unfold 3 { bf4. f8 ~ f4 r }
   }
 
   \repeat volta 2 {
-    | \transpose c bf, ^\markup \italic "(vocals)" \bass_pattern
-    | \bass_pattern
+    | bf4. ^\markup \italic "(vocals)" f8 ~ f4 r
+    | \repeat unfold 3 { bf4. f8 ~ f4 r }
   }
+
+  \repeat unfold 2 {
+    | c'4. gf8 ~ gf4 r
+    | gf'4. c,8 ~ c4 r
+  }
+
+  | bf4 -> -. r r2
+
+  \bar "|."
 }
 
 
