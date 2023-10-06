@@ -18,7 +18,7 @@ music = \relative c {
     | R1 * 2
 
     | R1 * 7
-    | r4. bf8 bf'8 a g f
+    | r4 r8 bf bf' a g f
 
     | f,2 g
     | a1
