@@ -75,6 +75,8 @@ music = \relative e {
       }
 
       \volta 2 {
+        \segno
+
         \mark \default
 
         | e,8 e'16 e r8 e r e16 e r8 e16 e
@@ -103,70 +105,56 @@ music = \relative e {
 
   \repeat volta 2 {
     | e,,8 e16 e r8 e r e r e
-    | r8 e16 e r8 e r e r e
 
     \alternative {
       \volta 1 {
+        | r8 e16 e r8 e r e r e
         | r8 e16 e r8 e r e r e
         | r8 e16 e r8 e r \acciaccatura fs gs b cs
       }
 
       \volta 2 {
-        | b4. fs'8 ~ fs4 b, ~
+        | r8 e,16 e r8 e r e r4
+        | b'4. fs'8 ~ fs4 b, ~
         | b4 b8 b b b r4
       }
     }
   }
 
+  \coda
+
   | e,1 ~
   | e1
   | R1
   | R1
+
+  \mark \default
+
+  | fs'2 ~ fs8 a e' fs
+  | a8 gs4 fs8 ~ fs8 e cs4
+  | gs4. b8 ~ b b cs b ~
+  | b4 r8 gs b gs fs4
+  | e,4. gs''8 ~ gs2 ~
+  | gs1
+
+  | fs,4. a8 ~ a4 cs,8 e,
+  | fs4. a'8 ~ a gs fs4
+  | gs,4. b'8 ~ b cs ds4
+  | gs,1
+  | <e, b'' e gs>1 ~
+  | <e b'' e gs>1
 
   \mark \default
 
   \repeat volta 2 {
-    | fs1
-    | fs1
-    | gs1
-    | gs1
-    | e1 ~
-    | e1
+    | fs4 ( fs'8 -. ) r a,4 ( a'8 -. ) r
+    | e,8 e'16 e r8 e r e16 e r8 e16 e
+    | r8 e r e r e16 e r8 e
   }
 
-  \mark \default
+  | fs,4 ( fs'8 -. ) r a,4  ^\markup \italic "D.S. al Coda" ( a'8 -. ) r
 
-  \repeat volta 3 {
-    | fs4 fs'8 r a,4 a'8 r
-
-    \alternative {
-      \volta 1,2 {
-        | e,8 e'16 e r8 e r e16 e r8 e16 e
-        | r8 e16 e r8 e r e16 e r8 e
-      }
-
-      \volta 3 {
-        \mark \default
-
-        | e,8 e'16 e r8 e r e16 e r8 e16 e
-      }
-    }
-  }
-
-  | r8 e16 e r8 e r d cs b
-
-  \repeat volta 4 {
-    | e,8 ^\markup "4x" e'16 e r8 e r e16 e r8 e16 e
-    | r8 e16 e r8 e r d cs b
-  }
-
-  | b1
-  | b1
-
-  | e,1 ~
-  | e1
-  | R1
-  | R1
+  \bar "||"
 }
 
 \score {
@@ -177,5 +165,29 @@ music = \relative e {
     \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
     \compressMMRests
     \music
+  }
+}
+
+\score {
+  \new Staff \with {
+    instrumentName = "Bass"
+    \numericTimeSignature
+  } {
+    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+    \compressMMRests
+
+    \clef "bass"
+
+    \coda
+    | r8 e r e r e16 e r8 e16 e
+    | r8 e r e r e16 e r8 e16 e
+
+    | r8 e16 e r8 e r e16 e r8 e16 e
+    | r8 e16 e r8 e r e16 e r8 e
+
+    | r8 e r e r e16 e r8 e16 e
+    | r8 e r e r e16 e r8 e16 e
+
+    \bar "|."
   }
 }
