@@ -39,6 +39,8 @@ music = \relative fs, {
   | R1 * 3
   | r2. fs4
 
+  \mark \default
+
   | b4. b'8 ~ b4 e,8 es
   | fs4. fs,8 ~ fs4 fs'8 a,
   | e'8 fs ( g ) fs ~ fs e4 b8
@@ -62,6 +64,8 @@ music = \relative fs, {
   | g1 ~
   | g1
 
+  \mark \default
+
   \repeat unfold 2 {
     | e'2. b4
     | a2. a4
@@ -77,6 +81,8 @@ music = \relative fs, {
   | e2. b4
   | a1 ~
 
+  \mark \default
+
   | a1
   | r2. a'4
   | d1 ~
@@ -84,11 +90,15 @@ music = \relative fs, {
 
   | R1 * 4
 
+  \mark \default
+
   | R1 * 8
 
   | R1
 
   | r2 r8 e,, fs4
+
+  \mark \default
 
   | d'4. d8 ~ d4 e8 es
   | fs4. fs8 ~ fs4 fs,
@@ -124,6 +134,7 @@ music = \relative fs, {
     instrumentName = "Bass"
     \numericTimeSignature
   } {
+    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
     \compressMMRests
     \music
   }
