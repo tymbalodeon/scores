@@ -72,8 +72,29 @@ music = \relative c {
     | g'8 f e f e d c bf
     | e8 d c bf a g f g
 
-    | f2 r
-}
+    | f1 ~
+    | f1
+    | <bf f'>1 ~
+    | <bf f'>1
+
+    | R1 * 4
+    | R1 * 3
+    | r4 r8 bf bf' a g f
+
+    \repeat volta 2 {
+      | f,4. f'8 g,4. g'8
+      | a,2. a'4
+      | <bf, f'>1 ~
+      | <bf f'>4. bf8 bf' a g f
+    }
+
+    | f,4. f'8 g,4. g'8
+    | a,1
+    | <bf f'>1 ~
+    | <bf f'>2. r4
+
+    \bar "|."
+  }
 
 \score {
     \new Staff \with {
