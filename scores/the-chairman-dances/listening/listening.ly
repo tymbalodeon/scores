@@ -22,7 +22,15 @@ verse = \relative d {
     | d8. -- e16 -. r g' ( fs8 ) -. b,, -. d' -. cs16 g8.
     | d8. -- e16 -. r e, ( g8 ) -. d''16 d cs8 -. b16 a8.
     | a,8. -- a16 -. r b'' ( cs8 ) -. e,, -. fs -. g'16 cs,8.
-    | c,8. -- c'16 -. r g ( a8 ) -. e'16 es fs8 c, ds
+    \alternative {
+      \volta 1 {
+        | c,8. -- c'16 -. r g ( a8 ) -. e'16 es fs8 c,16 ds8.
+      }
+
+      \volta 2 {
+        | c8. -- c'16 -. r g ( a8 ) -. e'16 es fs8 c,16 d?8.
+      }
+    }
   }
 }
 
@@ -30,8 +38,8 @@ chorus = \relative ef {
   | R1 * 4
 
   | ef1 ~
-  | ef2. ef4
-  | d'1
+  | ef2. bf'4
+  | d1
   \time 2/4
   | R2
   \time 4/4
