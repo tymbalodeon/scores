@@ -75,7 +75,7 @@ music = \relative e {
       }
 
       \volta 2 {
-        \segno
+        \segnoMark \default
 
         \mark \default
 
@@ -121,7 +121,9 @@ music = \relative e {
     }
   }
 
-  \coda
+  \codaMark \default
+
+  \bar "||"
 
   | e,1 ~
   | e1
@@ -141,7 +143,7 @@ music = \relative e {
   | fs4. a'8 ~ a gs ( fs4 )
   | gs,4. b'8 ~ b cs ( ds4 ) ~
   | <gs, ds'>1
-  | \arpeggio <e, b'' e gs>1 ~
+  | <e, b'' e gs>1 \arpeggio ~
   | <e b'' e gs>1
 
   \mark \default
@@ -170,15 +172,11 @@ music = \relative e {
 
 \score {
   \new Staff \with {
-    instrumentName = "Bass"
     \numericTimeSignature
-  } {
-    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
-    \compressMMRests
-
     \clef "bass"
+  } {
+    \mark \markup \large { \musicglyph "scripts.coda" }
 
-    \coda
     | r8 e r e r e16 e r8 e16 e
     | r8 e r e r e16 e r8 e16 e
 
