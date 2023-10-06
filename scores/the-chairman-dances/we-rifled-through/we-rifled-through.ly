@@ -21,17 +21,17 @@ music = \relative e {
   | e4 e8 b e fs g a ~
   | a4 a8 e a g fs d ~
   | d4 d8 a d a' fs g ~
-  | g4 g, g'8 fs4 e8 ~
+  | g4 g, g'8 fs r e ~
 
   | e4 e8 b e fs g a ~
   | a4 a8 e' ( d ) cs a fs ~
-  | fs4 fs8 d e a fs g ~
+  | fs4 fs8 d ( e ) a fs g ~
   | g4 g, r4 r8 d' ~
 
   | d8 d d a d d d a
   | d8 d d a d e, fs g ~
-  | g8 g g e g g g e
-  | g8 g g e g b cs d ~
+  | g8 g g e ( g ) g g e (
+  | g8 ) g g e ( g ) b cs d ~
 
   | d8 d d d d d d a
   | d8 a d4 r4 r8 e ~
@@ -39,26 +39,26 @@ music = \relative e {
   | e4 e8 b e fs g a ~
   | a4 a8 fs16 g a8 g fs d ~
   | d4 d8 a d a' fs g ~
-  | g4 g, g'8 fs4 e8 ~
+  | g4 g, g'8 fs r e ~
 
   | e8 e d d cs cs b a ~
-  | a8 a g e fs a d a
+  | a8 a g e fs ( a ) d a
   | d8 e fs d a' g fs d
   | g4 g, r r8 d' ~
 
   | d8 d d a d d d a
   | d8 d d a d e, fs g ~
-  | g8 g g e g g g e
-  | g8 g g e g g4 a8 ~
+  | g8 g g e ( g ) g g e (
+  | g8 ) g g e ( g ) g r a ~
 
   | a8 a a a a a a \acciaccatura d e
-  | a8 a a e a af d, g8 ~
-  | g8 g g d g g g d
+  | a8 a a e a af a, g'8 ~
+  | g8 g g g g g g d
   | g8 d g d g g, gs a ~
 
   | a8 a a a a a a \acciaccatura d e
   | a8 a a e a e fs g ~
-  | g8 g g d g g g d
+  | g8 g g g g g g d
   | g8 d g fs'16 ( g fs8 ) e b e, ~
 
   | e8 a, b cs d e fs a
@@ -73,24 +73,23 @@ music = \relative e {
 
   | r8 e' \afterGrace e'2. \glissando { \hideNotes b8 \unHideNotes }
   | r8 a, \afterGrace a'2. \glissando { \hideNotes e8 \unHideNotes }
-                                % | r8 a,, a'2.
   | r8 e, fs g a e fs g ~
-  | g4 g' g8 fs4 e8 ~
+  | g4 g' g8 fs r e ~
 
   | e8 e, fs fs g g gs a ~
   | a8 a b b cs a cs d ~
-  | d8 d e d a' g fs g ~
-  | g4 g, b8 d ds e ~
+  | d8 d e d a' g fs g -> ~
+  | r4 g, b8 d ds e ~
 
-  | e8 b e e, fs' d' cs a ~
+  | e8 b e e, fs' d' ( cs ) a ~
   | a4 a8 e a g fs d ~
   | d8 d a' d, g fs d e,
   | g4 g r r8 d' ~
 
   | d8 d d a d d d a
   | d8 d d a d e, fs g ~
-  | g8 g g e g g g e
-  | g8 g g e g b cs d ~
+  | g8 g g e ( g ) g g e (
+  | g8 ) g g e ( g ) b cs d ~
 
   | d8 d d a d d d a
   | d8 d d a d e fs g ~
@@ -107,19 +106,19 @@ music = \relative e {
   | g g g g g g g g
   | g g g g g g r4
 
-  | r4 \afterGrace a'2. \glissando { \hideNotes e8 \unHideNotes }
+  | r4 \afterGrace <a' e'>2. \glissando { \hideNotes e8 \unHideNotes }
   | R1
-  | r4 \afterGrace g2. \glissando { \hideNotes d8 \unHideNotes }
+  | r4 \afterGrace <g d'>2. \glissando { \hideNotes d8 \unHideNotes }
   | R1
 
-  | r4 \afterGrace a2. \glissando { \hideNotes e8 \unHideNotes }
+  | r4 \afterGrace <a e'>2. \glissando { \hideNotes e8 \unHideNotes }
   | R1
-  | r4 \afterGrace g2. \glissando { \hideNotes e8 \unHideNotes }
+  | r4 \afterGrace <g d'>2. \glissando { \hideNotes e8 \unHideNotes }
   | r2 r4 r8 d' ~
 
   | d d d d d d d d
-  | d d d d d d d a
-  | d d d d d d d d
+  | d d d d d d d a (
+  | d ) d d d d d d d
   | <d a'>8 -. r r4 r2
 
   \bar "|."
