@@ -51,26 +51,26 @@ music = \relative c {
     | R1 * 8
     | R1 * 16
 
-    | a8 -. a -. a -. a -. a -\markup \italic "sim." a a e'
-    | a8 a a a a a a e
+    | a8 -. a -. a -. a -. a -. a -. a -- e' --
+    | a8 -. a -. a -. a -. a -. a -. a -- e --
 
-    | g8 g g g g g g d
-    | g,8 g g g g g g d'
+    | g8 -. g -. g -. g -. g -. g -. g -- d --
+    | g,8 -. g -. g -. g -. g -. g -. g -- d' --
 
-    | g,8 g g g g g g d'
-    | g,8 g g d' g, d' g, gs
+    | g,8 -. g -. g -. g -. g -. g -. g -- d' --
+    | g,8 -. g  -. g -- d' -- g, -- d' -- g, -- gs --
 
-    | a8 e a e a e a e
-    | a8 e a e a e a e'
+    | a8 -. e -. a -. e -. a -. e -. a -. e -.
+    | a8 -. e -. a -. e -. a -. e -. a -- e' --
 
-    | a8 e a e a e a e
-    | a8 e a e a c, e g
+    | a8 -. e -. a -. e -. a -. e -. a -. e -.
+    | a8 -. e -. a -. e -. a -. c, -- e -- g --
 
-    | d8 d d d d d d b
-    | g8 g g g g g g e
+    | d8 -. d -. d -. d -. d -. d -. d -- b --
+    | g8 -. g -. g -. g -. g -. g -. g -- e --
 
-    | g'8 f e f e d c bf
-    | e8 d c bf a g f g
+    | g'8 -- f -- ( e -- ) f -- e -- d -- c -- bf --
+    | e8 -- d -- c -- bf -- a -- g -- f -- g --
 
     | f1 ~
     | f1
