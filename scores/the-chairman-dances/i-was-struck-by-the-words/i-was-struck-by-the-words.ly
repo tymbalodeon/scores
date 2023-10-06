@@ -20,25 +20,20 @@ music = \relative d {
 
   | r2 d8 c a f ~
 
-  \repeat volta 3 {
-    | f4 f'8 f, a c d f ~
-    | f f d r c ( d ) f g, ~
-    | g4 g'8 g, b d e g ~
+  | f4 f'8 f, a c d f ~
+  | f f d r c ( d ) f g, ~
+  | g4 g'8 g, b d e g ~
+  | g g e a, a' g e f, ~
 
-    \alternative {
-      \volta 1 {
-        | g g e a, a' g e f, \laissezVibrer
-      }
+  | f4 f'8 f, a c d f ~
+  | f f d r c ( d ) f g, ~
+  | g4 g'8 g, b d e g ~
+  | g g e r d c a f ~
 
-      \volta 2 {
-        | g' \repeatTie g e r d c a f \laissezVibrer
-      }
-
-      \volta 3 {
-        | g' \repeatTie g e a, a' g e d ~
-      }
-    }
-  }
+  | f4 f'8 f, a c d f ~
+  | f f d r c ( d ) f g, ~
+  | g4 g'8 g, b d e g ~
+  | g g e a, a' g e d ~
 
   | d2 r8 a c d ~
   | d4 a'8 r d8 c a d, -> ~ (
@@ -59,25 +54,25 @@ music = \relative d {
     }
   }
 
-  \repeat volta 4 {
-    | f4 f'8 f, a c d f ~
-    | f f d r c ( d ) f g, ~
-    | g4 g'8 g, b d e g ~
+  | f4 f'8 f, a c d f ~
+  | f f d r c ( d ) f g, ~
+  | g4 g'8 g, b d e g ~
+  | g g e r d c a f ~
 
-    \alternative {
-      \volta 1,3 {
-        | g g e r d c a f \laissezVibrer
-      }
+  | f4 f'8 f, a c d f ~
+  | f f d r c ( d ) f g, ~
+  | g4 g'8 g, b d e g ~
+  | g g e a, a' g e f, ~
 
-      \volta 2 {
-        | g' \repeatTie g e a, a' g e f, \laissezVibrer
-      }
+  | f4 f'8 f, a c d f ~
+  | f f d r c ( d ) f g, ~
+  | g4 g'8 g, b d e g ~
+  | g g e r d c a f ~
 
-      \volta 4 {
-        | g' \repeatTie g e a, a' g e d ~
-      }
-    }
-  }
+  | f4 f'8 f, a c d f ~
+  | f f d r c ( d ) f g, ~
+  | g4 g'8 g, b d e g ~
+  | g g e a, a' g e d ~
 
   | d2 r8 a c d ~
   | d4 a'8 r d8 c a d, -> ~ (
@@ -104,53 +99,40 @@ music = \relative d {
   | g4 g'8 g, b d e g ~
   | g g e r d c a f ~
 
+  | f4 f'8 f, a c d f ~
+  | f8 f d r c d f g, ~
+  | g4 g'8 g, b d e g ~
+  | g g e a, a' g e f, ~
 
-  \repeat volta 3 {
-    | f4 f'8 f, a c d f ~
-    | f8 f d r c d f g, ~
-    | g4 g'8 g, b d e g ~
+  | f4 f'8 f, a c d f ~
+  | f8 f d r c d f g, ~
+  | g4 g'8 g, b d e g ~
+  | g g e r d c a f ~
 
-    \alternative {
-      \volta 1 {
-        | g g e a, a' g e f, \laissezVibrer
-      }
+  | f4 f'8 f, a c d f ~
+  | f8 f d r c d f g, ~
+  | g4 g'8 g, b d e g ~
+  | g g e a, a' g e f ~
 
-      \volta 2 {
-        | g' \repeatTie g e r d c a f \laissezVibrer
-      }
+  | f8 f c' c, a' b ( c ) f, ~
+  | f8 f c' c, e' d c g ~
+  | g8 g d' d, b' c ( d ) g, ~
+  | g8 g b d a' g e f, ~
 
-      \volta 3 {
-        | g' \repeatTie g e a, a' g e f ~
-      }
-    }
-  }
+  | f8 f c' c, a' b ( c ) f, ~
+  | f8 f c' c, e' d c g ~
+  | g8 g d' d, b' c ( d ) g,
+  | b8 d e ( g ) a e ( d ) c
 
-  \repeat volta 4 {
-    | f8 f c' c, a' b ( c ) f, ~
-    | f8 f c' c, e' d c g ~
+  | f,8 f c' c, a' b ( c ) f, ~
+  | f8 f c' c, e' d c g ~
+  | g8 g d' d, b' c ( d ) g, ~
+  | g8 a, c d ( e ) g a f ~
 
-    \alternative {
-      \volta 1 {
-        | g8 g d' d, b' c ( d ) g, ~
-        | g8 g b d a' g e f, \laissezVibrer
-      }
-
-      \volta 2 {
-        | g8 \repeatTie g d' d, b' c ( d ) g,
-        | b8 d e ( g ) a e ( d ) c
-      }
-
-      \volta 3 {
-        | g8 \repeatTie g d' d, b' c ( d ) g, ~
-        | g8 a, c d ( e ) g a f \laissezVibrer
-      }
-
-      \volta 4 {
-        | g8 \repeatTie g d' d, b' c  d ( e )
-        | d ( c ) b a g2 \fermata
-      }
-    }
-  }
+  | f8 f c' c, a' b ( c ) f, ~
+  | f8 f c' c, e' d c g ~
+  | g8 g d' d, b' c  d ( e )
+  | d ( c ) b a g2 \fermata
 
   \bar "|."
 }
