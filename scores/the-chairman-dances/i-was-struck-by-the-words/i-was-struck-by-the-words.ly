@@ -46,8 +46,8 @@ music = \relative d {
     \repeat volta 4 {
       | d4 ( d'8 -. ) r c, c' -. r b, -.
       | r4 r8 e, f e f fs
-      | g4 ( g'8 -. ) r f, f' -. r e, -.
-      | r4 r8 g a e c' cs
+      | g4 ( g'8 -. ) r f, f' -. r e, ~
+      | e4 e'8 e, -. g ( a ) c cs
     }
 
     \repeat volta 4 {
