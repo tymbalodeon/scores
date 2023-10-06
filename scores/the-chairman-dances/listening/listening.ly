@@ -34,28 +34,17 @@ verse = \relative d {
   }
 }
 
-chorus = \relative ef {
-  | R1 * 4
-
-  | ef1 ~
-  | ef2. bf'4
-  | d1
-  \time 2/4
-  | R2
-  \time 4/4
-}
-
 end = \relative e {
   | R1 * 7
   | r2. e4
 
   \repeat volta 2 {
     | e,8 -. r e -. r e -. r e -. r
-    | e8 -. r e -. r e -. r e ( f )
+    | e8 -. r e -. r e -. r e -> ( f )
     | e8 -. r e -. r e -. r e -. r
-    | e8 -. r e -. r e ( f ) e ( f )
+    | e8 -. r e -. r e ( -> f ) e -> ( f )
     | e8 -. r e -. r e -. r e -. r
-    | e8 -. r e -. r e -. r e ( g )
+    | e8 -. r e -. r e -. r e -> ( g )
   }
 
   | e8 -. r e -. r e -. r e -. r
@@ -70,11 +59,25 @@ music = \relative d {
 
   \verse
 
-  \chorus
+  | R1 * 4
+
+  | ef1 ~
+  | ef2. ef4
+  | d'1
+  \time 2/4
+  | R2
+  \time 4/4
 
   \verse
 
-  \chorus
+  | R1 * 4
+
+  | ef,1 ~
+  | ef2. bf'4
+  | d1
+  \time 2/4
+  | R2
+  \time 4/4
 
   \end
 
