@@ -77,7 +77,7 @@ music = \relative fs, {
   | e2. b4
   | a1 ~
 
-  | a1
+  | R1
   | r2. a'4
   | d1 ~
   | d1
@@ -106,15 +106,17 @@ music = \relative fs, {
   | a'8 g ( fs4 ) d8 g, ( fs ) e,
 
   | b'4 r8 b' ~ b a fs e,
-  | fs4 r8 fs' ~ fs4 e,8 fs
+  | fs4 r8 fs' ~ fs e, fs4
   | g1
   | r2 g'4 fs
 
   | e2. b4
   | a1
 
-  | R1 * 4
-  | R1 * 2
+  | R1 * 3
+  | b4 a g fs
+  | e1 ~
+  | e1
 
   \bar "|."
 }
