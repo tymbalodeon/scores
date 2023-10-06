@@ -28,6 +28,8 @@ music = \relative e {
   | fs4 fs8 d e a fs g ~
   | g4 g, r4 r8 d' ~
 
+  \mark \default
+
   | d8 d d a d d d a
   | d8 d d a d e, fs g ~
   | g8 g g e g g g e
@@ -35,6 +37,8 @@ music = \relative e {
 
   | d8 d d d d d d a
   | d8 a d4 r4 r8 e ~
+
+  \mark \default
 
   | e4 e8 b e fs g a ~
   | a4 a8 fs16 g a8 g fs d ~
@@ -46,10 +50,14 @@ music = \relative e {
   | d8 e fs d a' g fs d
   | g4 g, r r8 d' ~
 
+  \mark \default
+
   | d8 d d a d d d a
   | d8 d d a d e, fs g ~
   | g8 g g e g g g e
   | g8 g g e g g4 a8 ~
+
+  \mark \default
 
   | a8 a a a a a a \acciaccatura d e
   | a8 a a e a af d, g8 ~
@@ -61,6 +69,8 @@ music = \relative e {
   | g8 g g d g g g d
   | g8 d g fs'16 ( g fs8 ) e b e, ~
 
+  \mark \default
+
   | e8 a, b cs d e fs a
   | b8 a cs a e' a, g' fs ~
   | fs8 e d e fs d d, g ~
@@ -70,6 +80,8 @@ music = \relative e {
   | e8 a,, d' a, cs' d e d ~
   | d8 fs16 ( g a8 ) g ~ g fs d d,
   | g8 e, g4 r2
+
+  \mark \default
 
   | r8 e' \afterGrace e'2. \glissando { \hideNotes b8 \unHideNotes }
   | r8 a, \afterGrace a'2. \glissando { \hideNotes e8 \unHideNotes }
@@ -86,6 +98,8 @@ music = \relative e {
   | a4 a8 e a g fs d ~
   | d8 d a' d, g fs d e,
   | g4 g r r8 d' ~
+
+  \mark \default
 
   | d8 d d a d d d a
   | d8 d d a d e, fs g ~
@@ -106,6 +120,8 @@ music = \relative e {
   | fs fs fs fs fs e fs g ~
   | g g g g g g g g
   | g g g g g g r4
+
+  \mark \default
 
   | r4 \afterGrace a'2. \glissando { \hideNotes e8 \unHideNotes }
   | R1
@@ -130,6 +146,7 @@ music = \relative e {
     instrumentName = "Bass"
     \numericTimeSignature
   } {
+    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
     \compressMMRests
     \music
   }
