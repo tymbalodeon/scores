@@ -98,10 +98,9 @@ music = \relative d {
   | r8 f16 f f8 e16 e e8 f fs g
   | r8 b16 b b8 c16 c d8 f g g, ~
   | g1
-}
 
   | R1
-  | r2 c'8 d f g, ~
+  | r2 c8 d f g, ~
   | g4 g'8 g, b d e g ~
   | g g e r d c a f ~
 
