@@ -41,17 +41,17 @@ music = \relative d {
   | d4 d'8 -. ) r c, -> c' -. r b, -> ~
   | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
   | g4 g'8 -. ) r f, -> f' -. r e, -> ~
-  | e4 e'8 -. e, ( g  a ) c -. d -> ~
+  | e4 e'8 -. e, ( g  a ) c -. d -> ~ (
 
   | d4 d'8 -. ) r c, -> c' -. r b, -> ~
   | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
   | g4 g'8 -. ) r f, -> f' -. r e -. ->
-  | r8 e,8 f ( g ) a b ( c ) d -> ~
+  | r8 e,8 f ( g ) a b ( c ) d -> ~ (
 
   | d4 d'8 -. ) r c, -> c' -. r b, -> ~
   | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
   | g4 g'8 -. ) r f, -> f' -. r e, -> ~
-  | e4 e'8 -. e, ( g  a ) c -. d -> ~
+  | e4 e'8 -. e, ( g  a ) c -. d -> ~ (
 
   | d4 d'8 -. ) r c, -> c' -. r b, -> ~
   | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
@@ -84,7 +84,7 @@ music = \relative d {
   | d4 d'8 -. ) r c, -> c' -. r b, -> ~
   | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
   | g4 g'8 -. ) r f, -> f' -. r e, -> ~
-  | e4 e'8 -. e, ( g  a ) c -. d -> ~
+  | e4 e'8 -. e, ( g  a ) c -. d -> ~ (
 
   | d4 d'8 -. ) r c, -> c' -. r b, -> ~
   | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
