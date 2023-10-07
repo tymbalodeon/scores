@@ -107,17 +107,17 @@ music = \relative d {
   | g g e r d c a f ~
 
   | f4 f'8 f, a c d f ~
-  | f8 f d r c d f g, ~
+  | f8 f d r c ( d ) f g, ~
   | g4 g'8 g, b d e g ~
   | g g e a, a' g e f, ~
 
   | f4 f'8 f, a c d f ~
-  | f8 f d r c d f g, ~
+  | f8 f d r c ( d ) f g, ~
   | g4 g'8 g, b d e g ~
   | g g e r d c a f ~
 
   | f4 f'8 f, a c d f ~
-  | f8 f d r c d f g, ~
+  | f8 f d r c ( d ) f g, ~
   | g4 g'8 g, b d e g ~
   | g g e a, a' g e f ~
 
@@ -138,8 +138,10 @@ music = \relative d {
 
   | f8 f c' c, a' b ( c ) f, ~
   | f8 f c' c, e' d c g ~
-  | g8 g d' d, b' c  d ( e )
-  | d ( c ) b a g2 \fermata
+  | g8 \> g d' d, b' c ( d ) g, ~
+  | g8 \acciaccatura a16 b8 d e g a ( b ) c ~
+
+  | c1 \!
 
   \bar "|."
 }
