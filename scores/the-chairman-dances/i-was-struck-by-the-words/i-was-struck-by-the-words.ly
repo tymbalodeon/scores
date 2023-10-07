@@ -94,7 +94,7 @@ music = \relative d {
   | d8 d'16 d d8 -. c16 c c8 -. b -. b -. a -. ->
   | r8 f16 f f8 -. e16 e e8 -. d -. c -. g -. ->
   | r8 b16 b b8 -. c16 c c8 -. d -. f -. g -. ->
-  | r8 b16 b b8 -. c16 c e8 -- g -- a -- d, -- -> ~
+  | r8 b16 b b8 -. c16 c \acciaccatura d e8 -- g -- a -- d, -- -> ~
 
   | d8 d,16 d d8 -. c16 c c8 -. b -. b -. a -. ->
   | r8 f16 f f8 -. e16 e e8 -. f -. fs -. g -. ->
@@ -102,7 +102,7 @@ music = \relative d {
   | g1
 
   | R1
-  | r2 c8 d f g, -> ~
+  | r2 c8 ( d ) f g, -> ~
   | g4 g'8 g, b d e g ~
   | g g e r d c a f ~
 
