@@ -14,21 +14,21 @@ verse = \relative d {
   | R1 * 2
 
   \repeat volta 2 {
-    | d8. -- e16 -. r g' ( fs8 ) -. b,, -. d' -. cs16 g8.
-    | d8. -- e16 -. r e, ( g8 ) -. d''16 d cs8 -. b16 a8.
-    | a,8. -- a16 -. r b'' ( cs8 ) -. e,, -. fs -. g'16 cs,8.
-    | a,8. -- a16 -. r b' ( cs8 ) -. e,, -. fs -. g -. b -.
+    | d8. e16 r g' ( fs8 ) -. b,, -. d' -. cs16 g8.
+    | d8. e16 r e, ( g8 ) -. d''16 d cs8 -. b16 a8.
+    | a,8. a16 r \ottava #1 b'' ( cs8 ) -. \ottava #0  e,, -. fs -. g'16 cs,8.
+    | a,8. a16 r b' ( cs8 ) -. e,, -. fs -. g -. b -.
 
-    | d8. -- e16 -. r g' ( fs8 ) -. b,, -. d' -. cs16 g8.
-    | d8. -- e16 -. r e, ( g8 ) -. d''16 d cs8 -. b16 a8.
-    | a,8. -- a16 -. r b'' ( cs8 ) -. e,, -. fs -. g'16 cs,8.
+    | d8. e16 r g' ( fs8 ) -. b,, -. d' -. cs16 g8.
+    | d8. e16 r e, ( g8 ) -. d''16 d cs8 -. b16 a8.
+    | a,8. a16 r \ottava #1 b'' ( cs8 ) -. \ottava #0 e,, -. fs -. g'16 e,, ( g8 -. )
     \alternative {
       \volta 1 {
-        | c,8. -- c'16 -. r g ( a8 ) -. e'16 es fs8 c,16 ds8.
+        | c8. c'16 r g ( a8 ) -. e'16 es fs8 -. c,16 ds8.
       }
 
       \volta 2 {
-        | c8. -- c'16 -. r g ( a8 ) -. e'16 es fs8 c,16 d?8.
+        | c8. c'16 r g ( a8 ) -. e'16 es fs8 -. c,16 d?8.
       }
     }
   }
@@ -36,7 +36,7 @@ verse = \relative d {
 
 end = \relative e {
   | R1 * 7
-  | r2. e4
+  | r2. r8 e \glissando
 
   \repeat volta 2 {
     | e,8 -. r e -. r e -. r e -. r
