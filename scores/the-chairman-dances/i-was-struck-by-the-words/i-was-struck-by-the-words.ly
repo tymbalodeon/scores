@@ -38,21 +38,25 @@ music = \relative d {
   | d2 r8 a c d ~
   | d4 a'8 d, d'8 c a d, -> ~ (
 
-  \repeat volta 4 {
-    | d4 d'8 -. ) r c, -> c' -. r b, -> ~
-    | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
-    | g4 g'8 -. ) r f, -> f' -. r e, -> ~
+  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
+  | g4 g'8 -. ) r f, -> f' -. r e, -> ~
+  | e4 e'8 -. e, ( g  a ) c -. d -> ~
 
-    \alternative {
-      \volta 1,2,3 {
-        | e4 e'8 -. e, ( g  a ) c -. d -> \laissezVibrer
-      }
+  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
+  | g4 g'8 -. ) r f, -> f' -. r e -. ->
+  | r8 e,8 f ( g ) a b ( c ) d -> ~
 
-      \volta 4 {
-        | e,4 \repeatTie e'8 a, a' g e f, -> ~
-      }
-    }
-  }
+  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
+  | g4 g'8 -. ) r f, -> f' -. r e, -> ~
+  | e4 e'8 -. e, ( g  a ) c -. d -> ~
+
+  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
+  | g4 g'8 -. ) r f, -> f' -. r e -. ->
+  | r4 r8 a, a' g e f, -> ~
 
   | f4 f'8 f, a c d f ~
   | f f d r c ( d ) f g, ~
@@ -77,12 +81,15 @@ music = \relative d {
   | d2 r8 a c d ~
   | d4 a'8 d, d'8 c a d, -> ~ (
 
-  \repeat volta 2 {
-    | d4 d'8 -. ) r c, -> c' -. r b, -> ~
-    | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
-    | g4 g'8 -. ) r f, -> f' -. r e, -> ~
-    | e4 e'8 -. e, ( g  a ) c -. d -> ~
-  }
+  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
+  | g4 g'8 -. ) r f, -> f' -. r e, -> ~
+  | e4 e'8 -. e, ( g  a ) c -. d -> ~
+
+  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
+  | g4 g'8 -. ) r f, -> f' -. r e -. ->
+  | r8 e,8 f ( g ) a b ( c ) d -> ~
 
   | d8 d'16 d d8 -. c16 c c8 -. b -. b -. a -. ->
   | r8 f16 f f8 -. e16 e e8 -. d -. c -. g -. ->
