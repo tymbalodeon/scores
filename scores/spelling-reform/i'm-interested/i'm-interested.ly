@@ -9,35 +9,70 @@
   composer = "Dan Wisniewski"
 }
 
-music = \relative c' {
+music = \relative c'' {
     \key af \major
-    \time 4/4
+    \time 2/4
 
-    | R1 * 4
-    | R1 * 7
-    | r2 r4 f \glissando
+    | R2 * 8
 
-    | af1
-    | R1 * 7
+    | R2 * 15
+    | r4 r8 f \glissando
 
-    | f'1
-    | R1 * 7
-    | r2 r4. f,8 \glissando
+    | af2
+    | R2 * 15
+
+    | f'2
+    | R2 * 14
+    | r4 r8 f, \glissando
 
     | af2 c
-    | b bf
+    | cf bf
     | af bf
-    | b bf
+    | cf bf
 
     | af ef'
-    | b bf
+    | cf bf
     | af bf
-    | b df
+    | cf  df
 
-    \repeat unfold 4 {
-      | af1
-      | bf2 c4 bf
-    }
+    | af2 ~
+    | af
+    | bf2
+    | c4 bf
+
+    | af2 ~
+    | af4 r8 af \glissando
+    | bf2
+    | c4 bf
+
+    | af2 ~
+    | af4 r8 af \glissando
+    | bf2
+    | c4 bf
+
+    | af2 ~
+    | af4 r8 af \glissando
+    | bf2 ~
+    | bf4 r8 bf \glissando
+
+    | c2 ~
+    | c2
+    | af2
+    | af2
+
+    | af2
+    | af2
+    | af2
+    | af2
+
+    | r8 bf16 \glissando c ~ c ef c8
+    | af2
+    | r8 bf16 \glissando c ~ c ef c8
+    | af2
+
+    | r8 bf16 \glissando c ~ c ef c8
+    | af2
+    | R2 * 2
   }
 
 \score {
