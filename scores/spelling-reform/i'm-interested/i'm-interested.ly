@@ -73,6 +73,31 @@ music = \relative c'' {
     | r8 bf16 \glissando c ~ c ef c8
     | af2
     | R2 * 2
+
+    \repeat volta 2 {
+      | af2
+      | r4 f
+      | c'2
+      | r4 bf
+
+      | af2
+      | f2
+      | af2
+      | f2
+    }
+
+    | ef2 ~
+    | ef2
+    | c2 ~
+    | c4 bf
+
+    | af2 ~
+    | af2 ~
+    | af2 ~
+    | af2
+
+    | R2 * 5
+    |
   }
 
 \score {
