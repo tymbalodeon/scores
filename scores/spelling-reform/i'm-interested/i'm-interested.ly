@@ -9,11 +9,36 @@
   composer = "Dan Wisniewski"
 }
 
-music = \relative c'' {
-    \key c \major
+music = \relative c' {
+    \key af \major
     \time 4/4
-    | c1
-}
+
+    | R1 * 4
+    | R1 * 7
+    | r2 r4 f \glissando
+
+    | af1
+    | R1 * 7
+
+    | f'1
+    | R1 * 7
+    | r2 r4. f,8 \glissando
+
+    | af2 c
+    | b bf
+    | af bf
+    | b bf
+
+    | af ef'
+    | b bf
+    | af bf
+    | b df
+
+    \repeat unfold 4 {
+      | af1
+      | bf2 c4 bf
+    }
+  }
 
 \score {
     \new Staff \with {
