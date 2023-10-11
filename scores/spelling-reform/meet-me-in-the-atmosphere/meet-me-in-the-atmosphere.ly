@@ -30,6 +30,7 @@ changes = \chords {
   | c2
   | c2
   | s2
+  | s2
 
   \repeat unfold 3 {
     \repeat volta 4 {
@@ -75,6 +76,7 @@ music = \new Voice \with {
       \volta 4 {
         | s2
         | s2
+        | s2
       }
     }
   }
@@ -110,7 +112,7 @@ music = \new Voice \with {
   \layout {
     \context {
       \Score
-      \consists #(set-bars-per-line '(6 5 6))
+      \consists #(set-bars-per-line '(6))
     }
   }
 
