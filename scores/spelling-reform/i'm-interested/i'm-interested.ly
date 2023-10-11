@@ -16,16 +16,16 @@ music = \relative c'' {
     | R2 * 8
 
     | R2 * 15
-    | r4 r8 f \glissando
+    | r4 r8 f \glissando (
 
-    | af2
+    | af2 )
     | R2 * 15
 
     | f'2
     | R2 * 14
-    | r4 r8 f, \glissando
+    | r4 r8 f, \glissando (
 
-    | af2 c
+    | af2 ) c
     | cf bf
     | af bf
     | cf bf
@@ -41,22 +41,22 @@ music = \relative c'' {
     | c4 bf
 
     | af2 ~
-    | af4 r8 af \glissando
-    | bf2
+    | af4 r8 af \glissando (
+    | bf2 )
     | c4 bf
 
     | af2 ~
-    | af4 r8 af \glissando
-    | bf2
+    | af4 r8 af \glissando (
+    | bf2 )
     | c4 bf
 
     | af2 ~
-    | af4 r8 af \glissando
-    | bf2 ~
-    | bf4 r8 bf \glissando
+    | af4 r8 af \glissando (
+    | bf2  ~
+    | bf4 ) r8 bf \glissando (
 
     | c2 ~
-    | c2
+    | c2 )
     | af2
     | af2
 
@@ -65,20 +65,19 @@ music = \relative c'' {
     | af2
     | af2
 
-    | r8 bf16 \glissando c ~ c ef c8
+    | r8 bf16 \glissando ( c ) c ef c8
     | af2
-    | r8 bf16 \glissando c ~ c ef c8
+    | r8 bf16 \glissando ( c ) c ef c8
     | af2
 
-    | r8 bf16 \glissando c ~ c ef c8
+    | r8 bf16 \glissando ( c ) c ef c8
     | af2
     | R2 * 2
 
     \repeat volta 2 {
       | af2
       | r4 f
-      | c'2
-      | r4 bf
+      | c'2 | r4 bf
 
       | af2
       | f2
@@ -97,7 +96,48 @@ music = \relative c'' {
     | af2
 
     | R2 * 5
-    |
+    | bf16 ( c ) af'8 ef16 ( f ) c'8
+    | R2 * 4
+
+    | c,2 ~
+    | c2
+    | ef2
+    | f4 ef
+
+    | c2 ~
+    | c2
+    | ef2
+    | f4 ef
+
+    | c2 ~
+    | c2
+    | g'2 ~
+    | g2
+
+    | g2 ~
+    | g2
+    | af2
+    | af2
+
+    | af2
+    | af2
+    | af2
+    | af2
+
+    \repeat volta 2 {
+      | r8 bf,16 \glissando ( c ) c ef c8
+      | af2
+      | r8 bf16 \glissando ( c ) c ef c8
+      | af2
+
+      | r8 bf16 \glissando ( c ) c ef c8
+      | af2
+      | R2 * 2
+    }
+
+    | R2 * 6
+
+    \bar "|."
   }
 
 \score {
