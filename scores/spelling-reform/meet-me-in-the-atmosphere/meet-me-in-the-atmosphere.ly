@@ -25,11 +25,9 @@ changes = \chords {
     }
   }
 
-  | f2
-  | bf2
-  | c2
-  | c2
-  | s2
+  \verseChords
+
+  | \parenthesize c2
   | s2
 
   \repeat unfold 3 {
@@ -66,20 +64,12 @@ music = \new Voice \with {
 
   \sectionLabel "Instrumental"
   \repeat volta 4 {
-    | s2 * 2
+    \fourTimes
 
-    \alternative {
-      \volta 1,2,3 {
-        | s2
-      }
-
-      \volta 4 {
-        | s2
-        | s2
-        | s2
-      }
-    }
+    | s2 * 3
   }
+
+  | s2 * 2
 
   \sectionLabel "Verse"
   \repeat volta 4 {
@@ -112,7 +102,7 @@ music = \new Voice \with {
   \layout {
     \context {
       \Score
-      \consists #(set-bars-per-line '(6))
+      \consists #(set-bars-per-line '(6 5 6))
     }
   }
 
