@@ -92,7 +92,6 @@ music = \new Voice \with {
     \context {
       \Score
       \consists #(set-bars-per-line '(6 9))
-
     }
   }
 
