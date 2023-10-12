@@ -10,7 +10,7 @@
 }
 
 music = \relative c'' {
-  \key c \major
+  \key e \major
   \time 4/4
 
   | R1 * 4
