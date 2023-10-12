@@ -61,7 +61,7 @@ music = \relative c'' {
   | a2 b (
 
   | g1 ) ~
-  | g1 ~
+  | g1
   | R1
   | r8 b ( a ) ( g ) e g ( a ) b
 
