@@ -81,7 +81,7 @@ music = \relative c'' {
   \repeat volta 4 {
     | << { R1 } { s4 ^\markup \italic "3x" } >>
     | r2 r4 gs
-    | b1 ~
+    | b1
     | R1
   }
 
