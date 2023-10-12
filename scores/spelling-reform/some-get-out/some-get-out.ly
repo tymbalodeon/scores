@@ -47,10 +47,41 @@ music = \relative c'' {
   | e16 ds b e ds b e ds b e ds b e ds b e
   | b16 gs e' b gs e' b gs e' b gs e' b gs e' b
 
-  | R1 * 8
-  | R1 * 7
-  | R1 * 8
-  | R1 * 8
+  \repeat volta 2 {
+    | r8 b16 ( cs ) gs'4 ~ gs2
+    | r8 a,16 ( b ) fs'4 ~ fs2
+    | r8 gs,16 ( a ) e'4 ~ e2
+
+    \alternative {
+      \volta 1 {
+        | r8 e,16 ( fs ) gs fs8. ~ fs2
+      }
+
+      \volta 2 {
+        | R1
+      }
+    }
+  }
+
+  | r16 b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds )
+  | b16 fs' b, b fs' b, b fs' b, b fs' b, b fs' b, b
+  | e16 ds b e ds b e ds b e ds b e ds b e
+
+  | r16 b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds )
+  | b16 fs' b, b fs' b, b fs' b, b fs' b, b fs' b, b
+  | e16 ds b e ds b e ds b e ds b e ds b fs ~
+  | fs8. b16 ~ b8. cs16 ~ cs8. fs16 ~ fs4
+
+  \repeat volta 4 {
+    | << { R1 } { s4 ^\markup \italic "3x" } >>
+    | r2 r4 gs
+    | b1 ~
+    | R1
+  }
+
+  | R1 * 4
+
+  | R1 * 16
 
   \bar "|."
 }
