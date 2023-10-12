@@ -37,15 +37,13 @@ music = \relative c'' {
 
   | R1 * 4
 
-  | r16 b' cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds )
-  | b16 fs' b, b fs' b, b fs' b, b fs' b, b fs' b, b
-  | e16 ds b e ds b e ds b e ds b e ds b e
-  | b16 gs e' b gs e' b gs e' b gs e' b gs e' b
-
-  | gs16 b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds )
-  | b16 fs' b, b fs' b, b fs' b, b fs' b, b fs' b, b
-  | e16 ds b e ds b e ds b e ds b e ds b e
-  | b16 gs e' b gs e' b gs e' b gs e' b gs e' b
+  \repeat volta 2 {
+    | << \parenthesize r16 -\markup \italic "1." \\ \parenthesize gs'16 -\markup \italic "2." >>
+      b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds )
+    | b16 fs' b, b fs' b, b fs' b, b fs' b, b fs' b, b
+    | e16 ds b e ds b e ds b e ds b e ds b e
+    | b16 gs e' b gs e' b gs e' b gs e' b gs e' b
+  }
 
   \repeat volta 2 {
     | r8 b16 ( cs ) gs'4 ~ gs2
@@ -63,13 +61,21 @@ music = \relative c'' {
     }
   }
 
-  | r16 b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds )
-  | b16 fs' b, b fs' b, b fs' b, b fs' b, b fs' b, b
-  | e16 ds b e ds b e ds b e ds b e ds b e
+  \repeat volta 2 {
+    | r16 b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds )
+    | b16 fs' b, b fs' b, b fs' b, b fs' b, b fs' b, b
 
-  | r16 b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds ) b cs ( ds )
-  | b16 fs' b, b fs' b, b fs' b, b fs' b, b fs' b, b
-  | e16 ds b e ds b e ds b e ds b e ds b fs ~
+    \alternative {
+      \volta 1 {
+        | e16 ds b e ds b e ds b e ds b e ds b r
+      }
+
+      \volta 2 {
+        | e16 ds b e ds b e ds b e ds b e ds b fs ~
+      }
+    }
+  }
+
   | fs8. b16 ~ b8. cs16 ~ cs8. fs16 ~ fs4
 
   \repeat volta 4 {
