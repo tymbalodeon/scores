@@ -77,8 +77,8 @@ music = \relative c'' {
     }
   }
 
-  | R1 * 9
-  | R1 * 4
+  | R1 * 16
+  | R1
 
   \bar "|."
 }
