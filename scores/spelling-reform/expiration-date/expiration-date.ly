@@ -64,6 +64,9 @@ music = \relative c'' {
   }
 
   | R1 * 4
+
+  | g8 g g e ~ e e e e
+  | d8 d d a ~ a a a a
 }
 
 \score {
