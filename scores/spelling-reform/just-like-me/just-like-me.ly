@@ -66,6 +66,9 @@ music = \relative c'' {
       }
     }
 
+    | R1 * 9
+    | R1 * 4
+
     \repeat volta 4 {
       | d8 ^\markup \italic "4x" d d d d d d d
 
@@ -73,6 +76,9 @@ music = \relative c'' {
         | d8 d d d d d d d
       }
     }
+
+    | R1 * 9
+    | R1 * 4
   }
 
 \score {
