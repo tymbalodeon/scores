@@ -48,13 +48,13 @@ music = \relative c'' {
   | R1 * 8
 
   \repeat volta 5 {
-    | <a a'>8 <a a'> <a a'> <a a'> <a a'> <a a'> <a a'> <a a'>
-    | <d d'>8 <d d'> r <cs cs'> ~ <cs cs'> <cs cs'> <cs cs'> <cs cs'>
-    | <a a'>8 <a a'> <a a'> <a a'> <a a'>8 <a a'> <a a'> <a a'>
+    | <a a'>8 <a a'> <a a'> <a a'> <a a'> <a a'> <a a'> \xNotesOn <a a'>16 <a a'> \xNotesOff
+    | <d d'>8 <d d'> r <cs cs'> ~ <cs cs'> <cs cs'> <cs cs'> \xNotesOn <cs cs'>16 <cs cs'> \xNotesOff
+    | <a a'>8 <a a'> <a a'> <a a'> <a a'> <a a'> <a a'> \xNotesOn <a a'>16 <a a'> \xNotesOff
 
     \alternative {
       \volta 1,2,3,4 {
-        | <fs fs'>8 <fs fs'> r <e e'> ~ \repeat unfold 4 { <e e'> }
+        | <fs fs'>8 <fs fs'> r <e e'> ~ <e e'> <e e'> <e e'> \xNotesOn <e e'>16 <e e'> \xNotesOff
       }
 
       \volta 5 {
