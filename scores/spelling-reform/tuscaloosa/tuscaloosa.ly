@@ -9,6 +9,8 @@
   composer = "Dan Wisniewski"
 }
 
+fourTimes = ^\markup \italic "4x"
+
 music = \relative c'' {
     \key a \major
     \time 4/4
@@ -21,14 +23,14 @@ music = \relative c'' {
     | R1 * 16
 
     \repeat volta 4 {
-      | d'8 ( cs ) a d ( cs ) a d ( cs )
+      | d'8 \fourTimes ( cs ) a d ( cs ) a d ( cs )
       | a8 d ( cs ) a d ( cs ) a r
       | cs,4 a'8 cs ~ cs a4.
       | e8 a e b' ~ b a4.
     }
 
     \repeat volta 4 {
-      | <e b'>8 ( cs' ) e <e, b'> ( cs' ) e <e, b'>  ( cs' )
+      | <e b'>8 \fourTimes ( cs' ) e <e, b'> ( cs' ) e <e, b'>  ( cs' )
       | e8 <e, b'> ( cs' ) e fs8. e16 ~ e8 r
       | cs,4 a'8 cs ~ cs a4.
       | e8 a e b' ~ b a4.
