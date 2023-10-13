@@ -89,18 +89,18 @@ music = \relative c'' {
 
   \repeat volta 2 {
     | <e,,, b' e gs b e>2 ~ <e b' e gs b e>4.. <cs' fs cs'>16 ~
-    | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b' e gs ds'>16 ~
-    | <e b' e gs ds'>4.. <e b' e gs cs>16 ~ <e b' e gs cs>4.. <e b' e gs b fs'>16 ~
+    | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b' e ds'>16 ~
+    | <e b' e ds'>4.. <e b' e gs cs>16 ~ <e b' e gs cs>4.. <e b' e gs b fs'>16 ~
     | <e b' e gs b fs'>1
   }
 
   \repeat volta 2 {
     | <e b' e gs b e>2 ~ <e b' e gs b e>4.. <cs' fs cs'>16 ~
-    | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b' e gs ds'>16 ~
+    | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b' e ds'>16 ~
 
     \alternative {
       \volta 1 {
-        | <e b' e gs ds'>4. <e b' e gs>16 <e b' e gs cs>16 ~ <e b' e gs cs>4. <e b' e gs>16 <e b' e gs b fs'>16 ~
+        | <e b' e ds'>4. <e b' e gs>16 <e b' e gs cs>16 ~ <e b' e gs cs>4. <e b' e gs>16 <e b' e gs b fs'>16 ~
         | <e b' e gs b fs'>1
       }
 
