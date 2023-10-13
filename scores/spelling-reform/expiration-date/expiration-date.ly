@@ -65,16 +65,46 @@ music = \relative c'' {
 
   | R1 * 4
 
-  | g8 g g e ~ e e e e
-  | d8 d d a ~ a a a a
+  \new Voice \with {
+    \consists Pitch_squash_engraver
+  } {
+    \improvisationOn
+
+    \repeat volta 6 {
+      | g8 g g e ~ e e e \xNote e
+
+      \alternative {
+        \volta 1,2,3,4,5 {
+          | d8 d d a ~ a a a \xNote a
+        }
+
+        \volta 6 {
+
+          | d8 d d a ~ a2
+        }
+      }
+    }
+  }
+
+  \bar "|."
 }
 
 \score {
-  \new Staff \with {
-    instrumentName = "Guitar"
-    \numericTimeSignature
-  } {
-    \compressMMRests
-    \music
-  }
+  <<
+    \new ChordNames {
+      \chords {
+        | s1 * 41
+        | g4. e8:m s2
+        | d4. a8 s2
+      }
+    }
+
+    \new Staff \with {
+      instrumentName = "Guitar"
+      \numericTimeSignature
+    } {
+      \compressMMRests
+      \music
+    }
+  >>
 }
