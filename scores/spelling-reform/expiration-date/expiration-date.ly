@@ -48,11 +48,22 @@ music = \relative c'' {
   | R1 * 8
 
   \repeat volta 5 {
-    | \repeat unfold 2 { <a a'>8 <a a'> <a a'> <a a'> }
-    | <d d'>8 <d d'> <d d'> <cs cs'> \repeat unfold 4 { <cs cs'> }
-    | \repeat unfold 2 { <a a'>8 <a a'> <a a'> <a a'> }
-    | <fs fs'>8 <fs fs'> <fs fs'> <e e'> \repeat unfold 4 { <e e'> }
+    | <a a'>8 <a a'> <a a'> <a a'> <a a'> <a a'> <a a'> <a a'>
+    | <d d'>8 <d d'> r <cs cs'> ~ <cs cs'> <cs cs'> <cs cs'> <cs cs'>
+    | <a a'>8 <a a'> <a a'> <a a'> <a a'>8 <a a'> <a a'> <a a'>
+
+    \alternative {
+      \volta 1,2,3,4 {
+        | <fs fs'>8 <fs fs'> r <e e'> ~ \repeat unfold 4 { <e e'> }
+      }
+
+      \volta 5 {
+        | <fs fs'>8 <fs fs'> r <e e'> ~ <e e'>2
+      }
+    }
   }
+
+  | R1 * 4
 }
 
 \score {
