@@ -94,7 +94,7 @@ music = \relative c'' {
   }
 
   \repeat volta 4 {
-    | \parenthesize \repeatTie fs'2 as4 fs ~
+    | fs'2 \parenthesize \repeatTie as4 fs ~
     | fs2 cs'4 fs, ~
 
     \alternative {
