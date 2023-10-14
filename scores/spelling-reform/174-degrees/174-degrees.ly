@@ -19,6 +19,28 @@ music = \relative c'' {
     | a,8 b'4 gs8 gs4 fs8 ( e )
     | fs,8 e'4 a,8 gs'2
   }
+
+  | R1 * 9
+
+  | a,8 gs'4 cs,8 fs4 cs8 ( e )
+  | b8 b'4 e,8 gs4 e
+  | a,8 b'4 gs8 gs4 fs8 ( e )
+  | fs,8 e'4 a,8 gs'2
+
+  | R1 * 8
+
+  | e1 ~
+  | e1
+  | gs1 ~
+  | gs1
+
+  | b2 fs
+  | cs e ~
+  | e1
+
+  | R1
+
+  | R1 * 8
 }
 
 \score {
