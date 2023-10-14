@@ -131,7 +131,7 @@ music = \relative g'' {
   | <cs cs>4. <cs cs>8 ~ <cs cs>4 <cs cs> ~
   | <cs cs>8 <cs cs>4. <cs cs>4 r
 
-  | <g, d' g>1
+  | <g, d' g>1 \fermata
 
   \bar "|."
 }
