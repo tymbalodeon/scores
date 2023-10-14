@@ -60,6 +60,21 @@ music = \relative c' {
     | bf8 bf bf bf bf bf bf bf
 
     | bf8 r r4 r2
+
+    | d8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
+    | d8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
+    | d8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
+    | d8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
+
+    | bf'8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
+
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
 }
 
 \score {
