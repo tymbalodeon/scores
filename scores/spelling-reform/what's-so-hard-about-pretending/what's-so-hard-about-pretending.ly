@@ -74,6 +74,17 @@ music = \relative c'' {
     | as1 )
     | R1 * 2
     | as'1
+
+    | <b,, fs' b ds>4. <b fs' b ds>8 ~ <b fs' b ds>4 <b fs' b ds>
+    | <b fs' b ds>4. <b fs' b ds>8 ~ <b fs' b ds>4 <b fs' b ds>
+    | <gs cs'>4. <gs cs'>8 ~ <gs cs'>4 <gs cs'>
+    | <gs as' cs>4. <gs as' cs>8 ~ <gs as' cs>4 <gs as' cs>
+
+    | <as es' as cs es as>4. <as es' as cs es as>8 ~ <as es' as cs es as>4 <as es' as cs es as>
+    | <b fs' b ds>4. <b fs' b ds>8 ~ <b fs' b ds>4 <b fs' b ds>
+    | <fs cs' fs as cs fs>4. <fs cs' fs as cs fs>8 ~ <fs cs' fs as cs fs>4 <fs cs' fs as cs fs>
+    | <b fs' b ds>4. <b fs' b ds>8 ~ <b fs' b ds>4 <b fs' b ds>
+    | <b fs' b ds>4. <b fs' b ds>8 ~ <b fs' b ds>4 <b fs' b ds>
 }
 
 \score {
