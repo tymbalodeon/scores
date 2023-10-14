@@ -17,22 +17,29 @@ music = \relative c'' {
   | R1 * 16
   | R1 * 16
 
-  \repeat volta 2 {
-    | a8 d a e' ~ e d4 d8
-    | b8 d b fs' ~ fs d4 d8
+  \repeat volta 4 {
+    | fs,8 d' a e' ~ e d a d
+    | g,8 d' a fs' ~ fs d a d
+    | fs,8 d' a e' ~ e d a d
+    | g,8 d' a fs' ~ fs d a d
+
+    | fs,8 d' a e' ~ e d a d
+    | g,8 d' a fs' ~ fs d a d
 
     \alternative {
-      \volta 1 {
-        | a8 d a e' ~ e d4 d8
-        | b8 d b fs' ~ fs d4 d8
+      \volta 1,2,3 {
+        | fs,8 d' a fs' ~ fs d a d
+        | g,8 d' b g' ~ g fs d4
       }
 
-      \volta 2 {
-        | a8 d a fs' ~ fs d4 d8
-        | a8 d a g' ~ g fs d4
+      \volta 4 {
+        | \tuplet 3/2 { d4 cs b } \tuplet 3/2 { a4 g fs }
       }
     }
   }
+
+  | d1 \fermata
+  \bar "|."
 }
 
 \score {
