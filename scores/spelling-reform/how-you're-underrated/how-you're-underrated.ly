@@ -29,12 +29,12 @@ music = \relative c' {
     | ff1
     | ef1
 
-    | r8 d' ( c ) g ( bf ) r r4
+    | r8 d'' ( c ) g ( bf ) r r4
     | r8 d ( c ) g ( bf ) f' r4
     | r8 d ( c ) g ( bf ) r r4
     | r8 c ( d ) f bf r r4
 
-    | bf,8 bf bf bf bf bf bf bf
+    | bf,,8 bf bf bf bf bf bf bf
     | bf8 bf bf bf bf bf c d
     | d8 d d d d d d d
     | d8 d d d c c c c
@@ -42,7 +42,7 @@ music = \relative c' {
     | bf8 bf bf bf bf bf bf bf
     | bf8 bf bf bf bf bf c d
     | d8 d d d d d d d
-    | d8 d d d d d d d16 ef
+    | d8 d d d d d d d16 ( ef )
 
     | f8 f f f f f f f
     | f8 f f f f f f f
@@ -61,7 +61,7 @@ music = \relative c' {
 
     | bf8 r r4 r2
 
-    | d8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
+    | d'8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
     | d8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
     | d8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
     | d8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
@@ -75,6 +75,8 @@ music = \relative c' {
     | bf8 bf bf bf bf bf bf bf
     | bf8 bf bf bf bf bf bf bf
     | bf8 bf bf bf bf bf bf bf
+
+    | R1 * 4
 }
 
 \score {
