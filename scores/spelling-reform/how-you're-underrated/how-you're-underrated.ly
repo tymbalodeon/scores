@@ -33,6 +33,33 @@ music = \relative c' {
     | r8 d ( c ) g ( bf ) f' r4
     | r8 d ( c ) g ( bf ) r r4
     | r8 c ( d ) f bf r r4
+
+    | bf,8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf c d
+    | d8 d d d d d d d
+    | d8 d d d c c c c
+
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf c d
+    | d8 d d d d d d d
+    | d8 d d d d d d d16 ef
+
+    | f8 f f f f f f f
+    | f8 f f f f f f f
+    | f8 f f f f f f f
+    | f8 f f f f ef ef d
+
+    | d8 c4 c4 c8 c c
+    | c8 c c c c c c c
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
+
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
+
+    | bf8 r r4 r2
 }
 
 \score {
