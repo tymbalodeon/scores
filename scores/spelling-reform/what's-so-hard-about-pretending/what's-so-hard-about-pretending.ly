@@ -10,9 +10,14 @@
 }
 
 music = \relative c'' {
-    \key c \major
-    \time 4/4
-    | c1
+    \key fs \major
+    \time 2/2
+
+    | R1 * 4
+    | R1 * 8
+    | R1 * 17
+
+    | R1
 }
 
 \score {
