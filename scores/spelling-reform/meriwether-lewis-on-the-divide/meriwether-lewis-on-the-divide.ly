@@ -61,7 +61,15 @@ music = \relative c'' {
     | gs1 ~
     | gs1
 
-    |
+    \repeat unfold 4 {
+      | <cs, fs cs' fs>4 r8 <cs as' fs'> <cs as' fs'>4 r
+    }
+
+    | <cs gs' b fs'>4 r8 <cs gs' b fs'> <cs gs' b fs'>4 r
+    | <cs gs' b fs'>4 r8 <cs gs' b fs'> \acciaccatura gs'16 as8 as gs fs
+
+    | ds4 r8 ds <ds b' fs'>4 r
+    | <as b' fs'>4 r8 as b4 r
 }
 
 \score {
