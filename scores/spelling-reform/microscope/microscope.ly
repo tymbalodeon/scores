@@ -14,7 +14,7 @@ music = \relative g'' {
   \time 4/4
 
   \partial 2
-  | r4 r8 g
+  r4 r8 g
 
   | e2 ~ e4 r8 g
   | d2 ~ d4 r8 g
