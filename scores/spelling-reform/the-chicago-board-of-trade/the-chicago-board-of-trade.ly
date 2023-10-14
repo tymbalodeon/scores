@@ -21,7 +21,20 @@ music = \relative c'' {
     | cs8 gs' as gs cs, gs' as gs
     | <d fs as>1
 
+    | R1 * 8
+    | R1 * 4
+    | R1 * 8
 
+    | cs8 gs' as gs cs, gs' as gs
+    | ds8 fs as fs ds fs as fs
+    | cs8 gs' as gs cs, gs' as gs
+    | <d fs as>1
+
+    | R1 * 8
+    | R1 * 8
+    | R1 * 8
+
+    \bar "|."
 }
 
 \score {
