@@ -77,6 +77,18 @@ music = \relative c' {
     | bf8 bf bf bf bf bf bf bf
 
     | R1 * 4
+
+    | R1 * 16
+
+    | f,,1
+    | ff1
+    | ef1 ~
+    | ef1
+
+    | bf'''8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf bf bf bf
+    | bf8 bf bf bf bf4 r
 }
 
 \score {
