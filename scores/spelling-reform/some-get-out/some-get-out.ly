@@ -13,14 +13,14 @@ music = \relative c'' {
   \key e \major
   \time 4/4
 
-  | R1 * 4
-  | R1 * 4
-  | R1 * 4
+  | R1 * 4 ^\markup \italic "(drums)"
+  | R1 * 4 ^\markup \italic "(guitar)"
+  | R1 * 4 ^\markup \italic "(bass)"
 
-  | R1 * 8
-  | R1 * 7
+  | R1 * 8 ^\markup \italic "(verse)"
+  | R1 * 7 ^\markup \italic "(riff)"
 
-  | r2 r8 b ds ( b )
+  | r2 ^\markup \italic "(chorus)" r8 b ds ( b )
   | r b8 r4 r2
 
   \repeat unfold 2 {
@@ -88,30 +88,20 @@ music = \relative c'' {
   | R1 * 4
 
   \repeat volta 2 {
-    | <e,,, b' e gs b e>2 ^\markup {
-        \fret-diagram-terse "o;2;2;1;o;o;"
-      } ~ <e b' e gs b e>4.. <cs' fs cs'>16 ^\markup {
-        \fret-diagram-terse "x;4-(;4-);6;x;x;"
-      } ~
-    | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b' e ds'>16 ^\markup {
-        \fret-diagram-terse "o;2;2;x;4;x;"
-      } ~
-    | <e b' e ds'>4.. <e b' e gs cs>16 ^\markup {
-        \fret-diagram-terse "o;2;2;x; 2;x;"
-      } ~ <e b' e gs cs>4.. <e b' e gs b fs'>16 ^\markup {
-        \fret-diagram-terse "o;2;2;1;o;2;"
-      } ~
-    | <e b' e gs b fs'>1
+    | <e,,, b' e gs b e>2 ~ <e b' e gs b e>4.. <cs' fs cs'>16 ~
+    | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b'' ds>16 ~
+    | <e b'' ds>4.. <e b'' cs>16 ~ <e b'' cs>4.. <e b'' fs'>16 ~
+    | <e b'' fs'>1
   }
 
   \repeat volta 2 {
     | <e b' e gs b e>2 ~ <e b' e gs b e>4.. <cs' fs cs'>16 ~
-    | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b' e ds'>16 ~
+    | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b'' ds>16 ~
 
     \alternative {
       \volta 1 {
-        | <e b' e ds'>4. <e b' e gs>16 <e b' e gs cs>16 ~ <e b' e gs cs>4. <e b' e gs>16 <e b' e gs b fs'>16 ~
-        | <e b' e gs b fs'>1
+        | <e b'' ds>4. \xNote <e b'' ds>16 <e b'' cs>16 ~ <e b'' cs>4. \xNote <e b'' cs>16 <e b'' fs'>16 ~
+        | <e b'' fs'>1
       }
 
       \volta 2 {
