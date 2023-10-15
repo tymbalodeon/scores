@@ -96,17 +96,18 @@ music = \relative c'' {
 
   \repeat volta 2 {
     | <e b' e gs b e>2 ~ <e b' e gs b e>4.. <cs' fs cs'>16 ~
-    | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b'' ds>16 ~
 
     \alternative {
       \volta 1 {
+        | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b'' ds>16 ~
         | <e b'' ds>4. \xNote <e b'' ds>16 <e b'' cs>16 ~ <e b'' cs>4. \xNote <e b'' cs>16 <e b'' fs'>16 ~
         | <e b'' fs'>1
       }
 
       \volta 2 {
-        | <b' e gs ds'>1 ~
-        | <b e gs ds'>1
+        | <cs' fs cs'>2 \repeatTie ~ <cs fs cs'>4.. <b b' ds>16 ~
+        | <b b' ds>1 ~
+        | <b b' ds>1
       }
     }
   }
