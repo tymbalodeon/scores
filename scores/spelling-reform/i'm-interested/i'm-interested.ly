@@ -17,15 +17,15 @@ music = \relative c'' {
     | R2 * 15 ^\markup \italic "(verse)"
     | r4 r8 f \glissando (
 
-    | af2 ) ~
-    | af2
-    | R2 * 14
-
-    | f'2 ~
-    | f2
-    | R2 * 6
     \time 4/4
-    | R1 * 3
+
+    | af1 ) ~ ^\markup \italic "(band)"
+    | R1 * 7
+
+    | f'1
+    | R2 * 6
+
+    | R1 * 3 ^\markup \italic "\"I'm interested...\""
     | r2 r4 r8 f, \glissando (
 
     \time 2/4
