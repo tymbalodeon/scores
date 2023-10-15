@@ -15,11 +15,11 @@ music = \relative c'' {
 
     | R2 * 8 ^\markup \italic "(guitar)"
     | R2 * 15 ^\markup \italic "(verse)"
-    | r4 r8 f \glissando (
+    | r 4 r8 f \glissando (
 
     \time 4/4
 
-    | af1 ) ~ ^\markup \italic "(band)"
+    | af1 ) ^\markup \italic "(band)"
     | R1 * 7
 
     | f'1
@@ -29,6 +29,7 @@ music = \relative c'' {
     | r2 r4 r8 f, \glissando (
 
     \time 2/4
+
     | af2 ) c
     | cf bf
     | af bf
@@ -39,107 +40,72 @@ music = \relative c'' {
     | af bf
     | cf  df
 
-    | af2 ~
-    | af
-    | bf2
-    | c4 bf
+    \time 4/4
 
-    | af2 ~
-    | af4 r8 af \glissando (
-    | bf2 )
-    | c4 bf
+    | af1
+    | bf2 c4 bf
+    | af2 ~ af4 r8 af \glissando (
+    | bf2 ) c4 bf
 
-    | af2 ~
-    | af4 r8 af \glissando (
-    | bf2 )
-    | c4 bf
+    | af2 ~ af4 r8 af \glissando (
+    | bf2 ) c4 bf
+    | af2 ~ af4 r8 af \glissando (
+    | bf2  ~ bf4 ) r8 bf \glissando (
 
-    | af2 ~
-    | af4 r8 af \glissando (
-    | bf2  ~
-    | bf4 ) r8 bf \glissando (
+    | c1 )
+    | af2 af
+    | af2 af
+    | af2 af
 
-    | c2 ~
-    | c2 )
-    | af2
-    | af2
+    | r8 bf16 \glissando ( c ) c ef c8 af2
+    | r8 bf16 \glissando ( c ) c ef c8 af2
 
-    | af2
-    | af2
-    | af2
-    | af2
-
-    | r8 bf16 \glissando ( c ) c ef c8
-    | af2
-    | r8 bf16 \glissando ( c ) c ef c8
-    | af2
-
-    | r8 bf16 \glissando ( c ) c ef c8
-    | af2
-    | R2 * 2
+    | r8 bf16 \glissando ( c ) c ef c8 af2
+    | R1
 
     \repeat volta 2 {
-      | af2
-      | r4 f
-      | c'2 | r4 bf
+      | af2 r4 f
+      | c'2 r4 bf
 
-      | af2
-      | f2
-      | af2
-      | f2
+      | af2 f2
+      | af2 f2
     }
 
-    | ef2 ~
-    | ef2
-    | c2 ~
-    | c4 bf
+    | ef1
+    | c2 ~ c4 bf
 
-    | af2 ~
-    | af2 ~
-    | af2 ~
-    | af2
+    | af1 ~
+    | af1
+
+    | R1 * 2
+    | r2 bf16 ( c ) af'8 ef16 ( f ) c'8
+    | R1 * 2
+
+    | c,1
+    | ef2 f4 ef
+    | c1
+    | ef2 f4 ef
+
+    | c1
+    | g'1
+    | g1
+    | af2 af2
+
+    | af2 af2
+    | af2 af2
+
+    \repeat volta 2 {
+      | r8 bf,16 \glissando ( c ) c ef c8 af2
+      | r8 bf16 \glissando ( c ) c ef c8 af2
+
+      | r8 bf16 \glissando ( c ) c ef c8 af2
+      | R1
+    }
+
+    \time 2/4
 
     | R2 * 5
-    | bf16 ( c ) af'8 ef16 ( f ) c'8
-    | R2 * 4
-
-    | c,2 ~
-    | c2
-    | ef2
-    | f4 ef
-
-    | c2 ~
-    | c2
-    | ef2
-    | f4 ef
-
-    | c2 ~
-    | c2
-    | g'2 ~
-    | g2
-
-    | g2 ~
-    | g2
-    | af2
-    | af2
-
-    | af2
-    | af2
-    | af2
-    | af2
-
-    \repeat volta 2 {
-      | r8 bf,16 \glissando ( c ) c ef c8
-      | af2
-      | r8 bf16 \glissando ( c ) c ef c8
-      | af2
-
-      | r8 bf16 \glissando ( c ) c ef c8
-      | af2
-      | R2 * 2
-    }
-
-    | R2 * 6
+    | R2 \fermata
 
     \bar "|."
   }
