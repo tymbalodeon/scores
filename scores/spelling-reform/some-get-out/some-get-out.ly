@@ -105,7 +105,7 @@ music = \relative c'' {
       }
 
       \volta 2 {
-        | <cs' fs cs'>2 \repeatTie ~ <cs fs cs'>4.. <b b' ds>16 ~
+        | <cs' fs cs'>1 \repeatTie
         | <b b' ds>1 ~
         | <b b' ds>1
       }
