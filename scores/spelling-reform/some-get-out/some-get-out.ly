@@ -52,7 +52,7 @@ music = \relative c'' {
 
     \alternative {
       \volta 1 {
-        | r8 e,16 ( fs ) gs fs8. ~ fs2
+        | r8 e,16 ( fs ) gs ( fs8. ) ~ fs2
       }
 
       \volta 2 {
@@ -88,9 +88,19 @@ music = \relative c'' {
   | R1 * 4
 
   \repeat volta 2 {
-    | <e,,, b' e gs b e>2 ~ <e b' e gs b e>4.. <cs' fs cs'>16 ~
-    | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b' e ds'>16 ~
-    | <e b' e ds'>4.. <e b' e gs cs>16 ~ <e b' e gs cs>4.. <e b' e gs b fs'>16 ~
+    | <e,,, b' e gs b e>2 ^\markup {
+        \fret-diagram-terse "o;2;2;1;o;o;"
+      } ~ <e b' e gs b e>4.. <cs' fs cs'>16 ^\markup {
+        \fret-diagram-terse "x;4-(;4-);6;x;x;"
+      } ~
+    | <cs fs cs'>2 ~ <cs fs cs'>4.. <e, b' e ds'>16 ^\markup {
+        \fret-diagram-terse "o;2;2;x;4;x;"
+      } ~
+    | <e b' e ds'>4.. <e b' e gs cs>16 ^\markup {
+        \fret-diagram-terse "o;2;2;x; 2;x;"
+      } ~ <e b' e gs cs>4.. <e b' e gs b fs'>16 ^\markup {
+        \fret-diagram-terse "o;2;2;1;o;2;"
+      } ~
     | <e b' e gs b fs'>1
   }
 
