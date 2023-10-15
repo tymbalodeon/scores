@@ -13,18 +13,22 @@ music = \relative c'' {
     \key af \major
     \time 2/4
 
-    | R2 * 8
-
-    | R2 * 15
+    | R2 * 8 ^\markup \italic "(guitar)"
+    | R2 * 15 ^\markup \italic "(verse)"
     | r4 r8 f \glissando (
 
-    | af2 )
-    | R2 * 15
-
-    | f'2
+    | af2 ) ~
+    | af2
     | R2 * 14
-    | r4 r8 f, \glissando (
 
+    | f'2 ~
+    | f2
+    | R2 * 6
+    \time 4/4
+    | R1 * 3
+    | r2 r4 r8 f, \glissando (
+
+    \time 2/4
     | af2 ) c
     | cf bf
     | af bf
