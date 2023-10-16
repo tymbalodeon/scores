@@ -20,25 +20,23 @@ music = \relative c'' {
   | a2 ~ a4. e8 (
   | fs ) a <a d> <a cs> ~ <a cs>2
 
-  \repeat unfold 3 {
-    | d8 d d d d d d d
+  \repeat unfold 4 {
+    | <d d'>8 <d d'> <d d'> <d d'> <d d'> <d d'> <d d'> <d d'>
   }
 
-  | d8 d d d d d d d
-
-  | d1
+  | <d d'>1
   | g8 ( fs ) d a ~ a2 ~
   | a2 ~ a4. e8 (
   | fs ) a <a d> <a cs> ~ <a cs>2
 
   \repeat unfold 3 {
-    | d8 d d d d d d d
+    | <d d'>8 <d d'> <d d'> <d d'> <d d'> <d d'> <d d'> <d d'>
   }
 
-  | d8 d d d d d d r
+  | <d d'>8 <d d'> <d d'> <d d'> <d d'> <d d'> <d d'> r
 
   \repeat volta 4 {
-    | \acciaccatura <cs ~ e>16 <cs fs>8 ^\markup \italic "4x" <cs e> <d e> <cs e> ~ <cs e> <cs e> r
+    | \acciaccatura <cs ~ e>16 <cs fs>8 ^\markup \italic "4x (skip 1st 2 mm first time?)" <cs e> <d e> <cs e> ~ <cs e> <cs e> r
     << { d8 ~ | d4 } \\ { cs8 ( | d cs ) } >>
     b <a, e' a cs> ~ <a e' a cs>2
     | \acciaccatura <cs' ~ e>16 <cs fs>8 <cs e> <d e> <cs e> ~ <cs e> <cs e> r <a' e'>
