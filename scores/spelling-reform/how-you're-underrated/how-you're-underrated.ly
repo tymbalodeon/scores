@@ -11,7 +11,7 @@
 
 music = \relative c' {
   \key bf \major
-  \time 2/2
+  \time 4/4
 
   | R1 * 8 ^\markup \italic "(instrumental)"
   | R1 * 8 ^\markup \italic "(verse)"
