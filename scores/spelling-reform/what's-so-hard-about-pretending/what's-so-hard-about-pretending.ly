@@ -13,10 +13,10 @@ music = \relative c'' {
   \key fs \major
   \time 2/2
 
-  | R1 * 4
-  | R1 * 8
+  | R1 * 4 ^\markup \italic "(drums)"
+  | R1 * 8 ^\markup \italic "(guitars)"
 
-  | R1 * 7
+  | R1 * 7 ^\markup \italic "(verse)"
   | cs2 ds2
   | fs,1 ~
   | fs1
@@ -36,9 +36,7 @@ music = \relative c'' {
   | R1
 
   | R1 * 9
-
-  | R1 * 17
-
+  | R1 * 17 ^\markup \italic "(verse)"
   | R1 * 2
 
   | r2 \ottava #1 fs'4 as ~
