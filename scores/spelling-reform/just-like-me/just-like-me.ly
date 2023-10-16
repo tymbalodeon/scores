@@ -92,15 +92,39 @@ music = \relative c'' {
   | <cs g' g> <cs g' g> <cs g' g> <cs g' g> <cs g' g> <cs g' g> <cs g' g> r
 
   \repeat volta 4 {
-    | d8 ^\markup \italic "4x" d d d d d d d
+    | d'8 ^\markup \italic "4x" d d d d d d d
+    | d8 d d d d d d d
+    | d8 d d d d d d d
 
-    \repeat unfold 3 {
-      | d8 d d d d d d d
+    \alternative {
+      \volta 1 {
+        | d8 d d d d d d d
+      }
+
+      \volta 2 {
+        | d8 d d d d d d <c, d'>16 <c d'>
+      }
     }
   }
 
-  | R1 * 16
-  | R1
+  \repeat volta 2 {
+    | <c d'>4 <c d'> <c d'>8 <c d'> <c d'> <a d'> ~
+    | <a d'>8 <a d'>4 <a d'>8 <a d'> <a d'> <a d'> <a d'>
+    | <g d''>4 <g d''> <g d''>8 <g d''> <g d''> <a d'> ~
+    | <a d'>8 <a d'>4 <a d'>8 <a d'> <a d'> <a d'> <a d'>
+  }
+
+  | <c d'>8 <c d'> <c d'> <c d'> <c d'> <c d'> <c d'> <a d'>
+  | <a d'>8 <a d'> <a d'> <a d'> <a d'> <a d'> <a d'> <a d'>
+  | <g d''>8 <g d''> <g d''> <g d''> <g d''> <g d''> <g d''> <g d''>
+  | <g d''>8 <g d''> <g d''> <g d''> <g d''> <g d''> <g d''> <g d''>
+
+  | <c d'>8 <c d'> <c d'> <c d'> <c d'> <c d'> <c d'> <a d'>
+  | <a d'>8 <a d'> <a d'> <a d'> <a d'> <a d'> <a d'> <a d'>
+  | <b d'>8 <b d'> <b d'> <b d'> <b d'> <b d'> <b d'> <c d'>
+  | <c d'>8 <c d'> <c d'> <c d'> <c d'> <c d'> <c d'> <c d'>
+
+  | <g c g' d'>1 \fermata
 
   \bar "|."
 }
