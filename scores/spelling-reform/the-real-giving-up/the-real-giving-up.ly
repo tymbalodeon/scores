@@ -1,4 +1,4 @@
-\version "4.45.9"
+\version "2.25.9"
 
 \include "helpers/settings.ily"
 \include "helpers/bar-numbers-left.ily"
