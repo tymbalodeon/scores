@@ -1,4 +1,4 @@
-\version "2.25.9"
+\version "4.45.9"
 
 \include "helpers/settings.ily"
 \include "helpers/bar-numbers-left.ily"
@@ -11,127 +11,102 @@
 
 music = \relative c'' {
   \key e \major
-  \time 2/2
-
-  | R1 * 7
-  | e2 fs
-
-  | gs1 ~
-  | gs2 b (
-  | gs1 ) ~
-  | gs4 r8 cs ( e -. ) r b4
-
-  | gs1 ~
-  | gs4 r8 cs ( e -. ) r b4
-  | gs2 ( e8 ) b'4. ~
-  | b2 a4. gs8
-
-  | e1 ~
-  | e1 ~
-  | e1 ~
-  | e1
-
-  | R1 * 4
-  | R1 * 10
-  | R1 * 8
-  | R1 * 7
-  | e2 fs
-
-  | gs1 ~
-  | gs2 b (
-  | gs1 ) ~
-  | gs4 r8 cs ( e -. ) r b4
-
-  | gs1 ~
-  | gs4 r8 cs ( e -. ) r b4
-  | gs2 ( e8 ) b'4. ~
-  | b2 a4. gs8
-
-  | e1 ~
-  | e1 ~
-  | e1 ~
-  | e1
+  \time 4/4
 
   | R1 * 3
-  | r8 e' b gs ( a gs4. )
+  | r2 e4 fs
 
-  | R1 * 9
-  | r8 cs gs fs e' b4. ~
-
-  | b1 ~
-  | b1
-  | R1 * 5
-  | r4 gs,8 ( a gs ) e4 e8 ~
+  | gs2 ~  gs4 b (
+  | gs2 ) ~ gs8 r16 cs ( e -. ) r b8
+  | gs2 ~ gs8 r16 cs ( e -. ) r b8
+  | gs4 ( e8 ) b'8 ~ b4 a8. ( gs16 )
 
   | e1 ~
   | e1
-  | R1 * 6
+
+  | R1 * 2
+  | R1 * 5
+
+  | R1 * 7
+  | r2 e4 fs
+
+  | gs2 ~ gs4 b (
+  | gs2 ) ~ gs8 r16 cs ( e -. ) r b8
+
+  | gs2 ~ gs8 r16 cs ( e -. ) r b8
+  | gs4 ( e8 ) b'8 ~ b4 a8. ( gs16 )
+
+  | e1 ~
+  | e1
+
+  | R1
+  | r2 r16 e' b gs ( a gs8. )
+
+  | R1 * 4
+  | r 2 r16 cs gs fs e' b8. ~
+
+  | b1
+  | R1 * 2
+  | r2 r8 gs,16 ( a gs ) e8 e16 ~
+
+  | e1
+  | R1 * 3
 
   \repeat volta 3 {
-    | a'8 ^\markup \italic "3x" ( gs ) e e' a, ( gs ) e gs
-    \repeat unfold 3 {
-      | a8 ( gs ) e e' a, ( gs ) e gs
-    }
+    | a'16 ^\markup \italic "3x" ( gs ) e e' a, ( gs ) e gs  a16 ( gs ) e e' a, ( gs ) e gs
+    | a16 ( gs ) e e' a, ( gs ) e gs  a16 ( gs ) e e' a, ( gs ) e gs
   }
 
   \repeat unfold 2 {
-    | a8 ( gs ) e e' a, ( gs ) e gs
+    | a16 ( gs ) e e' a, ( gs ) e gs a16 ( gs ) e e' a, ( gs ) e gs
   }
 
-  | gs1 ~
-  | gs1 ~
   | gs1 ~
   | gs1
 
-  | R1 * 4
+  | R1 * 2
 
-  \repeat volta 2 {
-    | e,1 (
-    | a1 )
-    | e1
-    | a1
+  \repeat volta 4 {
+    | e,2 ( a2 )
+    | e2 a2
 
-    | fs1 (
-    | a1 )
-    | fs1 (
+    | fs2 ( a2 )
 
     \alternative {
-      \volta 1 {
-        | a2 ) gs
+      \volta 2 {
+        | fs2 ( a4 ) gs
       }
 
-      \volta 2 {
-        | e'2 fs
+      \volta 4 {
+        | fs2 e'4 fs
       }
     }
   }
 
-  \repeat volta 2 {
-    | gs1 ~
-    | gs2 b
-    | gs1  ~
-    | gs4 r8 cs ( e -. ) r b4
+  \repeat volta 4 {
+    | gs2 ~ gs4 b
+    | gs2  ~ gs8 r16 cs ( e -. ) r b8
 
-    | gs1 ~
-    | gs4 r8 cs ( e -. ) r b4
-    | gs2 ( e8 ) b'4. ~
+    | gs2 ~ gs8 r16 cs ( e -. ) r b8
 
     \alternative {
-      \volta 1 {
-        | b2 cs
+      \volta 2 {
+        | gs4 ( e8 ) b'8 ~ b4 cs
       }
 
-      \volta 2 {
-        | b2 \repeatTie a
+      \volta 4 {
+        | gs4 ( e8 ) b'8 ~ b4 a
       }
     }
   }
 
-  | gs2 b
-  | e,1 ~
-  | e1 ~
-  | e1 ~
-  | e1
+  \time 2/4
+
+  | gs4 b
+
+  \time 4/4
+
+  | e,1 \fermata
 
   \bar "|."
 }
