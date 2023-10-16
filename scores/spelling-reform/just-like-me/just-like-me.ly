@@ -138,7 +138,7 @@ music = \relative c'' {
     instrumentName = \markup {
       \center-column {
         "Guitar"
-        \line { "D G D G B D"  }
+        \tiny \line { "D G D G B D"  }
       }
     }
     \numericTimeSignature

@@ -22,13 +22,13 @@ music = \relative c'' {
     | <d fs as>1
 
     \repeat volta 2 {
-      | <b fs' as as fs'>16 <b fs' as as fs'> <b fs' as as fs'> <b fs' as as fs'> <b fs' as as fs'>8 r r16 <b fs' as as fs'> <b fs' as as fs'> <b fs' as as fs'> <b fs' as as fs'> <b fs' as as ds> <b fs' as as ds> \xNote <b fs' as as ds>
-      | <b f' b cs>16 <b f' b cs> <b f' b cs> <b f' b cs> <b f' b cs>8 r r16 <b f' b cs> <b f' b cs> <b f' b cs> <b f' b cs> <b f' b as> <b f' b as> \xNote <b f' b as>
-      | <gs ds' fs as>16 <gs ds' fs as> <gs ds' fs as> <gs ds' fs as> <gs ds' fs as>8 r r16 <gs ds' fs as> <gs ds' fs as> <gs ds' fs as> <gs ds' fs as> <gs cs fs as> <gs cs fs as> \xNote <gs cs fs as>
+      | <b fs' as as fs'>16 ^\markup \fret-diagram-terse "x;3;5;4;o;3;" <b fs' as as fs'> <b fs' as as fs'> <b fs' as as fs'> <b fs' as as fs'>8 r r16 <b fs' as as fs'> <b fs' as as fs'> <b fs' as as fs'> <b fs' as as fs'> <b fs' as as ds> ^\markup \fret-diagram-terse "x;3;5;4;o;o;" <b fs' as as ds> \xNote <b fs' as as ds>
+      | <b f' b cs>16 ^\markup \fret-diagram-terse "x;3;4;5;3;x;" <b f' b cs> <b f' b cs> <b f' b cs> <b f' b cs>8 r r16 <b f' b cs> <b f' b cs> <b f' b cs> <b f' b cs> <b f' b as>  ^\markup \fret-diagram-terse "x;3;4;5;o;x;" <b f' b as> \xNote <b f' b as>
+      | <gs ds' fs as>16 ^\markup \fret-diagram-terse "x;o;2;o;o;x;" <gs ds' fs as> <gs ds' fs as> <gs ds' fs as> <gs ds' fs as>8 r r16 <gs ds' fs as> <gs ds' fs as> <gs ds' fs as> <gs ds' fs as> <gs cs fs as> ^\markup \fret-diagram-terse "x;o;o;o;o;x;" <gs cs fs as> \xNote <gs cs fs as>
 
       \alternative {
         \volta 1 {
-          | <fs b d fs as>16 <fs b d fs as> <fs b d fs as> <fs b d fs as> <fs b d fs as>8 r r16 <fs b d fs as> <fs b d fs as> <fs b d fs as> r <gs as es'> <gs as es'> \xNote <gs as es'>
+          | <fs b d fs as>16 ^\markup \fret-diagram-terse "3;3;1;o;o;x;" <fs b d fs as> <fs b d fs as> <fs b d fs as> <fs b d fs as>8 r r16 <fs b d fs as> <fs b d fs as> <fs b d fs as> r <gs as es' fs as> ^\markup \fret-diagram-terse "5;2;4;o;o;x;" <gs as es' fs as> \xNote <gs as es' fs as>
         }
 
         \volta 2 {
@@ -68,11 +68,27 @@ music = \relative c'' {
 }
 
 \score {
-    \new Staff \with {
-        instrumentName = "Guitar"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \music
+  \new Staff \with {
+    instrumentName = \markup {
+      \center-column {
+        "Guitar"
+        \tiny {
+          \line {
+            D \tiny \sharp
+            G \tiny \sharp
+            C \tiny \sharp
+          }
+          \line {
+            F \tiny \sharp
+            A \tiny \sharp
+            D \tiny \sharp
+          }
+        }
+      }
     }
+    \numericTimeSignature
+  } {
+    \compressMMRests
+    \music
+  }
 }

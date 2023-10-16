@@ -113,7 +113,7 @@ music = \new Voice \with {
     instrumentName = \markup {
       \center-column {
         "Guitar"
-        \line { "Capo III"  }
+        \tiny \line { "Capo III"  }
       }
     }
       \numericTimeSignature
