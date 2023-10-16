@@ -45,8 +45,14 @@ music = \relative c'' {
   | R1 * 7
   | r2 r2 \fermata
 
+  \time 4/4
+
+  \tempo "a tempo"
+
   | R1 * 15
   | r2 r4 cs (
+
+  \time 2/2
 
   | fs1 )
   | R1 * 3
@@ -61,19 +67,64 @@ music = \relative c'' {
   | gs1 ~
   | gs1
 
+  \time 4/4
+
   \repeat volta 2 {
-    \repeat unfold 4 {
-      | <cs, fs cs' fs>4 r8 <cs as' fs'> <cs as' fs'>4 r
+    | <cs, fs cs' fs>4 ^\markup {
+      \fret-diagram-verbose #'(
+        (capo 4)
+        (mute 6)
+        (place-fret 3 6)
+        (place-fret 2 7)
+        (mute 1)
+      )
+    }
+    r8 <cs as' b fs'>
+    <cs as' b fs'>4 ^\markup {
+      \fret-diagram-verbose #'(
+        (capo 4)
+        (mute 6)
+        (place-fret 4 8)
+        (place-fret 2 7)
+        (mute 1)
+      )
+    } r
+
+    \repeat unfold 3 {
+      | <cs fs cs' fs>4  r8 <cs as' b fs'> <cs as' b fs'>4 r
     }
 
-    | <cs gs' b fs'>4 r8 <cs gs' b fs'> <cs gs' b fs'>4 r
+    | <cs gs' b fs'>4 ^\markup {
+      \fret-diagram-verbose #'(
+        (capo 4)
+        (mute 6)
+        (place-fret 4 6)
+        (place-fret 2 7)
+        (mute 1)
+      )
+    } r8 <cs gs' b fs'> <cs gs' b fs'>4 r
     | <cs gs' b fs'>4 r8 <cs gs' b fs'> \acciaccatura gs'16 as8 as gs fs
-
-    | ds4 r8 ds <ds b' fs'>4 r
+    | ds4 r8 ds <ds fs b fs'>4 ^\markup {
+      \fret-diagram-verbose #'(
+        (capo 4)
+        (mute 6)
+        (place-fret 5 6)
+        (place-fret 2 7)
+        (mute 1)
+      )
+    } r
 
     \alternative {
       \volta 1 {
-        | <as b' fs'>4 r8 as b4 r
+        | <as fs' b fs'>4 ^\markup {
+          \fret-diagram-verbose #'(
+            (capo 4)
+            (mute 6)
+            (place-fret 5 6)
+            (place-fret 2 7)
+            (mute 1)
+          )
+        } r8 as <b fs' b fs'>4 r
       }
 
       \volta 2 {
@@ -91,7 +142,12 @@ music = \relative c'' {
 
 \score {
   \new Staff \with {
-    instrumentName = "Guitar"
+    instrumentName = \markup {
+      \center-column {
+        "Guitar"
+        \line { "Capo IV"  }
+      }
+    }
     \numericTimeSignature
   } {
     \compressMMRests
