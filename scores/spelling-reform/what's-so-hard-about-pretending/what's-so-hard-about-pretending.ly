@@ -164,7 +164,12 @@ music = \relative c'' {
 
 \score {
   \new Staff \with {
-    instrumentName = "Guitar"
+    instrumentName = \markup {
+      \center-column {
+        "Guitar"
+        \line { "Capo II"  }
+      }
+    }
     \numericTimeSignature
   } {
     \compressMMRests
