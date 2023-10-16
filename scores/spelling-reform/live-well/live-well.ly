@@ -13,23 +13,23 @@ music = \relative c'' {
   \key d \major
   \time 4/4
 
-  | R1 * 4
-  | R1 * 16
-  | R1 * 16
+  | R1 * 4 ^\markup \italic "(instrumental)"
+  | R1 * 16 ^\markup \italic "(verse)"
+  | R1 * 16 ^\markup \italic "(group vocals)"
 
   \repeat volta 4 {
     | fs,8 d' a e' ~ e d a d
-    | g,8 d' a fs' ~ fs d a d
+    | e,8 d' a fs' ~ fs d a d
     | fs,8 d' a e' ~ e d a d
-    | g,8 d' a fs' ~ fs d a d
+    | e,8 d' a fs' ~ fs d a d
 
     | fs,8 d' a e' ~ e d a d
-    | g,8 d' a fs' ~ fs d a d
+    | e,8 d' a fs' ~ fs d a d
 
     \alternative {
       \volta 1,2,3 {
         | fs,8 d' a fs' ~ fs d a d
-        | g,8 d' b g' ~ g fs d4
+        | d,8 d' b g' ~ g fs d4
       }
 
       \volta 4 {
