@@ -79,17 +79,17 @@ music = \relative c' {
   | R1 * 4
 
   \repeat volta 4 {
-    | <bf,, a' bf f'>1 ~
+    | <bf,, a' bf f'>1 ~ ^\markup \fret-diagram-terse "x;3;x;4;1;3;"
     | <bf a' bf f'>1
 
     \alternative {
       \volta 1,2,3 {
-        | <f a' bf f'>1
-        | <c' c a' a f'>1
+        | <f c' a' bf f'>1 ^\markup \fret-diagram-terse "3;x;o;4;1;3;"
+        | <c' c a' a f'>1 ^\markup \fret-diagram-terse "x;5;o;4;o;3;"
       }
 
       \volta 4 {
-        | <ef a a f'>1 ~
+        | <ef a a f'>1 ~ ^\markup \fret-diagram-terse "x;x;3;4;o;3;"
         | <ef a a f'>1
       }
     }
