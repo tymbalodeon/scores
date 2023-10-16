@@ -70,12 +70,16 @@ music = \relative c'' {
       }
 
       \volta 2 {
-        | d8 r d r d r d <c, g' c b>16 <c g' c b>
+        | d8 r d r d r d <c, g' c b>16 ^\markup {
+          \fret-diagram-terse "x;5;5;5;o;x;"
+        } <c g' c b>
       }
     }
   }
 
-  | <c g' c b>4 r <g' g'>8 ( <fs fs'> ) r <b, fs' a b> ~
+  | <c g' c b>4 r <g' g'>8 ( <fs fs'> ) r <b, fs' a b> ^\markup {
+      \fret-diagram-terse "x;4;4;1;o;x;"
+    } ~
   | <b fs' a b>4 r <b b'>8 ( <d d'> ) r <c g' c b> ~
   | <c g' c b>4 r <g' g'>8 ( <fs fs'> ) r <b, fs' a b> ~
   | <b fs' a b>4 r <b b'>8 ( <d d'> ) r <c g' c b> ~
