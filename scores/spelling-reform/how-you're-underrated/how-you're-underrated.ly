@@ -13,11 +13,11 @@ music = \relative c' {
   \key bf \major
   \time 2/2
 
-  | R1 * 8
-  | R1 * 8
-  | R1 * 13
+  | R1 * 8 ^\markup \italic "(instrumental)"
+  | R1 * 8 ^\markup \italic "(verse)"
+  | R1 * 13 ^\markup \italic "(drums)"
 
-  | R1 * 4
+  | R1 * 4 ^\markup \italic "\"I've been holding...\""
 
   | f,1
   | ff1
@@ -78,9 +78,24 @@ music = \relative c' {
 
   | R1 * 4
 
-  | R1 * 16
+  \repeat volta 4 {
+    | <bf,, a' bf f'>1 ~
+    | <bf a' bf f'>1
 
-  | f,,1
+    \alternative {
+      \volta 1,2,3 {
+        | <f a' bf f'>1
+        | <c' c a' a f'>1
+      }
+
+      \volta 4 {
+        | <ef a a f'>1 ~
+        | <ef a a f'>1
+      }
+    }
+  }
+
+  | f ,1
   | ff1
   | ef1 ~
   | ef1
@@ -113,7 +128,12 @@ music = \relative c' {
 
 \score {
   \new Staff \with {
-    instrumentName = "Guitar"
+    instrumentName = \markup {
+      \center-column {
+        "Guitar"
+        \line { "D G C F A D"  }
+      }
+    }
     \numericTimeSignature
   } {
     \compressMMRests
