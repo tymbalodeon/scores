@@ -11,17 +11,15 @@
 
 music = \relative c'' {
   \key fs \major
-  \time 2/2
+  \time 4/4
 
-  | R1 * 4
-  | R1 * 16
-  | R1 * 16
-  | R1 * 10
-  | R1 * 4
-
-  | R1 * 4
-  | R1 * 6
-  | r2 r4 r8 ds16 as ~
+  | R1 * 4 ^\markup \italic "(guitar)"
+  | R1 * 16 ^\markup \italic "(verse)"
+  | R1 * 8 ^\markup \italic "(bass)"
+  | R1 * 14
+  | R1 * 4 ^\markup \italic "(band)"
+  | R1 * 6 ^\markup \italic "(verse)"
+  | r2 r4 r8 ds'16 as ~
   | as2 gs
 
   | fs1 ~
@@ -29,7 +27,7 @@ music = \relative c'' {
   | R1 * 6
 
   | R1 * 3
-  | r8 as b fs' ~ fs b,4 as8 ~
+  | r8 as, b fs' ~ fs b,4 as8 ~
   | as b4 fs'8 ~ fs b,4 as8 ~
 
   | as1
@@ -45,14 +43,10 @@ music = \relative c'' {
   | R1 * 7
   | r2 r2 \fermata
 
-  \time 4/4
-
   \tempo "a tempo"
 
   | R1 * 15
   | r2 r4 cs (
-
-  \time 2/2
 
   | fs1 )
   | R1 * 3
@@ -66,8 +60,6 @@ music = \relative c'' {
   | fs4. fs16 ( cs ) ~ cs4 as8 gs ~
   | gs1 ~
   | gs1
-
-  \time 4/4
 
   \repeat volta 2 {
     | <cs, fs cs' fs>4 ^\markup {
