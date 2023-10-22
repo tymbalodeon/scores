@@ -11,7 +11,7 @@
 trumpet = \relative c'' {
   \time 5/8
 
-  | R8 * 5
+  | << { R8 * 5 } s4^\markup \box "X" >>
   | ef8 df c g4
   | af4 bf8 ef e
   | r4 fs,8 ~ fs4
@@ -34,7 +34,7 @@ trombone = \relative c' {
 electricGuitar = \relative c'' {
   \time 5/8
 
-  | r4 r8 gs as
+  | r4 ^\markup \box "Xi11" r8 gs as
   | as fs b e!4
   | a,!8 b g cs4
   | d,4. r4
