@@ -10,7 +10,6 @@
 }
 
 music = \relative c'' {
-  \key e \major
   \time 4/4
 
   | R1 * 3
@@ -113,10 +112,16 @@ music = \relative c'' {
 
 \score {
   \new Staff \with {
-    instrumentName = "Guitar"
+    instrumentName = \markup {
+      \center-column {
+        "Guitar"
+        \tiny \line { "Capo I"  }
+      }
+    }
     \numericTimeSignature
   } {
+    \key f \major
     \compressMMRests
-    \music
+    \transpose e f \music
   }
 }
