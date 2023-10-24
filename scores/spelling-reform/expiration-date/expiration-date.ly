@@ -21,19 +21,19 @@ music = \relative c'' {
   | fs ) a <a d> <a cs> ~ <a cs>2
 
   \repeat unfold 4 {
-    | <d d'>8 <d d'> <d d'> <d d'> <d d'> <d d'> <d d'> <d d'>
+    | <a a'>8 <a a'> <a a'> <a a'> <a a'> <a a'> <a a'> <a a'>
   }
 
-  | <d d'>1
-  | g8 ( fs ) d a ~ a2 ~
+  | <a a'>1
+  | g'8 ( fs ) d a ~ a2 ~
   | a2 ~ a4. e8 (
   | fs ) a <a d> <a cs> ~ <a cs>2
 
   \repeat unfold 3 {
-    | <d d'>8 <d d'> <d d'> <d d'> <d d'> <d d'> <d d'> <d d'>
+    | <a a'>8 <a a'> <a a'> <a a'> <a a'> <a a'> <a a'> <a a'>
   }
 
-  | <d d'>8 <d d'> <d d'> <d d'> <d d'> <d d'> <d d'> r
+  | <a a'>8 <a a'> <a a'> <a a'> <a a'> <a a'> <a a'> r
 
   \repeat volta 4 {
     | \acciaccatura <cs ~ e>16 <cs fs>8 ^\markup \italic "4x (skip 1st 2 mm first time?)" <cs e> <d e> <cs e> ~ <cs e> <cs e> r
@@ -46,7 +46,7 @@ music = \relative c'' {
   | R1 * 8
 
   \repeat volta 5 {
-    | <a a'>8 <a a'> <a a'> <a a'> <a a'> <a a'> <a a'> \xNotesOn <a a'>16 <a a'> \xNotesOff
+    | <a, a'>8 <a a'> <a a'> <a a'> <a a'> <a a'> <a a'> \xNotesOn <a a'>16 <a a'> \xNotesOff
     | <d d'>8 <d d'> r <cs cs'> ~ <cs cs'> <cs cs'> <cs cs'> \xNotesOn <cs cs'>16 <cs cs'> \xNotesOff
     | <a a'>8 <a a'> <a a'> <a a'> <a a'> <a a'> <a a'> \xNotesOn <a a'>16 <a a'> \xNotesOff
 
@@ -93,6 +93,7 @@ music = \relative c'' {
       \chords {
         | s1 * 41
         | g4. e8:m s2
+        | d4. a8 s2
         | d4. a8 s2
       }
     }
