@@ -49,10 +49,8 @@ music = \relative c'' {
 
   | R1 * 4
 
-  \repeat volta 2 {
-    \repeat unfold 4 {
-      | gs,8 ( b ) b ( cs ) b gs'4.
-    }
+  \repeat unfold 4 {
+    | \repeat unfold 2 { gs,16 ( b ) b ( cs ) b gs'8. }
   }
 
   | R1
