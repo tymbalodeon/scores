@@ -14,9 +14,9 @@ music = \relative c'' {
   \time 4/4
 
   \repeat volta 2 {
-    | a8 gs'4 cs,8 fs4 cs8 ( e )
+    | a8\4-1 gs'4 cs,8 fs4 cs8 ( e )
     | b8 b'4 e,8 gs4 e
-    | a,8 b'4 gs8 gs4 fs8 ( e )
+    | a,8-1 b'4-2 gs8-3 gs4 fs8-2 ( e )
     | fs,8 e'4 a,8 gs'2
   }
 
@@ -49,14 +49,16 @@ music = \relative c'' {
 
   | R1 * 4
 
-  \repeat unfold 4 {
+  | gs,16\3-1 ( b ) b-1 ( cs-3 ) b-1 gs'8.\1-2 gs,16 ( b ) b ( cs ) b gs'8.
+
+  \repeat unfold 3 {
     | \repeat unfold 2 { gs,16 ( b ) b ( cs ) b gs'8. }
   }
 
   | R1
-  | gs,16 ( b ) cs8 e gs ~ gs4 b
+  | gs,16\3-1 ( b ) cs8-3 e\2-2 gs\1-1 ~ gs4 b
   | e,1
-  | ds8 ( e ) ( ds4 ) ~ ds2
+  | ds8\2-3 ( e ) ( ds4 ) ~ ds2
 
   | a8 gs'4 cs,8 fs4 cs8 ( e )
   | b8 b'4 e,8 gs4 e
