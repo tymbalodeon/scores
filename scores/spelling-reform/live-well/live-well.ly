@@ -51,3 +51,8 @@ music = \relative c'' {
     \music
   }
 }
+
+% Sing loud (out?) of the ending hours
+% Live well in the coldest towns
+% Remember your one love
+% She can’t hurt you now, she can’t hurt you now
