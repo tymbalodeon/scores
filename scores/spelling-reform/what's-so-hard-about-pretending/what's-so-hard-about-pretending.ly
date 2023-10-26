@@ -74,57 +74,57 @@ music = \relative c'' {
   | as'1
 
   | <b,, fs' b ds>4. ^\markup {
-      \fret-diagram-verbose #'(
-        (capo 2)
-        (mute 6)
-        (place-fret 4 4)
-        (place-fret 3 4)
-        (place-fret 2 4)
-      )
-    } <b fs' b ds>8 ~ <b fs' b ds>4 <b fs' b ds>
+    \fret-diagram-verbose #'(
+                              (capo 2)
+                              (mute 6)
+                              (place-fret 4 4)
+                              (place-fret 3 4)
+                              (place-fret 2 4)
+                              )
+  } <b fs' b ds>8 ~ <b fs' b ds>4 <b fs' b ds>
   | <b fs' b ds>4. <b fs' b ds>8 ~ <b fs' b ds>4 <b fs' b ds>
   | <gs cs'>4. ^\markup {
-      \fret-diagram-verbose #'(
-        (capo 2)
-        (place-fret 6 4)
-        (mute 5)
-        (mute 4)
-        (place-fret 3 6)
-        (mute 2)
-        (mute 1)
-      )
-    } <gs cs'>8 ~ <gs cs'>4 <gs cs'>
+    \fret-diagram-verbose #'(
+                              (capo 2)
+                              (place-fret 6 4)
+                              (mute 5)
+                              (mute 4)
+                              (place-fret 3 6)
+                              (mute 2)
+                              (mute 1)
+                              )
+  } <gs cs'>8 ~ <gs cs'>4 <gs cs'>
   | <gs as' cs>4. ^\markup {
-      \fret-diagram-verbose #'(
-        (capo 2)
-        (place-fret 6 4)
-        (mute 5)
-        (place-fret 4 8)
-        (place-fret 3 6)
-        (mute 2)
-        (mute 1)
-      )
-    } <gs as' cs>8 ~ <gs as' cs>4 <gs as' cs>
+    \fret-diagram-verbose #'(
+                              (capo 2)
+                              (place-fret 6 4)
+                              (mute 5)
+                              (place-fret 4 8)
+                              (place-fret 3 6)
+                              (mute 2)
+                              (mute 1)
+                              )
+  } <gs as' cs>8 ~ <gs as' cs>4 <gs as' cs>
   | <as es' as cs es as>4. ^\markup {
-      \fret-diagram-verbose #'(
-        (capo 2)
-        (place-fret 6 6)
-        (place-fret 5 6)
-        (place-fret 4 8)
-        (place-fret 3 8)
-        (place-fret 2 7)
-        (place-fret 1 6)
-      )
-    } <as es' as cs es as>8 ~ <as es' as cs es as>4 <as es' as cs es as>
+    \fret-diagram-verbose #'(
+                              (capo 2)
+                              (place-fret 6 6)
+                              (place-fret 5 6)
+                              (place-fret 4 8)
+                              (place-fret 3 8)
+                              (place-fret 2 7)
+                              (place-fret 1 6)
+                              )
+  } <as es' as cs es as>8 ~ <as es' as cs es as>4 <as es' as cs es as>
   | <b fs' b ds>4. <b fs' b ds>8 ~ <b fs' b ds>4 <b fs' b ds>
   | <fs cs' fs as cs fs>4. ^\markup {
-      \fret-diagram-verbose #'(
-        (capo 2)
-        (place-fret 5 4)
-        (place-fret 4 4)
-        (place-fret 3 3)
-      )
-    } <fs cs' fs as cs fs>8 ~ <fs cs' fs as cs fs>4 <fs cs' fs as cs fs>
+    \fret-diagram-verbose #'(
+                              (capo 2)
+                              (place-fret 5 4)
+                              (place-fret 4 4)
+                              (place-fret 3 3)
+                              )
+  } <fs cs' fs as cs fs>8 ~ <fs cs' fs as cs fs>4 <fs cs' fs as cs fs>
   | <b fs' b ds>4. <b fs' b ds>8 ~ <b fs' b ds>4 <b fs' b ds>
   | <b fs' b ds>4. <b fs' b ds>8 ~ <b fs' b ds>4 <b fs' b ds>
 

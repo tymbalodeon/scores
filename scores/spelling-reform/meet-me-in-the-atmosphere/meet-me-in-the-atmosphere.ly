@@ -13,9 +13,9 @@
 fourTimes = \mark \markup \small \italic 4x
 
 verseChords = \chordmode {
-    | f2
-    | bf2
-    | c2
+  | f2
+  | bf2
+  | c2
 }
 
 changes = \chords {
@@ -50,14 +50,14 @@ music = \new Voice \with {
     \fourTimes
 
     | f4 ^\markup {
-          \fret-diagram-terse "x;x;o;2;3;2;"
-        } ^\markup \italic "(group vocals)" f8 \parenthesize f
+      \fret-diagram-terse "x;x;o;2;3;2;"
+    } ^\markup \italic "(group vocals)" f8 \parenthesize f
     | bf4 ^\markup {
-          \fret-diagram-terse "3;2;o;o;3;3;"
-        } bf8 \parenthesize bf
+      \fret-diagram-terse "3;2;o;o;3;3;"
+    } bf8 \parenthesize bf
     | c4 ^\markup {
-          \fret-diagram-terse "x;o;3;3;3;o;"
-        } c8 \parenthesize c
+      \fret-diagram-terse "x;o;3;3;3;o;"
+    } c8 \parenthesize c
   }
 
   \repeat volta 4 {
@@ -110,12 +110,12 @@ music = \new Voice \with {
     \changes
 
     \new Staff \with {
-    instrumentName = \markup {
-      \center-column {
-        "Guitar"
-        \tiny \line { "Capo III"  }
+      instrumentName = \markup {
+        \center-column {
+          "Guitar"
+          \tiny \line { "Capo III"  }
+        }
       }
-    }
       \numericTimeSignature
     } {
       \compressMMRests

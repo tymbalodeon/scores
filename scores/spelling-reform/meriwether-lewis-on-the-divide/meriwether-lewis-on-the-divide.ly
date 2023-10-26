@@ -64,22 +64,22 @@ music = \relative c'' {
   \repeat volta 2 {
     | <cs, fs cs' fs>4 ^\markup {
       \fret-diagram-verbose #'(
-        (capo 4)
-        (mute 6)
-        (place-fret 3 6)
-        (place-fret 2 7)
-        (mute 1)
-      )
+                                (capo 4)
+                                (mute 6)
+                                (place-fret 3 6)
+                                (place-fret 2 7)
+                                (mute 1)
+                                )
     }
     r8 <cs as' b fs'>
     <cs as' b fs'>4 ^\markup {
       \fret-diagram-verbose #'(
-        (capo 4)
-        (mute 6)
-        (place-fret 4 8)
-        (place-fret 2 7)
-        (mute 1)
-      )
+                                (capo 4)
+                                (mute 6)
+                                (place-fret 4 8)
+                                (place-fret 2 7)
+                                (mute 1)
+                                )
     } r
 
     \repeat unfold 3 {
@@ -88,34 +88,34 @@ music = \relative c'' {
 
     | <cs gs' b fs'>4 ^\markup {
       \fret-diagram-verbose #'(
-        (capo 4)
-        (mute 6)
-        (place-fret 4 6)
-        (place-fret 2 7)
-        (mute 1)
-      )
+                                (capo 4)
+                                (mute 6)
+                                (place-fret 4 6)
+                                (place-fret 2 7)
+                                (mute 1)
+                                )
     } r8 <cs gs' b fs'> <cs gs' b fs'>4 r
     | <cs gs' b fs'>4 r8 <cs gs' b fs'> \acciaccatura gs'16 as8 as gs fs
     | ds4 r8 ds <ds fs b fs'>4 ^\markup {
       \fret-diagram-verbose #'(
-        (capo 4)
-        (mute 6)
-        (place-fret 5 6)
-        (place-fret 2 7)
-        (mute 1)
-      )
+                                (capo 4)
+                                (mute 6)
+                                (place-fret 5 6)
+                                (place-fret 2 7)
+                                (mute 1)
+                                )
     } r
 
     \alternative {
       \volta 1 {
         | <as fs' b fs'>4 ^\markup {
           \fret-diagram-verbose #'(
-            (capo 4)
-            (mute 6)
-            (place-fret 5 6)
-            (place-fret 2 7)
-            (mute 1)
-          )
+                                    (capo 4)
+                                    (mute 6)
+                                    (place-fret 5 6)
+                                    (place-fret 2 7)
+                                    (mute 1)
+                                    )
         } r8 as <b fs' b fs'>4 r
       }
 

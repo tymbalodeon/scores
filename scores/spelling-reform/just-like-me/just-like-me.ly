@@ -78,8 +78,8 @@ music = \relative c'' {
   }
 
   | <c g' c b>4 r <g' g'>8 ( <fs fs'> ) r <b, fs' a b> ^\markup {
-      \fret-diagram-terse "x;4;4;1;o;x;"
-    } ~
+    \fret-diagram-terse "x;4;4;1;o;x;"
+  } ~
   | <b fs' a b>4 r <b b'>8 ( <d d'> ) r <c g' c b> ~
   | <c g' c b>4 r <g' g'>8 ( <fs fs'> ) r <b, fs' a b> ~
   | <b fs' a b>4 r <b b'>8 ( <d d'> ) r <c g' c b> ~

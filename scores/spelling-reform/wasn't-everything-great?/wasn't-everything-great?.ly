@@ -16,9 +16,11 @@ music = \relative c'' {
   | R1 * 8
   | R1 * 8
 
-  | \new CueVoice { <c e>2 <b d>
-  | <a c>2 <g b>
-  | <fs a>1 }
+  | \new CueVoice {
+    <c e>2 <b d>
+    | <a c>2 <g b>
+    | <fs a>1
+  }
   | R1
 
   \repeat volta 2 {
