@@ -16,8 +16,8 @@ music = \relative c'' {
   | R1 * 8 ^\markup \italic "(instrumental)"
   | R1 * 8 ^\markup \italic "(verse)"
 
-  | cs,8 gs' as gs cs, gs' as gs
-  | ds8 fs as fs ds fs as fs
+  | cs,8\4-0 gs'\3-1 as\2-0 gs cs, gs' as gs
+  | ds8\4-1 fs\3-0 as\ 2-0 fs ds fs as fs
   | cs8 gs' as gs cs, gs' as gs
   | <d fs as>1
 
