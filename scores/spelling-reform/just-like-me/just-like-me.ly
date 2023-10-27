@@ -23,16 +23,16 @@ music = \relative c'' {
   | b1 ~
   | b1
   | R1 * 3
-  | r8 g16 e' d8 g, e' g, d' g,
-  | r8 g d'8 g, e' g, d' g,
-  | r8 g d'8 g, e' d g, r
+  | r8 g16\3-0 \downbow e'\1-1 \upbow d8\2-2 \downbow g, \downbow e' \upbow g, \downbow d' g,
+  | r8 g \upbow d'8 \downbow g, e' g, d' g,
+  | r8 g d'8 g, e' d \upbow g, \upbow r
 
-  | r2 g'8 fs d a ~
+  | r2 g'8\2-2 ( fs-1 ) d\3-1 a\4-1 ~
   | a4 a8 g b d4 g,8 ~
-  | g2 g'8 fs d a ~
+  | g2 g'8 ( fs ) d a ~
   | a4 a8 g b d4 b8 ~
 
-  | b2 g'8 fs d a ~
+  | b2 g'8 ( fs ) d a ~
   | a4 a8 g b d4 d8 ~
   | d1
   | c2 b4 e
@@ -46,7 +46,7 @@ music = \relative c'' {
 
   | R1 * 10
 
-  | r8 g16 ( b ) b ( d ) ( e8 ~ ) e d4 g,8 ~
+  | r8 g16\3-0 ( b-2 ) b\2-0 ( d-1 ) ( e8-3 ~ ) e d4 g,8 ~
   | g4 r8 g16 ( b ) b ( d ) ( e8 ~ ) e d ~
   | d b r8 g16 ( b ) b ( d ) ( e8 ~ ) e d ~
   | d4 r8 g,16 ( b ) b ( d ) ( e8 ~ ) e d ~
@@ -54,7 +54,7 @@ music = \relative c'' {
   | d g, r8 g16 ( b ) b ( d ) ( e8 ~ ) e d ~
   | d4 r8 g,16 ( b ) b ( d ) ( e8 ~ ) e d ~
   | d b r8 g16 ( b ) b ( d ) ( e8 ~ ) e d ~
-  | d4.. e16 ( b'8 ) r16 e,16 ( d'8 ) r
+  | d4.. e16-0 ( b'8-1 ) r16 e,16-0 ( d'8-3 ) r
 
   | R1 * 16
 
@@ -77,10 +77,14 @@ music = \relative c'' {
     }
   }
 
-  | <c g' c b>4 r <g' g'>8 ( <fs fs'> ) r <b, fs' a b> ^\markup {
+  | <c g' c b>4 r <g' g'>8 ^\markup {
+    \fret-diagram-terse "x;x;5;x;x;5;"
+  } ( <fs fs'> ) r <b, fs' a b> ^\markup {
     \fret-diagram-terse "x;4;4;1;o;x;"
   } ~
-  | <b fs' a b>4 r <b b'>8 ( <d d'> ) r <c g' c b> ~
+  | <b fs' a b>4 r <b b'>8 ^\markup {
+    \fret-diagram-terse "x;5;x;5;x;x;"
+  } ( <d d'> ) r <c g' c b> ~
   | <c g' c b>4 r <g' g'>8 ( <fs fs'> ) r <b, fs' a b> ~
   | <b fs' a b>4 r <b b'>8 ( <d d'> ) r <c g' c b> ~
 
