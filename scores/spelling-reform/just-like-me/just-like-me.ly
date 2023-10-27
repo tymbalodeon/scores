@@ -65,11 +65,11 @@ music = \relative c'' {
     | d8 r d r d r d r
 
     \alternative {
-      \volta 1 {
+      \volta 1,2,3 {
         | d8 r d r d r d r
       }
 
-      \volta 2 {
+      \volta 4 {
         | d8 r d r d r d <c, g' c b>16 ^\markup {
           \fret-diagram-terse "x;5;5;5;o;x;"
         } <c g' c b>
@@ -105,11 +105,11 @@ music = \relative c'' {
     | d8 d d d d d d d
 
     \alternative {
-      \volta 1 {
+      \volta 1,2,3 {
         | d8 d d d d d d d
       }
 
-      \volta 2 {
+      \volta 4 {
         | d8 d d d d d d <c, d'>16 <c d'>
       }
     }
@@ -132,7 +132,9 @@ music = \relative c'' {
   | <b d'>8 <b d'> <b d'> <b d'> <b d'> <b d'> <b d'> <c d'>
   | <c d'>8 <c d'> <c d'> <c d'> <c d'> <c d'> <c d'> <c d'>
 
-  | <g c g' d'>1 \fermata
+  | <g c g' d'>1 ^\markup {
+    \fret-diagram-terse "5;5;5;7;x;x;"
+  } \fermata
 
   \bar "|."
 }
