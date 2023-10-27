@@ -29,12 +29,12 @@ music = \relative c' {
   | ff1
   | ef1
 
-  | r8 d'' ( c ) g ( bf ) r r4
-  | r8 d ( c ) g ( bf ) f' r4
+  | r8 d''\2 ( c ) g\3 ( bf ) r r4
+  | r8 d ( c ) g ( bf ) f'\1 r4
   | r8 d ( c ) g ( bf ) r r4
-  | r8 c ( d ) f bf r r4
+  | r8 c\3-1 ( d ) f\2-2 bf\1-3 r r4
 
-  | bf,,8 bf bf bf bf bf bf bf
+  | bf,,8\5-2 bf bf bf bf bf bf bf
   | bf8 bf bf bf bf bf c d
   | d8 d d d d d d d
   | d8 d d d c c c c
@@ -61,12 +61,12 @@ music = \relative c' {
 
   | bf8 r r4 r2
 
-  | d'8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
+  | d'8\2 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
   | d8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
   | d8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
   | d8 ( bf ) bf ( d ) d8 ( bf ) bf ( d )
 
-  | bf'8 bf bf bf bf bf bf bf
+  | bf'8\2 bf bf bf bf bf bf bf
   | bf8 bf bf bf bf bf bf bf
   | bf8 bf bf bf bf bf bf bf
   | bf8 bf bf bf bf bf bf bf
@@ -79,17 +79,17 @@ music = \relative c' {
   | R1 * 4
 
   \repeat volta 4 {
-    | <bf,, a' bf f'>1 ~ ^\markup \fret-diagram-terse "x;3;x;4;1;3;"
+    | <bf,, a' bf f'>1 ~ ^\markup \fret-diagram-terse "x;3;x;3;o;3;"
     | <bf a' bf f'>1
 
     \alternative {
       \volta 1,2,3 {
-        | <f c' a' bf f'>1 ^\markup \fret-diagram-terse "3;x;o;4;1;3;"
-        | <c' c a' a f'>1 ^\markup \fret-diagram-terse "x;5;o;4;o;3;"
+        | <f c' a' bf f'>1 ^\markup \fret-diagram-terse "3;x;o;3;o;3;"
+        | <c' c a' a f'>1 ^\markup \fret-diagram-terse "x;x;o;2;o;3;"
       }
 
       \volta 4 {
-        | <ef a a f'>1 ~ ^\markup \fret-diagram-terse "x;x;3;4;o;3;"
+        | <ef a a f'>1 ~ ^\markup \fret-diagram-terse "x;x;4;2;o;3;"
         | <ef a a f'>1
       }
     }
@@ -131,7 +131,7 @@ music = \relative c' {
     instrumentName = \markup {
       \center-column {
         "Guitar"
-        \tiny \line { "D G C F A D"  }
+        \tiny \line { "D G C G A D"  }
       }
     }
     \numericTimeSignature
