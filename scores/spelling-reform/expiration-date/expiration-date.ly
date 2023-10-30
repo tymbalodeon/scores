@@ -16,11 +16,12 @@ music = \relative c'' {
   | R1 * 4
 
   | R1
-  | g'8 ( fs ) d a ~ a2 ~
+  | g'8\2-2 ( fs-1 ) d\3-1 a\4-1 ~ a2 ~
   | a2 ~ a4. e8 (
   | fs ) a <a d> <a cs> ~ <a cs>2
 
-  \repeat unfold 4 {
+  | <a a'>8 \downbow <a a'> \downbow <a a'> <a a'> <a a'> <a a'> <a a'> <a a'>
+  \repeat unfold 3 {
     | <a a'>8 <a a'> <a a'> <a a'> <a a'> <a a'> <a a'> <a a'>
   }
 
@@ -38,7 +39,9 @@ music = \relative c'' {
   \repeat volta 4 {
     | \acciaccatura <cs ~ e>16 <cs fs>8 ^\markup \italic "4x (skip 1st 2 mm first time?)" <cs e> <d e> <cs e> ~ <cs e> <cs e> r
     << { d8 ~ | d4 } \\ { cs8 ( | d cs ) } >>
-    b <a, e' a cs> ~ <a e' a cs>2
+    b <a, e' a cs> ^\markup {
+      \fret-diagram-terse "x;o;2;2;2;o;"
+    } ~ <a e' a cs>2
     | \acciaccatura <cs' ~ e>16 <cs fs>8 <cs e> <d e> <cs e> ~ <cs e> <cs e> r <a' e'>
     | r <a d> r <a cs> ~ <a cs>2
   }
@@ -69,11 +72,19 @@ music = \relative c'' {
     \improvisationOn
 
     \repeat volta 6 {
-      | g8 g g e ~ e e e \xNote e
+      | g8 ^\markup {
+        \fret-diagram-terse "3;2;o;o;3;3;"
+      } g g e ^\markup {
+        \fret-diagram-terse "o;2;2;o;o;o;"
+      } ~ e e e \xNote e
 
       \alternative {
         \volta 1,2,3,4,5 {
-          | d8 d d a ~ a a a \xNote a
+          | d8 ^\markup {
+            \fret-diagram-terse "x;x;o;2;3;2;"
+          } d d a ^\markup {
+            \fret-diagram-terse "x;o;2;2;2;o;"
+          } ~ a a a \xNote a
         }
 
         \volta 6 {
