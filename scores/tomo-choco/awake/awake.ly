@@ -17,6 +17,7 @@ music = \relative g, {
   \repeat volta 2 {
     | g8. g16 ~ g g g8 ~ g16 g8 g16 g e f fs
   }
+
   | g8. g16 ~ g16 e a8 ~ a bf8 ~ bf16 c8.
   | c16 ( d8 ) d16 ~ d a e'8 ~ e f4 g8
 
