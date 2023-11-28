@@ -51,9 +51,9 @@ music = \relative c {
   | ef,8. ef16 bf' bf, ( c ) ( df ) ef' df8 c16 ~ c bf ( af8 )
   | ef16 ef bf' ef, ~ ef ef bf' ef, ~ ef ef bf' ef, ~ ef ef bf' ef,
   | bf bf bf' bf, ~ bf bf bf' bf, ~ bf bf f' bf, ~ bf bf f' bf,
-  | df df af' df, ~ df df af' af, ~ af af df' af, ~ af af df' af,
+  | df df af' df, ~ df df af' af, ~ af af df' af, ~ af af df' af, (
 
-  | g16 g bf' g, ~ g g bf' g, ~ g bf ( c ) ef ~ ef f ( g8 )
+  | g16 ) g bf' g, ~ g g bf' g, ~ g bf ( c ) ef ~ ef f ( g8 )
 
   | R1 * 9
 
@@ -65,19 +65,18 @@ music = \relative c {
   | <ef, bf'>4. bf8 f'' ef df c
   | bf4 f bf, f'8 bf
   | df,4 f, af8. df16 ( ef8 ) f16 bf,
-  | af'16 ( bf8. ) ~ bf16 c, ( df ) af'
+  | af'16 ( bf8. ) ~ bf16 c, ( df ) af' g'16 ( af ) ( g ) ef ~ ef af, g8
 
-  | g'16 ( af ) ( g ) ef ~ ef af, g8
   | ef8. ef16 bf' bf, ( c ) ( df ) ef' df8 c16 ~ c bf ( af8 )
   | ef16 ef bf' ef, ~ ef ef bf' ef, ~ ef ef bf' ef, ~ ef ef bf' ef,
   | bf bf bf' bf, ~ bf bf bf' bf, ~ bf bf f' bf, ~ bf bf f' bf,
-
   | df df af' df, ~ df df af' af, ~ af af df' af, ~ af af df' af, (
+
   | g16 ) g bf' g, ~ g g bf' g, ~ g af ( bf ) c ~ c df ( ef ) af,
   | df4 ~ df8 df16 af f'8. af16 ~ af af ( bf8 )
   | ef,4 ~ ef8. bf16 \acciaccatura bf'16 \glissando c8. bf16 ~ bf g ( f8 )
-
   | df4. df8 f,8. af16 ~ af8 df
+
   | g,4. g8 gf'4. gf8
 
   \time 2/4
