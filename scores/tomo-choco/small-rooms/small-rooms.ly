@@ -69,8 +69,6 @@ music = \relative c, {
   | c'16 g' bf, ( a ) ~ a8 d,16 ( c ) ~ c2
 
   | f,4. r16 \xNote f f8 f4.
-  | f4. r16 \xNote f f8 f4.
-  | f4. r16 \xNote f f8 f4.
   | f4. r16 \xNote f f8 g a c
 }
 
