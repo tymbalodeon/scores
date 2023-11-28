@@ -1,6 +1,7 @@
 \version "2.25.10"
 
 \include "helpers/settings.ily"
+\include "helpers/bar-numbers-left.ily"
 
 \header {
   title = "Small Rooms"
