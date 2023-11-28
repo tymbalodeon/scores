@@ -45,7 +45,14 @@ music = \relative c, {
   | f4. r16 f f8 f4.
   | f4. r16 f f8 g a c
 
-  | f
+  | f4 ~ f16 c g' gs a4 ~ a16 c, a' bf
+  | c4 ~ c8. f,16 c'8 g, a bf
+  | c4. r16 g c \xNote c e8 g c, ~
+  | c g c4 ~ c8. g16 c \xNote c g ( a )
+
+  | df8 df4 af16 a bf8 bf4 c8
+  | df8 df4 af'16 df, df' af df,4 ef16 af,
+  | df8 df4 f8 df' f, af, g
 }
 
 \score {
