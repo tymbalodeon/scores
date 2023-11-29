@@ -40,18 +40,26 @@ music = \relative g, {
   | g16 ) d, c' cs ( d ) f d8 r16 g,8 -0 g16 g'16 d g,8 -1
 
   | g,8. -> g16 -> ~ g g g8 -> ~ g16 g8 -> e16 g -> e g8 ->
-  | c8. -> c16 -> ~ c c c8 -> ~ c16 c8 -> \xNote c16 d ( e ) g ( a )
-  | b16 -> b b e, -> ~ e e b'16 -> b b e,8 -> e16 b' -> a, -0 d8 ->
-  | c8. c16 ~ c c c8 ~ c d16 e g a b d
+  | c8. -> c16 -> ~ c c c8 -> ~ c16 c8 -> \xNote c16 d ( e ) g  a (
+  | b16 ) -> b b e, -> ~ e e b'16 -> b b e,8 -> e16 b' -> a, -0 d8 ->
+  | c8. -> c16 -> ~ c c c8 ->  ~ c d16 ( e ) g a ( b ) d
 
-  | e16 e e d ~ d d c c c b8 d,16 a' b a d,
-  | d16 d d d ~ d d d d d d8 d16 d a a' b
-  | c16 c c b ~ b b a a a b8 a,16 a'8 g
-  | f16 f f f r8 f16 f f f8 c16 f c f, fs
-  | g16 g g g r e g g g g r e g8 g
+  | e16 -> e e d -> ~ d d c ->  c c b8 -> d,16 -0 a' ( b ) a ( d, ) -0
+  | <<
+    {
+      s16 d -0 s d -> ~ d s d -> s d s8 d16
+    } \\ {
+      d16 -> -1 s d s s d s d s d8 -> s16
+    }
+  >>
+
+  d -1 a -0 a' ( b )
+  | c16 -> c c b -> ~ b b a -> a a b8 -> a,16 -0 a'8 -> g ->
+  | f16 -> f f f -> r8 f16 -> f f f8 -> c16 f -> c f, fs
+  | g16 -> g g g -> r e g -> g g g -> r e g8 -> g ->
 
   | R1 * 5
-  | r2 r4 r16 g8 e16
+  | r2 r4 r16 g8 -> e16
 
   | g8. g16 ~ g e g8 ~ g16 g' ( a ) d, c' ( d8 ) d,16
   | g,8. g16 ~ g e g8 ~ g16 a' ( bf ) d, d' ( e8 ) d,16
