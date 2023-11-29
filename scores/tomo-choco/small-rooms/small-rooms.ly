@@ -43,7 +43,7 @@ music = \relative c, {
   | f,4. r16 \xNote f f8 -. f4. --
   | f4. r16 \xNote f f8 -. f4. --
   | f4. r16 \xNote f f8 -. f4. --
-  | f4. r16 \xNote f f8 -. g -- a -- c --
+  | f4. r16 \xNote f f8 -. \appoggiatura g16 a8 -- c -- d --
 
   | f4 ~ f16 c g' ( gs ) a4 ~ a16 c, a' ( bf )
   | c4 ~ c8. f,16 c'8 -. g, -- a -- bf --
@@ -71,7 +71,7 @@ music = \relative c, {
   | f,4. r16 \xNote f f8 -. f4. --
   | f4. r16 \xNote f f8 -. f4. --
   | f4. r16 \xNote f f8 -. f4. --
-  | f4. r16 \xNote f f8 -. g -- a -- c --
+  | f4. r16 \xNote f f8 -. \appoggiatura g16 a8 -- c -- d --
 
   | f,4. r16 \xNote f f8 -. f4. --
   | f4. r16 c' f8 -. f, -- g -- a --
