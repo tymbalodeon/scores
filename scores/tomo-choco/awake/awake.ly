@@ -5,7 +5,8 @@
 
 \header {
   title = "Awake"
-  composer = "Ashley Cubbler (Tomo Choco)"
+  subtitle = "Tomo Choco"
+  composer = "Ashley Cubbler"
   arranger = "Ben Rosen, bass"
 }
 
@@ -14,28 +15,24 @@ music = \relative g, {
   \time 4/4
   \clef "bass"
 
-  \repeat volta 2 {
-    | g8. g16 ~ g g g8 ~ g16 g8 g16 g e f fs
-  }
-
-  | g8. g16 ~ g16 e a8 ~ a bf8 ~ bf16 c8.
+  | g8. -> g16 -> ~ g g g8 -> ~ g16 g8 -> g16 g -> e f fs
+  | g8. -> g16 -> ~ g g g8 -> ~ g16 g8 -> g16 g -> e f fs
+  | g8. -> g16 -> ~ g16 e a8 ~ a bf8 ~ bf16 c8.
   | c16 ( d8 ) d16 ~ d a e'8 ~ e f4 g8
 
-  | g,8. g16 ~ g e g8 r16 c d e f e d c
-  | g8. g16 ~ g e g8 r16 c d e f d e d
-  | g,8. g16 ~ g e g8 r16 c d e f e d c
+  | g,8. -> g16 -> ~ g e g8 -> r16 c d e f e d c
+  | g8. -> g16 -> ~ g e g8 -> r16 c d e f d e d
+  | g,8. -> g16 -> ~ g e g8 -> r16 c d e f e d c
+  | g8. -> g16 -> ~ g8 \glissando g' -> ~ g16 g8 -> d16 g4 -> \glissando
 
-  | g8. g16 ~ g8 g' ~ g16 g8 d16 g4
+  | g,8. -> g16 -> ~ g e g8 -> r16 c d e f e d c
+  | g8. -> g16 -> ~ g e g8 -> r16 c d e f d e d
+  | g,8. -> g16 -> ~ g e g8 -> r16 c d e bf' -> d, a' -> g
+  | f8 -> f16 e -> ~ e e16 d8 -> d16 c8 -> c16 bf -> c bf8
 
-  | g,8. g16 ~ g e g8 r16 c d e f e d c
-  | g8. g16 ~ g e g8 r16 c d e f d e d
-  | g,8. g16 ~ g e g8 r16 c d e bf' d, a' g
-  | f8 f16 e ~ e e16 d8 d16 c8 c16 bf c bf8
-
-  \repeat volta 2 {
-    | g8. g16 ~ g g g'8 r16 g,8 g16 g' e, f fs
-  }
-  | g8. g16 ~ g16 e a8 ~ a bf8 ~ bf16 c8.
+  | g8. -> g16 -> ~ g g g'8 -> r16 g,8 -> g16 g' -> e, f fs
+  | g8. -> g16 -> ~ g g g'8 -> r16 g,8 -> g16 g' -> e, f fs
+  | g8. -> g16 -> ~ g16 e a8 ~ a bf8 ~ bf16 c8.
   | c16 ( d8 ) d16 ~ d a e'8 ~ e f4 f'16 fs
 
   \repeat volta 3 {
