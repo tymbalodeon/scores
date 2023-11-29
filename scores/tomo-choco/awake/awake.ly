@@ -68,7 +68,7 @@ music = \relative g, {
 
   | g,8. -> g16 -> ~ g8 \acciaccatura { g'16 } a8 -- ~ a g4 -- f8 -- ~
   | f d4 -- c -- a8 g r
-  | R1
+  | R1 \grace { \hideNotes b16 \glissando s \unHideNotes }
 
   | g'16 -> g g g -> r8 g16 -> g g g8. -> g8 -> \glissando g, \glissando
   | g'16 -> g g g -> r8 g16 -> g g g8. -> g8 -> d \glissando
