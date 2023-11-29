@@ -102,15 +102,15 @@ music = \relative g, {
   \bar "||"
   \key g \major
 
-  | r8 d'''16 ( b ) d,, -0 b'' ( a ) g, -0 e' ( fs g ) e d, -0 a -0 d' ( b )
-  | r8 d'16 ( b ) d,, b'' ( a ) g, e' ( fs g ) a d,, a b' ( a )
-  | r8 d'16 ( b ) d,, b'' ( a ) g, e' ( fs g ) e d, a d' ( b )
-  | r8 d'16 ( b ) d,, b'' ( a ) g, e' g fs e d, c' b a
+  | r8 \ottava #1 d'''16 ( b ) \ottava #0 d,, -0 \ottava #1 b'' ( a ) \ottava #0 g, -0 e' ( fs g ) e d, -0 a -0 d' ( b )
+  | r8 \ottava #1 d'16 ( b ) \ottava #0 d,, \ottava #1 b'' ( a ) \ottava #0 g, e' ( fs g ) a d,, a b' ( a )
+  | r8 \ottava #1 d'16 ( b ) \ottava #0 d,, \ottava #1 b'' ( a ) \ottava #0 g, e' ( fs g ) e d, a d' ( b )
+  | r8 \ottava #1 d'16 ( b ) \ottava #0 d,, \ottava #1 b'' ( a ) \ottava #0 g, e' g fs e d, -0 c' b a
 
-  | r8 d'16 ( b ) d,, b'' ( a ) g, e' ( fs g ) e d, a d' ( b )
-  | r8 d'16 ( b ) d,, b'' ( a ) g, e' ( fs g ) a d,, a c'' ( b )
-  | r8 d16 ( b ) d,, b'' ( a ) g, e' ( fs g ) e d, a d' ( b )
-  | r8 d16 ( b ) d,, b'' ( a ) g, d c'' b a g fs e d ~
+  | r8 \ottava #1 d'16 ( b ) \ottava #0 d,, \ottava #1 b'' ( a ) \ottava #0 g, e' ( fs g ) e d, a d' ( b )
+  | r8 \ottava #1 d'16 ( b ) \ottava #0 d,, \ottava #1 b'' ( a ) \ottava #0 g, e' ( fs g ) a d,, a \ottava #1 c'' ( b )
+  | r8 d16 ( b ) \ottava #0 d,, \ottava #1 b'' ( a ) \ottava #0 g, e' ( fs g ) e d, a d' ( b )
+  | r8 \ottava #1 d'16 ( b ) \ottava #0 d,, \ottava #1 b'' ( a ) \ottava #0 g, d \ottava #1 c'' b a \ottava #0 g fs e d ~
 
   | d1
 
