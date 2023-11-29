@@ -65,7 +65,7 @@ music = \relative c, {
   | df'8 -. df -- ~ df16 \xNote df af16 a bf8 -. bf4 -- c8 -.
   | df8 -. df4 -- c'16 f, df' af df,4 af'16 af,
   | df8 f af bf16 f c'16 ( df8 ) \xNote f,16 df' ( ef8 ) \xNote f,16
-  | ef'16 ( f8. ) ~ f4 r16 g ( a ) c bf ( a ) f a,,
+  | ef'16 ( f8. ) ~ f4 r16 g ( a ) c bf ( a ) f a,, -0
   | c'16 g' bf, ( a ) ~ a8 d,16 ( c ) ~ c2 \glissando
 
   | f,4. r16 \xNote f f8 -. f4. --
