@@ -27,8 +27,8 @@ music = \relative g, {
 
   | g,8. -> g16 -> ~ g e g8 -> r16 c d e f e d c
   | g8. -> g16 -> ~ g e g8 -> r16 c d e f d e d
-  | g,8. -> g16 -> ~ g e g8 -> r16 c d e bf' -> d, a' -> g
-  | f8 -> f16 e -> ~ e e16 d8 -> d16 c8 -> c16 bf -> c bf8
+  | g,8. -> g16 -> ~ g e g8 -> r16 c d e bf' -> d, -0 a' -> g -0
+  | f8 -> f16 e -> ~ e e16 d8 -> d16 c8 -> c16 bf -> ( c ) bf8
 
   | g8. -> g16 -> ~ g g g'8 -> r16 g,8 -> g16 g' -> e, f fs
   | g8. -> g16 -> ~ g g g'8 -> r16 g,8 -> g16 g' -> e, f fs
@@ -47,7 +47,7 @@ music = \relative g, {
   | e16 -> e e d -> ~ d d c ->  c c b8 -> d,16 -0 a' ( b ) a ( d, ) -0
   | <<
     {
-      s16 d -0 s d -> ~ d s d -> s s d8 -> s16 d
+      s16 d -0 s d -> ~ d s d -> s s d8 -> s16 d -0
     } \\ {
       d16 -> -1 s d s s d s d d s8 d16
     }
@@ -57,7 +57,8 @@ music = \relative g, {
   | f16 -> f f f -> r8 f16 -> f f f8 -> c16 f -> c f, fs
   | g16 -> g g g -> r e g -> g g g -> r e g8 -> g ->
 
-  | R1 * 5
+  | R1 * 2
+  | R1 * 3
   | r2 r4 r16 g8 -> e16
 
   | g8. -> g16 -> ~ g e g8 -> ~ g16 g' ( a ) d, -0 c' ( d8 ) d,16
@@ -69,8 +70,8 @@ music = \relative g, {
   | f d4 -- c -- a8 g r
   | R1
 
-  | g'16 -> g g g -> r8 g16 -> g g g8. -> g8 -> g,
-  | g'16 -> g g g -> r8 g16 -> g g g8. -> g8 -> d
+  | g'16 -> g g g -> r8 g16 -> g g g8. -> g8 -> \glissando g, \glissando
+  | g'16 -> g g g -> r8 g16 -> g g g8. -> g8 -> d \glissando
 
   | g,8. -> g16 -> ~ g e g8 -> r16 c d e f e d c
   | g8. -> g16 -> ~ g e g8 -> r16 c d e f d e d
@@ -89,7 +90,7 @@ music = \relative g, {
   | e16 -> e e d -> ~ d d c ->  c c b8 -> d,16 -0 a' ( b ) a ( d, ) -0
   | <<
     {
-      s16 d -0 s d -> ~ d s d -> s s d8 -> s16 d
+      s16 d -0 s d -> ~ d s d -> s s d8 -> s16 d -0
     } \\ {
       d16 -> -1 s d s s d s d d s8 d16
     }
@@ -102,15 +103,15 @@ music = \relative g, {
   \bar "||"
   \key g \major
 
-  | r8 d'''16 -> ^\markup \tiny "D" ( b ) d,, -0 b'' -> ( a ) g, -0 e' -> ( fs g ) e -> d, -0 a -0 d' -> ( b )
-  | r8 d'16 -> ( b ) d,, b'' -> ( a ) g, e' -> ( fs g ) a -> d,, a b' -> ( a )
-  | r8 d'16 -> ( b ) d,, b'' -> ( a ) g, e' -> ( fs g ) e -> d, a d' -> ( b )
-  | r8 d'16 -> ( b ) d,, b'' -> ( a ) g, e' -> g fs e d, -0 c' b a
+  | r8 d'''16 -> ^\markup \tiny "D" ( b ) d,, -0 b'' -> ( a ) ( g, ) -0 e' -> ( fs) ( g ) e ( -> d, ) -0 a -0 d' -> ( b )
+  | r8 d'16 -> ( b ) d,, b'' -> ( a ) ( g, ) e' -> ( fs ) ( g ) a -> d,, a b' -> ( a )
+  | r8 d'16 -> ( b ) d,, b'' -> ( a ) ( g, ) e' -> ( fs ) ( g ) e -> ( d, ) a d' -> ( b )
+  | r8 d'16 -> ( b ) d,, b'' -> ( a ) ( g, ) e' -> g fs e d, -0 c' b a
 
-  | r8 d'16 -> ( b ) d,, b'' -> ( a ) g, e' -> ( fs g ) e -> d, a d' -> ( b )
-  | r8 d'16 -> ( b ) d,, b'' -> ( a ) g, e' -> ( fs g ) a -> d,, a c'' -> ( b )
-  | r8 d16 -> ( b ) d,, b'' -> ( a ) g, e' -> ( fs g ) e -> d, a d' -> ( b )
-  | r8 d'16 -> ( b ) d,, b'' -> ( a ) g, d -> c'' b a g fs e d -> ~
+  | r8 d'16 -> ( b ) d,, b'' -> ( a ) ( g, ) e' -> ( fs ) (  g ) e ( -> d, ) a d' -> ( b )
+  | r8 d'16 -> ( b ) d,, b'' -> ( a ) ( g, ) e' -> ( fs ) ( g ) a -> d,, a c'' -> ( b )
+  | r8 d16 -> ( b ) d,, b'' -> ( a ) ( g, ) e' -> ( fs ) ( g ) e ( -> d, ) a d' -> ( b )
+  | r8 d'16 -> ( b ) d,, b'' -> ( a ) ( g, ) d -> c'' b a g fs e d -> ~
 
   | d1
 
