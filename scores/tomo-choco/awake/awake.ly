@@ -33,27 +33,15 @@ music = \relative g, {
   | g8. -> g16 -> ~ g g g'8 -> r16 g,8 -> g16 g' -> e, f fs
   | g8. -> g16 -> ~ g g g'8 -> r16 g,8 -> g16 g' -> e, f fs
   | g8. -> g16 -> ~ g16 e a8 ~ a bf8 ~ bf16 c8.
-  | c16 ( d8 ) d16 ~ d a e'8 ~ e f4 f'16 fs
+  | c16 ( d8 ) d16 ~ d a e'8 ~ e f4 f'16 fs (
 
-  \repeat volta 3 {
-    | g16 d, c' cs d f d8 r16 g,8 g16
+  | g16 ) d, -0 c' cs ( d ) f d8 r16 g,8 -0 g16 g'16 g, f' fs (
+  | g16 ) d, c' cs ( d ) f d8 r16 g,8 g16 g'16 g, f' fs (
+  | g16 ) d, c' cs ( d ) f d8 r16 g,8 -0 g16 g'16 d g,8 -1
 
-    \alternative {
-
-      \volta 1,2 {
-        g'16 g, f' fs
-      }
-
-      \volta 3 {
-        g16 d g,8
-      }
-    }
-  }
-
-
-  | g,8. g16 ~ g g g8 ~ g16 g8 e16 g e g8
-  | c8. c16 ~ c c c8 ~ c16 c8. d16 e g a
-  | b16 b b e, ~ e e b'16 b b e,8 e16 b' a, d8
+  | g,8. -> g16 -> ~ g g g8 -> ~ g16 g8 -> e16 g -> e g8 ->
+  | c8. -> c16 -> ~ c c c8 -> ~ c16 c8 -> \xNote c16 d ( e ) g ( a )
+  | b16 -> b b e, -> ~ e e b'16 -> b b e,8 -> e16 b' -> a, -0 d8 ->
   | c8. c16 ~ c c c8 ~ c d16 e g a b d
 
   | e16 e e d ~ d d c c c b8 d,16 a' b a d,
