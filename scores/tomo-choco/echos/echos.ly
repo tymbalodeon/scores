@@ -23,9 +23,11 @@ music = \relative fs, {
   | fs,4 r8 fs' ~ fs4 cs8 fs
   | b,4 r8 \appoggiatura fs'16 gs8 ~ gs4 fs8 ( gs )
   | b4. -- a8 -- ~ a4 gs4 -- ~
-  | gs8 fs4. -- e4 -. -> ds ->
+  | gs8 fs4. -- e4 -. -> ds -- -> \glissando
 
-  | r4. fs,8 -> ~ fs4 fs \glissando
+  \once\override NoteColumn.glissando-skip = ##t
+
+  | \parenthesize r4. fs,8 -> ~ fs4 fs \glissando
   | b1
   | fs4 r8 fs' ~ fs4 fs, \glissando
   | b1
@@ -77,9 +79,11 @@ music = \relative fs, {
   | R1 * 4
 
   | b'4. -- a8 -- ~ a2
-  | gs4. -- fs8 -- ~ fs4 e4 --
+  | gs4. -- fs8 -- ~ fs4 e4 \glissando
 
-  | r4. fs,8 -> ~ fs2 \glissando
+  \once\override NoteColumn.glissando-skip = ##t
+
+  | \parenthesize r4. fs,8 -> ~ fs2 \glissando
   | b2. r4
   | fs4. -- fs'8 -- ~ fs4 fs, \glissando
   | b2. r4
