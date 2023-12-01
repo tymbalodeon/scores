@@ -26,17 +26,17 @@ music = \relative fs, {
   | gs8 fs4. -- e4 -. -> ds ->
 
   | r4. fs,8 -> ~ fs4 fs \glissando
-  | b1 \glissando
-  | fs4. fs'8 ~ fs4 fs, \glissando
-  | b1 \glissando
+  | b1
+  | fs4 r8 fs' ~ fs4 fs, \glissando
+  | b1
 
-  | fs4. fs'8 ~ fs4 fs, \glissando
-  | b4. ds8 ~ ds4 fs8 ( gs )
+  | fs4 r8 fs' ~ fs4 fs, \glissando
+  | b4 r8 ds ~ ds4 fs8 ( gs )
   | b4. -- a8 -- ~ a2
   | gs4. -- fs8 -- ~ fs4 e4
 
-  | e'8 ds cs b ~ b e, ( fs ) b
-  | a8 gs fs e ~ e e, ( fs ) a
+  | e'8 -> ds cs b -> ~ b e, ( fs ) b
+  | a8 -> gs fs e -> ~ e e, ( fs ) a
   | b2. b4 \glissando
 
   | cs'2. b,4 \glissando
