@@ -108,33 +108,62 @@ music = \relative fs, {
   | e4. -- ds8 -- ~ ds4 cs8 b ~
 
   | b1
-  | r2. r8 a
+  | r2. r8
 
-  \repeat volta 3 {
-    | b''8 ^\markup \tiny "B" a gs fs ~ fs gs e a,,
-    | b''8 a gs fs ~ fs e ( ds ) fs,
-    | fs'8 e ds cs ~ cs ds b fs
+  <<
+    {
+      s8
 
-    \alternative {
-      \volta 1,2 {
-        | fs'8 e ds cs ~ cs a ( gs ) a,
+      \repeat volta 3 {
+        | b''8 ^\markup \tiny "B" a gs fs -. r gs e4
+        | b'8 a gs fs -. r e ( ds ) r
+        | fs8 e ds cs -. r ds b r
+
+        \alternative {
+          \volta 1,2 {
+            | fs'8 e ds cs -. r a ( gs ) r
+          }
+
+          \volta 3 {
+            | fs'8 e ds cs b a ( gs ) r
+
+            \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+
+            | b8 a gs fs -. r gs e r
+            | b'8 a gs fs -. r e ( ds ) r
+            | fs8 e ds cs -. r ds b r
+          }
+        }
       }
+    } \\ {
+      a8 ~
 
-      \volta 3 {
+      \repeat volta 3 {
+        | a4. r8 r4. a8 ~
+        | a4. r8 r4. fs'8 ~
+        | fs8 r r4 r4. fs8 ~
 
-        | fs''8 e ds cs b a gs fs
+        \alternative {
+          \volta 1,2 {
+            | fs8 r4. r a,8 \laissezVibrer
+          }
+
+          \volta 3 {
+            | \repeatTie fs'8 r r4 r4. a,8 ~
+            | a4. r8 r4. a8 ~
+            | a4. r8 r4. fs8 ~
+            | fs8 r r4 r4. e8
+          }
+        }
       }
     }
-  }
+  >>
 
-  | b8 a gs fs ~ fs gs e a,
-  | b'8 a gs fs ~ fs e ( ds ) fs,
-  | fs'8 e ds cs ~ cs ds b e,
-  | fs gs a b cs e ( fs ) b,
+  | fs8 gs a b cs e ( fs ) b,
 
   | a1
   | gs2. e4
-  | fs1
+  | fs1 \glissando
   | e'4 -- b' -- gs -- e --
 
   | b1
