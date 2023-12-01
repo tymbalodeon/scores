@@ -153,7 +153,7 @@ music = \relative fs, {
           }
 
           \volta 3 {
-            | \repeatTie fs'8 r r4 r4. a,8 ~
+            | fs'8 \repeatTie r r4 r4. a,8 ~
             | a4. r8 r4. a8 ~
             | a4. r8 r4. fs8 ~
             | fs8 r r4 r4. e8
