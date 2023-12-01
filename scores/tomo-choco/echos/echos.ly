@@ -46,28 +46,28 @@ music = \relative fs, {
   | fs,,4 r8 fs' ~ fs4 fs,
   | b4 r8 \appoggiatura fs'16 gs8 ~ gs fs4 cs8
   | fs,4 r8 fs' ~ fs4 cs8 fs
-  | b,4 fs'8 a, gs' a ( b4 )
+  | b,4 fs'8 << { r gs a ( b4 ) } \\ { a,8 ~ a2 } >>
 
-  | fs,4 r8 fs' ~ fs4 cs8 fs
+  | fs4 r8 fs' ~ fs4 cs8 fs
   | b,4 e,8 ( fs ) a b ( cs ) e
-  | fs,4. fs'8 ~ fs fs cs fs
-  | r8 b -> r b -> ~ b fs b fs
+  | fs,4 r8 fs' ~ fs fs cs fs
+  | r8 b -> r b -> ~ b fs b fs \glissando
 
-  | cs'8 cs cs b b e, ( fs ) b
-  | a8 a a gs gs fs e e,
+  | cs'8 -> cs cs b -> b e, ( fs ) b
+  | a8 -> a a gs -> gs fs e e,
 
-  | fs4. -- fs'8 -- ~ fs4 cs8 fs
+  | fs4 r8 fs' ~ fs4 cs8 fs
   | r8 b, -> r b -> ~ b4 r
-  | fs4. -- fs'8 -- ~ fs4 cs8 fs
-  | r8 b, -> r b -> ~ b b ( cs4 ) \glissando
+  | fs4 r8 fs' ~ fs4 cs8 fs
+  | r8 b, -> r b -> ~ b b -> ( cs4 ) \glissando
 
-  | e,4. e'8 ~ e4 \glissando fs, \glissando
-  | b4. b'8 ~ b4 b,
+  | e,4. -> e'8 ~ e4 \glissando fs, \glissando
+  | b4. -> b'8 ~ b4 b,
   | a4. a'8 ~ a b ( cs4 )
-  | gs4. -- fs8 -- ~ fs4 e --
+  | gs4. -- fs8 -- ~ fs4 e
 
-  | a,4. -- gs8 -- ~ gs4 fs -- \glissando
-  | b4. -- ds8 -- ~ ds4 fs -- \glissando
+  | a,4. -- gs8 -- ~ gs4 fs \glissando
+  | b4. -- ds8 -- ~ ds4 fs \glissando
   | fs'1 ~
   | fs2. b,4 \glissando
 
@@ -77,7 +77,7 @@ music = \relative fs, {
   | R1 * 4
 
   | b'4. -- a8 -- ~ a2
-  | gs4. -- fs8 -- ~ fs4 e4
+  | gs4. -- fs8 -- ~ fs4 e4 --
 
   | r4. fs,8 -> ~ fs2 \glissando
   | b2. r4
@@ -85,7 +85,7 @@ music = \relative fs, {
   | b2. r4
 
   | fs4. -- fs'8 -- ~ fs4 fs, \glissando
-  | b4. ds8 ~ ds4 fs8 ( gs )
+  | b4. -- ds8 -- ~ ds4 fs8 ( gs )
   | b4. -- a8 -- ~ a2
   | gs4. -- fs8 -- ~ fs4 e4 \glissando
 
@@ -170,7 +170,7 @@ music = \relative fs, {
   | r2. b4 \glissando
 
   | b'4. -- a8 -- ~ a4 gs4 -- ~
-  | gs8 fs4. -- e4 -. -> ds -> \glissando
+  | gs8 fs4. -- e4 -. -> ds -. ->
 
   | fs,8 fs'4. -> ~ fs2
 
