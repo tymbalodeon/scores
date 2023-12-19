@@ -32,7 +32,7 @@ music = \relative af {
   | af4 ~ af16 ef ef'8 d bf
   | f4. a8. c
 
-  | af4 ~ af16 ef ef'8 d bf
+  | af!4 ~ af16 ef ef'8 d bf
   | ef,4. bf'
   | c,4. g'
   | c,4. g'
@@ -40,48 +40,51 @@ music = \relative af {
   | af,2.
   | g2.
   | af2.
-  | f2.
+  | f4. ~ f4 f8 \glissando
 
   | af2.
   | ef'2.
-  | c'
-  | r4. r4 r16 ef,
+  | c' ~
+  | c4. ~ c4 ~ c16 ef,
 
   | af4 ~ af16 ef ef'8 d bf
   | ef,4. bf'4 ~ bf16 ef,
   | af4 ~ af16 ef ef'8 d bf
-  | f8. f, c' d
+  | f8. \glissando f, c' d
 
-  | af4. g''8 f ef
+  | af4. \acciaccatura { f''16 } g8 f ef
   | d8. bf ef, g,
+  | c2. ~
   | c2.
-  | R2.
 
   | ef2.
   | af,2.
   | g2.
   | af2.
 
-  | bf4. c8. ef
-  | f4. f,
-  | af4. ~ af4 af8
-  | af'2 ~ af8. ef16
+  | bf4. \4 \appoggiatura { bf16 \glissando } c8. ef
+  | f4. \glissando f, \glissando
+  | af4. ~ af4 ef'8 \2 \glissando
+  | af2 ~ af8. ef16
 
   | af4 ~ af16 ef ef'8 d c
   | bf8. g f8 ef d
-  | <c g'>8. c <c g'> \tuplet 4/3 { c8 g }
-  | \tuplet 4/3 { c8 d ef f }
-    \tuplet 4/3 { ef d c bf }
+  | <<
+    { g4. g8.  r8. }
+    \\
+    { c,8. c c \tuplet 4/3 { c8 g } }
+  >>
+  | \tuplet 4/3 { c8 d ef f } \tuplet 4/3 { ef d c bf }
 
-  | af4. af'
-  | g,4. bf'
-  | af,4. c'
-  | f,,4. f'8. ef16 c8
+  | af4. \4 \glissando af' \3 \glissando
+  | g,4. \glissando bf' \2 \glissando
+  | af,4. \glissando c' \glissando
+  | f,,4. \glissando f'8. ef16 c8
 
-  | af4. af'
-  | bf,4. g'
-  | c,2.
-  | R2.
+  | af4. \glissando af' \3 \glissando
+  | bf,4. \3 \glissando g'
+  | c,2. ~
+  | c2.
 
   | R2. * 6
 
