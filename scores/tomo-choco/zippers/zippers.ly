@@ -63,7 +63,7 @@ music = \relative af {
   | af2.
 
   | bf4. \4 \appoggiatura { bf16 \glissando } c8. ef
-  | f4. \glissando f, \glissando
+  | \appoggiatura { ef8 } f4. \glissando f, \glissando
   | af4. ~ af4 ef'8 \2 \glissando
   | af2 ~ af8. ef16
 
@@ -88,8 +88,19 @@ music = \relative af {
 
   | R2. * 6
 
-  | f,2. ~
-  | f2.
+  | f,8. f \glissando f' f \glissando
+  | f,8. f \glissando f' ef16 c8
+
+  | ef4. ~ ef8 f, g
+  | af4. ~ af8 ef'16 ( f8. ) \glissando
+  | g,4. ~ g8 \glissando ef'16 af ( bf8 )
+  | af,4. ~ af8 g af
+
+  | bf4. \appoggiatura { bf16 \glissando } c8. ef
+  | \appoggiatura { ef8 } f4. \glissando f,8. \glissando f' \glissando
+
+  | c'2. \3 ~
+  | c2.
 
   \bar "|."
 
