@@ -63,14 +63,31 @@ music = \relative e, {
 
   | r2. r8 e,
   | a4. gs8 ~ gs4 e
-  | fs4. fs'8 ~ fs4 r8. a,16
+  | fs4. fs'8 ~ fs4 r8.
 
-  \repeat volta 2 {
-    | e''16 cs a, e'' r a,, cs'16 a a, cs' r a, a'16 fs r8
-    | gs'16 e a,, b'' gs a,, gs'' e a,, b'' gs a,, gs'' e r a,,
-  }
+  <<
+    {
+      s16
 
-  | e''16 cs a, e'' r a,, cs'16 a a, e fs gs a b cs a
+      \repeat volta 2 {
+        | e'16 cs8 e16 r8 cs16 a8 cs16 r8 a16 fs r8
+        | gs'16 e r b' gs r gs e r b' gs r gs e r8
+      }
+
+      | e16 cs8 e16 r8 cs16 a r2
+    } \\ {
+
+      a,16 ~
+
+      \repeat volta 2 {
+        | a16 r a8 r16 a8 r16 a8 r16 a ~ a8 r16 a ~
+        | a16 r a8 r16 a8 r16 a8 r16 a ~ a r8 a16 \laissezVibrer
+      }
+
+      | a16 r a8 r16 a8 r16 a e fs gs \stemNeutral a b cs a
+    }
+  >>
+
   | b16 b b b r8 b16 b b b r fs b fs b8
   | r2. r8 e,16 ( fs )
   | ds'8 fs,16 cs' ~ cs fs, b8 r16 fs' fs8 ~ fs16 cs fs8 \glissando
