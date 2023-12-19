@@ -67,15 +67,30 @@ music = \relative e, {
 
   <<
     {
+      \voiceOne
+
+      r16
+
+      \repeat volta 2 {
+        | e'8. e16 -. r8 cs8. cs16 -. r8 a8 r8
+        | gs'8. b16 ~ b8 gs8 ~ gs16 b8. gs8 r8
+      }
+
+      | e8. e16 r8 cs8 r2
+    } \\ {
+      \voiceTwo
+
       s16
 
       \repeat volta 2 {
-        | e'16 cs8 e16 r8 cs16 a8 cs16 r8 a16 fs r8
-        | gs'16 e r b' gs r gs e r b' gs r gs e r8
+        | r16 cs8 r16 s8 r16 a8 r16 s8 r16 fs -. s8
+        | r16 e'8 r16 gs8 r16 e16 ~ e r gs8 r16 e s8
       }
 
-      | e16 cs8 e16 r8 cs16 a r2
-    } \\ {
+      | r16 cs8 r16 s8 r16 a s2
+    }
+    \\ {
+      \voiceFour
 
       a,16 ~
 
