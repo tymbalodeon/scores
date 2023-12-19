@@ -67,8 +67,6 @@ music = \relative e, {
 
   <<
     {
-      \voiceOne
-
       r16
 
       \repeat volta 2 {
@@ -78,20 +76,6 @@ music = \relative e, {
 
       | e8. e16 r8 cs8 r2
     } \\ {
-      \voiceTwo
-
-      s16
-
-      \repeat volta 2 {
-        | r16 cs8 r16 s8 r16 a8 r16 s8 r16 fs -. s8
-        | r16 e'8 r16 gs8 r16 e16 ~ e r gs8 r16 e s8
-      }
-
-      | r16 cs8 r16 s8 r16 a s2
-    }
-    \\ {
-      \voiceFour
-
       a,16 ~
 
       \repeat volta 2 {
@@ -101,9 +85,20 @@ music = \relative e, {
 
       | a16 r a8 r16 a8 r16 a e fs gs \stemNeutral a b cs a
     }
+    \\ {
+      \voiceTwo
+      s16
+
+      \repeat volta 2 {
+        | r16 cs'8 r16 s8 r16 a8 r16 s8 r16 fs -. s8
+        | r16 e'8 r16 gs8 r16 e16 ~ e r gs8 r16 e s8
+      }
+
+      | r16 cs8 r16 s8 r16 a s2
+    }
   >>
 
-  | b16 b b b r8 b16 b b b r fs b fs b8
+  | b,16 b b b r8 b16 b b b r fs b fs b8
   | r2. r8 e,16 ( fs )
   | ds'8 fs,16 cs' ~ cs fs, b8 r16 fs' fs8 ~ fs16 cs fs8 \glissando
 
