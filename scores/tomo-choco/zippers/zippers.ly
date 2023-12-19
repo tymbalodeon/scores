@@ -21,7 +21,7 @@ music = \relative af {
   | af4 ~ af16 ef ef'8 d bf
   | ef,4. bf'4 ~ bf16 ef,
   | af4 ~ af16 ef ef'8 d bf
-  | f4. c'16 d ~ d8. ef,16
+  | f4. c'16 ( d ) ~ d8. ef,16
 
   | af4 ~ af16 ef ef'8 d bf
   | ef,4. bf'
@@ -31,7 +31,7 @@ music = \relative af {
   | af4 ~ af16 ef ef'8 d bf
   | ef,4. bf'4 ~ bf16 ef,
   | af4 ~ af16 ef ef'8 d bf
-  | f4. a8. c
+  | f4. \acciaccatura { g16 } a8. c
 
   | af!4 ~ af16 ef ef'8 d bf
   | ef,4. bf'
