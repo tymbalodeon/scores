@@ -65,8 +65,8 @@ music = \relative af {
 
   | bf4. \4 \appoggiatura { bf16 \glissando } c8. ef
   | \appoggiatura { ef8 } f4. \glissando f, \glissando
-  | af4. ~ af4 ef'8 \2 \glissando
-  | af2 ~ af8. ef16
+  | af4. ~ af4 ef'8 ( \2 \glissando
+  | af2 ) ~ af8. ef16
 
   | af4 ~ af16 ef ef'8 d c
   | bf8. g f8 ef d
