@@ -65,6 +65,9 @@ music = \relative e, {
   | a4. gs8 ~ gs4 e
   | fs4. fs'8 ~ fs4 r8.
 
+  % TODO: move middle voice rests with:
+  % \once \override Voice.Rest.staff-position = #2
+
   <<
     {
       r16
