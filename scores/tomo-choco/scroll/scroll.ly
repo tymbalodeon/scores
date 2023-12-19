@@ -70,11 +70,11 @@ music = \relative e, {
       r16
 
       \repeat volta 2 {
-        | e'8. e16 -. r8 cs8. cs16 -. r8 a8 r8
-        | gs'8. b16 ~ b8 gs8 ~ gs16 b8. gs8 r8
+        | e'8. -- e16 -. r8 cs8. -- cs16 -. r8 a8 -- r8
+        | gs'8. -- b16 -- ~ b8 gs8 -- ~ gs16 b8. -- gs8 -- r8
       }
 
-      | e8. e16 r8 cs8 r2
+      | e8. -- e16 -. r8 cs8 -- r2
     } \\ {
       a,16 ~
 
