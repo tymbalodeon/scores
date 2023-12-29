@@ -28,11 +28,11 @@ melody = \new Staff {
     \layout {
       \context {
         \Score \consists
-          #(set-bars-per-line '(
-            4 4 4 3 3
-            4 4 4 3 4
-          )
-        )
+        #(set-bars-per-line '(
+                               4 4 4 3 3
+                               4 4 4 3 4
+                               )
+                            )
       }
     }
 
@@ -45,6 +45,10 @@ melody = \new Staff {
 
 \book {
   \bookOutputSuffix "bass"
+
+  \header {
+    arranger = "Ben Rosen, bass"
+  }
 
   \score {
     \new Staff \with {
