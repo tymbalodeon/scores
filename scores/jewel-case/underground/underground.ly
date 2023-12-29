@@ -2,14 +2,18 @@
 
 \include "helpers/settings.ily"
 \include "helpers/set-bars-per-line.ily"
+\include "helpers/bar-numbers-left.ily"
 
 \include "underground-changes.ily"
 \include "underground-melody.ily"
 \include "underground-structure.ily"
 
+\include "underground-bass.ily"
+
 \header {
   title = "Underground"
-  composer = "Jewel Case"
+  subtitle = "Jewel Case"
+  composer = "Nick Brown"
 }
 
 melody = \new Staff {
@@ -19,19 +23,36 @@ melody = \new Staff {
   >>
 }
 
-\layout {
-  \context {
-    \Score \consists
-    #(set-bars-per-line '(
-                           4 4 4 3 3
-                           4 4 4 3 4
-                           ))
+\book {
+  \score {
+    \layout {
+      \context {
+        \Score \consists
+          #(set-bars-per-line '(
+            4 4 4 3 3
+            4 4 4 3 4
+          )
+        )
+      }
+    }
+
+    <<
+      \changes
+      \melody
+    >>
   }
 }
 
-\score {
-  <<
-    \changes
-    \melody
-  >>
+\book {
+  \bookOutputSuffix "bass"
+
+  \score {
+    \new Staff \with {
+      instrumentName = "Bass"
+    }
+    {
+      \compressMMRests
+      \bass
+    }
+  }
 }
