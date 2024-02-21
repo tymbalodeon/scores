@@ -13,6 +13,8 @@
 music = \relative c'' {
     \key c \major
     \time 4/4
+    \clef "bass"
+
     | c1
 }
 
