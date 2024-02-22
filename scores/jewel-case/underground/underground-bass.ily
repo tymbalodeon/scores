@@ -1,19 +1,29 @@
 bass = \relative g, {
   \clef "bass"
-  \time 6/8
+  \time 9/16
 
-  R2.
-  | r4. r8 g b
+  R16 * 9
+  | r8. g b
 
-  | c4. e,
-  | a4. ~ a4 g8
-  | f4. g
-  | c4. ~ c8 g b
+  | c4. ~ c8.
+  | e,4. ~ e8.
+  | a4. ~ a8. ~
+  | a8. a g
 
-  | c4. e,
-  | a4. ~ a8 a g
-  | f4. g
-  | c4. ~ c4 \appoggiatura f16 g8
+  | f4. ~ f8.
+  | g4. ~ g8.
+  | c4. ~ c8. ~
+  | c8. g b
+
+  | c4. ~ c8.
+  | e,4. ~ e8.
+  | a4. ~ a8. ~
+  | a8. a g
+
+  | f4. ~ f8.
+  | g4. ~ g8.
+  | c4. ~ c8. ~
+  | c4. \appoggiatura f16 g8.
 
   | c,4. e,
   | a4. ~ a4 g8
