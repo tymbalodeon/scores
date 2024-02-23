@@ -5,6 +5,7 @@
 
 \header {
   title = "Hum on the Wire"
+  subtitle = "Monday Appreciation Society"
   composer = "Mark Rybaltowski"
   arranger = "Ben Rosen, bass"
 }
