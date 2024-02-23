@@ -57,7 +57,12 @@ music = \relative c {
   | g8 g r c ~ c g c4
   | e8 e r a, ~ a e' a r
   | g,8 g r c ~ c g c4
+  | e8 g a b r a,4 e8
+
+  | g8 g r c ~ c g c4
   | e8 e r a, ~ a e' a r
+  | g,8 g r c ~ c g c d (
+  | e8 ) e, fs g a b c d
 }
 
 \score {
