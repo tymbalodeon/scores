@@ -1,4 +1,4 @@
-\version "2.25.1"
+\version "2.25.13"
 
 \include "helpers/settings.ily"
 \include "helpers/bar-numbers-left.ily"
@@ -10,17 +10,17 @@
 }
 
 music = \relative c'' {
-    \key c \major
-    \time 4/4
-    | c1
+  \key c \major
+  \time 4/4
+  | c1
 }
 
 \score {
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \music
-    }
+  \new Staff \with {
+    instrumentName = "Bass"
+    \numericTimeSignature
+  } {
+    \compressMMRests
+    \music
+  }
 }

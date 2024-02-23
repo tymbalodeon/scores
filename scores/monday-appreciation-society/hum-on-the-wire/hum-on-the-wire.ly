@@ -11,7 +11,7 @@
 }
 
 music = \relative c {
-  \key c \major
+  \key g \major
   \time 4/4
   \clef "bass"
 
