@@ -39,8 +39,8 @@ music = \relative c {
   | e8 g ( a ) c, ~ c g' g,4
 
   | a4 a ~ a8 b ( c ) g ~
-  | g8 d' g d ~ d a' d d,
-  | a4 a ~ a8 e fs g ~
+  | g8 d' g d ~ d a' d4
+  | a,4 a ~ a8 e fs g ~
   | g8 b c d ~ d a d e,
 
   | a4 b8 e, c'8 d ( e ) g ~
@@ -109,8 +109,8 @@ music = \relative c {
   | e8 g ( a ) c, ~ c g' g, ( e )
 
   | a4 a ~ a8 b ( c ) g ~
-  | g8 d' g d ~ d a' d d,
-  | a4 a ~ a8 e fs g ~
+  | g8 d' g d ~ d a' d4
+  | a,4 a ~ a8 e fs g ~
   | g8 b c d ~ d a d e,
 
   | a4 b8 e, c'8 d ( e ) g ~
