@@ -138,9 +138,9 @@ music = \relative c {
   | c4 g'8 c, d' ( e4 ) a,8
   | e'8 ( g4 ) a8 ~ a g e d ~
   | d2 r
-  | R1
+  | r2. r8 e,, (
 
-  | g,,4 g' d'8 g, e, e' ~
+  | g4 ) g' d'8 g, e, e' ~
   | e b' a, c ~ c b ( a ) e
   | g4 g' d'8 g, e, e' ~
   | e b' a, c ~ c b ( a ) e
