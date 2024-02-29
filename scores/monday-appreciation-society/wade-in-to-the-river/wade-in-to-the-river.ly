@@ -81,7 +81,7 @@ music = \relative c' {
   | af8 ) ef' r g ~ g f, g af
   | bf8 bf' r ef, ~ ef bf ef4
 
-  | af,8 ) ef' r g ~ g f ef c
+  | af,8 ef' r g ~ g f ef c
   | bf8 bf' r ef, ~ ef bf ef4
 
   | bf4 bf8 bf ~ bf bf bf g' (
