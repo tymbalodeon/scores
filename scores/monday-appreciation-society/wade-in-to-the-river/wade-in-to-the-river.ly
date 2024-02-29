@@ -54,7 +54,49 @@ music = \relative c' {
   | ef' d c4 ~ c8 bf g4
 
   | bf,2 ~ bf8 c ( d ) f
-  | bf8 ( c )
+  | bf8 ( c4. ) ~ c8 f, ( g ) r
+  | c8 ( d4. ) r4 f8 ( g ) ~
+  | g4 f ef d
+
+  | R1 * 4
+
+  | af8 ef' r g ~ g ef bf ef, (
+  | f8 ) f' r ef ~ ef c bf ef,
+  | af8 ef' r g ~ g ef bf ef, (
+  | f8 ) f' r g, ~ g af bf4
+
+  | af8 ef' r g ~ g ef bf ef, (
+  | f8 ) f' r ef ~ ef c bf ef,
+  | af8 ef' r g ~ g ef bf ef, (
+  | bf8 ) bf' r ef, ~ ef bf ef4
+
+  | af,8 ef' r g ~ g ef bf ef
+  | f,8 f' r ef ~ ef c bf g (
+  | af8 ) ef' r g ~ g ef bf ef
+  | f,8 f' r g ~ g af bf4
+
+  | af,8 ef' r g ~ g ef bf ef
+  | f,8 f' r ef ~ ef c bf g (
+  | af8 ) ef' r g ~ g f, g af
+  | bf8 bf' r ef, ~ ef bf ef4
+
+  | af,8 ) ef' r g ~ g f ef c
+  | bf8 bf' r ef, ~ ef bf ef4
+
+  | bf4 bf8 bf ~ bf bf bf g'
+  | af4 af g f
+  | bf,4 bf8 bf ~ bf bf bf g
+  | af4 af g f
+
+  | bf4 bf8 bf ~ bf bf bf g'
+  | af4 af g f
+  | bf,4 bf8 bf ~ bf bf bf g
+
+  \time 2/4
+
+  | af8 ( bf ) c4
+
+  \time 4/4
 }
 
 \score {
