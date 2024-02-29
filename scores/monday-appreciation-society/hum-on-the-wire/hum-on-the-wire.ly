@@ -107,14 +107,14 @@ music = \relative c {
 
   \time 4/4
 
-  | fs4 r r4. g,8
+  | fs4 r r4 r8 g,
   | c2 r
-  | r2 r4. g8
+  | r2 r4 r8 g
   | c2 r
 
-  | r2 r4. g8
+  | r2 r4 r8 g
   | c2 r
-  | r2 r4. g8
+  | r2 r4 r8 g
   | <c g'>1
 
   \bar "|."
