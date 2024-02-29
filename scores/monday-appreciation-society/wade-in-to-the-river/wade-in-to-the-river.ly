@@ -58,15 +58,16 @@ music = \relative c' {
   | c8 ( d4. ) r4 f8 ( g ) ~
   | g4 f ef d
 
-  | R1 * 4
+  | R1 * 3
+  | r2. r8 ef,
 
   | af8 ef' r g ~ g ef bf ef, (
   | f8 ) f' r ef ~ ef c bf ef,
   | af8 ef' r g ~ g ef bf ef, (
-  | f8 ) f' r g, ~ g af bf4
+  | f8 ) f' r g, ~ g af bf ef,
 
   | af8 ef' r g ~ g ef bf ef, (
-  | f8 ) f' r ef ~ ef c bf ef,
+  | f8 ) f' r ef ~ ef c bf g
   | af8 ef' r g ~ g ef bf ef, (
   | bf8 ) bf' r ef, ~ ef bf ef4
 
@@ -83,13 +84,23 @@ music = \relative c' {
   | af,8 ) ef' r g ~ g f ef c
   | bf8 bf' r ef, ~ ef bf ef4
 
+  | bf4 bf8 bf ~ bf bf bf g' (
+  | af4 ) af g f
+  | bf,4 bf8 bf ~ bf bf bf g
+  | af4 af g f
+
   | bf4 bf8 bf ~ bf bf bf g'
   | af4 af g f
   | bf,4 bf8 bf ~ bf bf bf g
   | af4 af g f
 
   | bf4 bf8 bf ~ bf bf bf g'
-  | af4 af g f
+  | af8 ef af4 g f
+  | bf,4 bf8 bf ~ bf bf bf g
+  | af ef' af4 g8 f ef4
+
+  | bf4 bf8 bf ~ bf bf bf g'
+  | af8 bf c4 bf8 af g4
   | bf,4 bf8 bf ~ bf bf bf g
 
   \time 2/4
@@ -97,6 +108,44 @@ music = \relative c' {
   | af8 ( bf ) c4
 
   \time 4/4
+
+  | ef2 bf'8 ( c4. )
+  | g,8 af bf4 ~ bf8 ef bf4
+  | c2 bf'8 ( c4 ) f,8
+  | ef' d c4 ~ c8 bf g4
+
+  | bf,2 ~ bf8 c ( d ) f
+  | bf8 ( c4. ) ~ c8 f, ( g ) r
+  | c8 ( d4. ) r4 f8 ( g ) ~
+  | g4 f ef8 d bf4
+
+  | ef,2 ~ ef8 ef bf' g' ~
+  | g4 bf, ~ bf8 ef, bf'4
+  | af,2 ~ af8 af' ef' af ~
+  | af4 g ~ g8 ef af,4
+
+  | c,2 ~ c8 c g' ef' ~
+  | ef4 g, ~ g8 c, g'4
+  | bf,2 ~ bf8 f' d' bf' ~
+  | bf4 af g8 f ef4
+
+  | ef,2 ~ ef8 ef bf' g' ~
+  | g4 bf, ~ bf8 ef, bf'4
+  | af,2 ~ af8 af' ef' af ~
+  | af4 g ~ g8 ef af,4
+
+  | c,2 ~ c8 c g' ef' ~
+  | ef4 d ~ d8 c g4
+  | bf,2 ~ bf8 c ( d ) f
+  | bf8 ( c4. ) ~ c8 f, ( g ) r
+
+  | c8 ( d4. ) r4 f8 ( g ) ~
+  | g4 f ef d
+
+  | ef1 ~
+  | ef1
+
+  \bar "|."
 }
 
 \score {
