@@ -24,22 +24,22 @@ music = \relative c' {
   | bf4. ef,8 ~ ef4 ef'
 
   | af,4. g8 ~ g2
-  | f4. g8 ~ g af bf4
+  | f4. g8 ~ g af ( bf4 )
   | af4. g8 ~ g2
   | f4. ef8 ~ ef4 r
 
   | af4. g8 ~ g2
-  | f4. g8 ~ g af bf4
+  | f4. g8 ~ g af ( bf4 )
   | af4. g8 ~ g2
   | bf4. ef,8 ~ ef4 r
 
-  | bf4 bf8 bf ~ bf bf bf g'
-  | af4 af g f
-  | bf,4 bf8 bf ~ bf bf bf g
-  | af4 af g f
+  | bf4 bf8 bf ~ bf bf bf g' (
+  | af4 ) af g f
+  | bf,4 bf8 bf ~ bf bf bf g (
+  | af4 ) af g f
 
-  | bf4 bf8 bf ~ bf bf bf g'
-  | af4 af g f
+  | bf4 bf8 bf ~ bf bf bf g' (
+  | af4 ) af g f
   | bf,4 bf8 bf ~ bf bf bf g
 
   \time 2/4
@@ -64,17 +64,17 @@ music = \relative c' {
   | af8 ef' r g ~ g ef bf ef, (
   | f8 ) f' r ef ~ ef c bf ef,
   | af8 ef' r g ~ g ef bf ef, (
-  | f8 ) f' r g, ~ g af bf ef,
+  | f8 ) f' r g, ~ g af ( bf ) ef,
 
   | af8 ef' r g ~ g ef bf ef, (
   | f8 ) f' r ef ~ ef c bf g
-  | af8 ef' r g ~ g ef bf ef, (
-  | bf8 ) bf' r ef, ~ ef bf ef4
+  | af8 ef' r g ~ g ef bf ef,
+  | bf8 bf' r ef, ~ ef bf ef4
 
   | af,8 ef' r g ~ g ef bf ef
   | f,8 f' r ef ~ ef c bf g (
   | af8 ) ef' r g ~ g ef bf ef
-  | f,8 f' r g ~ g af bf4
+  | f,8 f' r g ~ g af ( bf4 )
 
   | af,8 ef' r g ~ g ef bf ef
   | f,8 f' r ef ~ ef c bf g (
@@ -86,21 +86,21 @@ music = \relative c' {
 
   | bf4 bf8 bf ~ bf bf bf g' (
   | af4 ) af g f
-  | bf,4 bf8 bf ~ bf bf bf g
-  | af4 af g f
+  | bf,4 bf8 bf ~ bf bf bf g (
+  | af4 ) af g f
 
-  | bf4 bf8 bf ~ bf bf bf g'
-  | af4 af g f
-  | bf,4 bf8 bf ~ bf bf bf g
-  | af4 af g f
+  | bf4 bf8 bf ~ bf bf bf g' (
+  | af4 ) af g f
+  | bf,4 bf8 bf ~ bf bf bf g (
+  | af4 ) af g f
 
-  | bf4 bf8 bf ~ bf bf bf g'
-  | af8 ef af4 g f
-  | bf,4 bf8 bf ~ bf bf bf g
-  | af ef' af4 g8 f ef4
+  | bf4 bf8 bf ~ bf bf bf g' (
+  | af8 ) ef af4 g f
+  | bf,4 bf8 bf ~ bf bf bf g (
+  | af ) ef' af4 g8 f ef4
 
-  | bf4 bf8 bf ~ bf bf bf g'
-  | af8 bf c4 bf8 af g4
+  | bf4 bf8 bf ~ bf bf bf g' (
+  | af8 ) bf c4 bf8 af g4
   | bf,4 bf8 bf ~ bf bf bf g
 
   \time 2/4
@@ -119,23 +119,26 @@ music = \relative c' {
   | c8 ( d4. ) r4 f8 ( g ) ~
   | g4 f ef8 d bf4
 
-  | ef,2 ~ ef8 ef bf' g' ~
-  | g4 bf, ~ bf8 ef, bf'4
+
+  \override TextSpanner.bound-details.left.text = \markup { \draw-line #'(0 . -1) }
+  \override TextSpanner.bound-details.right.text = \markup { \draw-line #'(0 . -1) }
+  | ef,2 ~ ef8 ef  \startTextSpan bf' g' ~
+  | g4 bf, ~ bf8 ef, bf'4 \stopTextSpan
   | af,2 ~ af8 af' ef' af ~
   | af4 g ~ g8 ef af,4
 
-  | c,2 ~ c8 c g' ef' ~
-  | ef4 g, ~ g8 c, g'4
+  | c,2 ~ \startTextSpan c8 c g' ef' ~
+  | ef4 g, ~ g8 c, g'4 \stopTextSpan
   | bf,2 ~ bf8 f' d' bf' ~
   | bf4 af g8 f ef4
 
-  | ef,2 ~ ef8 ef bf' g' ~
-  | g4 bf, ~ bf8 ef, bf'4
+  | ef,2 ~ \startTextSpan ef8 ef bf' g' ~
+  | g4 bf, ~ bf8 ef, bf'4 \stopTextSpan
   | af,2 ~ af8 af' ef' af ~
   | af4 g ~ g8 ef af,4
 
-  | c,2 ~ c8 c g' ef' ~
-  | ef4 d ~ d8 c g4
+  | c,2 ~ \startTextSpan c8 c g' ef' ~
+  | ef4 \stopTextSpan d ~ d8 c g4
   | bf,2 ~ bf8 c ( d ) f
   | bf8 ( c4. ) ~ c8 f, ( g ) r
 
