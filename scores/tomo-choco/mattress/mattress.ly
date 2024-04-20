@@ -9,30 +9,18 @@
   arranger = "Ben Rosen, bass"
 }
 
-intro = {
-  | R1 * 4
-}
-
 verseOne = \relative a, {
-  | r8 a e' a, ~ a4 e'8 e,
-  | R1
-  | r8 a e' a, ~ a4 e'8 e,
-  | r4 r8 e r e r4
+  | R1 * 8
 
-  | r8 a e' a, ~ a4 e'8 e, ~
-  | e8 fs ( gs ) b ~ b4 cs8 e
-  | r8 a, e' a, ~ a4 e'8 e,
-  | r2 r4 b' \glissando
+  | R1 * 3
+  | r2 r4 b \glissando
 
   | a'1
   | g4. f8 ~ f2
   | e4. e,8 ~ e2
   | gs1
 
-  | r8 a e' a, ~ a2
-  | r8 e e' e, r2
-  | R1
-  | r4 r8 e' r e r4
+  | R1 * 4
 }
 
 chorus = \relative a, {
@@ -73,23 +61,18 @@ postChorusTwo = \relative e, {
 }
 
 end = \relative fs, {
-  \repeat volta 3 {
-    | fs8 e'16 es fs8 cs e16 es fs8 cs e,
+  | R1 * 2
+  | b8 d' ( cs ) b a fs d e,
 
-    \alternative {
-      \volta 1,2 {
-        | fs8 e'16 es fs8 cs e16 es fs8 cs a
-        | b8 d' ( cs ) b a fs d e,
-      }
+  | fs8 e'16 es fs8 cs e16 es fs8 cs e,
+  | fs8 e'16 es fs8 cs e16 es fs8 cs a
+  | b8 d' ( cs ) b a fs d e,
 
-      \volta 3 {
-        | fs8 b'16 bs cs8 cs, b'16 bs cs8 cs, a
-        | b8 d'' ( cs ) b a fs e d
-        | cs b a gs fs e ds cs ~
-        | cs2 r
-      }
-    }
-  }
+  | fs8 e'16 es fs8 cs e16 es fs8 cs e,
+  | fs8 b'16 bs cs8 cs, b'16 bs cs8 cs, a
+  | b8 d'' ( cs ) b a fs e d
+  | cs b a gs fs e ds cs ~
+  | cs2 r
 }
 
 verseTwo = \relative a, {
@@ -126,7 +109,7 @@ verseTwo = \relative a, {
   | a,8 a' e' a,, a' \glissando b fs' a,,
   | b' \glissando cs gs' cs, \glissando b fs' a, b ~
   | b1
-  | r4 r8 e,, r e r4
+  | R1
 }
 
 bridge = \relative e' {
@@ -148,7 +131,6 @@ music = \relative a, {
   \time 4/4
   \clef "bass"
 
-  \intro
   \verseOne
   \chorus
   \postChorusOne
