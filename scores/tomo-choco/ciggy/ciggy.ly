@@ -71,9 +71,8 @@ music = \relative c {
     | c2 r4 ef, \glissando
 
     | af,4. r8 af8 af4 r8
-
-    | r4. r16 c \glissando bf'8. f16 c'4
-    | ef4. ef,8 c'' bf af f
+    | af4. r8 af8 af4 r8
+    | af4. ef''8 c' bf af f
     | ef1
 
     \bar "|."
