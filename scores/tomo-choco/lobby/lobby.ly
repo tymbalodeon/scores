@@ -46,10 +46,10 @@ music = \relative c {
 
     | f,4. ~ f8 f g
     | a8. e' a8. e16 a,8
-    | g8. g' b,16 b8 b8 g16
-    | d'8. d8 g,16 g'8 e d
+    | g8. g8 ( e16 ) b' b8 b8 g16
+    | d'8. d8 b16 g'8 g16 d g,8
 
-    | g,8. g8 ( e16 ) ( g16 ) g8 g ( e16 ) (
+    | g8. g8 ( e16 ) ( g16 ) g8 g ( e16 ) (
     | g16 ) g g g8 ( e16 ) ( g ) a ( b ) d g ( a )
     | fs'16 fs fs d ( d, ) d fs' fs fs d ( d, ) d
     | fs'16 d ( d, ) a'' d, ( d, ) fs' d d, a'' c, ( b )
@@ -102,10 +102,10 @@ music = \relative c {
 
     | f,4. ~ f8 f g
     | a8. e' a8. e16 a,8
-    | g8. g' b,16 b8 b8 g16
-    | d'8. d8 g,16 g'8 e d
+    | g8. g8 ( e16 ) b' b8 b8 g16
+    | d'8. d8 b16 g'8 g16 d g,8
 
-    | g,8. g8 ( e16 ) ( g16 ) g8 g ( e16 ) (
+    | g8. g8 ( e16 ) ( g16 ) g8 g ( e16 ) (
     | g16 ) g g g8 ( e16 ) ( g ) a ( b ) d g ( a )
     | fs'16 fs fs d ( d, ) d fs' fs fs d ( d, ) d
     | fs'16 d ( d, ) a'' d, ( d, ) fs' d d, a'' c, ( b )
@@ -114,6 +114,19 @@ music = \relative c {
     | e8. e, fs g
     | a16 c'8 a, e16 a8 g fs
     | e8 g'' fs e b e,
+
+    | R2. * 8
+
+    | a,4 ~ a16 e' b' ( cs ) e,, ( fs ) ( g ) ( e )
+    | a8. b cs e
+    | a'8 a,,16 a''8 a,,16 b''8 a,,16 b''8 a,,16
+    | g''8 a,,16 g''8 a,,16 fs''8 e a,
+
+    | d,4 a8 d4 a'8
+    | d2.
+
+    | R2. * 2
+
  }
 
 \score {
