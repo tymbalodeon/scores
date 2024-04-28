@@ -125,7 +125,15 @@ music = \relative c {
     | d,4 a8 d4 a'8
     | d2.
 
-    | R2. * 2
+    | g,,4. ~ g8 a16 ( b ) d ( e )
+    | g8. fs e d
+    | a4 ~ a16 e' b' ( cs ) e,, ( fs ) ( g ) ( e )
+    | a8. b cs e
+
+    | a'8 a,,16 a''8 a,,16 b''8 a,,16 b''8 a,,16
+    | c2.
+
+    \bar "|."
 
  }
 
