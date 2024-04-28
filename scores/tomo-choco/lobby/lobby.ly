@@ -52,7 +52,7 @@ music = \relative c {
     | g8. g8 ( e16 ) ( g16 ) g8 g ( e16 ) (
     | g16 ) g g g8 ( e16 ) ( g ) a ( b ) d g ( a )
     | fs'16 fs fs d ( d, ) d fs' fs fs d ( d, ) d
-    | fs'16 d ( d, ) a'' d, ( d, ) fs' d d, a'' c, ( b )
+    | fs'16 d ( d, ) a'' d, ( d, ) fs' d d, e' c ( b )
 
     | a8. e,16 fs ( g ) a8 b c
     | e8. e, fs g
@@ -108,7 +108,7 @@ music = \relative c {
     | g8. g8 ( e16 ) ( g16 ) g8 g ( e16 ) (
     | g16 ) g g g8 ( e16 ) ( g ) a ( b ) d g ( a )
     | fs'16 fs fs d ( d, ) d fs' fs fs d ( d, ) d
-    | fs'16 d ( d, ) a'' d, ( d, ) fs' d d, a'' c, ( b )
+    | fs'16 d ( d, ) a'' d, ( d, ) fs' d d, e' c ( b )
 
     | a8. e,16 fs ( g ) a8 b c
     | e8. e, fs g
