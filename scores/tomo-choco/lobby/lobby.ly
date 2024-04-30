@@ -130,7 +130,7 @@ music = \relative c {
     | a4 ~ a16 e' b' ( cs ) e,, ( fs ) ( g ) ( e )
     | a8. b cs e
 
-    | a'8 a,,16 a''8 a,,16 b''8 a,,16 b''8 a,,16
+    | a'8 a,,16 a''8 a,,16 b''8 a,,16 e a b
     | c2.
 
     \bar "|."
