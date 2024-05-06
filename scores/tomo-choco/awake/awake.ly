@@ -15,12 +15,9 @@ music = \relative g, {
   \time 4/4
   \clef "bass"
 
-  | g8. -> g16 -> ~ g g g8 -> ~ g16 g8 -> g16 g -> e f fs
-  | g8. -> g16 -> ~ g g g8 -> ~ g16 g8 -> g16 g -> e f fs
-  | g8. -> g16 -> ~ g16 e a8 ~ a bf8 ~ bf16 c8.
-  | c16 ( d8 ) d16 ~ d a e'8 ~ e f4 g8
+  | R1 * 4
 
-  | g,8. -> g16 -> ~ g e g8 -> r16 c d e f e d c
+  | g8. -> g16 -> ~ g e g8 -> r16 c d e f e d c
   | g8. -> g16 -> ~ g e g8 -> r16 c d e f d e d
   | g,8. -> g16 -> ~ g e g8 -> r16 c d e f e d c
   | g8. -> g16 -> ~ g8 \glissando g' -> ~ g16 g8 -> d16 g4 -> \glissando
