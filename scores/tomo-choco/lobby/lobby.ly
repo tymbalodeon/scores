@@ -16,30 +16,52 @@ music = \relative c {
     
     | R2. * 7
 
-    | g4. ~ g8 a16 ( b ) d ( e )
-    | g8. fs e8 a,16 ( b ) d8
-    | cs4 ~ cs16 a' e' ( fs ) ( e ) d, d' d,
-    | cs'8. b a8 g16 fs e8
+    | g4. ~ g4 b8
+    | g'8. fs e d
+    | cs4. ~ cs4 b8
+    | e,2.
 
-    | a,4 ~ a16 e' b' ( cs ) e,, ( fs ) ( g ) ( e )
+    | a4. ~ a4 e8
+    | a8. b cs e
+    | d4 a8 d4 a'8
+    | d2.
+
+    | g,,4. ~ g4 b8
+    | g'8. fs e d
+    | cs4. ~ cs8 a16 ( b ) d ( e )
+    | e,2.
+
+    | a4. ~ a4 e8
+    | a8. b cs e
+    | a4. ~ a4 e8
     | a8. b cs e
 
-    | d4 a8 d4 a'8
-    | d4. ~ d4 a8 \glissando
+    | d,4 a8 d4 a'8
+    | d2.
 
-    | g,4 b8 \glissando g'' fs e
-    | d8 a,16 ( b ) d ( e ) g8 a16 ( b8. ) \glissando
-    | cs,8. a'16 e' ( fs ) ( e ) d, a' ( b ) d d,
-    | cs'8. b a8 g16 fs e8
+    % | g4. ~ g8 a16 ( b ) d ( e )
+    % | g8. fs e8 a,16 ( b ) d8
+    % | cs4 ~ cs16 a' e' ( fs ) ( e ) d, d' d,
+    % | cs'8. b a8 g16 fs e8
 
-    | a,4 ~ a16 e' b' ( cs ) e,, ( fs ) ( g ) ( e )
-    | a8. b cs e
-    | a'8 a,,16 a''8 a,,16 b''8 a,,16 b''8 a,,16
-    | g''8 a,,16 g''8 a,,16 fs''8 e d
-    | e8 a,,16 e''8 a,,16 e''8 a,,16 b cs8
+    % | a,4 ~ a16 e' b' ( cs ) e,, ( fs ) ( g ) ( e )
+    % | a8. b cs e
+    % | d4 a8 d4 a'8
+    % | d4. ~ d4 a8 \glissando
 
-    | d4 a8 d4 a'8
-    | d4. ~ d8 a d,
+    % | g,4 b8 \glissando g'' fs e
+    % | d8 a,16 ( b ) d ( e ) g8 a16 ( b8. ) \glissando
+    % | cs,8. a'16 e' ( fs ) ( e ) d, a' ( b ) d d,
+    % | cs'8. b a8 g16 fs e8
+
+    % | a,4 ~ a16 e' b' ( cs ) e,, ( fs ) ( g ) ( e )
+    % | a8. b cs e
+    % | a'8 a,,16 a''8 a,,16 b''8 a,,16 b''8 a,,16
+    % | g''8 a,,16 g''8 a,,16 fs''8 e d
+    % | e8 a,,16 e''8 a,,16 e''8 a,,16 b cs8
+
+    % | d4 a8 d4 a'8
+    % | d4. ~ d8 a d,
 
     \bar "||"
     \key g \major
