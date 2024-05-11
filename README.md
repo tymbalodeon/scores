@@ -10,7 +10,6 @@ Required for generating pdfs:
 
 Recommended:
 
-- [thoth](https://github.com/tymbalodeon/thoth "thoth") (CLI for managing LilyPond score repositories)
 - [Skim](https://skim-app.sourceforge.io/ "Skim") (For viewing pdfs)
 
 Dependencies (except thoth for the moment) can be installed by running the

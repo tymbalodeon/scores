@@ -2,4 +2,6 @@
 *.midi
 *.pdf
 *~
+.direnv
 .DS_Store
+.envrc
