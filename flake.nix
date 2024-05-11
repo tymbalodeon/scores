@@ -19,9 +19,12 @@
     devShells = forEachSupportedSystem ({pkgs}: {
       default = pkgs.mkShell {
         packages = with pkgs; [
+          fd
           just
           lilypond-unstable-with-fonts
           nushell
+          watchexec
+          zellij
         ];
       };
     });

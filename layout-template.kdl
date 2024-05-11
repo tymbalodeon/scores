@@ -1,0 +1,33 @@
+default_mode "locked"
+
+layout {
+    tab name="lilypond" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+
+        pane {
+            command "lilypond" 
+            args "score"
+        }
+
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="score name" {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+
+        pane {
+            command "$EDITOR"
+            args "score"
+        }
+
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}

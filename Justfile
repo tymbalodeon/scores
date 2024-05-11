@@ -7,7 +7,7 @@ set shell := ["nu", "-c"]
 source recipe *args="_":
     #!/usr/bin/env nu
 
-    source {{justfile_directory()}}/scripts/source.nu
+    source {{ justfile_directory() }}/scripts/source.nu
     src {{ recipe }} `{{ args }}`
 
 # Search available `just` commands
@@ -15,20 +15,19 @@ source recipe *args="_":
 find *regex:
     #!/usr/bin/env nu
 
-    source {{justfile_directory()}}/scripts/find.nu
+    source {{ justfile_directory() }}/scripts/find.nu
     find {{ regex }}
 
 # Remove pdf(s)
-clean:
-    #!/usr/bin/env nu
-
-    do --ignore-errors {
-        ls **/*.pdf | each {|file| rm $file.name} out> /dev/null
-    }
+@clean:
+    nu ./scripts/clean.nu
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
-edit:
+edit score:
     #!/usr/bin/env nu
+
+    source {{ justfile_directory() }}/scripts/edit.nu
+    edit {{ score }}
 
 # TODO
 # @lilypond-version:
