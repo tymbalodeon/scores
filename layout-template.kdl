@@ -7,8 +7,8 @@ layout {
         }
 
         pane {
-            command "lilypond" 
-            args "score"
+            command "watchexec" 
+            args "--watch" "[score_directory]" "lilypond" "--include helpers" "[score]"
         }
 
         pane size=2 borderless=true {
@@ -16,14 +16,14 @@ layout {
         }
     }
 
-    tab name="score name" {
+    tab name="[score_name]" {
         pane size=1 borderless=true {
             plugin location="zellij:tab-bar"
         }
 
         pane {
             command "$EDITOR"
-            args "score"
+            args "[score]"
         }
 
         pane size=2 borderless=true {
