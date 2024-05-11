@@ -29,6 +29,9 @@ edit score:
     source {{ justfile_directory() }}/scripts/edit.nu
     edit {{ score }}
 
+list:
+    nu ./scripts/list.nu
+
 # TODO
 # @lilypond-version:
 #     lilypond --version | lines | first | split row " " | get 2
