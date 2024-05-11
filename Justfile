@@ -29,6 +29,7 @@ edit score:
     source {{ justfile_directory() }}/scripts/edit.nu
     edit {{ score }}
 
+# List scores
 @list:
     nu ./scripts/list.nu
 
