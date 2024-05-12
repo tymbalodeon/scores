@@ -6,7 +6,7 @@ def list [
 ] {
   (
     (get_files "ly")
-    | each {|file|
+    | par-each {|file|
         (
           get_title $file
           | str replace "-" " "
