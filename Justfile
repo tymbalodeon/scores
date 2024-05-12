@@ -22,6 +22,10 @@ find *regex:
 @update:
     nix flake update
 
+# List scores
+@list:
+    nu ./scripts/list.nu
+
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 edit score:
     #!/usr/bin/env nu
@@ -29,16 +33,19 @@ edit score:
     source {{ justfile_directory() }}/scripts/edit.nu
     edit {{ score }}
 
-# List scores
-@list:
-    nu ./scripts/list.nu
-
 # Compile pdf(s)
 compile *search_term:
     #!/usr/bin/env nu
 
     source {{ justfile_directory() }}/scripts/compile.nu
     compile {{ search_term }}
+
+# Open pdf(s)
+open *search_term:
+    #!/usr/bin/env nu
+
+    source {{ justfile_directory() }}/scripts/open.nu
+    open {{ search_term }}
 
 # Remove pdf(s)
 clean *search_term:
