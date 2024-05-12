@@ -3,13 +3,13 @@ def find [
   regex?: string # Regex pattern to match
 ] {
   if ($regex | is-empty) {
-    ( 
-      just --list 
+    (
+      just --list
       | fzf
     )
   } else {
-    ( 
-      just 
+    (
+      just
       | grep --color=always --extended-regexp $regex
     )
   }

@@ -8,4 +8,3 @@ def open [
     start $file
   }
 }
-

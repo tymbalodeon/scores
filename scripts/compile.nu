@@ -12,4 +12,3 @@ def compile [
     lilypond --include helpers --output $"./pdfs/($title)" $file
   }
 }
-

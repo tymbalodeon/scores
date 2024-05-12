@@ -11,12 +11,12 @@ def edit [
     let input_file = (realpath ($files | first))
 
     (
-      ( 
+      (
         cat layout-template.kdl
         | str replace --all "[score]" $input_file
         | str replace --all "[score_directory]" ($input_file | path dirname)
         | str replace --all "[score_name]" (get_title $input_file)
-      ) 
+      )
       | save score-layout.kdl
     )
 
