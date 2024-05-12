@@ -22,6 +22,13 @@ find *regex:
 @update:
     nix flake update
 
+# View project settings
+settings:
+    #!/usr/bin/env nu
+
+    source {{ justfile_directory() }}/scripts/settings.nu
+    settings
+
 # List scores
 list:
     #!/usr/bin/env nu
@@ -48,7 +55,7 @@ open *search_term:
     #!/usr/bin/env nu
 
     source {{ justfile_directory() }}/scripts/open.nu
-    open {{ search_term }}
+    open-file {{ search_term }}
 
 # Remove pdf(s)
 clean *search_term:
