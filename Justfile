@@ -48,7 +48,7 @@ compile *search_term:
     #!/usr/bin/env nu
 
     source {{ justfile_directory() }}/scripts/compile.nu
-    compile {{ search_term }}
+    compile-score {{ search_term }}
 
 # Open pdf(s)
 open *search_term:
