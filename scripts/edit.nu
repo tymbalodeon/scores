@@ -1,5 +1,7 @@
 use ./files.nu get_files
 use ./files.nu get_title
+use ./compile.nu compile
+use ./open.nu open-file
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 def edit [
@@ -20,6 +22,8 @@ def edit [
       | save score-layout.kdl
     )
 
+    # compile
+    # open-file
     zellij --layout score-layout.kdl
   }
 }

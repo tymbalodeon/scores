@@ -1,1 +1,4 @@
+composer = ""
+instrument = "Piano"
 pdfs_directory = "./pdfs/"
+template = "single"

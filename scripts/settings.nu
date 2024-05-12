@@ -1,7 +1,7 @@
 def settings [] {
   if ("settings.toml" | path exists) {
     try {
-      open settings.toml
+      open settings-default.toml | merge (open settings.toml)
     } catch {
       open settings-default.toml
     }
