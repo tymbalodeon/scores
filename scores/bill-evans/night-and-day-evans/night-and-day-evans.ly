@@ -38,14 +38,14 @@ aFirst = \relative c'' {
   b c \tuplet 3/2 { d ef f } gf af a b |
 
   \break
-  
+
   c af f ef r2 |
   r4 r8 af, d4 f8 cf' |
   bf af g bf f ef d bf
   c g r4 r r8 af |
 
-  \break 
-  
+  \break
+
   \bar "||"
 }
 
@@ -77,7 +77,7 @@ aSecond = \relative c' {
   R1 |
 
   \break
-  
+
   \bar "||"
 }
 
@@ -112,7 +112,7 @@ bridge = \relative c'' {
   c4 r r2 |
 
   \break
-  
+
   \bar "||"
 }
 
@@ -123,7 +123,7 @@ aThird = \relative c'' {
   c4 r r2 |
 
   \break
-  
+
   r8 bf~ bf4 bf4. bf8 |
   r2 r4 r8 bf |
   d bf bf g g d d bf |
@@ -144,7 +144,7 @@ aThird = \relative c'' {
   \acciaccatura { bf16 a af } g4 \acciaccatura { bf16 a af } f4 \acciaccatura { bf16 a af } ef8 g bf df~ |
 
   \break
-  
+
   \bar "||"
 }
 

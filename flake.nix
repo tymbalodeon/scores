@@ -19,10 +19,17 @@
     devShells = forEachSupportedSystem ({pkgs}: {
       default = pkgs.mkShell {
         packages = with pkgs; [
+          deadnix
           fd
+          flake-checker
           just
           lilypond-unstable-with-fonts
+          lychee
           nushell
+          pre-commit
+          python312Packages.pre-commit-hooks
+          statix
+          tokei
           watchexec
           zellij
         ];

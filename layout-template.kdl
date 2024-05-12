@@ -7,7 +7,7 @@ layout {
         }
 
         pane {
-            command "watchexec" 
+            command "watchexec"
             args "--watch" "[score_directory]" "lilypond" "--include helpers" "[score]"
         }
 

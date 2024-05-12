@@ -13,7 +13,7 @@ music = \relative c {
     \key d \major
     \time 6/8
     \clef "bass"
-    
+
     | R2. * 7
 
     | g4. ~ g4 b8
@@ -48,7 +48,7 @@ music = \relative c {
     | g4. ~ g8 e fs
     | g8. b d fs
 
-    | g8. g8 d16 g16 g8 g d16  
+    | g8. g8 d16 g16 g8 g d16
     | g8. g8 d16 g d a' ( b ) d ( e )
     | fs16 fs fs d ( d, ) d fs' fs fs d ( d, ) d
     | fs'16 d ( d, ) a'' d, ( d, ) fs' d d, e' c ( b )
@@ -103,7 +103,7 @@ music = \relative c {
     | g4. ~ g8 e fs
     | g8. b d fs
 
-    | g8. g8 d16 g16 g8 g d16  
+    | g8. g8 d16 g16 g8 g d16
     | g8. g8 d16 g d a' ( b ) d ( e )
     | fs16 fs fs d ( d, ) d fs' fs fs d ( d, ) d
     | fs'16 d ( d, ) a'' d, ( d, ) fs' d d, e' c ( b )
@@ -113,9 +113,9 @@ music = \relative c {
     | a4 ~ a16 e a8 g fs
     | e8. b' e8. b16 e,8
 
-    | g8. g8 e16 g16 g8 g e16  
+    | g8. g8 e16 g16 g8 g e16
     | g8. g8 e16 g e a ( b ) d ( e )
-    | fs8. fs8 d16 fs16 fs8 fs d16  
+    | fs8. fs8 d16 fs16 fs8 fs d16
     | fs8. fs8 d16 fs16 d a' d, c b
 
     | a4 e8 a b c

@@ -29,7 +29,7 @@ chorusOne = \relative c' {
   \bar "||"
 
   \mark \markup { \box \bold "2" }
-  
+
   r r8 b d4 g, |
   b ef, g b,8 ef |
   g,4 b ef, r |
@@ -44,7 +44,7 @@ chorusOne = \relative c' {
   gf,8 bf16 df f8 e~ e c16 a gf4 |
   f8 af c4 ef8 df r4 |
   r8 b ef4 bf' af |
-  
+
   b1 |
 
   \bar "|."

@@ -8,4 +8,3 @@ def find [
     just | grep --color=always --extended-regexp $regex
   }
 }
-

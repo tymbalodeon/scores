@@ -9,7 +9,7 @@
 
 melodyA = \relative c' {
   \mark \markup { \bold \box "A" }
-  
+
   f2. f4 |
   f a e4. d8 |
   e2. e4 |
@@ -49,14 +49,14 @@ melody = \relative c' {
   \melodyA
 
   \mark \markup { \bold \box "C" }
-  
+
   c2. c4 |
   c ef bf a |
   d1~ |
   d4 bf a g |
 
   \break
-  
+
   f2. f4 |
   f a e g |
   % f1 |
@@ -187,7 +187,7 @@ changes = \chords {
   g2:m7 c:7 |
   f1 |
   g2:m7 c:7 |
-  
+
   c1:m7 |
   f:7sus4 |
   bf |

@@ -18,9 +18,9 @@ find *regex:
     source {{ justfile_directory() }}/scripts/find.nu
     find {{ regex }}
 
-# Remove pdf(s)
-@clean:
-    nu ./scripts/clean.nu
+# Update dependencies
+@update:
+    nix flake update
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 edit score:
@@ -32,6 +32,17 @@ edit score:
 # List scores
 @list:
     nu ./scripts/list.nu
+
+# Remove pdf(s)
+@clean:
+    nu ./scripts/clean.nu
+
+# Run pre-commit hooks
+check *hooks:
+    #!/usr/bin/env nu
+
+    source {{ justfile_directory() }}/scripts/check.nu
+    check {{ hooks }}
 
 # TODO
 # @lilypond-version:

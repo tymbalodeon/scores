@@ -500,7 +500,7 @@ lower_voices_prelude_two = {
       | r8 a8 c8 r8 d8 e16 d16
       | r8 e8 e8 r8 g8 f8
       | r8 e8 d8 r8 cs8 d8
-      | cs2. 
+      | cs2.
     }
 
   } \\ {

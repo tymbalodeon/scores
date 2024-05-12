@@ -1,14 +1,14 @@
 (
-  fd --extension ly 
-  | each {|file| 
+  fd --extension ly
+  | each {|file|
     (
-      $file 
-      | path basename 
+      $file
+      | path basename
       | str trim
-      | str replace ".ly" "" 
-      | str replace "-" " " 
+      | str replace ".ly" ""
+      | str replace "-" " "
       | str title-case
     )
-  } | sort 
+  } | sort
   | str join "\n"
 )
