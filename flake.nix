@@ -22,6 +22,7 @@
           deadnix
           fd
           flake-checker
+          gh
           just
           lilypond-unstable-with-fonts
           lychee

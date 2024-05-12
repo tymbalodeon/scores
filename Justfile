@@ -34,8 +34,11 @@ edit score:
     nu ./scripts/list.nu
 
 # Remove pdf(s)
-@clean:
-    nu ./scripts/clean.nu
+clean *search_term:
+    #!/usr/bin/env nu
+
+    source {{ justfile_directory() }}/scripts/clean.nu
+    clean {{ search_term }}
 
 # Run pre-commit hooks
 check *hooks:
@@ -43,6 +46,14 @@ check *hooks:
 
     source {{ justfile_directory() }}/scripts/check.nu
     check {{ hooks }}
+
+# View remote repository
+@remote:
+    gh repo view
+
+# View repository analytics
+@stats:
+    tokei --hidden
 
 # TODO
 # @lilypond-version:
