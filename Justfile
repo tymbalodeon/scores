@@ -23,8 +23,11 @@ find *regex:
     nix flake update
 
 # List scores
-@list:
-    nu ./scripts/list.nu
+list:
+    #!/usr/bin/env nu
+
+    source {{ justfile_directory() }}/scripts/list.nu
+    list
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 edit score:

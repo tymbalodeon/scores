@@ -1,15 +1,15 @@
+use ./files.nu get_files
+use ./files.nu get_title
+
 # Compile pdf(s)
 def compile [
-  search_term?: string
+  search_term = "" # Search term for finding pdf(s)
 ] {
-  let files = if ($search_term | is-empty) {
-    fd --extension ly --no-ignore
-  } else {
-    fd --extension ly --no-ignore $search_term
-  }
+  mkdir "pdfs"
 
-  for file in $files {
-    lilypond --include helpers $file
+  for file in (get_files "ly" $search_term) {
+    let title = (get_title $file)
+    lilypond --include helpers --output $"./pdfs/($title)" $file
   }
 }
 
