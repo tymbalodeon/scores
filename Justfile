@@ -33,6 +33,13 @@ edit score:
 @list:
     nu ./scripts/list.nu
 
+# Compile pdf(s)
+compile *search_term:
+    #!/usr/bin/env nu
+
+    source {{ justfile_directory() }}/scripts/compile.nu
+    compile {{ search_term }}
+
 # Remove pdf(s)
 clean *search_term:
     #!/usr/bin/env nu
