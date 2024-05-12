@@ -10,7 +10,7 @@ export def get_files [
     "./"
   }
 
-  return ( 
+  return (
     fd --extension $extension --no-ignore $search_term $search_directory
     | lines
   )
