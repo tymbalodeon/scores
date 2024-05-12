@@ -72,12 +72,16 @@ check *hooks:
     check {{ hooks }}
 
 # View remote repository
-@remote:
-    gh repo view
+@remote *browser:
+    gh repo view {{ if browser == "--browser" { "--web" } else { "" } }}
+
+# View issues
+@issue:
+    gh issue list
 
 # View repository analytics
 @stats:
-    tokei --hidden
+    tokei --hidden --sort lines
 
 # TODO
 # @lilypond-version:

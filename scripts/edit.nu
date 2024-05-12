@@ -1,7 +1,5 @@
 use ./files.nu get_files
 use ./files.nu get_title
-use ./compile.nu compile
-use ./open.nu open-file
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 def edit [
