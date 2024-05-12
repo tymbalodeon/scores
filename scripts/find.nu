@@ -1,8 +1,8 @@
 # Search available `just` commands interactively, or by <regex>
 def find [
-  regex?: string # Regex pattern to match
+  search_term?: string # Regex pattern to match
 ] {
-  if ($regex | is-empty) {
+  if ($search_term | is-empty) {
     (
       just --list
       | fzf
@@ -10,7 +10,7 @@ def find [
   } else {
     (
       just
-      | grep --color=always --extended-regexp $regex
+      | grep --color=always --extended-regexp $search_term
     )
   }
 }

@@ -12,11 +12,11 @@ source recipe *args="_":
 
 # Search available `just` commands
 [no-exit-message]
-find *regex:
+find *search_term:
     #!/usr/bin/env nu
 
     source {{ justfile_directory() }}/scripts/find.nu
-    find {{ regex }}
+    find {{ search_term }}
 
 # Update dependencies
 @update:
