@@ -13,7 +13,38 @@ export def compile-score [
 
   def run-lilypond [file] {
     let title = (get_title $file)
-    lilypond --include helpers --output $"($pdfs_directory)/($title)" $file
+
+    def get_modified [file] {
+      let metadata = (ls --long $file)
+
+      return (
+        if ($metadata | is-empty) {
+          null
+        } else {
+          (
+            $metadata 
+            | first 
+            | get modified
+          )
+        }
+      )
+    }
+
+    let pdf_file_base = ($"($pdfs_directory)/($title)")
+    let pdf_file = $"($pdf_file_base).pdf"
+
+    let should_compile = if ($pdf_file | path exists) {
+      let ly_modified = (get_modified $file)
+      let pdf_modified = (get_modified $"($pdf_file_base).pdf")
+
+      $ly_modified > $pdf_modified
+    } else {
+      true
+    }
+
+    if $should_compile {
+      lilypond --include helpers --output $pdf_file_base $file
+    }
   }
 
   if $is_file {
