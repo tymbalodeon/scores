@@ -1,7 +1,7 @@
 if (which pre-commit | is-empty) {
     echo "use flake" | save --force .envrc
     direnv allow
-    pre-commit install --install-hooks
+    pre-commit install --hook-type commit-msg
 }
 
 # Run pre-commit hook by name, all hooks, or update all hooks
