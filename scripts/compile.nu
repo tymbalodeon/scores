@@ -1,7 +1,22 @@
+use ./files.nu get_compilation_status
 use ./files.nu get_files
 use ./files.nu get_lilypond_output_path
 use ./files.nu get_title
 use ./settings.nu get_pdfs_directory
+
+def run-lilypond [file] {
+  let title = (get_title $file)
+
+  let should_compile = (
+    (get_compilation_status $file) in ["missing" "outdated"]
+  )
+
+  let pdf_file_base = (get_lilypond_output_path $file)
+
+  if $should_compile {
+    lilypond --include helpers --output $pdf_file_base $file
+  }
+}
 
 # Compile pdf(s)
 export def compile-score [
@@ -11,42 +26,6 @@ export def compile-score [
 
   let pdfs_directory = (get_pdfs_directory)
   mkdir $pdfs_directory
-
-  def run-lilypond [file] {
-    let title = (get_title $file)
-
-    def get_modified [file] {
-      let metadata = (ls --long $file)
-
-      return (
-        if ($metadata | is-empty) {
-          null
-        } else {
-          (
-            $metadata
-            | first
-            | get modified
-          )
-        }
-      )
-    }
-
-    let pdf_file_base = (get_lilypond_output_path $file)
-    let pdf_file = $"($pdf_file_base).pdf"
-
-    let should_compile = if ($pdf_file | path exists) {
-      let ly_modified = (get_modified $file)
-      let pdf_modified = (get_modified $"($pdf_file_base).pdf")
-
-      $ly_modified > $pdf_modified
-    } else {
-      true
-    }
-
-    if $should_compile {
-      lilypond --include helpers --output $pdf_file_base $file
-    }
-  }
 
   if $is_file {
     run-lilypond $score

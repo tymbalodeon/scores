@@ -34,3 +34,39 @@ export def get_lilypond_output_path [
 
   return ($"($pdfs_directory)/($title)")
 }
+
+export def get_compilation_status [
+  file: path
+] {
+  def get_modified [file] {
+    let metadata = (ls --long $file)
+
+    return (
+      if ($metadata | is-empty) {
+        null
+      } else {
+        (
+          $metadata
+          | first
+          | get modified
+        )
+      }
+    )
+  }
+
+  let pdf_file_base = (get_lilypond_output_path $file)
+  let pdf_file = $"($pdf_file_base).pdf"
+
+  if ($pdf_file | path exists) {
+    let ly_modified = (get_modified $file)
+    let pdf_modified = (get_modified $"($pdf_file_base).pdf")
+
+    if ($ly_modified > $pdf_modified) {
+      return "outdated"
+    } else {
+      return "compiled"
+    }
+  } else {
+    return "missing"
+  }
+}

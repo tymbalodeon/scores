@@ -1,18 +1,29 @@
+use ./files.nu get_compilation_status
 use ./files.nu get_files
 use ./files.nu get_title
 
+def filter_by_status [scores: table, status: string] {
+  return (
+    $scores
+    | filter {|score| $score.status == $status}
+    | select title
+  )
+}
+
 # List scores
 def list [
-  --missing # List only scores with missing or outdated pdfs
+  --compiled # List only scores with up-to-date compiled pdfs
+  --missing # List only scores with missing pdfs
+  --outdated # List only scores with outdated pdfs
 ] {
   (
     let scores = (
       get_files "ly"
-      | par-each {|file|
-          get_title $file
+      | wrap file
+      | insert file-name {
+          |item| get_title $item.file
         }
-      | sort
-      | wrap file-name
+      | sort-by file-name
       | insert title {
           |item| (
             $item.file-name
@@ -25,19 +36,19 @@ def list [
             if (get_files "pdf" $item.file-name | is-empty) {
               "missing"
             } else {
-              "compiled"
+              get_compilation_status $item.file
             }
           )
         }
       | select title status
     );
 
-    if $missing {
-      return (
-        $scores
-        | filter {|score| $score.status == "missing"}
-        | select title
-      )
+    if $compiled {
+      return (filter_by_status $scores "compiled")
+    } else if $missing {
+      return (filter_by_status $scores "missing")
+    } else if $outdated {
+      return (filter_by_status $scores "outdated")
     } else {
       return $scores
     }
