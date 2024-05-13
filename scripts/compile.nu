@@ -1,4 +1,5 @@
 use ./files.nu get_files
+use ./files.nu get_lilypond_output_path
 use ./files.nu get_title
 use ./settings.nu get_pdfs_directory
 
@@ -30,7 +31,7 @@ export def compile-score [
       )
     }
 
-    let pdf_file_base = ($"($pdfs_directory)/($title)")
+    let pdf_file_base = (get_lilypond_output_path $file)
     let pdf_file = $"($pdf_file_base).pdf"
 
     let should_compile = if ($pdf_file | path exists) {

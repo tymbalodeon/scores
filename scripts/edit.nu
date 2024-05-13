@@ -1,5 +1,6 @@
 use ./compile.nu compile-score
 use ./files.nu get_files
+use ./files.nu get_lilypond_output_path
 use ./files.nu get_title
 use ./open.nu open-pdf
 
@@ -15,10 +16,11 @@ def edit [
 
     (
       (
-        cat layout-template.kdl
+        cat zellij-layout-template.kdl
         | str replace --all "[score]" $input_file
         | str replace --all "[score_directory]" ($input_file | path dirname)
         | str replace --all "[score_name]" $title
+        | str replace --all "[output]" (get_lilypond_output_path $input_file)
       )
       | save --force score-layout.kdl
     )
