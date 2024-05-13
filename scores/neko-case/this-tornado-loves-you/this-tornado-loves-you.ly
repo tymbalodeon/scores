@@ -26,21 +26,22 @@ melody = \new Staff = "melody" <<
     composer = "Neko Case"
 
   }
-  \layout {
-    \context {
-      \Score
-      \consists #(set-bars-per-line '(5
-                                      4 4 3
-                                      4 4 5
-                                      4 4 4 4
-                                      5 4 4
-                                      4 4 4
-                                      4 4 4 6
-                                      4 4 4 4))
-    }
-  }
 
   \score {
+    \layout {
+      \context {
+        \Score
+        \consists #(set-bars-per-line '(5
+                                        4 4 3
+                                        4 4 5
+                                        4 4 4 4
+                                        5 4 4
+                                        4 4 4
+                                        4 4 4 6
+                                        4 4 4 4))
+      }
+    }
+
     <<
       \numericTimeSignature
       \changes
