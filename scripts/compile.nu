@@ -22,8 +22,8 @@ export def compile-score [
           null
         } else {
           (
-            $metadata 
-            | first 
+            $metadata
+            | first
             | get modified
           )
         }
