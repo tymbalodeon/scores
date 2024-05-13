@@ -1,3 +1,4 @@
+\version "2.25.15"
 intro = \lyricmode {
     Hey now, now
     Oh, oh, oh

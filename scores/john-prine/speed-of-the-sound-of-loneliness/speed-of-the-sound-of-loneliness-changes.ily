@@ -1,3 +1,4 @@
+\version "2.25.15"
 form = \chordmode {
   | g1
   | c1

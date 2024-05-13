@@ -1,3 +1,4 @@
+\version "2.25.15"
 pickup = {
   r4 e8 a b cs |
 }

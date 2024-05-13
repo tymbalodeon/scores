@@ -1,3 +1,4 @@
+\version "2.25.15"
 voiceOne = \relative c'' {
   \repeat volta 2 {
     | r16 e8 ds d16 ~

@@ -1,3 +1,4 @@
+\version "2.25.15"
 key_and_time = {
   \key b \major
   \time 4/4

@@ -11,7 +11,7 @@ def update-dependencies [
   }
 
   if $all or $scores {
-    for score in (get_files "ly") {
+    for score in ((get_files "ly") ++ (get_files "ily")) {
       convert-ly --edit $score
     }
   }

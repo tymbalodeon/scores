@@ -1,3 +1,4 @@
+\version "2.25.15"
 lowNotesPianoOne = \relative gs, {
   gs32 fs gs16 e32 ds
   | e8

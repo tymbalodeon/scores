@@ -1,3 +1,4 @@
+\version "2.25.15"
 structure_intro = {
   | s1 * 4
 }

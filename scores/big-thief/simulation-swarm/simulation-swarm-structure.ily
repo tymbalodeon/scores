@@ -1,3 +1,4 @@
+\version "2.25.15"
 structure_verse_one = {
   \sectionLabel "Verse"
 

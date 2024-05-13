@@ -1,3 +1,4 @@
+\version "2.25.15"
 intro = \relative g' {
   | g8 b g' fs g, b g' fs
   | s1

@@ -1,3 +1,4 @@
+\version "2.25.15"
 introShort = \chordmode {
   d1.:m | s |
 }

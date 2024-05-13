@@ -1,3 +1,4 @@
+\version "2.25.15"
 \include "helpers/add-fingerings.ily"
 
 \include "invention-6-voice-one.ily"

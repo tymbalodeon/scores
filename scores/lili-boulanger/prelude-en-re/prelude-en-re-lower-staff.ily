@@ -1,3 +1,4 @@
+\version "2.25.15"
 \include "helpers/fake-clef-treble.ily"
 \include "helpers/fake-clef-bass.ily"
 

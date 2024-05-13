@@ -1,3 +1,4 @@
+\version "2.25.15"
 riff = \new CueVoice {
   \relative c' {
     \repeat volta 3 {

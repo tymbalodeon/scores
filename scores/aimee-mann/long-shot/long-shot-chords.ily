@@ -1,3 +1,4 @@
+\version "2.25.15"
 verseA = \chordmode {
   e1 | d | a | fs:m |
 }

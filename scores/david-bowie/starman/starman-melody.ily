@@ -1,3 +1,4 @@
+\version "2.25.15"
 intro = \relative c'' {
   R1 * 4 |
 
