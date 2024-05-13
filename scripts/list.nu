@@ -2,9 +2,11 @@ use ./files.nu get_files
 use ./files.nu get_title
 
 # List scores
-def list [] {
+def list [
+  --missing # List only scores with missing or outdated pdfs
+] {
   (
-    return (
+    let scores = (
       get_files "ly"
       | par-each {|file|
           get_title $file
@@ -18,7 +20,7 @@ def list [] {
             | str title-case
           )
         }
-      | insert pdfs {
+      | insert status {
           |item| (
             if (get_files "pdf" $item.file-name | is-empty) {
               "missing"
@@ -27,7 +29,17 @@ def list [] {
             }
           )
         }
-      | select title pdfs
-    )
+      | select title status
+    );
+
+    if $missing {
+      return (
+        $scores
+        | filter {|score| $score.status == "missing"}
+        | select title
+      )
+    } else {
+      return $scores
+    }
   )
 }
