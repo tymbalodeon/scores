@@ -52,6 +52,12 @@ open *search_term:
     source {{ justfile_directory() }}/scripts/open.nu
     open-file {{ search_term }}
 
+# Get info about score(s)
+info *search_term:
+    #!/usr/bin/env nu
+    source {{ justfile_directory() }}/scripts/info.nu
+    score-info {{ search_term }}
+
 # Remove pdf(s)
 clean *search_term:
     #!/usr/bin/env nu

@@ -1,0 +1,8 @@
+key = "A♭ major"
+title = "Ciggy"
+instrumentation = "bass"
+composers = ["Ashley Cubbler"]
+
+[[arrangers]]
+person = "Ben Rosen"
+role = "bass"
