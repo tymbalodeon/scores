@@ -23,10 +23,10 @@ update *args:
     update-dependencies {{ args }}
 
 # View project settings
-settings:
+settings *args:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/settings.nu
-    settings
+    settings {{ args }}
 
 # List scores
 list *args:
