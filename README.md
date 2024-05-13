@@ -31,4 +31,7 @@ On macOS, to use the default LilyPond serif font, install:
 
 ## Development
 
-Run `just` to see available commands.
+Development commands are provided through
+[just](https://just.systems/man/en/). Run `just` to see all available commands
+and their descriptions. Run `just <COMMAND> --help` for detailed information
+about a particular command.
