@@ -1,3 +1,5 @@
+\version "2.25.15"
+
 #(define (calculate-glissando-slope grob)
    (define (get-pitch-difference left-pitch right-pitch)
      (- (ly:pitch-alteration right-pitch) (ly:pitch-alteration left-pitch)))

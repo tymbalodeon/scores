@@ -1,3 +1,5 @@
+\version "2.25.15"
+
 halfBracket =
 #(define-music-function
    (distance-from-notehead height width)

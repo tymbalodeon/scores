@@ -1,3 +1,5 @@
+\version "2.25.15"
+
 #(define (delete-comments string)
    (let ((delete? #f))
      (string-delete (lambda (character)

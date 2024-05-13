@@ -1,3 +1,5 @@
+\version "2.25.15"
+
 fakeTrebleClef = {
   \set Staff.clefGlyph = #"clefs.G"
   \set Staff.clefPosition = #-2

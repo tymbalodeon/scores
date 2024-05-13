@@ -1,3 +1,5 @@
+\version "2.25.15"
+
 #(define ((set-bars-per-line line-lengths-in-bars) context)
   (define (get-total line-lengths-in-bars)
    (let ((first-length (car line-lengths-in-bars)))
