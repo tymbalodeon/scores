@@ -27,7 +27,7 @@ For PDF viewing:
 
 On macOS, to use the default LilyPond serif font, install:
 
-- [C059](https://blogfonts.com/c059.font) "C059")
+- [C059](https://blogfonts.com/c059.font "C059")
 
 ## Development
 
