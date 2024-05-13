@@ -22,8 +22,8 @@ development environment for editing scores and generating output files.
 
 For PDF viewing:
 
-- [Skim](https://skim-app.sourceforge.io/ "Skim") or [zathura](<https://pwmt.org/>
-  projects/zathura/ "zathura")
+- [Skim](https://skim-app.sourceforge.io/ "Skim") or
+  [zathura](https://pwmt.org/projects/zathura "zathura")
 
 On macOS, to use the default LilyPond serif font, install:
 
