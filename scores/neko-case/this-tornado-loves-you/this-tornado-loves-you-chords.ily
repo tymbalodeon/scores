@@ -1,3 +1,5 @@
+\version "2.25.15"
+
 intro = \chordmode {
   g1:maj  |
   s |

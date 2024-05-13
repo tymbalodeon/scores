@@ -1,3 +1,5 @@
+\version "2.25.15"
+
 part_one_backing = \relative c'' \new Staff \with {
   \magnifyStaff #2/3
   alignAboveContext = "melody"

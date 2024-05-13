@@ -1,3 +1,5 @@
+\version "2.25.15"
+
 guitar_strum = \relative c' \new CueVoice {
   \repeat percent 4 {
     \repeat unfold 4 {
@@ -69,7 +71,6 @@ part_two = \relative c'' {
 
   b1( |
   as) |
-}
 }
 
 part_three = {

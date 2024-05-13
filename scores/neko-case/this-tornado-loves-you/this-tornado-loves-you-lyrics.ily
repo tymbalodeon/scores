@@ -1,3 +1,5 @@
+\version "2.25.15"
+
 part_one = \lyricmode {
   My love, I am the speed of sound.
   I left them mo -- ther -- less, fa -- ther -- less,
