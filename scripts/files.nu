@@ -3,7 +3,7 @@ use ./settings.nu get_pdfs_directory
 export def get_files [
   extension: string,
   search_term = ""
-] -> list<string> {
+] {
   let search_directory = if ($extension == "pdf") {
     get_pdfs_directory
   } else {
@@ -18,7 +18,7 @@ export def get_files [
 
 export def get_title [
   file: path
-] -> string {
+] {
   return (
     $file
     | path parse

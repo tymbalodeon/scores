@@ -10,7 +10,7 @@ def settings [] {
   }
 }
 
-export def get_pdfs_directory [] -> string {
+export def get_pdfs_directory [] {
   return (
     settings
     | get pdfs_directory
