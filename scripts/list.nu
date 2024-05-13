@@ -1,9 +1,8 @@
 use ./files.nu get_files
 use ./files.nu get_title
 
-def list [
-  search_term = "" # Search term for finding pdf(s)
-] {
+# List scores
+def list [] {
   (
     return (
       get_files "ly"
