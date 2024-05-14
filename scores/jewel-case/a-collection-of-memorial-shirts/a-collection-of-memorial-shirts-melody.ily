@@ -7,34 +7,36 @@ melody = \new Voice \with {
 
   \repeat unfold 2 {
     \repeat unfold 2 {
-      | s1  
-    }
-
-    \repeat volta 2 {
       | s1 * 2
     }
 
+    \repeat volta 2 {
+      | s1 * 4
+    }
+
     \repeat unfold 2 {
-      | c4 c c c
+      | c2 c 
+      | c c
     }
   }
 
-  | s1 * 6
-  | s1 * 4
+  | s1 * 12
+  | s1 * 8
 
   \repeat unfold 2 {
-   | s1  
+   | s1 * 2
   }
 
   \repeat volta 2 {
-    | s1 * 2
+    | s1 * 4
   }
 
   \repeat unfold 2 {
-    | c4 c c c
+    | c2 c 
+    | c c
   }
 
-  | s1 * 6
+  | s1 * 12
+  | s1 * 8
   | s1 * 4
-  | s1 * 2
 }
