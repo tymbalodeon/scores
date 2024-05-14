@@ -14,7 +14,7 @@ changes = \chords {
       | d1:m
     }
 
-    | s1
+    | d:1/g
     | s1
     | s1
     | s1
@@ -59,7 +59,7 @@ changes = \chords {
     | d1:m
   }
 
-  | s1
+  | d:1/g
   | s1
   | s1
   | s1
