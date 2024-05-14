@@ -17,9 +17,10 @@ music = \relative g, {
 
   | R1 * 4
 
-  | g8. -> g16 -> ~ g e g8 -> r16 c d e f e d c
-  | g8. -> g16 -> ~ g e g8 -> r16 c d e f d e d
-  | g,8. -> g16 -> ~ g e g8 -> r16 c d e f e d c
+  \repeat unfold 3 {
+    | g8. -> g16 -> ~ g8 g8 -> r2
+  }
+
   | g8. -> g16 -> ~ g8 \glissando g' -> ~ g16 g8 -> d16 g4 -> \glissando
 
   | g,8. -> g16 -> ~ g e g8 -> r16 c d e f e d c
