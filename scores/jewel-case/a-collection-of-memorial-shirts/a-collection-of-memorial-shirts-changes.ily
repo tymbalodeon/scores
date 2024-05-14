@@ -27,7 +27,7 @@ changes = \chords {
 
   | a1:m 
   | a1:m/g
-  | d1:7/fs
+  | d1
   | s1
 
   | g1
@@ -71,7 +71,7 @@ changes = \chords {
 
   | a1:m 
   | a1:m/g
-  | d1:7/fs
+  | d1s
   | s1
 
   | g1
@@ -93,6 +93,6 @@ changes = \chords {
 
   | c1 
   | g1
-  | d1:7/fs 
+  | d1 
   | g1
 }
