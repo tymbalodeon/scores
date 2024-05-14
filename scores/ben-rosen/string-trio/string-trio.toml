@@ -1,0 +1,7 @@
+title = "String Trio"
+artist = "Ben Rosen"
+composers = ["Ben Rosen"]
+arrangers = []
+instrumentation = ["viola", "cello", "bass"]
+key = ""
+time_signature = "3/2"

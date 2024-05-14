@@ -50,7 +50,7 @@ compile *search_term:
 open *search_term:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/open.nu
-    open-file {{ search_term }}
+    open-pdf {{ search_term }}
 
 # Get info about score(s)
 info *search_term:
