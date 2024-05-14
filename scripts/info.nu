@@ -9,8 +9,17 @@ def display_array [list: list<string>, key: string] {
   )
 }
 
-def display_info [file: path, match_artist?: string] {
+def display_info [file: path, artist?: string] {
   let info = (open $file)
+
+  if (
+    not ($artist | is-empty)
+  ) and (
+    not (($artist | str downcase) in ($info.artist | str downcase))
+  ) {
+    return
+  }
+
   let arrangers = ($info.arrangers)
 
   return (
@@ -49,12 +58,16 @@ def score-info [
     } 
   )
 
-  if ($sort_by | is-empty) {
-    return $files 
+  let files = if ($sort_by | is-empty) {
+     $files 
   } else {
-    return (
-      $files 
-      | sort-by $sort_by
-    )
+    $files 
+    | sort-by $sort_by
+  }
+
+  if ($files | length) == 1 {
+    return ($files | first)
+  } else {
+    return $files
   }
 }
