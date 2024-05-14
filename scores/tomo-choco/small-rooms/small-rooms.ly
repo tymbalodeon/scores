@@ -71,10 +71,10 @@ music = \relative c, {
   | f,4. r16 \xNote f f8 -. f4. --
   | f4. r16 \xNote f f8 -. f4. --
   | f4. r16 \xNote f f8 -. f4. --
-  | f4. r16 \xNote f f8 -. \appoggiatura g16 a8 -- c -- d --
+  | f4. r16 \xNote f f8 -. f4. --
 
-  | f,4. r16 \xNote f f8 -. f4. --
-  | f4. r16 c' f8 -. f, -- g -- a --
+  | R1
+  | r2 r8 f -- g -- a --
   | bf4. r16 f bf8 -. bf -- ~ bf16 e ( f ) f,
   | bf4. r16 f bf8 a g c
 
