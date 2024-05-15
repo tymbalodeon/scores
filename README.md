@@ -25,11 +25,11 @@ For PDF viewing:
 - [Skim](https://skim-app.sourceforge.io/ "Skim") (macOS only) or
   [zathura](https://pwmt.org/projects/zathura "zathura")
 
-On macOS, to use the default LilyPond fonts, install:
+On macOS, to use the [default LilyPond fonts](https://lilypond.org/doc/v2.24/Documentation/notation/fonts#font-families), install:
 
-- Serif: [C059](https://blogfonts.com/c059.font "C059") (New Century Schoolbook)
+- Roman: [C059](https://blogfonts.com/c059.font "C059") (New Century Schoolbook)
 - Sans: [Nimbus Sans L](https://www.fontsquirrel.com/fonts/nimbus-sans-l "Nimbus Sans L")
-- Mono: [Nimbus Mono](https://www.fontsquirrel.com/fonts/nimbus-mono "Nimbus Mono")
+- Typewriter: [Nimbus Mono](https://www.fontsquirrel.com/fonts/nimbus-mono "Nimbus Mono")
 
 ## Development
 
