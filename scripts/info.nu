@@ -1,12 +1,15 @@
 use ./files.nu get_files
 use ./files.nu get_title
 
-def display_array [list: list<string>, key: string] {
-  return (
-    $list 
+def display_array [list: record, key: string] {
+  try {
+    $list.$key 
     | str join ", " 
     | wrap $key
-  )
+  } catch {
+    ""
+    | wrap $key
+  }
 }
 
 def display_info [file: path, artist?: string] {
@@ -20,18 +23,16 @@ def display_info [file: path, artist?: string] {
     return
   }
 
-  let arrangers = ($info.arrangers)
-
   return (
     $info 
     | select title
     | merge ($info | select artist)
     | merge (
-        display_array $info.composers "composers"
+        display_array $info "composers"
     ) | merge (
-          display_array $info.arrangers "arrangers"
+          display_array $info "arrangers"
     ) | merge (
-          display_array $info.instrumentation "instrumentation"
+          display_array $info "instrumentation"
     ) | merge (
           $info | select key
     ) | merge (
