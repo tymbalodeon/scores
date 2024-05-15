@@ -24,6 +24,7 @@
           flake-checker
           gh
           just
+          liberation_ttf
           lilypond-unstable-with-fonts
           lychee
           nushell
