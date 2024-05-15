@@ -25,7 +25,7 @@ melody = \new Staff {
   \layout {
     \context {
       \Score \consists
-      #(set-bars-per-line '(4))
+      #(set-bars-per-line '(8))
     }
   }
 
