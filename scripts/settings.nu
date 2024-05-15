@@ -51,5 +51,5 @@ export def get_pdfs_directory [] {
 
   mkdir $pdfs_directory
 
-  return pdfs_directory
+  return $pdfs_directory
 }
