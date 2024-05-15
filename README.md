@@ -18,16 +18,18 @@ development environment for editing scores and generating output files.
   direnv allow
   ```
 
-### Extra dependencies
+### Recommended extra dependencies
 
 For PDF viewing:
 
-- [Skim](https://skim-app.sourceforge.io/ "Skim") or
+- [Skim](https://skim-app.sourceforge.io/ "Skim") (macOS only) or
   [zathura](https://pwmt.org/projects/zathura "zathura")
 
-On macOS, to use the default LilyPond serif font, install:
+On macOS, to use the default LilyPond fonts, install:
 
-- [C059](https://blogfonts.com/c059.font "C059") (New Century Schoolbook)
+- Serif: [C059](https://blogfonts.com/c059.font "C059") (New Century Schoolbook)
+- Sans: [Nimbus Sans L](https://www.fontsquirrel.com/fonts/nimbus-sans-l "Nimbus Sans L")
+- Mono: [Nimbus Mono](https://www.fontsquirrel.com/fonts/nimbus-mono "Nimbus Mono")
 
 ## Development
 
