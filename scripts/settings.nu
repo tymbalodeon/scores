@@ -49,7 +49,7 @@ export def get_pdfs_directory [] {
     | get pdfs_directory
   )
 
-  mkdir pdfs_directory
+  mkdir $pdfs_directory
 
   return pdfs_directory
 }
