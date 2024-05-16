@@ -1,6 +1,14 @@
 use ./files.nu get_lilypond_version
 use ./settings.nu get_settings
 
+def get_directory_name [name: string] {
+  return (
+    $name 
+    | str downcase
+    | str replace --all " " "-"
+  )
+}
+
 # Create new scores
 def create [
   template: string # Which template to use
@@ -19,20 +27,25 @@ def create [
   let composer = if ($composer | is-empty) {
     get_settings "composer"
   } else {
-    $composer
+    "Anonymous"
   }
+
+  let composer_directory = get_directory_name $composer
+  let title_directory = get_directory_name $title
+  let new_score_directory = $"scores/($composer_directory)/($title_directory)"
+
+  mkdir $new_score_directory
 
   let lilypond_version = get_lilypond_version
     
   for file in $files {
-    print (
-      cat $file
-      | str replace "[arranger]" $arranger
-      | str replace "[composer]" $composer
-      | str replace "[instrument]" $instrument
-      | str replace "[lilypond_version]" $lilypond_version
-      | str replace "[subtitle]" $subtitle
-      | str replace "[title]" $title
-    )
+    cat $file
+    | str replace --all "[arranger]" $arranger
+    | str replace --all "[composer]" $composer
+    | str replace --all "[instrument]" $instrument
+    | str replace --all "[lilypond_version]" $lilypond_version
+    | str replace --all "[subtitle]" $subtitle
+    | str replace --all "[title]" $title
+    | save $"($new_score_directory)/($file | path basename)"
   }
 }
