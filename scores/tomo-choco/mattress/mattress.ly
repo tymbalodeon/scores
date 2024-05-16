@@ -25,12 +25,12 @@ verseOne = \relative a, {
 }
 
 chorus = \relative a, {
-  | a8 e'' c a, ~ a e'' c a, ~
+  | a8 e'' c a, ~ a e'' c e,,
   | a8 e'' c a, ~ a e'' c e,,
   | a8 e'' c a, ~ a c g'' c,,
 
   | b8 d' b b, ~ b d' b e,,
-  | g8 b' g, d' ~ d fs' d, fs, ~
+  | g8 b' g, d' ~ d fs' d, e,
   | fs8 a' fs, fs ~ fs a' fs, e
 
   | a8 c' a a, ~ a c' a a, ~
@@ -100,12 +100,40 @@ music = \relative a, {
   \clef "bass"
 
   \verseOne
+
+  \key g \major
+  \bar "||"
+
   \chorus
+
+  \key d \major
+  \bar "||"
+
   \postChorusOne
+
+  \key e \major
+  \bar "||"
+
   \verseTwo
+
+  \key g \major
+  \bar "||"
+
   \chorus
+
+  \key d \major
+  \bar "||"
+
   \postChorusTwo
+
+  \key e \major
+  \bar "||"
+
   \bridge
+
+  \key d \major
+  \bar "||"
+
   \end
 
   \bar "|."
