@@ -15,9 +15,9 @@ def run-lilypond [file: path, force: bool] {
   }
 }
 
-# Compile pdf(s)
+# Compile pdfs
 export def compile-score [
-  score = "" # Score path or search term for finding pdf(s)
+  score = "" # Score path or search term for finding pdfs
   --is-file # Treat <score> as a path instead of a search term
   --force # Compile score even if up-to-date
 ] {

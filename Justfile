@@ -52,13 +52,13 @@ edit score:
     source {{ justfile_directory() }}/scripts/edit.nu
     edit {{ score }}
 
-# Compile pdf(s)
+# Compile pdfs
 compile *search_term:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/compile.nu
     compile-score {{ search_term }}
 
-# Open pdf(s)
+# Open pdfs
 open *search_term:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/open.nu
@@ -70,7 +70,7 @@ info *search_term:
     source {{ justfile_directory() }}/scripts/info.nu
     score-info {{ search_term }}
 
-# Remove pdf(s)
+# Remove pdfs
 clean *search_term:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/clean.nu

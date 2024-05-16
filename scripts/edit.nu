@@ -6,7 +6,7 @@ use ./open.nu open-pdf
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 def edit [
-  search_term = "" # Search term for finding pdf(s)
+  search_term = "" # Search term for finding pdfs
 ] {
   let files = (get_files "ly" $search_term)
 

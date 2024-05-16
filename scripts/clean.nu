@@ -1,6 +1,6 @@
 use ./files.nu get_files
 
-# Remove pdf(s)
+# Remove pdfs
 def clean [
   search_term = "" # Search term for finding pdfs
   --temporary # Clean temporary files (ly~,ily~) instead of pdfs

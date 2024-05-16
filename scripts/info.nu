@@ -42,7 +42,7 @@ def display_info [file: path, artist?: string] {
 }
 
 def score-info [
-  search_term = "" # Search term for finding pdf(s)
+  search_term = "" # Search term for finding pdfs
   --artist: string # Limit search to an artist
   --sort-by: string # Sort results by column
 ] {
