@@ -26,13 +26,19 @@ update *args:
 settings *args:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/settings.nu
-    settings {{ args }}
+    get_settings {{ args }}
 
 # View available templates
 templates *args:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/templates.nu
     templates {{ args }}
+
+# Create new score
+create *args:
+    #!/usr/bin/env nu
+    source {{ justfile_directory() }}/scripts/create.nu
+    create {{ args }}
 
 # List scores
 list *args:

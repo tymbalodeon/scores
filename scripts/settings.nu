@@ -1,5 +1,5 @@
 # Manage scores settings
-def settings [
+export def get_settings [
   --edit # Open settings file in $EDITOR
   key?: string # The key to view or set
   value?: string # The new value for <key>

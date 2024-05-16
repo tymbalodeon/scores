@@ -70,3 +70,11 @@ export def get_compilation_status [
     return "missing"
   }
 }
+
+export def get_lilypond_version [] {
+  lilypond --version 
+  | lines 
+  | first 
+  | split row " " 
+  | get 2
+}

@@ -1,4 +1,5 @@
 use ./files.nu get_files
+use ./files.nu get_lilypond_version
 
 def update-dependencies [
   --dependencies # Update dependencies
@@ -11,13 +12,7 @@ def update-dependencies [
   }
 
   if $all or $scores {
-    let lilypond_version = (
-      lilypond --version 
-      | lines 
-      | first 
-      | split row " " 
-      | get 2
-    )
+    let lilypond_version = get_lilypond_version
 
     for score in ((get_files "ly") ++ (get_files "ily")) {
       convert-ly --edit $score
