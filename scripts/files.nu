@@ -11,7 +11,7 @@ export def get_files [
   }
 
   return (
-    fd --extension $extension --no-ignore $search_term $search_directory
+    fd --exclude templates/ --extension $extension --no-ignore $search_term $search_directory
     | lines
   )
 }
