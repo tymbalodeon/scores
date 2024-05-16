@@ -28,6 +28,12 @@ settings *args:
     source {{ justfile_directory() }}/scripts/settings.nu
     settings {{ args }}
 
+# View available templates
+templates *args:
+    #!/usr/bin/env nu
+    source {{ justfile_directory() }}/scripts/templates.nu
+    templates {{ args }}
+
 # List scores
 list *args:
     #!/usr/bin/env nu
