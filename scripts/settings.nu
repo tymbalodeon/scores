@@ -45,7 +45,7 @@ export def get_settings [
 
 export def get_pdfs_directory [] {
   let pdfs_directory = (
-    settings
+    get_settings
     | get pdfs_directory
   )
 
