@@ -5,7 +5,8 @@
 
 \header {
   title = "Mattress"
-  composer = "Ashley Cubbler (Tomo Choco)"
+  subtitle = "Tomo Choco"
+  composer = "Ashley Cubbler"
   arranger = "Ben Rosen, bass"
 }
 
@@ -76,40 +77,7 @@ end = \relative fs, {
 }
 
 verseTwo = \relative a, {
-  \repeat volta 5 {
-
-    | a8 a' e' a, ~ a a, e'' a,
-
-    \alternative {
-      \volta 1 {
-        | e,8 gs' b gs ~ gs e, fs' gs
-      }
-
-      \volta 2 {
-        | e,8 gs' b gs ~ gs e, cs'' b
-      }
-
-      \volta 3 {
-        | e,,8 gs' b gs ~ gs e, e'' ds
-      }
-
-      \volta 4 {
-        | e,,8 gs' b gs ~ gs e, fs' e
-      }
-
-      \volta 5 {
-        | g, g g g g g f4
-      }
-    }
-  }
-
-  | e8 a' e' a, ~ a a, e'' a,
-  | e,8 gs' b gs ~ gs e, fs' e
-
-  | a,8 a' e' a,, a' \glissando b fs' a,,
-  | b' \glissando cs gs' cs, \glissando b fs' a, b ~
-  | b1
-  | R1
+  | R1 * 16
 }
 
 bridge = \relative e' {
