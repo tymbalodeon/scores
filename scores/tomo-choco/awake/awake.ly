@@ -11,7 +11,7 @@
 }
 
 music = \relative g, {
-  \key c \major
+  \key f \major
   \time 4/4
   \clef "bass"
 
@@ -38,6 +38,10 @@ music = \relative g, {
   | g16 ) d, c' cs ( d ) f d8 r16 g,8 -0 g16 g'16 d g,8 -1
 
   | g,8. -> g16 -> ~ g g g8 -> ~ g16 g8 -> e16 g -> e g8 ->
+
+  \key g \major
+  \bar "||"
+
   | c8. -> c16 -> ~ c c c8 -> ~ c16 c8 -> \xNote c16 d ( e ) g  a (
   | b16 ) -> b b e, -> ~ e e b'16 -> b b e,8 -> e16 b' -> a, -0 d8 ->
   | c8. -> c16 -> ~ c c c8 ->  ~ c d16 ( e ) g a ( b ) d
@@ -56,6 +60,10 @@ music = \relative g, {
   | g16 -> g g g -> r e g -> g g g -> r e g8 -> g ->
 
   | R1 * 2
+
+  \key f \major
+  \bar "||"
+
   | R1 * 3
   | r2 r4 r16 g8 -> e16
 
@@ -81,6 +89,9 @@ music = \relative g, {
   | d''16 -> d d d -> ~ d d, -0 d' -> d d d8 -> d,16 d' -> d d, d
   | d'16 ->  d d d -> ~ d d, d' -> d d d8 -> d,16 d' -> d, d'8 ->
 
+  \key g \major
+  \bar "||"
+
   | c,8. -> c16 -> ~ c a c8 -> ~ c16 c8 -> a16 d ( e ) g a (
   | d16 ) -> d d g, -> ~ g g d'16 -> d d g,8 -> g16 d' -> g, d8
   | c8. -> c16 -> ~ c a c8 -> ~ c16 c8 -> d16 ( e ) g ( a ) b
@@ -97,9 +108,6 @@ music = \relative g, {
   | c16 ) -> c c b -> ~ b b a -> a a b8 -> a,16 -0 a'8 -> g ->
   | f16 -> f f f -> r8 f16 -> f f f8 -> c16 f -> c f, fs
   | g16 -> g g g -> r e g -> g g g -> r e g8 -> g ->
-
-  \bar "||"
-  \key g \major
 
   | r8 d'''16 -> ^\markup \tiny "D" ( b ) d,, -0 b'' -> ( a ) ( g, ) -0 e' -> ( fs) ( g ) e ( -> d, ) -0 a -0 d' -> ( b )
   | r8 d'16 -> ( b ) d,, b'' -> ( a ) ( g, ) e' -> ( fs ) ( g ) a -> d,, a b' -> ( a )
