@@ -1,9 +1,9 @@
 use ./files.nu get_files
 use ./files.nu get_title
 
-def display_array [list: record, key: string] {
+def display_record [record: record, key: string] {
   try {
-    $list.$key 
+    $record.$key 
     | str join ", " 
     | wrap $key
   } catch {
@@ -28,11 +28,11 @@ def display_info [file: path, artist?: string] {
     | select title
     | merge ($info | select artist)
     | merge (
-        display_array $info "composers"
+        display_record $info "composers"
     ) | merge (
-          display_array $info "arrangers"
+          display_record $info "arrangers"
     ) | merge (
-          display_array $info "instrumentation"
+          display_record $info "instrumentation"
     ) | merge (
           $info | select key
     ) | merge (
@@ -41,10 +41,21 @@ def display_info [file: path, artist?: string] {
   )
 }
 
+def get_unique [files: list, key: string] {
+  return (
+    $files
+    | get $key
+    | uniq
+    | sort
+  )
+}
+
 def score-info [
   search_term = "" # Search term for finding pdfs
   --artist: string # Limit search to an artist
+  --keys # Show unique keys for matching scores
   --sort-by: string # Sort results by column
+  --time-signatures # Show unique time signatures for matching scores
 ] {
   let files = (
     (get_files "ly" $search_term) 
@@ -60,13 +71,24 @@ def score-info [
   )
 
   let files = if ($sort_by | is-empty) {
+    if $keys {
+      get_unique $files "key"
+    } else if $time_signatures {
+      get_unique $files "time_signature"
+    } else {
      $files 
+    }
   } else {
     $files 
     | sort-by $sort_by
   }
 
-  if ($files | length) == 1 {
+  if $keys or $time_signatures {
+    return (
+      $files 
+      | str join "\n"
+    )
+  } else if ($files | length) == 1 {
     return ($files | first)
   } else {
     return $files

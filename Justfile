@@ -64,7 +64,7 @@ open *search_term:
     source {{ justfile_directory() }}/scripts/open.nu
     open-pdf {{ search_term }}
 
-# Get info about score(s)
+# Get info about scores
 info *search_term:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/info.nu
