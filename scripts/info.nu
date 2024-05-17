@@ -3,12 +3,17 @@ use ./files.nu get_title
 
 def display_record [record: record, key: string] {
   try {
-    $record.$key 
-    | str join ", " 
-    | wrap $key
+    return (
+      $record 
+      | get $key
+      | str join ", " 
+      | wrap $key
+    )
   } catch {
-    ""
-    | wrap $key
+    return (
+      ""
+      | wrap $key
+    )
   }
 }
 
@@ -52,10 +57,15 @@ def get_unique [files: list, key: string] {
 
 def score-info [
   search_term = "" # Search term for finding pdfs
+  --arrangers # Show unique arrangers for matching scores
   --artist: string # Limit search to an artist
+  --artists # Show unique artists for matching scores
+  --composers # Show unique composers for matching scores
+  --instruments # Show unique instruments for matching scores
   --keys # Show unique keys for matching scores
   --sort-by: string # Sort results by column
   --time-signatures # Show unique time signatures for matching scores
+  --titles # Show unique titles for matching scores
 ] {
   let files = (
     (get_files "ly" $search_term) 
@@ -71,10 +81,20 @@ def score-info [
   )
 
   let files = if ($sort_by | is-empty) {
-    if $keys {
+    if $arrangers {
+      get_unique $files "arrangers"
+    } else if $artists {
+      get_unique $files "artist"
+    } else if $composers {
+      get_unique $files "composers"
+    } else if $instruments {
+      get_unique $files "instrumentation"
+    } else if $keys {
       get_unique $files "key"
     } else if $time_signatures {
       get_unique $files "time_signature"
+    } else if $titles {
+      get_unique $files "title"
     } else {
      $files 
     }
@@ -83,7 +103,15 @@ def score-info [
     | sort-by $sort_by
   }
 
-  if $keys or $time_signatures {
+  if (
+    $arrangers
+    or $artists
+    or $composers 
+    or $instruments 
+    or $keys 
+    or $time_signatures
+    or $titles
+  ) {
     return (
       $files 
       | str join "\n"
