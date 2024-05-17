@@ -4,7 +4,7 @@ structure = {
   \time 2/2
 
   \repeat unfold 2 {
-    | s1 * 2 
+    | s1 * 2
   }
 
   \sectionLabel "Verse 1"
@@ -19,7 +19,7 @@ structure = {
   }
 
   \repeat unfold 2 {
-    | s1 * 2 
+    | s1 * 2
   }
 
   \sectionLabel "Verse 2"

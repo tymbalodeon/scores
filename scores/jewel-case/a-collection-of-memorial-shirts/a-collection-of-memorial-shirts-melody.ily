@@ -15,7 +15,7 @@ melody = \new Voice \with {
     }
 
     \repeat unfold 2 {
-      | c2 c 
+      | c2 c
       | c c
     }
   }
@@ -32,7 +32,7 @@ melody = \new Voice \with {
   }
 
   \repeat unfold 2 {
-    | c2 c 
+    | c2 c
     | c c
   }
 

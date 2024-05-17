@@ -3,7 +3,7 @@ use ./settings.nu get_settings
 
 def get_directory_name [name: string] {
   return (
-    $name 
+    $name
     | str downcase
     | str replace --all " " "-"
   )
@@ -37,7 +37,7 @@ def create [
   mkdir $new_score_directory
 
   let lilypond_version = get_lilypond_version
-    
+
   for file in $files {
     cat $file
     | str replace --all "[arranger]" $arranger

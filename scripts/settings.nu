@@ -9,13 +9,13 @@ export def get_settings [
       cp settings-default.toml settings.toml
     }
 
-    ^$env.EDITOR settings.toml    
+    ^$env.EDITOR settings.toml
 
     return
   }
 
   let settings = try {
-    open settings-default.toml 
+    open settings-default.toml
     | merge (open settings.toml)
   } catch {
     open settings-default.toml
@@ -26,16 +26,16 @@ export def get_settings [
   } else {
     if ($value | is-empty) {
       return (
-        $settings 
+        $settings
         | get $key
       )
     } else {
       let new_settings = (
-        $settings 
+        $settings
         | upsert $key $value
       )
 
-      $new_settings 
+      $new_settings
       | save --force settings.toml
 
       return $new_settings

@@ -3,14 +3,14 @@
 changes = \chords {
   \repeat unfold 2 {
     \repeat unfold 2 {
-      | c1 
+      | c1
       | g1
     }
 
     \repeat volta 2 {
-      | c1 
+      | c1
       | g1
-      | bf1 
+      | bf1
       | d1:m
     }
 
@@ -25,7 +25,7 @@ changes = \chords {
   | c1
   | s1
 
-  | a1:m 
+  | a1:m
   | a1:m/g
   | d1
   | s1
@@ -36,26 +36,26 @@ changes = \chords {
   | s1
 
   \repeat unfold 2 {
-    | c1 
+    | c1
     | g1
   }
 
   \repeat volta 2 {
-    | c1 
+    | c1
     | g1
-    | d1 
+    | d1
     | a1:m
   }
 
   \repeat unfold 2 {
-    | c1 
+    | c1
     | g1
   }
 
   \repeat volta 2 {
-    | c1 
+    | c1
     | g1
-    | bf1 
+    | bf1
     | d1:m
   }
 
@@ -69,7 +69,7 @@ changes = \chords {
   | c1
   | s1
 
-  | a1:m 
+  | a1:m
   | a1:m/g
   | d1
   | s1
@@ -80,19 +80,19 @@ changes = \chords {
   | s1
 
   \repeat unfold 2 {
-    | c1 
+    | c1
     | g1
   }
 
   \repeat volta 2 {
-    | c1 
+    | c1
     | g1
-    | d1 
+    | d1
     | a1:m
   }
 
-  | c1 
+  | c1
   | g1
-  | d1 
+  | d1
   | g1
 }

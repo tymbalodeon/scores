@@ -72,9 +72,9 @@ export def get_compilation_status [
 }
 
 export def get_lilypond_version [] {
-  lilypond --version 
-  | lines 
-  | first 
-  | split row " " 
+  lilypond --version
+  | lines
+  | first
+  | split row " "
   | get 2
 }

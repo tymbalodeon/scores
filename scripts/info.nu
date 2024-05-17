@@ -4,9 +4,9 @@ use ./files.nu get_title
 def display_record [record: record, key: string] {
   try {
     return (
-      $record 
+      $record
       | get $key
-      | str join ", " 
+      | str join ", "
       | wrap $key
     )
   } catch {
@@ -29,7 +29,7 @@ def display_info [file: path, artist?: string] {
   }
 
   return (
-    $info 
+    $info
     | select title
     | merge ($info | select artist)
     | merge (
@@ -71,23 +71,23 @@ def score-info [
   --titles # Show unique titles for matching scores
 ] {
   let files = (
-    (get_files "ly" $search_term) 
+    (get_files "ly" $search_term)
     | each {
-      |file| 
+      |file|
 
       let toml_files = (get_files "toml" (get_title $file))
 
       if (($toml_files | length) == 1) {
         display_info ($toml_files | first) $artist
       }
-    } 
+    }
   )
 
   let files = if $major {
-    $files 
+    $files
     | filter {|file| "major" in $file.key}
   } else if $minor {
-    $files 
+    $files
     | filter {|file| "minor" in $file.key}
   } else {
     $files
@@ -103,11 +103,11 @@ def score-info [
     } else if $instruments {
       get_unique $files "instrumentation"
       | each {
-          |instrumentation| 
+          |instrumentation|
 
-          $instrumentation 
+          $instrumentation
           | split row ", "
-        } 
+        }
       | reduce {|iterator, accumulator| $iterator ++ $accumulator}
       | uniq
       | sort
@@ -118,24 +118,24 @@ def score-info [
     } else if $titles {
       get_unique $files "title"
     } else {
-     $files 
+     $files
     }
   } else {
-    $files 
+    $files
     | sort-by $sort_by
   }
 
   if (
     $arrangers
     or $artists
-    or $composers 
-    or $instruments 
-    or $keys 
+    or $composers
+    or $instruments
+    or $keys
     or $time_signatures
     or $titles
   ) {
     return (
-      $files 
+      $files
       | str join "\n"
     )
   } else if ($files | length) == 1 {
