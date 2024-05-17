@@ -64,6 +64,8 @@ def score-info [
   --composers # Show unique composers for matching scores
   --instruments # Show unique instruments for matching scores
   --keys # Show unique keys for matching scores
+  --major # Show scores in a major key only
+  --minor # Show scores in a minor key only
   --sort-by: string # Sort results by column
   --time-signatures # Show unique time signatures for matching scores
   --titles # Show unique titles for matching scores
@@ -81,6 +83,16 @@ def score-info [
     } 
   )
 
+  let files = if $major {
+    $files 
+    | filter {|file| "major" in $file.key}
+  } else if $minor {
+    $files 
+    | filter {|file| "minor" in $file.key}
+  } else {
+    $files
+  }
+
   let files = if ($sort_by | is-empty) {
     if $arrangers {
       get_unique $files "arrangers"
@@ -90,6 +102,15 @@ def score-info [
       get_unique $files "composers"
     } else if $instruments {
       get_unique $files "instrumentation"
+      | each {
+          |instrumentation| 
+
+          $instrumentation 
+          | split row ", "
+        } 
+      | reduce {|iterator, accumulator| $iterator ++ $accumulator}
+      | uniq
+      | sort
     } else if $keys {
       get_unique $files "key"
     } else if $time_signatures {
