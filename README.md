@@ -32,8 +32,9 @@ On macOS, install the
 [default LilyPond fonts](https://lilypond.org/doc/v2.24/Documentation/notation/fonts#font-families).
 This can be done using Nix and
 [Home Manager](https://nix-community.github.io/home-manager/) by adding
-`gyre-fonts` to `home.packages` as in these [dotfiles](<https://github.com/>
-tymbalodeon/.dotfiles), or manually with the following links:
+`gyre-fonts` to `home.packages` as in these
+[dotfiles](https://github.com/tymbalodeon/.dotfiles), or manually with the
+following links:
 
 <!-- markdownlint-disable line-length -->
 
