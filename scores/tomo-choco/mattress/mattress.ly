@@ -10,18 +10,31 @@
   arranger = "Ben Rosen, bass"
 }
 
-verseOne = \relative a, {
-  | R1 * 8
+verseOne = \relative b {
+  | b8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a,16 ( b )
+  | e8. e16 ~ e b e8 ~ e16 e8 b16 e8 b \glissando
+  | b'8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a,16 ( b )
+  | e8. e16 ~ e b e8 ~ e16 e8 b16 e8 b \glissando
 
-  | R1 * 3
-  | r2 r4 b \glissando
+  | b'8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a,16 ( b )
+  | e8. e16 ~ e b e8 ~ e16 e8 b16 e8 b \glissando
+  | b'8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a,16 ( b )
+  | e8. e16 ~ e b e8 ~ e16 e8 b16 e8 b \glissando
 
-  | a'1
-  | g4. f8 ~ f2
-  | e4. e,8 ~ e2
-  | gs1
+  | b'8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a,16 ( b )
+  | e8. e16 ~ e b e8 ~ e16 e8 b16 e8 b \glissando
+  | b'8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a,16 ( b )
+  | e8. e16 ~ e b e8 ~ e16 e8 b16 e,8 b' \glissando
 
-  | R1 * 4
+  | b'8. b16 ~ b fs a8 ~ a16 a8 fs16 gs8 e
+  | g8. g16 ~ g e fs8 ~ fs16 fs8 a,16 f'8 b, \glissando
+  | b'8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a,16 ( b )
+  | e8. e16 ~ e b e8 ~ e16 e8 b16 e8 b \glissando
+
+  | b'8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a,16 ( b )
+  | e8. e16 ~ e b fs'8 ~ fs8 gs ~ gs e16 ( fs )
+  | b8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a16 ( b )
+  | e8. e16 ~ e b e,8 ~ e16 e8 b16 e,8 r
 }
 
 chorus = \relative a, {
@@ -33,32 +46,19 @@ chorus = \relative a, {
   | g8 b' g, d' ~ d fs' d, e,
   | fs8 a' fs, fs ~ fs a' fs, e
 
-  | a8 c' a a, ~ a c' a a, ~
+  | a8 c' a a, ~ a c' a e,
   | a8 c' a a, ~ a c e' c,
 
   | b8 d' b b, ~ b d' b a,
   | g8 b' g, g ~ g b' g, r
 }
 
-postChorusBase = \relative fs, {
+postChorus = \relative fs, {
   | fs8 e'16 es fs8 cs e16 es fs8 cs e,
   | fs8 e'16 es fs8 cs e16 es fs8 cs a
   | b8 d' ( cs ) b a fs e d (
   | cs8 ) b a d fs a e e,
 
-}
-
-postChorusOne = \relative e, {
-  \postChorusBase
-
-  | e'2 r
-  | R1 * 3
-}
-
-postChorusTwo = \relative e, {
-  \postChorusBase
-
-  | R1 * 2
 }
 
 end = \relative fs, {
@@ -77,7 +77,30 @@ end = \relative fs, {
 }
 
 verseTwo = \relative a, {
-  | R1 * 16
+  | b8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a16 ( b )
+  | e8. e16 ~ e b e8 ~ e16 e8 b16 e8 e,16 ( fs )
+  | b8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a16 ( b )
+  | e8. e16 ~ e b e8 ~ e16 e8 b16 e b e,8
+
+  | b'8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 fs16 b
+  | e,8. e16 ~ e b' e8 ~ e16 e8 b16 e8 e,16 ( fs )
+  | b8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 fs16 b
+  | e,8. e16 ~ e b' e8 ~ e16 e8 b16 e8 e,16 ( fs )
+
+  | b8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 fs16 b
+  | e,8. e16 ~ e b' e8 ~ e16 e8 b16 e8 e,16 ( fs )
+  | b8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 fs16 b
+  | e,8. e16 ~ e b' e8 ~ e16 e8 b16 e8 e,
+
+  | b'8. b16 ~ b fs a8 ~ a16 a8 fs16 gs8 e
+  | g8. g16 ~ g e fs8 ~ fs16 fs8 e16 f8 a
+  | b8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 fs16 b
+  | e,8. e16 ~ e b' e8 ~ e16 e8 b16 e8 e,16 ( fs )
+  
+  | b8. b16 ~ b fs cs'8 ~ cs8 ds ~ ds b16 ( cs )
+  | e8. e16 ~ e b fs'8 ~ fs8 gs ~ gs e16 ( fs )
+  | b8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a16 ( b )
+  | e8. e16 ~ e b e,8 ~ e16 e8 b16 e,8 r
 }
 
 bridge = \relative e' {
@@ -109,7 +132,7 @@ music = \relative a, {
   \key d \major
   \bar "||"
 
-  \postChorusOne
+  \postChorus
 
   \key e \major
   \bar "||"
@@ -124,7 +147,7 @@ music = \relative a, {
   \key d \major
   \bar "||"
 
-  \postChorusTwo
+  \postChorus
 
   \key e \major
   \bar "||"
