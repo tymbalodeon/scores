@@ -28,13 +28,64 @@ def display_record [record: record, key: string] {
   }
 }
 
-def display_info [score_file: path info_file: path, artist?: string] {
+def is_match [info: record, search_term?: string, search_key?: string] {
+  return (
+    try {
+      (
+        $search_term | is-empty
+      ) or  (
+        let search_term = ($search_term | str downcase);
+        let column = ($info | get $search_key);
+
+        if (
+          (
+            $column 
+            | describe --detailed 
+            | get type
+          ) == "list"
+        ) {
+          let values = (
+            $column
+            | each {|value| $value | str downcase}
+          );
+
+          mut is_match = false;
+
+          for value in $values {
+            if $search_term in $value {
+              $is_match = true;
+              break;
+            }
+          };
+
+          $is_match
+        } else {
+          ($search_term | str downcase) in ($column | str downcase)
+        }
+      )
+    } catch {
+      return false
+    }
+  )
+}
+
+def display_info [
+  score_file: path 
+  info_file: path
+  arranger?: string
+  artist?: string
+  composer?: string
+] {
   let info = (open $info_file)
 
-  if (
-    not ($artist | is-empty)
-  ) and (
-    not (($artist | str downcase) in ($info.artist | str downcase))
+  if not (
+    (is_match $info $arranger "arrangers") and (
+      (
+        $artist | is-empty
+      ) or (
+        ($artist | str downcase) in ($info.artist | str downcase)
+      ) 
+    ) and (is_match $info $composer "composers")
   ) {
     return
   }
@@ -69,10 +120,12 @@ def filter_by_status [scores: table, status: string] {
 
 def score-info [
   search_term = "" # Search term for finding pdfs
+  --arranger: string # Limit search to an arranger
   --arrangers # Show unique arrangers for matching scores
   --artist: string # Limit search to an artist
   --artists # Show unique artists for matching scores
   --compiled # Show only scores with up-to-date compiled pdfs
+  --composer: string # Limit search to a composer
   --composers # Show unique composers for matching scores
   --instruments # Show unique instruments for matching scores
   --keys # Show unique keys for matching scores
@@ -92,7 +145,14 @@ def score-info [
       let toml_files = (get_files "toml" (get_title $file))
 
       if (($toml_files | length) == 1) {
-        display_info $file ($toml_files | first) $artist
+        (
+          display_info 
+            $file 
+            ($toml_files | first) 
+            $arranger 
+            $artist 
+            $composer
+        )
       }
     }
   )
