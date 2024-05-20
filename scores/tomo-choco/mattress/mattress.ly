@@ -96,7 +96,7 @@ verseTwo = \relative a, {
   | g8. g16 ~ g e fs8 ~ fs16 fs8 e16 f8 a
   | b8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 fs16 b
   | e,8. e16 ~ e b' e8 ~ e16 e8 b16 e8 e,16 ( fs )
-  
+
   | b8. b16 ~ b fs cs'8 ~ cs8 ds ~ ds b16 ( cs )
   | e8. e16 ~ e b fs'8 ~ fs8 gs ~ gs e16 ( fs )
   | b8. b16 ~ b fs b8 ~ b16 b8 fs16 b8 a16 ( b )

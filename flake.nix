@@ -18,11 +18,16 @@
   in {
     devShells = forEachSupportedSystem ({pkgs}: {
       default = pkgs.mkShell {
+        FONTCONFIG_FILE = pkgs.makeFontsConf {
+          fontDirectories = [pkgs.freefont_ttf];
+        };
+
         packages = with pkgs; [
           deadnix
           fd
           flake-checker
           gh
+          gyre-fonts
           just
           lilypond-unstable-with-fonts
           lychee
