@@ -5,7 +5,7 @@ def templates [
 ] {
   if not ($files | is-empty) {
     return (
-      fd $files templates 
+      fd $files templates
       | lines
     )
   }

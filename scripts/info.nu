@@ -10,13 +10,13 @@ def display_record [record: record, key: string] {
 
     if ($value | is-empty) {
       return (
-        $null_display 
+        $null_display
         | wrap $key
       )
     } else {
       return (
-        $value 
-        | str join ", " 
+        $value
+        | str join ", "
         | wrap $key
       )
     }
@@ -39,8 +39,8 @@ def is_match [info: record, search_term?: string, search_key?: string] {
 
         if (
           (
-            $column 
-            | describe --detailed 
+            $column
+            | describe --detailed
             | get type
           ) == "list"
         ) {
@@ -70,7 +70,7 @@ def is_match [info: record, search_term?: string, search_key?: string] {
 }
 
 def display_info [
-  score_file: path 
+  score_file: path
   info_file: path
   arranger?: string
   artist?: string
@@ -84,7 +84,7 @@ def display_info [
         $artist | is-empty
       ) or (
         ($artist | str downcase) in ($info.artist | str downcase)
-      ) 
+      )
     ) and (is_match $info $composer "composers")
   ) {
     return
@@ -146,23 +146,23 @@ def score-info [
 
       if (($toml_files | length) == 1) {
         (
-          display_info 
-            $file 
-            ($toml_files | first) 
-            $arranger 
-            $artist 
+          display_info
+            $file
+            ($toml_files | first)
+            $arranger
+            $artist
             $composer
         )
       } else if ([$arranger $artist $composer] | all {|option| $option | is-empty}) {
         {
-          title: $null_display, 
-          artist: $null_display, 
-          composers: $null_display, 
-          arrangers: $null_display, 
-          instrumentation: $null_display, 
-          key: $null_display, 
-          time_signature: $null_display, 
-          status: (get_compilation_status $file), 
+          title: $null_display,
+          artist: $null_display,
+          composers: $null_display,
+          arrangers: $null_display,
+          instrumentation: $null_display,
+          key: $null_display,
+          time_signature: $null_display,
+          status: (get_compilation_status $file),
           file: $file
         }
       }
