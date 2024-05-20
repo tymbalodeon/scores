@@ -1,17 +1,27 @@
 use ./files.nu get_files
 use ./files.nu get_title
 
+const null_display = "----"
+
 def display_record [record: record, key: string] {
   try {
-    return (
-      $record
-      | get $key
-      | str join ", "
-      | wrap $key
-    )
+    let value = $record | get $key
+
+    if ($value | is-empty) {
+      return (
+        $null_display 
+        | wrap $key
+      )
+    } else {
+      return (
+        $value 
+        | str join ", " 
+        | wrap $key
+      )
+    }
   } catch {
     return (
-      ""
+      $null_display
       | wrap $key
     )
   }
@@ -39,9 +49,9 @@ def display_info [file: path, artist?: string] {
     ) | merge (
           display_record $info "instrumentation"
     ) | merge (
-          $info | select key
+          display_record $info "key"
     ) | merge (
-          $info | select time_signature
+          display_record $info "time_signature"
     )
   )
 }
