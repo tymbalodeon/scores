@@ -153,6 +153,18 @@ def score-info [
             $artist 
             $composer
         )
+      } else if ([$arranger $artist $composer] | all {|option| $option | is-empty}) {
+        {
+          title: $null_display, 
+          artist: $null_display, 
+          composers: $null_display, 
+          arrangers: $null_display, 
+          instrumentation: $null_display, 
+          key: $null_display, 
+          time_signature: $null_display, 
+          status: (get_compilation_status $file), 
+          file: $file
+        }
       }
     }
   )
