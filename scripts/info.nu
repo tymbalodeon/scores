@@ -61,7 +61,7 @@ def get_unique [files: list, key: string] {
     $files
     | get $key
     | uniq
-    | filter {|item| not ($item | is-empty)}
+    | filter {|item| $item != $null_display}
     | sort
   )
 }
