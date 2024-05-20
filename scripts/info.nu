@@ -132,6 +132,7 @@ def score-info [
   --major # Show scores in a major key only
   --minor # Show scores in a minor key only
   --missing # Show only scores with missing pdfs
+  --missing-info # Show only scores with missing info toml files
   --outdated # Show only scores with outdated pdfs
   --sort-by: string # Sort results by column
   --time-signatures # Show unique time signatures for matching scores
@@ -144,8 +145,24 @@ def score-info [
 
       let toml_files = (get_files "toml" (get_title $file))
 
-      if (($toml_files | length) == 1) {
-        (
+      if ($toml_files | is-empty) {
+        if $missing_info {
+          return $file
+        } else if ([$arranger $artist $composer] | all {|option| $option | is-empty}) {
+          return {
+            title: $null_display,
+            artist: $null_display,
+            composers: $null_display,
+            arrangers: $null_display,
+            instrumentation: $null_display,
+            key: $null_display,
+            time_signature: $null_display,
+            status: (get_compilation_status $file),
+            file: $file
+          }
+        }
+      } else if not $missing_info {
+        return (
           display_info
             $file
             ($toml_files | first)
@@ -153,18 +170,6 @@ def score-info [
             $artist
             $composer
         )
-      } else if ([$arranger $artist $composer] | all {|option| $option | is-empty}) {
-        {
-          title: $null_display,
-          artist: $null_display,
-          composers: $null_display,
-          arrangers: $null_display,
-          instrumentation: $null_display,
-          key: $null_display,
-          time_signature: $null_display,
-          status: (get_compilation_status $file),
-          file: $file
-        }
       }
     }
   )
@@ -221,6 +226,7 @@ def score-info [
     or $composers
     or $instruments
     or $keys
+    or $missing_info
     or $time_signatures
     or $titles
   ) {
