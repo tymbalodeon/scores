@@ -1,3 +1,4 @@
+use ./files.nu get_compilation_status
 use ./files.nu get_files
 use ./files.nu get_title
 
@@ -27,8 +28,8 @@ def display_record [record: record, key: string] {
   }
 }
 
-def display_info [file: path, artist?: string] {
-  let info = (open $file)
+def display_info [score_file: path info_file: path, artist?: string] {
+  let info = (open $info_file)
 
   if (
     not ($artist | is-empty)
@@ -42,17 +43,13 @@ def display_info [file: path, artist?: string] {
     $info
     | select title
     | merge ($info | select artist)
-    | merge (
-        display_record $info "composers"
-    ) | merge (
-          display_record $info "arrangers"
-    ) | merge (
-          display_record $info "instrumentation"
-    ) | merge (
-          display_record $info "key"
-    ) | merge (
-          display_record $info "time_signature"
-    )
+    | merge (display_record $info "composers")
+    | merge (display_record $info "arrangers")
+    | merge (display_record $info "instrumentation")
+    | merge (display_record $info "key")
+    | merge (display_record $info "time_signature")
+    | merge (get_compilation_status $score_file | wrap status)
+    | merge ($score_file | wrap file)
   )
 }
 
@@ -66,16 +63,23 @@ def get_unique [files: list, key: string] {
   )
 }
 
+def filter_by_status [scores: table, status: string] {
+  return ($scores | filter {|score| $score.status == $status})
+}
+
 def score-info [
   search_term = "" # Search term for finding pdfs
   --arrangers # Show unique arrangers for matching scores
   --artist: string # Limit search to an artist
   --artists # Show unique artists for matching scores
+  --compiled # Show only scores with up-to-date compiled pdfs
   --composers # Show unique composers for matching scores
   --instruments # Show unique instruments for matching scores
   --keys # Show unique keys for matching scores
   --major # Show scores in a major key only
   --minor # Show scores in a minor key only
+  --missing # Show only scores with missing pdfs
+  --outdated # Show only scores with outdated pdfs
   --sort-by: string # Sort results by column
   --time-signatures # Show unique time signatures for matching scores
   --titles # Show unique titles for matching scores
@@ -88,7 +92,7 @@ def score-info [
       let toml_files = (get_files "toml" (get_title $file))
 
       if (($toml_files | length) == 1) {
-        display_info ($toml_files | first) $artist
+        display_info $file ($toml_files | first) $artist
       }
     }
   )
@@ -108,6 +112,8 @@ def score-info [
       get_unique $files "arrangers"
     } else if $artists {
       get_unique $files "artist"
+    } else if $compiled {
+      filter_by_status $files "compiled"
     } else if $composers {
       get_unique $files "composers"
     } else if $instruments {
@@ -115,14 +121,17 @@ def score-info [
       | each {
           |instrumentation|
 
-          $instrumentation
-          | split row ", "
+          $instrumentation | split row ", "
         }
       | reduce {|iterator, accumulator| $iterator ++ $accumulator}
       | uniq
       | sort
     } else if $keys {
       get_unique $files "key"
+    } else if $missing {
+      filter_by_status $files "missing"
+    } else if $outdated {
+      filter_by_status $files "outdated"
     } else if $time_signatures {
       get_unique $files "time_signature"
     } else if $titles {
@@ -131,8 +140,7 @@ def score-info [
      $files
     }
   } else {
-    $files
-    | sort-by $sort_by
+    $files | sort-by $sort_by
   }
 
   if (
@@ -144,10 +152,7 @@ def score-info [
     or $time_signatures
     or $titles
   ) {
-    return (
-      $files
-      | str join "\n"
-    )
+    return ($files | str join "\n")
   } else if ($files | length) == 1 {
     return ($files | first)
   } else {

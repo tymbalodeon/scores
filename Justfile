@@ -40,12 +40,6 @@ create *args:
     source {{ justfile_directory() }}/scripts/create.nu
     create {{ args }}
 
-# List scores
-list *args:
-    #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/list.nu
-    list {{ args }}
-
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 edit score:
     #!/usr/bin/env nu
