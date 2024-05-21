@@ -32,7 +32,7 @@
         \numericTimeSignature
     } {
         \compressMMRests
-        \adventurous
+        \adventurousBass
     }
 }
 
@@ -46,7 +46,7 @@
         \numericTimeSignature
     } {
         \compressMMRests
-        \beThouMyVision
+        \beThouMyVisionBass
     }
 }
 
@@ -60,9 +60,11 @@
         \numericTimeSignature
     } {
         \compressMMRests
-        \fadedAndFraying
+        \fadedAndFrayingBass
     }
 }
+
+\pageBreak
 
 \score {
     \header {
@@ -74,7 +76,7 @@
         \numericTimeSignature
     } {
         \compressMMRests
-        \iWasStruckByTheWords
+        \iWasStruckByTheWordsBass
     }
 }
 
@@ -88,7 +90,7 @@
         \numericTimeSignature
     } {
         \compressMMRests
-        \leastOfThese
+        \leastOfTheseBass
     }
 }
 
@@ -102,7 +104,7 @@
         \numericTimeSignature
     } {
         \compressMMRests
-        \listening
+        \listeningBass
     }
 }
 
@@ -116,7 +118,7 @@
         \numericTimeSignature
     } {
         \compressMMRests
-        \sheLeansTheyKiss
+        \sheLeansTheyKissBass
     }
 }
 
@@ -130,7 +132,7 @@
         \numericTimeSignature
     } {
         \compressMMRests
-        \silverInTheSun
+        \silverInTheSunBass
     }
 }
 
@@ -158,7 +160,7 @@
         \numericTimeSignature
     } {
         \compressMMRests
-        \weRifledThrough
+        \weRifledThroughBass
     }
 }
 
@@ -172,6 +174,6 @@
         \numericTimeSignature
     } {
         \compressMMRests
-        \whereWhen
+        \whereWhenBass
     }
 }
