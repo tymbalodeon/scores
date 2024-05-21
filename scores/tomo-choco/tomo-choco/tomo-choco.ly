@@ -22,7 +22,7 @@
 
 \score {
     \header {
-        piece = "Awake"        
+        piece = "Awake"
     }
 
     \new Staff \with {
@@ -36,7 +36,7 @@
 
 \score {
     \header {
-        piece = "Ciggy"        
+        piece = "Ciggy"
     }
 
     \new Staff \with {
@@ -52,7 +52,7 @@
 
 \score {
     \header {
-        piece = "Echos"        
+        piece = "Echos"
     }
 
     \new Staff \with {
@@ -66,7 +66,7 @@
 
 \score {
     \header {
-        piece = "Lobby"        
+        piece = "Lobby"
     }
 
     \new Staff \with {
@@ -80,7 +80,7 @@
 
 \score {
     \header {
-        piece = "Mattress"        
+        piece = "Mattress"
     }
 
     \new Staff \with {
@@ -94,7 +94,7 @@
 
 \score {
     \header {
-        piece = "Scroll"        
+        piece = "Scroll"
     }
 
     \new Staff \with {
@@ -108,7 +108,7 @@
 
 \score {
     \header {
-        piece = "Small Rooms"        
+        piece = "Small Rooms"
     }
 
     \new Staff \with {
@@ -124,7 +124,7 @@
 
 \score {
     \header {
-        piece = "Sweaty"        
+        piece = "Sweaty"
     }
 
     \new Staff \with {
@@ -138,7 +138,7 @@
 
 \score {
     \header {
-        piece = "Zippers"        
+        piece = "Zippers"
     }
 
     \new Staff \with {

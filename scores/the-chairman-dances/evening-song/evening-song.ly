@@ -24,7 +24,7 @@
 
 \score {
     \header {
-        piece = "Adventurous"        
+        piece = "Adventurous"
     }
 
     \new Staff \with {
@@ -38,7 +38,7 @@
 
 \score {
     \header {
-        piece = "Be Thou My Vision"        
+        piece = "Be Thou My Vision"
     }
 
     \new Staff \with {
@@ -52,7 +52,7 @@
 
 \score {
     \header {
-        piece = "Faded and Fraying"        
+        piece = "Faded and Fraying"
     }
 
     \new Staff \with {
@@ -68,7 +68,7 @@
 
 \score {
     \header {
-        piece = "I Was Struck By The Words"        
+        piece = "I Was Struck By The Words"
     }
 
     \new Staff \with {
@@ -82,7 +82,7 @@
 
 \score {
     \header {
-        piece = "Least of These"        
+        piece = "Least of These"
     }
 
     \new Staff \with {
@@ -96,7 +96,7 @@
 
 \score {
     \header {
-        piece = "Listening"        
+        piece = "Listening"
     }
 
     \new Staff \with {
@@ -110,7 +110,7 @@
 
 \score {
     \header {
-        piece = "She Leans, They Kiss"        
+        piece = "She Leans, They Kiss"
     }
 
     \new Staff \with {
@@ -124,7 +124,7 @@
 
 \score {
     \header {
-        piece = "Silver in the Sun"        
+        piece = "Silver in the Sun"
     }
 
     \new Staff \with {
@@ -138,7 +138,7 @@
 
 \score {
     \header {
-        piece = "Turn on the Lights, the Radio"        
+        piece = "Turn on the Lights, the Radio"
     }
 
     \new Staff \with {
@@ -152,7 +152,7 @@
 
 \score {
     \header {
-        piece = "We Rifled Through"        
+        piece = "We Rifled Through"
     }
 
     \new Staff \with {
@@ -166,7 +166,7 @@
 
 \score {
     \header {
-        piece = "Where/When"        
+        piece = "Where/When"
     }
 
     \new Staff \with {

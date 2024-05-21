@@ -78,4 +78,3 @@ sweatyBass = \relative c {
   \bar "|."
 
 }
-

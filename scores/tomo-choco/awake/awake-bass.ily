@@ -113,4 +113,3 @@ awakeBass = \relative g, {
 
   \bar "|."
 }
-

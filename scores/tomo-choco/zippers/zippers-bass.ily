@@ -96,4 +96,3 @@ zippersBass = \relative af {
   \bar "|."
 
 }
-
