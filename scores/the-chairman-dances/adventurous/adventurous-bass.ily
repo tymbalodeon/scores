@@ -1,6 +1,6 @@
 \version "2.25.15"
 
-adventurous = \relative c {
+adventurousBass = \relative c {
   \key a \major
   \clef "bass"
 

@@ -1,6 +1,6 @@
 \version "2.25.15"
 
-silverInTheSun = \relative fs, {
+silverInTheSunBass = \relative fs, {
   \key c \major
   \time 4/4
   \clef "bass"

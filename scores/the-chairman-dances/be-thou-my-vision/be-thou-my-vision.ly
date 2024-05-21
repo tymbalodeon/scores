@@ -18,6 +18,6 @@
     \numericTimeSignature
   } {
     \compressMMRests
-    \beThouMyVision
+    \beThouMyVisionBass
   }
 }

@@ -1,4 +1,4 @@
-beThouMyVision = \relative c {
+beThouMyVisionBass = \relative c {
     \key c \major
     \time 3/4
     \clef "bass"

@@ -1,6 +1,6 @@
 \version "2.25.15"
 
-leastOfThese = \relative c {
+leastOfTheseBass = \relative c {
     \key f \major
     \time 4/4
     \clef "bass"

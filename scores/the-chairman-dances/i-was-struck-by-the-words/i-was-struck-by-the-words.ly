@@ -17,6 +17,6 @@
     \numericTimeSignature
   } {
     \compressMMRests
-    \iWasStruckByTheWords
+    \iWasStruckByTheWordsBass
   }
 }

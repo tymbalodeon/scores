@@ -42,7 +42,7 @@ end = \relative e {
   | fs' -> e -> d -> r r4 r2
 }
 
-listening = \relative d {
+listeningBass = \relative d {
   \key e \minor
   \time 4/4
   \clef "bass"

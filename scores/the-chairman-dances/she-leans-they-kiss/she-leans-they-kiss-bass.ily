@@ -1,6 +1,6 @@
 \version "2.25.15"
 
-sheLeansTheyKiss = \relative gs {
+sheLeansTheyKissBass = \relative gs {
   \key b \major
   \clef "bass"
 

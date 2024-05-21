@@ -1,6 +1,6 @@
 \version "2.25.15"
 
-fadedAndFraying = \relative c {
+fadedAndFrayingBass = \relative c {
   \key g \major
   \clef "bass"
 

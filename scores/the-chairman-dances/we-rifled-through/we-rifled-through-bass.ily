@@ -1,6 +1,6 @@
 \version "2.25.15"
 
-weRifledThrough = \relative e {
+weRifledThroughBass = \relative e {
   \key d \major
   \time 4/4
   \clef "bass"

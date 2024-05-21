@@ -83,7 +83,7 @@ bridge = \relative g {
   | e,8 e r b'8 ~ b4 r16 e, fs ( gs )
 }
 
-whereWhen = \relative c {
+whereWhenBass = \relative c {
   \key b \major
   \clef "bass"
 

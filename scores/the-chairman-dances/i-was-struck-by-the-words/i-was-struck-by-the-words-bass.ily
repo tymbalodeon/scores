@@ -1,6 +1,6 @@
 \version "2.25.15"
 
-iWasStruckByTheWords = \relative d {
+iWasStruckByTheWordsBass = \relative d {
   \key c \major
   \time 4/4
 
