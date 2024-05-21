@@ -48,6 +48,8 @@
     }
 }
 
+\pageBreak
+
 \score {
     \header {
         piece = "Echos"        
@@ -117,6 +119,8 @@
         \smallRoomsBass
     }
 }
+
+\pageBreak
 
 \score {
     \header {
