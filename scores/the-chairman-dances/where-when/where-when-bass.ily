@@ -89,6 +89,7 @@ whereWhenBass = \relative c {
 
   \verseOne
   \chorus
+  \tag #'album \pageBreak
   \verseTwo
   \chorus
   \verseThree

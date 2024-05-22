@@ -18,162 +18,143 @@
 \header {
     title = "Evening Song"
     subtitle = "The Chairman Dances"
+    instrument = "Bass"
     composer = "Eric Krewson"
     arranger = "Ben Rosen, bass"
 }
+
+\paper {
+    tocItemMarkup = \tocItemWithDotsMarkup
+}
+
+\markuplist \table-of-contents
+\pageBreak
+
+\tocItem \markup "Adventurous"
 
 \score {
     \header {
         piece = "Adventurous"
     }
 
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \adventurousBass
-    }
+    \compressMMRests
+    \adventurousBass
 }
+
+\tocItem \markup "Be Thou My Vision"
 
 \score {
     \header {
         piece = "Be Thou My Vision"
     }
 
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \beThouMyVisionBass
-    }
+    \compressMMRests
+    \beThouMyVisionBass
 }
+
+\pageBreak
+
+\tocItem \markup "Faded and Fraying"
 
 \score {
     \header {
         piece = "Faded and Fraying"
     }
 
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \fadedAndFrayingBass
-    }
+    \compressMMRests
+    \fadedAndFrayingBass
 }
 
-\pageBreak
+\tocItem \markup "I Was Struck By The Words"
 
 \score {
     \header {
         piece = "I Was Struck By The Words"
     }
 
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \iWasStruckByTheWordsBass
-    }
+    \compressMMRests
+    \iWasStruckByTheWordsBass
 }
+
+\tocItem \markup "Least of These"
 
 \score {
     \header {
         piece = "Least of These"
     }
 
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \leastOfTheseBass
-    }
+    \compressMMRests
+    \leastOfTheseBass
 }
+
+\pageBreak
+
+\tocItem \markup "Listening"
 
 \score {
     \header {
         piece = "Listening"
     }
 
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \listeningBass
-    }
+    \compressMMRests
+    \listeningBass
 }
+
+\tocItem \markup "She Leans, They Kiss"
 
 \score {
     \header {
         piece = "She Leans, They Kiss"
     }
 
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \sheLeansTheyKissBass
-    }
+    \compressMMRests
+    \sheLeansTheyKissBass
 }
+
+\pageBreak
+
+\tocItem \markup "Silver in the Sun"
 
 \score {
     \header {
         piece = "Silver in the Sun"
     }
 
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \silverInTheSunBass
-    }
+    \compressMMRests
+    \silverInTheSunBass
 }
+
+\tocItem \markup "Turn on the Lights, the Radio"
 
 \score {
     \header {
         piece = "Turn on the Lights, the Radio"
     }
 
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \turnOnTheLightsTheRadioBass
-    }
+    \compressMMRests
+    \turnOnTheLightsTheRadioBass
 }
+
+\pageBreak
+
+\tocItem \markup "We Rifled Through"
 
 \score {
     \header {
         piece = "We Rifled Through"
     }
 
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \weRifledThroughBass
-    }
+    \compressMMRests
+    \weRifledThroughBass
 }
+
+\tocItem \markup "Where/When"
 
 \score {
     \header {
         piece = "Where/When"
     }
 
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \whereWhenBass
-    }
+    \compressMMRests
+    \whereWhenBass
 }

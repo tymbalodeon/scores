@@ -17,6 +17,7 @@
     \numericTimeSignature
   } {
     \compressMMRests
+    \removeWithTag #'album
     \iWasStruckByTheWordsBass
   }
 }
