@@ -4,11 +4,6 @@
 # provided to a recipe, and to see the code with `just` variables expanded.
 def src [
   recipe: string # The recipe command
-  ...args: string # Arguments to the recipe
 ] {
-  if "_" in $args {
-    just --show $recipe
-  } else {
-    just --dry-run $recipe $args
-  }
+  bat $"scripts/($recipe).nu"
 }

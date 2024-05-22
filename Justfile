@@ -4,10 +4,10 @@ set shell := ["nu", "-c"]
     nu ./scripts/help.nu
 
 # Display the source code for a recipe
-source recipe *args="_":
+source recipe:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/source.nu
-    src {{ recipe }} `{{ args }}`
+    src {{ recipe }}
 
 # Search available `just` commands
 [no-exit-message]
