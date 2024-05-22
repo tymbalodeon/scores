@@ -138,6 +138,7 @@ def score-info [
   --missing # Show only scores with missing pdfs
   --missing-info # Show only scores with missing info toml files
   --outdated # Show only scores with outdated pdfs
+  --select: string # Show only specified columns [format: "column1,column2"]
   --sort-by: string # Sort results by column
   --time-signatures # Show unique time signatures for matching scores
   --titles # Show unique titles for matching scores
@@ -226,6 +227,12 @@ def score-info [
     }
   } else {
     $files | sort-by $sort_by
+  }
+
+  let $files = if ($select | is-empty) {
+    $files
+  } else {
+    $files | select ...($select | str replace --all " " "" | split row ",")
   }
 
   if (
