@@ -18,6 +18,7 @@
     \numericTimeSignature
   } {
     \compressMMRests
+    \removeWithTag #'album
     \mattressBass
   }
 }

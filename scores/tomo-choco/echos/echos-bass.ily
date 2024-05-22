@@ -108,6 +108,8 @@ echosBass = \relative fs, {
     {
       s8
 
+      \tag #'album \pageBreak
+
       \repeat volta 3 {
         | b''8 ^\markup \tiny "B" a gs fs -. r gs e4
         | b'8 a gs fs -. r e ( ds ) r

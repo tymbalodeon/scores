@@ -16,136 +16,123 @@
 \header {
     title = "Tomo Choco"
     subtitle = "Tomo Choco"
+    instrument = "Bass"
     composer = "Ashley Cubbler"
     arranger = "Ben Rosen, bass"
 }
+
+\paper {
+    tocItemMarkup = \tocItemWithDotsMarkup
+}
+
+\markuplist \table-of-contents
+\pageBreak
+
+\tocItem \markup "Awake"
 
 \score {
     \header {
         piece = "Awake"
     }
-
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \awakeBass
-    }
+    
+    \compressMMRests
+    \awakeBass
 }
+
+\pageBreak
+
+\tocItem \markup "Ciggy"
 
 \score {
     \header {
         piece = "Ciggy"
     }
-
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \ciggyBass
-    }
+    
+    \compressMMRests
+    \ciggyBass
 }
 
-\pageBreak
+% \pageBreak
+
+\tocItem \markup "Echos"
 
 \score {
     \header {
         piece = "Echos"
     }
-
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \echosBass
-    }
+    
+    \compressMMRests
+    \echosBass
 }
+
+\tocItem \markup "Lobby"
 
 \score {
     \header {
         piece = "Lobby"
     }
-
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \lobbyBass
-    }
+    
+    \compressMMRests
+    \lobbyBass
 }
+
+\tocItem \markup "Mattress"
 
 \score {
     \header {
         piece = "Mattress"
     }
-
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \mattressBass
-    }
+    
+    \compressMMRests
+    \mattressBass
 }
+
+\pageBreak
+
+\tocItem \markup "Scroll"
 
 \score {
     \header {
         piece = "Scroll"
     }
-
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \scrollBass
-    }
+    
+    \compressMMRests
+    \scrollBass
 }
+
+% \pageBreak
+
+\tocItem \markup "Small Rooms"
 
 \score {
     \header {
         piece = "Small Rooms"
     }
-
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \smallRoomsBass
-    }
+    
+    \compressMMRests
+    \smallRoomsBass
 }
 
 \pageBreak
+
+\tocItem \markup "Sweaty"
 
 \score {
     \header {
         piece = "Sweaty"
     }
-
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \sweatyBass
-    }
+    
+    \compressMMRests
+    \sweatyBass
 }
+
+\tocItem \markup "Zippers"
 
 \score {
     \header {
         piece = "Zippers"
     }
-
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \zippersBass
-    }
+    
+    \compressMMRests
+    \zippersBass
 }

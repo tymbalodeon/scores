@@ -117,6 +117,7 @@ mattressBass = \relative a, {
   \key g \major
   \bar "||"
 
+  \tag #'album \pageBreak
   \chorus
 
   \key d \major
