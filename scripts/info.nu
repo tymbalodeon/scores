@@ -121,6 +121,31 @@ def filter_by_status [scores: table, status: string] {
   return ($scores | filter {|score| $score.status == $status})
 }
 
+def parse_lilypond_value [value: string] {
+  $value              
+  | parse "{key} = {value}"
+  | first
+  | get value
+  | str replace --all '"' ""
+  | str replace --all '\' ""
+  | str trim
+}
+
+def get_lilypond_value [file: path, pattern: string] {
+  return (
+    let value = (
+      grep $"\\b($pattern)\\s=" $file            
+      | lines
+    );
+
+    if ($value | is-empty) {
+      $null_display
+    } else {
+      parse_lilypond_value ($value | first)
+    }
+  )
+}
+
 def score-info [
   search_term = "" # Search term for finding pdfs
   --arranger: string # Limit search to an arranger
@@ -138,6 +163,7 @@ def score-info [
   --missing # Show only scores with missing pdfs
   --missing-info # Show only scores with missing info toml files
   --outdated # Show only scores with outdated pdfs
+  --reject: string # Reject specified columns [format: "column1,column2"]
   --select: string # Show only specified columns [format: "column1,column2"]
   --sort-by: string # Sort results by column
   --time-signatures # Show unique time signatures for matching scores
@@ -157,12 +183,36 @@ def score-info [
           [$arranger $artist $composer $instrument] 
           | all {|option| $option | is-empty}
         ) {
+
+          let title = get_lilypond_value $file "title"
+
+          let artist = (
+            $file
+            | path dirname
+            | path dirname
+            | path parse
+            | get stem
+            | str replace --all "-" " "
+            | str title-case
+          )
+
+          let composers = get_lilypond_value $file "composer"
+          let arrangers = get_lilypond_value $file "arranger"
+
+          let instrumentation = (
+            grep \binstrumentName $file 
+            | lines
+            | each {|line| parse_lilypond_value $line}
+            | str join ", "
+            | str downcase
+          )
+
           return {
-            title: $null_display,
-            artist: $null_display,
-            composers: $null_display,
-            arrangers: $null_display,
-            instrumentation: $null_display,
+            title: $title,
+            artist: $artist,
+            composers: $composers,
+            arrangers: $arrangers,
+            instrumentation: $instrumentation,
             key: $null_display,
             time_signature: $null_display,
             status: (get_compilation_status $file),
@@ -232,7 +282,15 @@ def score-info [
   let $files = if ($select | is-empty) {
     $files
   } else {
-    $files | select ...($select | str replace --all " " "" | split row ",")
+    $files 
+    | select ...($select | str replace --all " " "" | split row ",")
+  }
+
+  let $files = if ($reject | is-empty) {
+    $files
+  } else {
+    $files 
+    | reject ...($reject | str replace --all " " "" | split row ",")
   }
 
   if (
