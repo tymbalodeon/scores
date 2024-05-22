@@ -75,6 +75,7 @@ def display_info [
   arranger?: string
   artist?: string
   composer?: string
+  instrument?: string
 ] {
   let info = (open $info_file)
 
@@ -85,7 +86,9 @@ def display_info [
       ) or (
         ($artist | str downcase) in ($info.artist | str downcase)
       )
-    ) and (is_match $info $composer "composers")
+    ) and (is_match $info $composer "composers") and (
+      is_match $info $instrument "instrumentation"
+    )
   ) {
     return
   }
@@ -127,6 +130,7 @@ def score-info [
   --compiled # Show only scores with up-to-date compiled pdfs
   --composer: string # Limit search to a composer
   --composers # Show unique composers for matching scores
+  --instrument: string # Limit search to an instrument
   --instruments # Show unique instruments for matching scores
   --keys # Show unique keys for matching scores
   --major # Show scores in a major key only
@@ -148,7 +152,10 @@ def score-info [
       if ($toml_files | is-empty) {
         if $missing_info {
           return $file
-        } else if ([$arranger $artist $composer] | all {|option| $option | is-empty}) {
+        } else if (
+          [$arranger $artist $composer $instrument] 
+          | all {|option| $option | is-empty}
+        ) {
           return {
             title: $null_display,
             artist: $null_display,
@@ -169,6 +176,7 @@ def score-info [
             $arranger
             $artist
             $composer
+            $instrument
         )
       }
     }
