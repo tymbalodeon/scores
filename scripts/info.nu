@@ -163,7 +163,7 @@ def get_lilypond_value [file: path, pattern: string] {
   )
 }
 
-export def score-info [
+export def score_info [
   search_term = "" # Search term for finding pdfs
   --arranger: string # Limit search to an arranger
   --arrangers # Show unique arrangers for matching scores
@@ -178,6 +178,7 @@ export def score-info [
   --major # Show scores in a major key only
   --minor # Show scores in a minor key only
   --missing # Show only scores with missing pdfs
+  --missing-files # [for composing with other functions] Show paths of scores missing pdfs
   --missing-info # Show only scores with missing info toml files
   --outdated # Show only scores with outdated pdfs
   --reject: string # Reject specified columns [format: "column1,column2"]
@@ -186,6 +187,12 @@ export def score-info [
   --time-signatures # Show unique time signatures for matching scores
   --titles # Show unique titles for matching scores
 ] {
+  let missing = if $missing_files {
+    true
+  } else {
+    $missing
+  }
+
   let files = (
     (get_files "ly" $search_term)
     | each {
@@ -330,6 +337,8 @@ export def score-info [
     or $titles
   ) {
     return ($files | str join "\n")
+  } else if $missing_files {
+    $files | get file
   } else if ($files | length) == 1 {
     return ($files | first)
   } else {

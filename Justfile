@@ -56,13 +56,13 @@ compile *search_term:
 open *search_term:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/open.nu
-    open-pdf {{ search_term }}
+    open_pdf {{ search_term }}
 
 # Get info about scores
 info *search_term:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/info.nu
-    score-info {{ search_term }}
+    score_info {{ search_term }}
 
 # Remove pdfs
 clean *search_term:

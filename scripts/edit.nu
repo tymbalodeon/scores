@@ -2,8 +2,8 @@ use ./compile.nu compile-score
 use ./files.nu get_files
 use ./files.nu get_lilypond_output_path
 use ./files.nu get_title
-use ./info.nu score-info
-use ./open.nu open-pdf
+use ./info.nu score_info
+use ./open.nu open_pdf
 
 # Open <score> (or --info file) in $EDITOR and pdf viewer, recompiling on file changes
 def edit [
@@ -25,7 +25,7 @@ def edit [
         let toml_file = $"($path | get parent | path join ($path | get stem)).toml"
 
         echo (
-          score-info $title
+          score_info $title
           | reject file status
         ) | save $toml_file
 
@@ -35,7 +35,7 @@ def edit [
       }
 
       compile-score $input_file --is-file
-      open-pdf $title
+      open_pdf $title
       ^$env.EDITOR $toml_file
 
       return
@@ -53,7 +53,7 @@ def edit [
     )
 
     compile-score $input_file --is-file
-    open-pdf $title
+    open_pdf $title
     zellij --layout score-layout.kdl
     rm score-layout.kdl
   }
