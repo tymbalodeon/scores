@@ -2,6 +2,7 @@ use ./compile.nu compile-score
 use ./files.nu get_files
 use ./files.nu get_lilypond_output_path
 use ./files.nu get_title
+use ./info.nu score-info
 use ./open.nu open-pdf
 
 # Open <score> (or --info file) in $EDITOR and pdf viewer, recompiling on file changes
@@ -13,12 +14,20 @@ def edit [
 
   if ($files | length) == 1 {
     if $info {
-      let toml_files = (get_files "toml" (get_title ($files | first)))
+      let title = (get_title ($files | first))
+      let toml_files = (get_files "toml" $title)
 
       let toml_file = if ($toml_files | is-empty) {
         let path = ($files | first | path parse)
 
-        $"($path | get parent | path join ($path | get stem)).toml"
+        let toml_file = $"($path | get parent | path join ($path | get stem)).toml"
+
+        echo (
+          score-info $title
+          | reject file status
+        ) | save $toml_file
+
+        $toml_file
       } else {
         $toml_files | first
       }
