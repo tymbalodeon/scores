@@ -69,6 +69,26 @@ def is_match [info: record, search_term?: string, search_key?: string] {
   )
 }
 
+def matches_all_filters [
+  info: record
+  arranger?: string
+  artist?: string
+  composer?: string
+  instrument?: string
+] {
+  return (
+    (is_match $info $arranger "arrangers") and (
+      (
+        $artist | is-empty
+      ) or (
+        ($artist | str downcase) in ($info.artist | str downcase)
+      )
+    ) and (is_match $info $composer "composers") and (
+      is_match $info $instrument "instrumentation"
+    )
+  ) 
+}
+
 def display_info [
   score_file: path
   info_file: path
@@ -80,15 +100,12 @@ def display_info [
   let info = (open $info_file)
 
   if not (
-    (is_match $info $arranger "arrangers") and (
-      (
-        $artist | is-empty
-      ) or (
-        ($artist | str downcase) in ($info.artist | str downcase)
-      )
-    ) and (is_match $info $composer "composers") and (
-      is_match $info $instrument "instrumentation"
-    )
+    matches_all_filters 
+      $info
+      $arranger
+      $artist
+      $composer
+      $instrument
   ) {
     return
   }
@@ -179,14 +196,10 @@ def score-info [
       if ($toml_files | is-empty) {
         if $missing_info {
           return $file
-        } else if (
-          [$arranger $artist $composer $instrument] 
-          | all {|option| $option | is-empty}
-        ) {
+        } else {
+          let title_found = get_lilypond_value $file "title"
 
-          let title = get_lilypond_value $file "title"
-
-          let artist = (
+          let artist_found = (
             $file
             | path dirname
             | path dirname
@@ -196,10 +209,10 @@ def score-info [
             | str title-case
           )
 
-          let composers = get_lilypond_value $file "composer"
-          let arrangers = get_lilypond_value $file "arranger"
+          let composers_found = get_lilypond_value $file "composer"
+          let arrangers_found = get_lilypond_value $file "arranger"
 
-          let instrumentation = (
+          let instrumentation_found = (
             grep \binstrumentName $file 
             | lines
             | each {|line| parse_lilypond_value $line}
@@ -207,17 +220,30 @@ def score-info [
             | str downcase
           )
 
-          return {
-            title: $title,
-            artist: $artist,
-            composers: $composers,
-            arrangers: $arrangers,
-            instrumentation: $instrumentation,
+          let info = {
+            title: $title_found,
+            artist: $artist_found,
+            composers: $composers_found,
+            arrangers: $arrangers_found,
+            instrumentation: $instrumentation_found,
             key: $null_display,
             time_signature: $null_display,
             status: (get_compilation_status $file),
             file: $file
           }
+
+          if not (
+            matches_all_filters 
+              $info
+              $arranger
+              $artist
+              $composer
+              $instrument
+          ) {
+            return
+          }
+
+          return $info
         }
       } else if not $missing_info {
         return (
