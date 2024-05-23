@@ -3,14 +3,8 @@ def find [
   search_term?: string # Regex pattern to match
 ] {
   if ($search_term | is-empty) {
-    (
-      just --list
-      | fzf
-    )
+    just --list | fzf
   } else {
-    (
-      just
-      | grep --color=always --extended-regexp $search_term
-    )
+    just | rg $search_term
   }
 }

@@ -86,7 +86,7 @@ def matches_all_filters [
     ) and (is_match $info $composer "composers") and (
       is_match $info $instrument "instrumentation"
     )
-  ) 
+  )
 }
 
 def display_info [
@@ -100,7 +100,7 @@ def display_info [
   let info = (open $info_file)
 
   if not (
-    matches_all_filters 
+    matches_all_filters
       $info
       $arranger
       $artist
@@ -139,7 +139,7 @@ def filter_by_status [scores: table, status: string] {
 }
 
 def parse_lilypond_value [value: string] {
-  $value              
+  $value
   | parse "{key} = {value}"
   | first
   | get value
@@ -151,7 +151,7 @@ def parse_lilypond_value [value: string] {
 def get_lilypond_value [file: path, pattern: string] {
   return (
     let value = (
-      grep $"\\b($pattern)\\s=" $file            
+      rg $"\\b($pattern)\\s=" $file
       | lines
     );
 
@@ -213,7 +213,7 @@ def score-info [
           let arrangers_found = get_lilypond_value $file "arranger"
 
           let instrumentation_found = (
-            grep \binstrumentName $file 
+            rg \binstrumentName $file
             | lines
             | each {|line| parse_lilypond_value $line}
             | str join ", "
@@ -233,7 +233,7 @@ def score-info [
           }
 
           if not (
-            matches_all_filters 
+            matches_all_filters
               $info
               $arranger
               $artist
@@ -308,14 +308,14 @@ def score-info [
   let $files = if ($select | is-empty) {
     $files
   } else {
-    $files 
+    $files
     | select ...($select | str replace --all " " "" | split row ",")
   }
 
   let $files = if ($reject | is-empty) {
     $files
   } else {
-    $files 
+    $files
     | reject ...($reject | str replace --all " " "" | split row ",")
   }
 

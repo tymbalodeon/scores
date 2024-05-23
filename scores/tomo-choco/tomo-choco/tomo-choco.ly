@@ -34,7 +34,7 @@
     \header {
         piece = "Awake"
     }
-    
+
     \compressMMRests
     \awakeBass
 }
@@ -47,7 +47,7 @@
     \header {
         piece = "Ciggy"
     }
-    
+
     \compressMMRests
     \ciggyBass
 }
@@ -60,7 +60,7 @@
     \header {
         piece = "Echos"
     }
-    
+
     \compressMMRests
     \echosBass
 }
@@ -71,7 +71,7 @@
     \header {
         piece = "Lobby"
     }
-    
+
     \compressMMRests
     \lobbyBass
 }
@@ -82,7 +82,7 @@
     \header {
         piece = "Mattress"
     }
-    
+
     \compressMMRests
     \mattressBass
 }
@@ -95,7 +95,7 @@
     \header {
         piece = "Scroll"
     }
-    
+
     \compressMMRests
     \scrollBass
 }
@@ -108,7 +108,7 @@
     \header {
         piece = "Small Rooms"
     }
-    
+
     \compressMMRests
     \smallRoomsBass
 }
@@ -121,7 +121,7 @@
     \header {
         piece = "Sweaty"
     }
-    
+
     \compressMMRests
     \sweatyBass
 }
@@ -132,7 +132,7 @@
     \header {
         piece = "Zippers"
     }
-    
+
     \compressMMRests
     \zippersBass
 }

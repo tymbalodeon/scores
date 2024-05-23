@@ -34,6 +34,7 @@
           nushell
           pre-commit
           python312Packages.pre-commit-hooks
+          ripgrep
           statix
           tokei
           watchexec

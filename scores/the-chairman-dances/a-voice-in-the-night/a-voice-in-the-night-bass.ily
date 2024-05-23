@@ -158,4 +158,3 @@ aVoiceInTheNightBass = \relative c {
 
   \bar "|."
 }
-

@@ -4,6 +4,19 @@ def check [
     --list # List all hook ids
     --update # Update all pre-commit hooks
 ] {
+    if $list {
+        print (
+            rg '\- id:' .pre-commit-config.yaml
+            | str replace --all "- id:" ""
+            | lines
+            | str trim
+            | sort
+            | str join "\n"
+        )
+
+        return
+    }
+
     if (which pre-commit | is-empty) {
         (
             echo "use flake"
@@ -16,19 +29,6 @@ def check [
     }
 
     pre-commit install --hook-type commit-msg
-
-    if $list {
-        print (
-            grep '\- id:' .pre-commit-config.yaml
-            | str replace --all "- id:" ""
-            | lines
-            | str trim
-            | sort
-            | str join "\n"
-        )
-
-        return
-    }
 
     if $update {
         pre-commit autoupdate
