@@ -13,8 +13,10 @@ def edit [
   let files = (get_files "ly" $search_term)
 
   if ($files | length) == 1 {
+    let input_file = (realpath ($files | first))
+    let title = (get_title ($files | first))
+
     if $info {
-      let title = (get_title ($files | first))
       let toml_files = (get_files "toml" $title)
 
       let toml_file = if ($toml_files | is-empty) {
@@ -32,13 +34,12 @@ def edit [
         $toml_files | first
       }
 
+      compile-score $input_file --is-file
+      open-pdf $title
       ^$env.EDITOR $toml_file
 
-      exit
+      return
     }
-
-    let input_file = (realpath ($files | first))
-    let title = (get_title $input_file)
 
     (
       (
