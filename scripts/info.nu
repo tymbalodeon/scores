@@ -75,6 +75,8 @@ def matches_all_filters [
   artist?: string
   composer?: string
   instrument?: string
+  key?: string
+  time_signature?: string
 ] {
   return (
     (is_match $info $arranger "arrangers") and (
@@ -85,6 +87,8 @@ def matches_all_filters [
       )
     ) and (is_match $info $composer "composers") and (
       is_match $info $instrument "instrumentation"
+    ) and (is_match $info $key "key") and (
+      is_match $info $time_signature "time_signature"
     )
   )
 }
@@ -96,6 +100,8 @@ def display_info [
   artist?: string
   composer?: string
   instrument?: string
+  key?: string
+  time_signature?: string
 ] {
   let info = (open $info_file)
 
@@ -106,6 +112,8 @@ def display_info [
       $artist
       $composer
       $instrument
+      $key
+      $time_signature
   ) {
     return
   }
@@ -174,6 +182,7 @@ export def score_info [
   --composers # Show unique composers for matching scores
   --instrument: string # Limit search to an instrument
   --instruments # Show unique instruments for matching scores
+  --key: string # Limit search to a key
   --keys # Show unique keys for matching scores
   --major # Show scores in a major key only
   --minor # Show scores in a minor key only
@@ -184,6 +193,7 @@ export def score_info [
   --reject: string # Reject specified columns [format: "column1,column2"]
   --select: string # Show only specified columns [format: "column1,column2"]
   --sort-by: string # Sort results by column
+  --time-signature: string # Limit search to a time signature
   --time-signatures # Show unique time signatures for matching scores
   --titles # Show unique titles for matching scores
 ] {
@@ -246,6 +256,8 @@ export def score_info [
               $artist
               $composer
               $instrument
+              $key
+              $time_signature
           ) {
             return
           }
@@ -261,6 +273,8 @@ export def score_info [
             $artist
             $composer
             $instrument
+            $key
+            $time_signature
         )
       }
     }
