@@ -1,3 +1,5 @@
+\version "2.25.15"
+
 beThouMyVisionBass = \relative c {
     \key c \major
     \time 3/4

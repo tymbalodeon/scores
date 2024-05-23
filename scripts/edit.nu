@@ -4,13 +4,30 @@ use ./files.nu get_lilypond_output_path
 use ./files.nu get_title
 use ./open.nu open-pdf
 
-# Open <score> in $EDITOR and pdf viewer, recompiling on file changes
+# Open <score> (or --info file) in $EDITOR and pdf viewer, recompiling on file changes
 def edit [
-  search_term = "" # Search term for finding pdfs
+  search_term = "" # Search term for finding scores
+  --info # Edit info toml for score
 ] {
   let files = (get_files "ly" $search_term)
 
   if ($files | length) == 1 {
+    if $info {
+      let toml_files = (get_files "toml" (get_title ($files | first)))
+
+      let toml_file = if ($toml_files | is-empty) {
+        let path = ($files | first | path parse)
+
+        $"($path | get parent | path join ($path | get stem)).toml"
+      } else {
+        $toml_files | first
+      }
+
+      ^$env.EDITOR $toml_file
+
+      exit
+    }
+
     let input_file = (realpath ($files | first))
     let title = (get_title $input_file)
 

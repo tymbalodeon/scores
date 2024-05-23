@@ -40,11 +40,11 @@ create *args:
     source {{ justfile_directory() }}/scripts/create.nu
     create {{ args }}
 
-# Open <score> in $EDITOR and pdf viewer, recompiling on file changes
-edit score:
+# Open <score> (or --info file) in $EDITOR and pdf viewer, recompiling on file changes
+edit *args:
     #!/usr/bin/env nu
     source {{ justfile_directory() }}/scripts/edit.nu
-    edit {{ score }}
+    edit {{ args }}
 
 # Compile pdfs
 compile *search_term:
