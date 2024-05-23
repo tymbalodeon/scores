@@ -333,6 +333,6 @@ def score-info [
   } else if ($files | length) == 1 {
     return ($files | first)
   } else {
-    return $files
+    return ($files | table --index false)
   }
 }
