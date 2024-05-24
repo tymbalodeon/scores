@@ -6,8 +6,15 @@ def clean [
   --temporary-files # Clean temporary files (ly~,ily~) instead of pdfs
 ] {
   let files = if $temporary_files {
-      fd --exclude pdfs/ --extension ily~ --extension ly~ --extension pdf --no-ignore
-      | lines
+      (
+        fd 
+          --exclude pdfs/ 
+          --extension error 
+          --extension ily~ 
+          --extension ly~ 
+          --extension pdf 
+          --no-ignore
+      ) | lines
   } else {
     get_files "pdf" $search_term
   }

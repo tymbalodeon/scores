@@ -12,6 +12,8 @@ def run-lilypond [file: path, force: bool] {
   }
 
   if $should_compile {
+    print $"Compiling ($file)"
+
     lilypond --include helpers --output (get_lilypond_output_path $file) $file
   }
 }
@@ -36,8 +38,28 @@ export def compile-score [
       get_files "ly" $score
     }
 
-    for file in $files {
-      run-lilypond $file $force
+    let errors = (
+      $files 
+      | par-each {
+          |file| 
+
+          let path = ($file | path parse)
+          let error_log = $"($path | get parent | path join ($path | get stem)).error"
+
+          try {
+            run-lilypond $file $force out+err> $error_log
+            rm $error_log
+          } catch {
+              $file
+              | wrap file
+              | merge ((cat $error_log) | wrap output)
+          }
+        }
+    )
+
+    if not ($errors | is-empty) {
+      print ""
+      print ($errors | table --index false)
     }
   }
 }
