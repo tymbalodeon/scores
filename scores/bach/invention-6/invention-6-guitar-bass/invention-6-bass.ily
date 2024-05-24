@@ -1,10 +1,11 @@
 \version "2.25.15"
+
 \include "helpers/add-fingerings.ily"
 \include "helpers/add-string-numbers.ily"
 
-\include "invention-6-voice-two.ily"
+\include "scores/bach/invention-6/invention-6-voice-two.ily"
 
-bass = \keepWithTag #'bass \voiceTwo
+bass = \keepWithTag #'bass \inventionSixVoiceTwo
 
 bassWithFingerings =
 \addFingerings \bass

@@ -1,5 +1,6 @@
 \version "2.25.15"
-voiceOne = \relative c'' {
+
+inventionSixVoiceOne = \relative c'' {
   \repeat volta 2 {
     | r16 e8 ds d16 ~
     | d cs8 b a16 ~

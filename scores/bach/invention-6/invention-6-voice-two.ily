@@ -1,4 +1,5 @@
 \version "2.25.15"
+
 lowNotesPianoOne = \relative gs, {
   gs32 fs gs16 e32 ds
   | e8
@@ -40,7 +41,7 @@ lowNotesBassFive = {
   \transpose c c' \lowNotesPianoFive
 }
 
-voiceTwo = \relative c {
+inventionSixVoiceTwo = \relative c {
   \clef "bass"
 
   \repeat volta 2 {
