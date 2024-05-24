@@ -17,19 +17,6 @@ def check [
         return
     }
 
-    if (which pre-commit | is-empty) {
-        (
-            echo "use flake"
-            | save --force .envrc
-        )
-
-        direnv allow
-
-        return
-    }
-
-    pre-commit install --hook-type commit-msg
-
     if $update {
         pre-commit autoupdate
 
