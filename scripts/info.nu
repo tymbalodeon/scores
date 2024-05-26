@@ -331,6 +331,7 @@ export def score_info [
   } else {
     $files
     | select ...($select | str replace --all " " "" | split row ",")
+    | filter {|score| not ($score | values | all {|value| $value == $null_display})}
   }
 
   let $files = if ($reject | is-empty) {
@@ -338,6 +339,7 @@ export def score_info [
   } else {
     $files
     | reject ...($reject | str replace --all " " "" | split row ",")
+    | filter {|score| not ($score | values | all {|value| $value == $null_display})}
   }
 
   if (
