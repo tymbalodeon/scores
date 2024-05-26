@@ -38,6 +38,7 @@
           statix
           tokei
           watchexec
+          zathura
           zellij
         ];
 
