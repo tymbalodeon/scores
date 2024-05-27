@@ -5,10 +5,9 @@ development environment for editing scores and generating output files.
 
 ## Installation
 
-- (On non-NixOS systems:) Install
-  [Nix](https://nixos.org/manual/nix/stable/) using the
-  [Determinate Systems Nix Installer](<https://github.com/>
-  DeterminateSystems/nix-installer).
+- (On non-NixOS systems:) Install [Nix](https://nix.dev/) using the
+  [Determinate Systems Nix Installer](<https://github.com/> DeterminateSystems/
+  nix-installer).
 
 - Run `nix develop`, or, preferably, install [direnv](https://direnv.net/)
   (using these [dotfiles](https://github.com/tymbalodeon/.dotfiles), for

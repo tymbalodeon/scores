@@ -24,6 +24,8 @@ export def get_settings [
   if ($key | is-empty) {
     return $settings
   } else {
+    let key = ($key | str replace --all "-" "_")
+
     if ($value | is-empty) {
       return (
         $settings
