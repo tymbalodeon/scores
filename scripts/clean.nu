@@ -7,12 +7,12 @@ def clean [
 ] {
   let files = if $temporary_files {
       (
-        fd 
-          --exclude pdfs/ 
-          --extension error 
-          --extension ily~ 
-          --extension ly~ 
-          --extension pdf 
+        fd
+          --exclude pdfs/
+          --extension error
+          --extension ily~
+          --extension ly~
+          --extension pdf
           --no-ignore
       ) | lines
   } else {

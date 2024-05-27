@@ -39,9 +39,9 @@ export def compile-score [
     }
 
     let errors = (
-      $files 
+      $files
       | par-each {
-          |file| 
+          |file|
 
           let path = ($file | path parse)
           let error_log = $"($path | get parent | path join ($path | get stem)).error"
