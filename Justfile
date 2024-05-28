@@ -3,93 +3,105 @@ set shell := ["nu", "-c"]
 @_help:
     nu ./scripts/help.nu
 
-# Display the source code for a recipe
-source recipe:
+# Run pre-commit hooks
+check *hooks:
     #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/source.nu
-    src {{ recipe }}
+    use {{ justfile_directory() }}/scripts/check.nu
+    check {{ hooks }}
 
-# Search available `just` commands
-[no-exit-message]
-find *search_term:
+# Remove pdfs
+clean *search_term:
     #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/find.nu
-    find {{ search_term }}
+    use {{ justfile_directory() }}/scripts/clean.nu
+    clean {{ search_term }}
 
-# Update dependencies
-update *args:
+# Compile pdfs
+compile *search_term:
     #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/update.nu
-    update-dependencies {{ args }}
-
-# View project settings
-settings *args:
-    #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/settings.nu
-    get_settings {{ args }}
-
-# View available templates
-templates *args:
-    #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/templates.nu
-    templates {{ args }}
+    use {{ justfile_directory() }}/scripts/compile.nu
+    compile {{ search_term }}
 
 # Create new score
 create *args:
     #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/create.nu
+    use {{ justfile_directory() }}/scripts/create.nu
     create {{ args }}
 
 # Open <score> (or --info file) in $EDITOR and pdf viewer, recompiling on file changes
 edit *args:
     #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/edit.nu
+    use {{ justfile_directory() }}/scripts/edit.nu
     edit {{ args }}
 
-# Compile pdfs
-compile *search_term:
+# Search available `just` recipes
+[no-exit-message]
+find-recipe *search_term:
     #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/compile.nu
-    compile-score {{ search_term }}
+    use {{ justfile_directory() }}/scripts/find-recipe.nu
+    find-recipe {{ search_term }}
 
-# Open pdfs
-open *search_term:
+# Search project history
+history *search_term:
     #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/open.nu
-    open_pdf {{ search_term }}
+    use {{ justfile_directory() }}/scripts/history.nu
+    history {{ search_term }}
 
 # Get info about scores
 info *search_term:
     #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/info.nu
-    score_info {{ search_term }}
+    use {{ justfile_directory() }}/scripts/info.nu
+    info {{ search_term }}
 
-# Remove pdfs
-clean *search_term:
+# Initialize direnv environment
+init *help:
     #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/clean.nu
-    clean {{ search_term }}
-
-# Run pre-commit hooks
-check *hooks:
-    #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/check.nu
-    check {{ hooks }}
-
-# View remote repository
-remote *browser:
-    #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/remote.nu
-    remote {{ browser }}
+    use {{ justfile_directory() }}/scripts/init.nu
+    init {{ help }}
 
 # View issues
 issue *args:
     #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/issue.nu
+    use {{ justfile_directory() }}/scripts/issue.nu
     issue {{ args }}
 
-# View repository analytics
-stats *args:
+# Open pdfs
+open *search_term:
     #!/usr/bin/env nu
-    source {{ justfile_directory() }}/scripts/stats.nu
-    stats {{ args }}
+    use {{ justfile_directory() }}/scripts/open-pdf.nu
+    open-pdf {{ search_term }}
+
+# View remote repository
+remote *browser:
+    #!/usr/bin/env nu
+    use {{ justfile_directory() }}/scripts/remote.nu
+    remote {{ browser }}
+
+# View repository analytics
+stats *help:
+    #!/usr/bin/env nu
+    use {{ justfile_directory() }}/scripts/stats.nu
+    stats {{ help }}
+
+# Update dependencies
+update-deps *help:
+    #!/usr/bin/env nu
+    use {{ justfile_directory() }}/scripts/update-deps.nu
+    update-deps {{ help }}
+
+# View the source code for a recipe
+view-source recipe:
+    #!/usr/bin/env nu
+    use {{ justfile_directory() }}/scripts/view-source.nu
+    view-source {{ recipe }}
+
+# View project settings
+settings *args:
+    #!/usr/bin/env nu
+    use {{ justfile_directory() }}/scripts/settings.nu
+    settings {{ args }}
+
+# View available templates
+templates *args:
+    #!/usr/bin/env nu
+    use {{ justfile_directory() }}/scripts/templates.nu
+    templates {{ args }}

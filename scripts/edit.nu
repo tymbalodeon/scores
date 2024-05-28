@@ -2,11 +2,11 @@ use ./compile.nu compile-score
 use ./files.nu get_files
 use ./files.nu get_lilypond_output_path
 use ./files.nu get_title
-use ./info.nu score_info
+use ./info.nu 
 use ./open.nu open_pdf
 
 # Open <score> (or --info file) in $EDITOR and pdf viewer, recompiling on file changes
-def edit [
+export def main [
   search_term = "" # Search term for finding scores
   --info # Edit info toml for score
 ] {
@@ -25,7 +25,7 @@ def edit [
         let toml_file = $"($path | get parent | path join ($path | get stem)).toml"
 
         echo (
-          score_info $title
+          info $title
           | reject file status
         ) | save $toml_file
 

@@ -1,7 +1,7 @@
 use ./files.nu get_compilation_status
 use ./files.nu get_files
 use ./files.nu get_lilypond_output_path
-use ./info.nu score_info
+use ./info.nu
 use ./settings.nu get_pdfs_directory
 
 def run-lilypond [file: path, force: bool] {
@@ -19,7 +19,7 @@ def run-lilypond [file: path, force: bool] {
 }
 
 # Compile pdfs
-export def compile-score [
+export def main [
   score = "" # Score path or search term for finding pdfs
   --is-file # Treat <score> as a path instead of a search term
   --force # Compile score even if up-to-date
@@ -33,7 +33,7 @@ export def compile-score [
     run-lilypond $score $force
   } else {
     let files = if $missing {
-      score_info --missing-files
+      info --missing-files
     } else {
       get_files "ly" $score
     }

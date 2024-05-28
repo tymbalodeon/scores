@@ -1,5 +1,5 @@
 # Manage scores settings
-export def get_settings [
+export def main [
   --edit # Open settings file in $EDITOR
   key?: string # The key to view or set
   value?: string # The new value for <key>
@@ -46,10 +46,7 @@ export def get_settings [
 }
 
 export def get_pdfs_directory [] {
-  let pdfs_directory = (
-    get_settings
-    | get pdfs_directory
-  )
+  let pdfs_directory = (main | get pdfs_directory)
 
   mkdir $pdfs_directory
 

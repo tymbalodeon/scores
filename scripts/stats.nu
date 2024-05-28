@@ -1,4 +1,4 @@
 # View repository analytics
-def stats [] {
+export def main [] {
   tokei --hidden --sort lines
 }

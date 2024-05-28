@@ -171,31 +171,31 @@ def get_lilypond_value [file: path, pattern: string] {
   )
 }
 
-export def score_info [
+export def main [
   search_term = "" # Search term for finding pdfs
   --arranger: string # Limit search to an arranger
-  --arrangers # Show unique arrangers for matching scores
+  --arrangers # View unique arrangers for matching scores
   --artist: string # Limit search to an artist
-  --artists # Show unique artists for matching scores
-  --compiled # Show only scores with up-to-date compiled pdfs
+  --artists # View unique artists for matching scores
+  --compiled # View only scores with up-to-date compiled pdfs
   --composer: string # Limit search to a composer
-  --composers # Show unique composers for matching scores
+  --composers # View unique composers for matching scores
   --instrument: string # Limit search to an instrument
-  --instruments # Show unique instruments for matching scores
+  --instruments # View unique instruments for matching scores
   --key: string # Limit search to a key
-  --keys # Show unique keys for matching scores
-  --major # Show scores in a major key only
-  --minor # Show scores in a minor key only
-  --missing # Show only scores with missing pdfs
-  --missing-files # [for composing with other functions] Show paths of scores missing pdfs
-  --missing-info # Show only scores with missing info toml files
-  --outdated # Show only scores with outdated pdfs
+  --keys # View unique keys for matching scores
+  --major # View scores in a major key only
+  --minor # View scores in a minor key only
+  --missing # View only scores with missing pdfs
+  --missing-files # [for composing with other functions] View paths of scores missing pdfs
+  --missing-info # View only scores with missing info toml files
+  --outdated # View only scores with outdated pdfs
   --reject: string # Reject specified columns [format: "column1,column2"]
-  --select: string # Show only specified columns [format: "column1,column2"]
+  --select: string # View only specified columns [format: "column1,column2"]
   --sort-by: string # Sort results by column
   --time-signature: string # Limit search to a time signature
-  --time-signatures # Show unique time signatures for matching scores
-  --titles # Show unique titles for matching scores
+  --time-signatures # View unique time signatures for matching scores
+  --titles # View unique titles for matching scores
 ] {
   let missing = if $missing_files {
     true

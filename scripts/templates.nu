@@ -1,7 +1,7 @@
 # View available templates
-def templates [
-  --files: string # Show files for specified template name
-  --src: string # Show source code for specified template file stem
+export def main [
+  --files: string # View files for specified template name
+  --src: string # View source code for specified template file stem
 ] {
   if not ($files | is-empty) {
     return (

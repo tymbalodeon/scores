@@ -10,7 +10,7 @@ def get_directory_name [name: string] {
 }
 
 # Create new scores
-def create [
+export def main [
   template: string # Which template to use
   title: string # Title for the score
   --arranger = "" # Arranger for the score
