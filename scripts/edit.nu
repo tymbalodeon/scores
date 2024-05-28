@@ -1,9 +1,9 @@
-use ./compile.nu compile-score
+use ./compile.nu 
 use ./files.nu get_files
 use ./files.nu get_lilypond_output_path
 use ./files.nu get_title
 use ./info.nu 
-use ./open.nu open_pdf
+use ./open-pdf.nu 
 
 # Open <score> (or --info file) in $EDITOR and pdf viewer, recompiling on file changes
 export def main [
@@ -34,8 +34,8 @@ export def main [
         $toml_files | first
       }
 
-      compile-score $input_file --is-file
-      open_pdf $title
+      compile $input_file --is-file
+      open-pdf $title
       ^$env.EDITOR $toml_file
 
       return
@@ -49,8 +49,8 @@ export def main [
       | str replace --all "[output]" (get_lilypond_output_path $input_file)
     ) | save --force score-layout.kdl
 
-    compile-score $input_file --is-file
-    open_pdf $title
+    compile $input_file --is-file
+    open-pdf $title
 
     do --ignore-errors {
       zellij delete-session $title
