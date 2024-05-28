@@ -82,11 +82,11 @@ stats *help:
     use {{ justfile_directory() }}/scripts/stats.nu
     stats {{ help }}
 
-# Update dependencies
-update-deps *help:
+# Update dependencies and score LilyPond version
+update *help:
     #!/usr/bin/env nu
-    use {{ justfile_directory() }}/scripts/update-deps.nu
-    update-deps {{ help }}
+    use {{ justfile_directory() }}/scripts/update.nu
+    update {{ help }}
 
 # View the source code for a recipe
 view-source recipe:

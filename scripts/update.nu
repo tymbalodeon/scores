@@ -1,6 +1,7 @@
 use ./files.nu get_files
 use ./files.nu get_lilypond_version
 
+# Update dependencies and score LilyPond version
 export def main [
   --dependencies # Update dependencies
   --scores # Update scores to match the installed LilyPond version
