@@ -102,6 +102,9 @@ echosBass = \relative fs, {
   | e4. -- ds8 -- ~ ds4 cs8 b ~
 
   | b1
+  | R1
+
+  | R1 * 15
   | r2. r8
 
   <<
