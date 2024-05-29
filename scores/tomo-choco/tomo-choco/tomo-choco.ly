@@ -111,6 +111,8 @@
     \smallRoomsBass
 }
 
+% \pageBreak
+
 \tocItem \markup "Sweaty"
 
 \score {

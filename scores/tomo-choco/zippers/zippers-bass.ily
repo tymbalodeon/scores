@@ -31,7 +31,7 @@ zippersBass = \relative af {
   | af,2.
   | g2.
   | af2.
-  | f4. ~ f4 f8 \glissando
+  | f2.
 
   | af2.
   | ef'2.
@@ -53,10 +53,10 @@ zippersBass = \relative af {
   | g2.
   | af2.
 
-  | bf4. \4 \appoggiatura { bf16 \glissando } c8. ef
-  | \appoggiatura { ef8 } f4. \glissando f, \glissando
-  | af4. ~ af4 ef'8 ( \2 \glissando
-  | af2 ) ~ af8. ef16
+  | bf4. \4 \acciaccatura { bf16 \glissando } c8. ef
+  | \appoggiatura { ef16 } f4. \glissando f, \glissando
+  | af4. ~ af4 ef'8 \2 \glissando
+  | af2 ~ af8. ef16
 
   | af4 ~ af16 ef ef'8 d c
   | bf8. g f8 ef d

@@ -85,8 +85,6 @@ sweatyBass = \relative c {
 
   | R1 * 18
 
-  \tag #'album \pageBreak
-
   | <ef bf'>2. bf4 
   | f'' ef df c
   | bf2 f 
