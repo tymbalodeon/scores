@@ -25,7 +25,7 @@ sweatyBass = \relative c {
   | df4 -. -- af -. -- df8 f, ( af ) df
   | ef4 -. -- g, -. -- bf16 ( c8 ) ef16 ~ ef bf' ( c8 )
 
-  | ef4. bf8 af' g f ef
+  | ef4. bf8 af' ^\markup \tiny "A♭" g f ef
   | df c bf af bf f bf, c
   | df4 -. -- af -. -- df16 af'8 df16 ~ df af df,8
   | ef8. -. -- ef16 g ( af8 )  bf16 ~ bf \acciaccatura bf16 c8 bf16 ~ bf af ( g ) ef
@@ -40,7 +40,7 @@ sweatyBass = \relative c {
   | df4 -. -- af -. -- df16 ef8 ( f16 ) ~ f af bf \xNote bf
   | ef,8. ef16 bf' bf, ( c ) ( df ) ef' df8 c16 ~ c bf ( af8 )
 
-  | ef16 -> ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef,
+  | ef16 ^\markup \italic "let ring" -> ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef,
   | bf16 -> bf bf' bf, -> ~ bf bf bf' bf, -> ~ bf bf f' bf, -> ~ bf bf f' bf,
   | df16 -> df af' df, -> ~ df df af' af, -> ~ af af df' af, -> ~ af af df' af, (
   | g16 ) g bf' g, -> ~ g g bf' g, -> ~ g bf ( c ) ef ~ ef f ( g8 )
@@ -59,7 +59,7 @@ sweatyBass = \relative c {
   | df,4 -. -- f, -. -- af8. -. -- df16 ( ef8 ) f16 bf,
   | af'16 ( bf8. ) ~ bf16 c, ( df ) af' g'16 ( af ) ( g ) ef ~ ef af, ( g8 )
 
-  | ef16 -> ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef,
+  | ef16 ^\markup \italic "let ring" -> ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef,
   | bf16 -> bf bf' bf, -> ~ bf bf bf' bf, -> ~ bf bf f' bf, -> ~ bf bf f' bf,
   | df16 -> df af' df, -> ~ df df af' af, -> ~ af af df' af, -> ~ af af df' af, (
   | g16 ) g bf' g, -> ~ g g bf' g, -> ~ g af ( bf ) c ~ c df ( ef ) af,

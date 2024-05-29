@@ -11,7 +11,7 @@ zippersBass = \relative af {
   | af4 ~ af16 ef ef'8 d bf
   | ef,4. bf'4 ~ bf16 ef,
   | af4 ~ af16 ef ef'8 d bf
-  | f4. c'16 ( d ) ~ d8. ef,16
+  | f4. c'16 ( \glissando d ) ~ d8. ef,16
 
   | af4 ~ af16 ef ef'8 d bf
   | ef,4. bf'
@@ -44,7 +44,7 @@ zippersBass = \relative af {
   | f8. \glissando f, c' d
 
   | af4. \acciaccatura { f''16 } g8 f ef
-  | d8. bf ef, g,
+  | d8. bf ef, \glissando g,
   | c2. ~
   | c2.
 
@@ -69,8 +69,8 @@ zippersBass = \relative af {
 
   | af4. \4 \glissando af' \3 \glissando
   | g,4. \glissando bf' \2 \glissando
-  | af,4. \glissando c' \glissando
-  | f,,4. \glissando f'8. ef16 c8
+  | af,4. \glissando c' \2 \glissando
+  | f,,4. \glissando f'8. \3 ef16 c8
 
   | af4. \glissando af' \3 \glissando
   | bf,4. \3 \glissando g'
