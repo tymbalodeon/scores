@@ -106,7 +106,7 @@ lobbyBass = \relative c {
     | e8. b' e8. b16 e,8
 
     | g8. -> g16 -. r e ( g -> ) g8 g16 -. r e (
-    | g8. -> ) g16 -. r e ( g16 -> e ) a ( b ) d ( e )
+    | g8. -> ) g16 -. r e ( g16 ) ( -> e ) a ( b ) d ( e )
     | fs16 fs fs d d d fs fs fs d d d
     | fs16 ( d -0 ) d a' \2 ( d, -0 ) d fs ( d -0 ) d  a' \1 c, ( b )
 
