@@ -33,6 +33,9 @@ smallRoomsBass = \relative c, {
   | f,4. r16 \xNote f f8 -. f4. --
   | f4. r16 \xNote f f8 -. f4. --
   | f4. r16 \xNote f f8 -. f4. --
+
+  \tag #'album \pageBreak
+
   | f4. r16 \xNote f f8 -. \appoggiatura g16 a8 -- c -- d --
 
   | f4 ~ f16 c g' ( gs ) a4 ~ a16 c, a' ( bf )

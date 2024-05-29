@@ -1,7 +1,6 @@
 \version "2.25.15"
 
 chorus = \relative e, {
-  | R1 * 3
   | r2. r16 e fs8 \glissando
 
   | a4. e'8 ~ e ( fs8 ) a,16 -0 b' ( cs8 )
@@ -31,6 +30,10 @@ scrollBass = \relative e, {
   | b8. fs16 ~ fs8 b ~ b16 fs' fs8 ~ fs16 cs fs,8
   | a4. gs8 ~ gs fs4 e8
 
+  | R1 * 3
+
+  \tag #'album \pageBreak
+
   \chorus
 
   | r2. r8 e16 ( fs )
@@ -47,6 +50,7 @@ scrollBass = \relative e, {
   | b8. fs16 ~ fs8 b ~ b16 fs' fs8 ~ fs16 cs fs,8
   | a4. cs8 ~ cs \glissando e4 \glissando e,8
 
+  | R1 * 3
   \chorus
 
   | b'16 b b b r8 b16 b b b r fs b fs b8
@@ -102,6 +106,7 @@ scrollBass = \relative e, {
   | a,4. gs8 ~ gs4 e
   | fs4. e8 ~ e4 e'
 
+  | R1 * 3
   \chorus
 
   | r2. r8 e,16 ( fs )

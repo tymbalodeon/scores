@@ -85,8 +85,6 @@
     \mattressBass
 }
 
-\pageBreak
-
 \tocItem \markup "Scroll"
 
 \score {
@@ -97,8 +95,6 @@
     \compressMMRests
     \scrollBass
 }
-
-\pageBreak
 
 \tocItem \markup "Small Rooms"
 
@@ -111,7 +107,7 @@
     \smallRoomsBass
 }
 
-% \pageBreak
+\pageBreak
 
 \tocItem \markup "Sweaty"
 
