@@ -47,7 +47,7 @@ postChorus = \relative fs, {
   | fs8 e'16 es fs8 cs e16 es fs8 cs e,
   | fs8 e'16 es fs8 cs e16 es fs8 cs a
   | b8 d' ( cs ) b a fs e d (
-  | cs8 ) b a d fs a e e,
+  | cs8 ) b a d \acciaccatura e16 \glissando fs8 a e e,
 
 }
 
@@ -61,8 +61,10 @@ end = \relative fs, {
 
   | fs8 e'16 es fs8 cs e16 es fs8 cs e,
   | fs8 b'16 bs cs8 cs, b'16 bs cs8 cs, a
-  | b8 d'' ( cs ) b a fs e d
+  | b8 d'' ( cs ) b a fs ( e ) d
   | cs b a gs fs e ds cs ~
+
+  % TODO add gliss to rest
   | cs2 r
 }
 
@@ -94,17 +96,20 @@ verseTwo = \relative a, {
 }
 
 bridge = \relative e' {
+  | R1 * 2
   | R1 * 4
 
   | r8 e b' e, ~ e4 b'8 e, ~
+  | e8 e b' e, ~ e4 b'8 e, ~
+  | e8 e b' e, ~ e4 b'8 e, ~
+  | e8 e b' e, ~ e4 b'8 e, ~
 
-  \repeat volta 4 {
-    | e8 ^\markup \italic "4x" e b' e, ~ e4 b'8 e, ~
-  }
+  | e8 e b' e, ~ e4 b'8 e, ~
+  | e8 e b' e, b' e, b' e, ~
 
-  | e8 e b' e, ~ e4 b'8 e,
-  | b'8 e, b' e, b' e, b' e, ~
-  | e2 r
+  % TODO add gliss to rest
+  | e1
+  | R1
 }
 
 mattressBass = \relative a, {
@@ -140,7 +145,7 @@ mattressBass = \relative a, {
 
   \postChorus
 
-  \key e \major
+  \key a \major
   \bar "||"
 
   \bridge
