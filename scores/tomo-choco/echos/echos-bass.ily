@@ -28,12 +28,12 @@ echosBass = \relative fs, {
   | gs4. -- fs8 -- ~ fs4 e4
 
   | e'8 -> ds cs b -> ~ b e, ( fs ) b
-  | a8 -> gs fs e -> ~ e e, ( fs ) a
-  | b2. b4 \glissando
+  | a8 -> gs fs e -> ~ e e, ( fs4 ) \glissando
+  | b2. \4 b4 \3 \glissando
 
-  | cs'2. b,4 \glissando
+  | cs'2. \2 b,4 \glissando
   | ds'2. b,4 \glissando
-  | fs''1
+  | fs''1 
 
   | fs,,4 r8 fs' ~ fs4 fs,
   | b4 r8 \appoggiatura fs'16 gs8 ~ gs fs4 cs8
@@ -42,10 +42,10 @@ echosBass = \relative fs, {
 
   | fs4 r8 fs' ~ fs4 cs8 fs
   | b,4 e,8 ( fs ) a b ( cs ) e
-  | fs,4 r8 fs' ~ fs fs cs fs
-  | r8 b -> r b -> ~ b fs b fs \glissando
+  | b4 r8 fs' ~ fs fs cs fs
+  | r8 b \1 -> r b -> ~ b fs b fs \glissando
 
-  | cs'8 -> cs cs b -> b e, ( fs ) b
+  | cs'8 \2 -> cs cs b -> b e, ( fs ) b
   | a8 -> a a gs -> gs fs e e,
 
   | fs4 r8 fs' ~ fs4 cs8 fs
@@ -73,7 +73,7 @@ echosBass = \relative fs, {
 
   \once\override NoteColumn.glissando-skip = ##t
 
-  | \parenthesize r4. fs,8 -> ~ fs2 \glissando
+  | \parenthesize r4. fs,8 -> ~ fs4 fs \glissando
   | b2. r4
   | fs4. -- fs'8 -- ~ fs4 fs, \glissando
   | b2. r4
@@ -101,8 +101,8 @@ echosBass = \relative fs, {
   | e2. b'4 \glissando
   | e4. -- ds8 -- ~ ds4 cs8 b ~
 
+  | b1 ~
   | b1
-  | R1
 
   | R1 * 15
   | r2. r8
@@ -162,11 +162,11 @@ echosBass = \relative fs, {
 
   | a1
   | gs2. e4
-  | fs1 \glissando
+  | fs2. fs4 \glissando
   | e'4 -- b' -- gs -- e --
 
-  | b1
-  | r2. b4 \glissando
+  | b1 ~
+  | b2. b4 \glissando
 
   | b'4. -- a8 -- ~ a4 gs4 -- ~
   | gs8 fs4. -- e4 -. -> ds -. ->
