@@ -5,30 +5,31 @@ lobbyBass = \relative c {
     \time 6/8
     \clef "bass"
 
+    | R2. * 2
     | R2. * 7
 
-    | g4. ~ g4 b8
+    | g4. ~ g4 b8 \glissando
     | g'8. fs e d
-    | cs4. ~ cs4 b8
+    | cs4. ~ cs4 b8 \glissando
     | e,4. ~ e8 e fs
 
     | a4. ~ a4 e8
     | a8. b cs e
-    | d4. ~ d4 a'8
+    | d4. ~ d4 a'8 \glissando
     | d2.
 
     | g,,4. ~ g4 b8
     | g'8. fs e d
     | cs4. ~ cs8 a16 ( b ) d ( e )
-    | e,4. ~ e4 fs8
+    | e,4. ~ e4 fs8 \glissando
 
     | a4. ~ a8 e16 fs ( g8 )
     | a8. b cs e
     | a4. ~ a4 a,8
     | g''4 a,,8 fs''4 a,,8
-    | e''4 a,,8 a' a,16 b cs8
+    | e''4 a,,8 a' a, cs
 
-    | d4. ~ d4 a'8
+    | d4. ~ d4 a'8 \glissando
     | d2.
 
     \bar "||"
@@ -39,13 +40,13 @@ lobbyBass = \relative c {
     | g4. ~ g8 e fs
     | g8. b d fs
 
-    | g8. g8 d16 g16 g8 g d16
-    | g8. g8 d16 g d a' ( b ) d ( e )
-    | fs16 fs fs d ( d, ) d fs' fs fs d ( d, ) d
-    | fs'16 d ( d, ) a'' d, ( d, ) fs' d d, e' c ( b )
+    | g8. g16 -. r d g g8 g16 -. r d
+    | g8. g16 -. r d g d a' ( b ) d  e (
+    | fs16 ) fs fs d ( d, -0 ) d fs' fs fs d ( d, -0 ) d
+    | fs'16 d ( d, -0 ) a'' d, ( d, -0 ) fs' d d, -0 e' c ( b )
 
     | a4 e8 a b c
-    | e,4. e,
+    | e,4. \glissando e,
     | a4 ~ a16 e a8 g fs
     | e8. b' e8. b16 e,8
 
@@ -55,35 +56,35 @@ lobbyBass = \relative c {
     | a4. ~ a8 e16 fs ( g8 )
     | a8. b cs e
     | a4. ~ a4 a,8
-    | g''4 a,,8 e'' a,,16 b cs8
+    | g''4 a,,8 e'' a,, cs
 
-    | d4. ~ d4 a'8
+    | d4. ~ d4 a'8 \glissando
     | d2.
 
     | R2. * 2
 
     | g,,4 b8 \glissando g' fs e
-    | e4 ~ e16 ( fs ) g ( a8 ) b8 r16
-    | cs,4. ~ cs16 e, a16 ( b ) d ( e )
+    | d8 e, fs g a b
+    | cs4. ~ cs4 b8 \glissando
     | e,4. ~ e8 e fs
 
     | a4. ~ a4 e8
     | a8. b cs e
-    | d4. ~ d4 a'8
+    | d4. ~ d4 a'8 \glissando
     | d2.
 
-    | g,,4. ~ g4 b8 \glissando
+    | g,,8. b d8 e, ( g ) \glissando
     | g'8. a b d
-    | cs,4. ~ cs4 b8
+    | cs,4. ~ cs16 e, a16 ( b ) d ( e )
     | e,4. ~ e4 fs8
 
     | a4. ~ a8 e16 fs ( g8 )
     | a8. b cs e
     | a4. ~ a4 a,8
     | g''4 a,,8 fs''4 a,,8
-    | e''4 a,,8 a' a,16 b cs8
+    | e''4 a,,8 a' a, cs
 
-    | d4. ~ d4 a'8
+    | d4. ~ d4 a'8 \glissando
     | d2.
 
     \bar "||"
@@ -94,32 +95,35 @@ lobbyBass = \relative c {
     | g4. ~ g8 e fs
     | g8. b d fs
 
-    | g8. g8 d16 g16 g8 g d16
-    | g8. g8 d16 g d a' ( b ) d ( e )
-    | fs16 fs fs d ( d, ) d fs' fs fs d ( d, ) d
-    | fs'16 d ( d, ) a'' d, ( d, ) fs' d d, e' c ( b )
+    | g8. g16 -. r d g g8 g16 -. r d
+    | g8. g16 -. r d g d a' ( b ) d  e (
+    | fs16 ) fs fs d ( d, -0 ) d fs' fs fs d ( d, -0 ) d
+    | fs'16 d ( d, -0 ) a'' d, ( d, -0 ) fs' d d, -0 e' c ( b )
 
     | a4 e8 a b c
-    | e,4. e,
+    | e,4. \glissando e,
     | a4 ~ a16 e a8 g fs
     | e8. b' e8. b16 e,8
 
-    | g8. g8 e16 g16 g8 g e16
-    | g8. g8 e16 g e a ( b ) d ( e )
-    | fs8. fs8 d16 fs16 fs8 fs d16
-    | fs8. fs8 d16 fs16 d a' d, c b
+    | g8. -> g16 -. r e ( g -> ) g8 g16 -. r e (
+    | g8. -> ) g16 -. r e ( g16 -> e ) a ( b ) d ( e )
+    | fs16 fs fs d d d fs fs fs d d d
+    | fs16 ( d -0 ) d a' \2 ( d, -0 ) d fs ( d -0 ) d  a' \1 c, b
 
     | a4 e8 a b c
     | e,4. e'
     | a,4 ~ a16 e a8 g fs
     | e8. b' e8. b16 e,8
 
-    | a4. ~ a8 e16 ( fs ) g8
+    \bar "||"
+    \key d \major
+
+    | a4. ~ a8 e16  fs ( g8 )
     | a8. b cs e
     | a4. ~ a4 a,8
-    | e''4 a,,8 a' a,16 b cs8
+    | e''4 a,,8 a' a, cs
 
-    | d4. ~ d4 a'8
+    | d4. ~ d4 a'8 \glissando
     | d2.
 
     | R2. * 2

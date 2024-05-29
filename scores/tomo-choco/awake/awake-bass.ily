@@ -79,7 +79,7 @@ awakeBass = \relative g, {
 
   | g,8. -> g16 -> ~ g e g8 -> ~ g16 g8 -> e16 g8 -> g ->
 
-  | d''16 -> d d d -> ~ d d, -0 d' -> d d d8 -> d,16 -0 d' -> d d, -0 d -0
+  | d''16 -> d d d -> ~ d d, -0 d' -> d d d8 -> d,16 -0 d' -> d d, -0 d
   | d'16 ->  d d d -> ~ d d, -0 d' -> d d d8 -> d,16 -0 d' -> d, -0 d'8 ->
 
   \key g \major
