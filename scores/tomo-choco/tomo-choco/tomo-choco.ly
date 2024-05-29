@@ -52,8 +52,6 @@
     \ciggyBass
 }
 
-% \pageBreak
-
 \tocItem \markup "Echos"
 
 \score {
@@ -100,7 +98,7 @@
     \scrollBass
 }
 
-% \pageBreak
+\pageBreak
 
 \tocItem \markup "Small Rooms"
 
@@ -112,8 +110,6 @@
     \compressMMRests
     \smallRoomsBass
 }
-
-\pageBreak
 
 \tocItem \markup "Sweaty"
 
