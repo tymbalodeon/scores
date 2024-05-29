@@ -85,8 +85,8 @@ stats *help:
 # Update dependencies and score LilyPond version
 update *help:
     #!/usr/bin/env nu
-    use {{ justfile_directory() }}/scripts/update.nu
-    update {{ help }}
+    use {{ justfile_directory() }}/scripts/update-deps.nu
+    update-deps {{ help }}
 
 # View the source code for a recipe
 view-source recipe:
