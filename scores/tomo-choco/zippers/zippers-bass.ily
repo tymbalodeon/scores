@@ -84,14 +84,25 @@ zippersBass = \relative af {
 
   | ef4. ~ ef8 f, g
   | af4. ~ af8 ef'16 ( f8. ) \glissando
-  | g,4. ~ g8 \glissando ef'16 af ( bf8 )
-  | af,4. ~ af8 g af
+  | g,4. ~ g8 f g
+  | af4. ~ af8 g af
 
   | bf4. \appoggiatura { bf16 \glissando } c8. ef
-  | \appoggiatura { ef8 } f4. \glissando f,8. \glissando f' \glissando
+  | \appoggiatura { ef8 } f4. \glissando f,4.
+  | c'4 g'8 c8. bf16 g8
+  | c,8. \glissando g c d
 
-  | c'2. \3 ~
-  | c2.
+  | ef4. ~ ef8 f, g
+  | af4. ~ af8 ef'16 af ( bf -. ) \xNote ef,
+  | g4. g16 f ef8 bf
+  | af4. ~ af8 g af
+
+  | bf8. bf \appoggiatura bf16 \glissando c8. ef8 \xNote c16
+  | \appoggiatura { ef8 } f4. \glissando f,8. \glissando f' \glissando
+  | g'4 c,,8 c''8. ^\markup \tiny "C" bf16 g8
+  | c,2.
+
+  | R2. * 2
 
   \bar "|."
 
