@@ -99,6 +99,8 @@ bridge = \relative e' {
   | R1 * 2
   | R1 * 4
 
+  \tag #'album \pageBreak
+
   | r8 e b' ^\markup \tiny "B" e, ~ e4 b'8 e, ~
   | e8 e b' e, ~ e4 b'8 e, ~
   | e8 e b' e, ~ e4 b'8 e, ~
@@ -122,7 +124,6 @@ mattressBass = \relative a, {
   \key g \major
   \bar "||"
 
-  \tag #'album \pageBreak
   \chorus
 
   \key d \major

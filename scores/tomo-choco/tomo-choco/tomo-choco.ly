@@ -26,6 +26,7 @@
 }
 
 \markuplist \table-of-contents
+
 \pageBreak
 
 \tocItem \markup "Awake"
@@ -73,6 +74,8 @@
     \compressMMRests
     \lobbyBass
 }
+
+\pageBreak
 
 \tocItem \markup "Mattress"
 

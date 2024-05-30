@@ -32,8 +32,6 @@ scrollBass = \relative e, {
 
   | R1 * 3
 
-  \tag #'album \pageBreak
-
   \chorus
 
   | r2. r8 e16 ( fs )
@@ -107,6 +105,9 @@ scrollBass = \relative e, {
   | fs4. e8 ~ e4 e'
 
   | R1 * 3
+
+  \tag #'album \pageBreak
+
   \chorus
 
   | r2. r8 e,16 ( fs )
