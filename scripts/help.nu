@@ -5,6 +5,6 @@
       [
         "Available recipes:"
         "(run `just <recipe> --help/-h` for more info)\n"
-      ] | str join " "
+      ] | to text
     )
 )

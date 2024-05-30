@@ -352,7 +352,7 @@ export def main [
     or $time_signatures
     or $titles
   ) {
-    return ($files | str join "\n")
+    return ($files | to text)
   } else if $missing_files {
     $files | get file
   } else if ($files | length) == 1 {
