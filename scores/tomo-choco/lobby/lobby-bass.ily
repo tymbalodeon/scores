@@ -5,7 +5,7 @@ lobbyBass = \relative c {
     \time 6/8
     \clef "bass"
 
-    | R2. * 2
+    | R2. * 4
     | R2. * 7
 
     | g4. ~ g4 b8 \glissando

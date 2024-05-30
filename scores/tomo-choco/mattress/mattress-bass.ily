@@ -61,7 +61,7 @@ end = \relative fs, {
 
   | fs8 e'16 es fs8 cs e16 es fs8 cs e,
   | fs8 b'16 bs cs8 cs, b'16 bs cs8 cs, a
-  | b8 d'' ( cs ) b a fs ( e ) d
+  | b8 d'' ^\markup \tiny "D" ( cs ) b a fs ( e ) d
   | cs b a gs fs e ds cs ~
 
   % TODO add gliss to rest
@@ -99,7 +99,7 @@ bridge = \relative e' {
   | R1 * 2
   | R1 * 4
 
-  | r8 e b' e, ~ e4 b'8 e, ~
+  | r8 e b' ^\markup \tiny "B" e, ~ e4 b'8 e, ~
   | e8 e b' e, ~ e4 b'8 e, ~
   | e8 e b' e, ~ e4 b'8 e, ~
   | e8 e b' e, ~ e4 b'8 e, ~

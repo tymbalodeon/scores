@@ -99,10 +99,10 @@ zippersBass = \relative af {
 
   | bf8. bf \appoggiatura bf16 \glissando c8. ef8 \xNote c16
   | \appoggiatura { ef8 } f4. \glissando f,8. \glissando f' \glissando
-  | g'4 c,,8 c''8. ^\markup \tiny "C" bf16 g8
-  | c,2.
+  | c'2. ~
+  | c2.
 
-  | R2. * 2
+  | R2. * 4
 
   \bar "|."
 
