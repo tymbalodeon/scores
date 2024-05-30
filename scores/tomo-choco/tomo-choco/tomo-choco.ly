@@ -25,6 +25,10 @@
     tocItemMarkup = \tocItemWithDotsMarkup
 }
 
+\layout {
+    \numericTimeSignature
+}
+
 \markuplist \table-of-contents
 
 \pageBreak

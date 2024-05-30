@@ -97,8 +97,8 @@ sweatyBass = \relative c {
   | ef2 bf 
   | ef8 f4 ( \glissando g8 ) ~ g bf ( c4 )
 
-  | <ef, bf'>2. 
-  | bf4 f'' ef df c
+  | <ef, bf'>2. bf4 
+  | f'' ef df c
   | bf2 f 
   | bf, f'4 bf
 
