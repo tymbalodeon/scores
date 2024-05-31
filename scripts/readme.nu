@@ -35,13 +35,6 @@ export def main [] {
   let just_deps_start = (make_command_comment "just deps")
   let just_deps_end = (make_command_comment "just deps" --end)
 
-  let build_dependencies = [
-    "gyre-fonts"
-    "just"
-    "lilypond"
-    "nushell"
-  ]
-
   let just_output = (
     $"```nushell\n(
         just | ansi strip
@@ -63,30 +56,12 @@ export def main [] {
         | each {
             |dependency|
 
-            let link = (
-              $"[($dependency)]\(https://search.nixos.org/packages?channel=unstable&show=(
-                  $dependency
-                  | split row "-"
-                  | drop
-                  | str join "-"
-                )\)"
-            )
-
-            mut is_build_dependency = false
-
-            for build_dependency in $build_dependencies {
-              if $build_dependency in $dependency {
-                $is_build_dependency = true                
-
-                break
-              }
-            }
-
-            let link = if $is_build_dependency {
-              $"*($link)*"
-            } else {
-              $link
-            }
+            let link = $"[($dependency)]\(https://search.nixos.org/packages?channel=unstable&show=(
+                $dependency
+                | split row "-"
+                | drop
+                | str join "-"
+            )\)"
 
             $'- ($link)'
         }
