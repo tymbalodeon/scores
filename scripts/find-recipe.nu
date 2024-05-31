@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 # Search available `just` commands interactively, or by <regex>
 export def main [
   search_term?: string # Regex pattern to match

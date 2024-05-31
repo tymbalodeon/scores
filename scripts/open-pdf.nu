@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 use ./files.nu get_files
 
 # Compile pdfs

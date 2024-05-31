@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 # Manage scores settings
 export def main [
   --edit # Open settings file in $EDITOR

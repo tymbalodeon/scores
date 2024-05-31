@@ -1,16 +1,18 @@
+#!/usr/bin/env nu
+
 # View issues
 export def main [
   issue_number?: number # The number of the issue to view
-  --browser # Open the remote repository website in the browser
+  --web # Open the remote repository website in the browser
 ] {
   if ($issue_number | is-empty) {
-    if $browser {
+    if $web {
       gh issue list --web
     } else {
       gh issue list
     }
   } else {
-    if $browser {
+    if $web {
       gh issue view $issue_number --web
     } else {
       gh issue view $issue_number

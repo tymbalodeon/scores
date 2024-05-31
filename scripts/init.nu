@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 # Initialize direnv environment
 export def main [] {
   if (which direnv | is-empty) {

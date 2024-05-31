@@ -1,11 +1,13 @@
-use ./compile.nu 
+#!/usr/bin/env nu
+
+use ./compile.nu
 use ./files.nu get_files
 use ./files.nu get_lilypond_output_path
 use ./files.nu get_title
-use ./info.nu 
-use ./open-pdf.nu 
+use ./info.nu
+use ./open-pdf.nu
 
-# Open <score> (or --info file) in $EDITOR and pdf viewer, recompiling on file changes
+# Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 export def main [
   search_term = "" # Search term for finding scores
   --info # Edit info toml for score

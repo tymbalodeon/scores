@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 # Run pre-commit hook by name, all hooks, or update all hooks
 export def main [
     ...hooks: string  # The hooks to run

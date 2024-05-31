@@ -33,7 +33,7 @@ echosBass = \relative fs, {
 
   | cs'2. \2 b,4 \glissando
   | ds'2. b,4 \glissando
-  | fs''1 
+  | fs''1
 
   | fs,,4 r8 fs' ~ fs4 fs,
   | b4 r8 \appoggiatura fs'16 gs8 ~ gs fs4 cs8

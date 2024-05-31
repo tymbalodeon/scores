@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 # View available templates
 export def main [
   --files: string # View files for specified template name

@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 use ./files.nu get_compilation_status
 use ./files.nu get_files
 use ./files.nu get_lilypond_output_path
