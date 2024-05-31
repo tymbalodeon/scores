@@ -17,6 +17,10 @@
 @create *args:
     ./scripts/create.nu {{ args }}
 
+# List dependencies
+@deps *args:
+    ./scripts/deps.nu {{ args }}
+
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 @edit *args:
     ./scripts/edit.nu {{ args }}
