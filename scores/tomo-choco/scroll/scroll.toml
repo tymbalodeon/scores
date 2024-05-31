@@ -3,5 +3,5 @@ artist = "Tomo Choco"
 composers = ["Ashley Cubbler"]
 arrangers = ["Ben Rosen"]
 instrumentation = ["bass"]
-key = "E major"
+key = "B mixolydian"
 time_signature = "4/4"

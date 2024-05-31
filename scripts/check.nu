@@ -13,7 +13,7 @@ export def main [
             | lines
             | str trim
             | sort
-            | str join "\n"
+            | to text
         )
 
         return

@@ -4,79 +4,132 @@ sweatyBass = \relative c {
   \key af \major
   \clef "bass"
 
-  | R1 * 4
-  | R1 * 3
-  | r2 r8 g8 af bf
+  | R1 * 8
+  | R1 * 7
+  | r4 g4 af bf
 
-  | df4 -. -- af -. -- df8. -. -- df16 ( ef16 ) \xNote ef  bf8
-  | ef4 -. -- bf -. -- ef16 ( f8 ) ef16 ~ ef df bf8
-  | df4 -. -- af -. -- df16 ef8 ( f16 ) ~ f af bf8
-  | ef,8 -. -- bf16 ( c ) ef f ( g ) bf ~ bf c8 df16 ~ df ef f8
+  | df2 af
+  | df4. df8 ( ef8 ) \xNote ef  bf4
+  | ef2 bf
+  | ef8 ( f4 ) ef8 ~ ef df bf4
 
-  | gf,,4. df'8 gf f ef df
-  | ef4 -. -- bf -. -- ef8 -. -- f -. -- gf -. -- af -. --
+  | df2 af
+  | df8 ef4 ( \glissando f8 ) ~ f af bf4
+  | ef,4 bf8 ( c ) ef f ( \glissando g ) bf ~
+  | bf c4 df8 ~ df ef ( f4 )
 
-  | bf,4 -. -- f' -. -- bf8. -. -- \xNote bf16 bf,8 c
-  | df4 -. -- af -. -- df8. -. -- df16 af'8 df,16 d
-  | ef8. -. -- ef16 g, ( af8 ) bf16 ~ bf c8 df16 ~ df ef ( f ) af
-  | ef'16 ( f ) f f f f f af ( bf ) bf bf bf bf af f8
+  | gf,,2. df'4
+  | gf f ef df
+  | ef2 bf
+  | ef4 f gf af
 
-  | bf,,4 -. -- f' -. -- bf8. -. -- \xNote bf16 bf,8 c
-  | df4 -. -- af -. -- df8 f, ( af ) df
-  | ef4 -. -- g, -. -- bf16 ( c8 ) ef16 ~ ef bf' ( c8 )
+  | bf,2 f'
+  | bf4. \xNote bf8 bf,4 c
+  | df2 af
+  | df4. df8 af' \xNote af df, d
 
-  | ef4. bf8 af' g f ef
-  | df c bf af bf f bf, c
-  | df4 -. -- af -. -- df16 af'8 df16 ~ df af df,8
-  | ef8. -. -- ef16 g ( af8 )  bf16 ~ bf \acciaccatura bf16 c8 bf16 ~ bf af ( g ) ef
+  | ef4. ef8 g, ( \glissando af4 ) bf8 ~
+  | bf c4 df8 ~ df ef ( \glissando f ) af
+  | ef'8 ( f ) f f f f f af (
+  | bf ) bf bf bf bf af f4
 
-  | df'16 ( ef8. ) ~ ef8 bf, f'' ef df c
-  | bf4 -. -- f -. -- bf,8 f' f, g
-  | af2 r8 df f af
-  | g4 -. -- bf, -. -- ef8 g, af bf
+  | bf,,2 f'
+  | bf4. \xNote f8 bf,4 c
+  | df2 af
+  | df4 f, ( \glissando af ) df
 
-  | df4 -. -- af' -. -- df8. af16 df,8 d
-  | ef4 -. -- bf -. -- ef16 ( f8 ) ef16 ~ ef df bf8
-  | df4 -. -- af -. -- df16 ef8 ( f16 ) ~ f af bf \xNote bf
-  | ef,8. ef16 bf' bf, ( c ) ( df ) ef' df8 c16 ~ c bf ( af8 )
+  | ef2 g,
+  | bf8 ( c4 ) ef8 ~ ef bf' ( \glissando c4 )
+  | ef2. bf4 \glissando
+  | af' ^\markup \tiny "A♭" g f ef
 
-  | ef16 -> ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef,
-  | bf16 -> bf bf' bf, -> ~ bf bf bf' bf, -> ~ bf bf f' bf, -> ~ bf bf f' bf,
-  | df16 -> df af' df, -> ~ df df af' af, -> ~ af af df' af, -> ~ af af df' af, (
-  | g16 ) g bf' g, -> ~ g g bf' g, -> ~ g bf ( c ) ef ~ ef f ( g8 )
+  | df c bf af
+  | bf f bf, c
+  | df2 af
+  | df8 af'4 df8 ~ df af df,4
 
-  | R1 * 9
+  | ef4. ef8 g ( \glissando af4 )  bf8 ~
+  | bf \acciaccatura bf16 \glissando c4 bf8 ~ bf af ( g ) ef
+
+  | df'8 ( ef4. ) ~ ef4 bf,
+  | f'' ef df c
+  | bf2 f
+  | bf,4 f' f, g
+
+  | af1
+  | r4 df f af
+  | g2 bf,
+  | ef4 g, af bf
+
+  | df2 af'
+  | df4. af8 df,4 d
+  | ef2 bf
+  | ef8 ( f4 ) ef8 ~ ef df bf4
+
+  | df2 af
+  | df8 ef4 ( \glissando f8 ) ~ f af bf \xNote bf
+  | ef,4. ef8 bf' bf, ( \glissando c ) ( df )
+  | ef' df4 c8 ~ c bf4 \xNote bf8
+
+  | ef,8 ^\markup \italic "let ring" ef bf' ef, ~ ef ef bf' ef, ~
+  | ef ef bf' ef, ~ ef ef bf' ef,
+  | bf8 bf bf' bf, ~ bf bf bf' bf, ~
+  | bf bf f' bf, ~ bf bf f' bf,
+
+  | df8 df af' df, ~ df df af' af, ~
+  | af af df' af, ~ af af df' af, (
+  | g8 ) g bf' g, ~ g g bf' g, ~
+
+  % TODO add gliss to rests
+  | g bf ( c ) ef ~ ef f ( \glissando g4 )
+
+  | R1 * 18
 
   \tag #'album \pageBreak
 
-  | <ef bf'>4. bf8 f'' ef df c
-  | bf4 -. -- f -. -- bf, -. -- f'8 bf
-  | df,4 -. -- af -. -- df8. -. -- ef16 ( f8 ) af
-  | ef4 -. -- bf -. -- ef16 f8 ( g16 ) ~ g bf ( c8 )
+  | <ef bf'>2. bf4
+  | f'' ef df c
+  | bf2 f
+  | bf, f'4 bf
 
-  | <ef, bf'>4. bf8 f'' ef df c
-  | bf4 -. -- f -. -- bf, -. -- f'8 bf
-  | df,4 -. -- f, -. -- af8. -. -- df16 ( ef8 ) f16 bf,
-  | af'16 ( bf8. ) ~ bf16 c, ( df ) af' g'16 ( af ) ( g ) ef ~ ef af, ( g8 )
+  | df,2 af
+  | df4. ef8 ( f4 ) af
+  | ef2 bf
+  | ef8 f4 ( \glissando g8 ) ~ g bf ( c4 )
 
-  | ef16 -> ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef, -> ~ ef ef bf' ef,
-  | bf16 -> bf bf' bf, -> ~ bf bf bf' bf, -> ~ bf bf f' bf, -> ~ bf bf f' bf,
-  | df16 -> df af' df, -> ~ df df af' af, -> ~ af af df' af, -> ~ af af df' af, (
-  | g16 ) g bf' g, -> ~ g g bf' g, -> ~ g af ( bf ) c ~ c df ( ef ) af,
+  | <ef, bf'>2. bf4
+  | f'' ef df c
+  | bf2 f
+  | bf, f'4 bf
 
-  | df4 ~ df8 df16 af \appoggiatura ef'16 \glissando f8. af16 ~ af af ( bf8 )
-  | ef,4 ~ ef8. bf16 \acciaccatura bf'16 \glissando c8. bf16 ~ bf g ( f8 )
-  | df4. df8 f,8. af16 ~ af8 df
-  | g,4. g8 \glissando gf'4. df'8 \glissando
+  | df,2 f,
+  | af4. df8 ( ef4 ) f8 bf,
+  | af'8 ( bf4. ) ~ bf8 c, ( df ) af'
+  | g'8 ( af ) ( g ) ef ~ ef af, ( g4 )
 
-  \time 2/4
+  | ef8 ^\markup \italic "let ring" ef bf' ef, ~ ef ef bf' ef, ~
+  | ef ef bf' ef, ~ ef ef bf' ef,
+  | bf8 bf bf' bf, ~ bf bf bf' bf, ~
+  | bf bf f' bf, ~ bf bf f' bf,
 
-  | gf8 f ef df
+  | df8 df af' df, ~ df df af' af, ~
+  | af af df' af, ~ af af df' af, (
+  | g8 ) g bf' g, ~ g g bf' g, ~
+  | g af ( bf ) c ~ c df ( ef ) \xNote af,
 
-  \time 4/4
+  | df2 ~ df4 df8 af
+  | \acciaccatura ef'16 \glissando f4. af8 ~ af af ( bf4 )
+  | ef,2 ~ ef4. bf8
+  | \acciaccatura bf'16 \glissando c4. bf8 ~ bf g ( f4 )
+
+  | df2. df4
+  | f,4. af8 ~ af4 df
+  | g,2. g4 \glissando
+  | gf'2. df'4 \glissando
+
+  | gf4 f ef df
 
   | ef,1
 
   \bar "|."
-
 }

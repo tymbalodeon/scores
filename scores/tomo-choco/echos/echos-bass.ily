@@ -74,9 +74,9 @@ echosBass = \relative fs, {
   \once\override NoteColumn.glissando-skip = ##t
 
   | \parenthesize r4. fs,8 -> ~ fs4 fs \glissando
-  | b2. r4
+  | b1
   | fs4. -- fs'8 -- ~ fs4 fs, \glissando
-  | b2. r4
+  | b1
 
   | fs4. -- fs'8 -- ~ fs4 fs, \glissando
   | b4. -- ds8 -- ~ ds4 fs8 ( gs )

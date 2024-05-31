@@ -25,7 +25,12 @@
     tocItemMarkup = \tocItemWithDotsMarkup
 }
 
+\layout {
+    \numericTimeSignature
+}
+
 \markuplist \table-of-contents
+
 \pageBreak
 
 \tocItem \markup "Awake"
@@ -74,6 +79,8 @@
     \lobbyBass
 }
 
+\pageBreak
+
 \tocItem \markup "Mattress"
 
 \score {
@@ -84,8 +91,6 @@
     \compressMMRests
     \mattressBass
 }
-
-\pageBreak
 
 \tocItem \markup "Scroll"
 
@@ -98,8 +103,6 @@
     \scrollBass
 }
 
-\pageBreak
-
 \tocItem \markup "Small Rooms"
 
 \score {
@@ -110,6 +113,8 @@
     \compressMMRests
     \smallRoomsBass
 }
+
+\pageBreak
 
 \tocItem \markup "Sweaty"
 
