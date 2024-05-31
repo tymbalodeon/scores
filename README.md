@@ -33,20 +33,20 @@ listed in bold.
 
 <!-- `just deps` start -->
 
-[fd-10.1.0](https://search.nixos.org/packages?channel=unstable&show=fd)
-[gh-2.49.2](https://search.nixos.org/packages?channel=unstable&show=gh)
-**[gyre-fonts-2.005](https://search.nixos.org/packages?channel=unstable&show=gyre-fonts)**
-**[just-1.26.0](https://search.nixos.org/packages?channel=unstable&show=just)**
-**[lilypond-2.25.15](https://search.nixos.org/packages?channel=unstable&show=lilypond)**
-[lychee-0.15.1](https://search.nixos.org/packages?channel=unstable&show=lychee)
-**[nushell-0.93.0](https://search.nixos.org/packages?channel=unstable&show=nushell)**
-[pre-commit-3.7.1](https://search.nixos.org/packages?channel=unstable&show=pre-commit)
-[python3.12-pre-commit-hooks-4.6.0](https://search.nixos.org/packages?channel=unstable&show=python3.12-pre-commit-hooks)
-[ripgrep-14.1.0](https://search.nixos.org/packages?channel=unstable&show=ripgrep)
-[tokei-12.1.2](https://search.nixos.org/packages?channel=unstable&show=tokei)
-[watchexec-2.1.1](https://search.nixos.org/packages?channel=unstable&show=watchexec)
-[zathura-with-plugins-0.5.5](https://search.nixos.org/packages?channel=unstable&show=zathura-with-plugins)
-[zellij-0.40.1](https://search.nixos.org/packages?channel=unstable&show=zellij)
+- [fd-10.1.0](https://search.nixos.org/packages?channel=unstable&show=fd)
+- [gh-2.49.2](https://search.nixos.org/packages?channel=unstable&show=gh)
+- **[gyre-fonts-2.005](https://search.nixos.org/packages?channel=unstable&show=gyre-fonts)**
+- **[just-1.26.0](https://search.nixos.org/packages?channel=unstable&show=just)**
+- **[lilypond-2.25.15](https://search.nixos.org/packages?channel=unstable&show=lilypond)**
+- [lychee-0.15.1](https://search.nixos.org/packages?channel=unstable&show=lychee)
+- **[nushell-0.93.0](https://search.nixos.org/packages?channel=unstable&show=nushell)**
+- [pre-commit-3.7.1](https://search.nixos.org/packages?channel=unstable&show=pre-commit)
+- [python3.12-pre-commit-hooks-4.6.0](https://search.nixos.org/packages?channel=unstable&show=python3.12-pre-commit-hooks)
+- [ripgrep-14.1.0](https://search.nixos.org/packages?channel=unstable&show=ripgrep)
+- [tokei-12.1.2](https://search.nixos.org/packages?channel=unstable&show=tokei)
+- [watchexec-2.1.1](https://search.nixos.org/packages?channel=unstable&show=watchexec)
+- [zathura-with-plugins-0.5.5](https://search.nixos.org/packages?channel=unstable&show=zathura-with-plugins)
+- [zellij-0.40.1](https://search.nixos.org/packages?channel=unstable&show=zellij)
 
 
 <!-- `just deps` end -->

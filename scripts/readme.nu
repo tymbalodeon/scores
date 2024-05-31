@@ -82,11 +82,13 @@ export def main [] {
               }
             }
 
-            if $is_build_dependency {
+            let link = if $is_build_dependency {
               $"**($link)**"
             } else {
               $link
             }
+
+            $'- ($link)'
         }
         | to text
       )\n"
