@@ -83,7 +83,7 @@ export def main [] {
             }
 
             let link = if $is_build_dependency {
-              $"**($link)**"
+              $"*($link)*"
             } else {
               $link
             }
