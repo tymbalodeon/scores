@@ -5,35 +5,34 @@ development environment for editing scores and generating output files.
 
 ## Installation
 
-- (On non-NixOS systems:) Install [Nix](https://nix.dev/) using the
-  [Determinate Systems Nix Installer](<https://github.com/> DeterminateSystems/
-  nix-installer).
+The recommended way to install the build and development dependencies is with
+[Nix](https://nix.dev/). On non-NixOS systems, use the Determinate Systems
+[Nix Installer](https://github.com/DeterminateSystems/nix-installer).
 
-- Run `nix develop`, or, preferably, install [direnv](https://direnv.net/)
-  (using these [dotfiles](https://github.com/tymbalodeon/.dotfiles), for
-  example), create a `.envrc` file containing `use flake`, and run `direnv
-allow`.
+Once Nix is installed, use `nix develop` to download the dependencies and
+activate the development shell, or, preferably, install
+[direnv](https://direnv.net/) (for example, using these
+[dotfiles](https://github.com/tymbalodeon/.dotfiles)) to automatically activate
+the environment whend `cd`-ing into the project directory. Assuming you
+installed direnv, as well as [just](https://just.systems/man/en/), and
+[nushell](https://www.nushell.sh/) (which will be installed when running `nix
+develop`), a development environment can be created by running:
 
-  Using [nu](https://www.nushell.sh/):
-
-  ```nushell
-  echo "use flake" | save --force .envrc;
-  direnv allow
-  ```
+```nushell
+just init
+```
 
 ### Recommended extra dependencies
 
 For PDF viewing:
 
-- [Skim](https://skim-app.sourceforge.io/ "Skim") (macOS only) or
-  [zathura](https://pwmt.org/projects/zathura "zathura")
+- [Skim](https://skim-app.sourceforge.io/ "Skim") (macOS only)
 
 ## Development
 
-Development commands are provided through
-[just](https://just.systems/man/en/). Run `just` to see all available commands
-and their descriptions. Run `just <COMMAND> --help` for detailed information
-about a particular command.
+Development commands are provided through [just](https://just.systems/man/en/).
+Run `just` to see available "recipes," and `just <recipe> --help/-h` to get more
+information about a particular recipe.
 
 <!-- markdownlint-disable MD013 -->
 <!-- `just` start -->
