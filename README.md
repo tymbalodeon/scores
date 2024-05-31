@@ -53,9 +53,9 @@ listed in bold.
 
 ### Recommended extra dependencies
 
-For PDF viewing:
+For PDF viewing (macOS only):
 
-- [Skim](https://skim-app.sourceforge.io/ "Skim") (macOS only)
+- [Skim](https://skim-app.sourceforge.io/ "Skim")
 
 ## Development
 
