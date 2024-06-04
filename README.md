@@ -47,7 +47,6 @@ link on each page listed below.
 - [zathura-with-plugins-0.5.5](https://search.nixos.org/packages?channel=unstable&show=zathura-with-plugins)
 - [zellij-0.40.1](https://search.nixos.org/packages?channel=unstable&show=zellij)
 
-
 <!-- `just deps` end -->
 
 ### Recommended extra dependencies
@@ -64,6 +63,7 @@ information about a particular recipe.
 
 <!-- markdownlint-disable MD013 -->
 <!-- `just` start -->
+
 ```nushell
 Available recipes:
 (run `just <recipe> --help/-h` for more info)

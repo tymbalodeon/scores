@@ -23,7 +23,7 @@ def make_command_output [
   output: string
   end: string
 ] {
-  return $"($start)\n($output)\n($end)"
+  return $"($start)\n\n($output)\n($end)"
 }
 
 # Update README command output
@@ -42,12 +42,12 @@ export def main [] {
   )
 
   let just_deps_output = (
-    $"\n(
-        just deps 
-        | lines 
+    $"(
+        just deps
+        | lines
         | filter {
-            |line| 
-            
+            |line|
+
             not ($line | is-empty) and not (
               "ix" in $line
             ) and not (
@@ -66,7 +66,7 @@ export def main [] {
             $'- ($link)'
         }
         | to text
-      )\n"
+      )"
   )
 
   (
