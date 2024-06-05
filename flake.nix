@@ -1,8 +1,22 @@
 {
   description = "scores";
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-  outputs = {nixpkgs, ...}: let
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    nushell-syntax = {
+      type = "github";
+      owner = "stevenxxiu";
+      repo = "sublime_text_nushell";
+      flake = false;
+    };
+  };
+
+  outputs = {
+    nixpkgs,
+    nushell-syntax,
+    ...
+  }: let
     supportedSystems = [
       "aarch64-darwin"
       "aarch64-linux"
@@ -42,7 +56,14 @@
           zellij
         ];
 
-        shellHook = "pre-commit install --hook-type commit-msg";
+        shellHook = ''
+          bat_config_dir=".config/bat"
+          bat_syntax_dir="''${bat_config_dir}/syntaxes"
+          cp ${nushell-syntax}/nushell.sublime-syntax \
+            "''${bat_syntax_dir}/nushell.sublime-syntax"
+          bat cache --build --source "''${bat_config_dir}"
+          pre-commit install --hook-type commit-msg
+        '';
       };
     });
   };
