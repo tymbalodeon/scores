@@ -1,5 +1,10 @@
 \version "2.25.15"
-one = \relative c'' {
+
+melodyIntro = {
+  | s2. * 2
+}
+
+melodyOne = \relative c'' {
   \new Voice \with {
     \consists "Pitch_squash_engraver"
   } {
@@ -12,7 +17,7 @@ one = \relative c'' {
   }
 }
 
-two = \relative c'' {
+melodyTwo = \relative c'' {
   \new Voice \with {
     \consists "Pitch_squash_engraver"
   } {
@@ -20,7 +25,13 @@ two = \relative c'' {
 
     | c4. c
     | s2. * 3
+  }
+}
 
+melodyThree = \relative c'' {
+  \new Voice \with {
+    \consists "Pitch_squash_engraver"
+  } {
     | c4. c
     | s2. * 2
     | c4. c
@@ -29,24 +40,49 @@ two = \relative c'' {
     | s2.
     | c4. c
 
+  }
+}
+
+melodyPreChorusOne = \relative c'' {
+  \new Voice \with {
+    \consists "Pitch_squash_engraver"
+  } {
+    \improvisationOn
+
+    | c4 c8 c4 c8
+    | s2. * 2
+  }
+}
+
+melodyPreChorusTwo = \relative c'' '{
+  \new Voice \with {
+    \consists "Pitch_squash_engraver"
+  } {
+    \improvisationOn
+
     | c4 c8 c4 c8
     | s2.
+    | r8 c c c4 c8
+    | s2. * 3
   }
 }
 
 melody = {
-  \one
-  \two
+  \melodyIntro
+  \melodyOne
 
-  | s2.
+  \melodyOne
+  \melodyTwo
+  \melodyThree
+  \melodyPreChorusOne
+  \melodyOne
 
-  \one
-  \two
+  \melodyOne
+  \melodyTwo
+  \melodyThree
+  \melodyPreChorusTwo
+  \melodyOne
 
-  | s2. * 2
-
-  \one
-
-  | c4. c
-  | s2. * 3
+  \melodyTwo
+  \melodyOne
 }

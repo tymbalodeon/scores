@@ -1,41 +1,72 @@
 \version "2.25.15"
+
 key_and_time = {
   \key c \major
   \time 6/8
 }
 
-one = {
+structureIntro = {
+  | s2. * 2
+}
+
+structureOne = {
   \repeat volta 2 {
     | s2. * 4
   }
 }
 
-two = {
-  | s2. * 11
+structureTwo = {
+  | s2. * 4
+}
 
-  \repeat volta 2 {
-    | s2. * 2
-  }
+structureThree = {
+  | s2. * 7
+}
+
+structurePreChorusOne = {
+  | s2. * 3
+}
+
+structurePreChorusTwo = {
+  | s2. * 6
 }
 
 structure = {
   \key_and_time
 
-  \one
-  \two
+  \structureIntro
+  \structureOne
 
-  | s2.
+  \sectionLabel \markup \bold "Verse 1"
 
-  \sectionLabel "Solo"
+  \structureOne
+  \structureTwo
 
-  \one
-  \two
+  \sectionLabel \markup \bold "Verse 2"
 
-  | s2. * 2
+  \structureThree
+  \structurePreChorusOne
 
-  \one
+  \sectionLabel \markup \bold "Chorus"
 
-  | s2. * 4
+  \structureOne
+
+  \sectionLabel \markup \bold "Solo"
+
+  \structureOne
+  \structureTwo
+
+  \sectionLabel \markup \bold "Verse 3"
+
+  \structureThree
+  \structurePreChorusTwo
+
+  \sectionLabel \markup \bold "Chorus"
+
+  \structureOne
+  \structureTwo
+
+  | s2.* 4
 
   \bar "|."
 }

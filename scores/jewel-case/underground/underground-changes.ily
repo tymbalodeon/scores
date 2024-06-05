@@ -1,45 +1,65 @@
 \version "2.25.15"
-one = \chordmode {
+
+changesIntro = \chordmode {
+  | c2. * 2
+}
+
+changesOne = \chordmode {
   | c4. e:7
-  | a4.:m a:m7
+  | a4.:m a:m/g
   | f4. g
   | c2.
 }
 
-two = \chordmode {
+changesTwo = \chordmode {
   | c4. e:7
   | f2.
   | d2.:7
   | g2.
+}
 
-  | c4. c:7
+changesThree = \chordmode {
+  | c4. c:7/e
   | f2.:maj
   | d2.:m
   | a4.:m a:m7
 
-  | c4. c:7
+  | c4. c:7/e
   | f2.:maj
   | e4. e:7
+}
 
+changesPreChorusOne = \chordmode {
   | c4 g8:/b a4:m a8:m/g
   | e2.:m
+  | e2.
+}
+
+changesPreChorusTwo = \chordmode {
+  | c4 g8:/b a4:m a8:m/g
+  | e2.:m
+  | s8 c g8:/b a4:m a8:m/g
+  | e2.:m
+  | e2.
+  | s2.
 }
 
 changes = \chords {
-  \one
-  \two
+  \changesIntro
+  \changesOne
 
-  | e2.
+  \changesOne
+  \changesTwo
+  \changesThree
+  \changesPreChorusOne
+  \changesOne
 
-  \one
-  \two
+  \changesOne
+  \changesTwo
+  \changesThree
+  \changesPreChorusTwo
+  \changesOne
 
-  | e2. * 2
-
-  \one
-
-  | c4. e:7
-  | f2.
-  | e2.
-  | s2.
+  \changesTwo
+  \changesOne
 }
