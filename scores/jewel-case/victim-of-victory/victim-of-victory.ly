@@ -2,6 +2,10 @@
 
 \include "helpers/settings.ily"
 \include "helpers/bar-numbers-left.ily"
+\include "helpers/set-bars-per-line.ily"
+
+\include "victim-of-victory-changes.ily"
+\include "victim-of-victory-structure.ily"
 
 \header {
   title = "Victim of Victory"
@@ -126,12 +130,31 @@ music = \relative c {
   \bar "|."
 }
 
-\score {
-  \new Staff \with {
-    instrumentName = "Bass"
-    \numericTimeSignature
-  } {
-    \compressMMRests
-    \music
+\book {
+  \score {
+    \layout {
+      \context {
+        \Score \consists
+        #(set-bars-per-line '(
+                                4 8 8 4 8 6 8 5 5
+                               )
+                            )
+      }
+    }
+
+    <<
+      \changes
+      \structure
+    >>
   }
 }
+
+% \score {
+%   \new Staff \with {
+%     instrumentName = "Bass"
+%     \numericTimeSignature
+%   } {
+%     \compressMMRests
+%     \music
+%   }
+% }
