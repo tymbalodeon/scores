@@ -33,7 +33,7 @@ link on each page listed below.
 <!-- `just deps` start -->
 
 - [fd-10.1.0](https://search.nixos.org/packages?channel=unstable&show=fd)
-- [gh-2.49.2](https://search.nixos.org/packages?channel=unstable&show=gh)
+- [gh-2.50.0](https://search.nixos.org/packages?channel=unstable&show=gh)
 - [gyre-fonts-2.005](https://search.nixos.org/packages?channel=unstable&show=gyre-fonts)
 - [just-1.26.0](https://search.nixos.org/packages?channel=unstable&show=just)
 - [lilypond-2.25.15](https://search.nixos.org/packages?channel=unstable&show=lilypond)
@@ -44,7 +44,7 @@ link on each page listed below.
 - [ripgrep-14.1.0](https://search.nixos.org/packages?channel=unstable&show=ripgrep)
 - [tokei-12.1.2](https://search.nixos.org/packages?channel=unstable&show=tokei)
 - [watchexec-2.1.1](https://search.nixos.org/packages?channel=unstable&show=watchexec)
-- [zathura-with-plugins-0.5.5](https://search.nixos.org/packages?channel=unstable&show=zathura-with-plugins)
+- [zathura-with-plugins-0.5.6](https://search.nixos.org/packages?channel=unstable&show=zathura-with-plugins)
 - [zellij-0.40.1](https://search.nixos.org/packages?channel=unstable&show=zellij)
 
 <!-- `just deps` end -->

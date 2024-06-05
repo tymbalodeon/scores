@@ -72,7 +72,7 @@
 
 # Update dependencies and score LilyPond version
 @update *help:
-    ./scripts/update.nu {{ help }}
+    ./scripts/update-deps.nu {{ help }}
 
 # View the source code for a recipe
 @view-source *recipe:
