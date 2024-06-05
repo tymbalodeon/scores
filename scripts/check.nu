@@ -1,9 +1,9 @@
 #!/usr/bin/env nu
 
-# Run pre-commit hook by name, all hooks, or update all hooks
+# Run pre-commit hooks
 export def main [
-    ...hooks: string  # The hooks to run
-    --list # List all hook ids
+    ...hooks: string # The hooks to run
+    --list # List hook ids
     --update # Update all pre-commit hooks
 ] {
     if $list {
