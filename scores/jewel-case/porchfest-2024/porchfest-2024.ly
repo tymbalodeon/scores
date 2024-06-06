@@ -5,6 +5,7 @@
 \include "helpers/bar-numbers-left.ily"
 \include "helpers/set-bars-per-line.ily"
 
+\include "scores/jewel-case/a-collection-of-memorial-shirts/a-collection-of-memorial-shirts-chart.ily"
 \include "scores/jewel-case/calamity-gravity/calamity-gravity-chart.ily"
 \include "scores/jewel-case/peace-in-time/peace-in-time-chart.ily"
 \include "scores/jewel-case/underground/underground-chart.ily"
@@ -79,4 +80,17 @@
 
 	\peaceInTimeLayout
 	\peaceInTimeMusic
+}
+
+\pageBreak
+
+\tocItem \markup "A Collection of Memorial Shirts"
+
+\score {
+    \header {
+        piece = "A Collection of Memorial Shirts"
+    }
+
+	\aCollectionOfMemorialShirtsLayout
+	\aCollectionOfMemorialShirtsMusic
 }

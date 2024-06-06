@@ -1,98 +1,66 @@
 \version "2.25.15"
 
-changes = \chords {
+aCollectionOfMemorialShirtsChanges = \chords {
   \repeat unfold 2 {
-    \repeat unfold 2 {
-      | c1
-      | g1
+    | c2 g
+    | c2 g
+
+    \repeat unfold 3 {
+      | c2 g
+      | bf2 d:m
     }
 
-    \repeat volta 2 {
-      | c1
-      | g1
-      | bf1
-      | d1:m
-    }
-
-    | d:1/g
-    | s1
-    | s1
+    | d1:/g
     | s1
   }
 
   | g1
-  | s1
   | c1
-  | s1
-
-  | a1:m
-  | a1:m/g
+  | a2:m a2:m/g
   | d1
-  | s1
 
   | g1
-  | s1
   | c1
-  | s1
-
-  \repeat unfold 2 {
-    | c1
-    | g1
-  }
+  | c2 g
+  | c2 g
 
   \repeat volta 2 {
-    | c1
-    | g1
-    | d1
-    | a1:m
+    | c2 g
+    | d2 a:m
+
+    | c2 g
+    | d2 a:m
   }
 
-  \repeat unfold 2 {
-    | c1
-    | g1
+  | c2 g
+  | c2 g
+
+  \repeat unfold 3 {
+    | c2 g
+    | bf2 d:m
   }
+
+  | d1:/g
+  | s1
+
+  | g1
+  | c1
+  | a2:m a2:m/g
+  | d1
+
+  | g1
+  | c1
+  | c2 g
+  | c2 g
 
   \repeat volta 2 {
-    | c1
-    | g1
-    | bf1
-    | d1:m
+    | c2 g
+    | d2 a:m
+
+    | c2 g
+    | d2 a:m
   }
 
-  | d:1/g
-  | s1
-  | s1
-  | s1
-
-  | g1
-  | s1
-  | c1
-  | s1
-
-  | a1:m
-  | a1:m/g
-  | d1
-  | s1
-
-  | g1
-  | s1
-  | c1
-  | s1
-
-  \repeat unfold 2 {
-    | c1
-    | g1
-  }
-
-  \repeat volta 2 {
-    | c1
-    | g1
-    | d1
-    | a1:m
-  }
-
-  | c1
-  | g1
-  | d1
-  | g1
+  | c2 g
+  | d2 g
 }
