@@ -9,11 +9,7 @@ theMindMoteLayout =
 		\context {
 			\Score \consists
 				#(set-bars-per-line '(
-                           6
-                           8
-                           5 4
-						   8
-							4 6 8
+                           4 6 5 4 8 6 4 4
  				)
 			)
 	}
