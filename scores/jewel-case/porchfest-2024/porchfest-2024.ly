@@ -7,6 +7,7 @@
 
 \include "scores/jewel-case/a-collection-of-memorial-shirts/a-collection-of-memorial-shirts-chart.ily"
 \include "scores/jewel-case/calamity-gravity/calamity-gravity-chart.ily"
+\include "scores/jewel-case/little-to-nothing/little-to-nothing-chart.ily"
 \include "scores/jewel-case/peace-in-time/peace-in-time-chart.ily"
 \include "scores/jewel-case/shut-my-lids/shut-my-lids-chart.ily"
 \include "scores/jewel-case/underground/underground-chart.ily"
@@ -107,4 +108,17 @@
 
 	\shutMyLidsLayout
 	\shutMyLidsMusic
+}
+
+\pageBreak
+
+\tocItem \markup "Little to Nothing"
+
+\score {
+    \header {
+        piece = "Little to Nothing"
+    }
+
+	\littleToNothingLayout
+	\littleToNothingMusic
 }
