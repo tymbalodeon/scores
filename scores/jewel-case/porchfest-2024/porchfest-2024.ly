@@ -6,6 +6,7 @@
 \include "helpers/set-bars-per-line.ily"
 
 \include "scores/jewel-case/calamity-gravity/calamity-gravity-chart.ily"
+\include "scores/jewel-case/peace-in-time/peace-in-time-chart.ily"
 \include "scores/jewel-case/underground/underground-chart.ily"
 \include "scores/jewel-case/victim-of-victory/victim-of-victory-chart.ily"
 
@@ -14,7 +15,6 @@
     subtitle = "Jewel Case"
     instrument = "Bass"
     composer = "Nick Brown"
-    arranger = "Ben Rosen, bass"
 }
 
 \paper {
@@ -24,6 +24,8 @@
 \layout {
     \numericTimeSignature
 }
+
+\markup \vspace #1
 
 \markuplist \table-of-contents
 
@@ -64,4 +66,17 @@
 
 	\calamityGravityLayout
 	\calamityGravityMusic
+}
+
+\pageBreak
+
+\tocItem \markup "Peace in Time"
+
+\score {
+    \header {
+        piece = "Peace in Time"
+    }
+
+	\peaceInTimeLayout
+	\peaceInTimeMusic
 }
