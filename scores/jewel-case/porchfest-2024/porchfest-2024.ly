@@ -7,6 +7,7 @@
 
 \include "scores/jewel-case/a-collection-of-memorial-shirts/a-collection-of-memorial-shirts-chart.ily"
 \include "scores/jewel-case/calamity-gravity/calamity-gravity-chart.ily"
+\include "scores/jewel-case/decide-for-yourself/decide-for-yourself-chart.ily"
 \include "scores/jewel-case/little-to-nothing/little-to-nothing-chart.ily"
 \include "scores/jewel-case/the-mind-mote/the-mind-mote-chart.ily"
 \include "scores/jewel-case/no-greater-lie/no-greater-lie-chart.ily"
@@ -136,6 +137,19 @@
 
 	\noGreaterLieLayout
 	\noGreaterLieMusic
+}
+
+\pageBreak
+
+\tocItem \markup "Decide for Yourself"
+
+\score {
+    \header {
+        piece = "Decide for Yourself"
+    }
+
+	\decideForYourselfLayout
+	\decideForYourselfMusic
 }
 
 \pageBreak
