@@ -1,4 +1,5 @@
 \version "2.25.15"
+
 intro = \chordmode {
   | s1
   | f1
@@ -68,7 +69,7 @@ end = \chordmode {
   | c1
 }
 
-changes = \chords {
+theMindMoteChanges = \chords {
   \intro
   \verseOne
   \chorus

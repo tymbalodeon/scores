@@ -1,0 +1,41 @@
+GNU LilyPond 2.25.15 (running Guile 3.0)
+Changing working directory to: `/Users/benrosen/Dropbox/Projects/LilyPond'
+Processing `./scores/jewel-case/porchfest-2024/porchfest-2024.ly'
+Parsing...
+/Users/benrosen/src/github.com/tymbalodeon/scores/./scores/jewel-case/porchfest-2024/porchfest-2024.ly:11:10: error: cannot find file: `scores/jewel-case/the-mind-mote/the-mind-mote-chart.ily'
+(search path: `/Users/benrosen/src/github.com/tymbalodeon/scores/./scores/jewel-case/porchfest-2024:/Users/benrosen/src/github.com/tymbalodeon/scores:/nix/store/nqjhg63davaax50gkh21kly0f0p1748r-lilypond-2.25.15/share/lilypond/2.25.15/ly:/nix/store/nqjhg63davaax50gkh21kly0f0p1748r-lilypond-2.25.15/share/lilypond/2.25.15/ps:/nix/store/nqjhg63davaax50gkh21kly0f0p1748r-lilypond-2.25.15/share/lilypond/2.25.15/scm:/nix/store/nqjhg63davaax50gkh21kly0f0p1748r-lilypond-2.25.15/share/lilypond/2.25.15/fonts/otf/:/nix/store/nqjhg63davaax50gkh21kly0f0p1748r-lilypond-2.25.15/share/lilypond/2.25.15/fonts/svg/:helpers:')
+\include 
+         "scores/jewel-case/the-mind-mote/the-mind-mote-chart.ily"
+/Users/benrosen/src/github.com/tymbalodeon/scores/./scores/jewel-case/porchfest-2024/porchfest-2024.ly:150:9: error: unknown command: `\theMindMoteLayout'
+	
+        \theMindMoteLayout
+/Users/benrosen/src/github.com/tymbalodeon/scores/./scores/jewel-case/porchfest-2024/porchfest-2024.ly:150:9: error: string outside of text script or \lyricmode
+	
+        \theMindMoteLayout
+/Users/benrosen/src/github.com/tymbalodeon/scores/./scores/jewel-case/porchfest-2024/porchfest-2024.ly:151:9: error: unknown command: `\theMindMoteMusic'
+	
+        \theMindMoteMusic
+/Users/benrosen/src/github.com/tymbalodeon/scores/./scores/jewel-case/porchfest-2024/porchfest-2024.ly:151:9: error: string outside of text script or \lyricmode
+	
+        \theMindMoteMusic
+/Users/benrosen/src/github.com/tymbalodeon/scores/./scores/jewel-case/porchfest-2024/porchfest-2024.ly:151:9: error: Spurious expression in \score
+	
+        \theMindMoteMusic
+Interpreting music...[8][16][24][32][40][48][56]
+Preprocessing graphical objects...
+Interpreting music...[8][16][24][32][40][48][56]
+Preprocessing graphical objects...
+Interpreting music...[8][16][24][32][40][48][56][64][72][80][88][96][104][112]
+Preprocessing graphical objects...
+Interpreting music...[8][16][24][32]
+Preprocessing graphical objects...
+Interpreting music...[8][16][24][32][40][48][56]
+Preprocessing graphical objects...
+Interpreting music...[8][16][24][32][40][48][56][64][72][80][88][96]
+Preprocessing graphical objects...
+Interpreting music...[8][16][24][32][40]
+Preprocessing graphical objects...
+Interpreting music...[8][16][24][32][40][48][56][64][72][80][88][96][104]
+Preprocessing graphical objects...
+Interpreting music...
+Preprocessing graphical objects...

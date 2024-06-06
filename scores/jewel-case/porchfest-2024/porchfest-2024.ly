@@ -8,6 +8,7 @@
 \include "scores/jewel-case/a-collection-of-memorial-shirts/a-collection-of-memorial-shirts-chart.ily"
 \include "scores/jewel-case/calamity-gravity/calamity-gravity-chart.ily"
 \include "scores/jewel-case/little-to-nothing/little-to-nothing-chart.ily"
+\include "scores/jewel-case/the-mind-mote/the-mind-mote-chart.ily"
 \include "scores/jewel-case/no-greater-lie/no-greater-lie-chart.ily"
 \include "scores/jewel-case/peace-in-time/peace-in-time-chart.ily"
 \include "scores/jewel-case/shut-my-lids/shut-my-lids-chart.ily"
@@ -135,4 +136,17 @@
 
 	\noGreaterLieLayout
 	\noGreaterLieMusic
+}
+
+\pageBreak
+
+\tocItem \markup "The Mind-Mote"
+
+\score {
+    \header {
+        piece = "The Mind-Mote"
+    }
+
+	\theMindMoteLayout
+	\theMindMoteMusic
 }

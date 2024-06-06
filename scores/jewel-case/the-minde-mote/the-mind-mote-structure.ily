@@ -1,4 +1,5 @@
 \version "2.25.15"
+
 key_and_time = {
   \key g \major
   \time 4/4
@@ -44,7 +45,8 @@ end = {
   | s1
 }
 
-structure = {
+theMindMoteStructure = {
+  \numericTimeSignature
   \key_and_time
   \intro
   \verseOne
