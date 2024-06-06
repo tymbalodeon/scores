@@ -37,31 +37,31 @@ structure = {
   \structureIntro
   \structureOne
 
-  \sectionLabel \markup \bold "Verse 1"
+  % \sectionLabel \markup \bold "Verse 1"
 
   \structureOne
   \structureTwo
 
-  \sectionLabel \markup \bold "Verse 2"
+  % \sectionLabel \markup \bold "Verse 2"
 
   \structureThree
   \structurePreChorusOne
 
-  \sectionLabel \markup \bold "Chorus"
+  % \sectionLabel \markup \bold "Chorus"
 
   \structureOne
 
-  \sectionLabel \markup \bold "Solo"
+  % \sectionLabel \markup \bold "Solo"
 
   \structureOne
   \structureTwo
 
-  \sectionLabel \markup \bold "Verse 3"
+  % \sectionLabel \markup \bold "Verse 3"
 
   \structureThree
   \structurePreChorusTwo
 
-  \sectionLabel \markup \bold "Chorus"
+  % \sectionLabel \markup \bold "Chorus"
 
   \structureOne
   \structureTwo

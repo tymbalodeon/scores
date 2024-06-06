@@ -1,5 +1,6 @@
 \version "2.25.15"
-bass = \relative g, {
+
+undergroundBass = \relative g, {
   \clef "bass"
   \time 18/16
 

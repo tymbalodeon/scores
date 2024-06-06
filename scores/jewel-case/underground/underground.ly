@@ -1,8 +1,8 @@
 \version "2.25.15"
 
-\include "helpers/settings.ily"
-\include "helpers/set-bars-per-line.ily"
 \include "helpers/bar-numbers-left.ily"
+\include "helpers/set-bars-per-line.ily"
+\include "helpers/settings.ily"
 
 \include "underground-bass.ily"
 \include "underground-chart.ily"
@@ -33,7 +33,7 @@
     }
     {
       \compressMMRests
-      \bass
+      \undergroundBass
     }
   }
 }

@@ -5,6 +5,7 @@
 \include "helpers/bar-numbers-left.ily"
 \include "helpers/set-bars-per-line.ily"
 
+\include "scores/jewel-case/calamity-gravity/calamity-gravity-chart.ily"
 \include "scores/jewel-case/underground/underground-chart.ily"
 \include "scores/jewel-case/victim-of-victory/victim-of-victory-chart.ily"
 
@@ -39,6 +40,8 @@
 	\undergroundMusic
 }
 
+\pageBreak
+
 \tocItem \markup "Victim of Victory"
 
 \score {
@@ -48,4 +51,17 @@
 
 	\victimOfVictoryLayout
 	\victimOfVictoryMusic
+}
+
+\pageBreak
+
+\tocItem \markup "Calamity Gravity"
+
+\score {
+    \header {
+        piece = "Calamity Gravity"
+    }
+
+	\calamityGravityLayout
+	\calamityGravityMusic
 }
