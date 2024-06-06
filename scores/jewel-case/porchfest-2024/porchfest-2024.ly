@@ -8,6 +8,7 @@
 \include "scores/jewel-case/a-collection-of-memorial-shirts/a-collection-of-memorial-shirts-chart.ily"
 \include "scores/jewel-case/calamity-gravity/calamity-gravity-chart.ily"
 \include "scores/jewel-case/peace-in-time/peace-in-time-chart.ily"
+\include "scores/jewel-case/shut-my-lids/shut-my-lids-chart.ily"
 \include "scores/jewel-case/underground/underground-chart.ily"
 \include "scores/jewel-case/victim-of-victory/victim-of-victory-chart.ily"
 
@@ -93,4 +94,17 @@
 
 	\aCollectionOfMemorialShirtsLayout
 	\aCollectionOfMemorialShirtsMusic
+}
+
+\pageBreak
+
+\tocItem \markup "Shut My Lids"
+
+\score {
+    \header {
+        piece = "Shut My Lids"
+    }
+
+	\shutMyLidsLayout
+	\shutMyLidsMusic
 }
