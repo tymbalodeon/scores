@@ -4,8 +4,7 @@
 \include "helpers/bar-numbers-left.ily"
 \include "helpers/set-bars-per-line.ily"
 
-\include "victim-of-victory-changes.ily"
-\include "victim-of-victory-structure.ily"
+\include "victim-of-victory-chart.ily"
 
 \header {
   title = "Victim of Victory"
@@ -132,20 +131,8 @@ music = \relative c {
 
 \book {
   \score {
-    \layout {
-      \context {
-        \Score \consists
-        #(set-bars-per-line '(
-                                4 8 6 6 6 8 8 5 5
-                               )
-                            )
-      }
-    }
-
-    <<
-      \changes
-      \structure
-    >>
+    \victimOfVictoryLayout
+    \victimOfVictoryMusic
   }
 }
 
