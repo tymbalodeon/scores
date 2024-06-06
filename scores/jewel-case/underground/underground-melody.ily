@@ -32,6 +32,8 @@ melodyThree = \relative c'' {
   \new Voice \with {
     \consists "Pitch_squash_engraver"
   } {
+    \improvisationOn
+
     | c4. c
     | s2. * 2
     | c4. c

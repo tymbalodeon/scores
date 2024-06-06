@@ -136,7 +136,7 @@ music = \relative c {
       \context {
         \Score \consists
         #(set-bars-per-line '(
-                                4 8 8 4 8 6 8 5 5
+                                4 8 6 6 6 8 8 5 5
                                )
                             )
       }

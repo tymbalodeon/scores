@@ -30,11 +30,11 @@ changesThree = \chordmode {
   | s1
   | f1
   | s1
-  | d1:m
-  | s1
 }
 
 changesBridge = \chordmode {
+  | d1:m
+  | s1
   | bf1
   | s1
   | c1

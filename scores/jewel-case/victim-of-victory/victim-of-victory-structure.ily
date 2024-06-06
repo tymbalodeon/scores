@@ -1,10 +1,5 @@
 \version "2.25.15"
 
-key_and_time = {
-  \key g \major
-  \time 4/4
-}
-
 structureIntro = {
   \repeat volta 2 {
     | s1 * 4
@@ -20,11 +15,11 @@ structureTwo = {
 }
 
 structureThree = {
-  | s1 * 8
+  | s1 * 6
 }
 
 structureBridge = {
-  | s1 * 6
+  | s1 * 8
 }
 
 structureFour = {
@@ -38,10 +33,15 @@ structureOutro = {
 }
 
 structure = {
+  \key c \major
+
   \numericTimeSignature
-  \key_and_time
+  \time 4/4
 
   \structureIntro
+
+  \key g \major
+
   \structureOne
 
   \repeat volta 2 {
@@ -55,12 +55,22 @@ structure = {
   }
 
   \structureThree
+
+  \bar "||"
+  \key f \major
+
   \structureBridge
+
+  \bar "||"
+  \key g \major
+
   \structureOne
 
   \repeat volta 2 {
     \structureOne
   }
+
+  \key c \major
 
   \structureFour
   \structureOutro
