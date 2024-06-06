@@ -28,7 +28,19 @@ melodyVerse = \relative c'' {
 }
 
 melodyMiddle = {
-  | s1 * 13
+  | c2 c
+  | s1
+  | c2 c
+  | s1
+  | s1
+
+  | s1 * 4
+
+  | c2 c
+  | c2 c
+  | s1 
+  | s1 
+
 }
 
 peaceInTimeMelody = {
