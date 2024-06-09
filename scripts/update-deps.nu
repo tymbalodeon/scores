@@ -14,6 +14,10 @@ export def main [
     nix flake update
   }
 
+  if $all {
+    direnv reload
+  }
+
   if $all or $scores {
     let lilypond_version = get_lilypond_version
 

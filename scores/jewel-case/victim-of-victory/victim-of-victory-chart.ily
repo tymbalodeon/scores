@@ -1,4 +1,4 @@
-\version "2.25.15"
+\version "2.25.16"
 
 \include "victim-of-victory-changes.ily"
 \include "victim-of-victory-structure.ily"

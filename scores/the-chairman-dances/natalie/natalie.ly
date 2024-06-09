@@ -1,4 +1,4 @@
-\version "2.25.15"
+\version "2.25.16"
 
 \include "helpers/settings.ily"
 \include "scores/the-chairman-dances/natalie/natalie-bass.ily"
