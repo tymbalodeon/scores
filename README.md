@@ -33,9 +33,9 @@ link on each page listed below.
 <!-- `just deps` start -->
 
 - [fd-10.1.0](https://search.nixos.org/packages?channel=unstable&show=fd)
-- [gh-2.50.0](https://search.nixos.org/packages?channel=unstable&show=gh)
+- [gh-2.51.0](https://search.nixos.org/packages?channel=unstable&show=gh)
 - [gyre-fonts-2.005](https://search.nixos.org/packages?channel=unstable&show=gyre-fonts)
-- [just-1.28.0](https://search.nixos.org/packages?channel=unstable&show=just)
+- [just-1.29.1](https://search.nixos.org/packages?channel=unstable&show=just)
 - [lilypond-2.25.16](https://search.nixos.org/packages?channel=unstable&show=lilypond)
 - [lychee-0.15.1](https://search.nixos.org/packages?channel=unstable&show=lychee)
 - [nushell-0.94.1](https://search.nixos.org/packages?channel=unstable&show=nushell)
