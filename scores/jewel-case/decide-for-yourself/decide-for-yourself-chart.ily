@@ -4,7 +4,7 @@
 \include "decide-for-yourself-melody.ily"
 \include "decide-for-yourself-structure.ily"
 
-decideForYourselfLayout = 
+decideForYourselfLayout =
 	\layout {
 		\context {
 			\Score \consists

@@ -4,7 +4,7 @@
 \include "shut-my-lids-melody.ily"
 \include "shut-my-lids-structure.ily"
 
-shutMyLidsLayout = 
+shutMyLidsLayout =
 	\layout {
 		\context {
 			\Score \consists

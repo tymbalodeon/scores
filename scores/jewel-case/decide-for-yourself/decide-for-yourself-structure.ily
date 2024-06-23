@@ -55,7 +55,7 @@ decideForYourselfStructure = {
   }
 
   \sectionLabel \markup \bold "Solo"
-  
+
   \repeat volta 2 {
     \structureVerse
   }

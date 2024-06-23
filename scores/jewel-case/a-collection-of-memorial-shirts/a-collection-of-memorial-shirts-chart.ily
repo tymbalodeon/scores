@@ -4,7 +4,7 @@
 \include "a-collection-of-memorial-shirts-melody.ily"
 \include "a-collection-of-memorial-shirts-structure.ily"
 
-aCollectionOfMemorialShirtsLayout = 
+aCollectionOfMemorialShirtsLayout =
 	\layout {
 		\context {
 			\Score \consists

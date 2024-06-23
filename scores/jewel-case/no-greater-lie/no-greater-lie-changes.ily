@@ -52,7 +52,7 @@ changesBridge = \chordmode {
   | s1 s2
   | g1:7 s2
   | s1 s2
-} 
+}
 
 changesChorus = \chordmode {
   | c1:m s2
@@ -64,7 +64,7 @@ changesChorus = \chordmode {
   | s1 s2
   | bf1:7 s2
   | s1 s2
-} 
+}
 
 changesPostChorus = \chordmode {
   | ef1:7 s2
@@ -81,7 +81,7 @@ changesPostChorus = \chordmode {
   | s2. f
   | c1 s2
   | s1 s2
-} 
+}
 
 noGreaterLieChanges = \chords {
   \changesIntro

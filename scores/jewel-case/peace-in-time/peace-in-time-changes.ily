@@ -42,14 +42,14 @@ changesBridge = \chordmode {
 
 peaceInTimeChanges = \chords {
   \repeat unfold 2 {
-    \changesIntro  
-    \changesVerse  
+    \changesIntro
+    \changesVerse
   }
 
   \changesChorus
   \changesRiff
   \changesSoloRiff
   \changesBridge
-  \changesIntro  
-  \changesVerse  
+  \changesIntro
+  \changesVerse
 }

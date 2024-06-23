@@ -38,8 +38,8 @@ melodyMiddle = {
 
   | c2 c
   | c2 c
-  | s1 
-  | s1 
+  | s1
+  | s1
 
 }
 

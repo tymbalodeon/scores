@@ -4,7 +4,7 @@
 \include "no-greater-lie-melody.ily"
 \include "no-greater-lie-structure.ily"
 
-noGreaterLieLayout = 
+noGreaterLieLayout =
 	\layout {
 		\context {
 			\Score \consists

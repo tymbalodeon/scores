@@ -4,7 +4,7 @@
 \include "the-mind-mote-melody.ily"
 \include "the-mind-mote-structure.ily"
 
-theMindMoteLayout = 
+theMindMoteLayout =
 	\layout {
 		\context {
 			\Score \consists

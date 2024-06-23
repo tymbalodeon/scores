@@ -66,7 +66,7 @@ melodyChorus = \relative c'' {
     \repeat unfold 19 {
       | s1 s2
     }
-    
+
     | \parenthesize c2. c4. c
 
     \repeat unfold 3 {

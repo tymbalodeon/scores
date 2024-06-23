@@ -4,7 +4,7 @@
 \include "little-to-nothing-melody.ily"
 \include "little-to-nothing-structure.ily"
 
-littleToNothingLayout = 
+littleToNothingLayout =
 	\layout {
 		\context {
 			\Score \consists

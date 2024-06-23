@@ -28,19 +28,19 @@ shutMyLidsStructure = {
   \time 2/4
 
   \repeat volta 2 {
-    \structureRiff  
+    \structureRiff
   }
 
   \repeat volta 2 {
-    \structureVerse 
+    \structureVerse
   }
 
   \repeat volta 2 {
-    \structureRiff  
+    \structureRiff
   }
 
   \repeat volta 2 {
-    \structureVerse 
+    \structureVerse
   }
 
   \structureChorus
@@ -56,7 +56,7 @@ shutMyLidsStructure = {
   }
 
   \repeat volta 2 {
-    \structureRiff  
+    \structureRiff
   }
 
   \structureRiffA

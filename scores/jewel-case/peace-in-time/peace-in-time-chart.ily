@@ -4,13 +4,13 @@
 \include "peace-in-time-melody.ily"
 \include "peace-in-time-structure.ily"
 
-peaceInTimeLayout = 
+peaceInTimeLayout =
 	\layout {
 		\context {
 			\Score \consists
 				#(set-bars-per-line '(
-					4 4 4 4 
-					5 4 5 4 
+					4 4 4 4
+					5 4 5 4
 					4
  				)
 			)

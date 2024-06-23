@@ -4,13 +4,13 @@
 \include "underground-melody.ily"
 \include "underground-structure.ily"
 
-undergroundLayout = 
+undergroundLayout =
 	\layout {
 		\context {
 			\Score \consists
 				#(set-bars-per-line '(
-					6 4 4 7 
-					7 4 4 7 
+					6 4 4 7
+					7 4 4 7
 					6 4 4 4
 				)
 			)
