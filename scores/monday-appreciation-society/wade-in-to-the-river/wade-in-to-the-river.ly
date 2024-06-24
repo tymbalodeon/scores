@@ -111,11 +111,11 @@ music = \relative c' {
 
   | ef2 bf'8 ( c4. )
   | g,8 af bf4 ~ bf8 ef bf4
-  | c2 bf'8 ( c4 ) f,8
+  | c2 bf'8 ( c4 ) c,8
   | ef' d c4 ~ c8 bf g4
 
   | bf,2 ~ bf8 c ( d ) f
-  | bf8 ( c4. ) ~ c8 c, ( g ) r
+  | bf8 ( c4. ) ~ c8 f, ( g ) r
   | c8 ( d4. ) r4 f8 ( g ) ~
   | g4 f ef8 d bf4
 
