@@ -1,7 +1,7 @@
 #!/usr/bin/env nu
 
 use ./files.nu get_lilypond_version
-use ./settings.nu get_settings
+use ./settings.nu 
 
 def get_directory_name [name: string] {
   return (
@@ -27,7 +27,7 @@ export def main [
   )
 
   let composer = if ($composer | is-empty) {
-    get_settings "composer"
+    settings "composer"
   } else {
     "Anonymous"
   }
