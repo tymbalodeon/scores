@@ -26,26 +26,26 @@ iWasStruckByTheWordsBass = \relative d {
   | g g e a, a' g e d ~
 
   | d2 r8 a c d ~
-  | d4 a'8 d, d'8 c a d, -> ~ (
+  | d4 a'8 d, d'8 c a d, -> ~
 
-  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
-  | g4 g'8 -. ) r f, -> f' -. r e, -> ~
-  | e4 e'8 -. e, ( g  a ) c -. d -> ~ (
+  | d4 d'8 -. r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ 
+  | g4 g'8 -. r f, -> f' -. r e, -> ~
+  | e4 e'8 -. e, ( g  a ) c -. d -> ~ 
 
-  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
-  | g4 g'8 -. ) r f, -> f' -. r e -. ->
-  | r8 e,8 f ( g ) a b ( c ) d -> ~ (
+  | d4 d'8 -. r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ 
+  | g4 g'8 -. r f, -> f' -. r e -. ->
+  | r8 e,8 f ( g ) a b ( c ) d -> ~
 
-  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
-  | g4 g'8 -. ) r f, -> f' -. r e, -> ~
-  | e4 e'8 -. e, ( g  a ) c -. d -> ~ (
+  | d4 d'8 -. r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ 
+  | g4 g'8 -. r f, -> f' -. r e, -> ~
+  | e4 e'8 -. e, ( g  a ) c -. d -> ~ 
 
-  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
-  | g4 g'8 -. ) r f, -> f' -. r e -. ->
+  | d4 d'8 -. r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ 
+  | g4 g'8 -. r f, -> f' -. r e -. ->
   | r4 r8 a, a' g e f, -> ~
 
   | f4 f'8 f, a c d f ~
@@ -69,16 +69,16 @@ iWasStruckByTheWordsBass = \relative d {
   | g g e a, a' g e d ~
 
   | d2 r8 a c d ~
-  | d4 a'8 d, d'8 c a d, -> ~ (
+  | d4 a'8 d, d'8 c a d, -> ~
 
-  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
-  | g4 g'8 -. ) r f, -> f' -. r e, -> ~
-  | e4 e'8 -. e, ( g  a ) c -. d -> ~ (
+  | d4 d'8 -. r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ 
+  | g4 g'8 -. r f, -> f' -. r e, -> ~
+  | e4 e'8 -. e, ( g  a ) c -. d -> ~ 
 
-  | d4 d'8 -. ) r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ (
-  | g4 g'8 -. ) r f, -> f' -. r e -. ->
+  | d4 d'8 -. r c, -> c' -. r b, -> ~
+  | b4 b'8 -. e,, ( f e ) f -.  g -> ~ 
+  | g4 g'8 -. r f, -> f' -. r e -. ->
   | r8 e,8 f ( g ) a b ( c ) d -> ~
 
   | d8 d'16 d d8 -. c16 c c8 -. b -. b -. a -. ->
