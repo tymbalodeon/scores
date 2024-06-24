@@ -71,18 +71,18 @@ music = \relative c' {
   | af8 ef' r g ~ g ef bf ef,
   | bf8 bf' r ef, ~ ef bf ef4
 
-  | af,8 ef' r g ~ g ef bf ef
-  | f,8 f' r ef ~ ef c bf g (
-  | af8 ) ef' r g ~ g ef bf ef
-  | f,8 f' r g ~ g af ( bf4 )
+  | af,8 af af g g g g g
+  | bf8 bf bf ef f g af bf
+  | af,8 af af g g g g g
+  | f8 f' f, ef' d c bf g
 
-  | af,8 ef' r g ~ g ef bf ef
-  | f,8 f' r ef ~ ef c bf g (
-  | af8 ) ef' r g ~ g f, g af
-  | bf8 bf' r ef, ~ ef bf ef4
+  | af8 af af g g g g g
+  | bf8 bf bf ef bf' c ( d ) ef 
+  | af,,8 af af g g g g g
+  | f8 f' f, ef' d c bf g
 
-  | af,8 ef' r g ~ g f ef c
-  | bf8 bf' r ef, ~ ef bf ef4
+  | af8 c' af, g bf' g, bf' g,
+  | f af' f, g' f ef d c
 
   | bf4 bf8 bf ~ bf bf bf g' (
   | af4 ) af g f
