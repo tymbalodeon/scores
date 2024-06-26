@@ -79,9 +79,9 @@ music = \relative c' {
   | af,8 af af g g g g g
   | bf8 bf bf ef ef d c bf
   | af8 af af g g g g g
-  | f8 f' f, ef' \3 bf' c d ( ef )
+  | bf8 bf' bf, ef \3 bf' ef ( d ) bf
 
-  | af,,8 c' af, g bf' g, bf' g,
+  | af,8 c' af, g bf' g, bf' g,
   | f af' f, g' f ef d c
 
   | bf4 bf8 bf ~ bf bf bf g' (
@@ -122,6 +122,7 @@ music = \relative c' {
 
   \override TextSpanner.bound-details.left.text = \markup { \draw-line #'(0 . -1) }
   \override TextSpanner.bound-details.right.text = \markup { \draw-line #'(0 . -1) }
+
   | ef,2 ~ ef8 ef  \startTextSpan bf' g' ~
   | g4 bf, ~ bf8 ef, bf'4 \stopTextSpan
   | af,2 ~ af8 af' ef' af ~
