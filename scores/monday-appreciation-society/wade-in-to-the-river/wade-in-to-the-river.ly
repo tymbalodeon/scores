@@ -49,7 +49,7 @@ music = \relative c' {
   \time 4/4
 
   | ef2 bf'8 ( c4. )
-  | g,8 af bf4 ~ bf8 ef bf4
+  | g,8 af ( bf4 ) ~ bf8  ef bf4
   | c2 bf'8 ( c4 ) c,8
   | ef' d c4 ~ c8 bf g4
 
@@ -78,10 +78,10 @@ music = \relative c' {
 
   | af,8 af af g g g g g
   | bf8 bf bf ef ef d c bf
-  | af8 af af g g g g g
+  | af8 af af g g f g af
   | bf8 bf' bf, ef \3 bf' ef ( d ) bf
 
-  | af,8 c' af, g bf' g, bf' g,
+  | af,8 c' af, g bf' g, g' g,
   | f af' f, g' f ef d c
 
   | bf4 bf8 bf ~ bf bf bf g' (
@@ -95,9 +95,9 @@ music = \relative c' {
   | af4 ) af g f
 
   | bf4 bf8 bf ~ bf bf bf g' (
-  | af8 ) ef af4 g f
-  | bf,4 bf8 bf ~ bf bf bf g (
-  | af ) ef' af4 g8 f ef4
+  | af8 ) ef af4 g8 f ef4
+  | bf4 bf8 bf ~ bf bf bf g (
+  | af4 ) af g f
 
   | bf4 bf8 bf ~ bf bf bf g' (
   | af8 ) bf c4 bf8 af g4
@@ -110,7 +110,7 @@ music = \relative c' {
   \time 4/4
 
   | ef2 bf'8 ( c4. )
-  | g,8 af bf4 ~ bf8 ef bf4
+  | g,8 af ( bf4 ) ~ bf8  ef bf4
   | c2 bf'8 ( c4 ) c,8
   | ef' d c4 ~ c8 bf g4
 
@@ -125,29 +125,29 @@ music = \relative c' {
 
   | ef,2 ~ ef8 ef  \startTextSpan bf' g' ~
   | g4 bf, ~ bf8 ef, bf'4 \stopTextSpan
-  | af,2 ~ af8 af' ef' af ~
-  | af4 g ~ g8 ef af,4
+  | af,4 <af ef'>2. -> ~
+  | <af ef'>2 af
 
-  | c,2 ~ \startTextSpan c8 c g' ef' ~
+  | c2 ~ \startTextSpan c8 c g' ef' ~
   | ef4 g, ~ g8 c, g'4 \stopTextSpan
   | bf,2 ~ bf8 f' d' bf' ~
   | bf4 af g8 f ef4
 
   | ef,2 ~ \startTextSpan ef8 ef bf' g' ~
   | g4 bf, ~ bf8 ef, bf'4 \stopTextSpan
-  | af,2 ~ af8 af' ef' af ~
-  | af4 g ~ g8 ef af,4
+  | af,4 <af ef'>2. -> ~
+  | <af ef'>2 af
 
-  | c,2 ~ \startTextSpan c8 c g' ef' ~
+  | c2 ~ \startTextSpan c8 c g' ef' ~
   | ef4 \stopTextSpan d ~ d8 c g4
   | bf,2 ~ bf8 c ( d ) f
   | bf8 ( c4. ) ~ c8 f, ( g ) r
 
-  | c8 ( d4. ) r4 f8 ( g ) ~
-  | g4 f ef d
+  | c8 ( d4. ) r4 c'8 ^\markup \tiny "C" ( d ) ~
+  | d4 c bf g
 
-  | ef1 ~
-  | ef1
+  | af1 ~
+  | af1
 
   \bar "|."
 }
