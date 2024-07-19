@@ -1,7 +1,7 @@
 #!/usr/bin/env nu
 
 use ./files.nu get_lilypond_version
-use ./settings.nu 
+use ./settings.nu
 
 def get_directory_name [name: string] {
   return (
