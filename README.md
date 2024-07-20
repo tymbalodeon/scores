@@ -33,7 +33,7 @@ link on each page listed below.
 <!-- `just deps` start -->
 
 - [fd-10.1.0](https://search.nixos.org/packages?channel=unstable&show=fd)
-- [gh-2.52.0](https://search.nixos.org/packages?channel=unstable&show=gh)
+- [gh-2.53.0](https://search.nixos.org/packages?channel=unstable&show=gh)
 - [gyre-fonts-2.005](https://search.nixos.org/packages?channel=unstable&show=gyre-fonts)
 - [just-1.31.0](https://search.nixos.org/packages?channel=unstable&show=just)
 - [lilypond-2.25.17](https://search.nixos.org/packages?channel=unstable&show=lilypond)
