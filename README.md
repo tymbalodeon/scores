@@ -35,7 +35,7 @@ link on each page listed below.
 - [fd-10.1.0](https://search.nixos.org/packages?channel=unstable&show=fd)
 - [gh-2.53.0](https://search.nixos.org/packages?channel=unstable&show=gh)
 - [gyre-fonts-2.005](https://search.nixos.org/packages?channel=unstable&show=gyre-fonts)
-- [just-1.31.0](https://search.nixos.org/packages?channel=unstable&show=just)
+- [just-1.32.0](https://search.nixos.org/packages?channel=unstable&show=just)
 - [lilypond-2.25.17](https://search.nixos.org/packages?channel=unstable&show=lilypond)
 - [lychee-0.15.1](https://search.nixos.org/packages?channel=unstable&show=lychee)
 - [nushell-0.95.0](https://search.nixos.org/packages?channel=unstable&show=nushell)
