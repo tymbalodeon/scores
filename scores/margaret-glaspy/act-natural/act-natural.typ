@@ -1,7 +1,7 @@
-#set text(size: 1.5em)
+#set text(size: 1.8em)
 
-#let start-repeat = strong[|:]
-#let end-repeat = strong[:|]
+#let start-repeat = [||:]
+#let end-repeat = [:||]
 
 #align(center)[
   = Act Natural
@@ -23,18 +23,17 @@
     columns: 4,
     gutter: 1em,
     start-repeat,
-    [(\[1 1#super[maj7]\]],
-    [\[#super[\<]1#super[6] 1\])],
+    [\[#math.underline([1 #h(0.5em) 1#super[maj7]])],
+    [#math.underline([#super[<]1#super[6] #h(0.5em) 1])\]],
     end-repeat,
   ),
 
   rect[Verse],
   grid(
-    columns: 6,
-    column-gutter: 1em,
-    row-gutter: 2em,
-    [], [1], [♭2], [\[1 $1/7$\]], [6-#super[7]], [],
-    [], [2-], [5#super[7]],
+    columns: 4,
+    gutter: 1em,
+    [1], [♭2], math.underline([1 #h(0.5em) $1/7$]), [6-#super[7]],
+    [2-], [5#super[7]],
   ),
 
   rect[Pre-Chorus],
@@ -42,7 +41,12 @@
     columns: 6,
     column-gutter: 1em,
     row-gutter: 2em,
-    start-repeat, [1], [2#super[7]], [\[4 5#super[7]\]], [1], end-repeat,
+    start-repeat,
+    [1],
+    [2#super[7]],
+    math.underline([4 #h(0.5em) 5#super[7]]),
+    [1],
+    end-repeat,
   ),
 
   rect[Chorus],
