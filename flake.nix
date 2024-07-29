@@ -50,7 +50,11 @@
           python312Packages.pre-commit-hooks
           ripgrep
           statix
+          tinymist
           tokei
+          typst
+          typst-lsp
+          typstyle
           watchexec
           zathura
           zellij
