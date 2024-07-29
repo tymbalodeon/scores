@@ -1,7 +1,7 @@
-#set text(size: 1.8em)
+#set text(font: "TeX Gyre Schola", size: 1.8em)
 
-#let start-repeat = [||:]
-#let end-repeat = [:||]
+#let start-repeat = [|:]
+#let end-repeat = [:|]
 
 #align(center)[
   = Act Natural
@@ -20,12 +20,9 @@
   gutter: 2em,
   rect[Riff],
   grid(
-    columns: 4,
+    columns: 6,
     gutter: 1em,
-    start-repeat,
-    [\[#math.underline([1 #h(0.5em) 1#super[maj7]])],
-    [#math.underline([#super[<]1#super[6] #h(0.5em) 1])\]],
-    end-repeat,
+    start-repeat, [–], [–], [–], [–], end-repeat,
   ),
 
   rect[Verse],
