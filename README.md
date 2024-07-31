@@ -38,7 +38,7 @@ link on each page listed below.
 - [just-1.32.0](https://search.nixos.org/packages?channel=unstable&show=just)
 - [lilypond-2.25.17](https://search.nixos.org/packages?channel=unstable&show=lilypond)
 - [lychee-0.15.1](https://search.nixos.org/packages?channel=unstable&show=lychee)
-- [nushell-0.95.0](https://search.nixos.org/packages?channel=unstable&show=nushell)
+- [nushell-0.96.0](https://search.nixos.org/packages?channel=unstable&show=nushell)
 - [pre-commit-3.7.1](https://search.nixos.org/packages?channel=unstable&show=pre-commit)
 - [python3.12-pre-commit-hooks-4.6.0](https://search.nixos.org/packages?channel=unstable&show=python3.12-pre-commit-hooks)
 - [ripgrep-14.1.0](https://search.nixos.org/packages?channel=unstable&show=ripgrep)
