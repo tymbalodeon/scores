@@ -27,7 +27,7 @@ export def main [
   if $all or $scores {
     let new_lilypond_version = (get_lilypond_version)
 
-    if $new_lilypond_version != $old_lilypond_version {
+    if $new_lilypond_version != $old_lilypond_version or $scores {
       for score in ((get_files "ly") ++ (get_files "ily")) {
         convert-ly --edit $score
         sd '\\version "\d\.\d{2}\.\d{2}"' $"\\version \"($new_lilypond_version)\"" $score
