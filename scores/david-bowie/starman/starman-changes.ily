@@ -1,4 +1,7 @@
-\version "2.25.16"
+\version "2.25.17"
+
+\include "predefined-guitar-fretboards.ly"
+
 intro = \chordmode {
   bf1:maj/a |
   s |
@@ -58,39 +61,61 @@ solo = \chordmode {
   c |
 }
 
-changes_intro = \chords {
-  \intro
-}
+% changes_intro = \chords {
+%   \intro
+% }
 
-changes_verse = \chords {
-  \verse_part_one
+% changes_verse = \chords {
+%   \verse_part_one
 
-  f2 af4 bf |
+%   f2 af4 bf |
 
-  a1 |
-  g |
-}
+%   a1 |
+%   g |
+% }
 
-changes_chorus = \chords {
-  \chorus_main
-  \chorus_end
-}
+% changes_chorus = \chords {
+%   \chorus_main
+%   \chorus_end
+% }
 
-changes_solo = \chords {
-  \solo
-}
+% changes_solo = \chords {
+%   \solo
+% }
 
 changes = \chords {
   \repeat unfold 2 {
     \intro
   }
+
   \verse
   \chorus
   \solo
   \verse
+
   \repeat unfold 2 {
     \chorus
   }
+
+  \repeat unfold 2 {
+    \solo_base
+  }
+}
+
+frets = \new FretBoards {
+  \repeat unfold 2 {
+    \intro
+  }
+
+  \verse
+  \chorus
+  \solo
+  \verse
+
+  \repeat unfold 2 {
+    \chorus
+  }
+
   \repeat unfold 2 {
     \solo_base
   }
