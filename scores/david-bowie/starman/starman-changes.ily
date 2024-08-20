@@ -1,7 +1,5 @@
 \version "2.25.17"
 
-\include "predefined-guitar-fretboards.ly"
-
 intro = \chordmode {
   bf1:maj/a |
   s |
