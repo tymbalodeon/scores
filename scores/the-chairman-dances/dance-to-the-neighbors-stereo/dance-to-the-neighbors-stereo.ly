@@ -11,7 +11,7 @@
 }
 
 music = \relative c {
-    \key fs \minor
+    \key fs \major
     \clef "bass"
 
     | fs4 fs fs8 cs fs cs
@@ -64,6 +64,8 @@ music = \relative c {
     | e,8 e' e, r e e a' as
     | b8 fs b,4 b'8 fs b, c
     | cs!8 cs cs cs cs cs cs cs
+
+    \key a \major
 
     | R1 * 3
     | e8 e d d cs cs b ( a )
