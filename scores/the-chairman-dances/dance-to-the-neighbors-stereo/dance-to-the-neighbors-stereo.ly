@@ -10,32 +10,30 @@
     arranger = "Ben Rosen, bass"
 }
 
-music = \relative c {
-    \key fs \major
-    \clef "bass"
+verseOne = \relative fs {
+    | fs8 r fs r fs cs fs cs
+    | e8 r e r e b e b
+    | fs' r fs r fs cs fs cs
+    | e8 r e r e b e b
 
-    | fs4 fs fs8 cs fs cs
-    | e4 e e8 b e b
-    | fs'4 fs fs8 cs fs cs
-    | e4 e e8 b e b
-
-    | fs'4 fs fs8 cs fs cs
-    | e4 e e8 e a as
+    | fs'8 r fs r fs cs fs cs
+    | e8 r e r e e a as
     | b8 fs b,4 b'8 fs b, c
-
     | cs!8 cs cs cs cs cs cs cs
 
-    | fs4 fs fs8 cs' fs, cs'
-    | e,4 e r8 b' r b
-    | fs4 fs fs8 cs' fs, cs'
-    | e,4 e r8 b r b
+    | fs8 r fs r fs cs' fs, cs'
+    | e,8 r e r r b' r b
+    | fs8 r fs r fs cs' fs, cs'
+    | e,8 r e r r b r b
 
-    | fs'4 fs fs8 cs' fs, cs'
-    | e,4 e e8 e a as
+    | fs'8 r fs r fs cs fs cs
+    | e8 r e r e e a as
     | b8 fs b,4 b'8 fs b, c
     | cs!8 cs' cs, cs cs' cs, cs cs'
+}
 
-    | fs,,8 fs' fs, r fs fs' fs, fs'
+chorusBase = \relative fs, {
+    | fs8 fs' fs, r fs fs' fs, fs'
     | e,8 e' e, r r e' e, e'
     | fs,8 fs' fs, r fs fs' fs, fs'
     | a, a' gs, gs' fs, fs' e, e'
@@ -43,9 +41,22 @@ music = \relative c {
     | fs,8 fs' fs, r fs fs' fs, fs'
     | e,8 e' e, r e e a' as
     | b8 fs b,4 b'8 fs b, c
-    | cs!8 cs' cs, cs cs cs' cs, cs'
+}
 
-    | fs,8 fs'16 fs cs8 e16 e fs8 e cs fs,
+chorusOne = \relative cs {
+    \chorusBase
+
+    | cs!8 cs' cs, cs cs cs' cs, cs'
+}
+
+chorusTwo = \relative cs {
+    \chorusBase
+
+    | cs!8 cs cs cs cs cs cs cs
+}
+
+verseTwo = \relative fs {
+    | fs8 fs'16 fs cs8 e16 e fs8 e cs fs,
     | e8 e' b r r2
     | fs8 fs'16 fs cs8 e16 e fs8 e cs fs,
     | e8 e' b r r e b e,
@@ -54,19 +65,9 @@ music = \relative c {
     | e8 e' b r e e, a as
     | b8 fs b,4 b'8 fs b, c
     | cs!8 cs cs cs cs cs cs cs
+}
 
-    | fs,8 fs' fs, r fs fs' fs, fs'
-    | e,8 e' e, r r e' e, e'
-    | fs,8 fs' fs, r fs fs' fs, fs'
-    | a, a' gs, gs' fs, fs' e, e'
-
-    | fs,8 fs' fs, r fs fs' fs, fs'
-    | e,8 e' e, r e e a' as
-    | b8 fs b,4 b'8 fs b, c
-    | cs!8 cs cs cs cs cs cs cs
-
-    \key a \major
-
+outro = \relative e {
     | R1 * 3
     | e8 e d d cs cs b ( a )
 
@@ -94,13 +95,35 @@ music = \relative c {
     | a4 r8 a ~ a a gs4
     | fs4 r8 fs' ~ fs cs fs, cs'
     | e,8 e fs fs gs gs b cs
-
-    | d4 a'8 \acciaccatura d16 e8 ~ e d cs d
-    | cs8 a e \acciaccatura a16 b8 ~ b a e es
-    | fs cs' r
 }
 
-% \markup \vspace #0.5
+outroInstrumental = \relative d {
+    | d4 a'8 \acciaccatura d16 e8 ~ e d cs d
+    | cs8 a e \acciaccatura a16 b8 ~ b a e es
+    | fs cs' r \acciaccatura fs16 gs8 ~ gs gs fs4
+    | e,8 e d d cs cs b ( a )
+
+    | d4. a'8 ~ a d ( e ) d
+    | cs8 a e \acciaccatura a16 b8 ~ b a e es
+    | fs cs' r \acciaccatura fs16 gs8 ~ gs gs fs4
+    | e,8 e d d cs cs b ( a )
+}
+
+music = \relative c {
+    \key fs \major
+    \clef "bass"
+
+    \verseOne
+    \chorusOne
+    \verseTwo
+    \chorusTwo
+
+    \bar "||"
+    \key a \major
+
+    \outro
+    \outroInstrumental
+}
 
 \score {
     \new Staff \with {
