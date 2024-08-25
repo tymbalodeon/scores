@@ -104,9 +104,12 @@ outroInstrumental = \relative d {
     | e,8 e d d cs cs b ( a )
 
     | d4. a'8 ~ a d ( e ) d
-    | cs8 a e \acciaccatura a16 b8 ~ b a e es
-    | fs cs' r \acciaccatura fs16 gs8 ~ gs gs fs4
-    | e,8 e d d cs cs b ( a )
+    | cs8 a e a, ~ a a gs4
+    | fs4 r8 fs' ~ fs cs fs, cs'
+    | e,8 e fs fs gs gs b cs
+
+    | <d a'>4 r8 <d a'>8 ~ <d a'> <d a'> <d a'>4
+    | <a cs'>1
 }
 
 music = \relative c {
@@ -123,6 +126,8 @@ music = \relative c {
 
     \outro
     \outroInstrumental
+
+    \bar "|."
 }
 
 \score {
