@@ -1,4 +1,4 @@
-\version "2.25.16"
+\version "2.25.17"
 
 \include "helpers/settings.ily"
 \include "scores/the-chairman-dances/a-family-waiting/a-family-waiting-bass.ily"
