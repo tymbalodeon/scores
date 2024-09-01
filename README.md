@@ -32,18 +32,18 @@ link on each page listed below.
 
 <!-- `just deps` start -->
 
-- [fd-10.1.0](https://search.nixos.org/packages?channel=unstable&show=fd)
-- [gh-2.54.0](https://search.nixos.org/packages?channel=unstable&show=gh)
+- [fd-10.2.0](https://search.nixos.org/packages?channel=unstable&show=fd)
+- [gh-2.55.0](https://search.nixos.org/packages?channel=unstable&show=gh)
 - [gyre-fonts-2.005](https://search.nixos.org/packages?channel=unstable&show=gyre-fonts)
-- [just-1.34.0](https://search.nixos.org/packages?channel=unstable&show=just)
+- [just-1.35.0](https://search.nixos.org/packages?channel=unstable&show=just)
 - [lilypond-2.25.17](https://search.nixos.org/packages?channel=unstable&show=lilypond)
 - [lychee-0.15.1](https://search.nixos.org/packages?channel=unstable&show=lychee)
-- [nushell-0.96.1](https://search.nixos.org/packages?channel=unstable&show=nushell)
+- [nushell-0.97.1](https://search.nixos.org/packages?channel=unstable&show=nushell)
 - [pre-commit-3.7.1](https://search.nixos.org/packages?channel=unstable&show=pre-commit)
 - [python3.12-pre-commit-hooks-4.6.0](https://search.nixos.org/packages?channel=unstable&show=python3.12-pre-commit-hooks)
 - [ripgrep-14.1.0](https://search.nixos.org/packages?channel=unstable&show=ripgrep)
 - [tokei-12.1.2](https://search.nixos.org/packages?channel=unstable&show=tokei)
-- [watchexec-2.1.1](https://search.nixos.org/packages?channel=unstable&show=watchexec)
+- [watchexec-2.1.2](https://search.nixos.org/packages?channel=unstable&show=watchexec)
 - [zathura-with-plugins-0.5.6](https://search.nixos.org/packages?channel=unstable&show=zathura-with-plugins)
 - [zellij-0.40.1](https://search.nixos.org/packages?channel=unstable&show=zellij)
 
