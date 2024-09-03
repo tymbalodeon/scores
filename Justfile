@@ -1,3 +1,5 @@
+set unstable := true
+
 @_help:
     ./scripts/help.nu
 
@@ -6,6 +8,7 @@
     ./scripts/check.nu {{ hooks }}
 
 # Remove pdfs
+[confirm]
 @clean *search_term:
     ./scripts/clean.nu {{ search_term }}
 
