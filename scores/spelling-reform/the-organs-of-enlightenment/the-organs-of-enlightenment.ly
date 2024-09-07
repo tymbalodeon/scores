@@ -4,10 +4,9 @@
 \include "helpers/bar-numbers-left.ily"
 
 \header {
-    title = "I Am Your Hypocrite"
+    title = "The Organs of Enlightenment"
     subtitle = "Spelling Reform"
-    composer = "Spelling Reform"
-    arranger = ""
+    composer = "Dan Wisniewski"
 }
 
 music = \relative c'' {

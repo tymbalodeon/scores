@@ -4,10 +4,9 @@
 \include "helpers/bar-numbers-left.ily"
 
 \header {
-    title = "Circles"
+    title = "Hum Along"
     subtitle = "Spelling Reform"
-    composer = "Spelling Reform"
-    arranger = ""
+    composer = "Dan Wisniewski"
 }
 
 music = \relative c'' {

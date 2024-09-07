@@ -4,17 +4,15 @@
 \include "helpers/bar-numbers-left.ily"
 
 \header {
-    title = "Hum Along"
+    title = "I Am Your Hypocrite"
     subtitle = "Spelling Reform"
-    composer = "Spelling Reform"
-    arranger = ""
+    composer = "Dan Wisniewski"
 }
 
 music = \relative c'' {
-    \key c \major
-    \time 4/4
+    \key g \major
 
-    | c1
+    | R1 * 16
 }
 
 \score {
