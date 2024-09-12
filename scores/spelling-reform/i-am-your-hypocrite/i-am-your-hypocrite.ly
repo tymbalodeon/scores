@@ -9,8 +9,52 @@
     composer = "Dan Wisniewski"
 }
 
-music = \relative c'' {
+music = \relative g'' {
     \key g \major
+
+    | r4 g2 g4 ~
+    | g2 g ~
+    | g4 g2.
+    | g2. g4 ~
+
+    \sectionLabel Verse
+
+    | g2 g ~
+    | g4 g2.
+    | g2. g4 ~
+    | g2 g ~
+
+    | g4 g2.
+    | g2. g4 ~
+    | g2 g ~
+    | g4 g2.
+
+    | g2. g4 ~
+    | g2 g ~
+    | g4 g2.
+    | g2. g4 ~
+
+    | g2 g ~
+    | g4 g2.
+    | g2. g4 ~
+    | g2 g ~
+
+    \sectionLabel Instrumental
+
+    | g2 g ~
+    | g4 g2.
+    | g2. g4 ~
+    | g2 g ~
+
+    | g4 g2.
+    | g2. g4 ~
+    | g2 g ~
+    | g4 g2.
+
+    | R1 * 16
+
+    \key e \major
+    \bar "||"
 
     | R1 * 16
 }
