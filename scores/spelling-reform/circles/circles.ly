@@ -10,10 +10,13 @@
 }
 
 music = \relative c'' {
-    \key c \major
     \time 4/4
 
-    | c1
+    | R1 * 7
+    | \new CueVoice \with { \consists "Pitch_squash_engraver" } { \improvisationOn r4. c8 \fermata ~ c2 }
+
+    | R1 * 9
+    | R1 * 9
 }
 
 \score {

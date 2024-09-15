@@ -33,7 +33,7 @@ music = \relative c'' {
 
     \time 4/4
 
-    | r8 af'' b, c ~ c2
+    | r8 af'' ^\markup \italic \tiny A♭ b, c ~ c2
 
     \time 2/4
 
@@ -91,19 +91,15 @@ music = \relative c'' {
 
     \time 2/4
 
-    | \new CueVoice \with {
-        \consists "Pitch_squash_engraver"
-    } { 
-        \improvisationOn r4. c8 ~ 
+    | <f c' f af c>4 r8 <df af' df f af>8 ~ 
 
-        \time 4/4
+    \time 4/4
 
-        | c8 c c c c c c c
+    | <df af' df f af>8 c c c c c c c
 
-        \time 3/4
+    \time 3/4
 
-        | c8 c c c c4
-    }
+    | c8 c c c c4
 
     \time 2/4
 
@@ -111,7 +107,7 @@ music = \relative c'' {
 
     \time 4/4
 
-    | r8 af'' b, c ~ c2
+    | r8 af''' ^\markup \italic \tiny A♭ b, c ~ c2
 
     \time 2/4
 
@@ -119,7 +115,7 @@ music = \relative c'' {
 
     \time 4/4
 
-    | r8 b' b, c ~ c2
+    | r8 b' ^\markup \italic \tiny B b, c ~ c2
 
     \time 2/4
 
@@ -127,7 +123,7 @@ music = \relative c'' {
 
     \time 4/4
 
-    | r8 f b, c ~ c2
+    | r8 f^\markup \italic \tiny F b, c ~ c2
 
     \time 2/4
 
