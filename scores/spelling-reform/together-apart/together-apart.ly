@@ -15,7 +15,7 @@ music = \relative c'' {
     \time 9/16
 
     | cs8 cs16 r8 d16 d8 r16
-    | e8 e16 r8 f16 f8 r16
+    | e8 e16 r8 fs16 fs8 r16
     | g8 g16 r8 a16 a8 r16
     | b8 b16 r8 cs16 cs8 r16
 
@@ -25,9 +25,38 @@ music = \relative c'' {
 
     | R2. * 4
 
-    | r4. c8 b16 ~ b8.
-    | a16 ( g ) e ~ e4.
+    | r4. c,8 b16 ~ b8.
+    | a16 ( g ) e ~ e8. ~ e4.
 
+    | R2.
+    | r4. r8. r16 e' es
+    | fs2.
+
+    | R2. * 3
+    | a4. a8. g8 e16 ~
+    | e4. c8 b16 ~ b8.
+    | a16 ( g ) e ~ e8. ~ e4.
+
+    | f'2.~
+    | f4. ~ f8. ~ f16 e es
+    | fs2.
+
+    | c,8. b a g
+    | d'8. c b a
+    | c8. b a g
+    | d'8. c b a
+
+    | c8. b a g
+    | d'8. c b a
+    | a2. ~
+    | a2. 
+
+    | b'2.
+    | c2.
+
+    | d2.
+    | e8. d b8 a16 ~ a8 g16 ~
+    | g8. ~ g8 d16 e8 g16 ~ g8.
 }
 
 \score {
