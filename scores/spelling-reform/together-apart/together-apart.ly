@@ -1,4 +1,4 @@
-\version "2.25.19"
+\version "2.25.17"
 
 \include "helpers/settings.ily"
 \include "helpers/bar-numbers-left.ily"
@@ -12,51 +12,51 @@
 
 music = \relative c'' {
     \key g \major
-    \time 9/16
+    \time 9/8
 
-    | cs8 cs16 r8 d16 d8 r16
-    | e8 e16 r8 fs16 fs8 r16
-    | g8 g16 r8 a16 a8 r16
-    | b8 b16 r8 cs16 cs8 r16
+    | cs4 cs8 r4 d8 d4 r8
+    | e4 e8 r4 fs8 fs4 r8
+    | g4 g8 r4 a8 a4 r8
+    | b4 b8 r4 cs8 cs4 r8
 
-    \time 12/16
+    \time 12/8
 
-    | d16 d d d d d d d d d8.
+    | d8 d d d d d d d d d4.
 
-    | R2. * 4
+    | R1. * 2
 
-    | r4. c,8 b16 ~ b8.
-    | a16 ( g ) e ~ e8. ~ e4.
+    | r2. c,4. b4.
+    | a4 ( g4. ) e8 ~ e2.
 
-    | R2.
-    | r4. r8. r16 e' es
-    | fs2.
+    | R1.
+    | r2. r4. r8 e' es
+    | fs1.
 
-    | R2. * 3
-    | a4. a8. g8 e16 ~
-    | e4. c8 b16 ~ b8.
-    | a16 ( g ) e ~ e8. ~ e4.
+    | R1. * 3
+    | a2. a4. g4 e8 ~
+    | e2. c4 b8 ~ b4.
+    | a4 ( g8 ) ~ g4 e8 ~ e2.
 
-    | f'2.~
-    | f4. ~ f8. ~ f16 e es
-    | fs2.
+    | f'1.~
+    | f2. ~ f4. ~ f8 e es
+    | fs1.
 
-    | c,8. b a g
-    | d'8. c b a
-    | c8. b a g
-    | d'8. c b a
+    | c,4. b a g
+    | d'4. c b a
+    | c4. b a g
+    | d'4. c b a
 
-    | c8. b a g
-    | d'8. c b a
-    | a2. ~
-    | a2. 
+    | c4. b a g
+    | d'4. c b a
+    | a1. ~
+    | a1. 
 
-    | b'2.
-    | c2.
+    | b'1.
+    | c1.
 
-    | d2.
-    | e8. d b8 a16 ~ a8 g16 ~
-    | g8. ~ g8 d16 e8 g16 ~ g8.
+    | d1.
+    | e4. d b4 a8 ~ a4 g8 ~
+    | g4. ~ g4 d8 e4 g8 ~ g4.
 }
 
 \score {
