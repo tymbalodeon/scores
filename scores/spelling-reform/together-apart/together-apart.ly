@@ -21,7 +21,7 @@ music = \relative c'' {
 
     \time 12/8
 
-    | d8 d d d d d d d d d4. \glissando
+    | d8 d d d d d d d d d4. 
 
     | R1. * 4
 
@@ -71,7 +71,7 @@ music = \relative c'' {
     | b2. ~ b4. ~ b8 b ( c ) (
 
     | b1. )
-    | b8 ( c ) ( b ) a ( b ) ( a ) ef4. r
+    | b8 ( c ) ( b ) a ( b ) ( a ) ds,4. r
 
     | R1.
     | r2. r4 <g' d'>8 ~ <g d'> r <g b>8
@@ -127,28 +127,84 @@ music = \relative c'' {
     | g8 ( a ) ( b ) ~ b2. ~ b8 a ( g ) (
     | a2. ) ~ a4. ~ a8 b ( c ) (
     | b1. )
-    | b8 ( c ) ( b ) a ( b ) ( a ) ef4. r
+    | b8 ( c ) ( b ) a ( b ) ( a ) ds,4. r8 g ^\markup \italic soli ( bf ) (
 
-    | R1. * 14
+     \key f \major
+    \bar "||"
+
+    | c8 ) d g ~ g4. ~ g4. ~ g8 g, ( bf ) (
+    | c8 ) d a' ~ a4. ~ a4. ~a4 \tuplet 3/2 { g,16 ( bf ) ( c ) }
+    | g'2. ~ g4. ~ g4 \tuplet 3/2 { g,16 ( bf ) ( c ) }
+    | c'4 ( a8 ) ( c4. ) ~ c ~ c8 g, ( bf ) (
+
+    | c8 ) d a' ~ a4. ~ a4. ~a4 \tuplet 3/2 { g,16 ( bf ) ( c ) }
+    | e4 ( f8 ) e4. ~ e2.
+    | e4 ( \tuplet 3/2 { f16 ) ( e ) ( d ) ( } e4. ) ~ e2.
+    | f8 e f g e g a e a b e, ( f )
+
+    \key c \major
+    \bar "||"
+
+    | a2. ~ a4. ~ a8 a ( b )
+    | g2. ~ g4. ~ g8 g ( a )
+    | e2. ~ e4. f4.
+    | d1.
+
+    | fs'8 b, ( a ) e' a, ( fs ) d' fs, ( e ) d' e, ( d )
+    | d1.
+
+    \key g \major
+    \bar "||"
 
     | R1. * 9
 
-    | R1. * 10
+    | g'4. \harmonic fs \harmonic e \harmonic d \harmonic
+    | b \harmonic a \harmonic g \harmonic fs4 \harmonic e8 ~ \harmonic
+    | e1. \harmonic
+    | d1. \harmonic
 
+    | g1. \harmonic ~
+    | g1. \harmonic
+
+    | R1. * 4
     | R1. * 12
 
     \time 9/8
 
-    | cs'4 cs8 r4 d8 d8 r4
+    | cs,4 cs8 r4 d8 d8 r4
     | e4 e8 r4 fs8 fs8 r4
     | g4 g8 r4 a8 a8 r4
     | b4 b8 r4 cs8 cs8 r4
 
     \time 12/8
 
-    | d8 d d d d d d d d d4. \glissando
+    | d8 d d d d d d d d d4.
 
-    | R1. * 4
+    | d,4. e fs g
+    | b,1.
+    | e1.
+    | e4. d b a
+
+    | d4. e fs g
+    | b,1.
+    | e1.
+    | fs1.
+
+    | g4. a b d
+    | e4. d bf a
+    | <e g>4 <e g> <e g> <e g> <e g> <e g>
+    | <e g>4 <e fs> <e e> <e d> <e b> a,
+
+    | g1. ~
+    | g1.
+
+    | b1. ^\markup "rit."
+    | c1.
+
+    | d1. ~
+    | d1.
+
+    \bar "|."
 }
 
 \score {
