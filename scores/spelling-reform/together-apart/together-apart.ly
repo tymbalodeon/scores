@@ -23,17 +23,18 @@ music = \relative c'' {
 
     | d8 d d d d d d d d d4. \glissando
 
-    | R1. * 3
+    | R1. * 4
 
     | r2. c,4 b8 ~ b4.
     | a8 ( g ) e ~ e4. ~ e2.
-
     | R1.
     | r2. r4. r8 e' ( es )
+
     | fs1.
 
     | R1. * 3
     | a2. a4. g4 e8 ~
+
     | e2. c4 b8 ~ b4.
     | a8 ( g ) e ~ e4. ~ e2.
 
@@ -66,9 +67,9 @@ music = \relative c'' {
 
     | \appoggiatura <d' g ~>8 <e g>4. <d g> b4 a8 ~ a4 g8 ~
     | g4. ~ g4 d8 ( e4 ) g8 ~ g4.
-
     | b1. ~
     | b2. ~ b4. ~ b8 b ( c ) (
+
     | b1. )
     | b8 ( c ) ( b ) a ( b ) ( a ) ef4. r
 
@@ -79,17 +80,17 @@ music = \relative c'' {
 
     | r2. c,4 b8 ~ b4.
     | a8 ( g ) e ~ e4. ~ e2.
-
     | R1.
     | r2. r4. r8 e' ( es )
-    | fs1.
-    | r4 <g d'>8 ~ <g d'> r4 <g b>8 r4 r4.
 
+    | fs1.
+
+    | r4 <g d'>8 ~ <g d'> r4 <g b>8 r4 r4.
     | <g d'>4 <g d'>8 <g d'>4 <g b>8 r4 <g d'>8 ~ <g d'>4.
     | gs1.
+    | r4. \appoggiatura <d ~ a'>8 <d b'>4. <d a'> <d g>4 <c e>8 ~
 
-    | R1.
-    | r2. c,4 b8 ~ b4.
+    | <c e>2. c4 b8 ~ b4.
     | a8 ( g ) e ~ e4. ~ e2.
 
     | f'1.~
@@ -123,10 +124,31 @@ music = \relative c'' {
     | \appoggiatura <d' g ~>8 <e g>4. <d g> b4 a8 ~ a4 g8 ~
     | g4. ~ g4 d8 ( e4 ) g8 ~ g4.
 
-    | b1. ~
-    | b2. ~ b4. ~ b8 b ( c ) (
+    | g8 ( a ) ( b ) ~ b2. ~ b8 a ( g ) (
+    | a2. ) ~ a4. ~ a8 b ( c ) (
     | b1. )
     | b8 ( c ) ( b ) a ( b ) ( a ) ef4. r
+
+    | R1. * 14
+
+    | R1. * 9
+
+    | R1. * 10
+
+    | R1. * 12
+
+    \time 9/8
+
+    | cs'4 cs8 r4 d8 d8 r4
+    | e4 e8 r4 fs8 fs8 r4
+    | g4 g8 r4 a8 a8 r4
+    | b4 b8 r4 cs8 cs8 r4
+
+    \time 12/8
+
+    | d8 d d d d d d d d d4. \glissando
+
+    | R1. * 4
 }
 
 \score {
