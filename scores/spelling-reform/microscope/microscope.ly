@@ -1,4 +1,4 @@
-\version "2.25.17"
+\version "2.25.19"
 
 \include "helpers/settings.ily"
 \include "helpers/bar-numbers-left.ily"
@@ -7,6 +7,7 @@
   title = "Microscope"
   subtitle = "Spelling Reform"
   composer = "Dan Wisniewski"
+  arranger = "Andrew Ciampa, guitar"
 }
 
 music = \relative g'' {

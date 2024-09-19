@@ -1,4 +1,4 @@
-\version "2.25.17"
+\version "2.25.19"
 
 \include "helpers/settings.ily"
 \include "helpers/bar-numbers-left.ily"
@@ -7,7 +7,7 @@
     title = "Together Apart"
     subtitle = "Spelling Reform"
     composer = "Dan Wisniewski"
-    arranger = ""
+    arranger = "Andrew Ciampa, guitar"
 }
 
 music = \relative c'' {
@@ -139,7 +139,7 @@ music = \relative c'' {
 
     | c8 ) d a' ~ a4. ~ a4. ~a4 \tuplet 3/2 { g,16 ( bf ) ( c ) }
     | e4 ( f8 ) e4. ~ e2.
-    | e4 ( \tuplet 3/2 { f16 ) ( e ) ( d ) ( } e4. ) ~ e2.
+    | b'4 ( \tuplet 3/2 { c16 ) ( b ) ( a ) ( } b4. ) ~ b2.
     | f8 e f g e g a e a b e, ( f )
 
     \key c \major

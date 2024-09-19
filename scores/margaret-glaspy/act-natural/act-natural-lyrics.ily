@@ -1,3 +1,5 @@
+\version "2.25.19"
+
 verse = \lyricmode {
   Verse one
 }

@@ -1,4 +1,4 @@
-\version "2.25.17"
+\version "2.25.19"
 
 changesIntro = \chordmode {
   | d2:maj7 s8

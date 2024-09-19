@@ -1,4 +1,4 @@
-\version "2.25.17"
+\version "2.25.19"
 
 aCollectionOfMemorialShirtsChanges = \chords {
   \repeat unfold 2 {

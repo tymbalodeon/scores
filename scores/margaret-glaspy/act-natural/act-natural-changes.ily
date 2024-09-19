@@ -1,3 +1,5 @@
+\version "2.25.19"
+
 riff = \chordmode {
   | s1 * 2
 }

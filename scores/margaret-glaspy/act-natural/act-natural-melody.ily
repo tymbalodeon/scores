@@ -1,3 +1,5 @@
+\version "2.25.19"
+
 riff = \relative e {
   | e8 e e' e, ds'16 ( e ds e ds8 ) cs ~
   | cs e, b' e, gs16 ( a gs a gs8 ) fs

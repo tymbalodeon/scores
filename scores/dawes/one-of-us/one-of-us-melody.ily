@@ -1,4 +1,4 @@
-\version "2.25.17"
+\version "2.25.19"
 melody_verse = \relative c' {
   e16 e8 e16 e8 gs16 gs~ gs gs gs8 gs a |
   b16 b8 b16 b8 e16 e~ e e ds8 cs b |

@@ -1,3 +1,5 @@
+\version "2.25.19"
+
 key_and_time = {
   \key c \major
   \time 4/4
