@@ -161,7 +161,7 @@ music = \relative d'' {
     | <fs' fs'>8 <fs fs'> <fs fs'> <fs fs'>
     | <fs fs'>8 <fs fs'> <fs fs'> <fs fs'>
     | <d d'>8 <d d'> <d d'> <d d'>
-    | <d d'>8 <d d'> <d d'> <b b'>
+    | <d d'>8 <b b'> <b b'> <b b'>16 <b b'>
 
     | <b b'>8 <b b'> <b b'> <b b'>
     | <b b'>8 <b b'> <b b'> <b b'>
@@ -170,8 +170,8 @@ music = \relative d'' {
 
     | <fs' fs'>8 <fs fs'> <fs fs'> <fs fs'>
     | <fs fs'>8 <fs fs'> <fs fs'> <fs fs'>
-    | <d d'>8 <d d'> <d d'> <d d'>
-    | <d d'>8 <d d'> <d d'> <b b'>
+    | <d d'>8 <d d'> <d d'> <d d'>16 <d d'>
+    | <d d'>8 <b b'> <b b'> <b b'>16 <b b'>
 
     | <b b'>8 <b b'> <b b'> <b b'>
     | <b b'>8 <b b'> <b b'> <b b'>
@@ -179,9 +179,31 @@ music = \relative d'' {
     | <a a'>8 <a a'> <a a'> <a a'>
 
     | <fs' fs'>2 ~
-    | <fs fs'>2 
+    | <fs fs'>2 \fermata
 
-    | R2 * 8
+    | R2 * 2
+
+    | \new CueVoice {
+        | r8 d4 b8 ~
+        | b8 a4 g8 ~
+        | g8 g'4 fs8 (
+        | e8 ) e4 g,8 ~
+
+        | g8 d'4 <b ds>8 ~
+        | <b ds>8 <a ds>4 <g e'>8 ~
+        | <g e'>8 <b g'>4 <a ~ fs'>8 (
+        | <a e'>8 ) <a e'>4 g8 ~
+
+        | g8 d'4 b8 ~
+        | b8 a4 g8 ~
+        | g8 g'4 fs8 (
+        | e8 ) e4 g,8 ~
+
+        | g8 d'4 <b ds>8 ~
+        | <b ds>8 <a ds>4 <g e'>8
+    }
+
+    | R2 * 2
 
     \bar "|."
 }
