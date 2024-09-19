@@ -10,29 +10,30 @@
     arranger = "Andrew Ciampa, guitar"
 }
 
-music = \relative d''' {
+music = \relative d'' {
     \key g \major
     \time 2/4
 
-    | r8 d4 b8 ~
-    | b a4 g8 ~
-    | g g4 fs8 ~
-    | fs e4 d8 ~
+    \repeat volta 2 {
+        | << r8 \\ \new CueVoice { \voiceThree \stemDown \parenthesize b8 \repeatTie } >> d'4 b8 ~
+        | b a4 g8 ~
+        | g g4 fs8 ~
+        | fs e4 d8 ~
 
-    | d8 d'4 b8 ~
-    | b a4 g8 ~
-    | g e4 d8 ~
-    | d e4 b8 ~
+        | d8 d'4 b8 ~
+        | b a4 g8 ~
+        | g e4 d8 ~
 
-    | b8 d'4 b8 ~
-    | b a4 g8 ~
-    | g g4 fs8 ~
-    | fs e4 d8 ~
+        \alternative {
+            \volta 1 {
+                | d e4 b8 \laissezVibrer
+            }
 
-    | d8 d'4 b8 ~
-    | b a4 g8 ~
-    | g e4 d8 ~
-    | d e4 ds8 ~
+            \volta 2 {
+                | d \repeatTie e4 ds8 ~
+            }
+        }
+    }
 
     | ds2 ~
     | ds2 ~
@@ -79,25 +80,26 @@ music = \relative d''' {
     | <f f'>2 ~
     | <f f'>2
 
-    | r8 d''4 b8 ~
-    | b a4 g8 ~
-    | g g4 fs8 ~
-    | fs e4 d8 ~
+    \repeat volta 2 {
+        | << r8 \\ \new CueVoice { \voiceThree \stemDown \parenthesize b8 \repeatTie } >> d'4 b8 ~
+        | b a4 g8 ~
+        | g g4 fs8 ~
+        | fs e4 d8 ~
 
-    | d8 d'4 b8 ~
-    | b a4 g8 ~
-    | g e4 d8 ~
-    | d e4 b8 ~
+        | d8 d'4 b8 ~
+        | b a4 g8 ~
+        | g e4 d8 ~
 
-    | b8 d'4 b8 ~
-    | b a4 g8 ~
-    | g g4 fs8 ~
-    | fs e4 d8 ~
+        \alternative {
+            \volta 1 {
+                | d e4 b8 \laissezVibrer
+            }
 
-    | d8 d'4 b8 ~
-    | b a4 g8 ~
-    | g e4 d8 ~
-    | d e4 ds8 ~
+            \volta 2 {
+                | d \repeatTie e4 ds8 ~
+            }
+        }
+    }
 
     | ds2 ~
     | ds2 ~
@@ -170,6 +172,18 @@ music = \relative d''' {
     | <fs fs'>8 <fs fs'> <fs fs'> <fs fs'>
     | <d d'>8 <d d'> <d d'> <d d'>
     | <d d'>8 <d d'> <d d'> <b b'>
+
+    | <b b'>8 <b b'> <b b'> <b b'>
+    | <b b'>8 <b b'> <b b'> <b b'>
+    | <a a'>8 <a a'> <a a'> <a a'>
+    | <a a'>8 <a a'> <a a'> <a a'>
+
+    | <fs' fs'>2 ~
+    | <fs fs'>2 
+
+    | R2 * 8
+
+    \bar "|."
 }
 
 \score {
