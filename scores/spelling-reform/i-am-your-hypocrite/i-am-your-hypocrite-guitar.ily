@@ -1,6 +1,6 @@
 \version "2.25.19"
 
-IAmYourHypocrite = \relative g'' {
+iAmYourHypocrite = \relative g'' {
     \key g \major
 
     | r4 g2 g4 ~
