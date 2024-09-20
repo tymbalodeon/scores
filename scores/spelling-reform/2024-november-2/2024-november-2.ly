@@ -36,8 +36,11 @@
         piece = "I Am Your Hypocrite"
     }
 
-    \compressMMRests
-    \iAmYourHypocrite
+    {
+        \compressMMRests
+        \numericTimeSignature
+        \iAmYourHypocrite
+    }
 }
 
 \tocItem \markup "Hum Along"
@@ -47,8 +50,11 @@
         piece = "Hum Along"
     }
 
-    \compressMMRests
-    \humAlong
+    {
+        \compressMMRests
+        \numericTimeSignature
+        \humAlong
+    }
 }
 
 \tocItem \markup "The Grieving Game"
@@ -58,8 +64,11 @@
         piece = "The Grieving Game"
     }
 
-    \compressMMRests
-    \theGrievingGame
+    {
+        \compressMMRests
+        \numericTimeSignature
+        \theGrievingGame
+    }
 }
 
 \tocItem \markup "Circles"
@@ -69,8 +78,11 @@
         piece = "Circles"
     }
 
-    \compressMMRests
-    \circles
+    {
+        \compressMMRests
+        \numericTimeSignature
+        \circles
+    }
 }
 
 \tocItem \markup "The Organs of Enlightenment"
@@ -80,8 +92,11 @@
         piece = "The Organs of Enlightenment"
     }
 
-    \compressMMRests
-    \theOrgansOfEnlightenment
+    {
+        \compressMMRests
+        \numericTimeSignature
+        \theOrgansOfEnlightenment
+    }
 }
 
 \tocItem \markup "Meet Me in the Atmosphere"
@@ -91,8 +106,11 @@
         piece = "Meet Me in the Atmosphere"
     }
 
-    \compressMMRests
-    \meetMeInTheAtmosphere
+    {
+        \compressMMRests
+        \numericTimeSignature
+        \meetMeInTheAtmosphere
+    }
 }
 
 \tocItem \markup "Microscope"
@@ -102,8 +120,11 @@
         piece = "Microscope"
     }
 
-    \compressMMRests
-    \microscope
+    {
+        \compressMMRests
+        \numericTimeSignature
+        \microscope
+    }
 }
 
 \tocItem \markup "Together Apart"
@@ -113,8 +134,11 @@
         piece = "Together Apart"
     }
 
-    \compressMMRests
-    \togetherApart
+    {
+        \compressMMRests
+        \numericTimeSignature
+        \togetherApart
+    }
 }
 
 \tocItem \markup "The Real Giving Up"
@@ -124,8 +148,11 @@
         piece = "The Real Giving Up"
     }
 
-    \compressMMRests
-    \theRealGivingUp
+    {
+        \compressMMRests
+        \numericTimeSignature
+        \theRealGivingUp
+    }
 }
 
 \tocItem \markup "Fake Conversations"
@@ -135,6 +162,9 @@
         piece = "Fake Conversations"
     }
 
-    \compressMMRests
-    \fakeConversations
+    {
+        \compressMMRests
+        \numericTimeSignature
+        \fakeConversations
+    }
 }
