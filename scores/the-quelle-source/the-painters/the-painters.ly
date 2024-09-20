@@ -56,6 +56,41 @@ music = \relative d'' {
     | g1
     | a,8 ( fs ) a ( fs ) g b ( c ) g' ~
     | g1
+
+    | a,8 ( fs ) a ( fs ) g b ( c ) g' ~
+    | g1
+    | a,8 ( fs ) a ( fs ) g b ( c ) g' ~
+    | g1
+
+    | r4 g, g a
+    | a4 b b d
+    | r4 g, g a 
+    | b4 c8 b ~ b a g4
+    
+    | r4 g g a
+    | a4 b b d
+    | r4 g, g a 
+    | b4 c8 b ~ b a g4
+
+    | r4 c ~ c8 b4.
+    | d4. g,8 ~ g2
+    | r8 d c' ( b ) c d, g ( a )
+    | d8 d, g b ( c ) ( b ) a ( g )
+
+    | r4 c ~ c8 b4.
+    | d4. g,8 ~ g2
+    | r4 c ~ c8 b4.
+    | d4. d8 ~ d2
+    
+    | R1 * 8
+
+    | R1 * 8
+    | R1 * 8
+
+    | R1 * 8
+    | R1
+
+    \bar "|."
 }
 
 \score {
