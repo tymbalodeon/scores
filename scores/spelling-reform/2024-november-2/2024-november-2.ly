@@ -36,8 +36,7 @@
         piece = "I Am Your Hypocrite"
     }
 
-    {
-        \compressMMRests
+    \compressMMRests {
         \numericTimeSignature
         \iAmYourHypocrite
     }
@@ -50,8 +49,7 @@
         piece = "Hum Along"
     }
 
-    {
-        \compressMMRests
+    \compressMMRests {
         \numericTimeSignature
         \humAlong
     }
@@ -64,8 +62,7 @@
         piece = "The Grieving Game"
     }
 
-    {
-        \compressMMRests
+    \compressMMRests {
         \numericTimeSignature
         \theGrievingGame
     }
@@ -78,8 +75,7 @@
         piece = "Circles"
     }
 
-    {
-        \compressMMRests
+    \compressMMRests {
         \numericTimeSignature
         \circles
     }
@@ -92,8 +88,7 @@
         piece = "The Organs of Enlightenment"
     }
 
-    {
-        \compressMMRests
+    \compressMMRests {
         \numericTimeSignature
         \theOrgansOfEnlightenment
     }
@@ -106,8 +101,7 @@
         piece = "Meet Me in the Atmosphere"
     }
 
-    {
-        \compressMMRests
+    \compressMMRests {
         \numericTimeSignature
         \meetMeInTheAtmosphere
     }
@@ -120,8 +114,7 @@
         piece = "Microscope"
     }
 
-    {
-        \compressMMRests
+    \compressMMRests {
         \numericTimeSignature
         \microscope
     }
@@ -134,8 +127,7 @@
         piece = "Together Apart"
     }
 
-    {
-        \compressMMRests
+    \compressMMRests {
         \numericTimeSignature
         \togetherApart
     }
@@ -148,8 +140,7 @@
         piece = "The Real Giving Up"
     }
 
-    {
-        \compressMMRests
+    \compressMMRests {
         \numericTimeSignature
         \theRealGivingUp
     }
@@ -162,8 +153,7 @@
         piece = "Fake Conversations"
     }
 
-    {
-        \compressMMRests
+    \compressMMRests {
         \numericTimeSignature
         \fakeConversations
     }
