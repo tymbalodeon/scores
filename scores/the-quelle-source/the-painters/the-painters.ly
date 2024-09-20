@@ -6,8 +6,7 @@
 \header {
     title = "The Painters"
     subtitle = "The Quelle Source"
-    composer = "Kevin Ryan"
-    arranger = ""
+    composer = "Dan Wisniewski"
 }
 
 music = \relative c'' {
