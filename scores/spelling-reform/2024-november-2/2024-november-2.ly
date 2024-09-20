@@ -10,6 +10,7 @@
 \include "scores/spelling-reform/the-organs-of-enlightenment/the-organs-of-enlightenment-guitar.ily"
 \include "scores/spelling-reform/meet-me-in-the-atmosphere/meet-me-in-the-atmosphere-guitar.ily"
 \include "scores/spelling-reform/microscope/microscope-guitar.ily"
+\include "scores/the-quelle-source/the-painters/the-painters-guitar.ily"
 \include "scores/spelling-reform/together-apart/together-apart-guitar.ily"
 \include "scores/spelling-reform/the-real-giving-up/the-real-giving-up-guitar.ily"
 \include "scores/spelling-reform/fake-conversations/fake-conversations-guitar.ily"
@@ -117,6 +118,19 @@
     \compressMMRests {
         \numericTimeSignature
         \microscope
+    }
+}
+
+\tocItem \markup "The Painters"
+
+\score {
+    \header {
+        piece = "The Painters"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \thePainters
     }
 }
 
