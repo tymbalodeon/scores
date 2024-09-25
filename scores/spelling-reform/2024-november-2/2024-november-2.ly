@@ -18,6 +18,7 @@
 \header {
     title = "November 2, 2024"
     subtitle = "Spelling Reform"
+    composer = "Dan Wisniewski"
     instrument = "Guitar"
 }
 
@@ -119,6 +120,7 @@
 \score {
     \header {
         piece = "Microscope"
+        opus = "Andrew Ciampa, guitar"
     }
 
     \compressMMRests {
@@ -152,6 +154,7 @@
 \score {
     \header {
         piece = "Together Apart"
+        opus = "Andrew Ciampa, guitar"
     }
 
     \compressMMRests {
@@ -178,6 +181,7 @@
 \score {
     \header {
         piece = "Fake Conversations"
+        opus = "Andrew Ciampa, guitar"
     }
 
     \compressMMRests {
