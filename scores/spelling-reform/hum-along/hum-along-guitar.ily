@@ -123,7 +123,11 @@ humAlong = \relative a {
     | cs8 gs d' ( cs ) gs d' ( cs ) gs
     | d'8 ( cs ) gs d' ( cs ) gs cs ( d )
 
+
     | R1 * 2
+
+    \tag #'album \pageBreak
+
     | r4 ^\markup \italic synth a' r a
     | r4 a r a
 

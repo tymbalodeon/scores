@@ -22,6 +22,7 @@
         \numericTimeSignature
     } {
         \compressMMRests
+	    \removeWithTag #'album
         \thePainters
     }
 }

@@ -43,6 +43,8 @@
     }
 }
 
+\pageBreak
+
 \tocItem \markup "Hum Along"
 
 \score {
@@ -82,6 +84,8 @@
     }
 }
 
+\pageBreak
+
 \tocItem \markup "The Organs of Enlightenment"
 
 \score {
@@ -108,6 +112,8 @@
     }
 }
 
+\pageBreak
+
 \tocItem \markup "Microscope"
 
 \score {
@@ -128,8 +134,15 @@
         piece = "The Painters"
     }
 
-    \compressMMRests {
+    \new Staff \with {
+          instrumentName = \markup {
+            \center-column {
+              \tiny \line { "Capo III"  }
+            }
+        }
+    } {
         \numericTimeSignature
+        \compressMMRests
         \thePainters
     }
 }

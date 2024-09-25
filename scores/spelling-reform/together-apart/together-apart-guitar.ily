@@ -45,6 +45,8 @@ togetherApart = \relative c'' {
     | b'1.
     | c1.
 
+	\tag #'album \pageBreak
+
     | d1.
     | \appoggiatura <d g ~>8 <e g>4. <d g> b4 a8 ~ a4 g8 ~
     | g4. ~ g4 d8 ( e4 ) g8 ~ g4.
@@ -117,6 +119,7 @@ togetherApart = \relative c'' {
     | g8 ( a ) ( b ) ~ b2. ~ b8 a ( g ) (
     | a2. ) ~ a4. ~ a8 b ( c ) (
     | b1. )
+
     | b8 ( c ) ( b ) a ( b ) ( a ) ds,4. r8 g ^\markup \italic soli ( bf ) (
 
      \key f \major
