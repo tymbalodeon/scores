@@ -102,4 +102,20 @@ thereIsNoMoreFuture = \relative c' {
 
     | cs,8 a'16 ( b ) e4 ~ e8 a,16 ( b ) cs8 a
     | fs,4 <fs d' a'> 4 4 4
+
+    \time 2/4
+
+    | <cs' a'>8 8 8 8
+
+    \time 4/4
+
+    | <fs, d' a'>4 8. 16 4 16 8 16
+
+    \time 2/4
+
+    | <cs' a'>8 8 8 8
+
+    \time 4/4
+
+    | <fs, d' a'>4 8. 16 4 16 16 16 16
 }
