@@ -1,36 +1,40 @@
 \version "2.25.19"
 
 iAmYourHypocrite = \relative g'' {
+    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+
     \key g \major
 
-    | r4 g2 g4 ~
-    | g2 g ~
-    | g4 g2.
+    | R1
+
+    | g2. \espressivo ^\markup \italic "imitate synth swell" g4 \espressivo ~
+    | g2 g \espressivo ~ 
+    | g4 g2. ^\markup \italic sim.
     | g2. g4 ~
 
-    \sectionLabel Verse
+    \mark \default
 
-    | g2 g ~
-    | g4 g2.
-    | g2. g4 ~
-    | g2 g ~
-
-    | g4 g2.
-    | g2. g4 ~
-    | g2 g ~
-    | g4 g2.
-
-    | g2. g4 ~
-    | g2 g ~
-    | g4 g2.
-    | g2. g4 ~
-
-    | g2 g ~
+    | g2 _\markup \center-align \italic "\"Unlike the sun...\"" g ~
     | g4 g2.
     | g2. g4 ~
     | g2 g ~
 
-    \sectionLabel Instrumental
+    | g4 g2.
+    | g2. g4 ~
+    | g2 g ~
+    | g4 g2.
+
+    | g2. g4 ~
+    | g2 g ~
+    | g4 g2.
+    | g2. g4 ~
+
+    | g2 g ~
+    | g4 g2.
+    | g2. g4 ~
+    | g2 g ~
+
+    \mark \default
 
     | g2 g ~
     | g4 g2.
@@ -43,6 +47,16 @@ iAmYourHypocrite = \relative g'' {
     | g4 g2.
 
     | R1 * 16
+    % | R1 * 8
+    % | \new CueVoice \relative d {
+    %     \cueClef bass
+
+    %     | d8 ^"bass" b a g ~ g2
+    %     | b8 a g b ~ b2
+
+    %     \cueClefUnset
+    % }
+    % | R1 * 6
 
     \key e \major
     \bar "||"
@@ -61,7 +75,7 @@ iAmYourHypocrite = \relative g'' {
     \key cs \major
     \bar "||"
 
-    | cs,,4. ds8 ~ ds4 es
+    | cs,,4. ^\markup \italic distortion ds8 ~ ds4 es
     | b4. fs'8 ~ fs4 es
     | cs4. bs?8 ~ bs4 cs
     | ds4. es8 ~ es2
@@ -93,7 +107,7 @@ iAmYourHypocrite = \relative g'' {
     \key cs \major
     \bar "||"
 
-    | cs'4. ds8 ~ ds4 es
+    | cs'4. ^\markup \italic distortion ds8 ~ ds4 es
     | b4. fs'8 ~ fs4 es
     | cs4. bs?8 ~ bs4 cs
     | ds4. es8 ~ es2

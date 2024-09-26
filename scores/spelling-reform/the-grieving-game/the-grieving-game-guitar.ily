@@ -14,8 +14,21 @@ theGrievingGame = \relative c'' {
 
         \time 4/4
 
-        | c8 c c c c c c c
-        | c8 c c c c c c4
+        | c8 -> c c c c c c c
+        | c8 c c c << { 
+            \new CueVoice = "lyrics" \with { 
+                \consists "Pitch_squash_engraver" 
+            } { 
+                \improvisationOn c c c4 
+            } 
+        } { 
+            \new Lyrics \lyricsto "lyrics" { 
+                \lyricmode {
+                    \override LyricText #'font-shape = #'italic
+                     No I won't
+                } 
+            } 
+        }>>
     }
 
     \time 2/4
@@ -43,7 +56,7 @@ theGrievingGame = \relative c'' {
     | r8 af' b, c ~ c2
 
     | R1 
-    | r2. af,4 (
+    | r2. af,4 ^\markup \italic "slide, distortion" (
     | bf1 ) ~
     | bf2 ef ( 
 
@@ -55,18 +68,18 @@ theGrievingGame = \relative c'' {
     | f'1 ) ~
     | f2. f4 (
     | c1 ) ~
-    | c2 ef (
+    | c2 ( ef ) (
 
-    | bf1 ~
+    | bf1 ) ~
     | bf1
 
     \time 3/4
 
-    | <af, ef' af c ef af>4 r8 <ef' bf' ef g bf>8 ~ <ef bf' ef g bf> r 
+    | <af, ef' af c ef af>4 ^\markup \italic ord. ^\markup \fret-diagram-terse "4;6;6;5;4;4;" r8 <ef' bf' ef g bf>8 ^\markup \fret-diagram-terse "x;6;8;8;8;6;"  ~ <ef bf' ef g bf> r 
 
     \time 4/4
 
-    | <f c' f af c>4 r8 <df af' df f af>8 ~ <df af' df f af>2
+    | <f c' f af c>4 ^\markup \fret-diagram-terse "x;8;10;10;9;8;" r8 <df af' df f af>8 ^\markup \fret-diagram-terse "x;4;6;6;6;4;" ~ <df af' df f af>2
 
     \time 3/4
 
@@ -86,11 +99,11 @@ theGrievingGame = \relative c'' {
 
     \time 4/4
 
-    | <df af' df f af>8 c c c c c c c
+    | <df af' df f af>8 8 8 8 8 8 8 8
 
     \time 3/4
 
-    | c8 c c c c4
+    | 8 8 8 8 4
 
     \time 2/4
 
@@ -127,7 +140,7 @@ theGrievingGame = \relative c'' {
 
     | R1 * 7
 
-    \new Voice \with {
+    \new CueVoice \with {
         \consists "Pitch_squash_engraver"
     } {
         \improvisationOn

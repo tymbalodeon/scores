@@ -1,6 +1,8 @@
 \version "2.25.19"
 
 humAlong = \relative a {
+    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+
     \key a \major
     \time 4/4
 
@@ -15,11 +17,11 @@ humAlong = \relative a {
     >>
 
     \repeat volta 2 {
-        \sectionLabel Instrumental
+        \mark \default
 
         | R1 * 8
 
-        \sectionLabel Verse
+        \mark \default
 
         | R1 * 8 
     }
@@ -29,23 +31,24 @@ humAlong = \relative a {
     | a1 ~
     | a1
 
-    | r2. r8 fs' ^\markup \italic synth ~
+    | r2. r8 fs' ^\markup \italic "imitate synth" ~
     | fs8 gs4 a8 ~ a cs4 e8 ~
 
     | e1 ~
     | e1
     | R1 * 6
 
-    | e,16 ^\markup \italic guitar ( fs ) cs'8 ~ cs e,16 ( fs ) a4 e16 ( fs ) cs'8 ~
+    | e,16 ^\markup \italic ord. ( fs ) cs'8 ~ cs e,16 ( fs ) a4 e16 ( fs ) cs'8 ~
     | cs8 e,16 ( fs ) a4 e16 ( fs ) cs'8 ~ cs e,16 ( fs )
     | << { \slurUp a8 ( gs ) \slurNeutral } \new CueVoice { \voiceTwo { \slurDown e8 [ ( ds ) ] \slurNeutral } } >> r fs r e r cs ~
     | cs2 cs8 ( \glissando e ) r a, ~
 
     | a1 ~ 
     | a1
-    | R1 * 2
+    | R1 
+    | r2.. a''8 ^\markup \italic distortion ~
 
-    | a''2.. e8 ~
+    | a2.. e8 ~
     | e2.. a,8 ~
     | a2 ~ a8 cs4 a8 ~
     | a2 b16 ( cs ) e4 a8 ~
@@ -68,7 +71,7 @@ humAlong = \relative a {
     | R1 * 8
 
     << {
-        | a'4 ^\markup \italic synth cs b8 a4 e'8 ~
+        | a'4 ^\markup \italic "imitate synth" cs b8 a4 e'8 ~
         | e4 a, cs8 b4 e8 ~
         | e4 a, cs8 b a e' ~
         | e4 a, cs8 b4 e8 ~
@@ -87,7 +90,7 @@ humAlong = \relative a {
         | e4 a, cs8 r4 a8 ~
     } >>
 
-    | fs'4. ^\markup \italic guitar e8 ~ e2
+    | fs'4. ^\markup \italic ord. e8 ~ e2
     | d8 cs ( b ) a ~ a2 ~
     | a1 ~
     | a1
@@ -106,7 +109,7 @@ humAlong = \relative a {
         | cs )
     } \\ {
         | s2
-        | d8 ^\markup \italic synth ( cs ) \slurUp a d ( cs ) a d ( cs )
+        | d8 ^\markup \italic "imitate synth" ( cs ) \slurUp a d ( cs ) a d ( cs )
     } >>
 
     | a8 d ( cs ) a d ( cs ) a d
@@ -128,7 +131,7 @@ humAlong = \relative a {
 
     \tag #'album \pageBreak
 
-    | r4 ^\markup \italic synth a' r a
+    | r4 ^\markup \italic "(imitate synth)" a' r a
     | r4 a r a
 
     \repeat volta 2 {

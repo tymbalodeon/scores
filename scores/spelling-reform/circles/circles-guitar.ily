@@ -14,11 +14,15 @@ circles = \relative c'' {
     | R1 * 9
     | R1 * 8
 
-    | \new CueVoice \with { 
-        \consists "Pitch_squash_engraver" 
+    | << {
+        s4 s2. ^\markup \italic G.P. 
+    } {
+        \new CueVoice \with { 
+            \consists "Pitch_squash_engraver" 
         } { 
-            \improvisationOn c8 -. r r2. ^\markup \italic G.P. 
+            \improvisationOn c8 -. r r2.
         }
+    } >>
 
     | R1 * 5
     | r2 ds8. ( cs16 ) ~ cs as ( gs8 )
@@ -125,7 +129,7 @@ circles = \relative c'' {
 
             s8 r4. c8 -> ~ c2 \fermata
         } \\ { 
-        cs8 ~ cs1 \fermata 
+        \stemUp cs8 ~ cs1 \fermata 
     } >>
 
     \bar "|."
