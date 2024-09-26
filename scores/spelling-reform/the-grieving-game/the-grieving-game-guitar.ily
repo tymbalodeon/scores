@@ -28,7 +28,7 @@ theGrievingGame = \relative c'' {
                      No I won't
                 } 
             } 
-        }>>
+        } >>
     }
 
     \time 2/4
