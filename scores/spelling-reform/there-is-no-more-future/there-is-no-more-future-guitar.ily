@@ -26,7 +26,7 @@ thereIsNoMoreFuture = \relative c' {
 
     \time 9/8
 
-    | R8 * 9
+    | R8 * 9 
 
     \time 6/8
 
@@ -34,71 +34,72 @@ thereIsNoMoreFuture = \relative c' {
 
     \time 9/8
 
-    | R8 * 9
+    | R8 * 9 ^\markup \italic "G.P."
 
-    << { 
-        \time 3/8
+    \time 3/8
 
-        | R4. 
+    | R4. ^\markup \italic "\"Whatever could be...\""
 
-        \time 6/8
+    \time 6/8
 
-        | R2. 
-    } { 
-        \new Voice = "lyrics" { 
-            \hideNotes 
+    | R2. 
 
-            \time 3/8
+    % << { 
+    %     \time 3/8
 
-            c16 c8. c8
+    %     | R4. 
 
-            \time 6/8
+    %     \time 6/8
 
-            c4. c
+    %     | R2. 
+    % }  
 
-            \unHideNotes 
-        } 
-    } { 
-        \new Lyrics \lyricsto "lyrics" { 
-            \lyricmode {
-                \override LyricText.font-shape = #'italic
+    % \new Voice = "melody" { 
+    %     \hideNotes 
 
-                 "\"What" -- e -- ver could "be...\""
-            } 
-        } 
-    } >>
+    %     \time 3/8
+
+    %     c16 c8. c8
+
+    %     \time 6/8
+
+    %     c4. c
+
+    %     \unHideNotes 
+    % } 
+
+    % \new Lyrics = "lyrics" \with {
+    %     \override VerticalAxisGroup.staff-affinity = #DOWN
+    % } 
+
+    % \context Lyrics = "lyrics" {
+    %     \lyricsto "melody" { 
+    %         \override LyricText.font-shape = #'italic
+
+    %          "\"What" -- e -- ver could "be...\""
+    %     }
+    % } 
+    %  >>
 
     | R2. ^\markup \italic G.P.
 
     \time 4/4
 
-    | cs4 a'8 ( b ) e2 ~
-    | e4 a,8 ( b ) cs4 a ~
-    | a1 ~ 
-    | a1
+    | cs8 a'16 ( b ) e4 ~ e8 a,16 ( b ) cs8 a ~
+    | a1 
 
-    | cs,4 a'8 ( b ) e2 ~
-    | e4 a,8 ( b ) cs4 e ~
-    | e1 ~ 
-    | e1
+    | cs,8 a'16 ( b ) e4 ~ e8 a,16 ( b ) cs8 e ~
+    | e1 
 
-    | cs,4 a'8 ( b ) e2 ~
-    | e4 a,8 ( b ) fs'4 cs ~
-    | cs1 ~ 
+    | cs,8 a'16 ( b ) e4 ~ e8 a,16 ( b ) fs'8 cs ~
+    | cs1 
+
+    | cs,8 a'16 ( b ) e4 ~ e8 cs16 ( b8. ) a8
+    | fs1 
+
+    | cs8 a'16 ( b ) e4 ~ e4 a16. gs fs16
     | cs1
 
-    | cs,4 a'8 ( b ) e2 ~
-    | e4 cs8 ( b ) ~ b4 a
-    | fs1 ~ 
-    | fs1
-
-    | cs4 a'8 ( b ) e2 ~
-    | e2 a8. gs fs8
-    | cs1 ~ 
-    | cs1
-
-    | cs,4 a'8 ( b ) e2 ~
-    | e4 a,8 ( b ) cs4 a
-    | fs,2 <fs d' a'>
-    | 2 2
+    | cs,8 a'16 ( b ) e4 ~ e8 a,16 ( b ) cs8 a
+    | fs,4 <fs d' a'> 4 4 4
 }
