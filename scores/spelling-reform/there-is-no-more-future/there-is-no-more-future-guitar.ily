@@ -44,43 +44,6 @@ thereIsNoMoreFuture = \relative c' {
 
     | R2. 
 
-    % << { 
-    %     \time 3/8
-
-    %     | R4. 
-
-    %     \time 6/8
-
-    %     | R2. 
-    % }  
-
-    % \new Voice = "melody" { 
-    %     \hideNotes 
-
-    %     \time 3/8
-
-    %     c16 c8. c8
-
-    %     \time 6/8
-
-    %     c4. c
-
-    %     \unHideNotes 
-    % } 
-
-    % \new Lyrics = "lyrics" \with {
-    %     \override VerticalAxisGroup.staff-affinity = #DOWN
-    % } 
-
-    % \context Lyrics = "lyrics" {
-    %     \lyricsto "melody" { 
-    %         \override LyricText.font-shape = #'italic
-
-    %          "\"What" -- e -- ver could "be...\""
-    %     }
-    % } 
-    %  >>
-
     | R2. ^\markup \italic G.P.
 
     \time 4/4
@@ -101,21 +64,73 @@ thereIsNoMoreFuture = \relative c' {
     | cs1
 
     | cs,8 a'16 ( b ) e4 ~ e8 a,16 ( b ) cs8 a
-    | fs,4 <fs d' a'> 4 4 4
+    | fs,4 <fs d' a'> ^\markup \fret-diagram-terse "2;x;o;2;x;x;" 4 4 4
 
-    \time 2/4
+    \repeat volta 2 {
+        \time 2/4
 
-    | <cs' a'>8 8 8 8
+        | <cs' a'>4 ^\markup \fret-diagram-terse "x;4;x;2;x;x;" ^\markup \italic "\"There is no more future...\"" 4
 
-    \time 4/4
+        \time 4/4
 
-    | <fs, d' a'>4 8. 16 4 16 8 16
+        | <fs, d' a'>4 8. 16 4 r16 <fs d' a'>16 16 r
 
-    \time 2/4
+        \time 2/4
 
-    | <cs' a'>8 8 8 8
+        | <cs' a'>4 4
 
-    \time 4/4
+        \time 4/4
 
-    | <fs, d' a'>4 8. 16 4 16 16 16 16
+        | <fs, d' a'>4 8. 16 4 r16 <fs d' a'>16 16 r
+
+        \time 2/4
+
+        | <cs' a'>4 ^\markup \italic "\"Aren't I elated?...\"" 4
+
+        \time 4/4
+
+        | <fs, d' a'>4 8. 16 4 r16 <fs d' a'>16 16 r
+
+        \alternative {
+            \volta 1 {
+                \time 2/4
+
+                | <cs' a'>4 4
+
+                \time 4/4
+
+                | <fs, d' a'>4 8. 16 4 r16 <fs d' a'>16 16 r
+            }
+
+            \volta 2 {
+                \time 2/4
+
+                | <cs' gs' cs e gs>4 ^\markup \fret-diagram-terse "x;4;6;6;5;4;" ^\markup \italic (solo) 4
+
+                \time 4/4
+
+                | <fs, cs' fs a cs fs>4 ^\markup \fret-diagram-terse "2;4;4;2;2;2;" 8. 16 4 r16 <fs cs' fs a cs fs>16 16 r
+            }
+        }
+    }
+
+    \repeat volta 2 {
+        \time 2/4
+
+        | <cs' gs' cs e gs>4 4
+
+        \time 4/4
+
+        | <fs, cs' fs a cs fs>4 8. 16 4 r16 <fs cs' fs a cs fs>16 16 r
+    }
+
+    \repeat volta 2 {
+        \time 2/4
+
+        | <cs' a'>4 4
+
+        \time 4/4
+
+        | <fs, d' a'>4 8. 16 4 r16 <fs d' a'>16 16 r
+    }
 }
