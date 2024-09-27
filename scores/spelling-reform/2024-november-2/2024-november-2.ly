@@ -8,6 +8,7 @@
 \include "scores/spelling-reform/the-grieving-game/the-grieving-game-guitar.ily"
 \include "scores/spelling-reform/circles/circles-guitar.ily"
 \include "scores/spelling-reform/the-organs-of-enlightenment/the-organs-of-enlightenment-guitar.ily"
+\include "scores/spelling-reform/there-is-no-more-future/there-is-no-more-future-guitar.ily"
 \include "scores/spelling-reform/meet-me-in-the-atmosphere/meet-me-in-the-atmosphere-guitar.ily"
 \include "scores/spelling-reform/microscope/microscope-guitar.ily"
 \include "scores/the-quelle-source/the-painters/the-painters-guitar.ily"
@@ -97,6 +98,19 @@
     \compressMMRests {
         \numericTimeSignature
         \theOrgansOfEnlightenment
+    }
+}
+
+\tocItem \markup "There Is No More Future"
+
+\score {
+    \header {
+        piece = "There Is No More Future"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \thereIsNoMoreFuture
     }
 }
 
