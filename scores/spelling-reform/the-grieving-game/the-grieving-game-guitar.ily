@@ -46,7 +46,7 @@ theGrievingGame = \relative c'' {
 
     \time 4/4
 
-    \override TextSpanner.bound-details.left.text = \markup \tiny "Laissez Vibrer"
+    \override TextSpanner.bound-details.left.text = \markup \tiny "laissez vibrer"
 
     | r8 af'' ^\markup \italic \tiny A♭ \startTextSpan b, c ~ c2 
 
@@ -128,7 +128,7 @@ theGrievingGame = \relative c'' {
 
     \time 4/4
 
-    \override TextSpanner.bound-details.left.text = \markup \tiny "Laissez Vibrer"
+    \override TextSpanner.bound-details.left.text = \markup \tiny "laissez vibrer"
 
     | r8 af''' \startTextSpan ^\markup \italic \tiny A♭ b, c ~ c2
 

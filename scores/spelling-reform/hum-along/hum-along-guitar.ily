@@ -1,8 +1,6 @@
 \version "2.25.19"
 
 humAlong = \relative a {
-    \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
-
     \key a \major
     \time 4/4
 
@@ -17,28 +15,27 @@ humAlong = \relative a {
     >>
 
     \repeat volta 2 {
-        \mark \default
-
         | R1 * 8
 
-        \mark \default
-
-        | R1 * 8 
+        | R1 * 8 ^\markup \italic "[verse]"
     }
-
-    | fs'4. e8 ~ e2
+    | \hideNotes \grace { e'8 \glissando ( } \unHideNotes fs4. ) \4 e8 ~ e2
     | d8 cs ( b ) a ~ a2 ~
     | a1 ~
     | a1
 
-    | r2. r8 fs' ^\markup \italic "imitate synth" ~
-    | fs8 gs4 a8 ~ a cs4 e8 ~
+    \override TextSpanner.bound-details.left.text = \markup \tiny "(laissez vibrer)"
+
+    | r2. r8 fs'' \4 ^\markup \italic "imitate synth" \startTextSpan ~
+    | fs8 gs4 \3 a8 ~ a cs4 \2 e8 \1 ~
 
     | e1 ~
-    | e1
+    | e1 \stopTextSpan
     | R1 * 6
 
-    | e,16 ^\markup \italic ord. ( fs ) cs'8 ~ cs e,16 ( fs ) a4 e16 ( fs ) cs'8 ~
+    % TODO show voices
+
+    | e,,16 ^\markup \italic ord. ( fs ) cs'8 ~ cs e,16 ( fs ) a4 e16 ( fs ) cs'8 ~
     | cs8 e,16 ( fs ) a4 e16 ( fs ) cs'8 ~ cs e,16 ( fs )
 
     % | << { \slurUp 
@@ -54,38 +51,38 @@ humAlong = \relative a {
     | a1 ~ 
     | a1
     | R1 
-    | r2.. a''8 ^\markup \italic distortion ~
+    | r2.. a''8 \1 ^\markup \italic distortion ~
 
-    | a2.. e8 ~
-    | e2.. a,8 ~
+    | a2.. e8 \2 ~
+    | e2.. a,8 \3 ~
     | a2 ~ a8 cs4 a8 ~
-    | a2 b16 ( cs ) e4 a8 ~
+    | a2 b16 \3 ( cs ) e4 a8 ~
 
     | a2 ~ a8 b4 cs8 ~
     | cs8 b4 a8 ~ a e4 a,8 ~ 
     | a2 b16 ( cs ) e4 a,8 ~
     | a1
 
-    | cs2 b16 ( a ) fs4 e'8 ~
-    | e2 cs16 ( b ) a4 cs8 ~
-    | cs2 b16 ( a ) fs4 e'8 ~
+    | cs2 \3 b16 ( \glissando a ) fs4 e'8 ~
+    | e2 cs16 \2 ( b ) a4 cs8 \3 ~
+    | cs2 b16 ( \glissando  a ) fs4 e'8 ~
     | e8 fs4 cs8 ~ cs e4 b8 ~
 
-    | b2 ~ b8 a4 gs8 ~
+    | b2 ~ b8 a4 \3 gs8 ~
     | gs2 gs8 fs ( e ) cs ~ 
     | cs1 ~
     | cs1 
 
-    | R1 * 8
+    | R1 * 8 ^\markup \italic \tiny "\"...I swat away any...\""
 
     % << {
-        | a4 ^\markup \italic "imitate buzzy synth" cs b8 a4 e'8 ~
+        | a4 -0 ^\markup \italic "imitate buzzy synth" cs b8 a4 e'8 ~
         | e4 a, cs8 b4 e8 ~
-        | e4 a, cs8 b a e' ~
+        | e4 a, cs8 b ( a ) e' ~
         | e4 a, cs8 b4 e8 ~
-        | e4 a, cs8 b a e' ~
+        | e4 a, cs8 b ( a ) e' ~
         | e4 a, cs8 b4 e8 ~
-        | e4 a, cs8 b a e' ~
+        | e4 a, cs8 b ( a ) e' ~
         | e4 a, cs8 b a4
     % } \\ {
     %     | a,4 cs b8 a4 e'8 ~
@@ -106,14 +103,14 @@ humAlong = \relative a {
     | R1 * 4
 
     | R1 * 3
-    | r4 cs' cs8 ( b ) a fs ~
+    | r4 cs' \2 cs8 ( b ) a fs ~
 
     | fs1 ~
     | fs1
     | R1
     | r4 cs' 
     % << {
-        cs8 ( b ) a b (
+        cs8 ( b ) a ( b )
 
     %     | cs )
     % } \\ {
@@ -121,11 +118,12 @@ humAlong = \relative a {
     %     | d8 ^\markup \italic "imitate synth" ( cs ) \slurUp a d ( cs ) a d ( cs )
     % } >>
 
-    | cs8 ) ^\markup \italic "imitate synth" d ( cs ) a d ( cs ) a d
+    | d8 \3 ^\markup \italic "imitate synth" ( cs ) a d ( cs ) a d ( cs )
+    | a8 d ( cs ) a d ( cs ) a d
     | a8 ( gs ) e a ( gs ) e a ( gs )
     | e8 a ( gs ) e a ( gs ) e a 
 
-    | gs8 cs, a' ( gs ) cs, a' ( gs ) cs,
+    | gs8 cs, \6 a' \4 ( gs ) cs, a' ( gs ) cs,
     | a'8 ( gs ) cs, a' ( gs ) cs, a' ( gs )
     | cs,8 a' ( gs ) cs, a' ( gs ) cs, a' -> ~ 
     | a8 gs4 -> d8 -> ~ d cs4 -> a'8
@@ -140,7 +138,7 @@ humAlong = \relative a {
 
     \tag #'album \pageBreak
 
-    | r4 ^\markup \italic "imitate synth" a' r a
+    | r4 ^\markup \italic "imitate synth" a' \2 -4 r a
     | r4 a r a
 
     \repeat volta 2 {

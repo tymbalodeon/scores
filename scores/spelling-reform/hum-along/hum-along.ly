@@ -11,6 +11,15 @@
     composer = "Dan Wisniewski"
 }
 
+\layout {
+    \context {
+        \Score {
+            \override Glissando.minimum-length = 4
+            \override Glissando.springs-and-rods = #ly:spanner::set-spacing-rods
+        }
+    }
+}
+
 \score {
     \new Staff \with {
         instrumentName = "Guitar"
