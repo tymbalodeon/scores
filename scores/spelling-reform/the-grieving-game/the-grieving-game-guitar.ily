@@ -86,6 +86,9 @@ theGrievingGame = \relative c'' {
 
     \time 3/4
 
+    \newSpacingSection
+    \override Score.SpacingSpanner.spacing-increment = 3
+
     | <af, ef' af c ef af>4 ^\markup \italic ord. ^\markup \fret-diagram-terse "4;6;6;5;4;4;" r8 <ef' bf' ef g bf>8 ^\markup \fret-diagram-terse "x;6;8;8;8;6;"  ~ <ef bf' ef g bf> r 
 
     \time 4/4
@@ -93,6 +96,9 @@ theGrievingGame = \relative c'' {
     | <f c' f af c>4 ^\markup \fret-diagram-terse "x;8;10;10;9;8;" r8 <df af' df f af>8 ^\markup \fret-diagram-terse "x;4;6;6;6;4;" ~ <df af' df f af>2
 
     \time 3/4
+
+    \newSpacingSection
+    \revert Score.SpacingSPanner.spacing-increment
 
     | <af ef' af c ef af>4 r8 <ef' bf' ef g bf>8 ~ <ef bf' ef g bf> r 
 
