@@ -40,7 +40,15 @@ humAlong = \relative a {
 
     | e,16 ^\markup \italic ord. ( fs ) cs'8 ~ cs e,16 ( fs ) a4 e16 ( fs ) cs'8 ~
     | cs8 e,16 ( fs ) a4 e16 ( fs ) cs'8 ~ cs e,16 ( fs )
-    | << { \slurUp a8 ( gs ) \slurNeutral } \new CueVoice { \voiceTwo { \slurDown e8 [ ( ds ) ] \slurNeutral } } >> r fs r e r cs ~
+
+    % | << { \slurUp 
+
+    a8 ( gs ) 
+
+    % \slurNeutral } \new CueVoice { \voiceTwo { \slurDown e8 [ ( ds ) ] \slurNeutral } } >> 
+
+    r fs r e r cs ~
+
     | cs2 cs8 ( \glissando e ) r a, ~
 
     | a1 ~ 
@@ -70,8 +78,8 @@ humAlong = \relative a {
 
     | R1 * 8
 
-    << {
-        | a'4 ^\markup \italic "imitate synth" cs b8 a4 e'8 ~
+    % << {
+        | a4 ^\markup \italic "imitate buzzy synth" cs b8 a4 e'8 ~
         | e4 a, cs8 b4 e8 ~
         | e4 a, cs8 b a e' ~
         | e4 a, cs8 b4 e8 ~
@@ -79,16 +87,16 @@ humAlong = \relative a {
         | e4 a, cs8 b4 e8 ~
         | e4 a, cs8 b a e' ~
         | e4 a, cs8 b a4
-    } \\ {
-        | a,4 cs b8 a4 e'8 ~
-        | e4 a, cs8 b4 a8 ~
-        | a4 cs b8 a a e'8 ~
-        | e4 a, cs8 b4 a8 ~
-        | a4 cs b8 a a e'8 ~
-        | e4 a, cs8 b4 a8 ~
-        | a4 cs b8 a a e'8 ~
-        | e4 a, cs8 r4 a8 ~
-    } >>
+    % } \\ {
+    %     | a,4 cs b8 a4 e'8 ~
+    %     | e4 a, cs8 b4 a8 ~
+    %     | a4 cs b8 a a e'8 ~
+    %     | e4 a, cs8 b4 a8 ~
+    %     | a4 cs b8 a a e'8 ~
+    %     | e4 a, cs8 b4 a8 ~
+    %     | a4 cs b8 a a e'8 ~
+    %     | e4 a, cs8 r4 a8 ~
+    % } >>
 
     | fs'4. ^\markup \italic ord. e8 ~ e2
     | d8 cs ( b ) a ~ a2 ~
@@ -103,16 +111,17 @@ humAlong = \relative a {
     | fs1 ~
     | fs1
     | R1
-    | r4 cs' << {
+    | r4 cs' 
+    % << {
         cs8 ( b ) a b (
 
-        | cs )
-    } \\ {
-        | s2
-        | d8 ^\markup \italic "imitate synth" ( cs ) \slurUp a d ( cs ) a d ( cs )
-    } >>
+    %     | cs )
+    % } \\ {
+    %     | s2
+    %     | d8 ^\markup \italic "imitate synth" ( cs ) \slurUp a d ( cs ) a d ( cs )
+    % } >>
 
-    | a8 d ( cs ) a d ( cs ) a d
+    | cs8 ) ^\markup \italic "imitate synth" d ( cs ) a d ( cs ) a d
     | a8 ( gs ) e a ( gs ) e a ( gs )
     | e8 a ( gs ) e a ( gs ) e a 
 
@@ -131,7 +140,7 @@ humAlong = \relative a {
 
     \tag #'album \pageBreak
 
-    | r4 ^\markup \italic "(imitate synth)" a' r a
+    | r4 ^\markup \italic "imitate synth" a' r a
     | r4 a r a
 
     \repeat volta 2 {
@@ -142,7 +151,7 @@ humAlong = \relative a {
     }
 
     \repeat volta 2 {
-        | r4 ^\markup \italic (drums) a r a
+        | r4 ^\markup \italic [drums] a r a
         | r4 a r a
         | r4 a r a
         | r4 a r a

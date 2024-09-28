@@ -7,29 +7,38 @@ theGrievingGame = \relative c'' {
 
     \time 2/4
 
-    | \new CueVoice \with {
-        \consists "Pitch_squash_engraver"
-    } { 
-        \improvisationOn r4. c8 ~ 
-
-        \time 4/4
-
-        | c8 -> c c c c c c c
-        | c8 c c c << { 
-            \new CueVoice = "lyrics" \with { 
-                \consists "Pitch_squash_engraver" 
-            } { 
-                \improvisationOn c c c4 
-            } 
+    | << 
+        \new CueVoice \with {
+            \consists "Pitch_squash_engraver"
         } { 
-            \new Lyrics \lyricsto "lyrics" { 
-                \lyricmode {
-                    \override LyricText #'font-shape = #'italic
-                     No I won't
-                } 
-            } 
-        } >>
-    }
+            \improvisationOn r4. c8 ~ 
+
+            \time 4/4
+
+            | c8 -> c c c c c c c
+            | c8 c c c 
+            % << { 
+            %     \new CueVoice = "lyrics" \with { 
+            %         \consists "Pitch_squash_engraver" 
+            %     } { 
+            %         \improvisationOn 
+                    c c c4 
+            %     } 
+            % } { 
+            %     \new Lyrics \lyricsto "lyrics" { 
+            %         \lyricmode {
+            %             \override LyricText #'font-shape = #'italic
+            %              No I won't
+            %         } 
+            %     } 
+            % } >>
+        }
+
+        { 
+            | s1 
+            | s2 s4 s ^\markup \italic "\"No I won't...\"" 
+        }
+    >>
 
     \time 2/4
 
@@ -37,15 +46,17 @@ theGrievingGame = \relative c'' {
 
     \time 4/4
 
-    | r8 af'' ^\markup \italic \tiny A♭ b, c ~ c2
+    \override TextSpanner.bound-details.left.text = \markup \tiny "Laissez Vibrer"
+
+    | r8 af'' ^\markup \italic \tiny A♭ \startTextSpan b, c ~ c2 
 
     \time 2/4
 
-    | R2 * 3
+    | R2 * 3 \stopTextSpan
 
     \time 4/4
 
-    | r8 af' b, c ~ c2
+    | r8 af' ^\markup \italic "sim." b, c ~ c2
 
     \time 2/4
 
@@ -111,15 +122,17 @@ theGrievingGame = \relative c'' {
 
     \time 4/4
 
-    | r8 af''' ^\markup \italic \tiny A♭ b, c ~ c2
+    \override TextSpanner.bound-details.left.text = \markup \tiny "Laissez Vibrer"
+
+    | r8 af''' \startTextSpan ^\markup \italic \tiny A♭ b, c ~ c2
 
     \time 2/4
 
-    | R2 * 3
+    | R2 * 3 \stopTextSpan
 
     \time 4/4
 
-    | r8 b' ^\markup \italic \tiny B b, c ~ c2
+    | r8 b' ^\markup \italic \tiny B  ^\markup \italic "sim." b, c ~ c2
 
     \time 2/4
 
