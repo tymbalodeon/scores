@@ -6,7 +6,7 @@ theOrgansOfEnlightenment = \relative c'' {
 
     | R2. * 12
 
-    | r8 af ^\markup \italic "imitate synth" r af r4
+    | r8 af \4 ^\markup \italic "imitate synth" r af r4
     | r8 af r af r c 
     | r8 af r8 af r4
 
@@ -24,7 +24,7 @@ theOrgansOfEnlightenment = \relative c'' {
 
     | R2. * 8
 
-    | <af af'>2. ^\markup \italic distortion ~
+    | <af \5 af' \3>2. ^\markup \italic distortion ~
     | <af af'>2.
     | <df df'>2. 
     | <c c'>2.
@@ -53,7 +53,7 @@ theOrgansOfEnlightenment = \relative c'' {
 
     \time 3/4
 
-    | af2.
+    | af2. \4 ^\markup \italic (distortion)
     | ef'8 df c4 bf
     | af2.
     | f'8 ef c4 af
@@ -68,9 +68,10 @@ theOrgansOfEnlightenment = \relative c'' {
 
     \time 6/8
 
+    | R2.
     | R2. * 8
 
-    | <af af'>2. ~
+    | <af af'>2.^\markup \italic distortion  ~
     | <af af'>2.
     | <df df'>2. 
     | <c c'>2.
@@ -112,7 +113,7 @@ theOrgansOfEnlightenment = \relative c'' {
 
     | R2. * 8
 
-    | af,16 c bf df af ef' af,16 c bf df af ef'
+    | af,16 ^\markup \italic "imitate buzzy synth" c bf df af ef' af,16 c bf df af ef'
     | af,16 c bf df af ef' af,16 af' af, ef' af, df
     | bf16 c af df bf ef af,16 c af df bf ef
     | af,16 c bf df af ef' af,16 c bf df af af'
