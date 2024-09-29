@@ -48,7 +48,7 @@ thereIsNoMoreFuture = \relative c' {
 
     \time 4/4
 
-    | cs8 a'16 ( b ) e4 ~ e8 a,16 ( b ) cs8 a ~
+    | cs8 ^\markup \italic "laissez vibrer" a'16 ( b ) e4 -0 ~ e8 a,16 ( b ) cs8 a ~
     | a1 
 
     | cs,8 a'16 ( b ) e4 ~ e8 a,16 ( b ) cs8 e ~
@@ -57,14 +57,14 @@ thereIsNoMoreFuture = \relative c' {
     | cs,8 a'16 ( b ) e4 ~ e8 a,16 ( b ) fs'8 cs ~
     | cs1 
 
-    | cs,8 a'16 ( b ) e4 ~ e8 cs16 ( b8. ) a8
+    | cs,8 a'16 ( b ) e4 ~ e8 cs16 \3 ( b8. ) a8
     | fs1 
 
     | cs8 a'16 ( b ) e4 ~ e4 a16. gs fs16
     | cs1
 
     | cs,8 a'16 ( b ) e4 ~ e8 a,16 ( b ) cs8 a
-    | fs,4 <fs d' a'> ^\markup \fret-diagram-terse "2;x;o;2;x;x;" 4 4 4
+    | fs,4 <fs d' a'> ^\markup \fret-diagram-terse "2;x;o;2;x;x;" 4 4 
 
     \repeat volta 2 {
         \time 2/4
