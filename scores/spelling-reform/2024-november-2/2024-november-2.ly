@@ -45,8 +45,6 @@
     }
 }
 
-\pageBreak
-
 \tocItem \markup "Hum Along"
 
 \score {
@@ -86,8 +84,6 @@
     }
 }
 
-\pageBreak
-
 \tocItem \markup "The Organs of Enlightenment"
 
 \score {
@@ -100,6 +96,8 @@
         \theOrgansOfEnlightenment
     }
 }
+
+\pageBreak
 
 \tocItem \markup "There Is No More Future"
 
@@ -127,8 +125,6 @@
     }
 }
 
-\pageBreak
-
 \tocItem \markup "Microscope"
 
 \score {
@@ -139,6 +135,7 @@
 
     \compressMMRests {
         \numericTimeSignature
+        \removeWithTag #'album
         \microscope
     }
 }
