@@ -5,7 +5,7 @@ fakeConversations = \relative d'' {
     \time 2/4
 
     \repeat volta 2 {
-        | << r8 \\ \new CueVoice { \voiceThree \stemDown \parenthesize b8 \repeatTie } >> d'4 b8 ~
+        | << r8 \\ \new CueVoice { \voiceThree \stemDown \parenthesize b8 \repeatTie } >> d'4 \1 b8 ~
         | b a4 g8 ~
         | g g4 fs8 ~
         | fs e4 d8 ~
@@ -32,13 +32,13 @@ fakeConversations = \relative d'' {
 
     | R2 * 8
 
-    | r4 as'8 b ~
+    | r4 as'8 \3 b \2 ~
     | b2 ~
     | b4 as8 b ~
-    | b4 a8 g ~
+    | b4 a!8 g ~
 
-    | g4. d8
-    | b'8 g4 d8
+    | g4. d8 -1
+    | b'8 -1 g4 -1 d8
     | b'8 g4 d8
     | b'8 g4 d8
 
@@ -47,15 +47,15 @@ fakeConversations = \relative d'' {
     | g2 ~
     | g2
 
-    | <a, a'>2 ~
+    | <a, a'>2 \4 ^\markup \italic distortion ~
     | <a a'>2
     | <b b'>2 ~
     | <b b'>2
 
     | <d d'>2 ~
     | <d d'>2
-    | <g, g>8 <g g> <fs g> <fs g>
-    | <e g>8 <e g> <d g> <d g>
+    | <g, g -0>8 <g g -0> <fs g -0> <fs g -0>
+    | <e g -0>8 <e g -0> <d g -0> <d g -0>
 
     | <c c'>2 ~
     | <c c'>2
@@ -71,7 +71,7 @@ fakeConversations = \relative d'' {
     | <f f'>2
 
     \repeat volta 2 {
-        | << r8 \\ \new CueVoice { \voiceThree \stemDown \parenthesize b8 \repeatTie } >> d'4 b8 ~
+        | << r8 \\ \new CueVoice { \voiceThree \stemDown \parenthesize b8 \repeatTie } >> d'4 ^\markup \italic ord. b8 ~
         | b a4 g8 ~
         | g g4 fs8 ~
         | fs e4 d8 ~
