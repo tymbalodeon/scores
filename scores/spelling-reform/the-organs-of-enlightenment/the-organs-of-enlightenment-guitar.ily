@@ -6,7 +6,7 @@ theOrgansOfEnlightenment = \relative c'' {
 
     | R2. * 12
 
-    | r8 af r af r4
+    | r8 af ^\markup \italic "imitate synth" r af r4
     | r8 af r af r c 
     | r8 af r8 af r4
 
@@ -24,7 +24,7 @@ theOrgansOfEnlightenment = \relative c'' {
 
     | R2. * 8
 
-    | <af af'>2. ~
+    | <af af'>2. ^\markup \italic distortion ~
     | <af af'>2.
     | <df df'>2. 
     | <c c'>2.
