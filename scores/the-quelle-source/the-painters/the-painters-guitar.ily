@@ -12,16 +12,13 @@ thePainters = \relative d'' {
     | b4 g2. ~
     | g4. g8 a g a b ~
     | b4 g2. ~
-    | g4. d8 e d b g ~
+    | g4. d8 e d b g, ~
 
     | g1 ~
     | g1 
-    | R1 * 6
-    | R1 * 5
-    | r2 r
-    | r1
+    | R1 * 14
 
-    | r4 g' g a
+    | r4 g'' g a
     | a4 b b d
     | r4 g, g a 
     | b4 c8 b ~ b a g4
