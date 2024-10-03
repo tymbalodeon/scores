@@ -114,13 +114,13 @@ theGrievingGame = \relative c'' {
 
     | <f c' f af c>4 r8 <df af' df f af>8 ~ 
 
-    \time 3/4
-
-    | <df af' df f af>8 8 8 8 8 8 
-
     \time 4/4
 
-    | 8 8 8 8 8 ^\markup \italic \tiny "\"No I won't...\"" 8 4 
+    | <df af' df f af>8 8 8 8 8 8 8 8
+
+    \time 3/4
+
+    | 8 8 8 ^\markup \italic \tiny "\"No I won't...\"" 8 4 
     
     \time 2/4
 

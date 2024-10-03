@@ -31,11 +31,11 @@ turnOnTheLightsTheRadioBass = \relative c {
     \alternative {
       \volta 1 {
         | c4 -. r r2
-        | R1
+        | R1 ^\markup \italic \tiny "[drum break]"
       }
 
       \volta 2 {
-        | R1
+        | R1 ^\markup \italic \tiny "[drum break]"
       }
     }
   }
@@ -62,12 +62,12 @@ turnOnTheLightsTheRadioBass = \relative c {
   }
 
   \repeat volta 2 {
-    | bf4. ^\markup \italic "(drums)" f8 ~ f4 r
+    | bf4. ^\markup \italic \tiny "[drums enter]" f8 ~ f4 r
     | \repeat unfold 3 { bf4. f8 ~ f4 r }
   }
 
   \repeat volta 2 {
-    | bf4. ^\markup \italic "(vocals)" f8 ~ f4 r
+    | bf4. ^\markup \italic \tiny "[vocals enter]" f8 ~ f4 r
     | \repeat unfold 3 { bf4. f8 ~ f4 r }
   }
 

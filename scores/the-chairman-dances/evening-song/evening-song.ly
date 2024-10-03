@@ -7,6 +7,7 @@
 \include "scores/the-chairman-dances/be-thou-my-vision/be-thou-my-vision-bass.ily"
 \include "scores/the-chairman-dances/faded-and-fraying/faded-and-fraying-bass.ily"
 \include "scores/the-chairman-dances/i-was-struck-by-the-words/i-was-struck-by-the-words-bass.ily"
+\include "scores/the-chairman-dances/i-hadnt-tried/i-hadnt-tried-bass.ily"
 \include "scores/the-chairman-dances/least-of-these/least-of-these-bass.ily"
 \include "scores/the-chairman-dances/listening/listening-bass.ily"
 \include "scores/the-chairman-dances/she-leans-they-kiss/she-leans-they-kiss-bass.ily"
@@ -30,6 +31,58 @@
 \markuplist \table-of-contents
 \pageBreak
 
+\tocItem \markup "Turn on the Lights, the Radio"
+
+\score {
+    \header {
+        piece = "Turn on the Lights, the Radio"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \turnOnTheLightsTheRadioBass
+    }
+}
+
+\tocItem \markup "Faded & Fraying"
+
+\score {
+    \header {
+        piece = "Faded & Fraying"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \fadedAndFrayingBass
+    }
+}
+
+\tocItem \markup "We Rifled Through"
+
+\score {
+    \header {
+        piece = "We Rifled Through"
+    }
+ 
+    \compressMMRests {
+        \numericTimeSignature
+        \weRifledThroughBass
+    }
+}
+
+\tocItem \markup "Struck By The Words"
+
+\score {
+    \header {
+        piece = "Struck By The Words"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \iWasStruckByTheWordsBass
+    }
+}
+
 \tocItem \markup "Adventurous"
 
 \score {
@@ -37,43 +90,10 @@
         piece = "Adventurous"
     }
 
-    \compressMMRests
-    \adventurousBass
-}
-
-\tocItem \markup "Be Thou My Vision"
-
-\score {
-    \header {
-        piece = "Be Thou My Vision"
+    \compressMMRests {
+        \numericTimeSignature
+        \adventurousBass
     }
-
-    \compressMMRests
-    \beThouMyVisionBass
-}
-
-\pageBreak
-
-\tocItem \markup "Faded and Fraying"
-
-\score {
-    \header {
-        piece = "Faded and Fraying"
-    }
-
-    \compressMMRests
-    \fadedAndFrayingBass
-}
-
-\tocItem \markup "I Was Struck By The Words"
-
-\score {
-    \header {
-        piece = "I Was Struck By The Words"
-    }
-
-    \compressMMRests
-    \iWasStruckByTheWordsBass
 }
 
 \tocItem \markup "Least of These"
@@ -83,11 +103,26 @@
         piece = "Least of These"
     }
 
-    \compressMMRests
-    \leastOfTheseBass
+    \compressMMRests {
+        \numericTimeSignature
+        \leastOfTheseBass
+    }
 }
 
-\pageBreak
+\tocItem \markup "Where / When"
+
+\score {
+    \header {
+        piece = "Where / When"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \whereWhenBass
+    }
+}
+
+\tocItem \markup "Nocturne"
 
 \tocItem \markup "Listening"
 
@@ -96,22 +131,11 @@
         piece = "Listening"
     }
 
-    \compressMMRests
-    \listeningBass
-}
-
-\tocItem \markup "She Leans, They Kiss"
-
-\score {
-    \header {
-        piece = "She Leans, They Kiss"
+    \compressMMRests {
+        \numericTimeSignature
+        \listeningBass
     }
-
-    \compressMMRests
-    \sheLeansTheyKissBass
 }
-
-\pageBreak
 
 \tocItem \markup "Silver in the Sun"
 
@@ -120,41 +144,42 @@
         piece = "Silver in the Sun"
     }
 
-    \compressMMRests
-    \silverInTheSunBass
+    \compressMMRests {
+        \numericTimeSignature
+        \silverInTheSunBass
+    }
 }
 
-\tocItem \markup "Turn on the Lights, the Radio"
+
+\tocItem \markup "She Leans, They Kiss"
 
 \score {
     \header {
-        piece = "Turn on the Lights, the Radio"
+        piece = "She Leans, They Kiss"
     }
 
-    \compressMMRests
-    \turnOnTheLightsTheRadioBass
+    \compressMMRests {
+        \numericTimeSignature
+        \sheLeansTheyKissBass
+    }
 }
 
-\pageBreak
-
-\tocItem \markup "We Rifled Through"
+\tocItem \markup "Hadn't Tried"
 
 \score {
     \header {
-        piece = "We Rifled Through"
+        piece = "Hadn't Tried"
     }
 
-    \compressMMRests
-    \weRifledThroughBass
+    \compressMMRests {
+        \numericTimeSignature
+        \hadntTriedBass
+    }
 }
 
-\tocItem \markup "Where/When"
-
 \score {
-    \header {
-        piece = "Where/When"
+    \compressMMRests {
+        \numericTimeSignature
+        \hadntTriedBassCoda
     }
-
-    \compressMMRests
-    \whereWhenBass
 }
