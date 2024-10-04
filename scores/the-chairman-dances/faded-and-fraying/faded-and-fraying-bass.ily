@@ -6,9 +6,18 @@ fadedAndFrayingBass = \relative c {
   \time 2/4
 
   | R2 * 8
+
+  \mark \default
+
   | R2 * 16
-  | R2 * 8
-  | R2 * 11
+
+  \mark \default
+
+  | R2 * 12
+
+  \mark \default
+
+  | R2 * 7
 
   | r4 e8 fs
 
@@ -22,12 +31,14 @@ fadedAndFrayingBass = \relative c {
   | g2 ~
   | g4 e'8 fs
 
+  \mark \default
+
   | g2 
   | fs2
   | e2 ~
   | e4 g,8 gs
 
-  | a2
+  | a2 ~
   | a4 b8 c
   | d2 ~
   | d4 e8 fs
@@ -41,6 +52,8 @@ fadedAndFrayingBass = \relative c {
   | a8 a b c
   | d2 
   | fs8. a16 ~ a8 as
+
+  \mark \default
 
   | b4. fs8 
   | b8. fs16 ~ fs8 f
@@ -56,6 +69,8 @@ fadedAndFrayingBass = \relative c {
   | g8 d'16 b ~ b8 g
   | e8 b'16 g ~ g8 e 
   | e,8 e g gs
+
+  \mark \default
 
   | a4. e'8 
   | b'8. a16 ~ a8 e
@@ -76,6 +91,8 @@ fadedAndFrayingBass = \relative c {
   | g2 ~
   | g2 ~
   | g4 r
+
+  \mark \default
 
   | R2 * 3
   | r4 bf'8 a
@@ -103,6 +120,8 @@ fadedAndFrayingBass = \relative c {
 
   | R2 * 4
 
+  \mark \default
+
   | b,4. fs'8 
   | b8. fs16 ~ fs8 f
   | e4. b8 
@@ -117,6 +136,8 @@ fadedAndFrayingBass = \relative c {
   | fs fs16 b, ~ b8 fs'
   | e8 e16 b ~ b8 g 
   | e8 e g gs
+
+  \mark \default
 
   | a4. e'8 
   | b'8. a16 ~ a8 e
