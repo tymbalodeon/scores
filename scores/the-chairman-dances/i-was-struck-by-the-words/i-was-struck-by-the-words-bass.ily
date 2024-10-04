@@ -2,9 +2,9 @@
 
 iWasStruckByTheWordsBass = \relative d {
   \key c \major
-  \time 4/4
+  \time 2/2
 
-  \clef "bass"
+  \clef bass
 
   | R1 * 3
 

@@ -51,14 +51,18 @@ fadedAndFrayingBass = \relative c {
   | a2 ~ 
   | a8 a b c
   | d2 
-  | fs8. a16 ~ a8 as
+
+  \once \override Glissando.springs-and-rods = #ly:spanner::set-spacing-rods
+  \once \override Glissando.minimum-length = 2.5
+
+  | \acciaccatura e16 \glissando fs8. a16 ~ a8 as
 
   \mark \default
 
   | b4. fs8 
   | b8. fs16 ~ fs8 f
   | e4. b'8 
-  | e8. d16 ~ d8 b
+  | \appoggiatura d16 e8. d16 ~ d8 b
 
   | a4. e8 
   | a8 a, b c
@@ -73,12 +77,12 @@ fadedAndFrayingBass = \relative c {
   \mark \default
 
   | a4. e'8 
-  | b'8. a16 ~ a8 e
+  | \appoggiatura a16 b8. a16 ~ a8 e
   | d2 ~ 
   | d8 e, fs g
 
   | a4. e'8 
-  | c'8. b16 ~ b8 a
+  | \appoggiatura b'16 c8. b16 ~ b8 a
   | fs4 e 
   | d4 e8 fs
 
@@ -114,7 +118,7 @@ fadedAndFrayingBass = \relative c {
   | r4 bf,8 c
 
   | d2 ~
-  | d4 a'
+  | d4 a' \glissando
   | d2 ~
   | d4 r
 
@@ -140,17 +144,17 @@ fadedAndFrayingBass = \relative c {
   \mark \default
 
   | a4. e'8 
-  | b'8. a16 ~ a8 e
+  | \appoggiatura a16 b8. a16 ~ a8 e
   | d2 ~ 
   | d8 e, fs g
 
   | a4. e'8 
-  | c'8. b16 ~ b8 a
+  | \appoggiatura b'16 c8. b16 ~ b8 a
   | fs4 e 
   | d8. e16 ~ e8 e,
 
   | a4. e'8 
-  | g'8. fs16 ~ fs8 e
+  | \appoggiatura fs'16 g8. fs16 ~ fs8 e
   | d4 c 
   | b4 a
 
@@ -172,10 +176,10 @@ fadedAndFrayingBass = \relative c {
   | g2 ~
   | g4 e,8 fs
 
-  | g2 ~
+  | g2 ~ -\markup rit.
   | g2 ~
   | g'2 ~
-  | g4 -\fermata r
+  | g2 -\fermata
 
   \bar "|."
 }
