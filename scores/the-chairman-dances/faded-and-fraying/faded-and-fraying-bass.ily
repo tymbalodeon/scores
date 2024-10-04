@@ -60,7 +60,7 @@ fadedAndFrayingBass = \relative c {
   \mark \default
 
   | b4. fs8 
-  | b8. fs16 ~ fs8 f
+  | b8 \xNote b16 fs ~ fs8 f
   | e4. b'8 
   | \appoggiatura d16 e8. d16 ~ d8 b
 
@@ -127,7 +127,7 @@ fadedAndFrayingBass = \relative c {
   \mark \default
 
   | b,4. fs'8 
-  | b8. fs16 ~ fs8 f
+  | b8 \xNote b16 fs ~ fs8 f
   | e4. b8 
   | e8 e, fs g
 
