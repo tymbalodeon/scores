@@ -2,137 +2,136 @@
 
 iWasStruckByTheWordsBass = \relative d {
   \key c \major
-  \time 2/2
 
   \clef bass
 
-  | R1 * 3
+  \partial r2
 
-  | r2 d8 c a f -> ~
+  | r2. d16 c a f -> ~
 
-  | f4 f'8 f, a c d f ~
+  | f8 f'16 f, a c d f ~
   | f f d r c ( d ) f g, ~
-  | g4 g'8 g, b d e g ~
+  | g8 g'16 g, b d e g ~
   | g g e a, a' g e f, ~
 
-  | f4 f'8 f, a c d f ~
+  | f8 f'16 f, a c d f ~
   | f f d r c ( d ) f g, ~
-  | g4 g'8 g, b d e g ~
+  | g8 g'16 g, b d e g ~
   | g g e r d c a f ~
 
-  | f4 f'8 f, a c d f ~
+  | f8 f'16 f, a c d f ~
   | f f d r c ( d ) f g, ~
-  | g4 g'8 g, b d e g ~
+  | g8 g'16 g, b d e g ~
   | g g e a, a' g e d ~
 
-  | d2 r8 a c d ~
-  | d4 a'8 d, d'8 c a d, -> ~
+  | d4 r16 a c d ~
+  | d8 a'16 d, d'16 c a d, -> ~
 
-  | d4 d'8 -. r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~
-  | g4 g'8 -. r f, -> f' -. r e, -> ~
-  | e4 e'8 -. e, ( g  a ) c -. d -> ~
+  | d8 d'16 -. r c, -> c' -. r b, -> ~
+  | b8 b'16 -. e,, ( f e ) f -.  g -> ~
+  | g8 g'16 -. r f, -> f' -. r e, -> ~
+  | e8 e'16 -. e, ( g  a ) c -. d -> ~
 
-  | d4 d'8 -. r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~
-  | g4 g'8 -. r f, -> f' -. r e -. ->
-  | r8 e,8 f ( g ) a b ( c ) d -> ~
+  | d8 d'16 -. r c, -> c' -. r b, -> ~
+  | b8 b'16 -. e,, ( f e ) f -.  g -> ~
+  | g8 g'16 -. r f, -> f' -. r e -. ->
+  | r16 e,16 f ( g ) a b ( c ) d -> ~
 
-  | d4 d'8 -. r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~
-  | g4 g'8 -. r f, -> f' -. r e, -> ~
-  | e4 e'8 -. e, ( g  a ) c -. d -> ~
+  | d8 d'16 -. r c, -> c' -. r b, -> ~
+  | b8 b'16 -. e,, ( f e ) f -.  g -> ~
+  | g8 g'16 -. r f, -> f' -. r e, -> ~
+  | e8 e'16 -. e, ( g  a ) c -. d -> ~
 
-  | d4 d'8 -. r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~
-  | g4 g'8 -. r f, -> f' -. r e -. ->
-  | r4 r8 a, a' g e f, -> ~
+  | d8 d'16 -. r c, -> c' -. r b, -> ~
+  | b8 b'16 -. e,, ( f e ) f -.  g -> ~
+  | g8 g'16 -. r f, -> f' -. r e -. ->
+  | r8 r16 a, a' g e f, -> ~
 
-  | f4 f'8 f, a c d f ~
+  | f8 f'16 f, a c d f ~
   | f f d r c ( d ) f g, ~
-  | g4 g'8 g, b d e g ~
+  | g8 g'16 g, b d e g ~
   | g g e r d c a f ~
 
-  | f4 f'8 f, a c d f ~
+  | f8 f'16 f, a c d f ~
   | f f d r c ( d ) f g, ~
-  | g4 g'8 g, b d e g ~
+  | g8 g'16 g, b d e g ~
   | g g e a, a' g e f, ~
 
-  | f4 f'8 f, a c d f ~
+  | f8 f'16 f, a c d f ~
   | f f d r c ( d ) f g, ~
-  | g4 g'8 g, b d e g ~
+  | g8 g'16 g, b d e g ~
   | g g e r d c a f ~
 
-  | f4 f'8 f, a c d f ~
+  | f8 f'16 f, a c d f ~
   | f f d r c ( d ) f g, ~
-  | g4 g'8 g, b d e g ~
+  | g8 g'16 g, b d e g ~
   | g g e a, a' g e d ~
 
-  | d2 r8 a c d ~
-  | d4 a'8 d, d'8 c a d, -> ~
+  | d4 r16 a c d ~
+  | d8 a'16 d, d'16 c a d, -> ~
 
-  | d4 d'8 -. r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~
-  | g4 g'8 -. r f, -> f' -. r e, -> ~
-  | e4 e'8 -. e, ( g  a ) c -. d -> ~
+  | d8 d'16 -. r c, -> c' -. r b, -> ~
+  | b8 b'16 -. e,, ( f e ) f -.  g -> ~
+  | g8 g'16 -. r f, -> f' -. r e, -> ~
+  | e8 e'16 -. e, ( g  a ) c -. d -> ~
 
-  | d4 d'8 -. r c, -> c' -. r b, -> ~
-  | b4 b'8 -. e,, ( f e ) f -.  g -> ~
-  | g4 g'8 -. r f, -> f' -. r e -. ->
-  | r8 e,8 f ( g ) a b ( c ) d -> ~
+  | d8 d'16 -. r c, -> c' -. r b, -> ~
+  | b8 b'16 -. e,, ( f e ) f -.  g -> ~
+  | g8 g'16 -. r f, -> f' -. r e -. ->
+  | r16 e,16 f ( g ) a b ( c ) d -> ~
 
-  | d8 d'16 d d8 -. c16 c c8 -. b -. b -. a -. ->
-  | r8 f16 f f8 -. e16 e e8 -. d -. c -. g -. ->
-  | r8 b16 b b8 -. c16 c c8 -. d -. f -. g -. ->
-  | r8 b16 b b8 -. c16 c \acciaccatura d e8 -- g -- a -- d, -- -> ~
+  | d16 d'32 d d16 -. c32 c c16 -. b -. b -. a -. ->
+  | r16 f32 f f16 -. e32 e e16 -. d -. c -. g -. ->
+  | r16 b32 b b16 -. c32 c c16 -. d -. f -. g -. ->
+  | r16 b32 b b16 -. c32 c \acciaccatura d e16 -- g -- a -- d, -- -> ~
 
-  | d8 d,16 d d8 -. c16 c c8 -. b -. b -. a -. ->
-  | r8 f16 f f8 -. e16 e e8 -. f -. fs -. g -. ->
-  | r8 b16 b b8 -. c16 c d8 -- f -- g -- g, -- -> ~
+  | d16 d,32 d d16 -. c32 c c16 -. b -. b -. a -. ->
+  | r16 f32 f f16 -. e32 e e16 -. f -. fs -. g -. ->
+  | r16 b32 b b16 -. c32 c d16 -- f -- g -- g, -- -> ~
   | g1
 
   | R1
 
     \tag #'album { \pageBreak }
 
-  | r2 c8 ( d ) f g, -> ~
-  | g4 g'8 g, b d e g ~
+  | r4 c16 ( d ) f g, -> ~
+  | g8 g'16 g, b d e g ~
   | g g e r d c a f ~
 
-  | f4 f'8 f, a c d f ~
-  | f8 f d r c ( d ) f g, ~
-  | g4 g'8 g, b d e g ~
+  | f8 f'16 f, a c d f ~
+  | f16 f d r c ( d ) f g, ~
+  | g8 g'16 g, b d e g ~
   | g g e a, a' g e f, ~
 
-  | f4 f'8 f, a c d f ~
-  | f8 f d r c ( d ) f g, ~
-  | g4 g'8 g, b d e g ~
+  | f8 f'16 f, a c d f ~
+  | f16 f d r c ( d ) f g, ~
+  | g8 g'16 g, b d e g ~
   | g g e r d c a f ~
 
-  | f4 f'8 f, a c d f ~
-  | f8 f d r c ( d ) f g, ~
-  | g4 g'8 g, b d e g ~
+  | f8 f'16 f, a c d f ~
+  | f16 f d r c ( d ) f g, ~
+  | g8 g'16 g, b d e g ~
   | g g e a, a' g e f ~
 
-  | f8 f c' c, a' b ( c ) f, ~
-  | f8 f c' c, e' d c g ~
-  | g8 g d' d, b' c ( d ) g, ~
-  | g8 g b d a' g e f, ~
+  | f16 f c' c, a' b ( c ) f, ~
+  | f16 f c' c, e' d c g ~
+  | g16 g d' d, b' c ( d ) g, ~
+  | g16 g b d a' g e f, ~
 
-  | f8 f c' c, a' b ( c ) f, ~
-  | f8 f c' c, e' d c g ~
-  | g8 g d' d, b' c ( d ) g,
-  | b8 d e ( g ) a e ( d ) c
+  | f16 f c' c, a' b ( c ) f, ~
+  | f16 f c' c, e' d c g ~
+  | g16 g d' d, b' c ( d ) g,
+  | b16 d e ( g ) a e ( d ) c
 
-  | f,8 f c' c, a' b ( c ) f, ~
-  | f8 f c' c, e' d c g ~
-  | g8 g d' d, b' c ( d ) g, ~
-  | g8 a, c d ( e ) g a f ~
+  | f,16 f c' c, a' b ( c ) f, ~
+  | f16 f c' c, e' d c g ~
+  | g16 g d' d, b' c ( d ) g, ~
+  | g16 a, c d ( e ) g a f ~
 
-  | f8 f c' c, a' b ( c ) f, ~
-  | f8 f c' c, e' d c g ~
-  | g8 \> g d' d, b' c ( d ) g, ~
-  | g8 \acciaccatura a16 b8 d e g a ( b ) c ~
+  | f16 f c' c, a' b ( c ) f, ~
+  | f16 f c' c, e' d c g ~
+  | g16 \> g d' d, b' c ( d ) g, ~
+  | g16 \acciaccatura a32 b16 d e g a ( b ) c ~
 
   | c1 \!
 
