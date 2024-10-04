@@ -21,6 +21,8 @@ bass_chorus = {
 turnOnTheLightsTheRadioBass = \relative c {
   | \bass_pattern
 
+  \mark \default
+
   \repeat volta 2 {
     | \bass_pattern
     \repeat unfold 2 {
@@ -40,7 +42,11 @@ turnOnTheLightsTheRadioBass = \relative c {
     }
   }
 
+  \mark \default
+
   | \bass_chorus
+
+  \mark \default
 
   \repeat volta 2 {
     | \bass_pattern
@@ -51,9 +57,13 @@ turnOnTheLightsTheRadioBass = \relative c {
     | c4 -. r r2
   }
 
+  \mark \default
+
   | \bass_chorus
 
   | \bass_pattern
+
+  \mark \default
 
   \repeat volta 2 {
     \repeat unfold 2 {
@@ -61,15 +71,21 @@ turnOnTheLightsTheRadioBass = \relative c {
     }
   }
 
+  \mark \default
+
   \repeat volta 2 {
     | bf4. ^\markup \italic \tiny "[drums enter]" f8 ~ f4 r
     | \repeat unfold 3 { bf4. f8 ~ f4 r }
   }
 
+  \mark \default
+
   \repeat volta 2 {
     | bf4. ^\markup \italic \tiny "[vocals enter]" f8 ~ f4 r
     | \repeat unfold 3 { bf4. f8 ~ f4 r }
   }
+
+  \mark \default
 
   \repeat unfold 2 {
     | c'4. gf8 ~ gf4 r
