@@ -4,7 +4,7 @@ bass_pattern = \relative c {
   \clef "bass"
 
   \repeat unfold 2 {
-    | c4.  g8 ~ g4 r
+    | c4 r8 g8 ~ g4 r
   }
 }
 
@@ -18,6 +18,18 @@ bass_chorus = {
   | \bass_pattern
 }
 
+pianoBreak =
+  << 
+  { 
+  | s2 \new CueVoice { \voiceOne { <e g>16 ^\markup \italic piano c <e g> c <e g>8 r } } 
+  | s2 \new CueVoice { \voiceOne { <e g>16 c <e g> c <e g>8 r } } 
+  }
+  { 
+  | c8 -> -. r4. r2 
+  | c8 -> -. r4. r2 
+  }
+  >>
+
 turnOnTheLightsTheRadioBass = \relative c {
   | \bass_pattern
 
@@ -28,11 +40,25 @@ turnOnTheLightsTheRadioBass = \relative c {
     \repeat unfold 2 {
       | \transpose c g \bass_pattern
     }
-    | c4 -. r r2
+    << 
+    { 
+    | s2 \new CueVoice { \voiceOne { <e g>16 ^\markup \italic piano c <e g> c <e g>8 r } }
+    }
+    { 
+    | c8 -> -. r r4 r2 
+    }
+    >>
 
     \alternative {
       \volta 1 {
-        | c4 -. r r2
+        << 
+        { 
+        | s2 \new CueVoice { \voiceOne { <e g>16 c <e g> c <e g>8 r } }
+        }
+        { 
+        | c8 -> -. r r4 r2 
+        }
+        >>
         | R1 ^\markup \italic \tiny "[drum break]"
       }
 
@@ -53,8 +79,7 @@ turnOnTheLightsTheRadioBass = \relative c {
     \repeat unfold 2 {
       | \transpose c g \bass_pattern
     }
-    | c4 -. r r2
-    | c4 -. r r2
+    \pianoBreak
   }
 
   \mark \default
@@ -74,25 +99,25 @@ turnOnTheLightsTheRadioBass = \relative c {
   \mark \default
 
   \repeat volta 2 {
-    | bf4. ^\markup \italic \tiny "[drums enter]" f8 ~ f4 r
-    | \repeat unfold 3 { bf4. f8 ~ f4 r }
+    | bf4 ^\markup \italic \tiny "[drums enter]" r8 f ~ f4 r
+    | \repeat unfold 3 { bf4 r8 f ~ f4 r }
   }
 
   \mark \default
 
   \repeat volta 2 {
-    | bf4. ^\markup \italic \tiny "[vocals enter]" f8 ~ f4 r
-    | \repeat unfold 3 { bf4. f8 ~ f4 r }
+    | bf4 ^\markup \italic \tiny "[vocals enter]" r8 f ~ f4 r
+    | \repeat unfold 3 { bf4 r8 f ~ f4 r }
   }
 
   \mark \default
 
   \repeat unfold 2 {
-    | c'4. gf8 ~ gf4 r
-    | gf'4. c,8 ~ c4 r
+    | c'4 r8 gf ~ gf4 r
+    | gf'4 r8 c, ~ c4 r
   }
 
-  | bf4 -> -. r r2
+  | bf8 -> -. r8 r4 r2
 
   \bar "|."
 }
