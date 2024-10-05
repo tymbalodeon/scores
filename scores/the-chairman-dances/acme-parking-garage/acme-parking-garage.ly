@@ -14,9 +14,12 @@ music = \relative c {
     \clef "bass"
     \key g \major
 
+    \time 2/2
+
     | g1 ~
     | g2. g8 a
     | bf1
+    | 
 }
 
 \score {

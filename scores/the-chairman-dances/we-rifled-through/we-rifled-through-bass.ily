@@ -99,32 +99,32 @@ weRifledThroughBass = \relative e {
   | d8 d d a d d d a
   | d8 d d a d e fs g ~
   | g8 g g d g g g d
-  | g8 d g d g g r a ~
+  | g8 d g d g g r a -> ~
 
   | a8 a a a, a' a a a,
-  | a'8 a a a, a' a r b ~
+  | a'8 a a a, a' a r b -> ~
   | b8 b b b, b' b b b,
   | b' b b b, b' a g fs ~
 
   | fs fs fs fs fs d e, fs ~
   | fs fs fs fs fs e fs g ~
   | g g g g g g g g
-  | g g g g g g r4
+  | g g g g g -> g -> r4
 
-  | r4 \afterGrace <a' e'>2. \glissando { \hideNotes e8 \unHideNotes }
+  | r4 \afterGrace <a' e'>2. ->  \glissando { \hideNotes e8 \unHideNotes }
   | R1
-  | r4 \afterGrace <g d'>2. \glissando { \hideNotes d8 \unHideNotes }
+  | r4 \afterGrace <g d'>2. -> \glissando { \hideNotes d8 \unHideNotes }
   | R1
 
-  | r4 \afterGrace <a e'>2. \glissando { \hideNotes e8 \unHideNotes }
+  | r4 \afterGrace <a e'>2. -> \glissando { \hideNotes e8 \unHideNotes }
   | R1
-  | r4 \afterGrace <g d'>2. \glissando { \hideNotes e8 \unHideNotes }
-  | r2 r4 r8 d' ~
+  | r4 \afterGrace <g d'>2. -> \glissando { \hideNotes e8 \unHideNotes }
+  | r2 r4 r8 d' -> ~
 
   | d d d d d d d d
   | d d d d d d d a (
   | d ) d d d d d d d
-  | <d a'>8 -. r r4 r2
+  | <d a'>8 -. -> r r4 r2
 
   \bar "|."
 }
