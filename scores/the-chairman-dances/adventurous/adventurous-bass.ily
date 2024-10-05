@@ -57,7 +57,7 @@ adventurousBass = \relative c {
     | cs'8 a' a, e' d cs b a ->
 
     | r8 cs e cs' ^\markup \tiny C♯ fs,, cs' b' ^\markup \tiny B e,,
-    | cs'8 a' a, ^\markup \tiny A e' d cs b e, ->
+    | cs'8 a' ^\markup \tiny A a, e' d cs b e, ->
     | r8 a e' b' ^\markup \tiny B fs, cs' a' ^\markup \tiny A e,
     | cs'8 a' a, e' cs16 ( d ) cs8 b a
 
