@@ -177,7 +177,7 @@ fadedAndFrayingBass = \relative c {
   | g4 e,8 fs
 
   | g2 ~ ^\markup rit.
-  | g2 ~
+  | g2
   | g'2 ~
   | g2 -\fermata
 
