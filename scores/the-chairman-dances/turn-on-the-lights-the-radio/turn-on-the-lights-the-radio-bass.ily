@@ -25,8 +25,8 @@ pianoBreak =
   | s2 \new CueVoice { \voiceOne { <e g>16 c <e g> c <e g>8 r } } 
   }
   { 
-  | c8 -> -. r4. r2 
-  | c8 -> -. r4. r2 
+  | c8 -> r4. r2 
+  | c8 -> r4. r2 
   }
   >>
 
@@ -45,7 +45,7 @@ turnOnTheLightsTheRadioBass = \relative c {
     | s2 \new CueVoice { \voiceOne { <e g>16 ^\markup \italic piano c <e g> c <e g>8 r } }
     }
     { 
-    | c8 -> -. r r4 r2 
+    | c8 -> r r4 r2 
     }
     >>
 
@@ -56,7 +56,7 @@ turnOnTheLightsTheRadioBass = \relative c {
         | s2 \new CueVoice { \voiceOne { <e g>16 c <e g> c <e g>8 r } }
         }
         { 
-        | c8 -> -. r r4 r2 
+        | c8 -> r r4 r2 
         }
         >>
         | R1 ^\markup \italic \tiny "[drum break]"
@@ -117,7 +117,7 @@ turnOnTheLightsTheRadioBass = \relative c {
     | gf'4 r8 c, ~ c4 r
   }
 
-  | bf8 -> -. r8 r4 r2
+  | bf8 -> r8 r4 r2
 
   \bar "|."
 }
