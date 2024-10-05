@@ -38,7 +38,9 @@
         piece = "Turn on the Lights, the Radio"
     }
 
-    \compressMMRests {
+    \new Staff \with {
+        instrumentName = "Double Bass"
+    } \compressMMRests {
         \numericTimeSignature
         \turnOnTheLightsTheRadioBass
     }

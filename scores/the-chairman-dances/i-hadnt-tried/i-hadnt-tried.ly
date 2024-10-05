@@ -22,10 +22,10 @@ music = \relative e {
   \clef "bass"
 
   | R1 * 3
-  | r2. r8 e16 e
+  | r2. r8 e16 e 
 
-  | r8 e r e r e16 e r8 e16 e
-  | r8 e r e r e16 e r8 e16 e
+  | r8 e -- r e -- r e16 e r8 e16 e
+  | r8 e -- r e ^\markup sim. r e16 e r8 e16 e
 
   | r8 e16 e r8 e r e16 e r8 e16 e
   | r8 e16 e r8 e r e16 e r8 e
@@ -39,7 +39,7 @@ music = \relative e {
   }
 
   \repeat volta 2 {
-    | fs,4 ( fs'8 -. ) r a,4 ( a'8 -. ) r
+    | fs,4 fs'8 -. r a,4 a'8 -. r
     | e,8 e'16 e r8 e r e16 e r8 e16 e
     | r8 e r e r e16 e r8 e
   }
@@ -58,7 +58,7 @@ music = \relative e {
   | r8 e16 e r8 e r e16 e r8 e,
 
   \repeat volta 2 {
-    | fs4 ( fs'8 -. ) r a,4 ( a'8 -. ) r
+    | fs4 fs'8 -. r a,4 a'8 -. r
 
     \alternative {
       \volta 1 {
@@ -120,7 +120,7 @@ music = \relative e {
   | R1
   | R1
 
-  | fs'2 ( ~ fs8 a ) e' ( fs )
+  | fs'2 ~ fs8 ( a ) e' ( fs )
   | a8 ( gs4 ) fs8 ~ fs8 e ( cs4 )
   | gs4. b8 ~ b b ( cs ) b ~
   | b4 r8 gs b gs ( fs4 )
@@ -136,7 +136,7 @@ music = \relative e {
     }
   >>
 
-  | fs'4. ( a8 ~ a4 ) cs,8 e,
+  | fs'4. ( a8 ) ~ a4 cs,8 e,
   | fs4. a'8 ~ a gs ( fs4 )
   << {
     | r4. b8 ~ b cs8 ( ds4 ) ~
@@ -152,12 +152,12 @@ music = \relative e {
   | <e b'' e gs>1
 
   \repeat volta 2 {
-    | fs4 ( fs'8 -. ) r a,4 ( a'8 -. ) r
+    | fs4 fs'8 -. r a,4 a'8 -. r
     | e,8 e'16 e r8 e r e16 e r8 e16 e
     | r8 e r e r e16 e r8 e
   }
 
-  | fs,4 ( fs'8 -. ) r a,4  ^\markup \italic "D.S. al Coda" ( a'8 -. ) r
+  | fs,4 fs'8 -. r a,4  ^\markup \italic "D.S. al Coda" a'8 -. r
 
   \bar "||"
 }
