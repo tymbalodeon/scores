@@ -39,7 +39,7 @@
     }
 
     \new Staff \with {
-        instrumentName = "Double Bass"
+        instrumentName = \markup \tiny "Double Bass"
     } \compressMMRests {
         \numericTimeSignature
         \turnOnTheLightsTheRadioBass

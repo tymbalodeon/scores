@@ -4,6 +4,8 @@ verseOne = \relative fs {
   | R1 * 3 |
   | r2 r4 r16 e, fs ( gs )
 
+  \mark \default
+
   | b8. b16 fs fs8 b16 ~ b b8 b16 fs'8 b,16 bs
   | cs8. cs16 gs gs8 cs16 ~ cs ds8 e16 ~ e ds cs8
   | ds8. ds16 b b8 ds16 ~ ds fs8 gs16 ~ gs fs ds8
@@ -14,6 +16,8 @@ verseOne = \relative fs {
 }
 
 chorus = \relative b, {
+  \mark \default
+
   | b8. b16 ds ds8 e16 ~ e es8 fs16 ~ fs gs b ( cs )
   | cs,8. cs16 e e8 fs16 ~ fs gs8 b16 ~ b cs ds ( e )
   | ds,8. ds16 fs fs8 gs16 ~ gs as8 b16 ~ b cs  ds ( e )
@@ -29,6 +33,8 @@ chorus = \relative b, {
 }
 
 chorusFinal = \relative b, {
+  \mark \default
+
   | b8. b16 ds ds8 e16 ~ e es8 fs16 ~ fs gs b ( cs )
   | cs,8. cs16 e e8 fs16 ~ fs gs8 b16 ~ b cs ds ( e )
   | ds,8. ds16 fs fs8 gs16 ~ gs as8 b16 ~ b cs  ds ( e )
@@ -49,11 +55,14 @@ chorusFinal = \relative b, {
   | ds8. ds16 as' as8 ds,16 as' ds, as' fs' ~ fs as, ds,8
   | e,16 e fs8 gs b as b cs ds
 
-  | R1 * 3
-  | r2. r4\fermata
+  \time 12/8
+
+  | R8 * 12 * 4
 }
 
 verseTwo = \relative c {
+  \mark \default
+
   | b8. b16 fs' fs8 b16 ~ b b8 fs16 b fs b, bs
   | cs8. cs16 gs' gs8 cs16 ~ cs cs8 b16 cs b gs8
   | ds8. ds16 fs16 gs8 b16 ~ b16 ds8 cs16 ~ cs b gs8
@@ -64,6 +73,8 @@ verseTwo = \relative c {
 }
 
 verseThree = \relative b, {
+  \mark \default
+
   | b8. b16 fs'16 fs8 b16 ~ b16 b8 fs16 b16 fs16 b,16 bs16
   | cs8 gs'16 cs, ds'16 ( e16 ) ds16 cs16 ~ cs16 b8 gs16 ~ gs16 fs16 e8
   | ds8 b16 ( cs16 ) ds16 e16 fs16 gs16 ~ gs16 b8 cs16 ~ cs16 ds ( e8 )
@@ -74,6 +85,8 @@ verseThree = \relative b, {
 }
 
 bridge = \relative g {
+  \mark \default
+
   | R1 * 3
   | r2. r8 fs8
 
@@ -89,7 +102,6 @@ whereWhenBass = \relative c {
 
   \verseOne
   \chorus
-  \tag #'album \pageBreak
   \verseTwo
   \chorus
   \verseThree

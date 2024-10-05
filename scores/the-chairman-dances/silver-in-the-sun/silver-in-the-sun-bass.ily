@@ -1,12 +1,13 @@
 \version "2.25.17"
 
 silverInTheSunBass = \relative fs, {
-  \key c \major
+  \key d \major
   \time 4/4
   \clef "bass"
 
+  | g4 a b cs
   | R1 * 3
-  | r2. fs4
+  | r2. fs,4
 
   | b4 r8 b ~ b4 e
   | fs4 r8 fs ~ fs4 fs,
@@ -29,6 +30,8 @@ silverInTheSunBass = \relative fs, {
   | R1 * 3
   | r2. fs4
 
+  \mark \default
+
   | b4 r8 b'8 ~ b4 e,8 es
   | fs4 r8 fs,8 ~ fs4 fs'8 a,
   | e'8 fs ( g ) fs ~ fs e4 b8
@@ -47,10 +50,14 @@ silverInTheSunBass = \relative fs, {
   | g4 r8 g8 ~ g g g d
   | g g fs a, e' a, b cs
 
+  \mark \default
+
   | d4 r8 d8 ~ d4 e,8 es
   | fs4 r8 fs8 ~ fs4 fs
   | g1 ~
   | g1
+
+  \mark \default
 
   \repeat unfold 2 {
     | e'2. b4
@@ -74,11 +81,15 @@ silverInTheSunBass = \relative fs, {
 
   | R1 * 4
 
+  \mark \default
+
   | R1 * 8
 
   | R1
 
   | r2 r8 e,, fs4
+
+  \mark \default
 
   | d'4 r8 d8 ~ d4 e8 es
   | fs4 r8 fs8 ~ fs4 fs,
