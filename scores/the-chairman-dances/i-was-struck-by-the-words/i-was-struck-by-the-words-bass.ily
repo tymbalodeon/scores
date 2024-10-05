@@ -2,14 +2,17 @@
 
 iWasStruckByTheWordsBass = \relative d {
   \key c \major
+  \time 2/4
 
   \clef bass
 
-  \partial 2
+  \partial 4.
 
-  r2
+  r8 r4
 
-  | r2. d16 c a f -> ~
+  | R2 * 2
+
+  | r4 d16 c a f -> ~
 
   | f8 f'16 f, a c d f ~
   | f16 f d r c ( d ) f g, ~
