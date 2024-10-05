@@ -5,10 +5,12 @@ leastOfTheseBass = \relative c {
     \time 2/4
     \clef "bass"
 
-    | R2 * 4
+    | R2 * 2
     | R2 * 7
 
     | r8. bf16 bf' a g f
+
+	\mark \default
 
     | f,4 g
     | a2
@@ -38,8 +40,13 @@ leastOfTheseBass = \relative c {
     | c8 c8 ~ c8. g16
     | c4 e,
 
-    | R1 * 4
-    | R1 * 8
+    | R2 * 4
+
+	\mark \default
+
+    | R2 * 16
+
+	\mark \default
 
     | a16 -. a -. a -. a -. a -. a -. a -- e' --
     | a16 -. a -. a -. a -. a -. a -. a -- e --
@@ -69,6 +76,8 @@ leastOfTheseBass = \relative c {
 
     | R2 * 3
     | r8. bf16 bf' a g f
+
+	\mark \default
 
     \repeat volta 4 {
       | f,8. f'16 g,8. g'16
