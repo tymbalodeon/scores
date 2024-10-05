@@ -11,6 +11,8 @@ weRifledThroughBass = \relative e {
   | R1 * 3
   | r2. r8 e -> ~
 
+  \mark \default
+
   | e4 e8 b e fs g a ~
   | a4 a8 e a g fs d ~
   | d4 d8 a d a' fs g ~
@@ -50,12 +52,12 @@ weRifledThroughBass = \relative e {
   | g8 g g e ( g ) g g e (
   | g8 ) g g e ( g ) g r a -> ~
 
-  | a8 a a a a a a \acciaccatura d e
+  | a8 a a a a a a \acciaccatura d16 e8
   | a8 a a e a af a, g'8 ~
   | g8 g g g g g g d
   | g8 d g d g g, gs a ~
 
-  | a8 a a a a a a \acciaccatura d e
+  | a8 a a a a a a \acciaccatura d16 e8
   | a8 a a e a e fs g ~
   | g8 g g g g g g d
   | g8 d g fs'16 ^\markup \italic "solo, with guitar" ( g fs8 ) e b e, -> ~
@@ -76,7 +78,7 @@ weRifledThroughBass = \relative e {
 
   | r8 e' \afterGrace e'2. -> \glissando { \hideNotes b8 \unHideNotes }
   | r8 a, \afterGrace a'2. -> \glissando { \hideNotes e8 \unHideNotes }
-  | r8 e, fs g a e fs g ~
+  | r8 e, -. -- fs -. -- g -. -- a -. -- e -. -- fs -. -- g -- -> ~
   | g4 g' g8 fs r e ~
 
   | e8 e, fs fs g g gs a ~
@@ -124,7 +126,7 @@ weRifledThroughBass = \relative e {
   | d d d d d d d d
   | d d d d d d d a (
   | d ) d d d d d d d
-  | <d a'>8 -. -> r r4 r2
+  | <d a'>8 -> r r4 r2
 
   \bar "|."
 }
