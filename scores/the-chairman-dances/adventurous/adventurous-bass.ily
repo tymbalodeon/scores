@@ -3,7 +3,6 @@
 adventurousBass = \relative c {
   \key a \major
   \clef "bass"
-  \time 2/2
 
   | R1 * 2
   | R1 * 4
