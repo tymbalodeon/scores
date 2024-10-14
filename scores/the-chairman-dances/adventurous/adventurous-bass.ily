@@ -47,6 +47,8 @@ adventurousBass = \relative c {
 
   | R1 * 2
 
+  \pageBreak
+
   \mark \default
 
   \repeat volta 2 {

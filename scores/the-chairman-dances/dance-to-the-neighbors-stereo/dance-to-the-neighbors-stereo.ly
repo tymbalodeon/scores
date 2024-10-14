@@ -69,6 +69,7 @@ verseTwo = \relative fs {
 
 outro = \relative e {
     | R1 * 3
+    \pageBreak
     | e8 e d d cs cs b ( a )
 
     | d4 r8 d ~ d d fs gs
@@ -112,7 +113,7 @@ outroInstrumental = \relative d {
     | <a cs'>1
 }
 
-music = \relative c {
+danceToTheNeighborsStereoBass = \relative c {
     \key fs \major
     \clef "bass"
 
@@ -130,12 +131,12 @@ music = \relative c {
     \bar "|."
 }
 
-\score {
-    \new Staff \with {
-        instrumentName = "Bass"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \music
-    }
-}
+% \score {
+%     \new Staff \with {
+%         instrumentName = "Bass"
+%         \numericTimeSignature
+%     } {
+%         \compressMMRests
+%         \danceToTheNeighborsStereoBass
+%     }
+% }
