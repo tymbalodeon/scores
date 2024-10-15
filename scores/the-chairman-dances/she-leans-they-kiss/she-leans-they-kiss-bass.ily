@@ -76,7 +76,7 @@ sheLeansTheyKissBass = \relative gs {
   | R2 * 6
   | R2 * 6
   | R2 * 6
-  | R2 * 8
+  | R2 * 4
 
   | r4 \acciaccatura fs16 gs16 fs ds e, -> ~
 
