@@ -27,7 +27,11 @@ silverInTheSunBass = \relative fs, {
   | g1 ~
   | g1
 
+
   | R1 * 3
+
+  \tag #'album \pageBreak
+
   | r2. fs4
 
   \mark \default

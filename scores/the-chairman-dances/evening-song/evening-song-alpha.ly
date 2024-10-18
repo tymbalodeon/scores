@@ -29,18 +29,20 @@
 \markuplist \table-of-contents
 \pageBreak
 
-\tocItem \markup "Acme Parking Garage"
+\tocItem \markup "Struck By The Words"
 
 \score {
     \header {
-        piece = "Acme Parking Garage"
+        piece = "Struck By The Words"
     }
 
     \compressMMRests {
         \numericTimeSignature
-        \acmeParkingGarageBass
+        \iWasStruckByTheWordsBass
     }
 }
+
+\pageBreak
 
 \tocItem \markup "Adventurous"
 
@@ -57,70 +59,18 @@
 
 \pageBreak
 
-\tocItem \markup "Dance to the Neighbor's Stereo"
+\tocItem \markup "Where / When"
 
 \score {
     \header {
-        piece = "Dance to the Neighbor's Stereo"
+        piece = "Where / When"
     }
 
     \compressMMRests {
         \numericTimeSignature
-        \danceToTheNeighborsStereoBass
+        \whereWhenBass
     }
 }
-
-\tocItem \markup "Faded & Fraying"
-
-\score {
-    \header {
-        piece = "Faded & Fraying"
-    }
-
-    \compressMMRests {
-        \numericTimeSignature
-        \fadedAndFrayingBass
-    }
-}
-
-\pageBreak
-
-\tocItem \markup "Hadn't Tried"
-
-\score {
-    \header {
-        piece = "Hadn't Tried"
-    }
-
-    \compressMMRests {
-        \numericTimeSignature
-        \hadntTriedBass
-    }
-}
-
-\score {
-    \compressMMRests {
-        \numericTimeSignature
-        \hadntTriedBassCoda
-    }
-}
-
-\pageBreak
-
-\tocItem \markup "She Leans, They Kiss"
-
-\score {
-    \header {
-        piece = "She Leans, They Kiss"
-    }
-
-    \compressMMRests {
-        \numericTimeSignature
-        \sheLeansTheyKissBass
-    }
-}
-
-\pageBreak
 
 \tocItem \markup "Silver in the Sun"
 
@@ -147,21 +97,6 @@
 
 \pageBreak
 
-\tocItem \markup "Struck By The Words"
-
-\score {
-    \header {
-        piece = "Struck By The Words"
-    }
-
-    \compressMMRests {
-        \numericTimeSignature
-        \iWasStruckByTheWordsBass
-    }
-}
-
-\pageBreak
-
 \tocItem \markup "We Rifled Through"
 
 \score {
@@ -177,15 +112,79 @@
 
 \pageBreak
 
-\tocItem \markup "Where / When"
+\tocItem \markup "Acme Parking Garage"
 
 \score {
     \header {
-        piece = "Where / When"
+        piece = "Acme Parking Garage"
     }
 
     \compressMMRests {
         \numericTimeSignature
-        \whereWhenBass
+        \acmeParkingGarageBass
     }
 }
+
+\tocItem \markup "Faded & Fraying"
+
+\score {
+    \header {
+        piece = "Faded & Fraying"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \fadedAndFrayingBass
+    }
+}
+
+\pageBreak
+
+\tocItem \markup "She Leans, They Kiss"
+
+\score {
+    \header {
+        piece = "She Leans, They Kiss"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \sheLeansTheyKissBass
+    }
+}
+
+\pageBreak
+
+\tocItem \markup "Hadn't Tried"
+
+\score {
+    \header {
+        piece = "Hadn't Tried"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \hadntTriedBass
+    }
+}
+
+\score {
+    \compressMMRests {
+        \numericTimeSignature
+        \hadntTriedBassCoda
+    }
+}
+
+\tocItem \markup "Dance to the Neighbor's Stereo"
+
+\score {
+    \header {
+        piece = "Dance to the Neighbor's Stereo"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \danceToTheNeighborsStereoBass
+    }
+}
+
