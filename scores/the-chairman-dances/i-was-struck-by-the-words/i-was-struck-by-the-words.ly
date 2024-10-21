@@ -5,7 +5,7 @@
 \include "scores/the-chairman-dances/i-was-struck-by-the-words/i-was-struck-by-the-words-bass.ily"
 
 \header {
-  title = "I Was Struck By The Words"
+  title = "Struck By The Words"
   subtitle = "The Chairman Dances"
   composer = "Eric Krewson"
   arranger = "Ben Rosen, bass"
