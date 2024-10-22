@@ -2,17 +2,19 @@
 
 iWasStruckByTheWordsBass = \relative d {
   \key c \major
-  \time 2/4
+  \time 4/4
 
   \clef bass
+
+  \partial 2
 
   \new CueVoice {
     r8 c16 a c d e g \laissezVibrer
   }
 
-  | R2 * 2
+  | R1
 
-  | r4 d16 c a f -> ~
+  | r2. d16 c a f -> ~
 
   % | f8 f'16 f, a c d f ~
   % | f16 f d r c ( d ) f g, ~
