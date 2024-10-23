@@ -45,8 +45,6 @@ togetherApart = \relative c'' {
     | b'1.
     | c1.
 
-	\tag #'album \pageBreak
-
     | d1.
     | \appoggiatura <d g ~>8 <e g>4. <d g> b4 a8 ~ a4 g8 ~
     | g4. ~ g4 d8 ( e4 ) g8 ~ g4.
@@ -99,6 +97,8 @@ togetherApart = \relative c'' {
     | d'4. c b a
     | a1. ~
     | a1. 
+
+	\tag #'album \pageBreak
 
     | b'1.
     | c4. r r2.

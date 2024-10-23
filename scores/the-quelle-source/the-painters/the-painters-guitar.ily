@@ -72,8 +72,6 @@ thePainters = \relative d'' {
     
     | R1 * 8
 
-    \tag #'album \pageBreak
-
     \repeat volta 2 {
         | <c,, g' d' g g>4  ^\markup {
               \fret-diagram-terse "x;o;2;4;5;o;"

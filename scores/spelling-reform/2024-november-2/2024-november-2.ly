@@ -6,14 +6,12 @@
 \include "scores/spelling-reform/i-am-your-hypocrite/i-am-your-hypocrite-guitar.ily"
 \include "scores/spelling-reform/hum-along/hum-along-guitar.ily"
 \include "scores/spelling-reform/the-grieving-game/the-grieving-game-guitar.ily"
-\include "scores/spelling-reform/circles/circles-guitar.ily"
 \include "scores/spelling-reform/the-organs-of-enlightenment/the-organs-of-enlightenment-guitar.ily"
 \include "scores/spelling-reform/there-is-no-more-future/there-is-no-more-future-guitar.ily"
 \include "scores/spelling-reform/meet-me-in-the-atmosphere/meet-me-in-the-atmosphere-guitar.ily"
 \include "scores/spelling-reform/microscope/microscope-guitar.ily"
 \include "scores/the-quelle-source/the-painters/the-painters-guitar.ily"
 \include "scores/spelling-reform/together-apart/together-apart-guitar.ily"
-\include "scores/spelling-reform/the-real-giving-up/the-real-giving-up-guitar.ily"
 \include "scores/spelling-reform/fake-conversations/fake-conversations-guitar.ily"
 
 \header {
@@ -32,16 +30,31 @@
 \markuplist \table-of-contents
 \pageBreak
 
-\tocItem \markup "I Am Your Hypocrite"
+\tocItem \markup "The Grieving Game"
 
 \score {
     \header {
-        piece = "I Am Your Hypocrite"
+        piece = "The Grieving Game"
     }
 
     \compressMMRests {
         \numericTimeSignature
-        \iAmYourHypocrite
+        \theGrievingGame
+    }
+}
+
+\tocItem \markup "Microscope"
+
+\score {
+    \header {
+        piece = "Microscope"
+        opus = "Andrew Ciampa, guitar"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \removeWithTag #'album
+        \microscope
     }
 }
 
@@ -58,31 +71,47 @@
     }
 }
 
-\tocItem \markup "The Grieving Game"
+\tocItem \markup "Meet Me in the Atmosphere"
 
 \score {
     \header {
-        piece = "The Grieving Game"
+        piece = "Meet Me in the Atmosphere"
     }
 
     \compressMMRests {
         \numericTimeSignature
-        \theGrievingGame
+        \meetMeInTheAtmosphere
     }
 }
 
-\tocItem \markup "Circles"
+\tocItem \markup "I Am Your Hypocrite"
 
 \score {
     \header {
-        piece = "Circles"
+        piece = "I Am Your Hypocrite"
     }
 
     \compressMMRests {
         \numericTimeSignature
-        \circles
+        \iAmYourHypocrite
     }
 }
+
+\tocItem \markup "Fake Conversations"
+
+\score {
+    \header {
+        piece = "Fake Conversations"
+        opus = "Andrew Ciampa, guitar"
+    }
+
+    \compressMMRests {
+        \numericTimeSignature
+        \fakeConversations
+    }
+}
+
+\pageBreak
 
 \tocItem \markup "The Organs of Enlightenment"
 
@@ -112,33 +141,7 @@
     }
 }
 
-\tocItem \markup "Meet Me in the Atmosphere"
-
-\score {
-    \header {
-        piece = "Meet Me in the Atmosphere"
-    }
-
-    \compressMMRests {
-        \numericTimeSignature
-        \meetMeInTheAtmosphere
-    }
-}
-
-\tocItem \markup "Microscope"
-
-\score {
-    \header {
-        piece = "Microscope"
-        opus = "Andrew Ciampa, guitar"
-    }
-
-    \compressMMRests {
-        \numericTimeSignature
-        \removeWithTag #'album
-        \microscope
-    }
-}
+\pageBreak
 
 \tocItem \markup "The Painters"
 
@@ -160,6 +163,8 @@
     }
 }
 
+\pageBreak
+
 \tocItem \markup "Together Apart"
 
 \score {
@@ -171,32 +176,5 @@
     \compressMMRests {
         \numericTimeSignature
         \togetherApart
-    }
-}
-
-\tocItem \markup "The Real Giving Up"
-
-\score {
-    \header {
-        piece = "The Real Giving Up"
-    }
-
-    \compressMMRests {
-        \numericTimeSignature
-        \theRealGivingUp
-    }
-}
-
-\tocItem \markup "Fake Conversations"
-
-\score {
-    \header {
-        piece = "Fake Conversations"
-        opus = "Andrew Ciampa, guitar"
-    }
-
-    \compressMMRests {
-        \numericTimeSignature
-        \fakeConversations
     }
 }
