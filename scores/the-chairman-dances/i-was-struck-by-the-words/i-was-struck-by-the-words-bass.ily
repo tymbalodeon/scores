@@ -111,8 +111,8 @@ iWasStruckByTheWordsBass = \relative d {
 
   | f4 f'8 f, a c d f ~
   | f8 f d r c ( d ) f g, ~
-  | g4 g'8 g, b d e g ~
-  | g g e a, a' g e f ~
+  | g4 g'8 g, b d e g 
+  | a g b g d' g, e' f, ~
 
   \mark \default
 
@@ -124,19 +124,19 @@ iWasStruckByTheWordsBass = \relative d {
   | f8 f c' c, a' b ( c ) f, ~
   | f8 f c' c, e' d c g ~
   | g8 g d' d, b' c ( d ) g,
-  | b8 d e ( g ) a e ( d ) c
+  | b8 d e ( g ) e b ( a ) f ~
 
-  | f,8 f c' c, a' b ( c ) f, ~
+  | f8 f c' c, a' b ( c ) f, ~
   | f8 f c' c, e' d c g ~
   | g8 g d' d, b' c ( d ) g, ~
   | g8 a, c d ( e ) g a f ~
 
   | f8 f c' c, a' b ( c ) f, ~
   | f8 f c' c, e' d c g ~
-  | g8 \> g d' d, b' c ( d ) g, ~
-  | g8 \acciaccatura a16 b8 d e g a ( b ) c ~
+  | g8 \> g d' d, b' c ( d ) \acciaccatura a,16 b8 
+  | d e g a b d e,, f ~
 
-  | c1 \! \fermata
+  | f1 \! \fermata
 
   \bar "|."
 }
