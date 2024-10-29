@@ -60,11 +60,11 @@ weRifledThroughBass = \relative e {
   | a8 a a a a a a \acciaccatura d16 e8
   | a8 a a e a e fs g ~
   | g8 g g g g g g d
-  | g8 d g fs'16 ^\markup \italic "solo, with guitar" ( g fs8 ) e b e, -> ~
+  | g8 d g fs'16 ^\markup \italic "solo, with guitar" ( g fs8 ) e b e,, -> ~
 
   \mark \default
 
-  | e8 a, b cs d e fs a
+  | e8 a b cs d e fs a
   | b8 a cs a e' a, g' fs ~
   | fs8 e d e fs d d, g
   | r8 a16 ( b ) d8 e g a as b ~

@@ -45,26 +45,26 @@ acmeParkingGarageBass = \relative c {
 
     \time 2/4
 
-    \new CueVoice {
-        \cueClef treble
+    % \new CueVoice {
+    %     \cueClef treble
 
-        \relative c' {
-            | g16 a b cs d16 e f g
-            | a16 b cs d e f g a
+    %     \relative c' {
+    %         | g16 a b cs d16 e f g
+    %         | a16 b cs d e f g a
 
-            \ottava #1
+    %         \ottava #1
 
-            | b16 cs d e f g a b
+    %         | b16 cs d e f g a b
 
-            \ottava #-0
+    %         \ottava #-0
 
-            \cueClefUnset
-        }
-    }
+    %         \cueClefUnset
+    %     }
+    % }
 
-    | R2 * 10
+    % | R2 * 10
 
-    \mark \default
+    % \mark \default
 
     | R2
     | r4 r16 g g a

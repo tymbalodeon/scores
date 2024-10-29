@@ -125,6 +125,8 @@
     }
 }
 
+\pageBreak
+
 \tocItem \markup "Faded & Fraying"
 
 \score {

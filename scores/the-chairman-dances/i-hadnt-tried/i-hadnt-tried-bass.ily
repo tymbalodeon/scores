@@ -11,8 +11,7 @@ hadntTriedBass = \relative e {
   \time 4/4
   \clef "bass"
 
-  | R1 * 3
-  | r2. r8 e16 e 
+  | R1 * 4
 
   | r8 e -- r e -- r e16 e r8 e16 e
   | r8 e -- r e ^\markup sim. r e16 e r8 e16 e
@@ -20,13 +19,11 @@ hadntTriedBass = \relative e {
   | r8 e16 e r8 e r e16 e r8 e16 e
   | r8 e16 e r8 e r e16 e r8 e
 
-  \repeat volta 2 {
-    | r8 e r e r e16 e r8 e16 e
-    | r8 e r e r e16 e r8 e16 e
+  | r8 e r e r e16 e r8 e16 e
+  | r8 e r e r e16 e r8 e16 e
 
-    | r8 e16 e r8 e r e16 e r8 e16 e
-    | r8 e16 e r8 e r e16 e r8 e
-  }
+  | r8 e16 e r8 e r e16 e r8 e16 e
+  | r8 e16 e r8 e r e16 e r8 e
 
   \repeat volta 2 {
     | fs,4 fs'8 -. r a,4 a'8 -. r
