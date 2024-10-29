@@ -89,7 +89,7 @@ theOrgansOfEnlightenment = \relative c'' {
     | <af af'>2. ~
     | <af af'>2.
     | <bf bf'>2. ~
-    | <bf bf'>2. ~
+    | <bf bf'>2.
 
     | <af af'>2. ~
     | <af af'>4. <df df'>

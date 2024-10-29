@@ -64,7 +64,7 @@ iAmYourHypocrite = \relative g'' {
     % }
     % | R1 * 6
 
-    \tag #'album \pageBreak
+    % \tag #'album \pageBreak
 
     \key e \major
     \bar "||"
