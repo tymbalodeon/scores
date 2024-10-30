@@ -53,13 +53,13 @@ meetMeInTheAtmosphere = \new Voice \with {
   \repeat volta 4 {
     \fourTimes
 
-    | s2 * 3 ^\markup \italic "(verse)"
+    | s2 * 3 ^\markup \italic "[verse]"
   }
 
   \repeat volta 4 {
     \fourTimes
 
-    | s2 * 3 ^\markup \italic "(instrumental)"
+    | s2 * 3 ^\markup \italic "[instrumental]"
   }
 
   | s2 * 2
@@ -67,19 +67,19 @@ meetMeInTheAtmosphere = \new Voice \with {
   \repeat volta 4 {
     \fourTimes
 
-    | s2 * 3 ^\markup \italic "(verse)"
+    | s2 * 3 ^\markup \italic "[verse]"
   }
 
   \repeat volta 4 {
     \fourTimes
 
-    | s2 * 3 ^\markup \italic "(group vocals)"
+    | s2 * 3 ^\markup \italic "[group vocals]"
   }
 
   \repeat volta 4 {
     \fourTimes
 
-    | s2 * 3 ^\markup \italic "(instrumental/group vocals)"
+    | s2 * 3 ^\markup \italic "[instrumental/group vocals]"
   }
 
   | f2 ~

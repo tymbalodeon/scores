@@ -2,6 +2,7 @@
 
 \include "helpers/settings.ily"
 \include "helpers/bar-numbers-left.ily"
+\include "helpers/set-bars-per-line.ily"
 
 \include "scores/spelling-reform/i-am-your-hypocrite/i-am-your-hypocrite-guitar.ily"
 \include "scores/spelling-reform/hum-along/hum-along-guitar.ily"
@@ -92,11 +93,26 @@
     \header {
         piece = "Meet Me in the Atmosphere"
     }
-
-    \compressMMRests {
-        \numericTimeSignature
-        \meetMeInTheAtmosphere
+    \layout {
+        \context {
+          \Score
+          \consists #(set-bars-per-line '(6 5 6))
+        }
     }
+
+    <<
+        \changes
+
+        \new Staff \with {
+          instrumentName = \markup {
+              \tiny \line { "Capo III"  }
+          }
+          \numericTimeSignature
+        } {
+          \compressMMRests
+          \meetMeInTheAtmosphere
+        }
+    >>
 }
 
 \pageBreak

@@ -4,6 +4,8 @@
 \include "helpers/bar-numbers-left.ily"
 \include "helpers/set-bars-per-line.ily"
 
+\include "meet-me-in-the-atmosphere-guitar.ily"
+
 \header {
   title = "Meet Me In The Atmosphere"
   subtitle = "Spelling Reform"

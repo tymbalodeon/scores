@@ -35,7 +35,7 @@ humAlong = \relative a {
 
     % TODO show voices
 
-    | e,,16 ^\markup \italic ord. ( fs ) cs'8 ~ cs e,16 ( fs ) a4 e16 ( fs ) cs'8 ~
+    | e,,16 ^\markup ord. ( fs ) cs'8 ~ cs e,16 ( fs ) a4 e16 ( fs ) cs'8 ~
     | cs8 e,16 ( fs ) a4 e16 ( fs ) cs'8 ~ cs e,16 ( fs )
 
     % | << { \slurUp 
@@ -97,7 +97,7 @@ humAlong = \relative a {
     %     | e4 a, cs8 r4 a8 ~
     % } >>
 
-    | fs'4. ^\markup \italic ord. e8 ~ e2
+    | fs'4. ^\markup ord. e8 ~ e2
     | d8 cs ( b ) a ~ a2 ~
     | a1 ~
     | a1

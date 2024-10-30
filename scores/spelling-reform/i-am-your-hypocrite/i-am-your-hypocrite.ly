@@ -12,12 +12,16 @@
 }
 
 \score {
-    \new Staff \with {
-        instrumentName = "Guitar"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \removeWithTag #'album
-        \iAmYourHypocrite
-    }
+    <<
+        \iAmYourHypocriteChords
+
+        \new Staff \with {
+            instrumentName = "Guitar"
+            \numericTimeSignature
+        } {
+            \compressMMRests
+            \removeWithTag #'album
+            \iAmYourHypocrite
+        }
+    >>
 }
