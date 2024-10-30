@@ -4,7 +4,7 @@ togetherApart = \relative c'' {
     \key g \major
     \time 9/8
 
-    | cs4 cs8 r4 d8 d8 r4
+    | cs4 ^\markup distrotion cs8 r4 d8 d8 r4
     | e4 e8 r4 fs8 fs8 r4
     | g4 g8 r4 a8 a8 r4
     | b4 b8 r4 cs8 cs8 r4
@@ -120,7 +120,7 @@ togetherApart = \relative c'' {
     | a2. ) ~ a4. ~ a8 b ( c ) (
     | b1. )
 
-    | b8 ( c ) ( b ) a ( b ) ( a ) ds,4. r8 g ^\markup \italic soli ( bf ) (
+    | b8 ( c ) ( b ) a ( b ) ( a ) ds,4. r8 g ^\markup \italic "soli, with other guitar" ( bf ) (
 
      \key f \major
     \bar "||"
@@ -130,7 +130,7 @@ togetherApart = \relative c'' {
     | g'2. ~ g4. ~ g4 \tuplet 3/2 { g,16 ( bf ) ( c ) }
     | c'4 ( a8 ) ( c4. ) ~ c ~ c8 g, ( bf ) (
 
-    | c8 ) d a' ~ a4. ~ a4. ~a4 \tuplet 3/2 { g,16 ( bf ) ( c ) }
+    | c8 ) d g ~ g4. ~ g4. ~a4 \tuplet 3/2 { g,16 ( bf ) ( c ) }
     | e4 ( f8 ) e4. ~ e2.
     | b'4 ( \tuplet 3/2 { c16 ) ( b ) ( a ) ( } b4. ) ~ b2.
     | f8 e f g e g a e a b e, ( f )
@@ -151,7 +151,7 @@ togetherApart = \relative c'' {
 
     | R1. * 9
 
-    | g'4. \harmonic fs \harmonic e \harmonic d \harmonic
+    | g'4. ^\markup \tiny G \harmonic fs \harmonic e \harmonic d \harmonic
     | b \harmonic a \harmonic g \harmonic fs4 \harmonic e8 ~ \harmonic
     | e1. \harmonic
     | d1. \harmonic
