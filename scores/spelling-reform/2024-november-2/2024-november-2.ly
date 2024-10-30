@@ -31,16 +31,6 @@
 \markuplist \table-of-contents
 \pageBreak
 
-\markup \fill-line {
-  \column
-  \override #'(padding . 5)
-  \table #'(1 -1 -1) {
-    "" "This page intentionally left blank" ""
-  }
-}
-
-\pageBreak
-
 \tocItem \markup "The Grieving Game"
 
 \score {
@@ -57,8 +47,6 @@
     }
 }
 
-\pageBreak
-
 \tocItem \markup "Microscope"
 
 \score {
@@ -73,6 +61,8 @@
         \microscope
     }
 }
+
+\pageBreak
 
 \tocItem \markup "Hum Along"
 
@@ -129,8 +119,6 @@
         \iAmYourHypocrite
     }
 }
-
-\pageBreak
 
 \tocItem \markup "Fake Conversations"
 
@@ -197,8 +185,6 @@
         \thePainters
     }
 }
-
-\pageBreak
 
 \tocItem \markup "Together Apart"
 

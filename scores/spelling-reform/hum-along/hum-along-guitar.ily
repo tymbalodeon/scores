@@ -75,7 +75,7 @@ humAlong = \relative a {
 
     | R1 * 8 ^\markup \italic \tiny "\"...I swat away any...\""
 
-    \tag #'album \pageBreak
+    % \tag #'album \pageBreak
 
     % << {
         | a4 -0 ^\markup \italic "imitate buzzy synth" cs b8 a4 e'8 ~

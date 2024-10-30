@@ -41,7 +41,7 @@ meetMeInTheAtmosphere = \new Voice \with {
 
     | f4 ^\markup {
       \fret-diagram-terse "x;x;o;2;3;2;"
-    } ^\markup \italic "(group vocals)" f8 \parenthesize f
+    } ^\markup \italic "[group vocals]" f8 \parenthesize f
     | bf4 ^\markup {
       \fret-diagram-terse "3;2;o;o;3;3;"
     } bf8 \parenthesize bf

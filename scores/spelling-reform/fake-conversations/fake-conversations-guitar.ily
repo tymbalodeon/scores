@@ -103,25 +103,25 @@ fakeConversations = \relative d'' {
 
     | \new CueVoice {
         | r8 ^\markup \italic \tiny "Sing: \"Ba, ba, ba, ba...\"" d4 b8 ~
-        | b8 a4 g8 ~
+         b8 a4 g8 ~
         | g8 g'4 fs8 (
-        | e8 ) e4 g,8 ~
+         e8 ) e4 g,8 ~
 
         | g8 d'4 <b ds>8 ~
-        | <b ds>8 <a ds>4 <g e'>8 ~
+         <b ds>8 <a ds>4 <g e'>8 ~
         | <g e'>8 <b g'>4 <a ~ fs'>8 (
-        | <a e'>8 ) <a e'>4 g8 ~
+         <a e'>8 ) <a e'>4 g8 ~
 
         | g8 d'4 b8 ~
-        | b8 a4 g8 ~
+         b8 a4 g8 ~
         | g8 g'4 fs8 (
-        | e8 ) e4 g,8 ~
+         e8 ) e4 g,8 ~
 
         | g8 d'4 <b ds>8 ~
-        | <b ds>8 <a ds>4 <g e'>8
+         <b ds>8 <a ds>4 <g e'>8
     }
 
-    | R2 * 2
+    | R1
 
     \bar "|."
 }

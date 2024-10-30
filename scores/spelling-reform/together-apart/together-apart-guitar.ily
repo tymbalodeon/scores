@@ -98,7 +98,7 @@ togetherApart = \relative c'' {
     | a1. ~
     | a1. 
 
-	\tag #'album \pageBreak
+	% \tag #'album \pageBreak
 
     | b'1.
     | c4. r r2.
@@ -130,7 +130,7 @@ togetherApart = \relative c'' {
     | g'2. ~ g4. ~ g4 \tuplet 3/2 { g,16 ( bf ) ( c ) }
     | c'4 ( a8 ) ( c4. ) ~ c ~ c8 g, ( bf ) (
 
-    | c8 ) d g ~ g4. ~ g4. ~a4 \tuplet 3/2 { g,16 ( bf ) ( c ) }
+    | c8 ) d g ~ g4. ~ g4. ~ g4 \tuplet 3/2 { g,16 ( bf ) ( c ) }
     | e4 ( f8 ) e4. ~ e2.
     | b'4 ( \tuplet 3/2 { c16 ) ( b ) ( a ) ( } b4. ) ~ b2.
     | f8 e f g e g a e a b e, ( f )

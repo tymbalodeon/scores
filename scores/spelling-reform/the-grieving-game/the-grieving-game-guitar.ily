@@ -23,7 +23,7 @@ theGrievingGame = \relative c'' {
         { 
             | s2
             | s2 
-            | s2 s4 s ^\markup \italic "\"No I won't...\"" 
+            | s2 s4 ^\markup \italic "\"No I won't...\""  s 
         }
     >>
 
