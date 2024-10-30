@@ -5,7 +5,7 @@ thePainters = \relative d'' {
     \time 4/4
 
     | R1 
-    | r4. d8 c' c c b ~
+    | r4. d8 ^\markup distortion c' c c b ~
     | b4 g2. ~
     | g4. d8 d d c' b ~
 
@@ -38,9 +38,18 @@ thePainters = \relative d'' {
     | r4 c ~ c8 b4.
     | d4. d8 ~ d2
     
-    | R1 * 8
+      \clef percussion
+      \drummode { 
+            \set countPercentRepeats = ##t
+            \xNotesOn
+            \repeat percent 7 { | hc8 ^\markup handclaps 8 8 8 8 8 8 8 } 
+            \xNotesOff
+      }
 
-    | a8 ( fs ) a ( fs ) g b ( c ) g' ^\markup \italic \tiny G ~
+      | R1
+
+      \clef treble
+    | a8 ( fs ) a ( fs ) g b ( c ) g' ^\markup \tiny G ~
     | g1
     | a,8 ( fs ) a ( fs ) g b ( c ) g' ~
     | g1
@@ -73,7 +82,7 @@ thePainters = \relative d'' {
     | R1 * 8
 
     \repeat volta 2 {
-        | <c,, g' d' g g>4  ^\markup {
+        | <c,, g' d' g g>4 ^\markup ord. ^\markup {
               \fret-diagram-terse "x;o;2;4;5;o;"
             } <c g' d' g g> <c g' d' g g>8 <c g' d' g g> <c g' d' g g> <c g' d' g g>
         | <c g' d' g g>4 <c g' d' g g> <c g' d' g g>8 <c g' d' g g> <c g' d' g g> <c g' d' g g>
@@ -101,7 +110,7 @@ thePainters = \relative d'' {
         }
     }
 
-    | <c g' c e g>4 ^\markup {
+    | <c g' c e g>4 ^\markup distortion ^\markup {
           \fret-diagram-terse "x;o;2;2;2;o;"
         } <c g' c e g> r8 <c g' c e g> r <c g' c e g>
     | r4 <c g' c e g>4 r8 <c g' c e g> <c g' c e g> r
