@@ -49,7 +49,10 @@
 
     \compressMMRests {
         \numericTimeSignature
-        \theGrievingGame
+        <<
+            \theGrievingGameChords
+            \theGrievingGame
+        >>
     }
 }
 

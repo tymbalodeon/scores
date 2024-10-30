@@ -12,11 +12,15 @@
 }
 
 \score {
-    \new Staff \with {
-        instrumentName = "Guitar"
-        \numericTimeSignature
-    } {
-        \compressMMRests
-        \theGrievingGame
-    }
+    <<
+        \theGrievingGameChords
+
+        \new Staff \with {
+            instrumentName = "Guitar"
+            \numericTimeSignature
+        } {
+            \compressMMRests
+            \theGrievingGame
+        }
+    >>
 }
