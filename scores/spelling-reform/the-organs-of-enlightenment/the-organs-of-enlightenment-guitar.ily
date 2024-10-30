@@ -20,9 +20,9 @@ theOrgansOfEnlightenment = \relative c'' {
 
     | R2. * 8
 
-    | R2.
+    | R2. ^\markup \italic \tiny "\"...trying to numb...\""
 
-    | R2. * 8
+    | R2. * 8 ^\markup \italic \tiny "\"...my station...\""
 
     | <af \5 af' \3>2. ^\markup \italic distortion ~
     | <af af'>2.
@@ -113,15 +113,15 @@ theOrgansOfEnlightenment = \relative c'' {
 
     | R2. * 8
 
-    | af,16 ^\markup \italic "imitate buzzy synth" c bf df af ef' af,16 c bf df af ef'
-    | af,16 c bf df af ef' af,16 af' af, ef' af, df
-    | bf16 c af df bf ef af,16 c af df bf ef
-    | af,16 c bf df af ef' af,16 c bf df af af'
+    | af,16 ^\markup \italic "imitate buzzy synth" c bf df c ef af, c bf df c ef
+    | af,16 c bf df c ef c ef df f ef bf'
+    | af,16 c bf df c ef af, c bf df c ef
+    | af,16 c bf df c ef c ef df f ef bf'
 
-    | af,16 ef' bf df af c af ef' bf ef af, df
-    | af16 c bf df af ef' af, c bf df af c
+    | af16 c bf df c ef af, c bf df c ef
+    | af,16 c bf df c ef af, c bf df c ef
 
-    | R2. \fermata
+    | R2.
 
     \bar "|."
   }
