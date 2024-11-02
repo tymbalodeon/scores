@@ -1,6 +1,8 @@
 \version "2.25.19"
 
 \include "helpers/settings.ily"
+\include "helpers/bar-numbers-left.ily"
+\include "helpers/set-bars-per-line.ily"
 
 \include "epilogue-changes.ily"
 \include "epilogue-lyrics.ily"
@@ -20,6 +22,15 @@
 %     \structure
 %   >>
 % }
+
+\layout {
+  ragged-last = ##f
+  \context {
+    \Score
+    \consists #(set-bars-per-line '(3 4 4 4 4 4))
+  }
+}
+
 
 \score {
     <<
