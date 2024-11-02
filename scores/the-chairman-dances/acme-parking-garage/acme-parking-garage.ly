@@ -190,11 +190,11 @@ acmeParkingGarageBass = \relative c {
     \repeat volta 4 {
         | g16 -> g -> g -> g -> g ^\markup sim. g g g
         | f16 f f f f f f f
-        | bf16 bf bf bf bf bf bf bf
+        | af16 af af af af af af af
 
         | g16 g g g g g g g
         | f16 f f f f f f f
-        | bf16 bf bf bf bf bf bf bf
+        | af16 af af af af af af af
     }
 
     | R2
