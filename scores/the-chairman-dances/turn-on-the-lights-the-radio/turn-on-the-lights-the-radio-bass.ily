@@ -19,14 +19,14 @@ bass_chorus = {
 }
 
 pianoBreak =
-  << 
-  { 
-  | s2 \new CueVoice { \voiceOne { <e g>16 ^\markup \italic piano c <e g> c <e g>8 r } } 
-  | s2 \new CueVoice { \voiceOne { <e g>16 c <e g> c <e g>8 r } } 
+  <<
+  {
+  | s2 \new CueVoice { \voiceOne { <e g>16 ^\markup \italic piano c <e g> c <e g>8 r } }
+  | s2 \new CueVoice { \voiceOne { <e g>16 c <e g> c <e g>8 r } }
   }
-  { 
-  | c8 -> r4. r2 
-  | c8 -> r4. r2 
+  {
+  | c8 -> r4. r2
+  | c8 -> r4. r2
   }
   >>
 
@@ -40,23 +40,23 @@ turnOnTheLightsTheRadioBass = \relative c {
     \repeat unfold 2 {
       | \transpose c g \bass_pattern
     }
-    << 
-    { 
+    <<
+    {
     | s2 \new CueVoice { \voiceOne { <e g>16 ^\markup \italic piano c <e g> c <e g>8 r } }
     }
-    { 
-    | c8 -> r r4 r2 
+    {
+    | c8 -> r r4 r2
     }
     >>
 
     \alternative {
       \volta 1 {
-        << 
-        { 
+        <<
+        {
         | s2 \new CueVoice { \voiceOne { <e g>16 c <e g> c <e g>8 r } }
         }
-        { 
-        | c8 -> r r4 r2 
+        {
+        | c8 -> r r4 r2
         }
         >>
         | R1 ^\markup \italic \tiny "[drum break]"

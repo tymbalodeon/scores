@@ -1,7 +1,7 @@
 #!/usr/bin/env nu
 
 # Initialize direnv environment
-export def main [] {
+def main [] {
   if (which direnv | is-empty) {
     print "Direnv (https://direnv.net/) is not installed."
     print "Please install and try again."

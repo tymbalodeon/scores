@@ -88,4 +88,3 @@ meetMeInTheAtmosphere = \new Voice \with {
 
   \bar "|."
 }
-

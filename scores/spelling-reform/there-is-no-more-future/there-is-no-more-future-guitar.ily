@@ -26,7 +26,7 @@ thereIsNoMoreFuture = \relative c' {
 
     \time 9/8
 
-    | R8 * 9 
+    | R8 * 9
 
     \time 6/8
 
@@ -42,7 +42,7 @@ thereIsNoMoreFuture = \relative c' {
 
     \time 6/8
 
-    | R2. 
+    | R2.
 
     | R2. ^\markup \italic G.P.
 
@@ -58,22 +58,22 @@ thereIsNoMoreFuture = \relative c' {
 
         \new CueVoice {
             | cs8 a'16 ( b ) e4 -0 ~ e8 a,16 ( b ) cs8 a ~
-            | a1 
+            | a1
 
             | cs,8 a'16 ( b ) e4 ~ e8 a,16 ( b ) cs8 e ~
-            | e1 
+            | e1
 
             | cs,8 a'16 ( b ) e4 ~ e8 a,16 ( b ) fs'8 cs ~
-            | cs1 
+            | cs1
 
             | cs,8 a'16 ( b ) e4 ~ e8 cs16 \3 ( b8. ) a8
-            | fs1 
+            | fs1
 
             | cs8 a'16 ( b ) e4 ~ e4 a16. gs fs16
             | cs1
 
             | cs,8 a'16 ( b ) e4 ~ e8 a,16 ( b ) cs8 a
-            | fs,4 <fs d' a'> ^\markup \fret-diagram-terse "2;x;o;2;x;x;" 4 4 
+            | fs,4 <fs d' a'> ^\markup \fret-diagram-terse "2;x;o;2;x;x;" 4 4
         }
     >>
 

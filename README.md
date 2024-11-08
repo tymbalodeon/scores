@@ -90,5 +90,6 @@ Available recipes:
     update *help             # Update dependencies and score LilyPond version
     view-source *recipe      # View the source code for a recipe
 ```
+
 <!-- `just` end -->
 <!-- markdownlint-enable MD013 -->

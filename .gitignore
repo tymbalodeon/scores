@@ -1,8 +1,12 @@
+.config
+.direnv
+.envrc
+.pdm-python
+.venv
+
+# lilypond
 *.log
 *.midi
 *.pdf
 *~
-.direnv
-.DS_Store
-.envrc
 settings.toml

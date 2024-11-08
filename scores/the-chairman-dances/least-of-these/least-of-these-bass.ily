@@ -89,7 +89,7 @@ leastOfTheseBass = \relative c {
     | f,8. f'16 g,8. g'16
     | a,2
     | <bf f'>2 ~
-    | <bf f'>2 
+    | <bf f'>2
 
     \bar "|."
   }

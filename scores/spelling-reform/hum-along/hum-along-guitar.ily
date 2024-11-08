@@ -38,19 +38,19 @@ humAlong = \relative a {
     | e,,16 ^\markup ord. ( fs ) cs'8 ~ cs e,16 ( fs ) a4 e16 ( fs ) cs'8 ~
     | cs8 e,16 ( fs ) a4 e16 ( fs ) cs'8 ~ cs e,16 ( fs )
 
-    % | << { \slurUp 
+    % | << { \slurUp
 
-    a8 ( gs ) 
+    a8 ( gs )
 
-    % \slurNeutral } \new CueVoice { \voiceTwo { \slurDown e8 [ ( ds ) ] \slurNeutral } } >> 
+    % \slurNeutral } \new CueVoice { \voiceTwo { \slurDown e8 [ ( ds ) ] \slurNeutral } } >>
 
     r fs r e r cs ~
 
     | cs2 cs8 ( \glissando e ) r a, ~
 
-    | a1 ~ 
+    | a1 ~
     | a1
-    | R1 
+    | R1
     | r2.. a''8 \1 ^\markup \italic distortion ~
 
     | a2.. e8 \2 ~
@@ -59,7 +59,7 @@ humAlong = \relative a {
     | a2 b16 \3 ( cs ) e4 a8 ~
 
     | a2 ~ a8 b4 cs8 ~
-    | cs8 b4 a8 ~ a e4 a,8 ~ 
+    | cs8 b4 a8 ~ a e4 a,8 ~
     | a2 b16 ( cs ) e4 a,8 ~
     | a1
 
@@ -69,9 +69,9 @@ humAlong = \relative a {
     | e8 fs4 cs8 ~ cs e4 b8 ~
 
     | b2 ~ b8 a4 \3 gs8 ~
-    | gs2 gs8 fs ( e ) cs ~ 
+    | gs2 gs8 fs ( e ) cs ~
     | cs1 ~
-    | cs1 
+    | cs1
 
     | R1 * 8 ^\markup \italic \tiny "\"...I swat away any...\""
 
@@ -110,7 +110,7 @@ humAlong = \relative a {
     | fs1 ~
     | fs1
     | R1
-    | r4 cs' 
+    | r4 cs'
     % << {
         cs8 ( b ) a ( b )
 
@@ -123,11 +123,11 @@ humAlong = \relative a {
     | d8 \3 ^\markup \italic "imitate synth" ( cs ) a d ( cs ) a d ( cs )
     | a8 d ( cs ) a d ( cs ) a d
     | a8 ( gs ) e a ( gs ) e a ( gs )
-    | e8 a ( gs ) e a ( gs ) e a 
+    | e8 a ( gs ) e a ( gs ) e a
 
     | gs8 cs, \6 a' \4 ( gs ) cs, a' ( gs ) cs,
     | a'8 ( gs ) cs, a' ( gs ) cs, a' ( gs )
-    | cs,8 a' ( gs ) cs, a' ( gs ) cs, a' -> ~ 
+    | cs,8 a' ( gs ) cs, a' ( gs ) cs, a' -> ~
     | a8 gs4 -> d8 -> ~ d cs4 -> a'8
 
     | d8 ( cs ) a d ( cs ) a d ( cs )

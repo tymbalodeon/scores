@@ -65,7 +65,7 @@
     \header {
         piece = "We Rifled Through"
     }
- 
+
     \compressMMRests {
         \numericTimeSignature
         \weRifledThroughBass

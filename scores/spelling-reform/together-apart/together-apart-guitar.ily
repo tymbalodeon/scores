@@ -11,7 +11,7 @@ togetherApart = \relative c'' {
 
     \time 12/8
 
-    | d8 d d d d d d d d d4. 
+    | d8 d d d d d d d d d4.
 
     | R1. * 4
 
@@ -40,7 +40,7 @@ togetherApart = \relative c'' {
     | c4. b a g
     | d'4. c b a
     | a1. ~
-    | a1. 
+    | a1.
 
     | b'1.
     | c1.
@@ -52,7 +52,7 @@ togetherApart = \relative c'' {
 
     | \appoggiatura <d' g ~>8 <e g>4. <d g> b4 a8 ~ a4 g8 ~
     | g4. ~ g4 d8 ( e4 ) g8 ~ g4.
-    | b4 a g a ( g ) d 
+    | b4 a g a ( g ) d
     | b'4 a ( g ) c b ( g )
 
     | \appoggiatura <d' g ~>8 <e g>4. <d g> b4 a8 ~ a4 g8 ~
@@ -96,7 +96,7 @@ togetherApart = \relative c'' {
     | c4. b a g
     | d'4. c b a
     | a1. ~
-    | a1. 
+    | a1.
 
 	% \tag #'album \pageBreak
 
@@ -110,7 +110,7 @@ togetherApart = \relative c'' {
 
     | \appoggiatura <d' g ~>8 <e g>4. <d g> b4 a8 ~ a4 g8 ~
     | g4. ~ g4 d8 ( e4 ) g8 ~ g4.
-    | b4 a g a ( g ) d 
+    | b4 a g a ( g ) d
     | b'4 a ( g ) c b ( g )
 
     | \appoggiatura <d' g ~>8 <e g>4. <d g> b4 a8 ~ a4 g8 ~

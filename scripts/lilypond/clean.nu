@@ -3,7 +3,7 @@
 use ./files.nu get_files
 
 # Remove pdfs
-export def main [
+def main [
   search_term = "" # Search term for finding pdfs
   --temporary-files # Clean temporary files (ly~,ily~) instead of pdfs
 ] {

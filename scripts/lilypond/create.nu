@@ -12,15 +12,14 @@ def get_directory_name [name: string] {
 }
 
 # Create new scores
-export def main [
+def main [
   template: string # Which template to use
   title: string # Title for the score
   --arranger = "" # Arranger for the score
-  --artist = "" # Artist for the score 
   --composer = "" # Composer for the score
   --edit # whether to open the file for editing after creating
   --instrument = "" # Instrument name
-  --subtitle = "" # Subtitle for the score
+  --subtitle = "" # Subtitle (or Artist) for the score
 ] {
   let files = (
     fd $template templates/
@@ -30,13 +29,7 @@ export def main [
   let composer = if ($composer | is-empty) {
     settings "composer"
   } else {
-    $composer
-  }
-
-  let subtitle = if ($artist | is-empty) {
-    $subtitle
-  } else {
-    $artist
+    "Anonymous"
   }
 
   let composer_directory = get_directory_name $composer

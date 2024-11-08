@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
 # View repository analytics
-export def main [] {
+def main [] {
   tokei --hidden --sort lines
 }

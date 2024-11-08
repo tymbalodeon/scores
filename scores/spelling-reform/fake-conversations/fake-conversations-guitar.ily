@@ -7,7 +7,7 @@ fakeConversations = \relative d'' {
     | r8 d'4 \1 b8 ~ b a4 g8 ~
     | g g4 fs8 ~ fs e4 d8 ~
     | d8 d'4 b8 ~ b a4 g8 ~
-    | g e4 d8 ~  d e4 b8 
+    | g e4 d8 ~  d e4 b8
 
     | r8 d'4 \1 b8 ~ b a4 g8 ~
     | g g4 fs8 ~ fs e4 d8 ~
@@ -27,21 +27,21 @@ fakeConversations = \relative d'' {
     | g1 ~
     | g1
 
-    | <a, a'>1 \4 ^\markup \italic distortion 
-    | <b b'>1 
-    | <d d'>1 
+    | <a, a'>1 \4 ^\markup \italic distortion
+    | <b b'>1
+    | <d d'>1
     | <g, g -0>8 <g g -0>8 <fs g -0> <fs g -0> <e g -0>8 <e g -0> <d g -0> <d g -0>
 
-    | <c c'>1 
-    | <d d'>1 
-    | <g g'>1 
+    | <c c'>1
+    | <d d'>1
+    | <g g'>1
     | <f f'>1 ~
-    | <f f'>1 
+    | <f f'>1
 
     | r8 ^\markup ord. d''4 \1 b8 ~ b a4 g8 ~
     | g g4 fs8 ~ fs e4 d8 ~
     | d8 d'4 b8 ~ b a4 g8 ~
-    | g e4 d8 ~  d e4 b8 
+    | g e4 d8 ~  d e4 b8
 
     | r8 d'4 \1 b8 ~ b a4 g8 ~
     | g g4 fs8 ~ fs e4 d8 ~
@@ -49,12 +49,12 @@ fakeConversations = \relative d'' {
     | g e4 d8 ~  d e4 ds8 ~
 
     | ds1 ~
-    | ds1 
+    | ds1
 
     | <b' b>1 ^\markup \italic distortion ~
     | <b b>2 ~ <b b>8 <e, e>4 <e d>8 ~
     | <e d>1 ~
-    | <e d>1 
+    | <e d>1
 
     | <b' b>1 ~
     | <b b>2 ~ <b b>4 <a b>8 <g b> ~

@@ -1,45 +1,38 @@
-set unstable := true
+# View help text
+@help *recipe:
+    ./scripts/help.nu {{ recipe }}
 
-@_help:
-    ./scripts/help.nu
+# View file annotated with version control information
+[no-cd]
+@annotate *filename:
+    ./scripts/annotate.nu {{ filename }}
 
-# Run pre-commit hooks
-@check *hooks:
-    ./scripts/check.nu {{ hooks }}
-
-# Remove pdfs
-[confirm]
-@clean *search_term:
-    ./scripts/clean.nu {{ search_term }}
-
-# Compile pdfs
-@compile *search_term:
-    ./scripts/compile.nu {{ search_term }}
-
-# Create new score
-@create *args:
-    ./scripts/create.nu {{ args }}
+# Check flake and run pre-commit hooks
+@check *args:
+    ./scripts/check.nu {{ args }}
 
 # List dependencies
 @deps *args:
     ./scripts/deps.nu {{ args }}
 
-# Open <score> in $EDITOR and pdf viewer, recompiling on file changes
-@edit *args:
-    ./scripts/edit.nu {{ args }}
+# View the diff between environments
+@diff-env *args:
+    ./scripts/diff-env.nu {{ args }}
+
+# Manage environments
+@environment *args:
+    ./scripts/environment.nu {{ args }}
 
 # Search available `just` recipes
+[no-cd]
 [no-exit-message]
 @find-recipe *search_term:
     ./scripts/find-recipe.nu {{ search_term }}
 
-# Search project history
-@history *search_term:
-    ./scripts/history.nu {{ search_term }}
-
-# Get info about scores
-@info *search_term:
-    ./scripts/info.nu {{ search_term }}
+# View project history
+[no-cd]
+@history *args:
+    ./scripts/history.nu {{ args }}
 
 # Initialize direnv environment
 @init *help:
@@ -49,34 +42,65 @@ set unstable := true
 @issue *args:
     ./scripts/issue.nu {{ args }}
 
-# Open pdfs
-@open *search_term:
-    ./scripts/open-pdf.nu {{ search_term }}
-
-# Update README command output
-@_readme *help:
-    ./scripts/readme.nu {{ help }}
+# Create a new release
+@release *preview:
+    ./scripts/release.nu  {{ preview }}
 
 # View remote repository
 @remote *web:
-    ./scripts/remote.nu {{ web }}
-
-# View project settings
-@settings *args:
-    ./scripts/settings.nu {{ args }}
+    ./scripts/remote.nu  {{ web }}
 
 # View repository analytics
 @stats *help:
     ./scripts/stats.nu {{ help }}
 
-# View available templates
-@templates *args:
-    ./scripts/templates.nu {{ args }}
+# Run tests
+@test *args:
+    ./scripts/test.nu {{ args }}
 
-# Update dependencies and score LilyPond version
-@update *help:
+# Update dependencies
+@update-deps *help:
     ./scripts/update-deps.nu {{ help }}
 
 # View the source code for a recipe
+[no-cd]
 @view-source *recipe:
     ./scripts/view-source.nu {{ recipe }}
+
+mod lilypond "just/lilypond.just"
+
+# Alias for `lilypond clean`
+@clean *args:
+    just lilypond clean {{ args }}
+
+# Alias for `lilypond compile`
+@compile *args:
+    just lilypond compile {{ args }}
+
+# Alias for `lilypond create`
+@create *args:
+    just lilypond create {{ args }}
+
+# Alias for `lilypond edit`
+@edit *args:
+    just lilypond edit {{ args }}
+
+# Alias for `lilypond info`
+@info *args:
+    just lilypond info {{ args }}
+
+# Alias for `lilypond open-pdf`
+@open-pdf *args:
+    just lilypond open-pdf {{ args }}
+
+# Alias for `lilypond settings`
+@settings *args:
+    just lilypond settings {{ args }}
+
+# Alias for `lilypond templates`
+@templates *args:
+    just lilypond templates {{ args }}
+
+# Alias for `lilypond update`
+@update *args:
+    just lilypond update {{ args }}

@@ -22,7 +22,7 @@ leftBracket = {
   \once\override BreathingSign.break-visibility = #end-of-line-invisible
   \once\override BreathingSign.Y-offset = ##f
   \once\override BreathingSign.break-align-symbol = #'custos
-  \breathe 
+  \breathe
 }
 
 
@@ -121,7 +121,7 @@ acmeParkingGarageBass = \relative c {
 
     | \leftBracket bf2 ~
     | bf2 ~
-    | bf2 \rightBracket 
+    | bf2 \rightBracket
     | bf16 -> -. r8. r16 bf bf a
     | g16 -> -. r8. r4
 

@@ -9,21 +9,21 @@ theGrievingGame = \relative c'' {
 
     | R2 * 10
 
-    | << 
+    | <<
         \new CueVoice \with {
             \consists "Pitch_squash_engraver"
-        } { 
-            \improvisationOn r4. c8 ~ 
+        } {
+            \improvisationOn r4. c8 ~
 
-            | c8 -> c c c 
+            | c8 -> c c c
             | c c c c
-            | c8 c c c 
+            | c8 c c c
         }
 
-        { 
+        {
             | s2
-            | s2 
-            | s2 s4 ^\markup \italic "\"No I won't...\""  s 
+            | s2
+            | s2 s4 ^\markup \italic "\"No I won't...\""  s
         }
     >>
 
@@ -33,7 +33,7 @@ theGrievingGame = \relative c'' {
 
     \override TextSpanner.bound-details.left.text = \markup "laissez vibrer"
 
-    | r8 af'' \1 ^\markup \italic \tiny A♭ \startTextSpan b, \3  c \2 ~ c2 
+    | r8 af'' \1 ^\markup \italic \tiny A♭ \startTextSpan b, \3  c \2 ~ c2
 
     | R2 * 3 \stopTextSpan
 
@@ -45,7 +45,7 @@ theGrievingGame = \relative c'' {
 
     \time 4/4
 
-    | R1 
+    | R1
     | r2. af,4 \4 ^\markup \italic "slide, distortion" ( \glissando
     | bf1 ) ~
     | bf2 ef ( \glissando
@@ -68,7 +68,7 @@ theGrievingGame = \relative c'' {
     \newSpacingSection
     \override Score.SpacingSpanner.spacing-increment = 3
 
-    | <af, ef' af c ef af>4 ^\markup \fret-diagram-terse "4;6;6;5;4;4;" r8 <ef' bf' ef g bf>8 ^\markup \fret-diagram-terse "x;6;8;8;8;6;"  ~ <ef bf' ef g bf> r 
+    | <af, ef' af c ef af>4 ^\markup \fret-diagram-terse "4;6;6;5;4;4;" r8 <ef' bf' ef g bf>8 ^\markup \fret-diagram-terse "x;6;8;8;8;6;"  ~ <ef bf' ef g bf> r
 
     \time 2/4
 
@@ -79,7 +79,7 @@ theGrievingGame = \relative c'' {
     \newSpacingSection
     \revert Score.SpacingSpanner.spacing-increment
 
-    | <af ef' af c ef af>4 r8 <ef' bf' ef g bf>8 ~ <ef bf' ef g bf> r 
+    | <af ef' af c ef af>4 r8 <ef' bf' ef g bf>8 ~ <ef bf' ef g bf> r
 
     \time 2/4
 
@@ -87,17 +87,17 @@ theGrievingGame = \relative c'' {
 
     \time 3/4
 
-    | <af ef' af c ef af>4 r8 <ef' bf' ef g bf>8 ~ <ef bf' ef g bf> r 
+    | <af ef' af c ef af>4 r8 <ef' bf' ef g bf>8 ~ <ef bf' ef g bf> r
 
     \time 2/4
 
-    | <f c' f af c>4 r8 <df af' df f af>8 ~ 
+    | <f c' f af c>4 r8 <df af' df f af>8 ~
 
-    | <df af' df f af>8 8 \downbow 8 \downbow 8 \downbow 
+    | <df af' df f af>8 8 \downbow 8 \downbow 8 \downbow
     \time 3/4
     | 8 ^\markup sim. 8 8 8
 
-    8 8 
+    8 8
 
     \time 2/4
 
@@ -126,11 +126,11 @@ theGrievingGame = \relative c'' {
         | <af,, ef' af c ef af>8 \downbow 8 \upbow r <ef' bf' ef g bf> \upbow ~ <ef bf' ef g bf> 8 8 \upbow r <f c' f af c> \upbow ~
         | <f c' f af c> <f c' f af c> \upbow r <df af' df f af> \upbow ~ <df af' df f af> 8 8 \upbow 8 \downbow 8 \upbow
         | <af ef' af c ef af>8 8 r <ef' bf' ef g bf> ~ <ef bf' ef g bf> 8 8 r <f c' f af c> ~
-        | <f c' f af c> <f c' f af c> r <df af' df f af> ~ 
+        | <f c' f af c> <f c' f af c> r <df af' df f af> ~
 
         \alternative {
             \volta 1 {
-                | <df af' df f af> 8 8 8 8             
+                | <df af' df f af> 8 8 8 8
             }
 
             \volta 2 {

@@ -1,32 +1,68 @@
 #!/usr/bin/env nu
 
+use ./environment.nu list_nix_folder
+
+def get_flake_dependencies [flake: string] {
+  $flake
+  | rg --multiline "packages = .+(\n|\\[|[^;])+\\]"
+  | lines
+  | drop nth 0
+  | filter {|line| "[" not-in $line and "]" not-in $line}
+  | str trim
+}
+
+export def merge_flake_dependencies [...flakes: string] {
+  $flakes
+  | each {
+      |flake|
+
+      get_flake_dependencies $flake
+    }
+  | flatten
+  | uniq
+  | sort
+  | to text
+}
+
 # List dependencies
-export def main [
-  --find: string # Search for a dependency
+def main [
+  dependency?: string # Search for a dependency
+  --environment: string # List only dependencies for $environment
 ] {
-  let dev_shell = ".#devShells.x86_64-darwin.default.nativeBuildInputs"
-
-  let dependencies = (
-    nix eval $dev_shell --apply "builtins.map (package: package.name)"
-    | split row " "
-    | filter {|line| not ($line in ["[" "]"])}
-    | each {
-        |line|
-
-        $line
-        | str replace --all '"' ""
-      }
-    | sort
-    | to text
+  let environment_files = (
+    "flake.nix" ++ (list_nix_folder | get name)
   )
 
-  if ($find | is-empty) {
-    return $dependencies
+  let environment_files = if ($environment | is-empty) {
+    $environment_files
   } else {
-    return (
+    $environment_files
+    | filter {
+        |file|
+
+        (
+          $file
+          | path basename
+          | path parse
+          | get stem
+          | str replace --regex "^flake$" "generic"
+        ) == $environment
+      }
+  }
+
+  let flakes = (
+    $environment_files
+    | each {|flake| open $flake}
+  )
+
+  let dependencies = (merge_flake_dependencies ...$flakes)
+
+  if ($dependency | is-empty) {
+    print --no-newline $dependencies
+  } else {
+    try {
       $dependencies
-      | find $find
-      | to text
-    )
+      | rg --color always $dependency
+    }
   }
 }

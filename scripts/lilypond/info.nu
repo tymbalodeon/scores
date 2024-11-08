@@ -173,7 +173,7 @@ def get_lilypond_value [file: path, pattern: string] {
   )
 }
 
-export def main [
+def main [
   search_term = "" # Search term for finding pdfs
   --arranger: string # Limit search to an arranger
   --arrangers # View unique arrangers for matching scores

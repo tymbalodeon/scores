@@ -1,14 +1,14 @@
 #!/usr/bin/env nu
 
 # Manage scores settings
-export def main [
+def main [
   --edit # Open settings file in $EDITOR
   key?: string # The key to view or set
   value?: string # The new value for <key>
 ] {
   if $edit {
     if not ("settings.toml" | path exists) {
-      cp settings-default.toml settings.toml
+      cp ../settings-default.toml settings.toml
     }
 
     ^$env.EDITOR settings.toml
@@ -17,10 +17,10 @@ export def main [
   }
 
   let settings = try {
-    open settings-default.toml
+    open ../settings-default.toml
     | merge (open settings.toml)
   } catch {
-    open settings-default.toml
+    open ../settings-default.toml
   }
 
   if ($key | is-empty) {

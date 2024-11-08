@@ -7,14 +7,14 @@ iAmYourHypocrite = \relative g' {
 
     | R1
 
-    | << { 
-        g2. ^\markup \italic "e-bow (imitate synth swell)" g4 ~ 
-        | g2 g ~ 
+    | << {
+        g2. ^\markup \italic "e-bow (imitate synth swell)" g4 ~
+        | g2 g ~
         | g4 g2. ^\markup sim.
-    } { 
-        s8 \< s s \> s s s \! 
-        s8 \< s s \> s s s \! 
-        s8 \< s s \> s s s \! 
+    } {
+        s8 \< s s \> s s s \!
+        s8 \< s s \> s s s \!
+        s8 \< s s \> s s s \!
     } >>
     | g2. g4 ~
 
@@ -80,7 +80,7 @@ iAmYourHypocrite = \relative g' {
     | b4. fs'8 ~ fs4 es
     | cs4. bs?8 ~ bs4 cs
     | ds4. es8 ~ es2
-    
+
     | cs4. ds8 ~ ds4 es
     | b4. fs'8 ~ fs4 es
     | cs4. bs?8 ~ bs4 cs
@@ -112,7 +112,7 @@ iAmYourHypocrite = \relative g' {
                 | c8 ^\markup ord. 8 8 8 8 8 8 8
                 | c8 8 8 8 8 8 8 8
                 | c8 8 8 8 8 8 8 8
-                | c8 8 8 8 8 8 8 8 
+                | c8 8 8 8 8 8 8 8
             }
 
             {
@@ -123,7 +123,7 @@ iAmYourHypocrite = \relative g' {
     }
 
     <<
-        | R1 * 7 
+        | R1 * 7
         { s1 * 7 ^\markup \italic \tiny "\"...look like I'm trying hard?\"" }
     >>
 
@@ -134,7 +134,7 @@ iAmYourHypocrite = \relative g' {
     | b4. fs'8 ~ fs4 es
     | cs4. bs?8 ~ bs4 cs
     | ds4. es8 ~ es2
-    
+
     | cs4. ds8 ~ ds4 es
     | b4. fs'8 ~ fs4 es
     | cs4. bs?8 ~ bs4 cs
@@ -170,6 +170,6 @@ iAmYourHypocriteChords = \chords {
         | g1
         | c1
         | g1
-        | c1 
+        | c1
     }
 }

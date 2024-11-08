@@ -8,10 +8,10 @@ def main [
     (
       just
         --color always
+        --justfile lilypond.just
         --list
-        --list-submodules
     )
   } else {
-    nu $"./scripts/($recipe).nu" --help
-  }
+    nu $"../scripts/lilypond/($recipe).nu" --help
+ }
 }

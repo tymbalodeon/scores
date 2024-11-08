@@ -5,21 +5,21 @@ circles = \relative c'' {
     \time 4/4
 
     | R1 * 7
-    | \new CueVoice \with { 
-        \consists "Pitch_squash_engraver" 
-        } { 
-            \improvisationOn r4. c8 ~ c2 \fermata 
+    | \new CueVoice \with {
+        \consists "Pitch_squash_engraver"
+        } {
+            \improvisationOn r4. c8 ~ c2 \fermata
         }
 
     | R1 * 9
     | R1 * 8
 
     | << {
-        s4 s2. ^\markup \italic G.P. 
+        s4 s2. ^\markup \italic G.P.
     } {
-        \new CueVoice \with { 
-            \consists "Pitch_squash_engraver" 
-        } { 
+        \new CueVoice \with {
+            \consists "Pitch_squash_engraver"
+        } {
             \improvisationOn c8 -. r r2.
         }
     } >>
@@ -45,14 +45,14 @@ circles = \relative c'' {
     | R1 * 2
 
     | R1
-    | r2 r8 fs' \1 ( es ) cs ~ 
+    | r2 r8 fs' \1 ( es ) cs ~
     | cs8 ( ds2.. )
-    | r2 r8 fs ( es ) cs ~ 
+    | r2 r8 fs ( es ) cs ~
 
     | cs8 as2..
-    | r2 r8 es' cs gs ~ 
+    | r2 r8 es' cs gs ~
     | gs8 es4. ~ es4 fs16 ( es8. ) ~
-    | es4. cs8 -> ~ cs2 
+    | es4. cs8 -> ~ cs2
 
     | R1 ^\markup \italic G.P.
 
@@ -89,55 +89,55 @@ circles = \relative c'' {
     | R1
 
     \new CueVoice {
-        | r2 r8 fs' ( es ) cs ~ 
+        | r2 r8 fs' ( es ) cs ~
         | cs8 ( ds2.. )
-        | r2 r8 fs ( es ) cs ~ 
+        | r2 r8 fs ( es ) cs ~
 
         | cs8 as2..
-        | r2 r8 es' cs gs ~ 
+        | r2 r8 es' cs gs ~
         | gs8 es4. ~ es4 fs16 ( es8. ) ~
-        | es4. cs8 ~ cs8 
-        
-    } fs' ( es ) cs ~ 
+        | es4. cs8 ~ cs8
+
+    } fs' ( es ) cs ~
 
     | cs8 ( ds2.. )
 
-    | r2 r8 fs ( es ) cs ~ 
+    | r2 r8 fs ( es ) cs ~
     | cs8 as2..
-    | r2 r8 es' cs gs ~ 
+    | r2 r8 es' cs gs ~
 
     | gs8 es4. ~ es2 ~
     | es2. fs16 ( es8. ) ~
     | es4. cs8 ~ cs2 ~
-    | cs2 r8 fs' ( es ) cs ~ 
+    | cs2 r8 fs' ( es ) cs ~
 
     | cs8 ( ds2.. )
-    | r2 r8 fs ( es ) cs ~ 
+    | r2 r8 fs ( es ) cs ~
     | cs8 as2..
-    | r2 r8 es' cs gs ~ 
+    | r2 r8 es' cs gs ~
 
     | gs8 es4. ~ es2 ~
     | es2. fs16 ( es8. ) ~
     | es4. cs8 ~ cs2 ~
-    | cs2 r8 fs' ( es ) cs ~ 
+    | cs2 r8 fs' ( es ) cs ~
 
     | cs8 ( ds2.. )
-    | r2 r8 fs ( es ) cs ~ 
+    | r2 r8 fs ( es ) cs ~
     | cs8 as2..
-    | r2 r8 es' cs gs ~ 
+    | r2 r8 es' cs gs ~
 
     | gs8 es4. ~ es2 ~
     | es2. fs16 ( es8. ) ~
-    | es2..  
-    | << \new CueVoice \with { 
-            \consists "Pitch_squash_engraver" 
+    | es2..
+    | << \new CueVoice \with {
+            \consists "Pitch_squash_engraver"
         } {
             \voiceOne
-            \improvisationOn    
+            \improvisationOn
 
             s8 r4. c8 -> ~ c2 \fermata
-        } \\ { 
-        \stemUp cs8 ~ cs1 \fermata 
+        } \\ {
+        \stemUp cs8 ~ cs1 \fermata
     } >>
 
     \bar "|."

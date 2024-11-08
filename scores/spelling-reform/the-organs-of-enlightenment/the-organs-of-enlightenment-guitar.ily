@@ -7,7 +7,7 @@ theOrgansOfEnlightenment = \relative c'' {
     | R2. * 12
 
     | r8 af \4 ^\markup \italic "imitate synth" r af r4
-    | r8 af r af r c 
+    | r8 af r af r c
     | r8 af r8 af r4
 
     \time 5/8
@@ -26,7 +26,7 @@ theOrgansOfEnlightenment = \relative c'' {
 
     | <af \5 af' \3>2. ^\markup \italic distortion ~
     | <af af'>2.
-    | <df df'>2. 
+    | <df df'>2.
     | <c c'>2.
 
     | <af af'>2. ~
@@ -36,7 +36,7 @@ theOrgansOfEnlightenment = \relative c'' {
 
     | <af af'>2. ~
     | <af af'>2.
-    | <df df'>2. 
+    | <df df'>2.
     | <c c'>2.
 
     | <af af'>2. ~
@@ -73,7 +73,7 @@ theOrgansOfEnlightenment = \relative c'' {
 
     | <af af'>2.^\markup \italic distortion  ~
     | <af af'>2.
-    | <df df'>2. 
+    | <df df'>2.
     | <c c'>2.
 
     | <af af'>2. ~
@@ -83,7 +83,7 @@ theOrgansOfEnlightenment = \relative c'' {
 
     | <af af'>2. ~
     | <af af'>2.
-    | <df df'>2. 
+    | <df df'>2.
     | <c c'>2.
 
     | <af af'>2. ~
@@ -94,22 +94,22 @@ theOrgansOfEnlightenment = \relative c'' {
     | <af af'>2. ~
     | <af af'>4. <df df'>
     | <c c'>2. ~
-    | <c c'>2. 
+    | <c c'>2.
 
     | <af af'>2. ~
     | <af af'>4. <bf bf'>
     | <c c'>2. ~
-    | <c c'>2. 
+    | <c c'>2.
 
     | <af af'>2. ~
     | <af af'>4. <df df'>
     | <c c'>2. ~
-    | <c c'>2. 
+    | <c c'>2.
 
     | <af af'>2. ~
     | <af af'>4. <bf bf'>
     | <c c'>2. ~
-    | <c c'>2. 
+    | <c c'>2.
 
     | R2. * 8
 

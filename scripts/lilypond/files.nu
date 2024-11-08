@@ -7,7 +7,7 @@ export def get_files [
   let search_directory = if ($extension == "pdf") {
     get_pdfs_directory
   } else {
-    "./"
+    "../"
   }
 
   return (
