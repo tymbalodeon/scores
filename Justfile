@@ -11,9 +11,11 @@
 @check *args:
     ./scripts/check.nu {{ args }}
 
+alias deps := dependencies
+
 # List dependencies
-@deps *args:
-    ./scripts/deps.nu {{ args }}
+@dependencies *args:
+    ./scripts/dependencies.nu {{ args }}
 
 # View the diff between environments
 @diff-env *args:
@@ -59,8 +61,8 @@
     ./scripts/test.nu {{ args }}
 
 # Update dependencies
-@update-deps *help:
-    ./scripts/update-deps.nu {{ help }}
+@update *help:
+    ./scripts/update.nu {{ help }}
 
 # View the source code for a recipe
 [no-cd]
@@ -100,7 +102,3 @@ mod lilypond "just/lilypond.just"
 # Alias for `lilypond templates`
 @templates *args:
     just lilypond templates {{ args }}
-
-# Alias for `lilypond update`
-@update *args:
-    just lilypond update {{ args }}
