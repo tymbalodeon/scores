@@ -1,4 +1,4 @@
-\version "2.25.19"
+\version "2.25.20"
 changes_verse = \chords {
   \repeat unfold 2 {
     d1  |

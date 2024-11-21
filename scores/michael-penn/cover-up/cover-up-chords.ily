@@ -1,4 +1,4 @@
-\version "2.25.19"
+\version "2.25.20"
 changes_intro = \chords {
   bf2.:7 |
   bf1  |

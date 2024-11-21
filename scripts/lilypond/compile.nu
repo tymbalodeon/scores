@@ -1,5 +1,6 @@
 #!/usr/bin/env nu
 
+use ../environment.nu get-project-path
 use ./files.nu get_compilation_status
 use ./files.nu get_files
 use ./files.nu get_lilypond_output_path
@@ -16,7 +17,7 @@ def run-lilypond [file: path, force: bool] {
   if $should_compile {
     print $"Compiling ($file)"
 
-    lilypond --include helpers --output (get_lilypond_output_path $file) $file
+    lilypond --include (get-project-path helpers) --output (get_lilypond_output_path $file) $file
   }
 }
 
@@ -27,7 +28,6 @@ def main [
   --force # Compile score even if up-to-date
   --missing # Only compile scores that are missing a pdf
 ] {
-
   let pdfs_directory = (get_pdfs_directory)
   mkdir $pdfs_directory
 
@@ -52,6 +52,10 @@ def main [
             run-lilypond $file $force out+err> $error_log
             rm $error_log
           } catch {
+              |error|
+
+              print $error
+
               $file
               | wrap file
               | merge ((cat $error_log) | wrap output)

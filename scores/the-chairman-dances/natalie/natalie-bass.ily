@@ -1,4 +1,4 @@
-\version "2.25.19"
+\version "2.25.20"
 
 loco = \markup \italic "loco"
 

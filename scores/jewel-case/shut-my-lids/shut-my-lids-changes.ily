@@ -1,4 +1,4 @@
-\version "2.25.19"
+\version "2.25.20"
 
 changesRiff = \chordmode {
   | a2:m

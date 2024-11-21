@@ -17,10 +17,10 @@ def main [
   }
 
   let settings = try {
-    open ../settings-default.toml
+    open ./settings-default.toml
     | merge (open settings.toml)
   } catch {
-    open ../settings-default.toml
+    open ./settings-default.toml
   }
 
   if ($key | is-empty) {

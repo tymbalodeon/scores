@@ -13,13 +13,9 @@
 
 alias deps := dependencies
 
-# List dependencies
+# List dependencies (alias: `deps`)
 @dependencies *args:
     ./scripts/dependencies.nu {{ args }}
-
-# View the diff between environments
-@diff-env *args:
-    ./scripts/diff-env.nu {{ args }}
 
 # Manage environments
 @environment *args:
@@ -60,10 +56,6 @@ alias deps := dependencies
 @test *args:
     ./scripts/test.nu {{ args }}
 
-# Update dependencies
-@update *help:
-    ./scripts/update.nu {{ help }}
-
 # View the source code for a recipe
 [no-cd]
 @view-source *recipe:
@@ -102,3 +94,7 @@ mod lilypond "just/lilypond.just"
 # Alias for `lilypond templates`
 @templates *args:
     just lilypond templates {{ args }}
+
+# Alias for `lilypond update`
+@update *args:
+    just lilypond update {{ args }}

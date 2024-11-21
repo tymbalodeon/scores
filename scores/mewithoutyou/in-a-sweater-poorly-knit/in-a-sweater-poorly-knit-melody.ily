@@ -1,4 +1,4 @@
-\version "2.25.19"
+\version "2.25.20"
 melody = \relative c' \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {

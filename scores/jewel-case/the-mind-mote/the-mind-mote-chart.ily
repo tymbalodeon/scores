@@ -1,4 +1,4 @@
-\version "2.25.19"
+\version "2.25.20"
 
 \include "the-mind-mote-changes.ily"
 \include "the-mind-mote-melody.ily"

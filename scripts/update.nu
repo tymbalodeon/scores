@@ -2,5 +2,5 @@
 
 # Update dependencies
 def main [] {
-    nix flake update
+  nix flake update
 }
