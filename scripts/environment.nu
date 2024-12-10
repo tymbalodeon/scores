@@ -759,7 +759,9 @@ def copy-pre-commit-config [
 ] {
   initialize-generic-file .pre-commit-config.yaml
 
-  if (is-up-to-date $upgrade $environment (open --raw .pre-commit-config.yaml)) {
+  if (
+    is-up-to-date $upgrade $environment (open --raw .pre-commit-config.yaml)
+  ) {
     return false
   }
 
@@ -767,6 +769,14 @@ def copy-pre-commit-config [
 
   let environment_config = (
     get-environment-file $environment_files ".pre-commit-config.yaml"
+  )
+
+  if ($environment_config | is-empty) {
+    return false    
+  }
+
+  let environment_config = (
+    $environment_config
     | to yaml
     | yamlfmt -
   )
