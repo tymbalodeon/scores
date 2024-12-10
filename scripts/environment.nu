@@ -102,16 +102,6 @@ def get-comment-character [extension: string] {
   }
 }
 
-export def get-tagged-contents [
-  environment: string 
-  extension: string 
-  contents: string
-] {
-  $contents
-  | prepend $"(get-comment-character $extension) ($environment)\n"
-  | str join
-}
-
 def copy-files [
   environment: string
   environment_files: table<
@@ -184,22 +174,6 @@ def copy-files [
 
       if ($path | path parse | get extension) == "nu" {
         chmod +x $path
-      }
-
-      if $environment != "generic" and (
-        $path | path parse | get parent | is-empty
-      ) {
-        let extension = ($path | path parse | get extension)
-
-        let tagged_contents = (
-          get-tagged-contents 
-            $environment 
-            (get-comment-character $extension) 
-            (open --raw $path)
-        )
-
-        $tagged_contents
-        | save --force $path
       }
 
       print $"Downloaded ($path)"
@@ -811,12 +785,11 @@ def copy-pre-commit-config [
   return true
 }
 
-def get-available-environments [] {
-  main list
-  | lines
+def display-available-environments [environments: list<string>] {
+  $environments
   | filter {$in != "generic"}
   | each {$"– ($in)"}
-  | to text
+  | str join "\n"
 }
 
 # Add environments to the project
@@ -825,11 +798,36 @@ def "main add" [
   --upgrade
   --reactivate
 ] {
+  let available_environments = (
+    main list 
+    | lines 
+    | append generic
+  )
+
   if ($environments | is-empty) {
     print "Please specify an environment to add. Available environments:\n"
 
-    return (get-available-environments)
+    return (display-available-environments $available_environments)
   }
+
+  mut unrecognized_environments = []
+  mut recognized_environments = []
+
+  for environment in $environments {
+    if ($environment not-in $available_environments) {
+      $unrecognized_environments = (
+        $unrecognized_environments
+        | append $environment
+      )
+    } else {
+      $recognized_environments = (
+        $recognized_environments
+        | append $environment
+      )
+    }
+  }
+
+  let environments = $recognized_environments
 
   mut should_reactivate = false
 
@@ -882,6 +880,18 @@ def "main add" [
 
   if $should_reactivate {
     main activate
+  }
+
+  for unrecognized_environment in $unrecognized_environments {
+    let environment = (color-yellow $unrecognized_environment)
+
+    print $"Unrecognized environment \"($environment)\""
+  }
+
+  if ($unrecognized_environments | is-not-empty) {
+    print "\nAvailable environments:"
+
+    display-available-environments $available_environments
   }
 }
 
@@ -1167,7 +1177,7 @@ def "main list" [
   list-environment-directory $environment $path $files
 }
 
-def get-project-root [] {
+export def get-project-root [] {
   echo (git rev-parse --show-toplevel)
 }
 
@@ -1281,13 +1291,15 @@ def remove-files [environment: string] {
   rm --force --recursive $"scripts/($environment)"
 }
 
-# TODO test me
-def remove-environment-from-justfile [environment: string] {
+export def remove-environment-from-justfile [
+  environment: string
+  justfile: string
+] {
   let filtered_justfile = try {
     let environment_mod = (
       "mod "
       | append (
-          open Justfile
+          $justfile
           | split row "mod"
           | str trim
           | filter {str starts-with $environment}
@@ -1297,7 +1309,7 @@ def remove-environment-from-justfile [environment: string] {
     )
 
     let filtered_justfile = (
-      open Justfile
+      $justfile
       | str replace $environment_mod ""
     )
 
@@ -1312,9 +1324,11 @@ def remove-environment-from-justfile [environment: string] {
   $filtered_justfile
 }
 
-# TODO test me
-def remove-environment-from-gitignore [environment: string] {
-  open .gitignore
+export def remove-environment-from-gitignore [
+  environment: string
+  gitignore: string
+] {
+  $gitignore
   | split row "# "
   | filter {
       |item|
@@ -1330,9 +1344,11 @@ def remove-environment-from-gitignore [environment: string] {
   | str join
 }
 
-# TODO test me
-def remove-environment-from-pre-commit-config [environment: string] {
-  open --raw .pre-commit-config.yaml
+export def remove-environment-from-pre-commit-config [
+  environment: string
+  pre_commit_config: string
+] {
+  $pre_commit_config
   | split row "# "
   | filter {
       |item|
@@ -1366,18 +1382,22 @@ def "main remove" [
 
     remove-files $environment
 
-    let filtered_justfile = (remove-environment-from-justfile $environment)
+    let filtered_justfile = (
+      remove-environment-from-justfile $environment (open Justfile)
+    )
 
     if $filtered_justfile != null {
       save-justfile $filtered_justfile
     }
 
     save-gitignore (
-      remove-environment-from-gitignore $environment
+      remove-environment-from-gitignore $environment (open .gitignore)
     )
 
     save-pre-commit-config (
-      remove-environment-from-pre-commit-config $environment
+      remove-environment-from-pre-commit-config
+        $environment
+        (open --raw .pre-commit-config.yaml)
     )
   }
 
@@ -1408,8 +1428,7 @@ def "main upgrade" [
   rm $new_environment_command
 }
 
-# TODO test me
-def find-environment-file [
+export def find-environment-file-url [
   environment: string
   file: string
   environment_files: table<
@@ -1432,7 +1451,7 @@ def find-environment-file [
     | path join
   )
 
-  let file_url = if $full_path in ($environment_files | get path) {
+  if $full_path in ($environment_files | get path) {
     let file_url = (
       $environment_files
       | where path == $full_path
@@ -1481,7 +1500,7 @@ def "main view" [
 
   try {
     let file_url = (
-      find-environment-file $environment $file $environment_files
+      find-environment-file-url $environment $file $environment_files
     )
 
     http-get $file_url

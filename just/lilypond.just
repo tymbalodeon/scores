@@ -8,9 +8,8 @@
     ../scripts/lilypond/clean.nu {{ search_term }}
 
 # Compile pdfs
-[no-cd]
 @compile *search_term:
-    ./scripts/lilypond/compile.nu {{ search_term }}
+    ../scripts/lilypond/compile.nu {{ search_term }}
 
 # Create new score
 @create *args:
