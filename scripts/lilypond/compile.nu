@@ -1,5 +1,6 @@
 #!/usr/bin/env nu
 
+use ../environment.nu get-project-path
 use ./files.nu get_compilation_status
 use ./files.nu get_files
 use ./files.nu get_lilypond_output_path
@@ -16,7 +17,12 @@ def run-lilypond [file: path, force: bool] {
   if $should_compile {
     print $"Compiling ($file)"
 
-    lilypond --include helpers --output (get_lilypond_output_path $file) $file
+    (
+      lilypond 
+        --include (get-project-path helpers) 
+        --output (get_lilypond_output_path $file) 
+        $file
+    )
   }
 }
 

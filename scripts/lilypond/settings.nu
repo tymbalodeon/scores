@@ -1,14 +1,19 @@
 #!/usr/bin/env nu
 
+use ../environment.nu get-project-path
+
 # Manage scores settings
 def main [
   --edit # Open settings file in $EDITOR
   key?: string # The key to view or set
   value?: string # The new value for <key>
 ] {
+  let default_settings_file = (get-project-path settings-default.toml)
+  let settings_file = (get-project-path settings.toml)
+
   if $edit {
     if not ("settings.toml" | path exists) {
-      cp ../settings-default.toml settings.toml
+      cp $default_settings_file $settings_file
     }
 
     ^$env.EDITOR settings.toml
@@ -16,11 +21,12 @@ def main [
     return
   }
 
+
   let settings = try {
-    open ../settings-default.toml
-    | merge (open settings.toml)
+    open $settings_file
+    | merge (open $settings_file)
   } catch {
-    open ../settings-default.toml
+    open $settings_file
   }
 
   if ($key | is-empty) {
@@ -40,7 +46,7 @@ def main [
       )
 
       $new_settings
-      | save --force settings.toml
+      | save --force $settings_file
 
       return $new_settings
     }
