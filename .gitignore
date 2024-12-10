@@ -6,6 +6,7 @@
 .venv
 
 # lilypond
+*.error
 *.log
 *.midi
 *.pdf
