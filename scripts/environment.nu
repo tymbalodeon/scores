@@ -799,8 +799,8 @@ def "main add" [
   --reactivate
 ] {
   let available_environments = (
-    main list 
-    | lines 
+    main list
+    | lines
     | append generic
   )
 
