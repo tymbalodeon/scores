@@ -772,7 +772,7 @@ def copy-pre-commit-config [
   )
 
   if ($environment_config | is-empty) {
-    return false    
+    return false
   }
 
   let environment_config = (
@@ -1416,6 +1416,7 @@ def "main remove" [
   }
 }
 
+# Update environment dependencies
 def "main update" [] {
   nix flake update
 }
