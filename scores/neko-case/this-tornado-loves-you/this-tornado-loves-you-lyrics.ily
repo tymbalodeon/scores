@@ -1,4 +1,4 @@
-\version "2.25.20"
+\version "2.25.21"
 
 part_one = \lyricmode {
   My love, I am the speed of sound.

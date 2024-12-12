@@ -1,4 +1,4 @@
-\version "2.25.20"
+\version "2.25.21"
 
 \include "helpers/bar-numbers-left.ily"
 \include "helpers/set-bars-per-line.ily"

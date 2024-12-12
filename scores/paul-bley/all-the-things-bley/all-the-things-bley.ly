@@ -1,4 +1,4 @@
-\version "2.25.20"
+\version "2.25.21"
 \include "helpers/settings.ily"
 \include "helpers/set-bars-per-line.ily"
 

@@ -1,4 +1,4 @@
-\version "2.25.16"
+\version "2.25.21"
 
 #(define (calculate-glissando-slope grob)
    (define (get-pitch-difference left-pitch right-pitch)

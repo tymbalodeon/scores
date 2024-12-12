@@ -1,4 +1,4 @@
-\version "2.25.20"
+\version "2.25.21"
 
 \include "helpers/add-fingerings.ily"
 \include "helpers/add-string-numbers.ily"

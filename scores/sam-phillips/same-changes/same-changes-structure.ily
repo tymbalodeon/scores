@@ -1,4 +1,4 @@
-\version "2.25.20"
+\version "2.25.21"
 key_and_time = {
   \key d \minor
   \time 4/4
