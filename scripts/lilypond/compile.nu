@@ -1,5 +1,6 @@
 #!/usr/bin/env nu
 
+use ../environment.nu display-message
 use ../environment.nu get-project-path
 use ./files.nu get_compilation_status
 use ./files.nu get_files
@@ -15,7 +16,7 @@ def run-lilypond [file: path, force: bool] {
   }
 
   if $should_compile {
-    print $"Compiling ($file)"
+    display-message Compiling $file
 
     (
       lilypond
