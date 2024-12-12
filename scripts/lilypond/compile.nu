@@ -18,9 +18,9 @@ def run-lilypond [file: path, force: bool] {
     print $"Compiling ($file)"
 
     (
-      lilypond 
-        --include (get-project-path helpers) 
-        --output (get_lilypond_output_path $file) 
+      lilypond
+        --include (get-project-path helpers)
+        --output (get_lilypond_output_path $file)
         $file
     )
   }

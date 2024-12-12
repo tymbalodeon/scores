@@ -102,6 +102,16 @@ def get-comment-character [extension: string] {
   }
 }
 
+def display-message [action: string message: string] {
+  mut action = $action
+
+  while (($action | split chars | length) < 12) {
+    $action = $" ($action)"
+  } 
+
+  print $"  (ansi green_bold)($action)(ansi reset) ($message)"
+}
+
 def copy-files [
   environment: string
   environment_files: table<
@@ -176,7 +186,7 @@ def copy-files [
         chmod +x $path
       }
 
-      print $"Downloaded ($path)"
+      display-message Downloaded $path
     }
 
   return true
@@ -352,9 +362,9 @@ export def merge-justfiles [
 ] {
   if $environment == "generic" {
     return (
-      open $environment_justfile
+      open (get-project-path $environment_justfile)
       | append (
-          open $main_justfile
+          open (get-project-path $main_justfile)
           | split row "mod"
           | drop nth 0
           | each {prepend mod | str join}
@@ -413,7 +423,7 @@ export def save-file [contents: string filename: string] {
   $contents
   | save --force $filename
 
-  print $"($action) ($filename)"
+  display-message $action $filename
 }
 
 def save-justfile [justfile: string] {
@@ -803,10 +813,10 @@ def display-available-environments [environments: list<string>] {
 }
 
 # Add environments to the project
-def "main add" [
+export def "main add" [
   ...environments: string
   --upgrade
-  --reactivate
+  --activate
 ] {
   let available_environments = (
     main list
@@ -839,18 +849,18 @@ def "main add" [
 
   let environments = $recognized_environments
 
-  mut should_reactivate = false
+  mut should_activate = false
 
   for environment in $environments {
     let environment_files = (get-environment-files $environment)
 
-    if $reactivate and (
+    if $activate and (
       $environment_files
       | filter {|file| ($file.name | path parse | get extension) == "nix"}
       | each {|file| not ($file.path | path exists)}
       | any {|status| $status}
     ) {
-      $should_reactivate = true
+      $should_activate = true
     }
 
     mut added = false
@@ -865,30 +875,20 @@ def "main add" [
       false => "Added"
     }
 
-    let message = $"($action) ($environment) environment"
-
     if $upgrade or $added {
-      print $message
+      display-message $action $"($environment) environment"
     }
   }
 
-  if (
-    git rev-parse
-    | complete
-    | get exit_code
-    | into bool
-  ) {
+  try {
+    git rev-parse --is-inside-work-tree out+err> /dev/null
+  } catch {
     git init
     git add .
-  } else if (
-    git ls-tree --full-tree --name-only -r HEAD
-    | rg '^flake.nix$'
-    | is-empty
-  ) {
-    git add flake.nix
   }
 
-  if $should_reactivate {
+  if $should_activate {
+    git add .
     main activate
   }
 
@@ -931,7 +931,7 @@ def list-environment-directory [
 }
 
 def color-yellow [text: string] {
-  $"(ansi y)($text)(ansi reset)"
+  $"(ansi yellow)($text)(ansi reset)"
 }
 
 def get-diff-files [
@@ -964,7 +964,7 @@ def get-diff-files [
 }
 
 def get-error-heading [] {
-  $"(ansi rb)error:(ansi reset)"
+  $"(ansi red_bold)error:(ansi reset)"
 }
 
 def diff-error-with-help [message: string] {
