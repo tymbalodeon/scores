@@ -121,6 +121,41 @@ def get-project-name [] {
   | path basename
 }
 
+def get-file-status [contents: string filename: string] {
+  if ($filename | path exists) {
+    let temporary_file = (
+      mktemp  --tmpdir --suffix $".($filename | path parse | get extension)"
+    )
+
+    $contents
+    | save --force $temporary_file
+
+    set-executable $temporary_file
+
+    let action = if (
+      delta $filename $temporary_file 
+      | complete 
+      | get exit_code
+    ) == 0 {
+      null
+    } else {
+      "Upgraded"
+    }
+
+    rm $temporary_file
+
+    $action
+  } else {
+    "Added"
+  }
+}
+
+def set-executable [filename: string] {
+  if ($filename | path parse | get extension) == "nu" {
+    chmod +x $filename
+  }
+}
+
 def copy-files [
   environment: string
   environment_files: table<
@@ -139,9 +174,12 @@ def copy-files [
   >
   upgrade: bool
 ] {
-  if $upgrade {
-    rm --force --recursive ([scripts $environment] | path join)
-  }
+  # TODO
+  # Remove only files that aren't in the new list
+
+  # if $upgrade {
+  #   rm --force --recursive ([scripts $environment] | path join)
+  # }
 
   let project_name = (get-project-name)
 
@@ -217,20 +255,39 @@ def copy-files [
         }
       }
 
-      http-get $file.download_url
-      | save --force $path
+      let contents = (http-get --raw $file.download_url)
+      let action = (get-file-status $contents $path)
 
-      if ($path == pyproject.toml) {
-        open $path
-        | update project.name $project_name
+      let action_data = {
+        action: (
+          match $action {
+            "Added" | "Upgraded" => $action
+            _ => "Skipping"
+          }
+        )
+        color: (
+          match $action {
+            "Upgraded" =>  "cyan_bold"
+            "Added" =>  "green_bold"
+            _ => "light_gray_dimmed"
+          }
+        )
+      }
+
+      if ($action != Skipping) {
+        $contents
         | save --force $path
+
+        if ($path == pyproject.toml) {
+          open $path
+          | update project.name $project_name
+          | save --force $path
+        }
+
+        set-executable $path
       }
 
-      if ($path | path parse | get extension) == "nu" {
-        chmod +x $path
-      }
-
-      display-message Downloaded $path
+      display-message $action_data.action $path $action_data.color
     }
 
   return true
@@ -459,15 +516,14 @@ export def merge-justfiles [
 }
 
 export def save-file [contents: string filename: string] {
-  let action = match ($filename | path exists) {
-    true => "Upgraded"
-    false => "Added"
-  }
+  let action = (get-file-status $contents $filename) 
 
   $contents
   | save --force $filename
 
-  display-message $action $filename
+  if ($action | is-not-empty) {
+    display-message $action $filename
+  }
 }
 
 def save-justfile [justfile: string] {
