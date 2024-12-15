@@ -60,38 +60,38 @@ alias src := view-source
 
 mod lilypond "just/lilypond.just"
 
-# Alias for `lilypond clean`
+# alias for `lilypond clean`
 @clean *args:
     just lilypond clean {{ args }}
 
-# Alias for `lilypond compile`
+# alias for `lilypond compile`
 @compile *args:
     just lilypond compile {{ args }}
 
-# Alias for `lilypond create`
+# alias for `lilypond create`
 @create *args:
     just lilypond create {{ args }}
 
-# Alias for `lilypond edit`
+# alias for `lilypond edit`
 @edit *args:
     just lilypond edit {{ args }}
 
-# Alias for `lilypond info`
+# alias for `lilypond info`
 @info *args:
     just lilypond info {{ args }}
 
-# Alias for `lilypond open-pdf`
+# alias for `lilypond open-pdf`
 @open-pdf *args:
     just lilypond open-pdf {{ args }}
 
-# Alias for `lilypond settings`
+# alias for `lilypond settings`
 @settings *args:
     just lilypond settings {{ args }}
 
-# Alias for `lilypond templates`
+# alias for `lilypond templates`
 @templates *args:
     just lilypond templates {{ args }}
 
-# Alias for `lilypond update`
+# alias for `lilypond update`
 @update *args:
     just lilypond update {{ args }}
