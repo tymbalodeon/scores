@@ -16,7 +16,7 @@ def run-lilypond [file: path, force: bool] {
   }
 
   if $should_compile {
-    display-message Compiling $file
+    display-message Compiling $file --color green_bold
 
     (
       lilypond
