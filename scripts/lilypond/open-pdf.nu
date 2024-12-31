@@ -3,7 +3,7 @@
 use ./files.nu get_files
 
 # Compile pdfs
-def main [
+export def main [
   search_term = "" # Search term for finding pdfs
 ] {
   for file in (get_files "pdf" $search_term) {
