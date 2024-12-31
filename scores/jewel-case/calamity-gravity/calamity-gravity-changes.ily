@@ -61,6 +61,8 @@ changesInstrumental = \chordmode {
 }
 
 calamityGravityChanges = \chords {
+  | s8 * 5 * 4 
+
   \repeat unfold 2 {
     \changesIntro
     \changesVerse

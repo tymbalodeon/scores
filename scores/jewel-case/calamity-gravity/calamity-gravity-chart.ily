@@ -9,7 +9,7 @@ calamityGravityLayout =
 		\context {
 			\Score \consists
 				#(set-bars-per-line '(
-					4 4 4 4
+					4 4 4 4 4
 					4 8 4 4
 					4 4 4 8
 					8 8 4 4

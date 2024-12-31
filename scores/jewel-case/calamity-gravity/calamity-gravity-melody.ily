@@ -1,5 +1,9 @@
 \version "2.25.21"
 
+drumIntro = {
+  | R8 * 5 * 4
+}
+
 melodyIntro = \relative c'' {
   \new Voice \with {
     \consists "Pitch_squash_engraver"
@@ -44,6 +48,8 @@ melodyChorus = \relative c'' {
 }
 
 calamityGravityMelody = {
+  \drumIntro
+
   \repeat unfold 2 {
     \melodyIntro
     \melodyVerse

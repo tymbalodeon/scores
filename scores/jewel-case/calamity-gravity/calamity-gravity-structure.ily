@@ -1,5 +1,9 @@
 \version "2.25.21"
 
+drumIntro = {
+  | s8 * 5 * 4
+}
+
 structureIntro = {
   \repeat unfold 4 {
     | s8 * 5
@@ -27,6 +31,8 @@ structureChorus = {
 calamityGravityStructure = {
   \key a \major
   \time 5/8
+
+  \drumIntro ^\markup "[drums]"
 
   \repeat unfold 2 {
     \structureIntro

@@ -14,5 +14,6 @@
 
 \score {
   \calamityGravityLayout
+  \compressMMRests 
   \calamityGravityMusic
 }
