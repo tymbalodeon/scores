@@ -47,7 +47,7 @@ def main [
 
     let layout_file = (mktemp --tmpdir $"($title)-XXX.kdl")
 
-    let new_zellij = (
+    (
       cat (get-project-path zellij-layout-template.kdl)
       | str replace --all "[score]" $input_file
       | str replace --all "[score_directory]" ($input_file | path dirname)
