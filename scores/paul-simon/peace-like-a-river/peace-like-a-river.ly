@@ -1,4 +1,4 @@
-\version "2.25.21"
+\version "2.25.22"
 
 \include "helpers/settings.ily"
 \include "peace-like-a-river-chords.ily"

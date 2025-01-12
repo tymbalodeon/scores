@@ -1,4 +1,4 @@
-\version "2.25.21"
+\version "2.25.22"
 changes_riff = \chords {
   | b1
   | s1

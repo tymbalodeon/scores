@@ -1,4 +1,4 @@
-\version "2.25.21"
+\version "2.25.22"
 key_and_time = {
   \tempo 4 = 140
   \key g \major

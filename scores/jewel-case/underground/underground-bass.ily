@@ -1,11 +1,11 @@
-\version "2.25.21"
+\version "2.25.22"
 
 undergroundBass = \relative g, {
   \clef "bass"
   \time 18/16
 
   \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = \musicLength 8.
+  \set Timing.beatBase = #3/16
 
   | R16 * 18
   | r4. r8. r8. g b

@@ -1,4 +1,4 @@
-\version "2.25.21"
+\version "2.25.22"
 
 intro = \chordmode {
   bf1:maj/a |

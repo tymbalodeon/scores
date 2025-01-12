@@ -1,4 +1,4 @@
-\version "2.25.21"
+\version "2.25.22"
 
 microscope = \relative g'' {
   \key g \major

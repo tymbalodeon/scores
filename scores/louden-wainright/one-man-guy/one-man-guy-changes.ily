@@ -1,4 +1,4 @@
-\version "2.25.21"
+\version "2.25.22"
 verse = \chordmode {
   | e1
   | a4 b:7

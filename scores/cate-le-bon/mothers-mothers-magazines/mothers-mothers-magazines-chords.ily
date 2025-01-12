@@ -1,4 +1,4 @@
-\version "2.25.21"
+\version "2.25.22"
 changes_verse = \chords {
     c2.:sus f4 |
     bf2.:sus ef4 |

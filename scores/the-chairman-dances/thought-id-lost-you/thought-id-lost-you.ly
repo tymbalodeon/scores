@@ -1,4 +1,4 @@
-\version "2.25.21"
+\version "2.25.22"
 
 \include "helpers/settings.ily"
 \include "scores/the-chairman-dances/thought-id-lost-you/thought-id-lost-you-bass.ily"
