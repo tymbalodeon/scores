@@ -89,14 +89,14 @@ def main [
 ] {
   let output = (display-just-help $recipe $subcommands)
 
-  let output = if $no_aliases {
-    $output
-    | lines
-    | filter {"alias for" not-in $in}
-    | str join "\n"
-  } else {
-    $output
-  }
-
-  print $output
+  print (
+    if $no_aliases {
+      $output
+      | lines
+      | filter {"alias for" not-in $in}
+      | str join "\n"
+    } else {
+      $output
+    }
+  )
 }
