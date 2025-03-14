@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 verse = \relative c'' {
   r4 g g g |
   g8. f16 f8 f r d d d |

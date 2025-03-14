@@ -17,24 +17,11 @@ def get-base-url [] {
   "https://api.github.com/repos/tymbalodeon/environments/contents/src"
 }
 
-def get-github-personal-access-token [] {
-  if not (".env" | path exists) {
-    return
-  }
-
-  try {
-    open .env
-    | parse '{key}={value}'
-    | get value
-    | first
-  }
-}
-
 def http-get [url: string --raw] {
-  let token = (get-github-personal-access-token)
+  let token = (gh auth token)
 
   let headers = match $token {
-    null => []
+    "" => []
     _ => [Authorization $"Bearer ($token)" X-GitHub-Api-Version "2022-11-28"]
   }
 
@@ -460,15 +447,11 @@ def download-environment-file [
 }
 
 def get-recipe-or-alias-name []: [
-  record<
-    deps: record<
-      attributes: list<any>,
-      name: string,
-      target: string
-    >
-  >  -> list<string>
+  record -> list<string>
 ] {
-  $in | transpose | get column0
+  $in
+  | transpose
+  | get column0
 }
 
 def get-just-command-names [justfile: string] {
@@ -489,10 +472,11 @@ def get-just-command-names [justfile: string] {
 
 def get-environment-recipe [environment: string recipe: string] {
   let documentation = $"# alias for `($environment) ($recipe)`"
+  let group = "[group(\"aliases\")]"
   let declaration = $"@($recipe) *args:"
   let content = $"    just ($environment) ($recipe) {{ args }}"
 
-  [$documentation $declaration $content]
+  [$documentation $group $declaration $content]
   | str join "\n"
 }
 
@@ -601,7 +585,7 @@ export def save-file [filename: string contents?: string] {
 }
 
 def save-justfile [justfile?: string] {
-  save-file Justfile $justfile 
+  save-file Justfile $justfile
 }
 
 def initialize-generic-file [filename: string] {
@@ -740,7 +724,7 @@ def get-environment-name [
 }
 
 def save-gitignore [gitignore: string] {
-  save-file .gitignore $gitignore 
+  save-file .gitignore $gitignore
 }
 
 def is-up-to-date [
@@ -808,8 +792,14 @@ def get-pre-commit-config-repos [config: string] {
 }
 
 def format-yaml-comment []: string -> string {
-  $in
-  | yamlfmt -
+  let yaml = if (which yamlfmt | is-not-empty) {
+    $in
+    | yamlfmt -
+  } else {
+    $in
+  }
+
+  $yaml
   | str replace --all --regex " +#" "  #"
 }
 
@@ -888,16 +878,21 @@ export def merge-pre-commit-configs [
           | first
         }
 
-        let yaml = (
-          if ($first_line | is-empty) {
-            $config
-          } else {
-            $config
-            | lines
-            | drop nth 0
-            | to text
-          } | yamlfmt -
-        )
+        let yaml = if ($first_line | is-empty) {
+          $config
+        } else {
+          $config
+          | lines
+          | drop nth 0
+          | to text
+        }
+
+        let yaml = if (which yamlfmt | is-not-empty) {
+          $yaml
+          | yamlfmt -
+        } else {
+          $yaml
+        }
 
         if ($first_line | is-empty) {
           $yaml
@@ -928,7 +923,7 @@ export def merge-pre-commit-configs [
 }
 
 export def save-pre-commit-config [config: string] {
-  save-file .pre-commit-config.yaml $config 
+  save-file .pre-commit-config.yaml $config
 }
 
 def copy-pre-commit-config [
@@ -972,8 +967,14 @@ def copy-pre-commit-config [
   let environment_config = (
     $environment_config
     | to yaml
-    | yamlfmt -
   )
+
+  let environment_config = if (which yamlfmt | is-not-empty) {
+    $environment_config
+    | yamlfmt -
+  } else {
+    $environment_config
+  }
 
   let merged_pre_commit_config = (
     merge-pre-commit-configs

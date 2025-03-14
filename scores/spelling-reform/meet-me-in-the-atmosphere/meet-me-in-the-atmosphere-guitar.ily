@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 
 fourTimes = \mark \markup \small \italic 4x
 

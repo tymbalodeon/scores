@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 key_and_time = {
   \key g \major
 }
