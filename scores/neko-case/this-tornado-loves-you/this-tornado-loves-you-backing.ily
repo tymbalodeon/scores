@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 
 part_one_backing = \relative c'' \new Staff \with {
   \magnifyStaff #2/3

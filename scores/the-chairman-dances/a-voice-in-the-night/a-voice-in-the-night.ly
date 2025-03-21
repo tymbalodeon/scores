@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 
 \include "helpers/settings.ily"
 \include "scores/the-chairman-dances/a-voice-in-the-night/a-voice-in-the-night-bass.ily"

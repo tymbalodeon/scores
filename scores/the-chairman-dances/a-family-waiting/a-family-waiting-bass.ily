@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 
 hits = \relative a {
   | \repeat unfold 2 { a2. }

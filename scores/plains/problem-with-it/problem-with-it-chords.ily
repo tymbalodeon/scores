@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 changes_verse = \chords {
   g1:m |
   s |

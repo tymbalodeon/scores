@@ -1,0 +1,11 @@
+use-grammars = { only = ["lilypond"] }
+
+[[language]]
+name = "lilypond"
+comment-token = "%"
+file-types = ["ly", "ily"]
+scope = "source.lilypond"
+
+[[grammar]]
+name = "lilypond"
+source = { git = "https://github.com/nwhetsell/tree-sitter-lilypond", rev = "d88b342d16efab6057631aa6dc95158f08c8237a" }

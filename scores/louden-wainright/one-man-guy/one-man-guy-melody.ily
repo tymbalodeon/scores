@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 verse = \relative c'' {
   \new Voice \with {
     \consists "Pitch_squash_engraver"

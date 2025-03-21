@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 
 melodyChorus = \relative c'' {
   \new Voice \with {

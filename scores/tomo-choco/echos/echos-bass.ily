@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 
 echosBass = \relative fs, {
   \key e \major
@@ -126,7 +126,7 @@ echosBass = \relative fs, {
           \volta 3 {
             | fs'8 e ds cs b a ( gs ) r
 
-            \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+            \once \set Score.voltaSpannerDurationAsMoment = #(ly:make-moment 1)
 
             | b8 a gs fs -. r gs e r
             | b'8 a gs fs -. r e ( ds ) r

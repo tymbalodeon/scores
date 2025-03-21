@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 intro = \chordmode {
   e2. |
   s2. * 2  |

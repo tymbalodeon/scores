@@ -1,4 +1,4 @@
-\version "2.25.22"
+\version "2.25.24"
 
 \include "helpers/add-fingerings.ily"
 \include "helpers/move-articulations-below.ily"
