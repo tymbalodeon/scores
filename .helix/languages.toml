@@ -8,4 +8,4 @@ scope = "source.lilypond"
 
 [[grammar]]
 name = "lilypond"
-source = { git = "https://github.com/nwhetsell/tree-sitter-lilypond", rev = "d88b342d16efab6057631aa6dc95158f08c8237a" }
+source = { git = "https://github.com/nwhetsell/tree-sitter-lilypond", rev = "110f919a0fd7b4fca724baee67f0c5d1c07718d8" }
