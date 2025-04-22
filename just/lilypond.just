@@ -18,8 +18,9 @@
     ./scripts/lilypond/create.nu {{ args }}
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
+[working-directory("../")]
 @edit *args:
-    ../scripts/lilypond/edit.nu {{ args }}
+    ./scripts/lilypond/edit.nu {{ args }}
 
 # Get info about scores
 @info *search_term:
@@ -39,4 +40,4 @@
 
 # Update dependencies and score LilyPond version
 @update *help:
-    ../scripts/lilypond/update.nu {{ help }}
+    ./scripts/lilypond/update.nu {{ help }}
