@@ -13,8 +13,9 @@
     ./scripts/lilypond/compile.nu {{ search_term }}
 
 # Create new score
+[no-cd]
 @create *args:
-    ../scripts/lilypond/create.nu {{ args }}
+    ./scripts/lilypond/create.nu {{ args }}
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 @edit *args:
