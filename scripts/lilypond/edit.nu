@@ -60,7 +60,6 @@ def main [
     open-pdf $title
     zellij --layout $layout_file attach --create $title
     rm --force $layout_file
-    exit
     zellij delete-session $title
   }
 }

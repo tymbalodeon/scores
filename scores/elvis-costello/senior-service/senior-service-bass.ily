@@ -15,9 +15,39 @@ seniorServiceBass = \relative c {
   | R1
 
   | f8. f16 d8 g r2
-  | r2 a8 a g r
+  | r2 a8 a g4
+  | f8. d16 d8 g r d d4
+  | r2 a8 a c4 
+
   | f8. f16 d8 g r2
-  | r2 a8 a g r
+  | r2 a8 a g4
+  | f8. d16 d8 g r d d4
+  | r2 a8 a c4 
+
+  | d8 d4 a8 d d4 a8
+  | d8 d4 d8 g,8 g g4
+  | d'8 d4 a8 d d4 a8
+  | d8 d4 d8 g,8 g g4
+
+  | d'8 d4 a8 d d4 a8
+  | d8 d4 d8 g,8 g g4
+  | c'4 bf a g
+  | f e d8 c c4
+
+  | f8. f16 d8 g r2
+  | r2 a8 a g4
+  | f8. d16 d8 g r d d4
+  | r2 a8 a c4 
+
+  | f8. f16 d8 g r2
+  | r2 a8 a g4
+  | f8. d16 d8 g r d d4
+  | r2 a8 a c4 
+
+  | f1 ~
+  | f2 bf4 bf
+  | f1 ~
+  | f2 bf4 bf
 
   \bar "|."
 }

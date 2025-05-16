@@ -53,6 +53,7 @@
             [
               alejandra
               ansible-language-server
+              bash
               bat
               cocogitto
               deadnix

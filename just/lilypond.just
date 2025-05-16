@@ -18,7 +18,6 @@
     ./scripts/lilypond/create.nu {{ args }}
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
-[working-directory("../")]
 @edit *args:
     ./scripts/lilypond/edit.nu {{ args }}
 

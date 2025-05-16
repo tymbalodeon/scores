@@ -2,8 +2,6 @@
 .direnv
 .env
 .envrc
-.pdm-python
-.venv
 
 # lilypond
 *.error
