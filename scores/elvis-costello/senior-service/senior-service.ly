@@ -16,6 +16,6 @@
     \numericTimeSignature
   } {
     \compressMMRests
-    \seniorServiceBass
+    \transpose f a \seniorServiceBass
   }
 }
