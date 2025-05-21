@@ -10,12 +10,6 @@
 @check *args:
     ./scripts/check.nu {{ args }}
 
-# List dependencies
-@dependencies *args:
-    ./scripts/dependencies.nu {{ args }}
-
-alias deps := dependencies
-
 # Manage environments
 @environment *args:
     ./scripts/environment.nu {{ args }}

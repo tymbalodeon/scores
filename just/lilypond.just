@@ -13,13 +13,12 @@
     ./scripts/lilypond/compile.nu {{ search_term }}
 
 # Create new score
-[no-cd]
 @create *args:
-    ./scripts/lilypond/create.nu {{ args }}
+    ../scripts/lilypond/create.nu {{ args }}
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 @edit *args:
-    ./scripts/lilypond/edit.nu {{ args }}
+    ../scripts/lilypond/edit.nu {{ args }}
 
 # Get info about scores
 @info *search_term:
@@ -39,4 +38,4 @@
 
 # Update dependencies and score LilyPond version
 @update *help:
-    ./scripts/lilypond/update.nu {{ help }}
+    ../scripts/lilypond/update.nu {{ help }}
