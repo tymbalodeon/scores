@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 
 togetherApart = \relative c'' {
     \key g \major

@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 changes = \chords {
   | e2.:maj5-
   | g2.:dim

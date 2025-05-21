@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 
 \include "decide-for-yourself-changes.ily"
 \include "decide-for-yourself-melody.ily"

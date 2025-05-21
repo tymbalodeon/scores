@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 intro_base = \chordmode {
   d1:m |
 }

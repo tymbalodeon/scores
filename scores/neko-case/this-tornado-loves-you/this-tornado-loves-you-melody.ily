@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 
 guitar_strum = \relative c' \new CueVoice {
   \repeat percent 4 {

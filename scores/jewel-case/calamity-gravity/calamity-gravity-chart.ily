@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 
 \include "calamity-gravity-changes.ily"
 \include "calamity-gravity-melody.ily"

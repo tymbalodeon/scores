@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 changes_intro = \chords {
   e2.:m  b4:m|
   e1:m |

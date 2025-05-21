@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 
 goToSleepBass = \relative c {
   % \key c \major

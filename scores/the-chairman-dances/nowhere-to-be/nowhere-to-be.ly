@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 
 \include "helpers/settings.ily"
 \include "scores/the-chairman-dances/nowhere-to-be/nowhere-to-be-bass.ily"

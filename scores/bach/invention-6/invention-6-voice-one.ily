@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 
 inventionSixVoiceOne = \relative c'' {
   \repeat volta 2 {

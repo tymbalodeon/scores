@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 upper_staff = \relative b {
   \partial 2
    <b e>4 \p <a cs>

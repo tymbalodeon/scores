@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 
 bass_pattern = \relative c {
   \clef "bass"

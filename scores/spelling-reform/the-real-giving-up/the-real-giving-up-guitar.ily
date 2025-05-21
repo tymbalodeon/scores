@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 
 theRealGivingUp = \relative c'' {
   \time 4/4

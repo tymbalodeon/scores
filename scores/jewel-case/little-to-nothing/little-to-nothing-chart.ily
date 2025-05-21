@@ -1,4 +1,4 @@
-\version "2.25.24"
+\version "2.25.26"
 
 \include "little-to-nothing-changes.ily"
 \include "little-to-nothing-melody.ily"
