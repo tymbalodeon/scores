@@ -88,46 +88,48 @@
                 nullValue = [];
               };
 
-              shellHook = with pkgs;
-                lib.concatLines (
-                  [
-                    ''
-                      export NUTEST=${nutest}
-                      export ENVIRONMENTS=${environments}
+              shellHook = let
+                getArgsOrNone = args:
+                  if args == ""
+                  then "none"
+                  else args;
+              in
+                with pkgs;
+                  lib.concatLines (
+                    [
+                      ''
+                        export NUTEST=${nutest}
+                        export ENVIRONMENTS=${environments}
 
-                      ${pkgs.pre-commit}/bin/pre-commit install \
-                        --hook-type commit-msg \
-                        --overwrite
+                        ${pre-commit}/bin/pre-commit install \
+                          --hook-type commit-msg \
+                          --overwrite
 
-                      ${pkgs.nushell}/bin/nu ${environments}/shell-hook.nu \
-                        --active-environments "${
-                        lib.concatStringsSep " " activeEnvironments
-                      }" \
-                        --environments-directory "${environments}" \
-                        --inactive-environments "${
-                        lib.concatStringsSep " " inactiveEnvironments
-                      }" \
-                        --local-justfiles "${
-                        let
-                          localJustfiles =
+                        ${nushell}/bin/nu ${environments}/shell-hook.nu \
+                          --active-environments "${
+                          getArgsOrNone (lib.concatStringsSep " " activeEnvironments)
+                        }" \
+                          --environments-directory "${environments}" \
+                          --inactive-environments "${
+                          getArgsOrNone (lib.concatStringsSep " " inactiveEnvironments)
+                        }" \
+                          --local-justfiles "${
+                          getArgsOrNone (lib.concatStringsSep " " (
                             map
                             (filename:
                               builtins.elemAt
                               (lib.strings.splitString "." filename)
                               0)
-                            (getFilenames ./just);
-                        in
-                          if localJustfiles == []
-                          then "none"
-                          else lib.concatStringsSep " " localJustfiles
-                      }"
-                    ''
-                  ]
-                  ++ mergeModuleAttrs {
-                    attr = "shellHook";
-                    nullValue = "";
-                  }
-                );
+                            (getFilenames ./just)
+                          ))
+                        }"
+                      ''
+                    ]
+                    ++ mergeModuleAttrs {
+                      attr = "shellHook";
+                      nullValue = "";
+                    }
+                  );
             }
             // builtins.foldl'
             (a: b: a // b)
