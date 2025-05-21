@@ -109,14 +109,13 @@
                       }" \
                         --local-justfiles "${
                         let
-                          localJustfiles = (
+                          localJustfiles =
                             map
                             (filename:
                               builtins.elemAt
                               (lib.strings.splitString "." filename)
                               0)
-                            (getFilenames ./just)
-                          );
+                            (getFilenames ./just);
                         in
                           if localJustfiles == []
                           then "none"

@@ -19,12 +19,12 @@ seniorServiceBass = \relative c {
   | f8. f16 d8 g r2
   | r2 a8 a g4
   | f8. d16 d8 g r d d4
-  | r2 a8 a c4 
+  | r2 a8 a c4
 
   | f8. f16 d8 g r2
   | r2 a8 a g4
   | f8. d16 d8 g r d d4
-  | r2 a8 a c4 
+  | r2 a8 a c4
 
   \mark \default
 
@@ -43,12 +43,12 @@ seniorServiceBass = \relative c {
   | f8. f16 d8 g r2
   | r2 a8 a g4
   | f8. d16 d8 g r d d4
-  | r2 a8 a c4 
+  | r2 a8 a c4
 
   | f8. f16 d8 g r2
   | r2 a8 a g4
   | f8. d16 d8 g r d d4
-  | r2 a8 a c4 
+  | r2 a8 a c4
 
   | f1 ~
   | f2 bf,4 bf
@@ -65,12 +65,12 @@ seniorServiceBass = \relative c {
   | f'8. f16 d8 g r d'16 -> d -> d -> d -> d -> d ->
   | d4 -> r a8 a g4
   | f8. d16 d8 g r d d4
-  | r2 a8 a c4 
+  | r2 a8 a c4
 
   | f8. f16 d8 g r2
   | r2 a8 a g4
   | f8. d16 d8 g r d d4
-  | r2 a8 a c4 
+  | r2 a8 a c4
 
   \mark \default
 
@@ -89,12 +89,12 @@ seniorServiceBass = \relative c {
   | f8. f16 d8 g r2
   | r2 a8 a g4
   | f8. d16 d8 g r d d4
-  | r2 a8 a c4 
+  | r2 a8 a c4
 
   | f8. f16 d8 g r2
   | r2 a8 a g4
   | f8. d16 d8 g r d d4
-  | r2 a8 a c4 
+  | r2 a8 a c4
 
   | f1 ~
   | f2 bf,4 bf
