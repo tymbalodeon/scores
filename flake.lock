@@ -8,17 +8,16 @@
       },
       "locked": {
         "dir": "src",
-        "lastModified": 1747880738,
-        "narHash": "sha256-QXFFmJ+B4SmIxEeOcMlxWQQHa49fc2w5nL+z425OlU0=",
+        "lastModified": 1747934289,
+        "narHash": "sha256-To23BbU4nmBQFmRo2Io8X0k7dBvhzXcg9p0bTbfNyXk=",
         "owner": "tymbalodeon",
         "repo": "environments",
-        "rev": "2a9b2a393b8fa491f434992b5d0d4ab707b27e76",
+        "rev": "984774f74ddb956c930580da070a38b6e4c1083b",
         "type": "github"
       },
       "original": {
         "dir": "src",
         "owner": "tymbalodeon",
-        "ref": "rewrite",
         "repo": "environments",
         "type": "github"
       }
