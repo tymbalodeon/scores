@@ -52,7 +52,7 @@ seniorServiceBass = \relative c {
 
   | f1 ~
   | f2 bf,4 bf
-  | f1' ~
+  | f'1 ~
   | f2 bf,4 bf
 
   | f1 ~
@@ -98,7 +98,7 @@ seniorServiceBass = \relative c {
 
   | f1 ~
   | f2 bf,4 bf
-  | f1' ~
+  | f'1 ~
   | f2 bf,4 bf
 
   \time 2/4
