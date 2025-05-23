@@ -71,6 +71,12 @@ def "main activate" [] {
 
 # Add environments to the project
 export def "main add" [...environments: string] {
+  if not (".environments.toml" | path exists) {
+    {environments: []}
+    | to toml
+    | save .environments.toml
+  }
+
   open .environments.toml
   | update environments (
       (open .environments.toml).environments
@@ -117,6 +123,12 @@ def "main remove" [
   ...environments: string
   --reactivate
 ] {
+  if not (".environments.toml" | path exists) {
+    {environments: []}
+    | to toml
+    | save .environments.toml
+  }
+
   open .environments.toml
   | update environments (
       (open .environments.toml).environments
@@ -153,13 +165,19 @@ alias "main src" = main source
 
 # Run tests
 def "main test" [
-  --match-suites: string # Regular expression to match against suite names (defaults to all)
-  --match-tests: string # Regular expression to match against test names (defaults to all)
+  --suites: string # Regular expression to match against suite names (defaults to all)
+  --tests: string # Regular expression to match against test names (defaults to all)
 ] {
   let command = "use nutest; nutest run-tests"
 
-  let command = if ($match_suites | is-not-empty) {
-    $"($command) --match-suites ($match_suites)"
+  let command = if ($suites | is-not-empty) {
+    $"($command) --match-suites ($suites)"
+  } else {
+    $command
+  }
+
+  let command = if ($tests | is-not-empty) {
+    $"($command) --match-suites ($tests)"
   } else {
     $command
   }
