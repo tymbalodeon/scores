@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-use ./files.nu get_files
+use ./files.nu get-files
 
 # Remove pdfs
 def main [
@@ -18,7 +18,7 @@ def main [
           --no-ignore
       ) | lines
   } else {
-    get_files "pdf" $search_term
+    get-files "pdf" $search_term
   }
 
   for file in $files {

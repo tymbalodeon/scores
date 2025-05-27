@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-use ./files.nu get_lilypond_version
+use ./files.nu get-lilypond-version
 use ./settings.nu
 
 def get_directory_name [name: string] {
@@ -38,7 +38,7 @@ def main [
 
   mkdir $new_score_directory
 
-  let lilypond_version = get_lilypond_version
+  let lilypond_version = get-lilypond-version
 
   for file in $files {
     cat $file

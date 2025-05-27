@@ -1,1 +1,8 @@
-environments = ["lilypond"]
+environments = [
+    "generic",
+    "git",
+    "lilypond",
+    "nix",
+    "toml",
+    "yaml",
+]

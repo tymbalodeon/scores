@@ -1,77 +1,66 @@
-use ./settings.nu get_pdfs_directory
+use settings.nu get-pdfs-directory
 
-export def get_files [
+export def get-files [
   extension: string,
   search_term = ""
 ] {
   let search_directory = if ($extension == "pdf") {
-    get_pdfs_directory
+    get-pdfs-directory
   } else {
-    "../"
+    "."
   }
 
-  return (
-    fd --exclude templates/ --extension $extension --no-ignore $search_term $search_directory
-    | lines
+  (
+    fd
+      --exclude templates
+      --extension $extension
+      --no-ignore $search_term
+      $search_directory
   )
+  | lines
 }
 
-export def get_title [
-  file: path
-] {
-  return (
-    $file
-    | path parse
-    | get stem
-  )
+export def get-title [file: path] {
+  $file
+  | path parse
+  | get stem
 }
 
-export def get_lilypond_output_path [
-  file: path
-] {
-  let pdfs_directory = (get_pdfs_directory)
-  let title = (get_title $file)
-
-  return ($"($pdfs_directory)/($title)")
+export def get-lilypond-output-path [file: path] {
+  let pdfs_directory = (get-pdfs-directory)
+  let title = (get-title $file)
+  $"($pdfs_directory)/($title)"
 }
 
-export def get_compilation_status [
-  file: path
-] {
-  def get_modified [file] {
-    let metadata = (ls --long $file)
+def get-modified [file: string] {
+  let metadata = (ls --long $file)
 
-    return (
-      if ($metadata | is-empty) {
-        null
-      } else {
-        (
-          $metadata
-          | first
-          | get modified
-        )
-      }
-    )
+  if ($metadata | is-not-empty) {
+    $metadata
+    | first
+    | get modified
   }
+}
 
-  let pdf_file_base = (get_lilypond_output_path $file)
+export def get-compilation-status [file: path] {
+  let pdf_file_base = (get-lilypond-output-path $file)
   let pdf_file = $"($pdf_file_base).pdf"
 
-  if ($pdf_file | path exists) {
-    let ly_modified = (get_modified $file)
-    let pdf_modified = (get_modified $"($pdf_file_base).pdf")
-
-    if ($ly_modified > $pdf_modified) {
-      return "outdated"
-    } else {
-      return "compiled"
-    }
-  } else {
+  if not ($pdf_file | path exists) {
     return "missing"
+  }
+
+  let ly_modified = (get-modified $file)
+  let pdf_modified = (get-modified $"($pdf_file_base).pdf")
+
+  if ($ly_modified > $pdf_modified) {
+    "outdated"
+  } else {
+    "compiled"
   }
 }
 
-export def get_lilypond_version [] {
+export def get-lilypond-version [] {
   lilypond --version
   | lines
   | first

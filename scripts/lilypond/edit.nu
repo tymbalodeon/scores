@@ -1,27 +1,27 @@
 #!/usr/bin/env nu
 
-use ./compile.nu
+use compile.nu
 use ../environment.nu get-project-path
 use ../environment.nu get-project-root
-use ./files.nu get_files
-use ./files.nu get_lilypond_output_path
-use ./files.nu get_title
-use ./info.nu
-use ./open-pdf.nu
+use files.nu get-files
+use files.nu get-lilypond-output-path
+use files.nu get-title
+use info.nu
+use open-pdf.nu
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 def main [
   search_term = "" # Search term for finding scores
   --info # Edit info toml for score
 ] {
-  let files = (get_files "ly" $search_term)
+  let files = (get-files "ly" $search_term)
 
   if ($files | length) == 1 {
     let input_file = (realpath ($files | first))
-    let title = (get_title ($files | first))
+    let title = (get-title ($files | first))
 
     if $info {
-      let toml_files = (get_files "toml" $title)
+      let toml_files = (get-files "toml" $title)
 
       let toml_file = if ($toml_files | is-empty) {
         let path = ($files | first | path parse)
@@ -52,7 +52,7 @@ def main [
       | str replace --all "[score]" $input_file
       | str replace --all "[score_directory]" ($input_file | path dirname)
       | str replace --all "[score_name]" $title
-      | str replace --all "[output]" (get_lilypond_output_path $input_file)
+      | str replace --all "[output]" (get-lilypond-output-path $input_file)
       | str replace --all "[helpers]" (get-project-root)
     ) | save --force $layout_file
 

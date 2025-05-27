@@ -1,11 +1,16 @@
-use-grammars = { only = ["lilypond"] }
+[[language]]
+name = "just"
+auto-format = true
+formatter = { command = "just", args = ["--justfile", "/dev/stdin", "--dump"] }
+
 
 [[language]]
-name = "lilypond"
-comment-token = "%"
-file-types = ["ly", "ily"]
-scope = "source.lilypond"
+name = "nix"
+auto-format = true
+formatter = { command = "alejandra" }
 
-[[grammar]]
-name = "lilypond"
-source = { git = "https://github.com/nwhetsell/tree-sitter-lilypond", rev = "110f919a0fd7b4fca724baee67f0c5d1c07718d8" }
+
+[[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "taplo", args = ["format", "-"] }

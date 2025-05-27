@@ -1,7 +1,7 @@
 \version "2.25.26"
 
 goToSleepBass = \relative c {
-  % \key c \major
+  % \key g \minor
   \clef bass
 
   \repeat volta 4 {
@@ -41,5 +41,15 @@ goToSleepBass = \relative c {
 
   | R1 * 4
 
-  % \bar "|."
+  | r8 g r g r g r bf
+  | r8 bf r bf r bf r g
+  | r8 g r g r g r bf
+  | r8 bf r bf r bf r g
+
+  | r8 g r e f g r bf
+  | r8 bf r bf r bf r c
+  | r8 c r c r c r d
+  | r8 d d d d  c bf4
+  
+  \bar "|."
 }

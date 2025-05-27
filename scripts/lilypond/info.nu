@@ -1,8 +1,8 @@
 #!/usr/bin/env nu
 
-use ./files.nu get_compilation_status
-use ./files.nu get_files
-use ./files.nu get_title
+use ./files.nu get-compilation-status
+use ./files.nu get-files
+use ./files.nu get-title
 
 const null_display = "----"
 
@@ -129,7 +129,7 @@ def display_info [
     | merge (display_record $info "instrumentation")
     | merge (display_record $info "key")
     | merge (display_record $info "time_signature")
-    | merge (get_compilation_status $score_file | wrap status)
+    | merge (get-compilation-status $score_file | wrap status)
     | merge ($score_file | wrap file)
   )
 }
@@ -206,11 +206,11 @@ def main [
   }
 
   let files = (
-    (get_files "ly" $search_term)
+    (get-files "ly" $search_term)
     | each {
       |file|
 
-      let toml_files = (get_files "toml" (get_title $file))
+      let toml_files = (get-files "toml" (get-title $file))
 
       if ($toml_files | is-empty) {
         if $missing_info {
@@ -247,7 +247,7 @@ def main [
             instrumentation: $instrumentation_found,
             key: $null_display,
             time_signature: $null_display,
-            status: (get_compilation_status $file),
+            status: (get-compilation-status $file),
             file: $file
           }
 
