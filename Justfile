@@ -60,9 +60,9 @@ mod lilypond "just/lilypond.just"
 
 alias clean := lilypond::clean
 alias compile := lilypond::compile
-alias create := lilypond::create
 alias edit := lilypond::edit
 alias info := lilypond::info
+alias new := lilypond::new
 alias open-pdf := lilypond::open-pdf
 alias settings := lilypond::settings
 alias templates := lilypond::templates

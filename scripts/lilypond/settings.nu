@@ -21,7 +21,6 @@ def main [
     return
   }
 
-
   let settings = try {
     open $settings_file
     | merge (open $settings_file)
@@ -30,7 +29,7 @@ def main [
   }
 
   if ($key | is-empty) {
-    return $settings
+    $settings
   } else {
     let key = ($key | str replace --all "-" "_")
 
@@ -48,15 +47,13 @@ def main [
       $new_settings
       | save --force $settings_file
 
-      return $new_settings
+      $new_settings
     }
   }
 }
 
 export def get-pdfs-directory [] {
   let pdfs_directory = (main | get pdfs_directory)
-
   mkdir $pdfs_directory
-
-  return $pdfs_directory
+  $pdfs_directory
 }

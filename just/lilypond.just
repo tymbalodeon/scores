@@ -13,10 +13,6 @@ set working-directory := ".."
 @compile *search_term:
     ./scripts/lilypond/compile.nu {{ search_term }}
 
-# Create new score
-@create *args:
-    ./scripts/lilypond/create.nu {{ args }}
-
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 @edit *args:
     ./scripts/lilypond/edit.nu {{ args }}
@@ -24,6 +20,10 @@ set working-directory := ".."
 # Get info about scores
 @info *search_term:
     ./scripts/lilypond/info.nu {{ search_term }}
+
+# Create new score
+@new *args:
+    ./scripts/lilypond/new.nu {{ args }}
 
 # Open pdfs
 @open-pdf *search_term:
