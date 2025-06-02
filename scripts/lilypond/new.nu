@@ -11,8 +11,8 @@ def get-directory-name [name: string] {
 
 # Create new scores
 def main [
-  template: string # Which template to use
-  title: string # Title for the score
+  title? = "Title" # Title for the score
+  template? = "single" # Which template to use
   --arranger = "" # Arranger for the score
   --artist = "" # Artist [alias for --subtitle] for the score
   --composer = "" # Composer for the score

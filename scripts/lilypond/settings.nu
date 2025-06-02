@@ -3,7 +3,7 @@
 use ../environment.nu get-project-path
 
 # Manage scores settings
-def main [
+export def main [
   --edit # Open settings file in $EDITOR
   key?: string # The key to view or set
   value?: string # The new value for <key>
