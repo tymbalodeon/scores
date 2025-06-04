@@ -3,7 +3,7 @@
 use files.nu get-lilypond-version
 use settings.nu
 
-def get-directory-name [name: string] {
+def format-name [name: string] {
   $name
   | str downcase
   | str replace --all " " "-"
@@ -20,18 +20,36 @@ def main [
   --instrument = "" # Instrument name
   --subtitle = "" # Subtitle for the score
 ] {
-  let files = (
-    fd $template templates
-    | lines
+  let composer = (
+    format-name (
+      if ($composer | is-empty) {
+        settings "composer"
+      } else {
+        "Anonymous"
+      }
+    )
   )
 
-  let composer = if ($composer | is-empty) {
-    settings "composer"
+  let new_score_directory = $"scores/($composer)/(format-name $title)"
+
+  let new_score_directory = if ($new_score_directory | path exists) {
+    let existing_scores = (
+      fd $title scores --type dir
+      | lines
+      | each {|line| $line | path split | last}
+    )
+
+    if ($existing_scores | find $title | is-not-empty) {
+
+    }
+
+    # $"scores/($composer)/($title)"
   } else {
-    "Anonymous"
+    $new_score_directory
   }
 
-  let composer_directory = get-directory-name $composer
+  mkdir $new_score_directory
+  let lilypond_version = (get-lilypond-version)
 
   let subtitle = if ($subtitle | is-not-empty) {
     $subtitle
@@ -39,12 +57,7 @@ def main [
     $artist
   }
 
-  let title_directory = get-directory-name $title
-  let new_score_directory = $"scores/($composer_directory)/($title_directory)"
-  mkdir $new_score_directory
-  let lilypond_version = get-lilypond-version
-
-  for file in $files {
+  for file in (fd $template templates | lines) {
     cat $file
     | str replace --all "[arranger]" $arranger
     | str replace --all "[composer]" $composer
