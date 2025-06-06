@@ -19,7 +19,6 @@ export def get-pre-commit-hook-names [config: record<repos: list<any>>] {
   | get repos.hooks
   | each {get id}
   | flatten
-  | append flake
   | sort
   | to text --no-newline
 }
@@ -30,7 +29,7 @@ def "main list" [] {
 }
 
 # Run pre-commit hooks
-def "main pre-commit" [hooks: list<string>] {
+def "main pre-commit" [hooks?: list<string>] {
   if ($hooks | is-empty) {
     pre-commit run --all-files
   } else {

@@ -20,51 +20,58 @@ def main [
   --instrument = "" # Instrument name
   --subtitle = "" # Subtitle for the score
 ] {
-  let composer = (
-    format-name (
-      if ($composer | is-empty) {
-        settings "composer"
+  let context = {
+    arranger: $arranger
+
+    composer:  (
+      format-name (
+        if ($composer | is-empty) {
+          settings "composer"
+        } else {
+          "Anonymous"
+        }
+      )
+    )
+
+    instrument: $instrument
+    lilypond_version: (get-lilypond-version)
+
+    subtitle: (
+      if ($subtitle | is-not-empty) {
+        $subtitle
       } else {
-        "Anonymous"
+        $artist
       }
     )
-  )
+
+    title: $title
+  }
 
   let new_score_directory = $"scores/($composer)/(format-name $title)"
 
-  let new_score_directory = if ($new_score_directory | path exists) {
-    let existing_scores = (
-      fd $title scores --type dir
-      | lines
-      | each {|line| $line | path split | last}
-    )
+  # TODO: append number to file if a score already exists with the same name
+  # let new_score_directory = if ($new_score_directory | path exists) {
+  #   let existing_scores = (
+  #     fd $title scores --type dir
+  #     | lines
+  #     | each {|line| $line | path split | last}
+  #   )
 
-    if ($existing_scores | find $title | is-not-empty) {
+  #   # if ($existing_scores | find $title | is-not-empty) {
 
-    }
+  #   # }
 
-    # $"scores/($composer)/($title)"
-  } else {
-    $new_score_directory
-  }
+  #   # $"scores/($composer)/($title)"
+  # } else {
+  #   $new_score_directory
+  # }
 
   mkdir $new_score_directory
-  let lilypond_version = (get-lilypond-version)
 
-  let subtitle = if ($subtitle | is-not-empty) {
-    $subtitle
-  } else {
-    $artist
-  }
-
-  for file in (fd $template templates | lines) {
-    cat $file
-    | str replace --all "[arranger]" $arranger
-    | str replace --all "[composer]" $composer
-    | str replace --all "[instrument]" $instrument
-    | str replace --all "[lilypond_version]" $lilypond_version
-    | str replace --all "[subtitle]" $subtitle
-    | str replace --all "[title]" $title
-    | save $"($new_score_directory)/($file | path basename)"
+  for file in (fd $template $"($env.ENVIRONMENTS)/lilypond/score-templates" | lines) {
+    $context
+    | to toml
+    | tera --stdin --template $file
+    | save $"($new_score_directory)/($file | path basename | str replace .templ "")"
   }
 }

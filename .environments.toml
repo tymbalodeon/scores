@@ -1,1 +1,2 @@
-environments = ["generic", "git", "lilypond", "nix", "toml", "yaml"]
+[[environments]]
+name = "lilypond"

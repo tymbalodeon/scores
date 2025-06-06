@@ -1,33 +1,33 @@
 set working-directory := ".."
 
 # View help text
-@help *recipe:
-    ./scripts/lilypond/help.nu {{ recipe }}
+@help *args:
+    ./scripts/lilypond/help.nu {{ args }}
 
 # Remove pdfs
 [confirm]
-@clean *search_term:
-    ./scripts/lilypond/clean.nu {{ search_term }}
+@clean *args:
+    ./scripts/lilypond/clean.nu {{ args }}
 
 # Compile pdfs
-@compile *search_term:
-    ./scripts/lilypond/compile.nu {{ search_term }}
+@compile *args:
+    ./scripts/lilypond/compile.nu {{ args }}
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 @edit *args:
     ./scripts/lilypond/edit.nu {{ args }}
 
 # Get info about scores
-@info *search_term:
-    ./scripts/lilypond/info.nu {{ search_term }}
+@info *args:
+    ./scripts/lilypond/info.nu {{ args }}
 
 # Create new score
 @new *args:
     ./scripts/lilypond/new.nu {{ args }}
 
 # Open pdfs
-@open-pdf *search_term:
-    ./scripts/lilypond/open-pdf.nu {{ search_term }}
+@open-pdf *args:
+    ./scripts/lilypond/open-pdf.nu {{ args }}
 
 # View project settings
 @settings *args:
@@ -38,5 +38,5 @@ set working-directory := ".."
     ./scripts/lilypond/templates.nu {{ args }}
 
 # Update dependencies and score LilyPond version
-@update *help:
-    ./scripts/lilypond/update.nu {{ help }}
+@update *args:
+    ./scripts/lilypond/update.nu {{ args }}
