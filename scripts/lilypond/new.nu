@@ -9,6 +9,17 @@ def format-name [name: string] {
   | str replace --all " " "-"
 }
 
+def is-numeric []: string -> bool {
+  try {
+    $in
+    | into int
+
+    true
+  } catch {
+    false
+  }
+}
+
 # Create new scores
 def main [
   title? = "Title" # Title for the score
@@ -49,29 +60,38 @@ def main [
 
   let new_score_directory = $"scores/($composer)/(format-name $title)"
 
-  # TODO: append number to file if a score already exists with the same name
-  # let new_score_directory = if ($new_score_directory | path exists) {
-  #   let existing_scores = (
-  #     fd $title scores --type dir
-  #     | lines
-  #     | each {|line| $line | path split | last}
-  #   )
+  let new_score_directory = if ($new_score_directory | path exists) {
+    let next_number = (
+      fd --type directory $title $"scores/($composer)"
+      | lines
+      | each {
+          |line|
 
-  #   # if ($existing_scores | find $title | is-not-empty) {
+          $line
+          | path split
+          | last
+          | split chars
+          | where {is-numeric}
+        }
+      | math max
+    ) + 1
 
-  #   # }
-
-  #   # $"scores/($composer)/($title)"
-  # } else {
-  #   $new_score_directory
-  # }
+    $"($new_score_directory)-1"
+  } else {
+    $new_score_directory
+  }
 
   mkdir $new_score_directory
 
-  for file in (fd $template $"($env.ENVIRONMENTS)/lilypond/score-templates" | lines) {
+  for file in (
+    fd $template $"($env.ENVIRONMENTS)/lilypond/score-templates"
+    | lines
+  ) {
+    let filename = ($file | path basename | str replace .templ "")
+
     $context
     | to toml
     | tera --stdin --template $file
-    | save $"($new_score_directory)/($file | path basename | str replace .templ "")"
+    | save $"($new_score_directory)/($filename)"
   }
 }
