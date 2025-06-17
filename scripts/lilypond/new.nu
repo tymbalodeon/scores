@@ -22,7 +22,7 @@ def is-numeric []: string -> bool {
 
 # Create new scores
 def main [
-  title? = "Title" # Title for the score
+  title? = "Untitled" # Title for the score
   template? = "single" # Which template to use
   --arranger = "" # Arranger for the score
   --artist = "" # Artist [alias for --subtitle] for the score
@@ -58,11 +58,11 @@ def main [
     title: $title
   }
 
-  let new_score_directory = $"scores/($composer)/(format-name $title)"
+  let new_score_directory = $"scores/($context.composer)/(format-name $title)"
 
   let new_score_directory = if ($new_score_directory | path exists) {
-    let next_number = (
-      fd --type directory $title $"scores/($composer)"
+    let existing_scores = (
+      fd --type directory ($title | str downcase) $"scores/($context.composer)"
       | lines
       | each {
           |line|
@@ -73,10 +73,18 @@ def main [
           | split chars
           | where {is-numeric}
         }
-      | math max
-    ) + 1
+      | flatten
+    )
 
-    $"($new_score_directory)-1"
+    let previous_number = if ($existing_scores | is-empty) {
+      0
+    } else {
+      $existing_scores
+      | math max
+      | into int
+    }
+
+    $"($new_score_directory)-($previous_number + 1)"
   } else {
     $new_score_directory
   }
