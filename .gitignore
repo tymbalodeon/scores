@@ -1,10 +1,10 @@
-.direnv
-.env
-.envrc
-
 # lilypond
 *.log
 *.midi
 *.pdf
 *~
+.direnv
+.env
+.envrc
+.helix/config.toml
 settings.toml

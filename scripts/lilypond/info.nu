@@ -1,8 +1,8 @@
 #!/usr/bin/env nu
 
-use ./files.nu get-compilation-status
-use ./files.nu get-files
-use ./files.nu get-title
+use files.nu get-compilation-status
+use files.nu get-files
+use files.nu get-title
 
 const null_display = "----"
 
@@ -139,13 +139,13 @@ def get_unique [files: list, key: string] {
     $files
     | get $key
     | uniq
-    | filter {|item| $item != $null_display}
+    | where {|item| $item != $null_display}
     | sort
   )
 }
 
-def filter_by_status [scores: table, status: string] {
-  return ($scores | filter {|score| $score.status == $status})
+def filter-by-status [scores: table, status: string] {
+  $scores | where {|score| $score.status == $status}
 }
 
 def parse_lilypond_value [value: string] {
@@ -284,10 +284,10 @@ def main [
 
   let files = if $major {
     $files
-    | filter {|file| "major" in $file.key}
+    | where {|file| "major" in $file.key}
   } else if $minor {
     $files
-    | filter {|file| "minor" in $file.key}
+    | where {|file| "minor" in $file.key}
   } else {
     $files
   }
@@ -298,7 +298,7 @@ def main [
     } else if $artists {
       get_unique $files "artist"
     } else if $compiled {
-      filter_by_status $files "compiled"
+      filter-by-status $files "compiled"
     } else if $composers {
       get_unique $files "composers"
     } else if $instruments {
@@ -314,9 +314,9 @@ def main [
     } else if $keys {
       get_unique $files "key"
     } else if $missing {
-      filter_by_status $files "missing"
+      filter-by-status $files "missing"
     } else if $outdated {
-      filter_by_status $files "outdated"
+      filter-by-status $files "outdated"
     } else if $time_signatures {
       get_unique $files "time_signature"
     } else if $titles {
@@ -333,7 +333,7 @@ def main [
   } else {
     $files
     | select ...($select | str replace --all " " "" | split row ",")
-    | filter {|score| not ($score | values | all {|value| $value == $null_display})}
+    | where {|score| not ($score | values | all {|value| $value == $null_display})}
   }
 
   let $files = if ($reject | is-empty) {
@@ -341,7 +341,7 @@ def main [
   } else {
     $files
     | reject ...($reject | str replace --all " " "" | split row ",")
-    | filter {|score| not ($score | values | all {|value| $value == $null_display})}
+    | where {|score| not ($score | values | all {|value| $value == $null_display})}
   }
 
   if (
