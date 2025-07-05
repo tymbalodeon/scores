@@ -24,7 +24,7 @@ def "main open" [
       $todos
     } else {
       $todos
-      | fzf --tac
+      | fzf
     }
 
     $todo
@@ -70,7 +70,7 @@ def get-todos [
   }
 
   let justfiles = (
-    ls --short-names just
+    ls --short-names ./environments/just
     | get name
     | where {($in | path parse | get stem) not-in (just env list)}
   )
