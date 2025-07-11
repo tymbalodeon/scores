@@ -1,0 +1,42 @@
+set working-directory := "../.."
+
+# View help text
+@help *args:
+    .environments/lilypond/scripts/help.nu {{ args }}
+
+# Remove pdfs
+[confirm]
+@clean *args:
+    .environments/lilypond/scripts/clean.nu {{ args }}
+
+# Compile pdfs
+@compile *args:
+    .environments/lilypond/scripts/compile.nu {{ args }}
+
+# Open <score> in $EDITOR and pdf viewer, recompiling on file changes
+@edit *args:
+    .environments/lilypond/scripts/edit.nu {{ args }}
+
+# Get info about scores
+@info *args:
+    .environments/lilypond/scripts/info.nu {{ args }}
+
+# Create new score
+@new *args:
+    .environments/lilypond/scripts/new.nu {{ args }}
+
+# Open pdfs
+@open-pdf *args:
+    .environments/lilypond/scripts/open-pdf.nu {{ args }}
+
+# View project settings
+@settings *args:
+    .environments/lilypond/scripts/settings.nu {{ args }}
+
+# View available templates
+@templates *args:
+    .environments/lilypond/scripts/templates.nu {{ args }}
+
+# Update dependencies and score LilyPond version
+@update *args:
+    .environments/lilypond/scripts/update.nu {{ args }}
