@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-use color.nu use-colors
+use environment.nu use-colors
 
 # Open comment at $index in $EDITOR
 def "main open" [
@@ -137,7 +137,7 @@ def get-todos [
 # List TODO-style comments
 def main [
   path?: string # A path to search for keywords
-  --color = "auto" # When to use colored output
+  --color = "auto" # When to use colored output {always|auto|never}
   --keyword: string # Filter to the specified keyword
   --sort-by-keyword # Sort by todo keyword
 ] {
