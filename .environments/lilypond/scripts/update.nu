@@ -1,39 +1,32 @@
 #!/usr/bin/env nu
 
+use ../../default/scripts/environment.nu "main update"
 use files.nu get-files
 use files.nu get-lilypond-version
 
-# Update dependencies and score LilyPond version
-def main [
-  --dependencies # Update dependencies
-  --scores # Update scores to match the installed LilyPond version
-] {
-  let all = (not $dependencies and not $scores)
+# Update lilypond version
+def "main lilypond" [] {
+  main update nixpkgs
+}
 
-  let old_lilypond_version = if $all or $scores {
-    get-lilypond-version
-  } else {
-    null
-  }
+# Update scores
+def "main scores" [] {
+  for score in ((get-files "ly") ++ (get-files "ily")) {
+    try {
+      convert-ly --edit $score
 
-  if $all or $dependencies {
-    nix flake update
-  }
-
-  if $all {
-    direnv reload
-  }
-
-  if $all or $scores {
-    let new_lilypond_version = (get-lilypond-version)
-
-    if $new_lilypond_version != $old_lilypond_version or $scores {
-      for score in ((get-files "ly") ++ (get-files "ily")) {
-        try {
-          convert-ly --edit $score
-          sd '\\version "\d\.\d{2}\.\d{2}"' $"\\version \"($new_lilypond_version)\"" $score
-        }
-      }
+      (
+        sd
+          '\\version"\d\.\d{2}\.\d{2}"'
+          $"\\version \"(get-lilypond-version)\""
+          $score
+      )
     }
   }
+}
+
+# Update lilypond version and scores
+def main [] {
+  main lilypond
+  main scores
 }

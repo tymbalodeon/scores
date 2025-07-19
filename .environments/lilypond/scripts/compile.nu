@@ -6,7 +6,7 @@ use files.nu get-lilypond-output-path
 use info.nu
 use settings.nu get-pdfs-directory
 
-def display-message [
+def print-message [
   action: string
   message: string
   --color-entire-message
@@ -59,7 +59,10 @@ def run-lilypond [file: path, force: bool] {
   }
 
   if $should_compile {
-    display-message Compiling $file --color green_bold
+    print-message Compiling (
+      $file
+      | str replace ./scores/ ""
+    ) --color green_bold
 
     (
       lilypond
