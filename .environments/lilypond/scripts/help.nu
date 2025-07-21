@@ -28,10 +28,9 @@ def main [
 ] {
   (
     display-just-help
+      lilypond
       $recipe
       $subcommands
       --color $color
-      --environment lilypond
-      --justfile .environments/lilypond/Justfile
   )
 }
