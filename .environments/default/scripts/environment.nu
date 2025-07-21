@@ -11,16 +11,13 @@ export def use-colors [color: string] {
 # Activate installed environments
 def "main activate" [] {
   if (which direnv | is-empty) {
-    print "Direnv (https://direnv.net/) is not installed."
-    print "Please install and try again."
+    nix develop
+  } else {
+    "use flake"
+    | save --force .envrc
 
-    exit 1
+    direnv allow
   }
-
-  "use flake"
-  | save --force .envrc
-
-  direnv allow
 }
 
 export def print-error [message: string] {
@@ -286,7 +283,7 @@ def "main edit shell" [] {
     | first
   }
 
-  
+
   ^$env.EDITOR $shell
 }
 
@@ -543,22 +540,23 @@ def get-default-environments [] {
   }
 }
 
-# List installed environments
+# List active environments
 def "main list active" [
   --aliases # Show environment aliases
-  --all # Show all installed environments
   --color = "auto" # When to use colored output {always|auto|never}
-  --default # Show only default installed environments
+  --default # Show only default active environments
   --features # Show active features
   --local # Show local environments
-  --user # Show only user installed environments [default]
+  --user # Show only user active environments
 ] {
   if not (".environments/environments.toml" | path exists) {
     return
   }
 
   let environments = (open .environments/environments.toml).environments
-  let valid_environments = (get-available-environments)
+  let valid_environments = (get-available-environments --exclude-local)
+
+  let all = [$default $local $user] | all {not $in}
 
   let local_environments = if $all or $user or not (
     [$all $default $user]
@@ -716,6 +714,13 @@ def "main list active" [
   } else {
     $text
   }
+}
+
+
+# List default environments
+def "main list default" [] {
+  (get-default-environments).name
+  | to text --no-newline
 }
 
 def get-environment-files [

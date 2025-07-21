@@ -1,7 +1,6 @@
 #!/usr/bin/env nu
 
 use environment.nu get-aliases-files
-use environment.nu get-environment-path
 use environment.nu parse-environments
 use environment.nu print-warning
 use environment.nu use-colors
@@ -60,15 +59,27 @@ def append-main-aliases [
           | path basename
         )
 
-        get-aliases-files $environment
-        | each {
+        try {
+          get-aliases-files $environment
+          | each {
+              {
+                alias: $in
+                environment: $environment
+              }
+            }
+        } catch {
             {
-              alias: $in
+              alias: null
               environment: $environment
             }
-          }
+        }
       }
     | flatten
+  )
+
+  let environment_aliases = (
+    $environment_aliases
+    | where {$in.alias | is-not-empty}
   )
 
   let aliases = (
@@ -121,7 +132,13 @@ def append-main-aliases [
             | str join ", "
           )
 
-          $"($line) (ansi magenta)[alias: ($aliases)](ansi reset)"
+          let alias = $"[alias: ($aliases)]"
+
+          let alias = if (use-colors $color) {
+            $"(ansi magenta)($alias)(ansi reset)"
+          }
+
+          $"($line) ($alias)"
         } else {
           $line
         }
@@ -170,9 +187,13 @@ export def display-just-help [
     | where {"::" not-in $in}
   )
 
-  let parsed_environments = if ($environment_or_recipe | is-not-empty) {
-    parse-environments [$environment_or_recipe] true
-  } else {
+  let parsed_environments = try {
+    if ($environment_or_recipe | is-not-empty) {
+      parse-environments [$environment_or_recipe] true
+    } else {
+      []
+    }
+  } catch {
     []
   }
 
@@ -191,7 +212,7 @@ export def display-just-help [
   }
 
   let recipe_or_script = if ($recipe_or_subcommand | is-not-empty) and (
-    $environment 
+    $environment
     | is-not-empty
   ) {
     let environment_recipes = (
@@ -270,7 +291,22 @@ export def display-just-help [
     return
   }
 
-  let script = if ($recipe_or_script | path exists) {
+  if ($environment | is-not-empty) and (
+    $recipe_or_script
+    | is-empty
+  ) {
+    return (
+      just
+        --color always
+        --justfile $".environments/($environment)/Justfile"
+        --list
+    )
+  }
+
+  let script = if ($recipe_or_script | is-not-empty) and (
+    $recipe_or_script
+    | path exists
+  ) {
     $recipe_or_script
   } else {
     let environment = if ($environment | is-empty) {

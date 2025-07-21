@@ -7,6 +7,7 @@ use environment.nu use-colors
 def "main open" [
   index?: int # Open todo at $index as it appears in `todo` with the same options
   path?: string # A path to search for keywords
+  --exclude-path: string # Path (or glob) to exclude when searching for TODO comments
   --keyword: string # Filter to the specified keyword
   --sort-by-keyword # Sort by todo keyword
 ] {
@@ -37,7 +38,14 @@ def "main open" [
   }
 
   ^$env.EDITOR (
-    get-todos $sort_by_keyword never $path --keyword $keyword
+    (
+      get-todos
+        $sort_by_keyword
+        never
+        $path
+        $exclude_path
+        --keyword $keyword
+    )
     | get $index
     | get file
   )
@@ -56,6 +64,7 @@ def get-todos [
   sort_by_keyword: bool
   color: string
   path?: string
+  exclude_path?: string
   --keyword: string
 ] {
   let pattern = $"(get-comment-token-pattern) \(FIXME|NOTE|TODO\)"
@@ -75,7 +84,6 @@ def get-todos [
     | get name
   )
 
-  # TODO: allow globs
   let excluded_paths = if (".environments/environments.toml" | path exists) {
     try {
       open .environments/environments.toml
@@ -88,6 +96,13 @@ def get-todos [
     }
   } else {
     []
+  }
+
+  let excluded_paths = if ($exclude_path | is-not-empty) {
+    $excluded_paths
+    | append $exclude_path
+  } else {
+    $excluded_paths
   }
 
   let matches = (
@@ -109,8 +124,16 @@ def get-todos [
         }
 
         for excluded_path in $excluded_paths {
-          if ($path | str starts-with $excluded_path) {
+          let files_to_exclude = (ls ($excluded_path | into glob) | get name)
+
+          if $path in $files_to_exclude {
             return false
+          }
+
+          for file in $files_to_exclude {
+            if ($path | str starts-with $file) {
+              return false
+            }
           }
         }
 
@@ -195,10 +218,18 @@ def get-todos [
 def main [
   path?: string # A path to search for keywords
   --color = "auto" # When to use colored output {always|auto|never}
+  --exclude-path: string # Path (or glob) to exclude when searching for TODO comments
   --keyword: string # Filter to the specified keyword
   --sort-by-keyword # Sort by todo keyword
 ] {
-  let todos = (get-todos $sort_by_keyword $color $path --keyword $keyword)
+  let todos = (
+    get-todos
+      $sort_by_keyword
+      $color
+      $path
+      $exclude_path
+      --keyword $keyword
+  )
 
   let width = (
     (
