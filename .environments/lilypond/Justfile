@@ -26,8 +26,8 @@ set working-directory := "../.."
     .environments/lilypond/scripts/new.nu {{ args }}
 
 # Open pdfs
-@open-pdf *args:
-    .environments/lilypond/scripts/open-pdf.nu {{ args }}
+@open *args:
+    .environments/lilypond/scripts/open.nu {{ args }}
 
 # View project settings
 @settings *args:
