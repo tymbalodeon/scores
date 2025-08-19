@@ -1,2 +1,5 @@
+hide_default = true
+hide_help = true
+
 [[environments]]
 name = "lilypond"

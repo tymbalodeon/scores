@@ -1,102 +1,189 @@
 #!/usr/bin/env nu
 
-# Clean pre-commit cache
-def "main clean" [] {
-  pre-commit clean
-}
+use ../../git/scripts/leaks.nu
+use environment.nu use-colors
 
-export alias clean = main clean
-
-# Run `nix flake check`
-def "main flake" [] {
-  nix flake check
-}
-
-export def get-pre-commit-hook-names [config: record<repos: list<any>>] {
-  let hooks = (
-    $config
-    | get repos.hooks
-    | flatten
-  )
-
-  mut names = {}
-
-  for hook in $hooks {
-    let name = (
-      if types in ($hook | columns) {
-        $hook.types
+export def get-files [paths: list<string>] {
+  if ($paths | is-empty) {
+    jj file list
+    | lines
+    | where {
+        (
+          $in
+          | path parse
+          | get extension
+        ) not-in [
+          jpeg
+          png
+        ]
       }
+  } else {
+    let directories = (
+      $paths
+      | where {($in | path type) == dir}
     )
 
-    if ($name | is-not-empty) {
-      $names = (
-        $names
-        | upsert $hook.id (
-            if $hook.id in ($names | columns) {
-              $names
-              | get $hook.id
-              | append $name
-            } else {
-              $name
-            }
-          )
+    $paths
+    | where {($in | path type) == file}
+    | append (
+        $directories
+        | each {ls ($"($in)/**/*" | into glob) | get name}
       )
-    } else {
-      $names = ($names | upsert $hook.id $hook.id)
-    }
+    | flatten
   }
+}
 
-  $names
-  | transpose id types
-  | sort-by id
+def get-submodules [] {
+  open Justfile
+  | lines
+  | where {str starts-with mod}
   | each {
-      |hook|
+      split row "mod "
+      | last
+      | split row " "
+      | first
+    }
+}
 
-      if $hook.id == $hook.types {
-        $hook.id
-      } else {
-        $"($hook.id) [($hook.types | str join ', ')]"
+export def run-check [type: string paths: list<string>] {
+  let justfiles = (
+    get-submodules
+    | each {$".environments/($in)/Justfile"}
+    | where {path exists}
+    | each {
+        |environment|
+
+        let recipes = (
+          just --summary --justfile $environment
+          | split row " "
+        )
+
+        if $type in $recipes {
+          $environment
+        }
+      }
+    | where {is-not-empty}
+  )
+
+  for justfile in $justfiles {
+    let environment = ($justfile | path split | get 1)
+    print $"($type | str capitalize)ing ($environment) files..."
+    just --justfile $justfile $type ...$paths
+  }
+}
+
+def get-default-checks [] {
+  ls .environments/default/scripts/check-*
+  | get name
+  | each {
+      {
+        file: $in
+        name: ($in | path parse | get stem | str replace check- "")
       }
     }
 }
 
-# List hook ids
-def "main list" [] {
-  get-pre-commit-hook-names (open .pre-commit-config.yaml)
-  | to text
+def append-comment [check_name: string comment: string color: string] {
+  let comment = if (use-colors $color) {
+    $"(ansi blue)# ($comment)(ansi reset)"
+  } else {
+    $"# ($comment)"
+  }
+
+  $"($check_name) • ($comment)"
 }
 
-# Run pre-commit hooks
-def "main pre-commit" [hooks?: list<string>] {
-  if ($hooks | is-empty) {
-    pre-commit run --all-files
-  } else {
-    for hook in $hooks {
-      pre-commit run $hook --all-files
+def list-default-checks [color: string] {
+  get-default-checks
+  | each {
+      let comment = (
+        nu $in.file --help
+        | split row "\n\n"
+        | first
+      )
+
+      append-comment $in.name $comment $color
+    }
+}
+
+# List default checks
+def "main list default" [
+  --color = "auto" # When to use colored output {always|auto|never}
+] {
+  list-default-checks $color
+  | to text
+  | column -t -s •
+}
+
+# List checks
+def "main list" [
+  --color = "auto" # When to use colored output {always|auto|never}
+] {
+  # TODO: add cyan note next to default checks?
+  list-default-checks $color
+  | append (
+      [
+        {
+          name: default
+          comment: "Run default checks (see `check list default`)"
+        }
+
+        {
+          name: leaks
+          comment: "Scan code for secrets"
+        }
+      ]
+      | each {append-comment $in.name $in.comment $color}
+    )
+  | sort
+  | to text
+  | column -t -s •
+}
+
+# Run checks
+export def main [...checks: string] {
+  let checks = ($checks | str downcase)
+  let all = ($checks | is-empty)
+
+  if $all or ("leaks" in $checks) {
+    leaks
+  }
+
+  for check in (
+    just --summary
+    | split row " "
+    | where {
+        ($in | str ends-with :check) or (
+          $in
+          | str starts-with format
+        ) or (
+          $in
+          | str starts-with lint
+        )
+      }
+  ) {
+    if $all or $check in $checks {
+      just $check
     }
   }
-}
 
-# Update all pre-commit hooks
-def "main update" [] {
-  ^pre-commit run pre-commit-update --all-files
-  yamlfmt .pre-commit-config.yaml
-}
+  let default_checks = (get-default-checks)
 
-export alias update = main update
-
-# Check flake and run pre-commit hooks
-export def main [
-  ...hooks: string # The hooks to run
-  --update # Update all pre-commit hooks
-] {
-  if $update {
-    main update
+  let checks = if $all or ("default" in $checks) {
+    $default_checks.name
+  } else {
+    $checks
   }
 
-  if ($hooks | is-empty) {
-    main flake
-  }
+  let submodules = (get-submodules)
 
-  main pre-commit $hooks
+  for check_name in $checks {
+    if $check_name in $default_checks.name {
+      for check in ($default_checks | where name == $check_name) {
+        nu $check.file
+      }
+    } else if $check_name in $submodules {
+      just $check_name check
+    }
+  }
 }

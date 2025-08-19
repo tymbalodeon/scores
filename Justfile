@@ -1,20 +1,31 @@
 [private]
-@default:
-    just help
+@_: help
 
 # View full help text, or for a specific recipe
 @help *args:
     .environments/default/scripts/help.nu {{ args }}
 
-# Check flake and run pre-commit hooks
+# Run checks
 @check *args:
     .environments/default/scripts/check.nu {{ args }}
+
+# Create and switch to bookmarks/branches
+@develop *args:
+    .environments/default/scripts/develop.nu {{ args }}
+
+alias dev := develop
 
 # Manage environments
 @environment *args:
     .environments/default/scripts/environment.nu {{ args }}
 
 alias env := environment
+
+# Format files
+@format *args:
+    .environments/default/scripts/format.nu {{ args }}
+
+alias fmt := format
 
 # View project history
 @history *args:
@@ -23,6 +34,10 @@ alias env := environment
 # View issues
 @issue *args:
     .environments/default/scripts/issue.nu {{ args }}
+
+# Lint files
+@lint *args:
+    .environments/default/scripts/lint.nu {{ args }}
 
 # View README file
 @readme *args:
@@ -58,13 +73,26 @@ alias todos := todo
 @ly *args:
     just lilypond {{ args }}
 
+[private]
+@md *args:
+    just markdown {{ args }}
+
+[private]
+@yml *args:
+    just yaml {{ args }}
+
+mod git ".environments/git/Justfile"
+mod just ".environments/just/Justfile"
 mod lilypond ".environments/lilypond/Justfile"
+mod markdown ".environments/markdown/Justfile"
 mod nix ".environments/nix/Justfile"
+mod yaml ".environments/yaml/Justfile"
 
 alias clean := lilypond::clean
 alias compile := lilypond::compile
 alias edit := lilypond::edit
 alias info := lilypond::info
+alias leaks := git::leaks
 alias new := lilypond::new
 alias open := lilypond::open
 alias settings := lilypond::settings

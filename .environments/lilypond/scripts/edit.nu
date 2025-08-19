@@ -5,7 +5,7 @@ use files.nu get-files
 use files.nu get-lilypond-output-path
 use files.nu get-title
 use info.nu
-use open-pdf.nu
+use open.nu
 
 # Open <score> in $EDITOR and pdf viewer, recompiling on file changes
 def main [
@@ -46,7 +46,7 @@ def main [
     let layout_file = (mktemp --tmpdir $"($title)-XXX.kdl")
 
     (
-      cat lilypond-layout.kdl
+      cat $"($env.ENVIRONMENT)/lilypond/layout.kdl"
       | str replace --all "[score]" $input_file
       | str replace --all "[score_directory]" ($input_file | path dirname)
       | str replace --all "[score_name]" $title
