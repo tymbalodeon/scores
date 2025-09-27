@@ -11,9 +11,11 @@ hadntTriedBass = \relative e {
   \time 4/4
   \clef "bass"
 
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+
   | R1 * 4
 
-  \mark \markup \box \tiny "Verse I"
+  \mark \default
 
   \repeat volta 2 {
     | r8 e -- r e -- r e16 e r8 e16 e
@@ -23,7 +25,7 @@ hadntTriedBass = \relative e {
     | r8 e16 e r8 e r e16 e r8 e
   }
 
-  \mark \markup \box \tiny "Chorus A"
+  \mark \default
 
   \repeat volta 2 {
     | fs,4 fs'8 -. r a,4 a'8 -. r
@@ -34,7 +36,7 @@ hadntTriedBass = \relative e {
   | r8 e16 e r8 e r e16 e r8 e16 e
   | r8 e16 e r8 e r e,16 e r8 e16 e
 
-  \mark \markup \box \tiny "Verse II"
+  \mark \default
 
   \repeat volta 2 {
     | r8 << { e'16 e r8 e } \\ \new CueVoice { \voiceTwo e,16 _\markup \italic "(2. 8vb)" e r8 e } >> r e'16 e r8 e16 e
@@ -43,7 +45,7 @@ hadntTriedBass = \relative e {
     | r8 e16 e r8 e r e16 e r8 e16 e
   }
 
-  \mark \markup \box \tiny "Chorus A"
+  \mark \default
 
   | fs,4 fs'8 -. r a,4 a'8 -. r
   | e,8 e'16 e r8 e r e16 e r8 e16 e
@@ -51,7 +53,7 @@ hadntTriedBass = \relative e {
 
   | fs4 fs'8 -. r a,4 a'8 -. r
 
-  \mark \markup \box \tiny "Chorus B"
+  \mark \default
 
   \repeat volta 4 {
     | e,8 e'16 e r8 e r e16 e r8 e16 e
@@ -73,25 +75,17 @@ hadntTriedBass = \relative e {
     }
   }
 
-  \repeat volta 2 {
-    | e,,8 e16 e r8 e r e r e
+  | e,,8 e16 e r8 e r e r e
+  | r8 e16 e r8 e r e r e
+  | r8 e16 e r8 e r e r e
+  | r8 e16 e r8 e r \acciaccatura fs gs b cs
 
-    \alternative {
-      \volta 1 {
-        | r8 e16 e r8 e r e r e
-        | r8 e16 e r8 e r e r e
-        | r8 e16 e r8 e r \acciaccatura fs gs b cs
-      }
+  | e,8 e16 e r8 e r e r e
+  | r8 e16 e r8 e r e r4
+  | b'4. fs'8 ~ fs4 b, ~
+  | b8 b b b b b r4
 
-      \volta 2 {
-        | r8 e,16 e r8 e r e r4
-        | b'4. fs'8 ~ fs4 b, ~
-        | b8 b b b b b r4
-      }
-    }
-  }
-
-  \mark \markup \box \tiny "Bridge"
+  \mark \default
 
   | e,1 ~
   | e1
@@ -137,7 +131,7 @@ hadntTriedBass = \relative e {
 
   | fs,4 fs'8 -. r a,4 a'8 -. r
 
-  \mark \markup \box \tiny "Chorus B"
+  \mark \default
 
   \repeat volta 4 {
     | e,8 e'16 e r8 e r e16 e r8 e16 e
@@ -159,25 +153,17 @@ hadntTriedBass = \relative e {
     }
   }
 
-  \repeat volta 2 {
-    | e,,8 e16 e r8 e r e r e
+  | e,,8 e16 e r8 e r e r e
+  | r8 e16 e r8 e r e r e
+  | r8 e16 e r8 e r e r e
+  | r8 e16 e r8 e r \acciaccatura fs gs b cs
 
-    \alternative {
-      \volta 1 {
-        | r8 e16 e r8 e r e r e
-        | r8 e16 e r8 e r e r e
-        | r8 e16 e r8 e r \acciaccatura fs gs b cs
-      }
+  | e,8 e16 e r8 e r e r e
+  | r8 e16 e r8 e r e r4
+  | b'4. fs'8 ~ fs4 b, ~
+  | b8 b b b b b r4
 
-      \volta 2 {
-        | r8 e,16 e r8 e r e r4
-        | b'4. fs'8 ~ fs4 b, ~
-        | b8 b b b b b r4
-      }
-    }
-  }
-
-  \mark \markup \box \tiny "Outro"
+  \mark \default
 
   | r8 e r e r e16 e r8 e16 e
   | r8 e r e r e16 e r8 e16 e

@@ -4,6 +4,8 @@ adventurousBass = \relative c {
   \key a \major
   \clef "bass"
 
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+
   | R1 * 2
   | R1 * 4
 

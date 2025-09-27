@@ -1,8 +1,12 @@
 \version "2.25.26"
 
+% see https://mail.gnu.org/archive/html/lilypond-user/2015-02/msg00523.html !!!
+
 iWasStruckByTheWordsBass = \relative d {
   \key c \major
   \time 4/4
+
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   \clef bass
 

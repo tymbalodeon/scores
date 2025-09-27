@@ -4,6 +4,8 @@ seniorServiceBass = \relative c {
   \key f \major
   \clef "bass"
 
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+
   | f4 f r8 g g4
   | R1
   | f4 f r8 g g4

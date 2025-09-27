@@ -5,6 +5,8 @@ weRifledThroughBass = \relative e {
   \time 4/4
   \clef "bass"
 
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+
   \partial 8
   r8
 

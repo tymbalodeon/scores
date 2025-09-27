@@ -5,6 +5,8 @@ silverInTheSunBass = \relative fs, {
   \time 4/4
   \clef "bass"
 
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+
   | g4 a b cs
   | R1 * 3
   | r2. fs,4

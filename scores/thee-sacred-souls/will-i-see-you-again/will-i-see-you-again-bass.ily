@@ -4,6 +4,8 @@ willISeeYouAgain = \relative c {
   \key c \major
   \clef "bass"
 
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+
   | R1 * 4
 
   | d16 e d c a8 d ~ d2

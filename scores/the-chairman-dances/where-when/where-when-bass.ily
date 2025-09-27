@@ -100,6 +100,8 @@ whereWhenBass = \relative c {
   \key b \major
   \clef "bass"
 
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+
   \verseOne
   \chorus
   \verseTwo

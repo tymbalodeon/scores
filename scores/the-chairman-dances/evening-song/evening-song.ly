@@ -178,10 +178,3 @@
         \hadntTriedBass
     }
 }
-
-\score {
-    \compressMMRests {
-        \numericTimeSignature
-        \hadntTriedBassCoda
-    }
-}
