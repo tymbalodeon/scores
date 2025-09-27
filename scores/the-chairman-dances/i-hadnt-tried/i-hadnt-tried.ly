@@ -27,23 +27,3 @@ verse = {
     \hadntTriedBass
   }
 }
-
-\score {
-  \new Staff \with {
-    \numericTimeSignature
-    \clef "bass"
-  } {
-    \mark \markup \large { \musicglyph "scripts.coda" }
-
-    | r8 e r e r e16 e r8 e16 e
-    | r8 e r e r e16 e r8 e16 e
-
-    | r8 e16 e r8 e r e16 e r8 e16 e
-    | r8 e16 e r8 e r e16 e r8 e
-
-    | r8 e r e r e16 e r8 e16 e
-    | r8 e r e r e16 e r8 e16 e
-
-    \bar "|."
-  }
-}
