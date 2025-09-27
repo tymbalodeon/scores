@@ -37,15 +37,15 @@ hadntTriedBass = \relative e {
   \mark \markup \box \tiny "Verse II"
 
   \repeat volta 2 {
-    | r8 << { e'16 e r8 e } \\ \new \CueVoice { \voiceTwo e,16 _\markup \italic "(2. 8vb)" e r8 e } >> r e'16 e r8 e16 e
+    | r8 << { e'16 e r8 e } \\ \new CueVoice { \voiceTwo e,16 _\markup \italic "(2. 8vb)" e r8 e } >> r e'16 e r8 e16 e
     | r8 e16 e r8 e r e16 e r8 e16 e
-    | r8 << { e16 e r8 e } \\ \new \CueVoice { \voiceTwo e,16 _\markup \italic "(2. 8vb)" e r8 e } >> r e'16 e r8 e16 e
-    | r8 e16 e r8 e r e16 e r8 e,
+    | r8 << { e16 e r8 e } \\ \new CueVoice { \voiceTwo e,16 _\markup \italic "(2. 8vb)" e r8 e } >> r e'16 e r8 e16 e
+    | r8 e16 e r8 e r e16 e r8 e16 e
   }
 
   \mark \markup \box \tiny "Chorus A"
 
-  | fs4 fs'8 -. r a,4 a'8 -. r
+  | fs,4 fs'8 -. r a,4 a'8 -. r
   | e,8 e'16 e r8 e r e16 e r8 e16 e
   | r8 e r e r e16 e r8 e,
 
