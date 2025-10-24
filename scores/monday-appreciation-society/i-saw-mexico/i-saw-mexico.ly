@@ -100,9 +100,9 @@ music = \relative c {
   | c8 -> c c c -> c c c -> d
   | e8 b' ( e ) d e,, g a b
 
-  | c8 ^\markup \italic "sim." c c c c c c d
-  | e8 b' ( d ) g, e, g a b
   | c8 e g c, e, g a b
+  | e8 b' ( d ) g, e, g a b
+  | c8 c c c c c c c
   | e8 b' ( g' ) e b e, e, g
 
   \mark \default
@@ -133,24 +133,29 @@ music = \relative c {
 
   \mark \default
 
-  \repeat volta 2 {
-    | c,8 c c c c e g a
-    | g,8 g g g g b d e
-    | c8 c c c c e g a
-    | g,8 g g g g b d e
-  }
+  | c,8 c c c c e g a
+  | g,8 g g g g b d e
+  | c8 c c c c e g a
+  | g,8 g g g g b d e
 
   \mark \default
 
   \repeat volta 2 {
-    | r8 -\markup \box 3x d'' ^\markup \tiny D b ^\markup \tiny B g ^\markup \tiny G ~ g \glissando a,,4 e8
+    | r8 d'' ^\markup \tiny D b ^\markup \tiny B g ^\markup \tiny G ~ g \glissando a,,4 e8
     | g8 \glissando b'' ^\markup \tiny B e, ( d ) ~ d b ( g4 )
     | r8 d'' b g ~ g \glissando a,,4 e8
-    | g8 \glissando b'' e, ( d ) ~ d b ( g4 )
+
+    \alternative {
+      \volta 1 {
+        | g8 \glissando b'' e, ( d ) ~ d b ( g4 )
+      }
+
+      \volta 2 {
+        | g,1
+      }
+    }
   }
 
-  | r8 -\markup \box 3x d'' ^\markup \tiny D b ^\markup \tiny B g ^\markup \tiny G ~ g \glissando a,,4 e8
-  | g1
 
   % | r8 d'' b g ~ g \glissando a,,4 e8
   % | g8 \glissando b'' e, ( d ) ~ d b ( g4 )
@@ -169,7 +174,7 @@ music = \relative c {
 }
 
 \score {
-  #(set-global-staff-size 17)
+  #(set-global-staff-size 18)
 
   \new Staff \with {
     instrumentName = "Bass"

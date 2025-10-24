@@ -153,21 +153,37 @@ music = \relative c {
 
   \time 2/4
 
-  | fs8 fs d' fs ~
+  % | fs8 fs d' fs ~
+  | fs fs fs fs -> ~
 
   \time 4/4
 
   \mark \default
 
-  | \afterGrace fs2 \glissando { \hideNotes d \unHideNotes } r4 r8 g,
-  | \afterGrace c1 \glissando { \hideNotes g \unHideNotes }
-  | r2 r4 r8 g
-  | \afterGrace c1 \glissando { \hideNotes g \unHideNotes }
 
-  | r2 r4 r8 g
-  | \afterGrace c1 \glissando { \hideNotes g \unHideNotes }
-  | r2 r4 r8 g
-  | <c g'>1
+  \repeat volta 2 {
+    | fs g4 d'8 ~ d b4 g8
+    % | \afterGrace fs2 \glissando { \hideNotes d \unHideNotes } r4 r8 g,
+    | \afterGrace c2. \glissando { \hideNotes g \unHideNotes } r8 fs ~
+    | fs g4 d'8 ~ d b4 g8
+
+    \alternative {
+      \volta 1 {
+        | \afterGrace c2. \glissando { \hideNotes g \unHideNotes } r8 fs \laissezVibrer
+      }
+
+      \volta 2 {
+        | <c' g'>1
+      }
+    }
+    % | r2 r4 r8 g
+    % | \afterGrace c1 \glissando { \hideNotes g \unHideNotes }
+  }
+
+  % | r2 r4 r8 g
+  % | \afterGrace c1 \glissando { \hideNotes g \unHideNotes }
+  % | r2 r4 r8 g
+  % | <c g'>1
 
   \bar "|."
 }
