@@ -18,6 +18,8 @@ awakeBass = \relative g, {
   | g,8. -> g16 -> ~ g e g8 -> r16 c d -0 e bf' -> d, -0 a' -> g -0
   | f8 -> f16 e -> ~ e e16 d8 -> d16 c8 -> e,16 bf' -> ( c ) bf e,
 
+  \mark \markup \box \small \bold VERSE
+
   | g8. -> g16 -> ~ g g g'8 -> r16 g,8 -> g16 g' -> e, f fs
   | g8. -> g16 -> ~ g g g'8 -> r16 g,8 -> g16 g' -> e, f fs
   | g8. -> g16 -> ~ g16 e a8 ~ a bf8 ~ bf16 c8.
@@ -27,6 +29,8 @@ awakeBass = \relative g, {
   | g16 ) d, -0 c' cs ( d ) f d8 r16 g,8 g16 g'16 g, -0 f' fs (
   | g16 ) d, -0 c' cs ( d ) f d8 r16 g,8 g16 g'16 d g,8
   | g,8. -> g16 -> ~ g g g8 -> ~ g16 g8 -> e16 g -> e g8 ->
+
+  \mark \markup \box \small \bold CHORUS
 
   \key g \major
   \bar "||"
@@ -56,6 +60,8 @@ awakeBass = \relative g, {
   | R1 * 3
   | r2 r4 r16 g8 -> e16
 
+  \mark \markup \box \small \bold VERSE
+
   | g8. -> g16 -> ~ g e g8 -> ~ g16 g' ( a ) d, -0 c' ( d8 ) d,16 -0
   | g,8. -> g16 -> ~ g e g8 -> ~ g16 a' ( bf ) d, -0 d' ( e8 ) d,16 -0
   | g,8. -> g16 -> ~ g e g8 -> ~ g16 bf' ( c ) d, -0 f' ( e8 ) d,16 -0
@@ -82,6 +88,8 @@ awakeBass = \relative g, {
   | d''16 -> d d d -> ~ d d, -0 d' -> d d d8 -> d,16 -0 d' -> d d, -0 d
   | d'16 ->  d d d -> ~ d d, -0 d' -> d d d8 -> d,16 -0 d' -> d, -0 d'8 ->
 
+  \mark \markup \box \small \bold CHORUS
+
   \key g \major
   \bar "||"
 
@@ -101,6 +109,8 @@ awakeBass = \relative g, {
   | c16 ) -> c c b -> ~ b a, a' -> a a b8 -> a,16 -0 a'8 -> g ->
   | f16 -> f f f -> r d f -> f f f8 -> c16 f -> c f, fs
   | g16 -> g g g -> r e g -> g g g -> r e g8 -> g ->
+
+  \mark \markup \box \small \bold OUTRO
 
   | r8 d'''16 -> ^\markup \tiny "D" ( b ) d,, -0 b'' -> ( a ) ( g, ) -0 e' -> ( fs) ( g ) e ( -> d, ) -0 a -0 d' -> ( b )
   | r8 d'16 -> ( b ) d,, b'' -> ( a ) ( g, ) e' -> ( fs ) ( g ) a -> d,, a b' -> ( a )

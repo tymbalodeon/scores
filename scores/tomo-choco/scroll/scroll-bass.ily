@@ -18,8 +18,6 @@ scrollBass = \relative e, {
   \time 4/4
   \clef "bass"
 
-  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
-
   | R1
   | r2. r8 e16 ( fs )
   | ds'8 fs,16 cs' ~ cs fs, b8 r16 fs' fs8 ~ fs16 cs fs,8

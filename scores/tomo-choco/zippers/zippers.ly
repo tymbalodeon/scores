@@ -13,6 +13,8 @@
 }
 
 \score {
+  #(set-global-staff-size 19)
+
   \new Staff \with {
     instrumentName = "Bass"
     \numericTimeSignature

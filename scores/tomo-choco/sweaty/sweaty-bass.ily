@@ -38,8 +38,12 @@ sweatyBass = \relative c {
   | df2 af
   | df4 f, ( \glissando af ) df
 
+
   | ef2 g,
   | bf8 ( c4 ) ef8 ~ ef bf' ( \glissando c4 )
+
+  \mark \markup \box \small \bold VERSE
+
   | ef2. bf4 \glissando
   | af' ^\markup \tiny "A♭" g f ef
 
@@ -71,6 +75,8 @@ sweatyBass = \relative c {
   | ef,4. ef8 bf' bf, ( \glissando c ) ( df )
   | ef' df4 c8 ~ c bf4 \xNote bf8
 
+  \mark \markup \box \small \bold CHORUS
+
   | ef,8 ^\markup \italic "let ring" ef bf' ef, ~ ef ef bf' ef, ~
   | ef ef bf' ef, ~ ef ef bf' ef,
   | bf8 bf bf' bf, ~ bf bf bf' bf, ~
@@ -83,7 +89,11 @@ sweatyBass = \relative c {
   % TODO add gliss to rests
   | g bf ( c ) ef ~ ef f ( \glissando g4 )
 
+  \mark \markup \box \small \bold DRUMS
+
   | R1 * 18
+
+  \mark \markup \box \small \bold VERSE
 
   \tag #'album \pageBreak
 
@@ -107,6 +117,8 @@ sweatyBass = \relative c {
   | af'8 ( bf4. ) ~ bf8 c, ( df ) af'
   | g'8 ( af ) ( g ) ef ~ ef af, ( g4 )
 
+  \mark \markup \box \small \bold CHORUS
+
   | ef8 ^\markup \italic "let ring" ef bf' ef, ~ ef ef bf' ef, ~
   | ef ef bf' ef, ~ ef ef bf' ef,
   | bf8 bf bf' bf, ~ bf bf bf' bf, ~
@@ -116,6 +128,8 @@ sweatyBass = \relative c {
   | af af df' af, ~ af af df' af, (
   | g8 ) g bf' g, ~ g g bf' g, ~
   | g af ( bf ) c ~ c df ( ef ) \xNote af,
+
+  \mark \markup \box \small \bold OUTRO
 
   | df2 ~ df4 df8 af
   | \acciaccatura ef'16 \glissando f4. af8 ~ af af ( bf4 )

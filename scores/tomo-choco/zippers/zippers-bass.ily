@@ -18,6 +18,8 @@ zippersBass = \relative af {
   | c,4. g'
   | c,4. g'4 ~ g16 ef
 
+  \mark \markup \box \small \bold VERSE
+
   | af4 ~ af16 ef ef'8 d bf
   | ef,4. bf'4 ~ bf16 ef,
   | af4 ~ af16 ef ef'8 d bf
@@ -27,6 +29,8 @@ zippersBass = \relative af {
   | ef,4. bf'
   | c,4. g'
   | c,4. g'
+
+  \mark \markup \box \small \bold OOHS
 
   | af,2.
   | g2.
@@ -38,6 +42,8 @@ zippersBass = \relative af {
   | c' ~
   | c4. ~ c4 ~ c16 ef,
 
+  \mark \markup \box \small \bold VERSE
+
   | af4 ~ af16 ef ef'8 d bf
   | ef,4. bf'4 ~ bf16 ef,
   | af4 ~ af16 ef ef'8 d bf
@@ -47,6 +53,8 @@ zippersBass = \relative af {
   | d8. bf ef, \glissando g,
   | c2. ~
   | c2.
+
+  \mark \markup \box \small \bold BRIDGE
 
   | ef2.
   | af,2.
@@ -67,6 +75,8 @@ zippersBass = \relative af {
   >>
   | \tuplet 4/3 { c8 d ef f } \tuplet 4/3 { ef d c bf }
 
+  \mark \markup \box \small \bold OOHS
+
   | af4. \4 \glissando af' \3 \glissando
   | g,4. \glissando bf' \2 \glissando
   | af,4. \glissando c' \2 \glissando
@@ -81,6 +91,8 @@ zippersBass = \relative af {
 
   | f,8. f \glissando f' f \glissando
   | f,8. f \glissando f' ef16 c8
+
+  \mark \markup \box \small \bold OUTRO
 
   | ef4. ~ ef8 f, g
   | af4. ~ af8 ef'16 ( f8. ) \glissando

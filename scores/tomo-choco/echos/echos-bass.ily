@@ -15,6 +15,8 @@ echosBass = \relative fs, {
   | b4. -- a8 -- ~ a4 gs4 -- ~
   | gs8 fs4. -- e4 -. -> ds -- -> \glissando
 
+  \mark \markup \box \small \bold VERSE
+
   \once\override NoteColumn.glissando-skip = ##t
 
   | \parenthesize r4. fs,8 -> ~ fs4 fs \glissando
@@ -35,6 +37,8 @@ echosBass = \relative fs, {
   | ds'2. b,4 \glissando
   | fs''1
 
+  \mark \markup \box \small \bold VERSE
+
   | fs,,4 r8 fs' ~ fs4 fs,
   | b4 r8 \appoggiatura fs'16 gs8 ~ gs fs4 cs8
   | fs,4 r8 fs' ~ fs4 cs8 fs
@@ -52,6 +56,8 @@ echosBass = \relative fs, {
   | r8 b, -> r b -> ~ b4 r
   | fs4 r8 fs' ~ fs4 cs8 fs
   | r8 b, -> r b -> ~ b b -> ( cs4 ) \glissando
+
+  \mark \markup \box \small \bold BRIDGE
 
   | e,4. -> e'8 ~ e4 \glissando fs, \glissando
   | b4. -> b'8 ~ b4 b,
@@ -71,6 +77,8 @@ echosBass = \relative fs, {
   | b'4. -- a8 -- ~ a2
   | gs4. -- fs8 -- ~ fs4 e4 \glissando
 
+  \mark \markup \box \small \bold VERSE
+
   \once\override NoteColumn.glissando-skip = ##t
 
   | \parenthesize r4. fs,8 -> ~ fs4 fs \glissando
@@ -85,6 +93,8 @@ echosBass = \relative fs, {
 
   | b''4. -- ^\markup \tiny "B" a8 -- ~ a2
   | gs4. -- fs8 -- ~ fs4 cs4 \glissando
+
+  \mark \markup \box \small \bold "END"
 
   | a,1
   | fs1
@@ -103,6 +113,8 @@ echosBass = \relative fs, {
 
   | b1 ~
   | b1
+
+  \mark \markup \box \small \bold INSTRUMENTAL
 
   | R1 * 15
   | r2. r8

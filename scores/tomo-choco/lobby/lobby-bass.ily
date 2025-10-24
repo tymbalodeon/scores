@@ -32,6 +32,8 @@ lobbyBass = \relative c {
     | d4. ~ d4 a'8 \glissando
     | d2.
 
+    \mark \markup \box \small \bold CHORUS
+
     \bar "||"
     \key g \major
 
@@ -63,6 +65,8 @@ lobbyBass = \relative c {
 
     | R2. * 2
 
+    \mark \markup \box \small \bold VERSE
+
     | g,,4 b8 \glissando g' fs e
     | d8 e, fs g a b
     | cs4. ~ cs4 b8 \glissando
@@ -86,6 +90,8 @@ lobbyBass = \relative c {
 
     | d4. ~ d4 a'8 \glissando
     | d2.
+
+    \mark \markup \box \small \bold CHORUS
 
     \bar "||"
     \key g \major
@@ -135,5 +141,4 @@ lobbyBass = \relative c {
     | c2.
 
     \bar "|."
-
  }

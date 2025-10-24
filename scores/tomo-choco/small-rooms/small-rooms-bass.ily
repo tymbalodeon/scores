@@ -12,6 +12,8 @@ smallRoomsBass = \relative c, {
   | c4. r16 g c \xNote c g8 a c ~
   | c g c4 ~ c8. g16 c \xNote c f, ( g )
 
+  \mark \markup \box \small \bold CHORUS
+
   | df'8 -. df -- ~ df16 \xNote df af16 a bf8 -. bf4 -- c8 -.
   | df8 -. df4 -- af'16 df, df' af df,4 ef16 af,
   | df8 -. df4 -- af'8 ( \glissando df ) \glissando f, af, g
@@ -36,10 +38,14 @@ smallRoomsBass = \relative c, {
 
   | f4. r16 \xNote f f8 -. \appoggiatura g16 a8 -- c -- d --
 
+  \mark \markup \box \small \bold VERSE
+
   | f4 ~ f16 c g' ( gs ) a4 ~ a16 c, a' ( bf )
   | c4 ~ c8. f,16 c'8 -. g, -- a -- bf --
   | c4. r16 g c8 -. e -. -- g -. -- c, ~
   | c g c4 ~ c8. g16 c \xNote c f, ( g )
+
+  \mark \markup \box \small \bold CHORUS
 
   | df'8 -. df -- ~ df16 \xNote df af16 a bf8 -. bf4 -- c8 -.
   | df8 -. df4 -- af'16 df, df' af df,4 ef16 af,
@@ -47,11 +53,16 @@ smallRoomsBass = \relative c, {
   | \appoggiatura ef16 f2 r8 bf, ( \glissando af4 ) \glissando
 
   | f,4. r16 \xNote f f8 -. f4. --
+
+  \mark \markup \box \small \bold VERSE
+
   | f4. r16 \xNote f f8 -. f4. --
   | f4. r16 \xNote f f8 -. g -- a -- bf --
 
   | c4. r16 g c \xNote c g8 a c ~
   | c g c4 ~ c8. g16 c \xNote c f, ( g )
+
+  \mark \markup \box \small \bold CHORUS
 
   | df'8 -. df -- ~ df16 \xNote df af16 a bf8 -. bf4 -- c8 -.
   | df8 -. df4 -- \glissando c'16 \2 f, df' af df,4 ef16 af,
@@ -64,7 +75,9 @@ smallRoomsBass = \relative c, {
   | f4. r16 \xNote f f8 -. f4. --
   | f4. r16 \xNote f f8 -. f4. --
 
-  | R1
+  \mark \markup \box \small \bold BRDIGE
+
+  | R1 ^\markup \italic { [band tacet] }
   | r2 r8 f -- g -- a --
   | bf4. r16 f bf8 -. bf -- ~ bf16 e ( f ) \xNote a,
   | bf4. r16 f bf8 a g c
@@ -78,6 +91,8 @@ smallRoomsBass = \relative c, {
   | f8 ( g ) a c, f g, -- a -- bf --
   | c4. r16 g c \xNote c g8 a c ~
   | c g c4 ~ c8. g16 c \xNote c f, ( g )
+
+  \mark \markup \box \small \bold OUTRO
 
   | df'8 -. df -- ~ df16 \xNote df af16 a bf8 -. bf4 -- c8 -.
   | df8 -. df4 -- af'16 df, df' af df, \xNote e, af8 g
