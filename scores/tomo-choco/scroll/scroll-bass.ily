@@ -3,10 +3,13 @@
 chorus = \relative e, {
   | r2. r16 e fs8 \glissando
 
+  \mark \markup \box \small \bold CHORUS
+
   | a4. e'8 ~ e ( fs8 ) a,16 -0 b' ( cs8 )
   | d,4. \4 b'8 ~ b ( cs8 ) d,16 -0 e' ( fs8 )
   | b,16 ( cs ) e cs ~ cs8 a16 ( b ) cs a8. fs16 b e,8
   | b'16 ( cs ) fs e ~ e8 a,16 ( b ) e cs8. b16 a fs8
+
   | b,16 b b b r8 b16 b b b r fs b fs b8
 }
 
@@ -14,6 +17,8 @@ scrollBass = \relative e, {
   \key e \major
   \time 4/4
   \clef "bass"
+
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   | R1
   | r2. r8 e16 ( fs )
@@ -39,6 +44,8 @@ scrollBass = \relative e, {
   | r2. r8 fs
   | b16 b b b r fs b16 b b b r fs b fs b8 \glissando
 
+  \mark \markup \box \small \bold VERSE
+
   | cs'4. \2 b8 ~ b ds,16 \4 ( e ) ds'16 cs e,, ( fs )
   | ds'8 fs,16 cs' ~ cs fs, b8 r16 fs' fs8 ~ fs16 cs fs,8 \glissando
   | cs''4. b8 ~ b16 a, -0 ds ( e ) ds'16 cs fs, ( gs )
@@ -63,6 +70,8 @@ scrollBass = \relative e, {
   <<
     {
       r16
+
+      \mark \markup \box \small \bold BRIDGE
 
       | e'8. -- e16 -. r8 cs8. -- cs16 -. r8 a8 -- r8
       | gs'8. -- b16 -- ~ b8 gs8 -- ~ gs16 b8. -- gs8 -- r8
