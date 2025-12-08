@@ -1,4 +1,4 @@
-\version "2.25.26"
+\version "2.25.28"
 
 iAmYourHypocrite = \relative g' {
     \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet

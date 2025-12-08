@@ -88,7 +88,6 @@ mod markdown ".environments/markdown/Justfile"
 mod nix ".environments/nix/Justfile"
 mod yaml ".environments/yaml/Justfile"
 
-alias clean := lilypond::clean
 alias compile := lilypond::compile
 alias edit := lilypond::edit
 alias info := lilypond::info

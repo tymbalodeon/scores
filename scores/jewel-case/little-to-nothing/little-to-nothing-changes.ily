@@ -1,4 +1,4 @@
-\version "2.25.26"
+\version "2.25.28"
 
 changesIntro = \chordmode {
   | cs2.:m7

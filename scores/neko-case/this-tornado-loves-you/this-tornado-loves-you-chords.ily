@@ -1,4 +1,4 @@
-\version "2.25.26"
+\version "2.25.28"
 
 intro = \chordmode {
   g1:maj  |

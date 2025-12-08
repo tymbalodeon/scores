@@ -1,4 +1,4 @@
-\version "2.25.26"
+\version "2.25.28"
 
 \include "peace-in-time-changes.ily"
 \include "peace-in-time-melody.ily"

@@ -8,4 +8,5 @@
 .env
 .envrc
 .helix/config.toml
+result
 settings.toml

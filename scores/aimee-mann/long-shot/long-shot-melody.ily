@@ -1,4 +1,4 @@
-\version "2.25.26"
+\version "2.25.28"
 makePercent =
 #(define-music-function (note) (ly:music?)
   "Make a percent repeat the same length as NOTE."

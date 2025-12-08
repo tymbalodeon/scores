@@ -1,4 +1,4 @@
-\version "2.25.26"
+\version "2.25.28"
 text = \lyricmode {
   Thou know -- est all; __ I seek in vain
   What lands to till or sow with seed

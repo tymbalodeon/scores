@@ -1,4 +1,4 @@
-\version "2.25.26"
+\version "2.25.28"
 structure = {
   \time 3/4
   \set Timing.beamExceptions = #'()
