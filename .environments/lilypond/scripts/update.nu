@@ -1,12 +1,12 @@
 #!/usr/bin/env nu
 
-use ../../default/scripts/environment.nu "main update"
+use ../../default/scripts/environment-update.nu
 use files.nu get-files
 use files.nu get-lilypond-version
 
 # Update lilypond version
 def "main lilypond" [] {
-  main update nixpkgs
+  environment-update [nixpkgs]
 }
 
 # Update scores
