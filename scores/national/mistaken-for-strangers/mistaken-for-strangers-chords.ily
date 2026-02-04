@@ -1,4 +1,4 @@
-\version "2.25.28"
+\version "2.25.32"
 verse_chords = \chordmode {
   f1:/a |
   bf:maj |

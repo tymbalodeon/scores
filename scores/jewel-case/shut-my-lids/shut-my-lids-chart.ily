@@ -1,4 +1,4 @@
-\version "2.25.28"
+\version "2.25.32"
 
 \include "shut-my-lids-changes.ily"
 \include "shut-my-lids-melody.ily"

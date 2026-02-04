@@ -1,4 +1,4 @@
-\version "2.25.28"
+\version "2.25.32"
 
 #(define ((set-bars-per-line line-lengths-in-bars) context)
   (define (get-total line-lengths-in-bars)

@@ -1,4 +1,4 @@
-\version "2.25.28"
+\version "2.25.32"
 
 thePainters = \relative d'' {
     \key g \major

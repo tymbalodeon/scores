@@ -1,4 +1,4 @@
-\version "2.25.28"
+\version "2.25.32"
 
 \include "no-greater-lie-changes.ily"
 \include "no-greater-lie-melody.ily"
