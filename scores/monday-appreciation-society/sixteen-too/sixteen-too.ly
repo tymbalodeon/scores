@@ -1,4 +1,4 @@
-\version "2.25.32"
+\version "2.25.34"
 
 \include "helpers/settings.ily"
 \include "helpers/bar-numbers-left.ily"
@@ -177,6 +177,8 @@ music = \relative c {
 }
 
 \score {
+  #(set-global-staff-size 19)
+
   \new Staff \with {
     instrumentName = "Bass"
     \numericTimeSignature

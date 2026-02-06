@@ -14,9 +14,9 @@ def get-current-bookmark [] {
   let bookmarks = ($bookmarks | split row " ")
 
   let bookmarks = if ($bookmarks | length) > 1 {
-    let bookmarks = ($bookmarks | where {$in != trunk})
+    let development_bookmarks = ($bookmarks | where {$in !~ trunk})
 
-    if ($bookmarks | length) > 1 {
+    if ($development_bookmarks | length) > 1 {
       print-error "multiple bookmarks are set to this revision. Please pass a value for $name."
 
       return
@@ -30,6 +30,7 @@ def get-current-bookmark [] {
   $bookmarks
   | first
   | str replace * ""
+  | str replace ?? ""
 }
 
 def is-empty-revision [revision?: string] {
@@ -88,6 +89,8 @@ def get-local-bookmarks [] {
 def get-remote-bookmarks [] {
   get-remote-revision-names bookmark
   | append (get-remote-revision-names tag)
+  | each {$"($in)@origin"}
+  | where $it != trunk@origin
 }
 
 def get-all-bookmarks [] {
@@ -268,13 +271,23 @@ def "main new" [
 }
 
 # Set the current branch to the current revision
-def "main push" [] {
+def --wrapped "main push" [
+  ...description: string # Description to use for the commit
+] {
   let current_bookmark = (get-current-bookmark)
 
+  let sync_status = try {
+    (
+      jj bookmark list
+        --revisions $current_bookmark
+        --template "name ++ '|' ++ synced ++ '\n'"
+    )
+  } catch {
+    return
+  }
+
   if not (
-    jj bookmark list
-      --revisions $current_bookmark
-      --template "name ++ '|' ++ synced ++ '\n'"
+    $sync_status
     | lines
     | uniq
     | first
@@ -355,7 +368,14 @@ def "main push" [] {
             --template "immutable"
           | into bool
         ) {
-          jj describe --message $"chore: push ($current_bookmark)" $revision.change_id
+          let message = if ($description | is-empty) {
+            $"chore: push ($current_bookmark)"
+          } else {
+            $description
+            | str join " "
+          }
+
+          jj describe --message $message $revision.change_id
         } else {
           jj squash --from $revision.change_id --into $closest_described_revision_id
         }

@@ -1,4 +1,4 @@
-\version "2.25.32"
+\version "2.25.34"
 
 verse = \relative d {
   \repeat volta 2 {

@@ -1,4 +1,4 @@
-\version "2.25.32"
+\version "2.25.34"
 
 \include "a-collection-of-memorial-shirts-changes.ily"
 \include "a-collection-of-memorial-shirts-melody.ily"

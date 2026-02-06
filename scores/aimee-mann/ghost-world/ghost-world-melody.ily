@@ -1,4 +1,4 @@
-\version "2.25.32"
+\version "2.25.34"
 hits = \new Voice \with {
   \consists "Pitch_squash_engraver"
 } {
