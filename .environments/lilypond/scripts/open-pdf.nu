@@ -6,7 +6,7 @@ use files.nu get-files
 export def main [
   search_term = "" # Search term for finding pdfs
 ] {
-  for file in (get-files "pdf" $search_term) {
-    start $file
-  }
+  # for file in (get-files "pdf" $search_term) {
+  #   start $file
+  # }
 }
