@@ -33,7 +33,7 @@ music = \relative c' {
 
     | bf8. bf8 f16 bf8 df, f
     | af,8. af8 ef'16 af8 r16 ef af, ( a )
-    | bf8. bf8 bf16 \glissando bf' af8 f8.
+    | bf8. c df8 ef16 ( f8. )
 
     | bf,8. bf8 f'16 df' c8 bf f16
     | bf,8. bf8 f16 bf8 c df
@@ -63,7 +63,7 @@ music = \relative c' {
 
     | bf8. bf8 f16 bf8 df, f
     | af,8. af8 ef'16 af8 r16 ef af, ( a )
-    | bf8. bf8 bf16 \glissando bf' af8 f8.
+    | bf8. c df8 ef16 ( f8. )
 
     | bf,8. bf8 f'16 df'8 c bf
     | bf,8. bf8 f16 bf8 c df
@@ -103,11 +103,11 @@ music = \relative c' {
     | ef16 ( f ) f f f f f8 r16 ef, ( f8 )
     | f,8 c'4 -> \glissando af'8 af, -> af ->
     | df8. af' \glissando df df,
-    | ef8 bf'16 ef ( f8 ) f16 ( g8 ) g16 ( af8 )
+    | ef8 bf'16 ef ( df8 ) df16 ( c8 ) bf16 ( af8 )
 
     \mark \markup \box \bold \tiny OUTRO
 
-    | bf,8. bf8 f16 bf8 r16 bf bf f16
+    | bf8. bf8 f16 bf8 r16 bf bf f16
     | bf8. bf8 f16  bf8 c df
     | ef,8. ef8 bf16 ef8 df c \glissando
     | af'2.
