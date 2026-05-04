@@ -57,7 +57,7 @@ music = \relative c' {
     \mark \markup \box \bold \tiny VERSE
 
     | bf,8. bf8 f'16 bf8 ef,16 ( f ) af f
-    | af ( bf8 ) c16 ~ c f, bf8 c df
+    | af ( bf8 ) ( c16 ) ~ c f, bf f c'8 df
     | ef,8. ef8 bf'16 ef8 df16 ( c8 ) bf16
     | af8. af8 ef16 af8 r16 ef af a
 
@@ -67,7 +67,7 @@ music = \relative c' {
 
     | bf,8. bf8 f'16 df'8 c bf
     | bf,8. bf8 f16 bf8 c df
-    | ef4 ~ ef 16 bf' ef16 ( f ) ( ef8 ) df16 ( c )
+    | ef8. ef8 bf'16 ef16 ( f ) ( ef8 ) df16 ( c )
     | af8. af8 ef16 af8 r16 ef af a
 
     | bf8. bf8 f16 bf,8 df' f
