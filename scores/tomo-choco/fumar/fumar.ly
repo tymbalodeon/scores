@@ -107,7 +107,7 @@ music = \relative c' {
 
     \mark \markup \box \bold \tiny OUTRO
 
-    | bf8. bf8 f16 bf8 r16 bf bf f16
+    | bf8. bf8 f16 bf8. bf8 f16
     | bf8. bf8 f16  bf8 c df
     | ef,8. ef8 bf16 ef8 df c \glissando
     | af'2.
