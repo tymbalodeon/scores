@@ -39,37 +39,37 @@ music = \relative f {
     | ef8. df16 ~ df8 c ~ c2
 
     | f4. \glissando f'8 ~ f2
-    | ef,4. \glissando g'8 ~ g2
+    | ef1
     | df,4. \glissando bf''8 ~ bf2
-    | gf,,4. \glissando df'''8 ~ df2
+    | gf,,1
 
-    | f,16 -> f f f -> ~ f c16 f -> f f f -> ~ f c f -> c f8 ->
+    | f''16 -> f f f -> ~ f c16 f -> f f f -> ~ f c f -> c f8 ->
 
     \mark \markup \box \bold \tiny CHORUS
 
-    | r8. f,,16 -> ~ f8 \glissando f' ~ f <f c'> -> f4 ->
-    | r8. f,16 -> ~ f8 \glissando df' ~ df <df af'> -> df4 ->
-    | r8. f,16 -> ~ f8 \glissando bf ~ bf <bf f'> -> bf4 ->
-    | ef8. ef'16 ~ ef8 df, ~ df c ~ c4
+    | r8. f,,16 -> ~ f8 \glissando f' ~ f16 <f c'>8. -> f4 ->
+    | r8. f,16 -> ~ f8 \glissando df' ~ df16 <df af'>8. -> df4 ->
+    | r8. f,16 -> ~ f8 \glissando bf ~ bf16 <bf f'>8. -> bf4 ->
+    | ef8. ef'16 ~ ef8 df, -> ~ df c -> ~ c4
 
-    | r8. f,16 -> ~ f8 \glissando f' ~ f <f c'> -> f4 ->
-    | r8. f,16 -> ~ f8 \glissando df' ~ df <df af'> -> df4 ->
-    | r8. f,16 -> ~ f8 \glissando bf ~ bf <bf f'> -> bf4 ->
-    | ef8. ef'16 ~ ef8 af,, ~ af g ~ g4
+    | r8. f,16 -> ~ f8 \glissando f' ~ f16 <f c'>8. -> f4 ->
+    | r8. f,16 -> ~ f8 \glissando df' ~ df16 <df af'>8. -> df4 ->
+    | r8. f,16 -> ~ f8 \glissando bf ~ bf16 <bf f'>8. -> bf4 ->
+    | ef8. ef'16 ~ ef8 af,, -> ~ af g -> ~ g4
 
     | R1 * 4
 
     \mark \markup \box \bold \tiny CHORUS
 
-    | r8. f16 -> ~ f8 \glissando f' ~ f <f c'> -> f4 ->
-    | r8. f,16 -> ~ f8 \glissando df' ~ df <df af'> -> df4 ->
-    | r8. f,16 -> ~ f8 \glissando bf ~ bf <bf f'> -> bf4 ->
-    | ef8. ef'16 ~ ef8 df, ~ df c ~ c4
+    | r8. f16 -> ~ f8 \glissando f' ~ f16 <f c'>8. -> f4 ->
+    | r8. f,16 -> ~ f8 \glissando df' ~ df16 <df af'>8. -> df4 ->
+    | r8. f,16 -> ~ f8 \glissando bf ~ bf16 <bf f'>8. -> bf4 ->
+    | ef8. ef'16 ~ ef8 df, -> ~ df c -> ~ c4
 
-    | r8. f,16 -> ~ f8 \glissando f' ~ f <f c'> -> f4 ->
-    | r8. f,16 -> ~ f8 \glissando df' ~ df <df af'> -> df4 ->
-    | r8. f,16 -> ~ f8 \glissando bf ~ bf <bf f'> -> bf4 ->
-    | ef8. ef'16 ~ ef8 af,, ~ af g ~ g4
+    | r8. f,16 -> ~ f8 \glissando f' ~ f16 <f c'>8. -> f4 ->
+    | r8. f,16 -> ~ f8 \glissando df' ~ df16 <df af'>8. -> df4 ->
+    | r8. f,16 -> ~ f8 \glissando bf ~ bf16 <bf f'>8. -> bf4 ->
+    | ef8. ef'16 ~ ef8 af,, -> ~ af g -> ~ g4
 
     | f''1
     | R1
