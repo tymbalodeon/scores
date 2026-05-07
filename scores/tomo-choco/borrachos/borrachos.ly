@@ -4,113 +4,120 @@
 \include "helpers/bar-numbers-left.ily"
 
 \header {
-    title = "Fumar"
+    title = "Borrachos"
     subtitle = "Tomo Choco"
     composer = "Ashley Hartman"
     arranger = "Ben Rosen, bass"
 }
 
-music = \relative c' {
+music = \relative ef {
     \clef bass
-    \key af \major
+    \key ef \major
     \time 6/8
 
-    | bf8. bf8 -. f16 bf8. bf8 -. f16
-    | bf8. bf8 -. f16  bf8 c df
-    | ef,8. ef8 -. bf'16 ef16 ef8 ef bf16
-    | af8. ^\markup \italic sim. af8 ef16 af8 r16 ef af a
-
-    | bf8. bf8 f16 bf,8 df f
-    | af,8. af8 ef'16 af8 r16 ef af, ( a )
-    | bf8. c df8 ef16 ( f8. )
+    | ef4. ~ ef8 \acciaccatura f16 \glissando g8 bf
+    | f'2.
+    | ef,4. ~ ef8 \acciaccatura f16 \glissando g8 bf
+    | af,8. g f4.
 
     \mark \markup \box \bold \tiny VERSE
 
-    | bf,8. bf8 f'16 bf8 ef,16 ( f ) af f
-    | af ( bf8 ) ( c )  f,16 bf f c'8 df
-    | ef,8. ef8 bf'16 ef16 ef8 ef bf16
-    | af8. af8 ef16 af8 r16 ef af a
+    | ef'4. ~ ef8 \acciaccatura f16 \glissando g8 bf
+    | f4. ~ f8 f, g
+    | af4. ~ af8 \acciaccatura bf16 \glissando c8 ef
+    | bf4. ~ bf8 c d
 
-    | bf8. bf8 f16 bf8 df, f
-    | af,8. af8 ef'16 af8 r16 ef af, ( a )
-    | bf8. c df8 ef16 ( f8. )
-
-    | bf,8. bf8 f'16 df' c8 bf f16
-    | bf,8. bf8 f16 bf8 c df
-    | ef8. ef8 bf'16 ef16 ef8 ef bf16
-    | af8. af8 ef16 af8 r16 ef af a
-
-    | bf8. bf8 f16 bf,8 df' f
-    | af,8. af8 ef16 af,8 af16 af' af, a
-    | bf8. f' c'8 df16 ( ef8. )
-
-    \mark \markup \box \bold \tiny CHORUS
-
-    | ef16 ( f ) ~ f4 r8 r16 ef, ( f8 )
-    | f,8 c'4 -> \glissando ( af'8 ) af, -> af ->
-    | df8. af' \glissando ( df ) df,
-    | ef8 bf'16 ef ( f8 ) f16 ( g8 ) g16 ( af8 )
-
-    | R2.
-    | r4. df,,8 ef16 ( f8. )
-
-    \mark \markup \box \bold \tiny VERSE
-
-    | bf,8. bf8 f'16 bf8 ef,16 ( f ) af f
-    | af ( bf8 ) ( c )  f,16 bf f c'8 df
-    | ef,8. ef8 bf'16 ef8 df16 ( c8 ) bf16
-    | af8. af8 ef16 af8 r16 ef af a
-
-    | bf8. bf8 f16 bf8 df, f
-    | af,8. af8 ef'16 af8 r16 ef af, ( a )
-    | bf8. c df8 ef16 ( f8. )
-
-    | bf,8. bf8 f'16 df'8 c bf
-    | bf,8. bf8 f16 bf8 c df
-    | ef8. ef8 bf16 ef16 g, ( af ) bf c ( ef )
-    | af,8. af8 ef'16 af8 r16 ef af a
-
-    | bf8. bf8 f16 bf,8 df' f
-    | af,8. af8 ef16 af,8 af16 af' af, a
-    | bf8. f' c'8 df16 ( ef8. )
-
-    \mark \markup \box \bold \tiny CHORUS
-
-    | ef16 ( f ) ~ f4 r8 r16 ef, ( f8 )
-    | f,8 c'4 -> \glissando ( af'8 ) af, -> af ->
-    | df8. af' \glissando ( df ) df,
-    | ef8 bf16 ef ( df8 ) df16 ( c8 ) bf16 ( af8 )
-
-    \mark \markup \box \bold \tiny SOLO
-
-    | bf16 bf8 bf f16 <bf f'>4.
-    | bf16 bf8 bf f16 <bf f'>4.
-    | df16 df8 df af16 <df af'>4.
-    | ef8 bf16 ef ( f8 ) f16 ( g8 ) g16 ( af8 )
-
-    | bf,16 bf8 bf f16 <bf f'>4.
-    | bf16 bf8 bf f16 <bf f'>4.
-    | df16 df8 df af16 <df af'>4.
-    | ef8 bf16 ef ( f8 ) f16 ( g8 ) g16 ( af8 )
-
-    | bf,16 bf8 bf f16 \glissando ef' ( f ) af f af ( bf )
-    | bf,16 bf8 bf f16 \glissando ef' ( f ) af f af ( bf )
-    | df,16 df8 df f,16 \glissando ef' ( f ) af f af ( bf )
-    | ef,8 bf'16 ef ( f8 ) f16 ( g8 ) g16 ( af8 )
-
-    \mark \markup \box \bold \tiny CHORUS
-
-    | af,16 -> ( bf ) bf df ef -> ( f ) af -> ( bf ) bf bf ef, -> ( f )
-    | f,,8 c'4 -> \glissando ( af'8 ) af, -> af ->
-    | df8. af' \glissando ( df ) df,
-    | ef8 bf'16 ef ( df8 ) df16 ( c8 ) bf16 ( af8 )
-
-    \mark \markup \box \bold \tiny OUTRO
-
+    | ef4. ~ ef8 f g
+    | c,4. ~ c8 f, g
+    | af4. ~ af8 g' af
     | bf8. bf8 f16 bf8. bf8 f16
-    | bf8. bf8 f16  bf8 c df
-    | ef,8. ef8 bf16 ef8 df c \glissando
-    | af'2.
+    | bf8. bf8 f16 bf8 c d
+
+    | ef2. ~
+    | ef2.
+
+    \mark \markup \box \bold \tiny CHORUS
+
+    | df,8. df8 af16 df8 f, af
+    | df8. df8 af16 df8 f, df'
+    | bf8. bf8 f16 bf8 f f'
+    | bf,8. bf8 f16 bf8 f af
+
+    | df8 -> af16 c8 -> af16 bf8 -> af16 ( bf ) df8
+
+    | ef4. ~ ef8 \acciaccatura f16 \glissando g8 bf
+    | f'2.
+    | ef,4. ~ ef8 \acciaccatura f16 \glissando g8 bf
+    | af,8. g f4.
+
+    \mark \markup \box \bold \tiny VERSE
+
+    | ef'4. ~ ef8 \acciaccatura f16 \glissando g8 bf
+    | f4. ~ f8 f, g
+    | af4. ~ af8 \acciaccatura bf16 \glissando c8 ef
+    | bf4. ~ bf8 c ef
+
+    | \acciaccatura f16 \glissando g8. f ef f16 ( g8 ) 
+    | c,4. ~ c8 d ef
+    | af,4. ~ af8 g' af
+    | bf8. bf8 f16 bf8. bf8 f16
+    | bf8. bf8 f16 bf8 c d
+
+    | ef2. ~
+    | ef2.
+
+    \mark \markup \box \bold \tiny CHORUS
+
+    | df,8. df8 af16 df8 f, af
+    | df8. df8 af16 df8 f, df'
+    | bf8. bf8 f16 bf8 f f'
+    | bf,8. bf8 f16 bf8 f af
+
+    | df8 -> af16 c8 -> af16 bf8 -> af16 ( bf ) df8
+
+    \mark \markup \box \bold \tiny VERSE
+
+    | R2. * 4
+    | R2. * 3
+    | R2. * 3
+    | r4. r4 <df' af' ef'>8 ~ \<
+
+    \mark \markup \box \bold \tiny BRIDGE
+
+    | <df af' ef'>2. ~
+    | <df af' ef'>2. \! ~
+    | <df af' ef'>4. ~ <df af' ef'>4 <bf g' d'>8 \< ~
+    | <bf g' d'>2. ~
+    | <bf g' d'>4. \! ~ <bf g' d'>4 <af df af'>8 \< ~
+
+    | <af df af'>2. ~
+    | <af df af'>4. \! ~ <af df af'>4 <f bf f'>8 \< ~
+    | <f bf f'>2. ~
+    | <f bf f'>2. \!
+
+    | df8. af' df af
+    | df,8. af' df c,
+    | bf8. f' bf f
+
+    | ef8. bf' ef, bf
+    | ef8. bf' ef, bf
+
+    | af4. f8 g af
+    | r8 bf f' bf ( c ) f, \glissando
+    | df'8. df c c
+    | bf8. bf af af
+
+    | bf,8. bf af af
+    | g8. g f f \glissando
+    | df''8 -> af16 c8 -> af16 bf8 -> af,16 ( bf ) df8
+
+    | ef4. ~ ef8 \acciaccatura f16 \glissando g8 bf
+    | f'2.
+    | ef,4. ~ ef8 \acciaccatura f16 \glissando g8 bf
+    | af,8. g f4. \glissando
+
+    | af'4. ~ af8 g af
+    | bf2.
 
     \bar "|."
 }
