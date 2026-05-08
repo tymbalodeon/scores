@@ -88,26 +88,26 @@ music = \relative c' {
     | df16 df8 df af16 <df af'>4.
     | ef8 bf16 ef ( f8 ) f16 ( g8 ) g16 ( af8 )
 
-    | bf,16 bf8 bf f16 <bf f'>4.
-    | bf16 bf8 bf f16 <bf f'>4.
-    | df16 df8 df af16 <df af'>4.
-    | ef8 bf16 ef ( f8 ) f16 ( g8 ) g16 ( af8 )
+    | bf,16 bf8 bf f16 <bf f'>4 f8
+    | bf16 bf8 bf f16 <bf f'>4 f8
+    | df'16 df8 df af16 <df af'>4 af8
+    | ef'8 bf16 ef ( f8 ) f16 ( g8 ) g16 ( af8 )
 
-    | bf,16 bf8 bf f16 \glissando ef' ( f ) af f af ( bf )
-    | bf,16 bf8 bf f16 \glissando ef' ( f ) af f af ( bf )
-    | df,16 df8 df f,16 \glissando ef' ( f ) af f af ( bf )
+    | bf,16 bf8 bf bf16 ef ( f ) af f af ( bf )
+    | bf,16 bf8 bf bf16 ef ( f ) af f af ( bf )
+    | df,16 df8 df af16 ef' ( f ) af f af ( bf )
     | ef,8 bf'16 ef ( f8 ) f16 ( g8 ) g16 ( af8 )
 
     \mark \markup \box \bold \tiny CHORUS
 
-    | af,16 -> ( bf ) bf df ef -> ( f ) af -> ( bf ) bf bf ef, -> ( f )
+    | af,16 -> ( bf ) bf df ef -> ( f ) af -> ( bf ) bf ef, -> ( f8 )
     | f,,8 c'4 -> \glissando ( af'8 ) af, -> af ->
     | df8. af' \glissando ( df ) df,
     | ef8 bf'16 ef ( df8 ) df16 ( c8 ) bf16 ( af8 )
 
     \mark \markup \box \bold \tiny OUTRO
 
-    | bf8. bf8 f16 bf8. bf8 f16
+    | af16 ( bf8 ) bf8 f16 bf8. bf8 f16
     | bf8. bf8 f16  bf8 c df
     | ef,8. ef8 bf16 ef8 df c \glissando
     | af'2.
