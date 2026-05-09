@@ -33,7 +33,7 @@ music = \relative f {
     | f16 ( g8 ) ef'16 ~ ef8 g8 ~ g2
     | af,8. f'16 ~ f8 c'8 ~ c2
 
-    | f,,,8. af16 ~ af8 c8 ~ c bf ( c ) ef
+    | f,,8. af16 ~ af8 c8 ~ c bf, ( c ) ef
     | f8. g16 ~ g8 c, ~ c2
     | bf'8. af16 ~ af8 g8 ~ g f c df
     | ef8. df16 ~ df8 c ~ c2
@@ -43,11 +43,12 @@ music = \relative f {
     | df,4. \glissando bf''8 ~ bf2
     | gf,,1
 
-    | f''16 -> f f f -> ~ f c16 f -> f f f -> ~ f c f -> c f8 ->
+    % | f''16 -> f f f -> ~ f c16 f -> f f f -> ~ f c f -> c f8 ->
+    | R1
 
     \mark \markup \box \bold \tiny CHORUS
 
-    | r8. f,,16 -> ~ f8 \glissando f' ~ f16 <f c'>8. -> f4 ->
+    | r8. f16 -> ~ f8 \glissando f' ~ f16 <f c'>8. -> f4 ->
     | r8. f,16 -> ~ f8 \glissando df' ~ df16 <df af'>8. -> df4 ->
     | r8. f,16 -> ~ f8 \glissando bf ~ bf16 <bf f'>8. -> bf4 ->
     | ef8. ef'16 ~ ef8 df, -> ~ df c -> ~ c4
