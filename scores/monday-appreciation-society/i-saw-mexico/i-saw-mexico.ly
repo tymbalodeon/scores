@@ -52,22 +52,17 @@ music = \relative c {
     }
   }
 
-  % | c8 ^\markup \italic "sim." c c c c c c d
-  % | e8 b' ( d ) g, e, g a b
-  % | c8 c c c c c c d
-  % | e8 b' ( e ) d b e, e, g
-
   \mark \default
 
   | a8 a a a a a a e
-  | g a b e, ~ e4 e' \glissando
-  | a,8 a a e a b c d
-  | g, a b e, ~ e b' e4 \glissando
+  | g c d g, ~ g2
+  | a8 a a e a b c d
+  | g c, d g, ~ g2
 
-  | a,8 a a a c' b a e
-  | g a b e, ~ e b e,4
+  | a8 a a a c' b a e
+  | g c, d g, ~ g2
 
-  | c'4. c8 ~ c4 g ~
+  | c4. c8 ~ c4 g ~
   | g1
   | c4. c8 ~ c4 g ~
   | g1
@@ -102,33 +97,29 @@ music = \relative c {
 
   | c8 e g c, e, g a b
   | e8 b' ( d ) g, e, g a b
-  | c8 c c c c c c c
+  | c8 c c c c c c d
   | e8 b' ( g' ) e b e, e, g
 
   \mark \default
 
-  | a8 a a e a a a e
-  | g a b e, ~ e4 e' \glissando
-  | a,8 a a e a b c d
-  | g, a b e, ~ e b' e4 \glissando
+  | a8 a a a a a a e
+  | g c d g, ~ g2
+  | a8 a a e a b c d
+  | g c, d g, ~ g2
 
-  | a,8 a e'' d c b a e
-  | g a b e, ~ e b e,4
+  | a8 a e'' d c b a e
+  | g c, d g, ~ g2
 
-  | c'4. c8 ~ c4 g ~
+  | c4. c8 ~ c4 g ~
   | g1
   | c4. c8 ~ c4 g ~
   | g1
 
   | c4. e8 ~ e4 g ~
   | g1
-  | R1 * 2
-  % | c,4. e,8 ~ e4 g ~
-  % | g1
 
   \mark \default
 
-  % | R1 * 8
   | R1 * 4
 
   \mark \default
@@ -156,19 +147,6 @@ music = \relative c {
     }
   }
 
-
-  % | r8 d'' b g ~ g \glissando a,,4 e8
-  % | g8 \glissando b'' e, ( d ) ~ d b ( g4 )
-  % | r8 g' c, ( b ) ~ b \glissando a,4 e8
-  % | g8 \glissando e'' a, ( g ) e, g a b
-
-  % | c8 c c c c e g a
-  % | g,8 g g g g b d e
-  % | c8 c c c c e g a
-  % | g,8 g g g g b d e
-
-  % | c8 c c e e g g a
-  % | b1
 
   \bar "|."
 }
