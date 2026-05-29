@@ -1,4 +1,4 @@
-\version "2.25.34"
+\version "2.27.0"
 hits = \chordmode {
   fs2:m s8 gs4:m a8 | s1 |
 }

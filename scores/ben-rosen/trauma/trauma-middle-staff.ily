@@ -1,4 +1,4 @@
-\version "2.25.34"
+\version "2.27.0"
 middle_staff = \relative c' {
   | <c e>8 \p g \repeat unfold 2 { <c e> g }
 

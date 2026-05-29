@@ -1,4 +1,4 @@
-\version "2.25.34"
+\version "2.27.0"
 versePickup = \relative c'' {
   r2 r8 cs cs cs8~ |
 }

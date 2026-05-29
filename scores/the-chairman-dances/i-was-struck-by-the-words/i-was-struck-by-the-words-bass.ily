@@ -1,4 +1,4 @@
-\version "2.25.34"
+\version "2.27.0"
 
 % see https://mail.gnu.org/archive/html/lilypond-user/2015-02/msg00523.html !!!
 
