@@ -28,3 +28,27 @@ auto-format = true
 [language.formatter]
 command = "taplo"
 args = ["format", "-"]
+
+# just
+[[language]]
+name = "just"
+auto-format = true
+formatter = { command = "just", args = ["--justfile", "/dev/stdin", "--dump"] }
+
+# markdown
+[[language]]
+name = "markdown"
+auto-format = true
+formatter = { command = "prettierd", args = [".md"] }
+
+# nix
+[[language]]
+name = "nix"
+auto-format = true
+formatter = { command = "alejandra" }
+
+# toml
+[[language]]
+name = "toml"
+auto-format = true
+formatter = { command = "taplo", args = ["format", "-"] }

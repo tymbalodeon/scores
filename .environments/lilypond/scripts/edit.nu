@@ -55,7 +55,7 @@ def main [
     ) | save --force $layout_file
 
     compile $input_file --is-file
-    # open-pdf $title
+    open-pdf $title
     zellij --layout $layout_file attach --create $title
     rm --force $layout_file
     zellij delete-session $title

@@ -1,0 +1,10 @@
+imports:
+  - environments
+  - environments/lilypond
+inputs:
+  environments:
+    flake: false
+    url: git+https://codeberg.org/tymbalodeon/environments.git?dir=src&ref=trunk
+  project:
+    flake: false
+    url: path:.

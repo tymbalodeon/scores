@@ -69,6 +69,13 @@ alias todos := todo
 @theme *args:
     .environments/default/scripts/theme.nu {{ args }}
 
+mod lilypond ".environments/lilypond/Justfile"
+mod git ".environments/git/Justfile"
+mod just ".environments/just/Justfile"
+mod markdown ".environments/markdown/Justfile"
+mod nix ".environments/nix/Justfile"
+mod yaml ".environments/yaml/Justfile"
+
 [private]
 @ly *args:
     just lilypond {{ args }}
@@ -81,21 +88,13 @@ alias todos := todo
 @yml *args:
     just yaml {{ args }}
 
-mod git ".environments/git/Justfile"
-mod just ".environments/just/Justfile"
-mod lilypond ".environments/lilypond/Justfile"
-mod markdown ".environments/markdown/Justfile"
-mod nix ".environments/nix/Justfile"
-mod yaml ".environments/yaml/Justfile"
-
+alias leaks := git::leaks
 alias compile := lilypond::compile
 alias edit := lilypond::edit
 alias info := lilypond::info
-alias leaks := git::leaks
 alias new := lilypond::new
 alias open := lilypond::open
 alias settings := lilypond::settings
-alias sh := nix::shell
-alias shell := nix::shell
 alias templates := lilypond::templates
 alias update := lilypond::update
+alias shell := nix::shell

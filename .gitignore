@@ -1,12 +1,18 @@
-*.error
-# lilypond
-*.log
-*.midi
-*.pdf
-*~
+# default
+.devenv*
+devenv.local.*
 .direnv
 .env
 .envrc
 .helix/config.toml
-result
+
+# lilypond
+*.error
+*.log
+*.midi
+*.pdf
+*~
 settings.toml
+
+# nix
+result
